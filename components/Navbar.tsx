@@ -603,9 +603,11 @@ export default function Navbar() {
             {/* 3.5. INTERACTIVE LAB */}
             <Link
               href="/lab"
-              className={`flex items-center gap-1 text-[12px] uppercase font-black tracking-[0.08em] transition-colors duration-200 py-1 text-blue-500 hover:text-blue-600 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]`}
+              className={`text-[12px] uppercase font-bold tracking-[0.08em] transition-colors duration-200 py-1 ${
+                isDarkHero ? 'text-white hover:text-gray-300' : 'text-[var(--text-secondary)] hover:text-black'
+              }`}
             >
-              Lab <Sparkles className="w-3 h-3" />
+              Lab
             </Link>
 
             {/* 4. RESOURCES (MEGAMENU / DROPDOWN WITH FAILSAFE HOVER BRIDGE) */}
@@ -773,12 +775,12 @@ export default function Navbar() {
               </div>
             </div>
 
-            <div className="border-b border-black/10 pb-3 flex justify-between">
+            <div className="border-b border-black/10 pb-3 flex flex-col gap-3">
               <Link href="/projects" onClick={() => setMobileMenuOpen(false)} className="text-sm uppercase text-black block font-bold">
                 Projects
               </Link>
-              <Link href="/lab" onClick={() => setMobileMenuOpen(false)} className="text-sm uppercase text-blue-500 block font-black flex items-center gap-1">
-                Lab <Sparkles className="w-3.5 h-3.5" />
+              <Link href="/lab" onClick={() => setMobileMenuOpen(false)} className="text-sm uppercase text-black block font-bold">
+                Lab
               </Link>
             </div>
 
