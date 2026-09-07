@@ -20,6 +20,7 @@ import {
   BookOpen,
   FileText,
   HelpCircle,
+  Terminal,
 } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
 
