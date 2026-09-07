@@ -8,82 +8,68 @@ import SafeImage from "@/components/SafeImage";
 
 const CATEGORIES = [
   { id: "all", label: "ALL CREATIONS" },
-  { id: "360-immersive", label: "360° IMMERSIVE" },
-  { id: "motion-tracking", label: "MOTION TRACKING" },
-  { id: "ai-sensory", label: "AI & SENSORY" },
-  { id: "outdoor-heritage", label: "HERITAGE & LIGHT" },
+  { id: "education", label: "EDUCATION" },
+  { id: "corporate", label: "CORPORATE" },
+  { id: "healthcare", label: "HEALTHCARE" },
+  { id: "retail", label: "RETAIL" },
 ];
 
 const projects = [
   {
-    id: "aura-cathedral", title: "AURA Sanctuary Projection", category: "360° Heritage Mapping",
-    location: "Paris / Montreal", year: "2026",
-    desc: "Architectural projection mapping masterpiece transforming historic stone sanctuaries with light & spatial audio.",
+    id: "museum-exhibit", title: "Interactive Museum Exhibit", category: "Interactive Wall & Floor",
+    location: "Global Science Museum", year: "2026",
+    desc: "A sprawling interactive museum exhibit combining projection mapping with motion-responsive floors to teach physics and history.",
     img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/aura-digital-cathedral", tag: "360° IMMERSIVE", filterCategory: "360-immersive", accent: "#000000",
+    href: "/projects/interactive-museum-exhibit", tag: "INTERACTIVE WALL", filterCategory: "education", accent: "#3B82F6",
   },
   {
-    id: "edge-skyline", title: "Horizon Glass Motion Floor", category: "Interactive Floor & Motion",
-    location: "Manhattan, New York", year: "2025",
-    desc: "An interactive high-altitude observation floor responding to visitor footsteps 1,100 feet in the sky.",
-    img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/edge-nyc-horizon-portal", tag: "MOTION TRACKING", filterCategory: "motion-tracking", accent: "#3B82F6",
+    id: "corporate-lobby", title: "Corporate Lobby Installation", category: "Generative AI Wall",
+    location: "Tech Headquarters, Seattle", year: "2025",
+    desc: "A massive interactive data visualization wall reacting to foot traffic and employee badges in real-time.",
+    img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    href: "/projects/corporate-lobby-installation", tag: "PROJECTION MAPPING", filterCategory: "corporate", accent: "#10B981",
   },
   {
-    id: "ocean-wonders", title: "BioSphere Ocean Experience", category: "Interactive Museum Floor",
-    location: "Global Ocean Pavilion", year: "2026",
-    desc: "A 360-degree reactive ocean floor projection reacting dynamically to marine biodiversity interaction.",
-    img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/biosphere-ocean-experience", tag: "AI VISION", filterCategory: "ai-sensory", accent: "#06B6D4",
+    id: "pediatric-floor", title: "Pediatric Hospital Floor", category: "Therapeutic Motion Floor",
+    location: "Zurich Medical Center", year: "2026",
+    desc: "Calming interactive river environments projected onto hospital floors to reduce anxiety in pediatric patients.",
+    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    href: "/projects/pediatric-hospital-floor", tag: "INTERACTIVE FLOOR", filterCategory: "healthcare", accent: "#06B6D4",
   },
   {
-    id: "lumina-nightwalk", title: "Lumina Enchanted Forest", category: "Outdoor Spatial Light Trail",
-    location: "Kyoto Woodland Park", year: "2025",
-    desc: "Nightwalk multimedia experience blending illuminated projection sculptures with natural woodland paths.",
-    img: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/lumina-night-walk", tag: "OUTDOOR SPATIAL", filterCategory: "outdoor-heritage", accent: "#10B981",
+    id: "retail-flagship", title: "Flagship Store Activation", category: "Interactive Floor & Wall",
+    location: "Fifth Avenue, NY", year: "2025",
+    desc: "Immersive retail brand activation where footsteps trigger floral blooming patterns and product highlights.",
+    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    href: "/projects/flagship-store-activation", tag: "MOTION SENSORS", filterCategory: "retail", accent: "#EC4899",
   },
   {
-    id: "ai-avatar-mirror", title: "Generative AI Mirror Room", category: "Computer Vision & AI Avatars",
-    location: "Tokyo Tech Pavilion", year: "2026",
-    desc: "Real-time AI avatar reflection chamber reacting to visitor movement, voice, and facial gestures.",
-    img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/generative-ai-mirror-room", tag: "AI AVATARS", filterCategory: "ai-sensory", accent: "#F59E0B",
+    id: "stem-lab", title: "Immersive STEM Lab", category: "Interactive Tables & Wall",
+    location: "Boston Prep Academy", year: "2026",
+    desc: "An educational ecosystem utilizing digital sandboxes and interactive geometry walls for collaborative learning.",
+    img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    href: "/projects/immersive-stem-lab", tag: "INTERACTIVE WALL", filterCategory: "education", accent: "#F59E0B",
   },
   {
-    id: "cyberpunk-lounge", title: "Neo-Shinjuku Interactive Wall", category: "Gamified Touch & Gesture",
+    id: "cyberpunk-lounge", title: "Neo-Tokyo Retail Pop-Up", category: "Gamified Touch & Gesture",
     location: "Shinjuku District, Tokyo", year: "2025",
-    desc: "A multi-touch interactive projection wall built for luxury nightlife and immersive brand pop-ups.",
+    desc: "A multi-touch interactive projection wall built for luxury retail fashion pop-ups.",
     img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/neo-shinjuku-interactive-wall", tag: "TOUCH & GESTURE", filterCategory: "motion-tracking", accent: "#EF4444",
+    href: "/projects/neo-tokyo-retail-popup", tag: "TOUCH & GESTURE", filterCategory: "retail", accent: "#EF4444",
   },
   {
-    id: "dome-observatory", title: "Celestial Dome Observatory", category: "360° Fulldome Projection",
-    location: "Dubai Innovation Center", year: "2026",
-    desc: "A giant architectural dome projection environment simulating interstellar journeys with spatial audio.",
-    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/celestial-dome-observatory", tag: "FULLDOME", filterCategory: "360-immersive", accent: "#000000",
-  },
-  {
-    id: "quantum-tunnel", title: "Quantum Prism Passage", category: "LED & Spatial Projection",
-    location: "Singapore Science Pavilion", year: "2025",
-    desc: "Walk-through sensory tunnel using synchronized projection and optical mirror reflection geometry.",
-    img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/quantum-prism-passage", tag: "SENSORY TUNNEL", filterCategory: "360-immersive", accent: "#EC4899",
-  },
-  {
-    id: "chrono-echoes", title: "Chrono Echoes Artifact Wall", category: "Interactive Heritage Wall",
-    location: "Paris Fine Arts Gallery", year: "2024",
-    desc: "Historical artifact display coming to life when visitors approach, revealing hidden historical layers.",
-    img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/chrono-echoes-artifact-wall", tag: "HERITAGE WALL", filterCategory: "outdoor-heritage", accent: "#F97316",
+    id: "ai-avatar-mirror", title: "AI Receptionist Avatar", category: "Computer Vision & AI Avatars",
+    location: "London Financial District", year: "2026",
+    desc: "Real-time conversational AI avatar embedded into architectural mirrors for seamless corporate guest management.",
+    img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    href: "/projects/ai-receptionist-avatar", tag: "AI AVATARS", filterCategory: "corporate", accent: "#F97316",
   },
   {
     id: "sensory-therapy", title: "Sensory Interactive Therapy Room", category: "Therapeutic Motion Projection",
-    location: "Zurich Medical Center, Switzerland", year: "2025",
+    location: "Berlin Children's Clinic", year: "2025",
     desc: "Therapeutic motion projection room engineered for pediatric rehabilitation and sensory decompression.",
-    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80&fm=webp",
-    href: "/projects/sensory-interactive-therapy-room", tag: "HEALTHCARE", filterCategory: "ai-sensory", accent: "#14B8A6",
+    img: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    href: "/projects/sensory-therapy-room", tag: "PROJECTION MAPPING", filterCategory: "healthcare", accent: "#14B8A6",
   },
 ];
 
@@ -189,7 +175,7 @@ function ImmersiveOverlay({ project, onClose }: { project: Project; onClose: () 
           <span className="px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest backdrop-blur-md border flex items-center gap-2"
             style={{ background: `${project.accent}22`, borderColor: `${project.accent}66`, color: project.accent }}>
             <Sparkles className="w-3 h-3" />
-            {project.tag} · {project.year}
+            [{project.tag}] • {project.year}
           </span>
         </div>
 
@@ -258,7 +244,7 @@ function ProjectCard({
         <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-bold uppercase tracking-widest flex items-center gap-1.5"
           style={{ color: project.accent }}>
           <Sparkles className="w-3 h-3" />
-          {project.tag}
+          [{project.tag}]
         </span>
       </div>
 
@@ -297,183 +283,69 @@ function ProjectCard({
 
 // ─── Main Component ────────────────────────────────────────────────────────
 export default function HorizontalProjectsShowcase() {
-  const targetRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
   const [activeCategory, setActiveCategory] = useState("all");
-  const [scrollRange, setScrollRange] = useState(0);
-  const [activeIdx, setActiveIdx] = useState(-1); // -1 = not yet scrolled in
   const [overlayProject, setOverlayProject] = useState<Project | null>(null);
-  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const hasStartedRef = useRef(false); // don't auto-open before user scrolls
-  const manuallyClosedIdxRef = useRef(-1); // track which card was manually closed
-
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start start", "end end"],
-  });
 
   const filteredProjects = activeCategory === "all"
     ? projects
     : projects.filter((p) => p.filterCategory === activeCategory);
 
-  // Derive active index from scroll + auto-open overlay with debounce
-  useEffect(() => {
-    return scrollYProgress.on("change", (v) => {
-      // ── Exit zone: user scrolled past the section ─────────────────────
-      if (v <= 0.02 || v >= 0.98) {
-        // Cancel any pending debounce immediately
-        if (debounceRef.current) {
-          clearTimeout(debounceRef.current);
-          debounceRef.current = null;
-        }
-        setOverlayProject(null);
-        if (v <= 0.02) {
-          setActiveIdx(-1);
-          hasStartedRef.current = false;
-        }
-        return;
-      }
-
-      // ── Active zone ────────────────────────────────────────────────────
-      if (v > 0.02) hasStartedRef.current = true;
-
-      const idx = Math.round(v * (filteredProjects.length - 1));
-      const clamped = Math.max(0, Math.min(filteredProjects.length - 1, idx));
-      
-      setActiveIdx((prevIdx) => {
-        if (prevIdx !== clamped) {
-          manuallyClosedIdxRef.current = -1; // Reset block when moving to a new card
-        }
-        return clamped;
-      });
-
-      // Debounce overlay open so it doesn't flash between cards
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-      debounceRef.current = setTimeout(() => {
-        // Double-check we're still inside the section before opening
-        const current = scrollYProgress.get();
-        if (current > 0.02 && current < 0.98 && manuallyClosedIdxRef.current !== clamped) {
-          setOverlayProject(filteredProjects[clamped]);
-        }
-      }, 380);
-    });
-  }, [scrollYProgress, filteredProjects]);
-
-  // Reset when category changes
-  useEffect(() => {
-    setOverlayProject(null);
-    setActiveIdx(-1);
-    hasStartedRef.current = false;
-    manuallyClosedIdxRef.current = -1;
-  }, [activeCategory]);
-
-  // Measure track width
-  useEffect(() => {
-    const update = () => {
-      if (trackRef.current) {
-        setScrollRange(Math.max(0, trackRef.current.scrollWidth - window.innerWidth + 64));
-      }
-    };
-    const t = setTimeout(update, 120);
-    window.addEventListener("resize", update);
-    return () => { clearTimeout(t); window.removeEventListener("resize", update); };
-  }, [filteredProjects]);
-
-  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
-
-  const closeOverlay = useCallback(() => {
-    setOverlayProject(null);
-    manuallyClosedIdxRef.current = activeIdx;
-    // Don't re-open immediately after manual close
-    if (debounceRef.current) clearTimeout(debounceRef.current);
-  }, [activeIdx]);
-
   return (
     <>
       <AnimatePresence mode="wait">
         {overlayProject && (
-          <ImmersiveOverlay key={overlayProject.id} project={overlayProject} onClose={closeOverlay} />
+          <ImmersiveOverlay key={overlayProject.id} project={overlayProject} onClose={() => setOverlayProject(null)} />
         )}
       </AnimatePresence>
 
-      <section ref={targetRef} className="relative h-[450vh] bg-gray-50 text-black border-t border-b border-black/10">
-        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-          <div className="w-full flex flex-col justify-between h-full py-6 sm:py-10">
-
-            {/* Header */}
-            <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-4 z-20">
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <div>
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-black mb-2">
-                    <Sparkles className="w-4 h-4" />
-                    <span>INTERACTIVE GALLERY • {filteredProjects.length} CREATIONS</span>
-                  </div>
-                  <h2 className="text-black">
-                    Featured Installations
-                  </h2>
-                </div>
-                <div className="hidden md:flex items-center gap-2 text-xs text-black/50 font-bold">
-                  <Filter className="w-3.5 h-3.5 text-black" />
-                  <span>Scroll to browse — active card expands automatically</span>
-                </div>
+      <section className="py-20 bg-gray-50 text-black border-t border-b border-black/10">
+        <div className="max-w-[90rem] w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          {/* Header & Categories */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-black mb-2">
+                <Sparkles className="w-4 h-4" />
+                <span>INTERACTIVE GALLERY • {filteredProjects.length} CREATIONS</span>
               </div>
-
-              <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-black/10">
-                {CATEGORIES.map((cat) => {
-                  const isActive = activeCategory === cat.id;
-                  return (
-                    <button key={cat.id} onClick={() => setActiveCategory(cat.id)}
-                      className={`px-4 py-2 rounded-full text-[11px]  font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                        isActive ? "bg-black text-white shadow-md" : "bg-white hover:bg-gray-100 text-black/70 border border-black/10"
-                      }`}>
-                      {cat.label}
-                    </button>
-                  );
-                })}
-              </div>
+              <h2 className="text-black text-4xl font-extrabold tracking-tight">
+                Featured Installations
+              </h2>
             </div>
 
-            {/* Track */}
-            <div className="w-full overflow-hidden my-auto py-6">
-              <motion.div
-                ref={trackRef}
-                style={{ x }}
-                className="flex gap-8 px-6 sm:px-10 w-max items-center"
-              >
-                <AnimatePresence mode="popLayout">
-                  {filteredProjects.map((project, idx) => (
-                    <ProjectCard
-                      key={project.id}
-                      project={project}
-                      idx={idx}
-                      totalCount={filteredProjects.length}
-                      isActive={idx === activeIdx}
-                      onClick={() => setOverlayProject(project)}
-                    />
-                  ))}
-                </AnimatePresence>
-              </motion.div>
+            <div className="flex flex-wrap items-center gap-2 pb-2">
+              <Filter className="w-4 h-4 text-black mr-2 hidden sm:block" />
+              {CATEGORIES.map((cat) => {
+                const isActive = activeCategory === cat.id;
+                return (
+                  <button key={cat.id} onClick={() => setActiveCategory(cat.id)}
+                    className={`whitespace-nowrap px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all ${
+                      isActive ? "bg-black text-white" : "bg-white text-black/60 border border-black/10 hover:border-black/30"
+                    }`}>
+                    {cat.label}
+                  </button>
+                );
+              })}
             </div>
+          </div>
 
-            {/* Progress bar */}
-            <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 z-20">
-              <div className="flex items-center gap-4">
-                <span className="text-xs text-black/40 font-bold w-8">
-                  {String(activeIdx + 1).padStart(2, "0")}
-                </span>
-                <div className="flex-1 bg-black/10 h-1.5 rounded-full overflow-hidden">
-                  <motion.div
-                    style={{ scaleX: scrollYProgress }}
-                    className="h-full bg-gradient-to-r from-[#000000] to-[#C084FC] origin-left"
+          {/* Visual Grid */}
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <AnimatePresence mode="popLayout">
+              {filteredProjects.map((project, idx) => (
+                <div key={project.id} className="w-full">
+                  <ProjectCard
+                    project={project}
+                    idx={idx}
+                    totalCount={filteredProjects.length}
+                    isActive={false}
+                    onClick={() => setOverlayProject(project)}
                   />
                 </div>
-                <span className="text-xs text-black/40 font-bold w-8 text-right">
-                  {String(filteredProjects.length).padStart(2, "0")}
-                </span>
-              </div>
-            </div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
 
-          </div>
         </div>
       </section>
     </>
