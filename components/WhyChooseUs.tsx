@@ -1,0 +1,166 @@
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sliders, Cpu, Award, Workflow, Layers3, Headphones } from "lucide-react";
+import SafeImage from "@/components/SafeImage";
+
+const whyUsCards = [
+  {
+    id: "custom-solutions",
+    icon: Sliders,
+    title: "Custom Solutions",
+    desc: "Every project is built around your space, audience, requirements, and goals.",
+    img: "https://images.unsplash.com/photo-1542744094-24638ea0b46c?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "advanced-tech",
+    icon: Cpu,
+    title: "Advanced Interactive Technology",
+    desc: "Use the latest AI, motion tracking, projection mapping, and interactive technologies in your space.",
+    img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "industry-expertise",
+    icon: Award,
+    title: "Industry Expertise",
+    desc: "Our experience covers education, healthcare, retail, museums, hospitality, entertainment, and more.",
+    img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "end-to-end",
+    icon: Workflow,
+    title: "End-to-End Delivery",
+    desc: "From the first conversation and design to installation, training, and ongoing support, we handle the complete process.",
+    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "scalable",
+    icon: Layers3,
+    title: "Scalable & Future-Ready",
+    desc: "Start with what you need today and add new features, content, and technologies as your requirements grow.",
+    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "dedicated-support",
+    icon: Headphones,
+    title: "Dedicated Support",
+    desc: "Get technical assistance, updates, maintenance, and ongoing support to keep your experience running smoothly.",
+    img: "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1200&q=80",
+  },
+];
+
+export default function WhyChooseUs() {
+  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
+
+  return (
+    <section className="py-12 lg:py-24 bg-white border-t border-gray-100 overflow-hidden text-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="mb-12 lg:mb-16 max-w-4xl">
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-[11px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-4"
+          >
+            WHY CHOOSE US
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-4xl lg:text-5xl font-black tracking-tight leading-[1.05]"
+          >
+            Why Industry Leaders <br className="hidden lg:block" />
+            Choose PROJECTION
+          </motion.h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          {/* Left Column: Accordion List */}
+          <div className="lg:col-span-6 flex flex-col w-full" onMouseLeave={() => setHoveredIndex(0)}>
+            {whyUsCards.map((card, index) => {
+              const Icon = card.icon;
+              const isHovered = hoveredIndex === index;
+              const num = (index + 1).toString().padStart(2, "0");
+
+              return (
+                <motion.div 
+                  key={card.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-20px" }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onClick={() => setHoveredIndex(index)}
+                  className="group border-t border-gray-200 hover:border-black/50 transition-colors duration-300 cursor-pointer overflow-hidden"
+                >
+                  <div className="py-4 lg:py-6 flex flex-row items-center justify-between gap-4">
+                    
+                    {/* Left: Number and Title */}
+                    <div className="flex flex-row items-start lg:items-center gap-4 lg:gap-6">
+                      <span className={`text-base font-bold font-mono transition-colors duration-300 ${isHovered ? 'text-black' : 'text-gray-400'}`}>
+                        {num}
+                      </span>
+                      <h3 className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${isHovered ? 'text-black' : 'text-gray-400'}`}>
+                        {card.title}
+                      </h3>
+                    </div>
+
+                    {/* Right: Icon */}
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${isHovered ? 'bg-black text-white shadow-lg' : 'bg-gray-100 text-black'}`}>
+                       <Icon className="w-5 h-5" />
+                    </div>
+                  </div>
+
+                  {/* Expanding Description Area */}
+                  <motion.div
+                    initial={false}
+                    animate={{ height: isHovered ? "auto" : 0, opacity: isHovered ? 1 : 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="pb-6 pl-[40px] sm:pl-[50px] max-w-xl">
+                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                        {card.desc}
+                      </p>
+                    </div>
+                  </motion.div>
+
+                </motion.div>
+              );
+            })}
+            <div className="border-t border-gray-200" />
+          </div>
+
+          {/* Right Column: Supporting Image */}
+          <div className="lg:col-span-6 sticky top-32 h-[400px] lg:h-[600px] rounded-3xl overflow-hidden bg-gray-100 shadow-2xl">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={whyUsCards[hoveredIndex].id}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="absolute inset-0 w-full h-full"
+              >
+                <SafeImage
+                  src={whyUsCards[hoveredIndex].img}
+                  alt={whyUsCards[hoveredIndex].title}
+                  className="w-full h-full object-cover object-center"
+                  containerClassName="w-full h-full"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
