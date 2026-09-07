@@ -69,6 +69,10 @@ export default function Footer() {
                 <li><Link href="/industries/museums-culture" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">Museums & Culture</Link></li>
                 <li><Link href="/industries/retail-showrooms" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">Retail & Showrooms</Link></li>
                 <li><Link href="/industries/healthcare" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">Healthcare</Link></li>
+                <li><Link href="/industries/corporate" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">Corporate</Link></li>
+                <li><Link href="/industries/public-spaces" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">Public Spaces</Link></li>
+                <li><Link href="/industries/entertainment" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">Entertainment</Link></li>
+                <li><Link href="/industries/hospitality" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">Hospitality</Link></li>
               </ul>
             </div>
 
