@@ -110,15 +110,15 @@ export default function IndustriesServed() {
   }, [activeIndex, isHovered]);
 
   return (
-    <section className="py-20 lg:py-32 bg-white border-t border-black/5 overflow-hidden text-black relative">
+    <section className="py-12 lg:py-20 bg-white border-t border-black/5 overflow-hidden text-black relative">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-gray-100 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 opacity-50 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-20">
-          <div className="max-w-3xl space-y-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 lg:mb-10">
+          <div className="max-w-3xl space-y-3">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ export default function IndustriesServed() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05]"
+              className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.05]"
             >
               Built for Every Industry.<br />
               <span className="text-black/30">Designed for Every Experience.</span>
@@ -149,20 +149,20 @@ export default function IndustriesServed() {
 
         {/* Dynamic Showcase Layout */}
         <div 
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           
           {/* Column 1: Industry Selector List */}
-          <div className="lg:col-span-4 space-y-2 flex flex-col">
+          <div className="lg:col-span-4 space-y-1.5 flex flex-col">
             {industries.map((ind, idx) => {
               const isActive = activeIndex === idx;
               return (
                 <button
                   key={ind.id}
                   onClick={() => setActiveIndex(idx)}
-                  className={`relative w-full text-left flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-500 overflow-hidden group ${
+                  className={`relative w-full text-left flex items-center justify-between p-3 sm:p-3.5 rounded-2xl transition-all duration-500 overflow-hidden group ${
                     isActive 
                       ? "bg-black text-white shadow-xl scale-[1.02]" 
                       : "bg-transparent text-black/60 hover:bg-black/5 hover:text-black"
@@ -183,15 +183,15 @@ export default function IndustriesServed() {
                     />
                   )}
 
-                  <div className="flex items-center gap-4 relative z-10">
-                    <div className={`p-2.5 rounded-xl transition-colors duration-500 ${isActive ? "bg-white/20 text-white shadow-inner" : "bg-black/5 text-black/50 group-hover:bg-black/10 group-hover:text-black"}`}>
+                  <div className="flex items-center gap-3 relative z-10">
+                    <div className={`p-2 rounded-xl transition-colors duration-500 ${isActive ? "bg-white/20 text-white shadow-inner" : "bg-black/5 text-black/50 group-hover:bg-black/10 group-hover:text-black"}`}>
                       {ind.icon}
                     </div>
-                    <span className="font-bold text-base sm:text-lg tracking-tight">{ind.title}</span>
+                    <span className="font-bold text-sm sm:text-base tracking-tight">{ind.title}</span>
                   </div>
                   
-                  <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${isActive ? "bg-white text-black" : "bg-transparent text-transparent group-hover:text-black/30"}`}>
-                    <ArrowRight className={`w-4 h-4 transition-transform duration-500 ${isActive ? "-rotate-45" : "rotate-0 group-hover:-rotate-45"}`} />
+                  <div className={`relative z-10 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-500 ${isActive ? "bg-white text-black" : "bg-transparent text-transparent group-hover:text-black/30"}`}>
+                    <ArrowRight className={`w-3.5 h-3.5 transition-transform duration-500 ${isActive ? "-rotate-45" : "rotate-0 group-hover:-rotate-45"}`} />
                   </div>
                 </button>
               );
@@ -199,7 +199,7 @@ export default function IndustriesServed() {
           </div>
 
           {/* Column 2: Active Image & Content Panel */}
-          <div className="lg:col-span-8 relative w-full h-[500px] lg:h-[700px] rounded-[2.5rem] overflow-hidden bg-gray-100 shadow-2xl border border-black/5">
+          <div className="lg:col-span-8 relative w-full h-[450px] lg:h-[540px] rounded-[2rem] overflow-hidden bg-gray-100 shadow-2xl border border-black/5">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndustry.id}
@@ -227,12 +227,12 @@ export default function IndustriesServed() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
                 
                 {/* Modern Glassmorphic Content Card */}
-                <div className="absolute bottom-6 left-6 right-6 sm:bottom-10 sm:left-10 sm:right-10 lg:bottom-12 lg:left-12 lg:w-2/3">
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 lg:bottom-10 lg:left-10 lg:w-2/3">
                   <motion.div 
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className="p-8 sm:p-10 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl text-white"
+                    className="p-6 sm:p-8 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl text-white"
                   >
                     <div className="flex items-center gap-3 mb-4 text-white/70">
                       {activeIndustry.icon}
