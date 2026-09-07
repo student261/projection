@@ -85,7 +85,7 @@ export default function Footer() {
                 <li><Link href="/about" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">About Us</Link></li>
                 <li><Link href="/about#careers" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors flex items-center gap-2">Careers <span className="text-[9px] bg-white/10 px-1.5 py-0.5 rounded text-white">HIRING</span></Link></li>
                 <li><Link href="/contact" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">Contact</Link></li>
-                <li><Link href="/blogs" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">News & Lab</Link></li>
+                <li><Link href="/blogs" className="text-[14px] font-medium text-white/70 hover:text-white transition-colors">News</Link></li>
               </ul>
             </div>
 
