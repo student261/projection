@@ -600,22 +600,12 @@ export default function Navbar() {
               Projects
             </Link>
 
-            {/* 3.5. INTERACTIVE LAB */}
-            <Link
-              href="/lab"
-              className={`text-[12px] uppercase font-bold tracking-[0.08em] transition-colors duration-200 py-1 ${
-                isDarkHero ? 'text-white hover:text-gray-300' : 'text-[var(--text-secondary)] hover:text-black'
-              }`}
-            >
-              Lab
-            </Link>
-
             {/* 4. RESOURCES (MEGAMENU / DROPDOWN WITH FAILSAFE HOVER BRIDGE) */}
             <div className="relative group py-2">
               <Link
                 href="/blogs"
                 className={`flex items-center gap-1.5 text-[12px] uppercase font-bold tracking-[0.08em] transition-colors duration-200 py-1 ${
-                  pathname.startsWith("/blogs")
+                  pathname.startsWith("/blogs") || pathname === "/lab"
                     ? `${navTextActive} underline underline-offset-4`
                     : `${navTextMuted} hover:underline underline-offset-4`
                 }`}
@@ -629,6 +619,16 @@ export default function Navbar() {
                 <div className="w-[320px] rounded-2xl p-4 shadow-2xl border border-black/10 bg-white space-y-1 relative">
                   {/* Pointer Caret */}
                   <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-black/10 rotate-45 rounded-tl-sm z-[-1]" />
+                  <Link
+                    href="/lab"
+                    className="flex items-center justify-between p-3 rounded-xl hover:bg-gray-100 transition-colors text-sm text-black/80 hover:text-black group/ritem"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Terminal className="w-3.5 h-3.5 text-black/60" />
+                      <span>Sensor Fusion Lab</span>
+                    </div>
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover/ritem:opacity-100 transition-opacity text-black" />
+                  </Link>
                   <Link
                     href="/blogs"
                     className="flex items-center justify-between p-3 rounded-xl hover:bg-gray-100 transition-colors text-sm text-black/80 hover:text-black group/ritem"
@@ -779,14 +779,14 @@ export default function Navbar() {
               <Link href="/projects" onClick={() => setMobileMenuOpen(false)} className="text-sm uppercase text-black block font-bold">
                 Projects
               </Link>
-              <Link href="/lab" onClick={() => setMobileMenuOpen(false)} className="text-sm uppercase text-black block font-bold">
-                Lab
-              </Link>
             </div>
 
             <div className="border-b border-black/10 pb-3">
               <span className="text-sm uppercase text-black/50 block mb-2 font-bold">Resources</span>
               <div className="pl-3 space-y-1 text-sm text-black/80 font-light">
+                <Link href="/lab" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-black font-bold">
+                  • Sensor Fusion Lab
+                </Link>
                 <Link href="/blogs" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-black font-bold">
                   • Latest Blogs & Insights
                 </Link>
