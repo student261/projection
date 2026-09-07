@@ -65,7 +65,7 @@ export default function Hero() {
             filter: textBlur,
             transformOrigin: "left center" 
           }}
-          className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6 pt-20 pb-20"
+          className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20 flex flex-col items-start"
         >
           
           {/* Main Display Headline (H1) */}
@@ -73,7 +73,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.05] max-w-4xl"
+            className="text-5xl sm:text-6xl lg:text-[5rem] font-black text-white tracking-tighter leading-[1.05] max-w-4xl mb-4"
           >
             Transform Spaces into Extraordinary Interactive Experiences
           </motion.h1>
@@ -83,27 +83,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl sm:text-2xl font-bold tracking-wide text-white/80 max-w-3xl"
+            className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white/90 max-w-3xl mb-8"
           >
             Spatial Interactive Environments &amp; Motion Projection
           </motion.h2>
-
-          {/* Subtitle Paragraph */}
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-sm sm:text-base text-white/60 font-light max-w-2xl leading-relaxed pt-2"
-          >
-            We design and install responsive floor &amp; wall projection systems, 360° immersive galleries, and AI motion tracking installations for commercial architectural spaces.
-          </motion.p>
 
           {/* Action Buttons (2 CTAs) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="pt-6 flex flex-wrap items-center gap-4"
+            className="flex flex-wrap items-center gap-4"
           >
             <Link
               href="/solutions"
