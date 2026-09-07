@@ -54,17 +54,17 @@ export default function WhyChooseUs() {
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
 
   return (
-    <section className="py-12 lg:py-24 bg-white border-t border-gray-100 overflow-hidden text-black">
+    <section className="py-10 lg:py-12 bg-white border-t border-gray-100 overflow-hidden text-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="mb-12 lg:mb-16 max-w-4xl">
+        <div className="mb-8 lg:mb-10 max-w-4xl">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[11px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-4"
+            className="text-[9px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-2 sm:mb-3"
           >
             WHY CHOOSE US
           </motion.p>
@@ -74,14 +74,14 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl lg:text-5xl font-black tracking-tight leading-[1.05]"
+            className="text-3xl lg:text-5xl font-black tracking-tight leading-[1.05]"
           >
             Why Industry Leaders <br className="hidden lg:block" />
             Choose PROJECTION
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column: Accordion List */}
           <div className="lg:col-span-6 flex flex-col w-full" onMouseLeave={() => setHoveredIndex(0)}>
@@ -101,21 +101,21 @@ export default function WhyChooseUs() {
                   onClick={() => setHoveredIndex(index)}
                   className="group border-t border-gray-200 hover:border-black/50 transition-colors duration-300 cursor-pointer overflow-hidden"
                 >
-                  <div className="py-4 lg:py-6 flex flex-row items-center justify-between gap-4">
+                  <div className="py-3 lg:py-4 flex flex-row items-center justify-between gap-4">
                     
                     {/* Left: Number and Title */}
-                    <div className="flex flex-row items-start lg:items-center gap-4 lg:gap-6">
-                      <span className={`text-base font-bold font-mono transition-colors duration-300 ${isHovered ? 'text-black' : 'text-gray-400'}`}>
+                    <div className="flex flex-row items-start lg:items-center gap-3 lg:gap-5">
+                      <span className={`text-sm lg:text-base font-bold font-mono transition-colors duration-300 ${isHovered ? 'text-black' : 'text-gray-400'}`}>
                         {num}
                       </span>
-                      <h3 className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${isHovered ? 'text-black' : 'text-gray-400'}`}>
+                      <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold transition-colors duration-300 ${isHovered ? 'text-black' : 'text-gray-400'}`}>
                         {card.title}
                       </h3>
                     </div>
 
                     {/* Right: Icon */}
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${isHovered ? 'bg-black text-white shadow-lg' : 'bg-gray-100 text-black'}`}>
-                       <Icon className="w-5 h-5" />
+                    <div className={`w-8 h-8 lg:w-10 lg:h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${isHovered ? 'bg-black text-white shadow-md' : 'bg-gray-50 text-gray-500'}`}>
+                       <Icon className="w-4 h-4 lg:w-5 lg:h-5" />
                     </div>
                   </div>
 
@@ -125,8 +125,8 @@ export default function WhyChooseUs() {
                     animate={{ height: isHovered ? "auto" : 0, opacity: isHovered ? 1 : 0 }}
                     className="overflow-hidden"
                   >
-                    <div className="pb-6 pl-[40px] sm:pl-[50px] max-w-xl">
-                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    <div className="pb-4 pl-[35px] sm:pl-[45px] max-w-xl">
+                      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                         {card.desc}
                       </p>
                     </div>
@@ -139,7 +139,7 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Right Column: Supporting Image */}
-          <div className="lg:col-span-6 sticky top-32 h-[400px] lg:h-[600px] rounded-3xl overflow-hidden bg-gray-100 shadow-2xl">
+          <div className="lg:col-span-6 sticky top-24 h-[350px] lg:h-[480px] rounded-3xl overflow-hidden bg-gray-100 shadow-xl border border-black/5">
             <AnimatePresence mode="wait">
               <motion.div
                 key={whyUsCards[hoveredIndex].id}
