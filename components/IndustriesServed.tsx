@@ -110,23 +110,23 @@ export default function IndustriesServed() {
   }, [activeIndex, isHovered]);
 
   return (
-    <section className="py-12 lg:py-20 bg-white border-t border-black/5 overflow-hidden text-black relative">
+    <section className="py-10 lg:py-12 bg-white border-t border-black/5 overflow-hidden text-black relative">
       {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-gray-100 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 opacity-50 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-gray-100 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 opacity-50 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 lg:mb-10">
-          <div className="max-w-3xl space-y-3">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 lg:mb-8">
+          <div className="max-w-3xl space-y-2">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-black/40"
+              className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.3em] text-black/40"
             >
-              <Sparkles className="w-4 h-4 text-black/30" />
+              <Sparkles className="w-3.5 h-3.5 text-black/30" />
               INDUSTRIES WE SERVE
             </motion.div>
 
@@ -135,36 +135,36 @@ export default function IndustriesServed() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.05]"
+              className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black tracking-tight leading-[1.05]"
             >
               Built for Every Industry.<br />
               <span className="text-black/30">Designed for Every Experience.</span>
             </motion.h2>
           </div>
 
-          <div className="hidden md:flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-black/30">
-            Auto-explore <span className={`w-2 h-2 rounded-full ${isHovered ? 'bg-black/20' : 'bg-green-500 animate-pulse'}`} />
+          <div className="hidden md:flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-black/30">
+            Auto-explore <span className={`w-1.5 h-1.5 rounded-full ${isHovered ? 'bg-black/20' : 'bg-green-500 animate-pulse'}`} />
           </div>
         </div>
 
         {/* Dynamic Showcase Layout */}
         <div 
-          className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           
           {/* Column 1: Industry Selector List */}
-          <div className="lg:col-span-4 space-y-1.5 flex flex-col">
+          <div className="lg:col-span-4 space-y-1 flex flex-col">
             {industries.map((ind, idx) => {
               const isActive = activeIndex === idx;
               return (
                 <button
                   key={ind.id}
                   onClick={() => setActiveIndex(idx)}
-                  className={`relative w-full text-left flex items-center justify-between p-3 sm:p-3.5 rounded-2xl transition-all duration-500 overflow-hidden group ${
+                  className={`relative w-full text-left flex items-center justify-between p-2.5 sm:p-3 rounded-[1rem] transition-all duration-500 overflow-hidden group ${
                     isActive 
-                      ? "bg-black text-white shadow-xl scale-[1.02]" 
+                      ? "bg-black text-white shadow-lg scale-[1.01]" 
                       : "bg-transparent text-black/60 hover:bg-black/5 hover:text-black"
                   }`}
                 >
@@ -179,19 +179,19 @@ export default function IndustriesServed() {
                       initial={{ width: 0 }}
                       animate={{ width: "100%" }}
                       transition={{ duration: AUTOPLAY_INTERVAL / 1000, ease: "linear" }}
-                      className="absolute bottom-0 left-0 h-1 bg-white/20"
+                      className="absolute bottom-0 left-0 h-[3px] bg-white/20"
                     />
                   )}
 
                   <div className="flex items-center gap-3 relative z-10">
-                    <div className={`p-2 rounded-xl transition-colors duration-500 ${isActive ? "bg-white/20 text-white shadow-inner" : "bg-black/5 text-black/50 group-hover:bg-black/10 group-hover:text-black"}`}>
+                    <div className={`p-1.5 rounded-lg transition-colors duration-500 ${isActive ? "bg-white/20 text-white shadow-inner" : "bg-black/5 text-black/50 group-hover:bg-black/10 group-hover:text-black"}`}>
                       {ind.icon}
                     </div>
-                    <span className="font-bold text-sm sm:text-base tracking-tight">{ind.title}</span>
+                    <span className="font-bold text-sm tracking-tight">{ind.title}</span>
                   </div>
                   
-                  <div className={`relative z-10 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-500 ${isActive ? "bg-white text-black" : "bg-transparent text-transparent group-hover:text-black/30"}`}>
-                    <ArrowRight className={`w-3.5 h-3.5 transition-transform duration-500 ${isActive ? "-rotate-45" : "rotate-0 group-hover:-rotate-45"}`} />
+                  <div className={`relative z-10 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-500 ${isActive ? "bg-white text-black" : "bg-transparent text-transparent group-hover:text-black/30"}`}>
+                    <ArrowRight className={`w-3 h-3 transition-transform duration-500 ${isActive ? "-rotate-45" : "rotate-0 group-hover:-rotate-45"}`} />
                   </div>
                 </button>
               );
@@ -199,7 +199,7 @@ export default function IndustriesServed() {
           </div>
 
           {/* Column 2: Active Image & Content Panel */}
-          <div className="lg:col-span-8 relative w-full h-[450px] lg:h-[540px] rounded-[2rem] overflow-hidden bg-gray-100 shadow-2xl border border-black/5">
+          <div className="lg:col-span-8 relative w-full h-[400px] lg:h-[480px] rounded-[1.5rem] overflow-hidden bg-gray-100 shadow-xl border border-black/5">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndustry.id}
@@ -227,32 +227,32 @@ export default function IndustriesServed() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
                 
                 {/* Modern Glassmorphic Content Card */}
-                <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 lg:bottom-10 lg:left-10 lg:w-2/3">
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 lg:bottom-8 lg:left-8 lg:w-2/3">
                   <motion.div 
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className="p-6 sm:p-8 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl text-white"
+                    className="p-5 sm:p-6 rounded-[1.25rem] bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl text-white"
                   >
-                    <div className="flex items-center gap-3 mb-4 text-white/70">
+                    <div className="flex items-center gap-2 mb-3 text-white/70">
                       {activeIndustry.icon}
-                      <span className="text-[10px] font-bold uppercase tracking-[0.2em]">{activeIndustry.title} Spaces</span>
+                      <span className="text-[9px] font-bold uppercase tracking-[0.2em]">{activeIndustry.title} Spaces</span>
                     </div>
                     
-                    <h3 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 leading-tight text-white drop-shadow-md">
+                    <h3 className="text-2xl sm:text-3xl font-black tracking-tight mb-3 leading-tight text-white drop-shadow-md">
                       Empower Your <br className="hidden sm:block"/>{activeIndustry.title} Sector
                     </h3>
                     
-                    <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-8 max-w-md font-light">
+                    <p className="text-white/80 text-xs sm:text-sm leading-relaxed mb-6 max-w-sm font-light">
                       {activeIndustry.description}
                     </p>
                     
                     <Link
                       href={activeIndustry.href}
-                      className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-bold text-xs uppercase tracking-widest transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-[10px] uppercase tracking-widest transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
                     >
                       Explore Solutions
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </motion.div>
                 </div>
