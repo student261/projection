@@ -229,13 +229,6 @@ export default function SolutionsContent() {
                       {item.desc}
                     </p>
 
-                    <div className="bg-gray-50 border-l-4 border-black p-4 rounded-r-xl mb-6">
-                      <p className="text-xs lg:text-sm text-gray-800 font-medium">
-                        <span className="font-bold uppercase tracking-wider text-[9px] bg-black text-white px-2 py-1 rounded-md mr-3">Use Case</span>
-                        {item.useCase}
-                      </p>
-                    </div>
-
                     {/* Feature Checklist */}
                     <ul className="space-y-3 mb-8">
                       {item.features.map((feat, fIdx) => (
