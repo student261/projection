@@ -74,6 +74,35 @@ export interface SolutionFullData {
 export default function MasterSolutionContent({ data }: { data: SolutionFullData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeProjectIdx, setActiveProjectIdx] = useState(0);
+  const [activeExpIdx, setActiveExpIdx] = useState(0);
+  const [activeIndustryIdx, setActiveIndustryIdx] = useState(0);
+
+  const allExperiences = [
+    {
+      title: data.featuredExperience.title,
+      category: data.featuredExperience.category,
+      desc: data.featuredExperience.desc,
+      img: data.featuredExperience.img,
+    },
+    ...data.experienceCards.slice(0, 4)
+  ];
+
+  const allIndustries = [
+    {
+      title: data.featuredIndustry.title,
+      desc: data.featuredIndustry.desc,
+      img: data.featuredIndustry.img,
+      href: data.featuredIndustry.href,
+      tag: "Featured Sector",
+    },
+    ...data.industryCards.slice(0, 3).map((ind, i) => ({
+      title: ind.title,
+      desc: ind.desc,
+      img: ind.img,
+      href: ind.href || "/industries",
+      tag: `Industry 0${i + 2}`,
+    }))
+  ];
 
   const projectImages: Record<string, string> = {
     "Education": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
@@ -226,19 +255,15 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-black/10">
+            {/* Swiss Typographic Spec List (Zero Cards) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5 pt-6 border-t border-black/10">
               {data.whatIsFeatures.map((feat, idx) => (
-                <div 
-                  key={idx}
-                  className="p-4 sm:p-5 rounded-2xl bg-black/[0.02] border border-black/5 hover:border-black/15 hover:bg-black/[0.04] transition-all duration-300"
-                >
-                  <div className="flex items-center gap-2.5 mb-2">
-                    <span className="w-6 h-6 rounded-lg bg-black text-white text-[10px] font-mono font-bold flex items-center justify-center shrink-0">
-                      0{idx + 1}
-                    </span>
+                <div key={idx} className="group">
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <span className="text-[10px] font-mono font-bold text-black/40">/{String(idx + 1).padStart(2, "0")}</span>
                     <h4 className="text-sm sm:text-base font-bold text-black tracking-tight">{feat.title}</h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed pl-8">
+                  <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed pl-5">
                     {feat.desc}
                   </p>
                 </div>
@@ -248,99 +273,100 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      {/* SECTION 03 — EXPERIENCE SHOWCASE (BENTO VIEWPORT FIT) */}
-      <section className="py-8 lg:py-12 bg-gray-50/70 border-t border-black/5">
+      {/* SECTION 03 — EXPERIENCE HORIZON GALLERY (EXPANDING FILMSTRIP - ZERO CARDS) */}
+      <section className="py-8 lg:py-12 bg-gray-50/70 border-t border-black/5 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-6">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
-              <Sparkles className="w-3 h-3 text-black" />
-              <span>Discover What&apos;s Possible</span>
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-tight mb-2">
-              Experience the Possibilities
-            </h2>
-            <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-xl mx-auto line-clamp-2">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
+            <div>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
+                <Sparkles className="w-3 h-3 text-black" />
+                <span>Experience Catalog</span>
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
+                Experience the Possibilities
+              </h2>
+            </div>
+            <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-md">
               {data.experienceIntro}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
-            {/* Left: Featured Experience Hero Card */}
-            <Link 
-              href="/solutions" 
-              className="lg:col-span-7 group block relative rounded-2xl sm:rounded-3xl overflow-hidden bg-black min-h-[320px] sm:min-h-[380px] border border-black/10 shadow-md hover:shadow-xl transition-all duration-500"
-            >
-              <SafeImage 
-                src={data.featuredExperience.img} 
-                alt={data.featuredExperience.title} 
-                className="w-full h-full object-cover opacity-65 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 ease-out" 
-                containerClassName="w-full h-full" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex items-end p-5 sm:p-7">
-                <div className="max-w-xl text-white">
-                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white mb-2">
-                    {data.featuredExperience.category}
-                  </span>
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight mb-1.5">
-                    {data.featuredExperience.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-white/80 font-light mb-3 line-clamp-2">
-                    {data.featuredExperience.desc}
-                  </p>
-                  <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors">
-                    <span>Explore {data.featuredExperience.category}</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          {/* Interactive Expanding Horizon Panels (No Cards) */}
+          <div className="flex flex-col lg:flex-row gap-2.5 h-[480px] sm:h-[400px] w-full">
+            {allExperiences.map((exp, idx) => {
+              const isExpanded = activeExpIdx === idx;
+              return (
+                <div
+                  key={idx}
+                  onMouseEnter={() => setActiveExpIdx(idx)}
+                  onClick={() => setActiveExpIdx(idx)}
+                  className={`relative rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer transition-all duration-500 ease-out flex flex-col justify-end ${
+                    isExpanded 
+                      ? "lg:flex-[3.5] bg-black shadow-2xl" 
+                      : "lg:flex-[1] bg-slate-900 opacity-75 hover:opacity-100"
+                  }`}
+                >
+                  <SafeImage
+                    src={exp.img}
+                    alt={exp.title}
+                    className={`w-full h-full object-cover transition-all duration-700 ${
+                      isExpanded ? "scale-105 opacity-65" : "opacity-40 scale-100"
+                    }`}
+                    containerClassName="w-full h-full absolute inset-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
+
+                  {/* Panel Content */}
+                  <div className="relative z-10 p-4 sm:p-6 w-full">
+                    {isExpanded ? (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <span className="inline-block px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white mb-2">
+                          {exp.category}
+                        </span>
+                        <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight mb-1.5">
+                          {exp.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-white/80 font-light mb-4 line-clamp-2 max-w-md">
+                          {exp.desc}
+                        </p>
+                        <Link
+                          href="/solutions"
+                          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white group hover:text-blue-300 transition-colors"
+                        >
+                          <span>Explore Experience</span>
+                          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </motion.div>
+                    ) : (
+                      <div className="hidden lg:flex flex-col items-center justify-center text-center py-4">
+                        <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-white/50 mb-3">
+                          0{idx + 1}
+                        </span>
+                        <span className="text-xs font-bold text-white/80 tracking-wider uppercase [writing-mode:vertical-rl] rotate-180 line-clamp-1">
+                          {exp.title}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
-              </div>
-            </Link>
-
-            {/* Right: 4 Experience Cards (2x2 Compact Bento Grid) */}
-            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-              {data.experienceCards.slice(0, 4).map((card, idx) => (
-                <Link 
-                  key={idx} 
-                  href="/solutions" 
-                  className="group flex flex-col bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-black/10 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-                >
-                  <div className="relative aspect-[16/9] overflow-hidden bg-slate-900 shrink-0">
-                    <SafeImage 
-                      src={card.img} 
-                      alt={card.title} 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" 
-                      containerClassName="w-full h-full" 
-                    />
-                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-mono font-bold uppercase tracking-wider text-white">
-                      {card.category}
-                    </span>
-                  </div>
-                  <div className="p-3 sm:p-3.5 flex flex-col flex-1">
-                    <h4 className="text-xs sm:text-sm font-bold text-black tracking-tight mb-1 group-hover:text-blue-600 transition-colors line-clamp-1">
-                      {card.title}
-                    </h4>
-                    <p className="text-[11px] text-black/60 font-light leading-snug mb-2 line-clamp-2 flex-1">
-                      {card.desc}
-                    </p>
-                    <div className="mt-auto flex items-center gap-1 text-[10px] font-bold text-black group-hover:text-blue-600 transition-colors">
-                      <span className="uppercase tracking-wider">Discover</span>
-                      <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* SECTION 04 — KEY FEATURES (VIEWPORT-OPTIMIZED) */}
+      {/* SECTION 04 — KEY FEATURES (SWISS SYSTEM SPEC MATRIX - ZERO CARDS) */}
       <section className="py-8 lg:py-12 border-y border-black/10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
             <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
                 <Sparkles className="w-3 h-3 text-black" />
-                <span>Core Capabilities</span>
+                <span>System Architecture</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
                 Powerful Features.<br className="hidden sm:inline" /> Exceptional Experiences.
@@ -351,30 +377,28 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Clean Hairline Divided Spec Matrix (Zero Cards) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y divide-black/10 md:divide-y-0 md:divide-x border-y border-black/10">
             {data.keyFeatures.map((feat, idx) => {
               const num = String(idx + 1).padStart(2, "0");
               return (
                 <div 
                   key={idx} 
-                  className="group relative p-5 rounded-2xl bg-gray-50/80 border border-black/5 hover:bg-black hover:border-black transition-all duration-300 overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-0.5"
+                  className={`p-5 lg:p-6 flex flex-col justify-between hover:bg-black/[0.02] transition-colors group ${
+                    idx >= 3 ? "md:border-t md:border-black/10" : ""
+                  }`}
                 >
-                  <div className="absolute -top-4 -right-2 pointer-events-none select-none leading-none">
-                    <span className="text-[6rem] font-black text-black/[0.03] group-hover:text-white/[0.05] leading-none transition-colors duration-300">{num}</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-mono font-bold text-black/40 group-hover:text-black transition-colors">
+                      /{num}
+                    </span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-black/20 group-hover:bg-black transition-colors" />
                   </div>
-                  
-                  <div className="relative z-10 flex flex-col h-full">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="px-2.5 py-1 rounded-lg bg-black text-white text-[11px] font-mono font-bold group-hover:bg-white group-hover:text-black transition-colors duration-300">
-                        {num}
-                      </span>
-                      <span className="w-2 h-2 rounded-full bg-black/20 group-hover:bg-emerald-400 transition-colors" />
-                    </div>
-                    
-                    <h4 className="text-base font-bold text-black group-hover:text-white mb-1.5 transition-colors duration-300 tracking-tight">
+                  <div>
+                    <h4 className="text-base font-bold text-black tracking-tight mb-1.5">
                       {feat.title}
                     </h4>
-                    <p className="text-xs sm:text-sm text-black/60 group-hover:text-white/75 font-light leading-relaxed transition-colors duration-300">
+                    <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed">
                       {feat.desc}
                     </p>
                   </div>
@@ -431,14 +455,14 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      {/* SECTION 06 — INDUSTRIES WE SERVE (VIEWPORT-OPTIMIZED) */}
+      {/* SECTION 06 — INDUSTRIES WE SERVE (INTERACTIVE AMBIENT CONSOLE - ZERO CARDS) */}
       <section className="py-8 lg:py-12 bg-gray-50/50 border-b border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
             <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
                 <Sparkles className="w-3 h-3 text-black" />
-                <span>Cross-Industry Applications</span>
+                <span>Sector Integration</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
                 One Solution.<br className="hidden sm:inline" /> Endless Possibilities.
@@ -449,77 +473,81 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* 1. Featured Industry */}
-            <Link 
-              href={data.featuredIndustry.href} 
-              className="group relative rounded-2xl overflow-hidden bg-black aspect-[3/4] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-black/10"
-            >
-              <SafeImage 
-                src={data.featuredIndustry.img} 
-                alt={data.featuredIndustry.title} 
-                className="w-full h-full object-cover opacity-75 group-hover:opacity-60 transition-all duration-700 group-hover:scale-105" 
-                containerClassName="w-full h-full" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-5">
-                <span className="w-fit px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white mb-2">
-                  Featured
-                </span>
-                <h4 className="text-xl font-bold text-white mb-1.5 tracking-tight group-hover:text-blue-300 transition-colors">
-                  {data.featuredIndustry.title}
-                </h4>
-                <p className="text-xs text-white/70 font-light line-clamp-2 mb-3 leading-relaxed">
-                  {data.featuredIndustry.desc}
-                </p>
-                <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors">
-                  <span>Explore Industry</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </Link>
+          {/* Interactive Sector Segmented Tabs (No Cards) */}
+          <div className="flex flex-wrap gap-2 mb-6 border-b border-black/10 pb-4">
+            {allIndustries.map((ind, idx) => {
+              const isActive = activeIndustryIdx === idx;
+              return (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setActiveIndustryIdx(idx)}
+                  className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                    isActive 
+                      ? "bg-black text-white shadow-md" 
+                      : "bg-white border border-black/10 text-black/60 hover:text-black hover:border-black/30"
+                  }`}
+                >
+                  <span className="opacity-50 mr-1.5">0{idx + 1}</span>
+                  {ind.title}
+                </button>
+              );
+            })}
+          </div>
 
-            {/* 2, 3, 4 Companion Industries */}
-            {data.industryCards.slice(0, 3).map((ind, idx) => (
-              <Link 
-                key={idx} 
-                href={ind.href || "/industries"} 
-                className="group relative rounded-2xl overflow-hidden bg-black aspect-[3/4] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-black/10"
-              >
-                <SafeImage 
-                  src={ind.img} 
-                  alt={ind.title} 
-                  className="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-all duration-700 group-hover:scale-105" 
-                  containerClassName="w-full h-full" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-5">
-                  <span className="w-fit px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-mono font-bold uppercase tracking-wider text-white mb-2">
-                    Industry 0{idx + 2}
-                  </span>
-                  <h4 className="text-xl font-bold text-white mb-1.5 tracking-tight group-hover:text-blue-300 transition-colors">
-                    {ind.title}
-                  </h4>
-                  <p className="text-xs text-white/70 font-light line-clamp-2 mb-3 leading-relaxed">
-                    {ind.desc}
-                  </p>
-                  <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors">
-                    <span>Explore</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          {/* Cinematic Panoramic Stage (Zero Cards, Architectural Canvas) */}
+          {(() => {
+            const activeInd = allIndustries[activeIndustryIdx] || allIndustries[0];
+            return (
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center bg-white rounded-3xl p-6 sm:p-8 border border-black/10 shadow-sm">
+                <div className="lg:col-span-7 relative aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900">
+                  <SafeImage 
+                    key={activeInd.img + activeIndustryIdx}
+                    src={activeInd.img} 
+                    alt={activeInd.title} 
+                    className="w-full h-full object-cover transition-all duration-500" 
+                    containerClassName="w-full h-full absolute inset-0" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-4 left-4">
+                    <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-wider text-white">
+                      {activeInd.tag}
+                    </span>
                   </div>
                 </div>
-              </Link>
-            ))}
-          </div>
+
+                <div className="lg:col-span-5 flex flex-col justify-center">
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40 mb-2 block">
+                    Specialized Application
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-black text-black tracking-tight mb-3">
+                    {activeInd.title}
+                  </h3>
+                  <p className="text-sm text-black/70 font-light leading-relaxed mb-6">
+                    {activeInd.desc}
+                  </p>
+                  <Link 
+                    href={activeInd.href} 
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black text-white hover:bg-black/80 text-xs font-bold uppercase tracking-wider transition-all w-fit shadow-md active:scale-95"
+                  >
+                    <span>Discover {activeInd.title} Solutions</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </section>
 
-      {/* SECTION 07/08 — TECHNOLOGY & BENEFITS (VIEWPORT-OPTIMIZED) */}
+      {/* SECTION 07/08 — TECHNOLOGY & OUTCOMES (TYPOGRAPHIC DATA MATRIX - ZERO CARDS) */}
       <section className="py-8 lg:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
             <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
                 <Sparkles className="w-3 h-3 text-black" />
-                <span>Proven Outcomes & Architecture</span>
+                <span>Measurable Results</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
                 More Than Technology.<br className="hidden sm:inline" /> Meaningful Outcomes.
@@ -530,65 +558,36 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch mb-5">
-            {/* Left: Featured Outcome Card */}
-            <div className="lg:col-span-5 relative rounded-2xl sm:rounded-3xl overflow-hidden bg-black min-h-[280px] sm:min-h-[320px] border border-black/10 shadow-sm group">
-              <SafeImage 
-                src={data.featuredBenefit.img} 
-                alt={data.featuredBenefit.title} 
-                className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-all duration-700 group-hover:scale-105" 
-                containerClassName="w-full h-full" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-5 sm:p-7">
-                <span className="w-fit px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white mb-2">
-                  Primary Outcome
+          {/* Clean 4-Column Typographic Divided Matrix (Zero Cards) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-black/10 border-y border-black/10 py-4 mb-6">
+            {data.benefits.slice(0, 4).map((b, idx) => (
+              <div key={idx} className="p-4 sm:p-5 flex flex-col justify-between group">
+                <span className="text-xs font-mono font-bold text-black/30 mb-4 block group-hover:text-black transition-colors">
+                  0{idx + 1} // IMPACT
                 </span>
-                <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight mb-2">
-                  {data.featuredBenefit.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-white/80 font-light leading-relaxed line-clamp-3">
-                  {data.featuredBenefit.desc}
-                </p>
-              </div>
-            </div>
-
-            {/* Right: 4 Benefit Cards (2x2 Grid) */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-              {data.benefits.slice(0, 4).map((b, idx) => (
-                <div 
-                  key={idx} 
-                  className="group relative p-4 sm:p-5 rounded-2xl bg-gray-50/80 border border-black/5 hover:bg-black hover:border-black transition-all duration-300 flex flex-col justify-between hover:shadow-lg hover:-translate-y-0.5"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="px-2.5 py-0.5 rounded-lg bg-black text-white text-[10px] font-mono font-bold group-hover:bg-white group-hover:text-black transition-colors duration-300">
-                      0{idx + 1}
-                    </span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-black/20 group-hover:bg-emerald-400 transition-colors" />
-                  </div>
-                  <div>
-                    <h5 className="text-sm sm:text-base font-bold text-black group-hover:text-white mb-1 tracking-tight transition-colors">
-                      {b.title}
-                    </h5>
-                    <p className="text-xs text-black/60 group-hover:text-white/70 font-light leading-relaxed transition-colors line-clamp-2">
-                      {b.desc}
-                    </p>
-                  </div>
+                <div>
+                  <h4 className="text-base sm:text-lg font-black text-black tracking-tight mb-2">
+                    {b.title}
+                  </h4>
+                  <p className="text-xs text-black/60 font-light leading-relaxed">
+                    {b.desc}
+                  </p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* Integrated Tech Stack Pill Bar */}
-          <div className="p-3.5 sm:p-4 rounded-2xl bg-black/[0.02] border border-black/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          {/* Integrated Architectural Tech Stack Spec Bar */}
+          <div className="py-3 px-4 rounded-xl bg-black/[0.02] border border-black/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-black/70">
               <Cpu className="w-4 h-4 text-black shrink-0" />
-              <span>Engineered Tech Stack:</span>
+              <span>Core Hardware & Software Stack:</span>
             </div>
             <div className="flex flex-wrap gap-2">
               {data.techStack.map((tech, idx) => (
                 <span 
                   key={idx} 
-                  className="px-3 py-1 rounded-full bg-white border border-black/5 shadow-sm text-[11px] font-bold text-black/75 tracking-wider"
+                  className="px-3 py-1 rounded-full bg-white border border-black/10 text-[11px] font-mono font-bold text-black/80"
                 >
                   {tech}
                 </span>
@@ -721,7 +720,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 10 — FAQs */}
-      <section className="py-16 lg:py-20 bg-gray-50/50 border-y border-black/10">
+      <section className="py-10 lg:py-14 bg-white border-t border-black/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="EVERYTHING YOU NEED TO KNOW"
@@ -730,41 +729,39 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             centered
           />
 
-          <div className="space-y-4 mt-16">
+          <div className="mt-10 border-t border-black/15 divide-y divide-black/10">
             {data.faqs.map((faq, idx) => {
               const isOpen = openFaq === idx;
               const itemNumber = String(idx + 1).padStart(2, "0");
 
               return (
-                <div
-                  key={idx}
-                  className={`rounded-3xl border transition-all duration-300 overflow-hidden ${
-                    isOpen
-                      ? "bg-white border-[#000000] shadow-xl shadow-[#000000]/10 ring-1 ring-[#000000]/30"
-                      : "bg-white border-black/10 hover:border-black/20 shadow-sm"
-                  }`}
-                >
+                <div key={idx} className="transition-colors duration-200">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full p-6 sm:p-7 text-left flex items-start justify-between gap-4 cursor-pointer group"
+                    className="w-full py-5 text-left flex items-start justify-between gap-6 cursor-pointer group"
                   >
-                    <div className="flex items-start gap-4">
-                      <span className={`text-sm font-extrabold pt-0.5 transition-colors ${isOpen ? "text-black" : "text-black/30 group-hover:text-black/60"}`}>
-                        {itemNumber}
+                    <div className="flex items-start gap-4 sm:gap-6">
+                      <span className={`font-mono text-xs pt-1 transition-colors ${isOpen ? "text-black font-bold" : "text-black/30 group-hover:text-black/60"}`}>
+                        /{itemNumber}
                       </span>
-                      <span className="text-base sm:text-lg font-bold text-black group-hover:text-black transition-colors leading-snug">
+                      <span className={`text-base sm:text-lg font-bold transition-colors leading-snug ${isOpen ? "text-black" : "text-black/80 group-hover:text-black"}`}>
                         {faq.q}
                       </span>
                     </div>
-                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen ? "bg-black text-white shadow-md rotate-180" : "bg-gray-100 text-black/70 group-hover:bg-gray-200"}`}>
-                      <ChevronDown className="w-4 h-4" />
+                    <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 border transition-all duration-300 ${isOpen ? "border-black bg-black text-white rotate-180" : "border-black/15 text-black/60 group-hover:border-black/30"}`}>
+                      <ChevronDown className="w-3.5 h-3.5" />
                     </div>
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 sm:px-7 pb-7 text-base font-light text-black/80 leading-relaxed border-t border-black/5 pt-4 ml-8 sm:ml-9 space-y-3">
-                      <p>{faq.a}</p>
-                    </div>
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      transition={{ duration: 0.25 }}
+                      className="pb-5 pl-8 sm:pl-10 text-sm sm:text-base font-light text-black/75 leading-relaxed"
+                    >
+                      <p className="max-w-3xl">{faq.a}</p>
+                    </motion.div>
                   )}
                 </div>
               );
