@@ -11,7 +11,7 @@ export default function HugeCTA() {
       {/* Full-width Background Image */}
       <div className="absolute inset-0 z-0">
         <SafeImage
-          src="https://momentfactory.com/cdn/shop/files/preview_images/0facee35b3b047cea1c88598a5a3c20a.thumbnail.0000000000_500x.jpg"
+          src="https://momentfactory.com/cdn/shop/files/KarelChladek-5286-WS.jpg"
           alt="Interactive Vision Background"
           className="w-full h-full object-cover object-center opacity-40 filter brightness-75"
           containerClassName="w-full h-full"

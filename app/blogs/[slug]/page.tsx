@@ -178,7 +178,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-[11px] uppercase tracking-widest text-black/60 font-bold">
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded-full overflow-hidden bg-black/10">
-                <SafeImage src="https://momentfactory.com/cdn/shop/files/preview_images/b59ef5b9f49b4ef08d01cf4c431aec6e.thumbnail.0000000000_500x.jpg" alt="Author" className="w-full h-full object-cover" />
+                <SafeImage src="https://momentfactory.com/cdn/shop/files/AuraInvalides_MomentFactory_MouvementIII_HD-WS.jpg" alt="Author" className="w-full h-full object-cover" />
               </div>
               <span className="text-black">Dr. Elena Rostova</span>
             </div>

@@ -157,8 +157,8 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       {/* SECTION 01 - HERO BANNER */}
       <section className="relative min-h-[90vh] lg:min-h-[100vh] py-32 flex items-center justify-center overflow-hidden bg-black text-white">
         <div className="absolute inset-0 z-0">
-          <SafeImage src={data.heroImg} alt={data.heroHeading} className="w-full h-full object-cover opacity-60 scale-105 animate-[slow-pan_20s_ease-in-out_infinite_alternate]" containerClassName="w-full h-full bg-black" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/80" />
+          <SafeImage src={data.heroImg} alt={data.heroHeading} className="w-full h-full object-cover opacity-85 brightness-105 contrast-105 scale-105 animate-[slow-pan_20s_ease-in-out_infinite_alternate]" containerClassName="w-full h-full bg-black" priority />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -324,11 +324,11 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                     src={exp.img}
                     alt={exp.title}
                     className={`w-full h-full object-cover transition-all duration-700 ${
-                      isExpanded ? "scale-105 opacity-65" : "opacity-40 scale-100"
+                      isExpanded ? "scale-105 opacity-95 brightness-105" : "opacity-75 scale-100 brightness-90 hover:opacity-100"
                     }`}
                     containerClassName="w-full h-full absolute inset-0"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
 
                   {/* Panel Content */}
                   <div className="relative z-10 p-4 sm:p-6 w-full">
@@ -688,12 +688,12 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                   key={activeProject.img + activeProjectIdx}
                   src={activeProject.img} 
                   alt={activeProject.title} 
-                  className="w-full h-full object-cover opacity-60 transition-all duration-700" 
+                  className="w-full h-full object-cover opacity-95 brightness-105 contrast-105 transition-all duration-700" 
                   containerClassName="w-full h-full absolute inset-0" 
                 />
                 
                 {/* Gradient Vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
 
                 {/* Overlaid Info */}
                 <div className="relative z-10 p-5 sm:p-7">

@@ -42,10 +42,10 @@ const DEFAULT_SOLUTION_PREVIEW: MegamenuPreview = {
 
 const DEFAULT_INDUSTRY_PREVIEW: MegamenuPreview = {
   badge: "SECTORS",
-  title: "Industry Showcase",
-  desc: "Explore all targeted architectural sectors.",
+  title: "Industry Architecture",
+  desc: "Explore tailored spatial projection systems engineered across 8 major commercial sectors.",
   href: "/industries",
-  img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
+  img: "https://momentfactory.com/cdn/shop/files/KarelChladek-5286-WS.jpg",
 };
 
 export default function Navbar() {
@@ -130,360 +130,9 @@ export default function Navbar() {
               <div className="absolute top-full left-0 w-screen bg-white shadow-2xl border-t border-black/10 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:w-screen before:h-6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                   <div className="grid grid-cols-12 gap-12">
-                    <div className="col-span-7 grid grid-cols-2 gap-6">
-                    {/* Category 1: Interactive Spaces */}
-                    <div>
-                      <Link
-                        href="/solutions/interactive-spaces"
-                        onMouseEnter={() =>
-                          setSolPreview({
-                              badge: "ACTIVE ARENA",
-                              title: "ARcade & Active Spaces",
-                              desc: "Transform floors, walls, and architectural environments into responsive interactive ecosystems.",
-                              href: "/solutions/interactive-spaces",
-                              img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
-                            })
-                        }
-                        className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
-                      >
-                        <Sparkles className="w-3.5 h-3.5 text-black group-hover/header:text-gray-500 transition-colors" />
-                        <span>Interactive Spaces</span>
-                      </Link>
-                      <ul className="space-y-1 text-[11px] font-light text-black/70">
-                        <li>
-                          <Link
-                            href="/solutions/interactive-floor"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "GROUND INTERACTION",
-                              title: "Motion Tracking Floors",
-                              desc: "Footfall-activated particle physics, sports games, and interactive ground environments.",
-                              href: "/solutions/interactive-floor",
-                              img: "https://momentfactory.com/cdn/shop/files/MF_ARcade_BrunoDestombes_DSC01692-HR.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Interactive Floor
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/solutions/interactive-wall"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "VERTICAL SURFACE",
-                              title: "Generative Media Walls",
-                              desc: "LiDAR-powered interactive digital walls reacting to hand touch and bodily presence.",
-                              href: "/solutions/interactive-wall",
-                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_ATT_Discovery_District_21.png",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Interactive Wall
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/solutions/interactive-ceiling"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "OVERHEAD CANOPY",
-                              title: "Tokyo Shinjuku Digital Canopy",
-                              desc: "Massive color-bath dynamic light ceiling tunnels and responsive suspended digital art.",
-                              href: "/solutions/interactive-ceiling",
-                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_A03_3-WS.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Interactive Ceiling
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/solutions/interactive-window"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "STREETFRONT TECH",
-                              title: "Smart Interactive Windows",
-                              desc: "Through-glass radar and gesture tracking turning commercial storefronts into 24/7 engagement portals.",
-                              href: "/solutions/interactive-window",
-                              img: "https://momentfactory.com/cdn/shop/files/20160103_momentfactory-0985-WS_grande.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Interactive Window
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/solutions/interactive-mirror-table"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "TACTILE SURFACE",
-                              title: "Changi Airport Smart Tables",
-                              desc: "Multi-user interactive projection tables with touchless optical gesture and RFID object recognition.",
-                              href: "/solutions/interactive-mirror-table",
-                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Interactive Mirror / Table
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* Category 2: Immersive Environment */}
-                    <div>
-                      <Link
-                        href="/solutions/immersive-environment"
-                        onMouseEnter={() =>
-                          setSolPreview({
-                              badge: "SPATIAL IMMERSION",
-                              title: "Superreal Architectural Immersion",
-                              desc: "Full-scale architectural multimedia transformation turning classical interiors into dimensional dreamscapes.",
-                              href: "/solutions/immersive-environment",
-                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
-                            })
-                        }
-                        className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
-                      >
-                        <Layers className="w-3.5 h-3.5 text-black group-hover/header:text-gray-500 transition-colors" />
-                        <span>Immersive Environment</span>
-                      </Link>
-                      <ul className="space-y-1 text-[11px] font-light text-black/70">
-                        <li>
-                          <Link
-                            href="/solutions/projection-mapping"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "LANDMARK MAPPING",
-                              title: "AURA Notre-Dame Basilica",
-                              desc: "World-renowned architectural projection mapping transforming historical sacred architecture into light.",
-                              href: "/solutions/projection-mapping",
-                              img: "https://momentfactory.com/cdn/shop/files/KarelChladek-5286-WS.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Projection Mapping
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/solutions/immersive-room"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "360° SENSORY",
-                              title: "Mirror Mirror 360° Labyrinth",
-                              desc: "Multi-sensory rooms synchronizing 360° projection, infinity mirrors, and spatial soundscapes.",
-                              href: "/solutions/immersive-room",
-                              img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Immersive Room (180/360)
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/solutions/led-tunnel"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "DIGITAL PASSAGE",
-                              title: "Tokyo Metro Light Corridor",
-                              desc: "Immersive transit corridors with seamless architectural LED walls, ceilings, and motion-reactive portals.",
-                              href: "/solutions/led-tunnel",
-                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_A03_3-WS.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • LED Tunnel
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/solutions/holographic-display"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "FLOATING OPTICS",
-                              title: "Superreal Holographic Portals",
-                              desc: "Volumetric floating projections and transparent light sculptures creating impossible optical illusions.",
-                              href: "/solutions/holographic-display",
-                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Themed_Entertainment_Wonderbox_Paradise_city_korea_DSC07507-WS.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Holographic Display
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* Category 3: AI Experience */}
-                    <div className="pt-2">
-                      <Link
-                        href="/solutions/ai-experience"
-                        onMouseEnter={() =>
-                          setSolPreview({
-                              badge: "GENERATIVE AI",
-                              title: "AT&T Discovery District Canvas",
-                              desc: "Real-time AI generative simulations transforming architecture with dynamic visitor tracking and fluid physics.",
-                              href: "/solutions/ai-experience",
-                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_ATT_Discovery_District_21.png",
-                            })
-                        }
-                        className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
-                      >
-                        <Cpu className="w-3.5 h-3.5 text-black group-hover/header:text-gray-500 transition-colors" />
-                        <span>AI Experience</span>
-                      </Link>
-                      <ul className="space-y-1 text-[11px] font-light text-black/70">
-                        <li>
-                          <Link
-                            href="/solutions/ai-avatar-photobooth"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "DIGITAL AVATARS",
-                              title: "Real Madrid Biometric Hub",
-                              desc: "Gamified interactive photo booths and biometric motion stations capturing visitor movements into live digital avatars.",
-                              href: "/solutions/ai-avatar-photobooth",
-                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_087-WS_46fdefce-745c-4f6c-91a6-97cbf378a1d3.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • AI Avatar / Photo Booth
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* Category 4: Solution Engagement */}
-                    <div className="pt-2">
-                      <Link
-                        href="/solutions/solution-engagement"
-                        onMouseEnter={() =>
-                          setSolPreview({
-                              badge: "HIGH DWELL TECH",
-                              title: "The Wonderfall at Changi T2",
-                              desc: "A monumental 14-meter digital waterfall installation captivating millions of global passengers.",
-                              href: "/solutions/solution-engagement",
-                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Changi_Experience_Studio_JE-077-WS.jpg",
-                            })
-                        }
-                        className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
-                      >
-                        <Gamepad2 className="w-3.5 h-3.5 text-black group-hover/header:text-gray-500 transition-colors" />
-                        <span>Solution Engagement</span>
-                      </Link>
-                      <ul className="space-y-1 text-[11px] font-light text-black/70">
-                        <li>
-                          <Link
-                            href="/solutions/brand-gamification"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "BRAND ODYSSEY",
-                              title: "The Messi Experience",
-                              desc: "Interactive motion-tracked brand installations, competitive stadium challenges, and fan journey experiences.",
-                              href: "/solutions/brand-gamification",
-                              img: "https://momentfactory.com/cdn/shop/files/TME_MomentFactory_THELASTCHANCE_5.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Brand Gamification
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/solutions/motion-games"
-                            onMouseEnter={() =>
-                              setSolPreview({
-                              badge: "ACTIVE GAMING",
-                              title: "ARcade Motion Arena",
-                              desc: "Multi-player active games where floor and wall projections react to physical bodily movement with zero wearables.",
-                              href: "/solutions/motion-games",
-                              img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
-                            })
-                            }
-                            className="hover:text-black hover:underline block py-0.5 transition-colors"
-                          >
-                            • Motion Games
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Right Dynamic Interactive Preview Card */}
-                  <Link
-                    href={solPreview.href}
-                    className="col-span-5 rounded-xl p-4 bg-black text-white flex flex-col justify-between relative overflow-hidden group/card transition-all duration-300 border border-black/20 shadow-xl cursor-pointer"
-                  >
-                    <div className="w-full h-36 rounded-lg overflow-hidden relative border border-white/10 shrink-0 bg-gray-900">
-                      <SafeImage
-                        src={solPreview.img}
-                        alt={solPreview.title}
-                        className="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700"
-                        containerClassName="w-full h-full"
-                      />
-                      <div className="absolute top-2 left-2 z-10">
-                        <span className="text-[9px] font-bold tracking-widest text-white bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-full uppercase border border-white/20 flex items-center gap-1">
-                          <Zap className="w-3 h-3 text-white" />
-                          <span>{solPreview.badge}</span>
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="pt-3 space-y-1.5 flex-1 flex flex-col justify-between">
-                      <div>
-                        <h4 className="text-white">
-                          {solPreview.title}
-                        </h4>
-                        <p className="text-[11px] text-white/70 font-light leading-relaxed line-clamp-2 mt-1">
-                          {solPreview.desc}
-                        </p>
-                      </div>
-
-                      <div className="pt-2 inline-flex items-center gap-1.5 text-[11px] font-bold text-white group-hover/card:text-gray-200">
-                        <span>Explore Technology</span>
-                        <ArrowRight className="w-3.5 h-3.5 group-hover/card:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            {/* 2. INDUSTRIES MEGAMENU */}
-            <div className="group py-2 static" onMouseLeave={() => setIndPreview(DEFAULT_INDUSTRY_PREVIEW)}>
-              <Link
-                href="/industries"
-                className={`flex items-center gap-1.5 text-[12px] uppercase font-bold tracking-[0.08em] transition-colors duration-200 py-1 ${
-                  pathname.startsWith("/industries")
-                    ? `${navTextActive} underline underline-offset-4`
-                    : `${navTextMuted} hover:underline underline-offset-4`
-                }`}
-              >
-                <span>Industries</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180 ${isDarkHero ? 'text-white/70' : 'text-[var(--text-secondary)]'}`} />
-              </Link>
-
-              {/* Full-bleed MegaMenu Tray */}
-              <div className="absolute top-full left-0 w-screen bg-white shadow-2xl border-t border-black/10 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:w-screen before:h-6">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                  <div className="grid grid-cols-12 gap-12">
-                    <div className="col-span-7 grid grid-cols-2 gap-4">
+                    <div className="col-span-7 grid grid-cols-2 gap-3">
+                    
+                    {/* 1. Retail */}
                     <Link
                       href="/industries/retail-showrooms"
                       onMouseEnter={() =>
@@ -492,7 +141,7 @@ export default function Navbar() {
                           title: "Storefront Activations",
                           desc: "Interactive window projections & touchless product showcases boosting store foot-traffic.",
                           href: "/industries/retail-showrooms",
-                          img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
+                          img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg",
                         })
                       }
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
@@ -506,11 +155,12 @@ export default function Navbar() {
                           <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
                         </div>
                         <div className="text-[11px] text-gray-500 font-light leading-snug">
-                          Storefronts & brand activations
+                          Storefronts & brand showcases
                         </div>
                       </div>
                     </Link>
 
+                    {/* 2. Education */}
                     <Link
                       href="/industries/education"
                       onMouseEnter={() =>
@@ -519,7 +169,7 @@ export default function Navbar() {
                           title: "Interactive Classrooms",
                           desc: "Active movement-based projection floors for collaborative STEM labs & schools.",
                           href: "/industries/education",
-                          img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
+                          img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_Space_Center_Houston_Lunar_Obstacle_Run_3-WS.png",
                         })
                       }
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
@@ -538,6 +188,7 @@ export default function Navbar() {
                       </div>
                     </Link>
 
+                    {/* 3. Healthcare */}
                     <Link
                       href="/industries/healthcare"
                       onMouseEnter={() =>
@@ -546,7 +197,7 @@ export default function Navbar() {
                           title: "Therapeutic Sensory Rooms",
                           desc: "Pediatric rehabilitation & sensory decompression rooms with soothing motion floor projection.",
                           href: "/industries/healthcare",
-                          img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
+                          img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS.jpg",
                         })
                       }
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
@@ -565,15 +216,16 @@ export default function Navbar() {
                       </div>
                     </Link>
 
+                    {/* 4. Museums & Culture */}
                     <Link
                       href="/industries/museums-culture"
                       onMouseEnter={() =>
                         setIndPreview({
                           badge: "MUSEUMS & EXPOS",
-                          title: "Cultural Installations",
-                          desc: "Architectural light mapping, cathedral projection, and 360-degree exhibit tunnels.",
+                          title: "Cultural Heritage Mapping",
+                          desc: "Architectural light mapping, cathedral projection, and 360-degree exhibit chambers.",
                           href: "/industries/museums-culture",
-                          img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
+                          img: "https://momentfactory.com/cdn/shop/files/KarelChladek-5286-WS.jpg",
                         })
                       }
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
@@ -583,52 +235,161 @@ export default function Navbar() {
                       </div>
                       <div>
                         <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>Expo & Culture</span>
+                          <span>Museums</span>
                           <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
                         </div>
                         <div className="text-[11px] text-gray-500 font-light leading-snug">
-                          Museums, exhibitions & venues
+                          Cultural landmarks & galleries
                         </div>
                       </div>
                     </Link>
-                    
-                    <Link href="/industries" className="col-span-1 md:col-span-2 text-center p-3 mt-2 rounded-xl bg-gray-50 hover:bg-gray-100 text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2">
-                      View All 8 Industries <ArrowRight className="w-3 h-3" />
+
+                    {/* 5. Entertainment */}
+                    <Link
+                      href="/industries/entertainment"
+                      onMouseEnter={() =>
+                        setIndPreview({
+                          badge: "ENTERTAINMENT",
+                          title: "Active Arenas & Games",
+                          desc: "Motion-tracked active sports arenas, projection floors, and interactive team games.",
+                          href: "/industries/entertainment",
+                          img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
+                        })
+                      }
+                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
+                        <Gamepad2 className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-black flex items-center gap-1">
+                          <span>Entertainment</span>
+                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                        </div>
+                        <div className="text-[11px] text-gray-500 font-light leading-snug">
+                          Theme parks & active arenas
+                        </div>
+                      </div>
                     </Link>
+
+                    {/* 6. Hospitality */}
+                    <Link
+                      href="/industries/hospitality"
+                      onMouseEnter={() =>
+                        setIndPreview({
+                          badge: "HOSPITALITY",
+                          title: "Lobbies & Grand Salons",
+                          desc: "Transformative 360-degree multimedia hotel lobbies and ambient responsive digital skies.",
+                          href: "/industries/hospitality",
+                          img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
+                        })
+                      }
+                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
+                        <Sparkles className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-black flex items-center gap-1">
+                          <span>Hospitality</span>
+                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                        </div>
+                        <div className="text-[11px] text-gray-500 font-light leading-snug">
+                          Hotels, resorts & lounges
+                        </div>
+                      </div>
+                    </Link>
+
+                    {/* 7. Corporate */}
+                    <Link
+                      href="/industries/corporate"
+                      onMouseEnter={() =>
+                        setIndPreview({
+                          badge: "CORPORATE",
+                          title: "Atriums & Executive Centers",
+                          desc: "High-impact kinetic media walls and interactive data visualization for world headquarters.",
+                          href: "/industries/corporate",
+                          img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_ATT_Discovery_District_21.png",
+                        })
+                      }
+                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
+                        <Layers className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-black flex items-center gap-1">
+                          <span>Corporate</span>
+                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                        </div>
+                        <div className="text-[11px] text-gray-500 font-light leading-snug">
+                          Global HQ atriums & briefing labs
+                        </div>
+                      </div>
+                    </Link>
+
+                    {/* 8. Public Spaces */}
+                    <Link
+                      href="/industries/public-spaces"
+                      onMouseEnter={() =>
+                        setIndPreview({
+                          badge: "PUBLIC SPACES",
+                          title: "Transit & Urban Architecture",
+                          desc: "Massive digital LED corridors and architectural projection in airports and stations.",
+                          href: "/industries/public-spaces",
+                          img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_A03_3-WS.jpg",
+                        })
+                      }
+                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
+                        <Zap className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-black flex items-center gap-1">
+                          <span>Public Spaces</span>
+                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                        </div>
+                        <div className="text-[11px] text-gray-500 font-light leading-snug">
+                          Airports, transit & municipal plazas
+                        </div>
+                      </div>
+                    </Link>
+
                   </div>
 
                   {/* Dynamic Industry Card Preview */}
                   <Link
                     href={indPreview.href}
-                    className="col-span-5 rounded-xl p-4 bg-black text-white flex flex-col justify-between relative overflow-hidden group/card transition-all duration-300 border border-black/20 shadow-xl cursor-pointer"
+                    className="col-span-5 rounded-2xl p-5 bg-black text-white flex flex-col justify-between relative overflow-hidden group/card transition-all duration-300 border border-white/10 shadow-2xl cursor-pointer"
                   >
-                    <div className="w-full h-32 rounded-lg overflow-hidden relative border border-white/10 shrink-0 bg-gray-900">
+                    <div className="w-full h-44 rounded-xl overflow-hidden relative border border-white/15 shrink-0 bg-gray-900">
                       <SafeImage
                         src={indPreview.img}
                         alt={indPreview.title}
-                        className="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover brightness-105 group-hover/card:scale-105 transition-transform duration-700"
                         containerClassName="w-full h-full"
                       />
-                      <div className="absolute top-2 left-2 z-10">
-                        <span className="text-[9px] font-bold tracking-widest text-white bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-full uppercase border border-white/20">
+                      <div className="absolute top-2.5 left-2.5 z-10">
+                        <span className="text-[9px] font-mono font-bold tracking-widest text-white bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-full uppercase border border-white/20">
                           {indPreview.badge}
                         </span>
                       </div>
                     </div>
 
-                    <div className="pt-3 space-y-1.5 flex-1 flex flex-col justify-between">
+                    <div className="pt-4 space-y-2 flex-1 flex flex-col justify-between">
                       <div>
-                        <h4 className="text-white">
+                        <h4 className="text-base font-black text-white tracking-tight">
                           {indPreview.title}
                         </h4>
-                        <p className="text-[11px] text-white/70 font-light leading-relaxed line-clamp-2 mt-1">
+                        <p className="text-xs text-white/75 font-light leading-relaxed line-clamp-2 mt-1">
                           {indPreview.desc}
                         </p>
                       </div>
 
-                      <div className="pt-2 inline-flex items-center gap-1.5 text-[11px] font-bold text-white group-hover/card:text-gray-200">
-                        <span>Explore Sector</span>
-                        <ArrowRight className="w-3 h-3 group-hover/card:translate-x-1 transition-transform" />
+                      <div className="pt-2 inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover/card:text-blue-300 transition-colors">
+                        <span>Explore Sector Portfolio</span>
+                        <ArrowRight className="w-3.5 h-3.5 group-hover/card:translate-x-1 transition-transform" />
                       </div>
                     </div>
                   </Link>
