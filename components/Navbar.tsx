@@ -37,7 +37,7 @@ const DEFAULT_SOLUTION_PREVIEW: MegamenuPreview = {
   title: "Full Interactive Engine",
   desc: "Explore all commercial spatial motion projection & AI technologies.",
   href: "/solutions",
-  img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+  img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=600&q=80",
 };
 
 const DEFAULT_INDUSTRY_PREVIEW: MegamenuPreview = {
@@ -133,7 +133,19 @@ export default function Navbar() {
                     <div className="col-span-7 grid grid-cols-2 gap-6">
                     {/* Category 1: Interactive Spaces */}
                     <div>
-                      <Link href="/solutions/interactive-spaces" className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header">
+                      <Link
+                        href="/solutions/interactive-spaces"
+                        onMouseEnter={() =>
+                          setSolPreview({
+                            badge: "INTERACTIVE SPACES",
+                            title: "Interactive Surface Architecture",
+                            desc: "Responsive floor, wall, ceiling, and storefront systems powered by real-time computer vision.",
+                            href: "/solutions/interactive-spaces",
+                            img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+                          })
+                        }
+                        className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
+                      >
                         <Sparkles className="w-3.5 h-3.5 text-black group-hover/header:text-gray-500 transition-colors" />
                         <span>Interactive Spaces</span>
                       </Link>
@@ -147,7 +159,7 @@ export default function Navbar() {
                                 title: "Interactive Motion Floor",
                                 desc: "Ceiling optical sensors turning physical flooring into responsive light canvases.",
                                 href: "/solutions/interactive-floor",
-                                img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
@@ -161,10 +173,10 @@ export default function Navbar() {
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "INTERACTIVE SPACES",
-                                title: "Interactive Motion Wall",
-                                desc: "Laser projection wall reacting to multi-touch and gesture tracking.",
+                                title: "Interactive Touch & Gesture Wall",
+                                desc: "Laser projection wall reacting to multi-touch and gesture tracking with zero wearables.",
                                 href: "/solutions/interactive-wall",
-                                img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
@@ -179,9 +191,9 @@ export default function Navbar() {
                               setSolPreview({
                                 badge: "INTERACTIVE SPACES",
                                 title: "Interactive Ceiling Canopy",
-                                desc: "Overhead projection arrays casting dynamic skyward graphics & generative art.",
+                                desc: "Overhead dome and canopy projection casting celestial graphics & generative skyward art.",
                                 href: "/solutions/interactive-ceiling",
-                                img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
@@ -196,9 +208,9 @@ export default function Navbar() {
                               setSolPreview({
                                 badge: "INTERACTIVE SPACES",
                                 title: "Storefront Window Projection",
-                                desc: "Rear-projection film turning retail glass windows into touchless interactive screens.",
+                                desc: "Rear-projection film turning retail glass windows into touchless interactive street displays.",
                                 href: "/solutions/interactive-window",
-                                img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
@@ -213,9 +225,9 @@ export default function Navbar() {
                               setSolPreview({
                                 badge: "INTERACTIVE SPACES",
                                 title: "Interactive Mirror & Touch Table",
-                                desc: "Multi-user capacitive touch surfaces & reflective smart mirror displays.",
+                                desc: "Multi-user capacitive touch surfaces & reflective smart mirror retail displays.",
                                 href: "/solutions/interactive-mirror-table",
-                                img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
@@ -228,7 +240,19 @@ export default function Navbar() {
 
                     {/* Category 2: Immersive Environment */}
                     <div>
-                      <Link href="/solutions/immersive-environment" className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header">
+                      <Link
+                        href="/solutions/immersive-environment"
+                        onMouseEnter={() =>
+                          setSolPreview({
+                            badge: "IMMERSIVE ENVIRONMENT",
+                            title: "Panoramic Spatial Environments",
+                            desc: "Large-scale 360 rooms, architectural facade mapping, and illuminated sensory spaces.",
+                            href: "/solutions/immersive-environment",
+                            img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=600&q=80",
+                          })
+                        }
+                        className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
+                      >
                         <Layers className="w-3.5 h-3.5 text-black group-hover/header:text-gray-500 transition-colors" />
                         <span>Immersive Environment</span>
                       </Link>
@@ -240,9 +264,9 @@ export default function Navbar() {
                               setSolPreview({
                                 badge: "IMMERSIVE ENVIRONMENT",
                                 title: "Architectural Projection Mapping",
-                                desc: "Sub-millimeter 3D mesh scanning & high-lumen projection mapping onto complex architecture.",
+                                desc: "Sub-millimeter 3D mesh scanning & high-lumen projection mapping onto building facades.",
                                 href: "/solutions/projection-mapping",
-                                img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
@@ -257,7 +281,7 @@ export default function Navbar() {
                               setSolPreview({
                                 badge: "IMMERSIVE ENVIRONMENT",
                                 title: "360° Immersive Room",
-                                desc: "Seamless projection rooms with multi-channel surround audio.",
+                                desc: "Seamless multi-wall projection rooms with surround acoustics and edge-blending.",
                                 href: "/solutions/immersive-room",
                                 img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=600&q=80",
                               })
@@ -274,9 +298,9 @@ export default function Navbar() {
                               setSolPreview({
                                 badge: "IMMERSIVE ENVIRONMENT",
                                 title: "Interactive LED Tunnel",
-                                desc: "Curved high-density LED archways with motion proximity tracking.",
+                                desc: "Curved high-density LED archways with motion proximity tracking & dynamic portals.",
                                 href: "/solutions/led-tunnel",
-                                img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
@@ -291,7 +315,7 @@ export default function Navbar() {
                               setSolPreview({
                                 badge: "IMMERSIVE ENVIRONMENT",
                                 title: "3D Holographic Display",
-                                desc: "Transparent floating 3D visuals that appear mid-air without 3D glasses.",
+                                desc: "Transparent floating 3D visuals that appear suspended mid-air without 3D glasses.",
                                 href: "/solutions/holographic-display",
                                 img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
                               })
@@ -306,7 +330,19 @@ export default function Navbar() {
 
                     {/* Category 3: AI Experience */}
                     <div className="pt-2">
-                      <Link href="/solutions/ai-experience" className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header">
+                      <Link
+                        href="/solutions/ai-experience"
+                        onMouseEnter={() =>
+                          setSolPreview({
+                            badge: "AI EXPERIENCE",
+                            title: "Conversational & Generative AI",
+                            desc: "Interactive virtual humans and computer vision installations that recognize visitors.",
+                            href: "/solutions/ai-experience",
+                            img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80",
+                          })
+                        }
+                        className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
+                      >
                         <Cpu className="w-3.5 h-3.5 text-black group-hover/header:text-gray-500 transition-colors" />
                         <span>AI Experience</span>
                       </Link>
@@ -320,7 +356,7 @@ export default function Navbar() {
                                 title: "Autonomous AI Avatar Host",
                                 desc: "Real-time generative spatial voice avatar greeting visitors with computer vision.",
                                 href: "/solutions/ai-avatar-photobooth",
-                                img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
@@ -333,7 +369,19 @@ export default function Navbar() {
 
                     {/* Category 4: Solution Engagement */}
                     <div className="pt-2">
-                      <Link href="/solutions/solution-engagement" className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header">
+                      <Link
+                        href="/solutions/solution-engagement"
+                        onMouseEnter={() =>
+                          setSolPreview({
+                            badge: "SOLUTION ENGAGEMENT",
+                            title: "Gamified Activations & Arenas",
+                            desc: "Brand games, gesture competitions, and active movement arenas for venues and retail.",
+                            href: "/solutions/solution-engagement",
+                            img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
+                          })
+                        }
+                        className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
+                      >
                         <Gamepad2 className="w-3.5 h-3.5 text-black group-hover/header:text-gray-500 transition-colors" />
                         <span>Solution Engagement</span>
                       </Link>
@@ -347,7 +395,7 @@ export default function Navbar() {
                                 title: "Brand Gamification Activation",
                                 desc: "Custom 3D mini-games and interactive reward systems for flagship retail stores.",
                                 href: "/solutions/brand-gamification",
-                                img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
@@ -364,7 +412,7 @@ export default function Navbar() {
                                 title: "Multi-User Motion Games",
                                 desc: "Body-tracking spatial motion gaming for museums, venues, and public spaces.",
                                 href: "/solutions/motion-games",
-                                img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
+                                img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=600&q=80",
                               })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"

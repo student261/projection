@@ -70,7 +70,7 @@ export interface SolutionFullData {
   projectsHeading?: string;
   projectsIntro: string;
   featuredProject: { industry: string; title: string; desc: string; img: string; location: string; tech: string[]; href: string };
-  projects: { industry: string; title: string; desc: string; href: string }[];
+  projects: { industry: string; title: string; desc: string; href: string; img?: string }[];
 
   // Section 10: FAQs
   faqsIntro: string;
@@ -111,10 +111,10 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
   ];
 
   const projectImages: Record<string, string> = {
-    "Education": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    "Education": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
     "Museum": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1200&q=80",
-    "Retail": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
-    "Healthcare": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    "Retail": "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1200&q=80",
+    "Healthcare": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
     "Entertainment": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
   };
 
@@ -134,7 +134,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       location: `${p.industry} Sector Installation`,
       desc: p.desc,
       tech: ["Motion Sensing", "Projection Mapping", "Interactive Engine"],
-      img: projectImages[p.industry] || data.featuredProject.img,
+      img: p.img || projectImages[p.industry] || data.featuredProject.img,
       href: p.href,
     }))
   ];

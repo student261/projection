@@ -10,11 +10,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Interactive Spaces & Motion Floors",
     heroSubtitle: "Transform Every Physical Surface into an Intelligently Responsive Experience",
     heroDescription: "Transform architectural flooring, vertical walls, and ceilings into living digital ecosystems that respond with sub-millimeter accuracy to human presence and footfall.",
-    heroImg: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Are Interactive Spaces?",
     whatIsDescription: "Interactive Spaces combine optical depth sensors, high-lumen laser projection, and generative computing to transform ordinary static surfaces into responsive physical-digital playgrounds.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Optical Depth Sensing", desc: "Overhead 3D LiDAR and optical tracking detect multiple visitors instantly." },
       { title: "Zero Wearables", desc: "Pure touchless interaction—visitors use natural body movement and footsteps." },
@@ -28,7 +28,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Education & Edutainment",
       title: "Active Learning Motion Floor",
       desc: "Turn classroom floors into solar system explorers, dynamic math puzzles, and collaborative physical games.",
-      img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
       { category: "Museums & Culture", title: "Living Natural Biomes", desc: "Interactive flora and fauna that react, bloom, and scatter as visitors walk.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" },
@@ -69,7 +69,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "Tangible Engagement Metrics & ROI",
     benefitsIntro: "Interactive spaces consistently elevate visitor dwell time, brand memorability, and social sharing.",
-    featuredBenefit: { title: "Measurable Physical Engagement", desc: "Spaces with interactive motion surfaces experience up to a 300% increase in visitor dwell time and unprompted social sharing.", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "Measurable Physical Engagement", desc: "Spaces with interactive motion surfaces experience up to a 300% increase in visitor dwell time and unprompted social sharing.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "300% Dwell Time", desc: "Visitors stay significantly longer interacting with responsive environments." },
       { title: "Zero Physical Wear", desc: "Light replaces mechanical touchscreens, eliminating breakage risks." },
@@ -85,15 +85,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "Interactive STEM Discovery Floor",
       desc: "A multi-zone interactive floor installation transforming student participation with interactive science models.",
       location: "Dubai Knowledge Park",
-      img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
       tech: ["Interactive Floor", "Optical Tracking", "Laser Projection", "Educational CMS"],
       href: "/projects"
     },
     projects: [
-      { industry: "Museum", title: "Living Wetland Ecosystem", desc: "Floor projection reacting to visitor footsteps with fish and lily pads.", href: "/projects" },
-      { industry: "Retail", title: "Luxury Sneaker Portal", desc: "Interactive floor illuminating shoe specifications when walked upon.", href: "/projects" },
-      { industry: "Healthcare", title: "Pediatric Wellness Garden", desc: "Calming interactive light paths in main hospital atrium.", href: "/projects" },
-      { industry: "Corporate", title: "Dynamic Brand Welcome Matrix", desc: "Sensory floor welcoming VIPs with generative graphics.", href: "/projects" }
+      { industry: "Museum", title: "Living Wetland Ecosystem", desc: "Floor projection reacting to visitor footsteps with fish and lily pads.", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Retail", title: "Luxury Sneaker Portal", desc: "Interactive floor illuminating shoe specifications when walked upon.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Healthcare", title: "Pediatric Wellness Garden", desc: "Calming interactive light paths in main hospital atrium.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Corporate", title: "Dynamic Brand Welcome Matrix", desc: "Sensory floor welcoming VIPs with generative graphics.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding architectural requirements, ceiling heights, and day-to-day operation.",
@@ -114,11 +114,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Interactive Motion Floor",
     heroSubtitle: "Transform Every Footstep into Fluid Light & Dynamic Interaction",
     heroDescription: "Our signature Interactive Floor system turns static ground surfaces into responsive interactive light canvases. Ideal for museums, flagship stores, schools, and children's amusement centers.",
-    heroImg: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Is an Interactive Floor?",
     whatIsDescription: "An Interactive Floor is an overhead laser-projected system paired with optical depth sensors that detects visitor foot movements in real-time, casting responsive animations, games, and ripples directly beneath their feet.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Instant Footfall Response", desc: "Sub-16ms latency ensures footsteps trigger instant ripples, animations, or game actions." },
       { title: "Multi-Player Gaming", desc: "Supports up to 30 people playing educational or competitive games simultaneously." },
@@ -132,13 +132,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Sports & Play",
       title: "Interactive Virtual Soccer & Hockey",
       desc: "Visitors kick a virtual projected ball into dynamic goals with realistic bounce physics and cheering crowds.",
-      img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Nature & Zen", title: "Koi Pond & Water Lilies", desc: "Gentle water ripples follow every step as virtual koi fish swim around feet.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Music & Art", title: "Giant Foot Piano", desc: "Step on illuminated piano keys to compose symphonies with synchronized lighting.", img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80" },
-      { category: "Retail", title: "Autumn Leaves & Snow Particles", desc: "Kick through virtual fallen leaves or fresh snow to reveal promotional discount codes.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" },
-      { category: "Edutainment", title: "Math & Solar System Hopscotch", desc: "Children learn planets and arithmetic through active physical jumping games.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" }
+      { category: "Nature & Zen", title: "Koi Pond & Water Lilies", desc: "Gentle water ripples follow every step as virtual koi fish swim around feet.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" },
+      { category: "Music & Art", title: "Giant Foot Piano", desc: "Step on illuminated piano keys to compose symphonies with synchronized lighting.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" },
+      { category: "Retail", title: "Autumn Leaves & Snow Particles", desc: "Kick through virtual fallen leaves or fresh snow to reveal promotional discount codes.", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" },
+      { category: "Edutainment", title: "Math & Solar System Hopscotch", desc: "Children learn planets and arithmetic through active physical jumping games.", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Floor Tracking Engine & Optical Specs",
@@ -164,7 +164,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Where Interactive Floors Excel",
     industriesIntro: "Proven impact across family entertainment centers, retail malls, pediatric clinics, and school halls.",
-    featuredIndustry: { title: "Family Entertainment Centers", desc: "High-energy games that keep children engaged for hours.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80", href: "/industries/entertainment" },
+    featuredIndustry: { title: "Family Entertainment Centers", desc: "High-energy games that keep children engaged for hours.", img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80", href: "/industries/entertainment" },
     industryCards: [
       { title: "Shopping Malls & Retail", desc: "Draw foot traffic into central atriums with joyful interactive attractions.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
       { title: "Schools & Kindergartens", desc: "Physical exercise combined with interactive cognitive learning.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80", href: "/industries/education" },
@@ -173,7 +173,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "Floor Installation Benefits & Impact",
     benefitsIntro: "Interactive floors deliver high engagement while requiring zero floor modifications.",
-    featuredBenefit: { title: "Durable & Zero Floor Hazard", desc: "Because all electronics are overhead, the floor remains flat, safe, easy to clean, and ADA compliant.", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "Durable & Zero Floor Hazard", desc: "Because all electronics are overhead, the floor remains flat, safe, easy to clean, and ADA compliant.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "Zero Wearable Gear", desc: "No controllers, shoes, or glasses needed—just walk and play." },
       { title: "Hygienic & Touchless", desc: "No glass screens to disinfect; ideal for post-pandemic healthcare and malls." },
@@ -189,15 +189,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "PlayZone Interactive Ocean Floor",
       desc: "A massive 8x5m interactive floor with 20 multiplayer games for a premiere amusement venue.",
       location: "Riyadh, Saudi Arabia",
-      img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
       tech: ["Twin Laser Projectors", "LiDAR Tracking", "Custom Ocean Physics"],
       href: "/projects"
     },
     projects: [
-      { industry: "Education", title: "Primary School Active Gym", desc: "Interactive floor integrated into physical education curriculum.", href: "/projects" },
-      { industry: "Retail", title: "Sporting Goods Shoe Test Track", desc: "Floor that tests agility and measures foot speed.", href: "/projects" },
-      { industry: "Healthcare", title: "Children's Clinic Waiting Oasis", desc: "Calming interactive light pond in main lobby.", href: "/projects" },
-      { industry: "Museum", title: "Prehistoric Walkway", desc: "Walk on digital lava and ancient fossils.", href: "/projects" }
+      { industry: "Education", title: "Primary School Active Gym", desc: "Interactive floor integrated into physical education curriculum.", img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Retail", title: "Sporting Goods Shoe Test Track", desc: "Floor that tests agility and measures foot speed.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Healthcare", title: "Children's Clinic Waiting Oasis", desc: "Calming interactive light pond in main lobby.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Museum", title: "Prehistoric Walkway", desc: "Walk on digital lava and ancient fossils.", img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding interactive floor installation and operation.",
@@ -218,11 +218,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Interactive Touch & Gesture Wall",
     heroSubtitle: "Transform Plain Walls into Expansive Multi-Touch Canvases",
     heroDescription: "Convert any vertical interior wall into an interactive touch-sensitive or gesture-reactive digital powerhouse. Support multi-user collaboration, digital graffiti, and corporate storytelling.",
-    heroImg: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Is an Interactive Wall?",
     whatIsDescription: "An Interactive Wall combines ultra-short-throw laser projectors with laser touch curtains or LiDAR sensors to detect hand touches and body gestures directly against a vertical wall, converting drywall, glass, or brick into a responsive touch screen.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Laser Touch Curtain", desc: "Creates an invisible infrared laser plane parallel to the wall for multi-touch accuracy." },
       { title: "Touchless Gesture Mode", desc: "Optional body-tracking mode allowing interaction from up to 5 meters away." },
@@ -236,13 +236,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Creative Activations",
       title: "Digital Graffiti & Spray Art Wall",
       desc: "Guests use infrared digital spray cans to paint on a massive wall with authentic dripping paint and stencil effects.",
-      img: "https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Corporate Briefing", title: "Executive Interactive Timeline", desc: "Touch milestones across a company's century of innovation to expand video case studies.", img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" },
+      { category: "Corporate Briefing", title: "Executive Interactive Timeline", desc: "Touch milestones across a company's century of innovation to expand video case studies.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" },
       { category: "Museums", title: "Tactile Living Artifacts", desc: "Touch ancient artifacts projected on museum walls to rotate 3D models and hear audio.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Brand Flagships", title: "Generative Living Floral Wall", desc: "Standing in front of the wall causes virtual vines and exotic blossoms to grow around your silhouette.", img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80" },
-      { category: "Education", title: "Collaborative Science Sandbox", desc: "Multiple students manipulate chemical elements and gravity simulations side-by-side.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" }
+      { category: "Brand Flagships", title: "Generative Living Floral Wall", desc: "Standing in front of the wall causes virtual vines and exotic blossoms to grow around your silhouette.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" },
+      { category: "Education", title: "Collaborative Science Sandbox", desc: "Multiple students manipulate chemical elements and gravity simulations side-by-side.", img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Wall Sensor Mechanics & Laser Calibration",
@@ -268,7 +268,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Key Sectors for Interactive Walls",
     industriesIntro: "High-value applications across corporate briefing centers, universities, and brand exhibits.",
-    featuredIndustry: { title: "Corporate Briefing Centers", desc: "Impress clients with dynamic executive timelines and strategy pitch walls.", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80", href: "/industries/corporate" },
+    featuredIndustry: { title: "Corporate Briefing Centers", desc: "Impress clients with dynamic executive timelines and strategy pitch walls.", img: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?auto=format&fit=crop&w=1200&q=80", href: "/industries/corporate" },
     industryCards: [
       { title: "Museums & Cultural Centers", desc: "Interactive history walls that make archives accessible to the public.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
       { title: "Automotive & Retail Showrooms", desc: "Full-scale vehicle configurators and interactive product walls.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
@@ -277,7 +277,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "Interactive Wall Business Outcomes",
     benefitsIntro: "Replace static bulletin boards and expensive LED displays with versatile projection walls.",
-    featuredBenefit: { title: "Fraction of the Cost of Giant LED", desc: "Projected interactive walls deliver huge surface areas (10m+) at a fraction of the hardware cost and energy consumption of LED panels.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "Fraction of the Cost of Giant LED", desc: "Projected interactive walls deliver huge surface areas (10m+) at a fraction of the hardware cost and energy consumption of LED panels.", img: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "Seamless Zero-Bezel Canvas", desc: "No bezel grid lines cutting through corporate presentations or artwork." },
       { title: "Low Power Consumption", desc: "Consumes up to 70% less electricity than large-format LED videowalls." },
@@ -293,15 +293,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "Bank Innovation Center Interactive Wall",
       desc: "A 12-meter continuous multi-touch wall showcasing financial history and real-time global market transactions.",
       location: "London, UK",
-      img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?auto=format&fit=crop&w=1200&q=80",
       tech: ["Triple Blended UST Projectors", "Laser Curtains", "Custom HTML5 Financial Dashboard"],
       href: "/projects"
     },
     projects: [
-      { industry: "Museum", title: "National History Touch Wall", desc: "Touch ancient historical figures to hear narrated speeches.", href: "/projects" },
-      { industry: "Retail", title: "Flagship Apparel Color Wall", desc: "Touch color swatches to recolor digital mannequins.", href: "/projects" },
-      { industry: "Education", title: "Interactive Medical Anatomy Wall", desc: "Medical students dissect 3D human models on a 5m wall.", href: "/projects" },
-      { industry: "Events", title: "Expo Digital Graffiti Wall", desc: "Over 5,000 visitors painted custom art during a 3-day conference.", href: "/projects" }
+      { industry: "Museum", title: "National History Touch Wall", desc: "Touch ancient historical figures to hear narrated speeches.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Retail", title: "Flagship Apparel Color Wall", desc: "Touch color swatches to recolor digital mannequins.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Education", title: "Interactive Medical Anatomy Wall", desc: "Medical students dissect 3D human models on a 5m wall.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Events", title: "Expo Digital Graffiti Wall", desc: "Over 5,000 visitors painted custom art during a 3-day conference.", img: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding interactive wall implementation and projection surfaces.",
@@ -322,11 +322,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Interactive Ceiling & Skyward Canopies",
     heroSubtitle: "Transform Ceilings into Dynamic Skyward Digital Skylights & Generative Art",
     heroDescription: "Casting dynamic celestial skies, responsive digital canopies, and ambient generative visuals overhead. Controlled by visitor movement and sound below.",
-    heroImg: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Is an Interactive Ceiling?",
     whatIsDescription: "An Interactive Ceiling turns blank architectural ceilings, domes, or tension-fabric canopies into living digital skies. Upward-firing or mirror-folded laser projectors cast breathtaking celestial phenomena that shift as people walk below.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Dynamic Sky Simulation", desc: "Simulates time of day, atmospheric clouds, auroras, and starry galaxies." },
       { title: "Motion-Coupled Overhead", desc: "Visitor walking patterns below steer flocking birds or cosmic nebulae above." },
@@ -340,13 +340,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Wellness & Ambiance",
       title: "Biophilic Digital Sky & Canopy",
       desc: "Sunlight filtering through swaying forest leaves and clouds that mimic real-time outdoor weather.",
-      img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Luxury Hospitality", title: "Aurora Borealis Hotel Atrium", desc: "Northern lights dancing across a 30m lobby ceiling synchronized to ambient music.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" },
+      { category: "Luxury Hospitality", title: "Aurora Borealis Hotel Atrium", desc: "Northern lights dancing across a 30m lobby ceiling synchronized to ambient music.", img: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80" },
       { category: "Planetariums & Domes", title: "Cosmic Nebula Fly-Through", desc: "Visitors lie back and journey through 3D mapped stellar nurseries and distant constellations.", img: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80" },
-      { category: "Transit Hubs", title: "Subterranean Skylight Portal", desc: "Creating the illusion of natural open sky in windowless underground subway concourses.", img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80" },
-      { category: "Retail Atriums", title: "Interactive Particle Murmuration", desc: "Flocks of digital starlings that scatter whenever a crowd gathers beneath.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" }
+      { category: "Transit Hubs", title: "Subterranean Skylight Portal", desc: "Creating the illusion of natural open sky in windowless underground subway concourses.", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" },
+      { category: "Retail Atriums", title: "Interactive Particle Murmuration", desc: "Flocks of digital starlings that scatter whenever a crowd gathers beneath.", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Ceiling Projection Optics & Biophilic Engine",
@@ -372,7 +372,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Ideal Sectors for Interactive Ceilings",
     industriesIntro: "From windowless basements to grand luxury hotel lobbies and wellness resorts.",
-    featuredIndustry: { title: "Luxury Hospitality", desc: "Captivate hotel guests the moment they enter grand lobbies.", img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80", href: "/industries/hospitality" },
+    featuredIndustry: { title: "Luxury Hospitality", desc: "Captivate hotel guests the moment they enter grand lobbies.", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80", href: "/industries/hospitality" },
     industryCards: [
       { title: "Healthcare & MRI Suites", desc: "Calm patients with soothing digital skylights during stressful treatments.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80", href: "/industries/healthcare" },
       { title: "Corporate Headquarters", desc: "Transform executive atriums into memorable architectural landmarks.", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" },
@@ -381,7 +381,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "Architectural & Psychological Outcomes",
     benefitsIntro: "Enhance spatial perception, well-being, and architectural grandeur.",
-    featuredBenefit: { title: "Expand Perceived Room Height", desc: "Digital sky ceilings eliminate the claustrophobic feel of low ceilings, making rooms feel visually open to the sky.", img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "Expand Perceived Room Height", desc: "Digital sky ceilings eliminate the claustrophobic feel of low ceilings, making rooms feel visually open to the sky.", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "Proven Stress Reduction", desc: "Biophilic blue sky and moving clouds reduce heart rates and stress levels." },
       { title: "Invisible Hardware", desc: "All projectors are concealed in architectural soffits or perimeter coves." },
@@ -397,15 +397,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "Grand Hotel Celestial Atrium",
       desc: "A 40-meter barrel vault ceiling mapped with generative auroras and meteor showers responding to lobby piano music.",
       location: "Geneva, Switzerland",
-      img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80",
       tech: ["6x 15K Laser Projectors", "Acoustic Reactive Shaders", "Concealed Cove Mounts"],
       href: "/projects"
     },
     projects: [
-      { industry: "Healthcare", title: "Pediatric Hospital Digital Skyway", desc: "Illuminated digital sky over young patient transport corridors.", href: "/projects" },
-      { industry: "Retail", title: "Luxury Mall Sky Canopy", desc: "Seasonal weather and fireworks projected overhead.", href: "/projects" },
-      { industry: "Corporate", title: "Innovation Lab Stargate Dome", desc: "Interactive hemispherical ceiling for executive brainstorms.", href: "/projects" },
-      { industry: "Museum", title: "Ancient Astronomy Dome", desc: "Interactive night sky showing historical star alignments.", href: "/projects" }
+      { industry: "Healthcare", title: "Pediatric Hospital Digital Skyway", desc: "Illuminated digital sky over young patient transport corridors.", img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Retail", title: "Luxury Mall Sky Canopy", desc: "Seasonal weather and fireworks projected overhead.", img: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Corporate", title: "Innovation Lab Stargate Dome", desc: "Interactive hemispherical ceiling for executive brainstorms.", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Museum", title: "Ancient Astronomy Dome", desc: "Interactive night sky showing historical star alignments.", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding ceiling projection and architectural integration.",
@@ -426,11 +426,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Interactive Storefront Windows",
     heroSubtitle: "Turn Plain Glass Windows into Touchless 24/7 Digital Billboards",
     heroDescription: "Transform exterior retail glass into touch-through or gesture-reactive interactive digital displays that captivate street pedestrians even when your store is closed.",
-    heroImg: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Is an Interactive Window?",
     whatIsDescription: "An Interactive Window utilizes specialized rear-projection holographic film applied directly to retail glass, paired with high-lumen laser projectors and through-glass touch foils or gesture sensors to create an interactive touch screen on the sidewalk side.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Through-Glass Touch Foil", desc: "Detects finger touches through glass up to 20mm thick with zero exterior wiring." },
       { title: "24/7 Storefront Window Shopping", desc: "Pedestrians can browse products, watch lookbooks, and scan QR codes overnight." },
@@ -444,13 +444,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Retail Streetfront",
       title: "24/7 Touch-Through Digital Showroom",
       desc: "Shoppers browse seasonal fashion collections through the exterior glass, send products to their phones, and buy online.",
-      img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Real Estate & Agencies", title: "Property Explorer Window", desc: "Search property listings, floorplans, and 3D virtual tours directly on the high street.", img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80" },
-      { category: "Automotive", title: "Night Window Car Customizer", desc: "Customize vehicle colors and trims projected onto real showroom glass at midnight.", img: "https://images.unsplash.com/photo-1605335198270-b74955776d6c?auto=format&fit=crop&w=800&q=80" },
-      { category: "Gaming & Brand Promos", title: "Street Gesture Arcade", desc: "Pedestrians use hand waves to play branded street games and win discount coupons.", img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Banks & Travel", title: "Interactive Currency & Holiday Planner", desc: "Browse flight deals and exchange rates touchlessly outside branch offices.", img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" }
+      { category: "Real Estate & Agencies", title: "Property Explorer Window", desc: "Search property listings, floorplans, and 3D virtual tours directly on the high street.", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" },
+      { category: "Automotive", title: "Night Window Car Customizer", desc: "Customize vehicle colors and trims projected onto real showroom glass at midnight.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80" },
+      { category: "Gaming & Brand Promos", title: "Street Gesture Arcade", desc: "Pedestrians use hand waves to play branded street games and win discount coupons.", img: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80" },
+      { category: "Banks & Travel", title: "Interactive Currency & Holiday Planner", desc: "Browse flight deals and exchange rates touchlessly outside branch offices.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Optical Film & Sensor Engineering",
@@ -476,7 +476,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Industries Utilizing Interactive Windows",
     industriesIntro: "Drive revenue when stores are closed and maximize prime high-street commercial rent.",
-    featuredIndustry: { title: "High-Street Retail & Fashion", desc: "Turn after-hours window shopping into direct e-commerce sales.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80", href: "/industries/retail-showrooms" },
+    featuredIndustry: { title: "High-Street Retail & Fashion", desc: "Turn after-hours window shopping into direct e-commerce sales.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1200&q=80", href: "/industries/retail-showrooms" },
     industryCards: [
       { title: "Real Estate Brokerages", desc: "Allow buyers to browse home listings 24/7 on prime streetfront corners.", img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" },
       { title: "Automotive Dealerships", desc: "Showcase new vehicle models in stunning high definition after hours.", img: "https://images.unsplash.com/photo-1605335198270-b74955776d6c?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
@@ -485,7 +485,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "Storefront Window ROI & Benefits",
     benefitsIntro: "Monetize after-hours foot traffic and distinguish your brand on crowded commercial streets.",
-    featuredBenefit: { title: "Capture Sales 24 Hours a Day", desc: "Stores with interactive window systems generate up to 25% of their digital leads outside normal operating hours.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "Capture Sales 24 Hours a Day", desc: "Stores with interactive window systems generate up to 25% of their digital leads outside normal operating hours.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "100% Vandalism Proof", desc: "Everything is inside your locked storefront; exterior is just your regular window glass." },
       { title: "Instant Campaign Updates", desc: "Push new sale prices or campaigns to 50 store windows in seconds via cloud CMS." },
@@ -501,15 +501,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "Fifth Avenue 24/7 Interactive Storefront",
       desc: "An interactive window installation for a flagship cosmetics boutique allowing nighttime product browsing.",
       location: "New York, USA",
-      img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80",
       tech: ["Through-Glass Touch", "High-Lumen Laser", "Mobile Checkout QR"],
       href: "/projects"
     },
     projects: [
-      { industry: "Real Estate", title: "Prime Property Street Kiosk", desc: "Interactive window generating 150+ buyer inquiries weekly.", href: "/projects" },
-      { industry: "Automotive", title: "Midnight Car Configurator", desc: "Pedestrians customize electric vehicles on high-street glass.", href: "/projects" },
-      { industry: "Telecom", title: "Touchless Phone Upgrade Portal", desc: "Customers compare mobile plans touchlessly outside the store.", href: "/projects" },
-      { industry: "Tourism", title: "Destination Virtual Window", desc: "Interactive window showcasing tropical beach deals.", href: "/projects" }
+      { industry: "Real Estate", title: "Prime Property Street Kiosk", desc: "Interactive window generating 150+ buyer inquiries weekly.", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Automotive", title: "Midnight Car Configurator", desc: "Pedestrians customize electric vehicles on high-street glass.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Telecom", title: "Touchless Phone Upgrade Portal", desc: "Customers compare mobile plans touchlessly outside the store.", img: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Tourism", title: "Destination Virtual Window", desc: "Interactive window showcasing tropical beach deals.", img: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding interactive storefront windows and glass compatibility.",
@@ -530,11 +530,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Interactive Smart Mirror & Touch Tables",
     heroSubtitle: "Capacitive Multi-Touch Surfaces & Reflective Smart Mirror Displays",
     heroDescription: "Multi-user capacitive touch tables for collaborative strategy and smart mirrors that combine crystal reflection with high-brightness digital interfaces for fashion, fitness, and hospitality.",
-    heroImg: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Are Smart Mirrors & Touch Tables?",
     whatIsDescription: "Smart Mirrors utilize specialized dielectric two-way optical glass overlaid on ultra-bright commercial displays to show information while serving as a mirror. Touch Tables integrate multi-touch surfaces that support object recognition (tangibles) for collaborative group interaction.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1533230554625-f76ea10c4fce?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Dielectric Optical Mirror Glass", desc: "Flawless mirror reflection when off; brilliant digital display when activated." },
       { title: "Object Recognition (Tangibles)", desc: "Place physical artifacts on the table to trigger customized digital specs." },
@@ -548,13 +548,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Retail Dressing Rooms",
       title: "Smart Fitting Room Magic Mirror",
       desc: "Shoppers request different sizes, adjust fitting room lighting, and view accessory recommendations directly on the mirror glass.",
-      img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Museums & Archives", title: "Interactive Tangible History Table", desc: "Visitors place physical 3D-printed artifacts on the glass to unlock archival documents.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Corporate Boardrooms", title: "4K Architectural Masterplan Table", desc: "Inspect 3D building models, rotate blueprints, and pinch-to-zoom satellite terrain.", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" },
-      { category: "Hospitality & Bars", title: "Interactive Dining & Cocktail Table", desc: "Order cocktails, view chef preparation videos, and play multiplayer casual games while dining.", img: "https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?auto=format&fit=crop&w=800&q=80" },
-      { category: "Fitness & Wellness", title: "Interactive Smart Gym Mirror", desc: "Displays virtual personal trainers, posture correction graphics, and heart rate telemetry.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" }
+      { category: "Museums & Archives", title: "Interactive Tangible History Table", desc: "Visitors place physical 3D-printed artifacts on the glass to unlock archival documents.", img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" },
+      { category: "Corporate Boardrooms", title: "4K Architectural Masterplan Table", desc: "Inspect 3D building models, rotate blueprints, and pinch-to-zoom satellite terrain.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" },
+      { category: "Hospitality & Bars", title: "Interactive Dining & Cocktail Table", desc: "Order cocktails, view chef preparation videos, and play multiplayer casual games while dining.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" },
+      { category: "Fitness & Wellness", title: "Interactive Smart Gym Mirror", desc: "Displays virtual personal trainers, posture correction graphics, and heart rate telemetry.", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Surface Hardware & Tangible Engine",
@@ -580,7 +580,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Industries Using Smart Mirrors & Tables",
     industriesIntro: "High-impact deployments across luxury retail, executive centers, and boutique hospitality.",
-    featuredIndustry: { title: "Luxury Retail & Fitting Rooms", desc: "Enhance fitting room conversion rates with interactive mirrors.", img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80", href: "/industries/retail-showrooms" },
+    featuredIndustry: { title: "Luxury Retail & Fitting Rooms", desc: "Enhance fitting room conversion rates with interactive mirrors.", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80", href: "/industries/retail-showrooms" },
     industryCards: [
       { title: "Museums & Cultural Archives", desc: "Hands-on artifact exploration tables that fascinate visitors of all ages.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
       { title: "Corporate Briefing & Architecture", desc: "Collaborative masterplan tables for reviewing city-scale CAD models.", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" },
@@ -589,7 +589,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "Proven Business Outcomes & Value",
     benefitsIntro: "Deliver unprecedented collaborative depth and personalized retail service.",
-    featuredBenefit: { title: "Increase Fitting Room Conversion by 40%", desc: "Smart mirrors allow shoppers to request alternative sizes without dressing, dramatically reducing fitting room abandonment.", img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "Increase Fitting Room Conversion by 40%", desc: "Smart mirrors allow shoppers to request alternative sizes without dressing, dramatically reducing fitting room abandonment.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "Tangible Tangibility", desc: "Bridges tactile physical objects with deep rich digital data." },
       { title: "Multi-User Collaboration", desc: "Group discussions flow naturally without everyone staring at individual phones." },
@@ -605,15 +605,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "Luxury Flagship Smart Fitting Rooms",
       desc: "Deployment of 12 interactive smart mirrors across a premier European department store fitting suite.",
       location: "Milan, Italy",
-      img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
       tech: ["Dielectric Mirror Glass", "RFID Garment Detection", "Store POS Integration"],
       href: "/projects"
     },
     projects: [
-      { industry: "Museum", title: "Archaeology Tangible Exploration Table", desc: "Visitors place pottery shards to reveal complete historical 3D vases.", href: "/projects" },
-      { industry: "Corporate", title: "Smart City Masterplan Touch Table", desc: "85-inch 4K collaborative touch table for urban planners.", href: "/projects" },
-      { industry: "Hospitality", title: "Interactive VIP Lounge Tables", desc: "Cocktail ordering and gaming touch tables in an upscale lounge.", href: "/projects" },
-      { industry: "Automotive", title: "Dealership Material Selection Table", desc: "Place real leather and paint samples on table to see them applied to 3D cars.", href: "/projects" }
+      { industry: "Museum", title: "Archaeology Tangible Exploration Table", desc: "Visitors place pottery shards to reveal complete historical 3D vases.", img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Corporate", title: "Smart City Masterplan Touch Table", desc: "85-inch 4K collaborative touch table for urban planners.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Hospitality", title: "Interactive VIP Lounge Tables", desc: "Cocktail ordering and gaming touch tables in an upscale lounge.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Automotive", title: "Dealership Material Selection Table", desc: "Place real leather and paint samples on table to see them applied to 3D cars.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding smart mirrors, touch tables, and object recognition.",
@@ -634,11 +634,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Projection Mapping & Immersive Rooms",
     heroSubtitle: "Transport Audiences with 360-Degree Architectural Storytelling",
     heroDescription: "Create monumental visual illusions that bend physical space, wrapping historic facades, theatrical stages, and 360-degree exhibition rooms in seamless ultra-HD digital narratives.",
-    heroImg: "https://images.unsplash.com/photo-1543332143-4e8c27e32a0c?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Is Projection Mapping & Immersive Tech?",
     whatIsDescription: "Projection Mapping transforms complex physical structures into dynamic video canvases. By precisely scanning 3D geometry with LiDAR and aligning multiple laser projectors, static architecture appears to crumble, transform, and come alive.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Geometric Mesh Calibration", desc: "Software warps video pixels to match physical corners, curves, and relief details." },
       { title: "Edge Blending Technology", desc: "Seamlessly blends multiple projectors into one gigantic ultra-HD resolution canvas." },
@@ -652,13 +652,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Museums & Fine Art",
       title: "360° Living Impressionist Exhibition",
       desc: "Step directly inside iconic masterpieces as paintings animate across floor-to-ceiling walls with spatial orchestral sound.",
-      img: "https://images.unsplash.com/photo-1518998053401-878c735c084c?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Public Art", title: "Civic Facade Mapping Spectacle", desc: "Turn historic city halls, cathedrals, and monuments into monumental video landmarks.", img: "https://images.unsplash.com/photo-1522442642191-2dc04a292850?auto=format&fit=crop&w=800&q=80" },
-      { category: "Corporate Keynotes", title: "Dynamic Shifting Event Stages", desc: "Transform corporate stage backdrops into shifting, three-dimensional digital environments.", img: "https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=800&q=80" },
-      { category: "Brand Launches", title: "Automotive Product Mapping", desc: "Project dynamic animated textures, speed lines, and internal mechanics onto physical vehicles.", img: "https://images.unsplash.com/photo-1605335198270-b74955776d6c?auto=format&fit=crop&w=800&q=80" },
-      { category: "Entertainment Venues", title: "Interactive LED Light Tunnels", desc: "Curved high-density archways that pulse with color as visitors pass through.", img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" }
+      { category: "Public Art", title: "Civic Facade Mapping Spectacle", desc: "Turn historic city halls, cathedrals, and monuments into monumental video landmarks.", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" },
+      { category: "Corporate Keynotes", title: "Dynamic Shifting Event Stages", desc: "Transform corporate stage backdrops into shifting, three-dimensional digital environments.", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" },
+      { category: "Brand Launches", title: "Automotive Product Mapping", desc: "Project dynamic animated textures, speed lines, and internal mechanics onto physical vehicles.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" },
+      { category: "Entertainment Venues", title: "Interactive LED Light Tunnels", desc: "Curved high-density archways that pulse with color as visitors pass through.", img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Engineered for Massive Scale & Optical Precision",
@@ -684,7 +684,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Where Immersive Environments Thrive",
     industriesIntro: "Transforming cultural institutions, tourism landmarks, and premier corporate events.",
-    featuredIndustry: { title: "Museums & Cultural Centers", desc: "Create ticketed blockbuster exhibitions that attract global audiences.", img: "https://images.unsplash.com/photo-1555529733-0e67056058e1?auto=format&fit=crop&w=1200&q=80", href: "/industries/museums-culture" },
+    featuredIndustry: { title: "Museums & Cultural Centers", desc: "Create ticketed blockbuster exhibitions that attract global audiences.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1200&q=80", href: "/industries/museums-culture" },
     industryCards: [
       { title: "Tourism & Municipal Landmarks", desc: "City festival attractions that stimulate regional nighttime economies.", img: "https://images.unsplash.com/photo-1506461883276-594543d0e228?auto=format&fit=crop&w=800&q=80", href: "/industries/public-spaces" },
       { title: "Entertainment & Live Events", desc: "Concert stage mapping and theme park dark ride experiences.", img: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
@@ -709,15 +709,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "Masterpieces in Motion 360° Exhibition",
       desc: "A 1,200 sq. meter multi-room immersive exhibition transforming fine art into a cinematic 360-degree journey.",
       location: "Paris, France",
-      img: "https://images.unsplash.com/photo-1563050860-87d45eaae3d1?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1200&q=80",
       tech: ["24x 4K Projectors", "Surround Spatial Audio", "Disguise Media Servers"],
       href: "/projects"
     },
     projects: [
-      { industry: "Public Art", title: "Historic Cathedral Facade Mapping", desc: "Celebrated anniversary light show seen by 200,000 spectators.", href: "/projects" },
-      { industry: "Automotive", title: "Electric Hypercar Launch Reveal", desc: "Projection mapping dynamic aero simulation onto prototype vehicle.", href: "/projects" },
-      { industry: "Entertainment", title: "Interactive LED Archway Tunnel", desc: "Pedestrian entrance tunnel with responsive visual fluid dynamics.", href: "/projects" },
-      { industry: "Hospitality", title: "Immersive Culinary Dining Dome", desc: "Dining table and 360-degree wall mapping narrating each dish.", href: "/projects" }
+      { industry: "Public Art", title: "Historic Cathedral Facade Mapping", desc: "Celebrated anniversary light show seen by 200,000 spectators.", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Automotive", title: "Electric Hypercar Launch Reveal", desc: "Projection mapping dynamic aero simulation onto prototype vehicle.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Entertainment", title: "Interactive LED Archway Tunnel", desc: "Pedestrian entrance tunnel with responsive visual fluid dynamics.", img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Hospitality", title: "Immersive Culinary Dining Dome", desc: "Dining table and 360-degree wall mapping narrating each dish.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding projection mapping, logistics, and technical feasibility.",
@@ -738,11 +738,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Architectural Projection Mapping",
     heroSubtitle: "Transform Any 3D Building or Physical Object into a Living Canvas",
     heroDescription: "Bend optical physics to create breathtaking optical illusions on building facades, indoor architectural features, vehicles, and stage sculptures without touching the physical structure.",
-    heroImg: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Is Architectural Projection Mapping?",
     whatIsDescription: "Architectural Projection Mapping is an optical technique that turns complex 3D structures—such as historic facades, indoor curved ceilings, or product models—into interactive video display surfaces with pixel-perfect geometric alignment.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1522442642191-2dc04a292850?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Sub-Millimeter Warping", desc: "Software precisely warps video pixels to match architectural cornices, pillars, and arches." },
       { title: "Anamorphic 3D Illusions", desc: "Creates the illusion of buildings collapsing, expanding, or revealing mechanical interiors." },
@@ -756,12 +756,12 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Municipal Landmarks",
       title: "Skyscraper Facade Transformation",
       desc: "Transform a 30-story commercial tower into an animated digital waterfall and futuristic digital organism.",
-      img: "https://images.unsplash.com/photo-1522442642191-2dc04a292850?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Product Reveals", title: "Automotive 3D Vehicle Mapping", desc: "Map realistic aerodynamic airflow, metallic paint variations, and engine diagnostics onto cars.", img: "https://images.unsplash.com/photo-1605335198270-b74955776d6c?auto=format&fit=crop&w=800&q=80" },
-      { category: "Concerts & Theatre", title: "Stage Sculpture Video Warping", desc: "Complex geometric stage sets that shift visual appearance between scenes in real-time.", img: "https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=800&q=80" },
-      { category: "Luxury Events", title: "Illuminated Banquet Table Shows", desc: "Tiny animated chefs that prepare miniature meals directly on guest dining plates.", img: "https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?auto=format&fit=crop&w=800&q=80" },
+      { category: "Product Reveals", title: "Automotive 3D Vehicle Mapping", desc: "Map realistic aerodynamic airflow, metallic paint variations, and engine diagnostics onto cars.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" },
+      { category: "Concerts & Theatre", title: "Stage Sculpture Video Warping", desc: "Complex geometric stage sets that shift visual appearance between scenes in real-time.", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" },
+      { category: "Luxury Events", title: "Illuminated Banquet Table Shows", desc: "Tiny animated chefs that prepare miniature meals directly on guest dining plates.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" },
       { category: "Museums", title: "Relic & Statue Restoration Mapping", desc: "Project the lost original vibrant colors back onto faded ancient classical marble statues.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" }
     ],
 
@@ -788,7 +788,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Where Projection Mapping Dominates",
     industriesIntro: "From government tourism spectacles to private automotive brand launches.",
-    featuredIndustry: { title: "Tourism & Municipalities", desc: "Monumental light festivals that draw millions of international visitors.", img: "https://images.unsplash.com/photo-1506461883276-594543d0e228?auto=format&fit=crop&w=1200&q=80", href: "/industries/public-spaces" },
+    featuredIndustry: { title: "Tourism & Municipalities", desc: "Monumental light festivals that draw millions of international visitors.", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80", href: "/industries/public-spaces" },
     industryCards: [
       { title: "Automotive & Industrial", desc: "High-impact vehicle unveiling shows and factory floor design reviews.", img: "https://images.unsplash.com/photo-1605335198270-b74955776d6c?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
       { title: "Live Concerts & Festivals", desc: "Dynamic stage mapping that adapts to artist setlists and crowd tempo.", img: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
@@ -813,15 +813,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "City Hall Heritage Facade Mapping",
       desc: "A 45-minute historical journey projected across the ornate 80-meter facade of a 19th-century municipal hall.",
       location: "Vienna, Austria",
-      img: "https://images.unsplash.com/photo-1522442642191-2dc04a292850?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80",
       tech: ["16x 32,000 Lumen Projectors", "LiDAR Mesh Mapping", "Spatial Audio Array"],
       href: "/projects"
     },
     projects: [
-      { industry: "Automotive", title: "Luxury SUV Worldwide Reveal", desc: "3D mapping dynamic mountain terrain across the vehicle body.", href: "/projects" },
-      { industry: "Museum", title: "Egyptian Temple Column Restoration", desc: "Digital light reconstruction of faded hieroglyphics.", href: "/projects" },
-      { industry: "Entertainment", title: "Electronic Music Festival Castle Mapping", desc: "3-night continuous live visual mapping across castle battlements.", href: "/projects" },
-      { industry: "Hospitality", title: "Dining Room Animated Banquet", desc: "Bespoke projection mapping onto guest dinnerware.", href: "/projects" }
+      { industry: "Automotive", title: "Luxury SUV Worldwide Reveal", desc: "3D mapping dynamic mountain terrain across the vehicle body.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Museum", title: "Egyptian Temple Column Restoration", desc: "Digital light reconstruction of faded hieroglyphics.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Entertainment", title: "Electronic Music Festival Castle Mapping", desc: "3-night continuous live visual mapping across castle battlements.", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Hospitality", title: "Dining Room Animated Banquet", desc: "Bespoke projection mapping onto guest dinnerware.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding projection mapping technology and production logistics.",
@@ -846,7 +846,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     whatIsHeading: "What Is a 360° Immersive Room?",
     whatIsDescription: "An Immersive Room (often termed a CAVE environment) surrounds visitors on all four walls and the floor with synchronized ultra-HD laser projection. Visitors feel physically transported into underwater trenches, alien planets, or microscopic cells without VR headsets.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1563050860-87d45eaae3d1?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Floor-to-Ceiling Coverage", desc: "Zero gaps or borders between vertical walls and horizontal floor projection." },
       { title: "Shared Group Immersion", desc: "Up to 50 visitors can enter and explore simultaneously without motion sickness." },
@@ -863,10 +863,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Art Exhibitions", title: "Living Classical Art Sanctuary", desc: "Van Gogh's starry night brushstrokes swirl along the walls and across visitors' shoes.", img: "https://images.unsplash.com/photo-1518998053401-878c735c084c?auto=format&fit=crop&w=800&q=80" },
-      { category: "Space & Science", title: "Mars Rover Expedition", desc: "Stand on the red dunes of Mars as dust devils swirl and robotic landers touch down.", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" },
-      { category: "Corporate Briefing", title: "The Executive Holographic Holodeck", desc: "Surround executives with real-time global supply chain data and 3D product prototypes.", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" },
-      { category: "Sensory Therapy", title: "Calming Biophilic Rainforest Retreat", desc: "Gentle rain showers, swaying bamboo, and meditative ambient sound for mental wellness.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" }
+      { category: "Art Exhibitions", title: "Living Classical Art Sanctuary", desc: "Van Gogh's starry night brushstrokes swirl along the walls and across visitors' shoes.", img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80" },
+      { category: "Space & Science", title: "Mars Rover Expedition", desc: "Stand on the red dunes of Mars as dust devils swirl and robotic landers touch down.", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" },
+      { category: "Corporate Briefing", title: "The Executive Holographic Holodeck", desc: "Surround executives with real-time global supply chain data and 3D product prototypes.", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" },
+      { category: "Sensory Therapy", title: "Calming Biophilic Rainforest Retreat", desc: "Gentle rain showers, swaying bamboo, and meditative ambient sound for mental wellness.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Optics, Blending & Room Calibration",
@@ -922,10 +922,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       href: "/projects"
     },
     projects: [
-      { industry: "Corporate", title: "Global Energy Experience CAVE", desc: "360-degree holographic room visualizing worldwide energy grids.", href: "/projects" },
-      { industry: "Hospitality", title: "Multi-Sensory Gastronomy Chamber", desc: "12-seat dining room with synchronized 360 visuals and scents.", href: "/projects" },
-      { industry: "Healthcare", title: "Mindfulness & Anxiety Reduction Pod", desc: "Immersive nature sanctuary in a modern cancer treatment center.", href: "/projects" },
-      { industry: "Entertainment", title: "Haunted Hollow Dark Room", desc: "Interactive horror attraction with reactive wall and floor creatures.", href: "/projects" }
+      { industry: "Corporate", title: "Global Energy Experience CAVE", desc: "360-degree holographic room visualizing worldwide energy grids.", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Hospitality", title: "Multi-Sensory Gastronomy Chamber", desc: "12-seat dining room with synchronized 360 visuals and scents.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Healthcare", title: "Mindfulness & Anxiety Reduction Pod", desc: "Immersive nature sanctuary in a modern cancer treatment center.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Entertainment", title: "Haunted Hollow Dark Room", desc: "Interactive horror attraction with reactive wall and floor creatures.", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding room dimensions, projectors, and content management.",
@@ -946,11 +946,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Interactive Curved LED Tunnels",
     heroSubtitle: "Walk-Through Archways of Seamless High-Density Digital Light",
     heroDescription: "Curved high-density LED archways with floor-to-ceiling visual immersion and integrated motion proximity tracking. Turn entrances and corridors into unforgettable threshold portals.",
-    heroImg: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Is an Interactive LED Tunnel?",
     whatIsDescription: "An LED Tunnel is a curved architectural archway constructed from flexible, ultra-fine pixel pitch LED panels. Combined with spatial sound and walk-through motion sensors, it envelops visitors overhead and on both flanks with radiant, daylight-visible graphics.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Flexible Seamless Modules", desc: "Curved LED tiles create smooth semicircular or elliptical archways with zero seams." },
       { title: "Ultra-Fine Pixel Pitch (P1.2 - P1.8)", desc: "Hyper-crisp graphics even when visitors' eyes are only inches from the panels." },
@@ -964,13 +964,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Futuristic Portals",
       title: "Warp Speed Hyperspace Tunnel",
       desc: "Visitors feel propelled through a cosmic starfield with streak lines and quantum particles bending overhead.",
-      img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Nature & Biophilic", title: "Subterranean Coral Reef Arch", desc: "Walk beneath a curved transparent ocean archway where sea turtles and rays glide overhead.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Brand Entrances", title: "The Red Carpet Prism Corridor", desc: "Reflective kaleidoscopic patterns and brand logos swirling around guests at galas.", img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Sports Stadiums", title: "Player Walkout Thunder Portal", desc: "High-voltage lightning and roaring crowd energy surrounding athletes before they take the field.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" },
-      { category: "Shopping Malls", title: "Seasonal Blossom Canopy Tunnel", desc: "Interactive cherry blossoms that drift across the curved archway as pedestrians stroll.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" }
+      { category: "Nature & Biophilic", title: "Subterranean Coral Reef Arch", desc: "Walk beneath a curved transparent ocean archway where sea turtles and rays glide overhead.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" },
+      { category: "Brand Entrances", title: "The Red Carpet Prism Corridor", desc: "Reflective kaleidoscopic patterns and brand logos swirling around guests at galas.", img: "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80" },
+      { category: "Sports Stadiums", title: "Player Walkout Thunder Portal", desc: "High-voltage lightning and roaring crowd energy surrounding athletes before they take the field.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" },
+      { category: "Shopping Malls", title: "Seasonal Blossom Canopy Tunnel", desc: "Interactive cherry blossoms that drift across the curved archway as pedestrians stroll.", img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Panel Architecture & Structural Engineering",
@@ -996,7 +996,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Where LED Tunnels Create Maximum Impact",
     industriesIntro: "The ultimate transitional threshold for premier entertainment and corporate venues.",
-    featuredIndustry: { title: "Aquariums & Theme Parks", desc: "Enchant visitors with unforgettable walk-through threshold portals.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1200&q=80", href: "/industries/entertainment" },
+    featuredIndustry: { title: "Aquariums & Theme Parks", desc: "Enchant visitors with unforgettable walk-through threshold portals.", img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=1200&q=80", href: "/industries/entertainment" },
     industryCards: [
       { title: "Sports Arenas & Stadiums", desc: "Electrify player walkouts and VIP tunnel clubs.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
       { title: "Flagship Shopping Malls", desc: "Command high-street attention and draw foot traffic between retail wings.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
@@ -1005,7 +1005,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "The Power of an Iconic Architectural Threshold",
     benefitsIntro: "Transforming ordinary transitional hallways into primary social media destinations.",
-    featuredBenefit: { title: "#1 Self-Promoting Attraction", desc: "Visitors instinctively film themselves walking through LED tunnels, generating astronomical social media engagement.", img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "#1 Self-Promoting Attraction", desc: "Visitors instinctively film themselves walking through LED tunnels, generating astronomical social media engagement.", img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "100,000-Hour Lifespan", desc: "Solid-state commercial LED diodes engineered for over 10 years of 24/7 run time." },
       { title: "Zero Shadow Blocking", desc: "Because light emits directly from the panels, visitors never cast shadows on the graphics." },
@@ -1021,15 +1021,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "The Odyssey 25-Meter LED Portal",
       desc: "A breathtaking 25-meter walk-through LED archway with interactive floor panels for a world-class aquarium.",
       location: "Singapore",
-      img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=1200&q=80",
       tech: ["P1.5 Flexible GOB", "Reinforced Floor LED", "Spatial Audio Array"],
       href: "/projects"
     },
     projects: [
-      { industry: "Sports", title: "Championship Tunnel Walkout", desc: "Curved LED tunnel with synchronized strobe lighting for an NBA arena.", href: "/projects" },
-      { industry: "Retail", title: "Luxury Mall Entrance Atrium", desc: "Archway tunnel generating 10,000+ customer selfies weekly.", href: "/projects" },
-      { industry: "Corporate", title: "Tech Campus Innovation Gateway", desc: "Connecting two main buildings with a responsive data stream tunnel.", href: "/projects" },
-      { industry: "Theme Park", title: "Starlight Time Machine Corridor", desc: "Walk-through portal between theme park fantasy zones.", href: "/projects" }
+      { industry: "Sports", title: "Championship Tunnel Walkout", desc: "Curved LED tunnel with synchronized strobe lighting for an NBA arena.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Retail", title: "Luxury Mall Entrance Atrium", desc: "Archway tunnel generating 10,000+ customer selfies weekly.", img: "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Corporate", title: "Tech Campus Innovation Gateway", desc: "Connecting two main buildings with a responsive data stream tunnel.", img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Theme Park", title: "Starlight Time Machine Corridor", desc: "Walk-through portal between theme park fantasy zones.", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding LED tunnel structural requirements, power, and maintenance.",
@@ -1054,7 +1054,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     whatIsHeading: "What Is a 3D Holographic Display?",
     whatIsDescription: "A Holographic Display projects or renders true-to-life 3D visuals that appear to float in physical space. Using transparent OLED, high-speed persistence-of-vision LED blades, or specialized optical Holo-Gauze meshes, objects hover mid-air with complete depth perception.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Transparent OLED Technology", desc: "45% see-through self-emitting OLED panels showing real products behind floating graphics." },
       { title: "Holo-Gauze Mesh Projection", desc: "Invisible theatrical mesh creating 10-meter giant floating holographic characters." },
@@ -1071,10 +1071,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Keynotes & Events", title: "Monumental Holo-Gauze Stage Illusion", desc: "A CEO or pop star performs alongside gigantic 10-meter floating holographic avatars on stage.", img: "https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=800&q=80" },
-      { category: "Museums & History", title: "Resurrected Historical Figures", desc: "Life-sized holographic historical figures stand and converse with museum visitors in mid-air.", img: "https://images.unsplash.com/photo-1582559937107-1e56b826b527?auto=format&fit=crop&w=800&q=80" },
-      { category: "Medical & Science", title: "Floating 3D Organ & Molecular Viewer", desc: "Doctors and students rotate floating 3D beating hearts and DNA helixes in real space.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" },
-      { category: "Automotive Showrooms", title: "Exploded View Engine Hologram", desc: "A floating vehicle engine that disassembles itself into 500 individual parts hovering in air.", img: "https://images.unsplash.com/photo-1605335198270-b74955776d6c?auto=format&fit=crop&w=800&q=80" }
+      { category: "Keynotes & Events", title: "Monumental Holo-Gauze Stage Illusion", desc: "A CEO or pop star performs alongside gigantic 10-meter floating holographic avatars on stage.", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" },
+      { category: "Museums & History", title: "Resurrected Historical Figures", desc: "Life-sized holographic historical figures stand and converse with museum visitors in mid-air.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" },
+      { category: "Medical & Science", title: "Floating 3D Organ & Molecular Viewer", desc: "Doctors and students rotate floating 3D beating hearts and DNA helixes in real space.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" },
+      { category: "Automotive Showrooms", title: "Exploded View Engine Hologram", desc: "A floating vehicle engine that disassembles itself into 500 individual parts hovering in air.", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Optical Physics & Volumetric Specs",
@@ -1100,7 +1100,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Where Holographic Displays Excel",
     industriesIntro: "High-end product launches, museum storytelling, and keynote presentations.",
-    featuredIndustry: { title: "Luxury Retail & Jewelry", desc: "Elevate high-value jewelry and watches with magical floating narratives.", img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80", href: "/industries/retail-showrooms" },
+    featuredIndustry: { title: "Luxury Retail & Jewelry", desc: "Elevate high-value jewelry and watches with magical floating narratives.", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80", href: "/industries/retail-showrooms" },
     industryCards: [
       { title: "Museums & Historical Exhibits", desc: "Bring ancient pharaohs and extinct creatures back to life before visitors' eyes.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
       { title: "Concerts, Theatres & Keynotes", desc: "Deliver jaw-dropping stage moments with life-sized holographic performances.", img: "https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
@@ -1109,7 +1109,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "Holographic Impact & Dwell Time",
     benefitsIntro: "Holographic visuals stop 90% of passersby, elevating brand prestige to futuristic heights.",
-    featuredBenefit: { title: "Maximum Stopping Power", desc: "Shoppers stop and stare 5x longer at holographic displays compared to traditional 2D flat video screens.", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "Maximum Stopping Power", desc: "Shoppers stop and stare 5x longer at holographic displays compared to traditional 2D flat video screens.", img: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "Instant Sci-Fi Wonder", desc: "Delivers an undeniable wow-factor that sets your brand years ahead of competitors." },
       { title: "Touchless Gesture Magic", desc: "Visitors feel like superheroes manipulating floating graphics in mid-air." },
@@ -1130,10 +1130,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       href: "/projects"
     },
     projects: [
-      { industry: "Entertainment", title: "Symphony Hall Holographic Soloist", desc: "Deceased maestro resurrected as a 5-meter holographic stage presence.", href: "/projects" },
-      { industry: "Museum", title: "Floating T-Rex Hologram", desc: "Life-sized dinosaur hologram that roars and lunges toward visitors.", href: "/projects" },
-      { industry: "Corporate", title: "Automotive EV Battery Exploded View", desc: "Holographic showcase demonstrating lithium battery cell chemistry.", href: "/projects" },
-      { industry: "Trade Show", title: "Holographic Fan 3D Logo Matrix", desc: "40 synchronized spinning fans creating a massive floating corporate emblem.", href: "/projects" }
+      { industry: "Entertainment", title: "Symphony Hall Holographic Soloist", desc: "Deceased maestro resurrected as a 5-meter holographic stage presence.", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Museum", title: "Floating T-Rex Hologram", desc: "Life-sized dinosaur hologram that roars and lunges toward visitors.", img: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Corporate", title: "Automotive EV Battery Exploded View", desc: "Holographic showcase demonstrating lithium battery cell chemistry.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Trade Show", title: "Holographic Fan 3D Logo Matrix", desc: "40 synchronized spinning fans creating a massive floating corporate emblem.", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding holographic displays, lighting conditions, and content requirements.",
@@ -1154,11 +1154,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "AI Avatars & Generative Art",
     heroSubtitle: "Real-Time Conversational Avatars, Computer Vision & Generative Art",
     heroDescription: "Move beyond pre-rendered video loops. Our spatial AI systems utilize real-time computer vision and Large Language Models to analyze visitors, converse intelligently in 50+ languages, and generate never-repeating reactive artwork.",
-    heroImg: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Is an AI Experience Installation?",
     whatIsDescription: "An AI Experience combines computer vision, real-time Large Language Models, and generative neural rendering engines. Visitors interact with autonomous 3D Metahumans that hear, see, speak, and adapt their personality based on who is standing in front of them.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Real-Time NLP & Speech", desc: "Powered by advanced LLMs for fluid, unscripted, brand-safe voice conversations." },
       { title: "Computer Vision Audience Sensing", desc: "Detects visitor age, emotion, posture, and gaze direction in milliseconds." },
@@ -1175,10 +1175,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Retail Flagships", title: "Personalized AI Style Advisor", desc: "A digital stylist that scans customer outfit colors and recommends matching boutique apparel.", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" },
-      { category: "Museums & History", title: "Conversational Historical Figures", desc: "Visitors hold unscripted spoken interviews with AI replicas of Leonardo da Vinci and Marie Curie.", img: "https://images.unsplash.com/photo-1582559937107-1e56b826b527?auto=format&fit=crop&w=800&q=80" },
+      { category: "Retail Flagships", title: "Personalized AI Style Advisor", desc: "A digital stylist that scans customer outfit colors and recommends matching boutique apparel.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" },
+      { category: "Museums & History", title: "Conversational Historical Figures", desc: "Visitors hold unscripted spoken interviews with AI replicas of Leonardo da Vinci and Marie Curie.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" },
       { category: "Public Atriums", title: "Generative Art Kinetic Murals", desc: "Massive lobby video walls that dynamically paint abstract artwork driven by real-time footfall patterns.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" },
-      { category: "Events & Activations", title: "AI Neural Style Photo Booth", desc: "Guests step into a booth and are instantly restyled into Renaissance oil paintings or cyberpunk heroes in 4K.", img: "https://images.unsplash.com/photo-1633534571987-9bc401b44ec9?auto=format&fit=crop&w=800&q=80" }
+      { category: "Events & Activations", title: "AI Neural Style Photo Booth", desc: "Guests step into a booth and are instantly restyled into Renaissance oil paintings or cyberpunk heroes in 4K.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Neural Architecture & Latency Optimization",
@@ -1204,7 +1204,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Where Spatial AI Reinvents Engagement",
     industriesIntro: "Transforming corporate lobbies, museums, luxury retail, and premier events.",
-    featuredIndustry: { title: "Corporate Headquarters", desc: "Automate executive reception and impress visiting clients with futuristic AI hosts.", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80", href: "/industries/corporate" },
+    featuredIndustry: { title: "Corporate Headquarters", desc: "Automate executive reception and impress visiting clients with futuristic AI hosts.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80", href: "/industries/corporate" },
     industryCards: [
       { title: "Museums & Cultural Archives", desc: "Enable unscripted, natural conversations with figures from history.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
       { title: "Retail Showrooms & Boutiques", desc: "AI brand ambassadors that recommend products and answer technical specs.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
@@ -1229,15 +1229,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "Fortune 500 Global Briefing AI Host",
       desc: "An autonomous photorealistic digital human welcoming international delegations in Tokyo, London, and New York.",
       location: "New York, USA",
-      img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
       tech: ["Unreal Metahuman", "Local LLM Inference", "Directional Audio Array"],
       href: "/projects"
     },
     projects: [
-      { industry: "Museum", title: "Albert Einstein Interactive Encounter", desc: "Visitors ask theoretical physics questions directly to an AI Einstein avatar.", href: "/projects" },
-      { industry: "Retail", title: "Generative Art Storefront Window", desc: "AI generates abstract street art matching the clothing colors of passerby pedestrians.", href: "/projects" },
-      { industry: "Events", title: "AI Renaissance Photo Studio", desc: "Transformed 2,400 gala guests into museum-quality digital portraits.", href: "/projects" },
-      { industry: "Healthcare", title: "Hospital Wayfinding Concierge", desc: "Bilingual avatar guiding patients to clinics and department appointments.", href: "/projects" }
+      { industry: "Museum", title: "Albert Einstein Interactive Encounter", desc: "Visitors ask theoretical physics questions directly to an AI Einstein avatar.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Retail", title: "Generative Art Storefront Window", desc: "AI generates abstract street art matching the clothing colors of passerby pedestrians.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Events", title: "AI Renaissance Photo Studio", desc: "Transformed 2,400 gala guests into museum-quality digital portraits.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Healthcare", title: "Hospital Wayfinding Concierge", desc: "Bilingual avatar guiding patients to clinics and department appointments.", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding AI avatars, corporate safety, and edge computing.",
@@ -1262,7 +1262,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     whatIsHeading: "What Is an AI Avatar & Photo Booth Activation?",
     whatIsDescription: "This turnkey solution merges an autonomous voice-driven 3D Metahuman host with an instant generative AI portrait studio. Guests converse with an intelligent brand avatar, pose for a high-res photo, and receive custom stylized artwork directly to their smartphones.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1633534571987-9bc401b44ec9?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "Instant Neural Restyling", desc: "Transforms guest portraits into 3D Pixar, cyberpunk, oil painting, or comic book heroes in under 5 seconds." },
       { title: "Voice-Driven Emcee Host", desc: "An intelligent digital avatar guides guests through the experience with humor and charm." },
@@ -1276,13 +1276,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Gala & Event Magic",
       title: "The Royal Renaissance Portrait Studio",
       desc: "Guests stand before the mirror, the AI avatar directs their pose, and transforms them into 17th-century aristocrat oil portraits.",
-      img: "https://images.unsplash.com/photo-1633534571987-9bc401b44ec9?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Tech Conferences", title: "Cyberpunk Holographic Identity", desc: "Attendees receive futuristic biometric badge portraits complete with glowing cyberware.", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" },
-      { category: "Entertainment & Film", title: "Movie Superhero Poster Generator", desc: "Puts guests directly into movie posters as the lead protagonist with authentic title typography.", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" },
+      { category: "Tech Conferences", title: "Cyberpunk Holographic Identity", desc: "Attendees receive futuristic biometric badge portraits complete with glowing cyberware.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" },
+      { category: "Entertainment & Film", title: "Movie Superhero Poster Generator", desc: "Puts guests directly into movie posters as the lead protagonist with authentic title typography.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" },
       { category: "Corporate Briefing", title: "Conversational Executive Concierge", desc: "A sleek digital receptionist answering questions and providing event schedules in real-time.", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" },
-      { category: "Retail Pop-Ups", title: "Haute Couture Magazine Cover", desc: "Shoppers pose and receive an animated Vogue-style digital magazine cover with custom branding.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" }
+      { category: "Retail Pop-Ups", title: "Haute Couture Magazine Cover", desc: "Shoppers pose and receive an animated Vogue-style digital magazine cover with custom branding.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Diffusion Engine & Hardware Specs",
@@ -1308,7 +1308,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Where AI Avatars & Photo Booths Shine",
     industriesIntro: "High-volume corporate galas, trade show booths, and brand activations.",
-    featuredIndustry: { title: "Trade Shows & Expos", desc: "Generate massive booth queues and collect hundreds of qualified B2B leads daily.", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80", href: "/industries/corporate" },
+    featuredIndustry: { title: "Trade Shows & Expos", desc: "Generate massive booth queues and collect hundreds of qualified B2B leads daily.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80", href: "/industries/corporate" },
     industryCards: [
       { title: "Brand Pop-Ups & Retail", desc: "Create viral user-generated content that spreads across Instagram and TikTok.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
       { title: "Galas & Entertainment Events", desc: "Give VIP guests a luxurious, memorable keepsake from the evening.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
@@ -1317,7 +1317,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "Unrivaled Event ROI & Social Footprint",
     benefitsIntro: "Achieve record-setting social sharing and high-quality lead generation.",
-    featuredBenefit: { title: "Over 85% Social Sharing Rate", desc: "Because the generated portraits are genuinely artistic and flattering, over 85% of guests post them directly to social media.", img: "https://images.unsplash.com/photo-1633534571987-9bc401b44ec9?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "Over 85% Social Sharing Rate", desc: "Because the generated portraits are genuinely artistic and flattering, over 85% of guests post them directly to social media.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "High-Throughput Lead Capture", desc: "Easily processes 80 to 120 guests per hour with frictionless digital delivery." },
       { title: "100% Brand Customization", desc: "Every delivered image features your logos, event hashtags, and sponsor marks." },
@@ -1333,15 +1333,15 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       title: "Tech Summit Cyberpunk Avatar Studio",
       desc: "Transformed 3,200 tech summit attendees into futuristic digital avatars with 92% social sharing rate.",
       location: "San Francisco, USA",
-      img: "https://images.unsplash.com/photo-1633534571987-9bc401b44ec9?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
       tech: ["Dual RTX 4090 Rigs", "Bespoke Cyberpunk LoRA", "Instant QR Cloud Delivery"],
       href: "/projects"
     },
     projects: [
-      { industry: "Retail", title: "Luxury Fashion Week Cover Studio", desc: "1,500 VIP attendees received animated digital magazine covers.", href: "/projects" },
-      { industry: "Entertainment", title: "Blockbuster Movie Premiere Studio", desc: "Fans placed directly alongside actors in movie poster format.", href: "/projects" },
-      { industry: "Corporate", title: "Automotive Dealer Gala Avatar Emcee", desc: "Interactive AI host greeting guests and taking executive portraits.", href: "/projects" },
-      { industry: "Museum", title: "Time Travel Historical Studio", desc: "Visitors transformed into Victorian-era historical figures.", href: "/projects" }
+      { industry: "Retail", title: "Luxury Fashion Week Cover Studio", desc: "1,500 VIP attendees received animated digital magazine covers.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Entertainment", title: "Blockbuster Movie Premiere Studio", desc: "Fans placed directly alongside actors in movie poster format.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Corporate", title: "Automotive Dealer Gala Avatar Emcee", desc: "Interactive AI host greeting guests and taking executive portraits.", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Museum", title: "Time Travel Historical Studio", desc: "Visitors transformed into Victorian-era historical figures.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding AI photo generation, latency, and photo privacy.",
@@ -1362,11 +1362,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Smart Gamification & Kiosks",
     heroSubtitle: "Drive Measurable Physical Engagement with Custom Branded Gamification",
     heroDescription: "High-throughput interactive installations for commercial flagships, expos, and venues. We build custom branded 3D games, RFID lift-and-learn discovery stations, and reward leaderboards that captivate crowds.",
-    heroImg: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Are Smart Engagement Solutions?",
     whatIsDescription: "Smart Engagement combines multi-touch kiosks, RFID sensor triggers, and gamified digital mechanics. These installations turn passive store visitors into active players who explore product features, compete on leaderboards, and willingly share contact data.",
-    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1533230554625-f76ea10c4fce?auto=format&fit=crop&w=1200&q=80",
+    whatIsVideoPlaceholder: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
     whatIsFeatures: [
       { title: "RFID Lift-and-Learn", desc: "Lifting a physical product instantly displays specs, reviews, and videos on adjacent screens." },
       { title: "Branded Mini-Games", desc: "Custom 2D/3D games that reward high scores with instant discount codes or prizes." },
@@ -1380,13 +1380,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "Retail Tech",
       title: "Interactive Sneaker Lift-and-Learn Wall",
       desc: "Shoppers lift a sneaker off the shelf; an adjacent 4K display instantly shows cushion technology and athlete reviews.",
-      img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Expos & Booths", title: "Trade Show Motion Racing Game", desc: "Visitors steer branded race cars using body movement to compete for top leaderboard spots.", img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Corporate Briefing", title: "Multi-Touch Strategy Wall", desc: "Executives explore historical milestones and global supply chains on an 85-inch touch array.", img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" },
-      { category: "Public Transit & Malls", title: "Smart 3D Wayfinding Kiosks", desc: "Interactive directories that send personalized 3D walking routes directly to smartphones.", img: "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=800&q=80" },
-      { category: "Sports Arenas", title: "Interactive Halftime Trivia Challenge", desc: "Thousands in the concourse play live trivia challenges on giant video walls to win prizes.", img: "https://images.unsplash.com/photo-1518544801976-3e159e50e508?auto=format&fit=crop&w=800&q=80" }
+      { category: "Expos & Booths", title: "Trade Show Motion Racing Game", desc: "Visitors steer branded race cars using body movement to compete for top leaderboard spots.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80" },
+      { category: "Corporate Briefing", title: "Multi-Touch Strategy Wall", desc: "Executives explore historical milestones and global supply chains on an 85-inch touch array.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" },
+      { category: "Public Transit & Malls", title: "Smart 3D Wayfinding Kiosks", desc: "Interactive directories that send personalized 3D walking routes directly to smartphones.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" },
+      { category: "Sports Arenas", title: "Interactive Halftime Trivia Challenge", desc: "Thousands in the concourse play live trivia challenges on giant video walls to win prizes.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Industrial Hardware & Cloud Telemetry",
@@ -1412,7 +1412,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Key Verticals for Smart Engagement",
     industriesIntro: "Proven revenue uplift across retail flagships, automotive showrooms, and sports stadiums.",
-    featuredIndustry: { title: "Retail & Consumer Electronics", desc: "Accelerate high-ticket purchase decisions through interactive product comparison.", img: "https://images.unsplash.com/photo-1556740749-887f6717defa?auto=format&fit=crop&w=1200&q=80", href: "/industries/retail-showrooms" },
+    featuredIndustry: { title: "Retail & Consumer Electronics", desc: "Accelerate high-ticket purchase decisions through interactive product comparison.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80", href: "/industries/retail-showrooms" },
     industryCards: [
       { title: "Trade Shows & Exhibitions", desc: "Turn passive booth visitors into qualified, badge-scanned B2B sales leads.", img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" },
       { title: "Sports Venues & Arenas", desc: "Monetize stadium concourses with branded sponsor gamification and leaderboards.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
@@ -1442,10 +1442,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       href: "/projects"
     },
     projects: [
-      { industry: "Expos", title: "Industrial Drone Racing Simulator", desc: "Captured 4,000+ B2B leads at an international aerospace expo.", href: "/projects" },
-      { industry: "Cosmetics", title: "Lift-and-Learn Skincare Bar", desc: "Lifting cosmetic bottles triggers customized skin tutorials.", href: "/projects" },
-      { industry: "Corporate", title: "Interactive ESG Sustainability Kiosk", desc: "Lobby touchscreen tracking real-time building solar generation.", href: "/projects" },
-      { industry: "Public Space", title: "Airport Interactive Wayfinding Kiosks", desc: "Smart 3D directories guiding 50,000 travelers daily.", href: "/projects" }
+      { industry: "Expos", title: "Industrial Drone Racing Simulator", desc: "Captured 4,000+ B2B leads at an international aerospace expo.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Cosmetics", title: "Lift-and-Learn Skincare Bar", desc: "Lifting cosmetic bottles triggers customized skin tutorials.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Corporate", title: "Interactive ESG Sustainability Kiosk", desc: "Lobby touchscreen tracking real-time building solar generation.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Public Space", title: "Airport Interactive Wayfinding Kiosks", desc: "Smart 3D directories guiding 50,000 travelers daily.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding gamification design, RFID hardware, and POS integration.",
@@ -1488,9 +1488,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Sports & Fitness", title: "Virtual Penalty Kick Arena", desc: "Players kick a physical soccer ball into a virtual net with high-speed optical tracking.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" },
-      { category: "Arcade Nostalgia", title: "Branded 3D Retro Runner", desc: "A Subway Surfers-style custom runner where players collect brand products while dodging obstacles.", img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Quiz & Discovery", title: "Live Interactive Brand Trivia", desc: "Multiplayer timed quiz stations educating players on your brand's innovation and sustainability.", img: "https://images.unsplash.com/photo-1518544801976-3e159e50e508?auto=format&fit=crop&w=800&q=80" },
-      { category: "Puzzle & Strategy", title: "Product Assembly Time Attack", desc: "Assemble complex engineering or luxury products in a 3D digital puzzle before time runs out.", img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" }
+      { category: "Arcade Nostalgia", title: "Branded 3D Retro Runner", desc: "A Subway Surfers-style custom runner where players collect brand products while dodging obstacles.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80" },
+      { category: "Quiz & Discovery", title: "Live Interactive Brand Trivia", desc: "Multiplayer timed quiz stations educating players on your brand's innovation and sustainability.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" },
+      { category: "Puzzle & Strategy", title: "Product Assembly Time Attack", desc: "Assemble complex engineering or luxury products in a 3D digital puzzle before time runs out.", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Game Engine & Multiplayer Tech",
@@ -1516,7 +1516,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Where Brand Gamification Thrives",
     industriesIntro: "Turn any public space into a magnetic competitive arena.",
-    featuredIndustry: { title: "Trade Shows & Exhibitions", desc: "Draw the largest crowd on the expo floor and double your qualified sales leads.", img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=80", href: "/industries/corporate" },
+    featuredIndustry: { title: "Trade Shows & Exhibitions", desc: "Draw the largest crowd on the expo floor and double your qualified sales leads.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80", href: "/industries/corporate" },
     industryCards: [
       { title: "Retail Flagships & Malls", desc: "Drive store foot traffic and reward purchases with instant interactive discounts.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
       { title: "Sports Venues & Fan Zones", desc: "Engage thousands of passionate fans before kickoff with branded stadium games.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
@@ -1546,10 +1546,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       href: "/projects"
     },
     projects: [
-      { industry: "Expos", title: "Semiconductor Drone Racing Game", desc: "Generated 3,500 qualified engineering leads during a 4-day tech expo.", href: "/projects" },
-      { industry: "Beverage", title: "Summer Festival Catch Challenge", desc: "Multiplayer arcade game with instant canned beverage rewards.", href: "/projects" },
-      { industry: "Automotive", title: "EV Battery Efficiency Simulator", desc: "Interactive game educating drivers on regenerative braking.", href: "/projects" },
-      { industry: "Sports", title: "Stadium Concourse Penalty Shootout", desc: "Virtual soccer game played by over 12,000 fans on matchday.", href: "/projects" }
+      { industry: "Expos", title: "Semiconductor Drone Racing Game", desc: "Generated 3,500 qualified engineering leads during a 4-day tech expo.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Beverage", title: "Summer Festival Catch Challenge", desc: "Multiplayer arcade game with instant canned beverage rewards.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Automotive", title: "EV Battery Efficiency Simulator", desc: "Interactive game educating drivers on regenerative braking.", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Sports", title: "Stadium Concourse Penalty Shootout", desc: "Virtual soccer game played by over 12,000 fans on matchday.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding game development timelines, hardware, and lead capture.",
@@ -1570,7 +1570,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     heroHeading: "Multi-User Motion Games",
     heroSubtitle: "Controller-Free Full-Body Spatial Gaming for Public Venues",
     heroDescription: "Use your body as the game controller. Optical infrared depth cameras and computer vision track jumps, kicks, and gestures in real time across giant video walls and projection floors.",
-    heroImg: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80",
+    heroImg: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1920&q=80",
 
     whatIsHeading: "What Are Motion Games?",
     whatIsDescription: "Motion Games utilize optical depth sensors (such as LiDAR and 3D depth cameras) and AI skeleton tracking to detect human body movements without any handheld controllers or wearables. Players jump, duck, and wave to control giant on-screen action naturally.",
@@ -1588,13 +1588,13 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       category: "High-Energy Fitness",
       title: "The Virtual Obstacle Course Run",
       desc: "Players physically run in place, jump over virtual hurdles, and duck beneath laser beams on a giant 10-meter screen.",
-      img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
     },
     experienceCards: [
-      { category: "Sports Arenas", title: "Goalkeeper Penalty Defense", desc: "Step into the shoes of a goalkeeper, diving and swatting away virtual soccer balls in real time.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" },
-      { category: "Theme Parks", title: "Dragon Flight Body Steering", desc: "Spread your arms like wings to steer a mythical dragon through mountain canyons.", img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80" },
-      { category: "Family Entertainment", title: "Fruit Slicer & Bubble Pop", desc: "Wave your hands rapidly in mid-air to slice floating fruit and pop bubbles with realistic particle physics.", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" },
-      { category: "Museums & Science", title: "Zero-Gravity Space Spacewalk", desc: "Float through an interactive space station using gentle swimming body motions.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" }
+      { category: "Sports Arenas", title: "Goalkeeper Penalty Defense", desc: "Step into the shoes of a goalkeeper, diving and swatting away virtual soccer balls in real time.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" },
+      { category: "Theme Parks", title: "Dragon Flight Body Steering", desc: "Spread your arms like wings to steer a mythical dragon through mountain canyons.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80" },
+      { category: "Family Entertainment", title: "Fruit Slicer & Bubble Pop", desc: "Wave your hands rapidly in mid-air to slice floating fruit and pop bubbles with realistic particle physics.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" },
+      { category: "Museums & Science", title: "Zero-Gravity Space Spacewalk", desc: "Float through an interactive space station using gentle swimming body motions.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" }
     ],
 
     featuresHeading: "Optical Tracking & Vision Hardware",
@@ -1620,7 +1620,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Where Motion Games Excel",
     industriesIntro: "High-traffic family destinations, entertainment centers, and brand pavilions.",
-    featuredIndustry: { title: "Family Entertainment Centers", desc: "Deliver high-energy active attractions that keep children and parents entertained.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80", href: "/industries/entertainment" },
+    featuredIndustry: { title: "Family Entertainment Centers", desc: "Deliver high-energy active attractions that keep children and parents entertained.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80", href: "/industries/entertainment" },
     industryCards: [
       { title: "Museums & Science Centers", desc: "Physical interactive exhibits that educate through energetic bodily participation.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
       { title: "Shopping Malls & Atriums", desc: "Free public play areas that boost mall foot traffic and parental dwell time.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
@@ -1629,7 +1629,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     outcomesHeading: "Operational Advantages of Motion Games",
     benefitsIntro: "Zero hardware replacement costs and 100% hygienic touchless entertainment.",
-    featuredBenefit: { title: "Zero Hardware Replacement Costs", desc: "Because players touch nothing physical, there are no broken controllers, snapped cables, or worn-out buttons.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" },
+    featuredBenefit: { title: "Zero Hardware Replacement Costs", desc: "Because players touch nothing physical, there are no broken controllers, snapped cables, or worn-out buttons.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80" },
     benefits: [
       { title: "100% Hygienic & Germ-Free", desc: "No shared physical controllers to sanitize between players." },
       { title: "Zero Explanation Required", desc: "Intuitive gameplay—players immediately understand how to jump, duck, and wave." },
@@ -1650,10 +1650,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       href: "/projects"
     },
     projects: [
-      { industry: "Museum", title: "Prehistoric Predator Escape Game", desc: "Kids run and jump to outpace virtual dinosaurs on a massive screen.", href: "/projects" },
-      { industry: "Retail", title: "Activewear Jump & Agility Challenge", desc: "Shoppers test new running shoes on an interactive agility course.", href: "/projects" },
-      { industry: "Healthcare", title: "Pediatric Physical Therapy Wall", desc: "Transforming rehabilitation exercises into fun dragon-catching games.", href: "/projects" },
-      { industry: "Sports", title: "Winter Olympics Downhill Ski Simulator", desc: "Body-steering ski simulator in a ski resort lodge.", href: "/projects" }
+      { industry: "Museum", title: "Prehistoric Predator Escape Game", desc: "Kids run and jump to outpace virtual dinosaurs on a massive screen.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Retail", title: "Activewear Jump & Agility Challenge", desc: "Shoppers test new running shoes on an interactive agility course.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Healthcare", title: "Pediatric Physical Therapy Wall", desc: "Transforming rehabilitation exercises into fun dragon-catching games.", img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80", href: "/projects" },
+      { industry: "Sports", title: "Winter Olympics Downhill Ski Simulator", desc: "Body-steering ski simulator in a ski resort lodge.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding motion tracking camera placement, player tracking, and lighting.",
