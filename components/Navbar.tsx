@@ -35,9 +35,9 @@ interface MegamenuPreview {
 const DEFAULT_SOLUTION_PREVIEW: MegamenuPreview = {
   badge: "SUITE",
   title: "Full Interactive Engine",
-  desc: "Explore all commercial spatial motion projection & AI technologies.",
+  desc: "Explore all commercial spatial motion projection & multimedia technologies.",
   href: "/solutions",
-  img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=600&q=80",
+  img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
 };
 
 const DEFAULT_INDUSTRY_PREVIEW: MegamenuPreview = {
@@ -137,12 +137,12 @@ export default function Navbar() {
                         href="/solutions/interactive-spaces"
                         onMouseEnter={() =>
                           setSolPreview({
-                            badge: "INTERACTIVE SPACES",
-                            title: "Interactive Surface Architecture",
-                            desc: "Responsive floor, wall, ceiling, and storefront systems powered by real-time computer vision.",
-                            href: "/solutions/interactive-spaces",
-                            img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
-                          })
+                              badge: "ACTIVE ARENA",
+                              title: "ARcade & Active Spaces",
+                              desc: "Transform floors, walls, and architectural environments into responsive interactive ecosystems.",
+                              href: "/solutions/interactive-spaces",
+                              img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
+                            })
                         }
                         className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
                       >
@@ -155,12 +155,12 @@ export default function Navbar() {
                             href="/solutions/interactive-floor"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "INTERACTIVE SPACES",
-                                title: "Interactive Motion Floor",
-                                desc: "Ceiling optical sensors turning physical flooring into responsive light canvases.",
-                                href: "/solutions/interactive-floor",
-                                img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "GROUND INTERACTION",
+                              title: "Motion Tracking Floors",
+                              desc: "Footfall-activated particle physics, sports games, and interactive ground environments.",
+                              href: "/solutions/interactive-floor",
+                              img: "https://momentfactory.com/cdn/shop/files/MF_ARcade_BrunoDestombes_DSC01692-HR.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -172,12 +172,12 @@ export default function Navbar() {
                             href="/solutions/interactive-wall"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "INTERACTIVE SPACES",
-                                title: "Interactive Touch & Gesture Wall",
-                                desc: "Laser projection wall reacting to multi-touch and gesture tracking with zero wearables.",
-                                href: "/solutions/interactive-wall",
-                                img: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "VERTICAL SURFACE",
+                              title: "Generative Media Walls",
+                              desc: "LiDAR-powered interactive digital walls reacting to hand touch and bodily presence.",
+                              href: "/solutions/interactive-wall",
+                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_ATT_Discovery_District_21.png",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -189,12 +189,12 @@ export default function Navbar() {
                             href="/solutions/interactive-ceiling"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "INTERACTIVE SPACES",
-                                title: "Interactive Ceiling Canopy",
-                                desc: "Overhead dome and canopy projection casting celestial graphics & generative skyward art.",
-                                href: "/solutions/interactive-ceiling",
-                                img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "OVERHEAD CANOPY",
+                              title: "Tokyo Shinjuku Digital Canopy",
+                              desc: "Massive color-bath dynamic light ceiling tunnels and responsive suspended digital art.",
+                              href: "/solutions/interactive-ceiling",
+                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_A03_3-WS.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -206,12 +206,12 @@ export default function Navbar() {
                             href="/solutions/interactive-window"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "INTERACTIVE SPACES",
-                                title: "Storefront Window Projection",
-                                desc: "Rear-projection film turning retail glass windows into touchless interactive street displays.",
-                                href: "/solutions/interactive-window",
-                                img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "STREETFRONT TECH",
+                              title: "Smart Interactive Windows",
+                              desc: "Through-glass radar and gesture tracking turning commercial storefronts into 24/7 engagement portals.",
+                              href: "/solutions/interactive-window",
+                              img: "https://momentfactory.com/cdn/shop/files/20160103_momentfactory-0985-WS_grande.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -223,12 +223,12 @@ export default function Navbar() {
                             href="/solutions/interactive-mirror-table"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "INTERACTIVE SPACES",
-                                title: "Interactive Mirror & Touch Table",
-                                desc: "Multi-user capacitive touch surfaces & reflective smart mirror retail displays.",
-                                href: "/solutions/interactive-mirror-table",
-                                img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "TACTILE SURFACE",
+                              title: "Changi Airport Smart Tables",
+                              desc: "Multi-user interactive projection tables with touchless optical gesture and RFID object recognition.",
+                              href: "/solutions/interactive-mirror-table",
+                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -244,12 +244,12 @@ export default function Navbar() {
                         href="/solutions/immersive-environment"
                         onMouseEnter={() =>
                           setSolPreview({
-                            badge: "IMMERSIVE ENVIRONMENT",
-                            title: "Panoramic Spatial Environments",
-                            desc: "Large-scale 360 rooms, architectural facade mapping, and illuminated sensory spaces.",
-                            href: "/solutions/immersive-environment",
-                            img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=600&q=80",
-                          })
+                              badge: "SPATIAL IMMERSION",
+                              title: "Superreal Architectural Immersion",
+                              desc: "Full-scale architectural multimedia transformation turning classical interiors into dimensional dreamscapes.",
+                              href: "/solutions/immersive-environment",
+                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+                            })
                         }
                         className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
                       >
@@ -262,12 +262,12 @@ export default function Navbar() {
                             href="/solutions/projection-mapping"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "IMMERSIVE ENVIRONMENT",
-                                title: "Architectural Projection Mapping",
-                                desc: "Sub-millimeter 3D mesh scanning & high-lumen projection mapping onto building facades.",
-                                href: "/solutions/projection-mapping",
-                                img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "LANDMARK MAPPING",
+                              title: "AURA Notre-Dame Basilica",
+                              desc: "World-renowned architectural projection mapping transforming historical sacred architecture into light.",
+                              href: "/solutions/projection-mapping",
+                              img: "https://momentfactory.com/cdn/shop/files/KarelChladek-5286-WS.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -279,12 +279,12 @@ export default function Navbar() {
                             href="/solutions/immersive-room"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "IMMERSIVE ENVIRONMENT",
-                                title: "360° Immersive Room",
-                                desc: "Seamless multi-wall projection rooms with surround acoustics and edge-blending.",
-                                href: "/solutions/immersive-room",
-                                img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "360° SENSORY",
+                              title: "Mirror Mirror 360° Labyrinth",
+                              desc: "Multi-sensory rooms synchronizing 360° projection, infinity mirrors, and spatial soundscapes.",
+                              href: "/solutions/immersive-room",
+                              img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -296,12 +296,12 @@ export default function Navbar() {
                             href="/solutions/led-tunnel"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "IMMERSIVE ENVIRONMENT",
-                                title: "Interactive LED Tunnel",
-                                desc: "Curved high-density LED archways with motion proximity tracking & dynamic portals.",
-                                href: "/solutions/led-tunnel",
-                                img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "DIGITAL PASSAGE",
+                              title: "Tokyo Metro Light Corridor",
+                              desc: "Immersive transit corridors with seamless architectural LED walls, ceilings, and motion-reactive portals.",
+                              href: "/solutions/led-tunnel",
+                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_A03_3-WS.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -313,12 +313,12 @@ export default function Navbar() {
                             href="/solutions/holographic-display"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "IMMERSIVE ENVIRONMENT",
-                                title: "3D Holographic Display",
-                                desc: "Transparent floating 3D visuals that appear suspended mid-air without 3D glasses.",
-                                href: "/solutions/holographic-display",
-                                img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "FLOATING OPTICS",
+                              title: "Superreal Holographic Portals",
+                              desc: "Volumetric floating projections and transparent light sculptures creating impossible optical illusions.",
+                              href: "/solutions/holographic-display",
+                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Themed_Entertainment_Wonderbox_Paradise_city_korea_DSC07507-WS.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -334,12 +334,12 @@ export default function Navbar() {
                         href="/solutions/ai-experience"
                         onMouseEnter={() =>
                           setSolPreview({
-                            badge: "AI EXPERIENCE",
-                            title: "Conversational & Generative AI",
-                            desc: "Interactive virtual humans and computer vision installations that recognize visitors.",
-                            href: "/solutions/ai-experience",
-                            img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80",
-                          })
+                              badge: "GENERATIVE AI",
+                              title: "AT&T Discovery District Canvas",
+                              desc: "Real-time AI generative simulations transforming architecture with dynamic visitor tracking and fluid physics.",
+                              href: "/solutions/ai-experience",
+                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_ATT_Discovery_District_21.png",
+                            })
                         }
                         className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
                       >
@@ -352,12 +352,12 @@ export default function Navbar() {
                             href="/solutions/ai-avatar-photobooth"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "AI EXPERIENCE",
-                                title: "Autonomous AI Avatar Host",
-                                desc: "Real-time generative spatial voice avatar greeting visitors with computer vision.",
-                                href: "/solutions/ai-avatar-photobooth",
-                                img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "DIGITAL AVATARS",
+                              title: "Real Madrid Biometric Hub",
+                              desc: "Gamified interactive photo booths and biometric motion stations capturing visitor movements into live digital avatars.",
+                              href: "/solutions/ai-avatar-photobooth",
+                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_087-WS_46fdefce-745c-4f6c-91a6-97cbf378a1d3.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -373,12 +373,12 @@ export default function Navbar() {
                         href="/solutions/solution-engagement"
                         onMouseEnter={() =>
                           setSolPreview({
-                            badge: "SOLUTION ENGAGEMENT",
-                            title: "Gamified Activations & Arenas",
-                            desc: "Brand games, gesture competitions, and active movement arenas for venues and retail.",
-                            href: "/solutions/solution-engagement",
-                            img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
-                          })
+                              badge: "HIGH DWELL TECH",
+                              title: "The Wonderfall at Changi T2",
+                              desc: "A monumental 14-meter digital waterfall installation captivating millions of global passengers.",
+                              href: "/solutions/solution-engagement",
+                              img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Changi_Experience_Studio_JE-077-WS.jpg",
+                            })
                         }
                         className="flex items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 transition-colors group/header"
                       >
@@ -391,12 +391,12 @@ export default function Navbar() {
                             href="/solutions/brand-gamification"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "SOLUTION ENGAGEMENT",
-                                title: "Brand Gamification Activation",
-                                desc: "Custom 3D mini-games and interactive reward systems for flagship retail stores.",
-                                href: "/solutions/brand-gamification",
-                                img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "BRAND ODYSSEY",
+                              title: "The Messi Experience",
+                              desc: "Interactive motion-tracked brand installations, competitive stadium challenges, and fan journey experiences.",
+                              href: "/solutions/brand-gamification",
+                              img: "https://momentfactory.com/cdn/shop/files/TME_MomentFactory_THELASTCHANCE_5.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
@@ -408,12 +408,12 @@ export default function Navbar() {
                             href="/solutions/motion-games"
                             onMouseEnter={() =>
                               setSolPreview({
-                                badge: "SOLUTION ENGAGEMENT",
-                                title: "Multi-User Motion Games",
-                                desc: "Body-tracking spatial motion gaming for museums, venues, and public spaces.",
-                                href: "/solutions/motion-games",
-                                img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=600&q=80",
-                              })
+                              badge: "ACTIVE GAMING",
+                              title: "ARcade Motion Arena",
+                              desc: "Multi-player active games where floor and wall projections react to physical bodily movement with zero wearables.",
+                              href: "/solutions/motion-games",
+                              img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
+                            })
                             }
                             className="hover:text-black hover:underline block py-0.5 transition-colors"
                           >
