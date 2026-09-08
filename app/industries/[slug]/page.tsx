@@ -36,7 +36,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80" />
         </div>
         
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-widest text-white backdrop-blur-md mb-8">
             {industry.hero.eyebrow}
           </span>
