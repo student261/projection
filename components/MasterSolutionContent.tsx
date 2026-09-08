@@ -302,34 +302,50 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      {/* SECTION 04 — KEY FEATURES */}
-      <section className="py-16 lg:py-20 border-y border-black/10">
+      {/* SECTION 04 — KEY FEATURES (VIEWPORT-OPTIMIZED) */}
+      <section className="py-8 lg:py-12 border-y border-black/10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8">
-            <h2 className="text-black mb-4">
-              Powerful Features.<br />Exceptional Experiences.
-            </h2>
-            <p className="text-lg text-black/70 font-light leading-relaxed">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
+            <div>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
+                <Sparkles className="w-3 h-3 text-black" />
+                <span>Core Capabilities</span>
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
+                Powerful Features.<br className="hidden sm:inline" /> Exceptional Experiences.
+              </h2>
+            </div>
+            <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-md">
               {data.keyFeaturesIntro}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.keyFeatures.map((feat, idx) => {
               const num = String(idx + 1).padStart(2, "0");
               return (
-                <div key={idx} className="group relative p-8 sm:p-10 rounded-[2rem] bg-gray-50/80 border border-black/5 hover:bg-black hover:border-black transition-all duration-500 overflow-hidden flex flex-col hover:shadow-2xl hover:-translate-y-1">
-                  <div className="absolute -top-6 -right-6 pointer-events-none select-none transition-transform duration-700 group-hover:scale-110">
-                    <span className="text-[12rem] font-black text-black/[0.03] group-hover:text-white/[0.05] leading-none transition-colors duration-500">{num}</span>
+                <div 
+                  key={idx} 
+                  className="group relative p-5 rounded-2xl bg-gray-50/80 border border-black/5 hover:bg-black hover:border-black transition-all duration-300 overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-0.5"
+                >
+                  <div className="absolute -top-4 -right-2 pointer-events-none select-none leading-none">
+                    <span className="text-[6rem] font-black text-black/[0.03] group-hover:text-white/[0.05] leading-none transition-colors duration-300">{num}</span>
                   </div>
                   
                   <div className="relative z-10 flex flex-col h-full">
-                    <div className="w-12 h-12 rounded-full border border-black/10 group-hover:border-white/20 flex items-center justify-center mb-8 transition-colors duration-500 bg-white group-hover:bg-white/10">
-                       <span className="text-sm font-bold text-black group-hover:text-white transition-colors duration-500">{num}</span>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-2.5 py-1 rounded-lg bg-black text-white text-[11px] font-mono font-bold group-hover:bg-white group-hover:text-black transition-colors duration-300">
+                        {num}
+                      </span>
+                      <span className="w-2 h-2 rounded-full bg-black/20 group-hover:bg-emerald-400 transition-colors" />
                     </div>
                     
-                    <h4 className="text-black group-hover:text-white mb-4 transition-colors duration-500 pr-8">{feat.title}</h4>
-                    <p className="text-base text-black/60 group-hover:text-white/70 font-light leading-relaxed transition-colors duration-500 mt-auto">{feat.desc}</p>
+                    <h4 className="text-base font-bold text-black group-hover:text-white mb-1.5 transition-colors duration-300 tracking-tight">
+                      {feat.title}
+                    </h4>
+                    <p className="text-xs sm:text-sm text-black/60 group-hover:text-white/75 font-light leading-relaxed transition-colors duration-300">
+                      {feat.desc}
+                    </p>
                   </div>
                 </div>
               );
