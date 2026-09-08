@@ -40,10 +40,10 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
           <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-widest text-white backdrop-blur-md mb-8">
             {industry.hero.eyebrow}
           </span>
-          <h1 className="text-white mb-6 max-w-4xl mx-auto drop-shadow-2xl">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.1]">
             {industry.hero.title}
           </h1>
-          <p className="text-white/90 max-w-2xl mx-auto mb-10 text-lg sm:text-xl font-light">
+          <p className="text-white/90 max-w-3xl mx-auto mb-10 text-xl sm:text-2xl font-light leading-relaxed">
             {industry.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -151,7 +151,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
                 heading={industry.vision.title}
               />
 
-              <p className="text-xl sm:text-2xl text-black font-semibold leading-snug mt-6 mb-4">
+              <p className="text-2xl sm:text-4xl text-black font-black leading-tight tracking-tight mt-6 mb-4">
                 {industry.vision.statement}
               </p>
               
@@ -409,7 +409,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
                 <div className="w-16 h-16 rounded-full bg-white border border-black/10 flex items-center justify-center text-black font-bold text-lg mb-8 shadow-sm">
                   {step.num}
                 </div>
-                <h4 className="text-black mb-4 font-bold">{step.title}</h4>
+                <h4 className="text-xl sm:text-2xl font-bold text-black mb-4 tracking-tight">{step.title}</h4>
                 <p className="text-black/60 text-sm font-light leading-relaxed">
                   {step.desc}
                 </p>
