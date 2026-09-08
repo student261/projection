@@ -14,6 +14,7 @@ import {
   Globe,
   MapPin,
   Cpu,
+  Play,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -154,8 +155,8 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 02 — WHAT IS THIS SOLUTION? */}
-      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+      <section className="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Image Side */}
           <motion.div 
@@ -163,38 +164,52 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className={`relative w-full lg:w-1/2 ${isFlippedLayout ? "lg:order-2" : "lg:order-1"}`}
+            className={`relative w-full lg:col-span-5 ${isFlippedLayout ? "lg:order-2" : "lg:order-1"}`}
           >
-            <div className="relative aspect-[16/9] lg:aspect-[16/10] overflow-hidden w-full group">
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-black/10 bg-slate-950 group">
               <SafeImage src={data.whatIsVideoPlaceholder} alt="Solution Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" containerClassName="w-full h-full" />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-24 h-24 rounded-full bg-black/10 backdrop-blur-xl flex items-center justify-center border border-white/20 transition-transform duration-500 group-hover:scale-110">
-                  <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-white border-b-[12px] border-b-transparent ml-2" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:bg-white/30">
+                  <Play className="w-7 h-7 fill-white ml-1 text-white drop-shadow" />
                 </div>
+              </div>
+              <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono text-white/90">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Interactive Preview</span>
               </div>
             </div>
           </motion.div>
 
           {/* Content Side */}
-          <div className={`space-y-8 w-full lg:w-1/2 ${isFlippedLayout ? "lg:order-1" : "lg:order-2"}`}>
+          <div className={`w-full lg:col-span-7 ${isFlippedLayout ? "lg:order-1" : "lg:order-2"}`}>
             <div>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-4">
-                <Sparkles className="w-3 h-3" />
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-5">
+                <Sparkles className="w-3.5 h-3.5 text-black" />
                 <span>Interactive Solution</span>
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black mb-6 tracking-tight leading-[1.1]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-5 tracking-tight leading-[1.1]">
                 {data.whatIsHeading}
               </h2>
-              <p className="text-lg text-black/70 font-light leading-relaxed">
+              <p className="text-base sm:text-lg text-black/70 font-light leading-relaxed mb-8">
                 {data.whatIsDescription}
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-black/10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-black/10">
               {data.whatIsFeatures.map((feat, idx) => (
-                <div key={idx}>
-                  <h4 className="text-black mb-1">{feat.title}</h4>
-                  <p className="text-sm text-black/60 font-light leading-snug">{feat.desc}</p>
+                <div 
+                  key={idx}
+                  className="p-4 sm:p-5 rounded-2xl bg-black/[0.02] border border-black/5 hover:border-black/15 hover:bg-black/[0.04] transition-all duration-300"
+                >
+                  <div className="flex items-center gap-2.5 mb-2">
+                    <span className="w-6 h-6 rounded-lg bg-black text-white text-[10px] font-mono font-bold flex items-center justify-center shrink-0">
+                      0{idx + 1}
+                    </span>
+                    <h4 className="text-sm sm:text-base font-bold text-black tracking-tight">{feat.title}</h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed pl-8">
+                    {feat.desc}
+                  </p>
                 </div>
               ))}
             </div>
