@@ -481,86 +481,86 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      {/* SECTION 07/08 — TECHNOLOGY & BENEFITS */}
-      <section className="py-16 lg:py-20">
-        <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="relative w-full rounded-[3rem] overflow-hidden bg-black mb-12 group shadow-sm hover:shadow-2xl transition-shadow duration-700">
-            {/* Cinematic Aspect Ratio */}
-            <div className="aspect-[4/3] sm:aspect-[21/9] w-full">
-              <SafeImage src={data.featuredBenefit.img} alt={data.featuredBenefit.title} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-[1.5s] group-hover:scale-105" containerClassName="w-full h-full" />
+      {/* SECTION 07/08 — TECHNOLOGY & BENEFITS (VIEWPORT-OPTIMIZED) */}
+      <section className="py-8 lg:py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
+            <div>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
+                <Sparkles className="w-3 h-3 text-black" />
+                <span>Proven Outcomes & Architecture</span>
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
+                More Than Technology.<br className="hidden sm:inline" /> Meaningful Outcomes.
+              </h2>
             </div>
-            
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8 sm:p-12 lg:p-16">
-              <div className="max-w-4xl text-white">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 mb-4 block">More Than Technology — Meaningful Outcomes</span>
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] tracking-tight">{data.featuredBenefit.title}</h2>
-                <p className="text-lg sm:text-xl text-white/70 font-light leading-relaxed max-w-2xl">
+            <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-md">
+              {data.featuredBenefit.desc}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch mb-5">
+            {/* Left: Featured Outcome Card */}
+            <div className="lg:col-span-5 relative rounded-2xl sm:rounded-3xl overflow-hidden bg-black min-h-[280px] sm:min-h-[320px] border border-black/10 shadow-sm group">
+              <SafeImage 
+                src={data.featuredBenefit.img} 
+                alt={data.featuredBenefit.title} 
+                className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-all duration-700 group-hover:scale-105" 
+                containerClassName="w-full h-full" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-5 sm:p-7">
+                <span className="w-fit px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white mb-2">
+                  Primary Outcome
+                </span>
+                <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight mb-2">
+                  {data.featuredBenefit.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-white/80 font-light leading-relaxed line-clamp-3">
                   {data.featuredBenefit.desc}
                 </p>
               </div>
             </div>
+
+            {/* Right: 4 Benefit Cards (2x2 Grid) */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              {data.benefits.slice(0, 4).map((b, idx) => (
+                <div 
+                  key={idx} 
+                  className="group relative p-4 sm:p-5 rounded-2xl bg-gray-50/80 border border-black/5 hover:bg-black hover:border-black transition-all duration-300 flex flex-col justify-between hover:shadow-lg hover:-translate-y-0.5"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="px-2.5 py-0.5 rounded-lg bg-black text-white text-[10px] font-mono font-bold group-hover:bg-white group-hover:text-black transition-colors duration-300">
+                      0{idx + 1}
+                    </span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-black/20 group-hover:bg-emerald-400 transition-colors" />
+                  </div>
+                  <div>
+                    <h5 className="text-sm sm:text-base font-bold text-black group-hover:text-white mb-1 tracking-tight transition-colors">
+                      {b.title}
+                    </h5>
+                    <p className="text-xs text-black/60 group-hover:text-white/70 font-light leading-relaxed transition-colors line-clamp-2">
+                      {b.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="max-w-[100rem] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-[minmax(180px,auto)_minmax(180px,auto)_minmax(180px,auto)] gap-4">
-              {data.benefits.map((b, idx) => {
-                const num = String(idx + 1).padStart(2, "0");
-                
-                // Define the asymmetrical bento styling for up to 6 items
-                const styles = [
-                  // 0: Massive Anchor (2x2)
-                  "md:col-span-2 md:row-span-2 bg-black text-white p-8 lg:p-12 rounded-[2.5rem] flex flex-col justify-end",
-                  // 1: Wide Minimalist (2x1)
-                  "md:col-span-2 md:row-span-1 bg-gray-50 border border-black/5 p-6 lg:p-8 rounded-[2rem] flex flex-col justify-center",
-                  // 2: Tall Pillar (1x2)
-                  "md:col-span-1 md:row-span-2 bg-gray-100 p-6 lg:p-8 rounded-[2.5rem] flex flex-col justify-end",
-                  // 3: Minimal Square (1x1)
-                  "md:col-span-1 md:row-span-1 bg-white border border-black/10 p-6 rounded-[1.5rem] flex flex-col justify-center",
-                  // 4: Wide Accent (2x1)
-                  "md:col-span-2 md:row-span-1 bg-black/5 p-6 lg:p-8 rounded-[2rem] flex flex-col justify-center",
-                  // 5: Dark Square (1x1)
-                  "md:col-span-1 md:row-span-1 bg-black text-white p-6 rounded-[1.5rem] flex flex-col justify-center",
-                ];
-                
-                const style = styles[idx % styles.length];
-                const isDark = idx === 0 || idx === 5;
-
-                return (
-                  <div key={idx} className={`group relative overflow-hidden transition-all duration-700 hover:shadow-2xl hover:-translate-y-1 cursor-default ${style}`}>
-                    {/* Architectural Background Number */}
-                    <div className="absolute top-4 right-6 pointer-events-none select-none transition-transform duration-1000 group-hover:scale-110">
-                      <span className={`text-[4rem] lg:text-[6rem] font-black leading-none ${isDark ? 'text-white/[0.03] group-hover:text-white/[0.08]' : 'text-black/[0.03] group-hover:text-black/[0.08]'} transition-colors duration-500`}>
-                        {num}
-                      </span>
-                    </div>
-
-                    <div className="relative z-10 flex flex-col h-full justify-between">
-                      <span className={`text-xl font-thin mb-6 lg:mb-8 block ${isDark ? 'text-white/40' : 'text-black/30'}`}>
-                        {num}
-                      </span>
-                      <div>
-                        <h5 className={`mb-3 ${isDark ? 'text-white' : 'text-black'}`}>{b.title}</h5>
-                        <p className={`text-sm sm:text-base font-light leading-relaxed max-w-sm ${isDark ? 'text-white/70' : 'text-black/70'}`}>{b.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+          {/* Integrated Tech Stack Pill Bar */}
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-black/[0.02] border border-black/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-black/70">
+              <Cpu className="w-4 h-4 text-black shrink-0" />
+              <span>Engineered Tech Stack:</span>
             </div>
-          </div>          
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Tech Stack Horizontal Scroll/Grid */}
-          <div className="p-8 sm:p-12 rounded-[2.5rem] bg-gray-50/50 border border-black/5 mt-24">
-            <h4 className="text-[10px] uppercase tracking-[0.2em] text-black/40 mb-8 text-center">Engineered Technology Stack</h4>
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            <div className="flex flex-wrap gap-2">
               {data.techStack.map((tech, idx) => (
-                <div key={idx} className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-black/5 shadow-sm text-[11px] font-bold text-black/60 uppercase tracking-widest hover:border-black/20 hover:text-black transition-colors cursor-default">
-                  <Cpu className="w-3.5 h-3.5" />
-                  <span>{tech}</span>
-                </div>
+                <span 
+                  key={idx} 
+                  className="px-3 py-1 rounded-full bg-white border border-black/5 shadow-sm text-[11px] font-bold text-black/75 tracking-wider"
+                >
+                  {tech}
+                </span>
               ))}
             </div>
           </div>
