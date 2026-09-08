@@ -182,7 +182,9 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 <Sparkles className="w-3 h-3" />
                 <span>Interactive Solution</span>
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black mb-6 tracking-tight leading-[1.1]">\n                {data.whatIsHeading}\n              </h2>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black mb-6 tracking-tight leading-[1.1]">
+                {data.whatIsHeading}
+              </h2>
               <p className="text-lg text-black/70 font-light leading-relaxed">
                 {data.whatIsDescription}
               </p>
