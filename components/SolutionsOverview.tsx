@@ -160,33 +160,48 @@ export default function SolutionsOverview() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((cat) => (
-              <div key={cat.id} className="group relative rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1 flex flex-col h-full">
-                <div className="relative w-full h-48 overflow-hidden bg-gray-200">
+              <Link 
+                href={cat.href}
+                key={cat.id} 
+                className="group relative h-[360px] lg:h-[440px] rounded-[2rem] overflow-hidden bg-black transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.2)] hover:-translate-y-2 block"
+              >
+                {/* Background Image */}
+                <div className="absolute inset-0 w-full h-full">
                   <SafeImage
                     src={cat.img}
                     alt={cat.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                     containerClassName="w-full h-full"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* Dark gradient for text legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 transition-opacity duration-500" />
                 </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-4 text-black">
-                    {cat.icon}
+                
+                {/* Interactive Content Overlay */}
+                <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-between">
+                  {/* Top section: Icon & Arrow */}
+                  <div className="flex justify-between items-start">
+                    <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center shadow-xl transition-transform duration-500 group-hover:scale-110">
+                      {cat.icon}
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 shadow-xl">
+                      <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{cat.title}</h3>
-                  <p className="text-gray-600 text-sm mb-6 flex-1">
-                    {cat.desc}
-                  </p>
-                  <Link
-                    href={cat.href}
-                    className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-black group-hover:text-gray-600 transition-colors mt-auto"
-                  >
-                    Explore Solution
-                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  
+                  {/* Bottom section: Text */}
+                  <div className="transform transition-transform duration-500 translate-y-4 group-hover:translate-y-0">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight">
+                      {cat.title}
+                    </h3>
+                    <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden">
+                      <p className="text-white/70 text-sm font-light mt-2 line-clamp-2">
+                        {cat.desc}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
