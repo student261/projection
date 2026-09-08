@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ChevronDown, Play } from "lucide-react";
@@ -90,6 +90,25 @@ const faqs = [
 export default function SolutionsContent() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY <= 20) {
+        setIsNavVisible(true);
+      } else if (currentScrollY > lastScrollY.current + 5) {
+        setIsNavVisible(false); // scrolling down
+      } else if (currentScrollY < lastScrollY.current - 5) {
+        setIsNavVisible(true); // scrolling up
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const filteredSolutions =
     activeFilter === "all"
@@ -119,13 +138,13 @@ export default function SolutionsContent() {
             Interactive Solutions for <br /> Extraordinary Spaces
           </h1>
           <p className="text-lg sm:text-xl text-white/80 font-light max-w-2xl mx-auto">
-            Explore our suite of motion projection, 360° environments, AI interactions, and audience engagement technologies.
+            Explore our suite of motion projection, 360A environments, AI interactions, and audience engagement technologies.
           </p>
         </div>
       </section>
 
       {/* Filter Tabs (More Visual) */}
-      <section className="bg-white/80 backdrop-blur-xl border-b border-gray-200 py-4 sticky top-[76px] z-40 shadow-sm">
+      <section className={`bg-white/80 backdrop-blur-xl border-b border-gray-200 py-4 sticky z-40 shadow-sm transition-all duration-500 ease-in-out ${isNavVisible ? "top-[76px]" : "top-0"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-nowrap overflow-x-auto gap-3 pb-2 scrollbar-hide snap-x items-center">
             <button
