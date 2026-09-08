@@ -66,16 +66,17 @@ const ExperienceCard = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ margin: "-20% 0px -20% 0px" }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} // Custom smooth ease
-        className="max-w-2xl"
+        className="max-w-2xl relative z-10"
       >
-        <div className="text-6xl lg:text-[8rem] font-black text-slate-100 mb-6 font-mono tracking-tighter select-none leading-none">
+        {/* Background Watermark Number */}
+        <div className="absolute -top-16 -left-8 text-[12rem] lg:text-[14rem] font-black text-slate-50 opacity-60 pointer-events-none select-none -z-10 leading-none tracking-tighter hidden sm:block">
           0{idx + 1}
         </div>
 
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black text-white text-[10px] font-mono font-bold uppercase tracking-widest w-fit mb-6 shadow-sm">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black text-white text-[10px] font-mono font-bold uppercase tracking-widest w-fit mb-8 shadow-sm">
           <span>Experience</span>
           <span className="opacity-40">/</span>
-          <span className="opacity-90">0{total}</span>
+          <span className="opacity-90">0{idx + 1} &mdash; 0{total}</span>
         </div>
 
         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
