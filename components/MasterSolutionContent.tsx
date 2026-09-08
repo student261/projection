@@ -255,15 +255,23 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
               </p>
             </div>
 
-            {/* Swiss Typographic Spec List (Zero Cards) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5 pt-6 border-t border-black/10">
+            {/* High-End Architectural Feature Matrix (Zero Cards, Stylish & Modern) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-8 border-t border-black/10">
               {data.whatIsFeatures.map((feat, idx) => (
-                <div key={idx} className="group">
-                  <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-[10px] font-mono font-bold text-black/40">{String(idx + 1).padStart(2, "0")}</span>
-                    <h4 className="text-sm sm:text-base font-bold text-black tracking-tight">{feat.title}</h4>
+                <div 
+                  key={idx} 
+                  className="group relative pl-4 sm:pl-5 py-2 transition-all duration-300 border-l-2 border-black/10 hover:border-black"
+                >
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="inline-flex items-center justify-center text-[10px] font-mono font-bold tracking-wider text-black/50 group-hover:text-black transition-colors">
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-black/30 font-light">•</span>
+                    <h4 className="text-sm sm:text-base font-bold text-black tracking-tight group-hover:text-black transition-colors">
+                      {feat.title}
+                    </h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed pl-5">
+                  <p className="text-xs sm:text-sm text-black/65 font-light leading-relaxed">
                     {feat.desc}
                   </p>
                 </div>
