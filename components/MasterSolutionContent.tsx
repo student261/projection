@@ -354,22 +354,27 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      {/* SECTION 05 — HOW IT WORKS */}
-      <section className="py-16 lg:py-20 bg-black text-white overflow-hidden">
+      {/* SECTION 05 — HOW IT WORKS (VIEWPORT-OPTIMIZED) */}
+      <section className="py-8 lg:py-12 bg-black text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <SectionHeading
-            label="INTELLIGENT TECHNOLOGY. INSTANT INTERACTION."
-            heading="From Movement to Immersive Experience"
-            subheading={data.howItWorksIntro}
-            centered
-            dark
-          />
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-8">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white/80 mb-2">
+              <Sparkles className="w-3 h-3 text-white/80" />
+              <span>Intelligent Technology • Instant Interaction</span>
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight mb-2">
+              From Movement to Immersive Experience
+            </h2>
+            <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed max-w-2xl mx-auto">
+              {data.howItWorksIntro}
+            </p>
+          </div>
 
-          <div className="mt-20 relative">
+          <div className="mt-8 sm:mt-10 relative">
             {/* Connecting Line */}
-            <div className="hidden lg:block absolute top-12 left-0 right-0 h-[1px] bg-white/20" />
+            <div className="hidden lg:block absolute top-6 left-16 right-16 h-[1px] bg-gradient-to-r from-transparent via-white/25 to-transparent z-0" />
             
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 relative z-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-4 relative z-10">
               {data.howItWorksSteps.map((step, idx) => (
                 <motion.div 
                   key={idx}
@@ -377,13 +382,17 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="relative text-center"
+                  className="relative text-center group"
                 >
-                  <div className="w-full text-center relative group">
-                    <span className="text-7xl font-thin text-white/20 group-hover:text-white transition-colors block mb-8">{idx + 1}</span>
-                    <h4 className="text-[10px] text-white mb-3 tracking-[0.2em] uppercase">{step.title}</h4>
-                    <p className="text-base text-white/70 font-light leading-relaxed px-4">{step.desc}</p>
+                  <div className="w-12 h-12 rounded-full bg-slate-900 border border-white/30 text-white font-mono font-bold text-sm flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:border-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                    0{idx + 1}
                   </div>
+                  <h4 className="text-xs font-bold text-white mb-1.5 tracking-wider uppercase group-hover:text-blue-400 transition-colors">
+                    {step.title}
+                  </h4>
+                  <p className="text-[11px] sm:text-xs text-white/60 font-light leading-relaxed px-1 sm:px-2">
+                    {step.desc}
+                  </p>
                 </motion.div>
               ))}
             </div>
