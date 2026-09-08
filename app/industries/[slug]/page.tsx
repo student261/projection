@@ -24,7 +24,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       <Navbar />
 
       {/* SECTION 01: HERO BANNER (Kept Dark for Image Contrast) */}
-      <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <SafeImage 
             src={industry.hero.img} 
@@ -43,7 +43,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.1]">
             {industry.hero.title}
           </h1>
-          <p className="text-white/90 max-w-3xl mx-auto mb-10 text-xl sm:text-2xl font-light leading-relaxed">
+          <p className="text-white/90 max-w-3xl mx-auto mb-6 text-xl sm:text-2xl font-light leading-relaxed">
             {industry.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -69,9 +69,9 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 02: THE CHALLENGE */}
-      <section className="py-28 bg-[#F8F9FA] border-t border-slate-200/80 relative">
+      <section className="py-12 lg:py-16 bg-[#F8F9FA] border-t border-slate-200/80 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="grid lg:grid-cols-12 gap-8 items-start">
             
             {/* Left Column: Eyebrow Badge, Title, Intro & Dark Studio Quote Card */}
             <div className="lg:col-span-5 sticky top-32">
@@ -140,9 +140,9 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 03: OUR VISION */}
-      <section className="py-24 bg-gray-50/50 border-y border-gray-200/70 relative">
+      <section className="py-12 lg:py-16 bg-gray-50/50 border-y border-gray-200/70 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             
             {/* Left Column: Heading, Vision Statement & Clean Pillars List */}
             <div className="lg:col-span-6">
@@ -180,7 +180,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
             </div>
             
             {/* Right Column: Hero Image with Clean Dark Glass Quote Box */}
-            <div className="lg:col-span-6 relative h-[560px] rounded-3xl overflow-hidden border border-gray-200/80 shadow-xl group">
+            <div className="lg:col-span-6 relative h-[300px] sm:h-[400px] rounded-3xl overflow-hidden border border-gray-200/80 shadow-xl group">
                <SafeImage 
                   src={industry.hero.img} 
                   alt="Vision"
@@ -201,8 +201,8 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 04: INTERACTIVE SOLUTIONS */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-24">
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-6">
           <span className="text-[10px] uppercase tracking-widest font-bold text-black/50 block mb-4">
             CORE CAPABILITIES
           </span>
@@ -239,7 +239,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
           </div>
           
           {/* Bottom Statement */}
-          <div className="mt-24 pt-12 border-t border-gray-100 text-center">
+          <div className="mt-12 pt-12 border-t border-gray-100 text-center">
             <p className="text-gray-500 font-light text-lg md:text-xl italic max-w-4xl mx-auto">
               "{industry.solutions.bottomStatement}"
             </p>
@@ -249,11 +249,11 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 05: FEATURED EXPERIENCES (STICKY SCROLL) */}
-      <section id="experiences" className="py-24 lg:py-28 bg-[#F8F9FA] border-y border-gray-200/50">
+      <section id="experiences" className="py-12 lg:py-16 lg:py-12 lg:py-16 bg-[#F8F9FA] border-y border-gray-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200/80 text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-6 shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-blue-500" />
               <span>Real World Impact</span>
@@ -273,9 +273,9 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 06: BENEFITS & OUTCOMES */}
-      <section className="py-32 bg-white">
+      <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20">
+          <div className="mb-6">
             <SectionHeading 
               label="MEASURABLE VALUE"
               heading={industry.benefits.title}
@@ -299,7 +299,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
             ))}
           </div>
 
-          <div className="mt-20 pt-10 border-t border-black/10 text-center">
+          <div className="mt-10 pt-10 border-t border-black/10 text-center">
             <p className="text-black font-medium">
               {industry.benefits.bottomStatement}
             </p>
@@ -308,11 +308,11 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 07: TECHNOLOGY (PREMIUM BENTO GRID) */}
-      <section className="py-32 bg-[#F8F9FA] border-y border-gray-200/50 relative overflow-hidden">
+      <section className="py-16 lg:py-20 bg-[#F8F9FA] border-y border-gray-200/50 relative overflow-hidden">
         {/* Subtle dot pattern background */}
         <div className="absolute inset-0 opacity-[0.4]" style={{ backgroundImage: 'radial-gradient(#d1d5db 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-6">
           <SectionHeading 
             label="THE ENGINE"
             heading={industry.technology.title}
@@ -387,8 +387,8 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 08: HOW WE DELIVER */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-6">
           <SectionHeading 
             label="OUR PROCESS"
             heading={sharedDelivery.title}
@@ -417,7 +417,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
             ))}
           </div>
           
-          <div className="mt-20 p-8 rounded-2xl bg-black/5 border border-black/10 text-center">
+          <div className="mt-10 p-8 rounded-2xl bg-black/5 border border-black/10 text-center">
             <p className="text-black/80 font-light max-w-3xl mx-auto">
               {sharedDelivery.bottomStatement}
             </p>
@@ -426,9 +426,9 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 08B: CASE STUDIES (VISUAL CARDS) */}
-      <section className="py-32 bg-[#F8F9FA] border-t border-black/5">
+      <section className="py-16 lg:py-20 bg-[#F8F9FA] border-t border-black/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <SectionHeading 
               label="PROVEN SUCCESS"
               heading="Featured Case Studies"
@@ -442,7 +442,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Case Study Card 1 */}
             <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <SafeImage src={industry.hero.img} alt="Case Study 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" containerClassName="w-full h-full" />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
                   Case Study
@@ -459,7 +459,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
 
             {/* Case Study Card 2 */}
             <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
-              <div className="relative aspect-[4/3] overflow-hidden bg-black">
+              <div className="relative aspect-[16/9] overflow-hidden bg-black">
                 <SafeImage src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Case Study 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] opacity-80" containerClassName="w-full h-full" />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
                   Case Study
@@ -476,7 +476,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
 
             {/* Case Study Card 3 */}
             <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+              <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
                 <SafeImage src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80" alt="Case Study 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" containerClassName="w-full h-full" />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
                   Case Study
@@ -492,7 +492,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
             </Link>
           </div>
           
-          <div className="mt-16 text-center">
+          <div className="mt-8 text-center">
             <Link href="/projects" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black px-8 py-4 rounded-full border border-black/20 hover:bg-black hover:text-white transition-all duration-300">
               View All Case Studies
             </Link>
@@ -501,9 +501,9 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 09: FAQS */}
-      <section className="py-32 bg-gray-50 border-t border-black/10">
+      <section className="py-16 lg:py-20 bg-gray-50 border-t border-black/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-black mb-6">{industry.faqs.title}</h2>
             <p className="text-black/70 font-light">{industry.faqs.intro}</p>
           </div>
