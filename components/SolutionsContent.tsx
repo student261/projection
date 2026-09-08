@@ -183,27 +183,27 @@ export default function SolutionsContent() {
               <div
                 key={item.id}
                 id={item.id}
-                className="bg-white rounded-[2.5rem] border border-gray-200 shadow-sm overflow-hidden p-6 lg:p-12 transition-all hover:shadow-xl"
+                className="bg-white rounded-[2rem] border border-gray-200 shadow-sm overflow-hidden p-6 lg:p-8 transition-all hover:shadow-xl"
               >
-                <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center`}>
+                <div className={`grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch`}>
                   
                   {/* Visual Image Column */}
                   <div className={`relative ${isEven ? "lg:order-1" : "lg:order-2"}`}>
-                    <div className="relative overflow-hidden rounded-[2rem] shadow-lg group aspect-[4/3] w-full bg-gray-100">
+                    <div className="relative overflow-hidden rounded-[1.5rem] shadow-lg group w-full h-full min-h-[300px] bg-gray-100">
                       <SafeImage
                         src={item.img}
                         alt={item.title}
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                        containerClassName="w-full h-full"
+                        containerClassName="absolute inset-0 w-full h-full"
                       />
-                      <div className="absolute top-6 left-6 z-20 bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white shadow-lg">
+                      <div className="absolute top-4 left-4 z-20 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white shadow-lg">
                         {item.badge}
                       </div>
                       {/* Add a subtle play icon overlay for video implication */}
                       {item.id === "immersive-environment" && (
                          <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
-                            <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center">
-                              <Play className="w-6 h-6 text-white ml-1" />
+                            <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center">
+                              <Play className="w-5 h-5 text-white ml-1" />
                             </div>
                          </div>
                       )}
@@ -211,55 +211,55 @@ export default function SolutionsContent() {
                   </div>
 
                   {/* Narrative Column */}
-                  <div className={`flex flex-col h-full justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className="flex items-baseline gap-4 mb-4">
-                      <span className="text-4xl lg:text-5xl font-black text-gray-200">
+                  <div className={`flex flex-col h-full justify-center py-2 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                    <div className="flex items-baseline gap-3 mb-2">
+                      <span className="text-3xl lg:text-4xl font-black text-gray-200">
                         {item.num}
                       </span>
-                      <h2 className="text-3xl lg:text-4xl font-black text-black tracking-tight leading-tight">
+                      <h2 className="text-2xl lg:text-3xl font-black text-black tracking-tight leading-tight">
                         {item.title}
                       </h2>
                     </div>
                     
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-600 mb-6">
+                    <p className="text-[10px] lg:text-xs font-bold uppercase tracking-[0.2em] text-blue-600 mb-4">
                       {item.subtitle}
                     </p>
                     
-                    <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                    <p className="text-gray-600 text-sm lg:text-base leading-relaxed mb-6">
                       {item.desc}
                     </p>
 
-                    <div className="bg-gray-50 border-l-4 border-black p-5 rounded-r-2xl mb-8">
-                      <p className="text-sm text-gray-800 font-medium">
-                        <span className="font-bold uppercase tracking-wider text-[10px] bg-black text-white px-2 py-1 rounded-md mr-3">Use Case</span>
+                    <div className="bg-gray-50 border-l-4 border-black p-4 rounded-r-xl mb-6">
+                      <p className="text-xs lg:text-sm text-gray-800 font-medium">
+                        <span className="font-bold uppercase tracking-wider text-[9px] bg-black text-white px-2 py-1 rounded-md mr-3">Use Case</span>
                         {item.useCase}
                       </p>
                     </div>
 
                     {/* Feature Checklist */}
-                    <ul className="space-y-4 mb-10">
+                    <ul className="space-y-3 mb-8">
                       {item.features.map((feat, fIdx) => (
                         <li
                           key={fIdx}
-                          className="flex items-start gap-3 text-sm text-gray-700 font-medium"
+                          className="flex items-start gap-3 text-xs lg:text-sm text-gray-700 font-medium"
                         >
-                          <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-black shrink-0 mt-0.5" />
                           <span className="leading-snug">{feat}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex flex-col sm:flex-row gap-4 mt-auto">
+                    <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                       <Link 
                         href={`/solutions/${item.id}`} 
-                        className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-black text-white font-bold text-xs uppercase tracking-widest hover:bg-gray-800 transition-colors shadow-lg"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-black text-white font-bold text-[10px] lg:text-xs uppercase tracking-widest hover:bg-gray-800 transition-colors shadow-lg"
                       >
                         <span>Explore Solution</span>
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                       <Link 
                         href="/contact" 
-                        className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 border-black text-black font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-colors"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-black text-black font-bold text-[10px] lg:text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-colors"
                       >
                         <span>Book a Demo</span>
                       </Link>
