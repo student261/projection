@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import { Sparkles, Layers, Expand, Cpu, Gamepad2, ArrowRight } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
@@ -108,6 +108,117 @@ const solutions = [
   },
 ];
 
+function TiltCard({ cat }: { cat: any }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  // Smooth springs for a fluid, floating feel
+  const mouseXSpring = useSpring(x, { stiffness: 150, damping: 15 });
+  const mouseYSpring = useSpring(y, { stiffness: 150, damping: 15 });
+
+  // Map mouse coordinates to rotation
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["12deg", "-12deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-12deg", "12deg"]);
+
+  // Map mouse coordinates to glare position
+  const glareX = useTransform(mouseXSpring, [-0.5, 0.5], ["100%", "0%"]);
+  const glareY = useTransform(mouseYSpring, [-0.5, 0.5], ["100%", "0%"]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (!ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+    
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{ perspective: 1200 }}
+      className="w-full h-[380px] lg:h-[460px] cursor-pointer group"
+    >
+      <Link href={cat.href} className="block w-full h-full outline-none">
+        <motion.div
+          style={{
+            rotateX,
+            rotateY,
+            transformStyle: "preserve-3d",
+          }}
+          className="relative w-full h-full rounded-[2rem] bg-black border border-white/5 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.4)] transition-all duration-300"
+        >
+          {/* Base Layer: Image */}
+          <div 
+            className="absolute inset-0 rounded-[2rem] overflow-hidden bg-black"
+            style={{ transform: "translateZ(0px)" }}
+          >
+            <SafeImage
+              src={cat.img}
+              alt={cat.title}
+              className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 group-hover:scale-105"
+              containerClassName="w-full h-full"
+            />
+            {/* Ambient Dark Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+          </div>
+
+          {/* Glare Layer */}
+          <motion.div 
+            className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay pointer-events-none"
+            style={{
+              background: "radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, transparent 60%)",
+              backgroundSize: "250% 250%",
+              backgroundPositionX: glareX,
+              backgroundPositionY: glareY,
+              transform: "translateZ(1px)"
+            }}
+          />
+          
+          {/* Floating Content Layer (Pops out in 3D) */}
+          <div 
+            className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-between pointer-events-none"
+            style={{ transform: "translateZ(60px)" }} // The 3D pop out effect
+          >
+            <div className="flex justify-between items-start">
+              <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md mb-4 flex items-center justify-center text-white border border-white/20 shadow-xl">
+                {cat.icon}
+              </div>
+              <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-xl">
+                <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+              </div>
+            </div>
+
+            <div style={{ transform: "translateZ(40px)" }}>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight drop-shadow-2xl">
+                {cat.title}
+              </h3>
+              <p className="text-white/70 text-sm font-light drop-shadow-md">
+                {cat.desc}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </Link>
+    </motion.div>
+  );
+}
+
 export default function SolutionsOverview() {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeSolution = solutions[activeIndex];
@@ -158,54 +269,9 @@ export default function SolutionsOverview() {
             </h2>
           </div>
           
-          <div className="flex flex-col lg:flex-row h-[800px] lg:h-[500px] gap-4 w-full">
-            {categories.map((cat, idx) => (
-              <Link 
-                href={cat.href}
-                key={cat.id} 
-                className="group relative flex-1 hover:flex-[3] lg:hover:flex-[2.5] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] rounded-[2rem] overflow-hidden bg-black block min-h-[100px]"
-              >
-                {/* Background Image */}
-                <div className="absolute inset-0 w-full h-full">
-                  <SafeImage
-                    src={cat.img}
-                    alt={cat.title}
-                    className="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110 opacity-70 group-hover:opacity-100"
-                    containerClassName="w-full h-full"
-                  />
-                  {/* Dark gradient for text legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-opacity duration-700 group-hover:from-black/90 group-hover:via-black/50" />
-                </div>
-                
-                {/* Interactive Content Overlay */}
-                <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-end">
-                  <div className="flex items-center gap-4 transition-transform duration-[800ms] group-hover:-translate-y-2">
-                    {/* Floating Icon */}
-                    <div className="w-12 h-12 shrink-0 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center shadow-2xl transition-transform duration-700 group-hover:scale-110">
-                      {cat.icon}
-                    </div>
-                    {/* Title */}
-                    <div className="min-w-0 flex-1">
-                      <h3 className="text-xl lg:text-2xl font-bold text-white whitespace-nowrap lg:truncate transition-all duration-[800ms] group-hover:whitespace-normal group-hover:text-2xl">
-                        {cat.title}
-                      </h3>
-                    </div>
-                  </div>
-                  
-                  {/* Description & Link - reveals on hover */}
-                  <div className="grid grid-rows-[0fr] opacity-0 group-hover:grid-rows-[1fr] group-hover:opacity-100 transition-all duration-[800ms]">
-                    <div className="overflow-hidden pl-16">
-                      <p className="text-white/80 text-sm font-light mt-2 line-clamp-2">
-                        {cat.desc}
-                      </p>
-                      <div className="mt-4 flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-white hover:text-gray-300 transition-colors w-fit">
-                        Explore Solution
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((cat) => (
+              <TiltCard key={cat.id} cat={cat} />
             ))}
           </div>
         </div>
