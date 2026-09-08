@@ -567,68 +567,102 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      {/* SECTION 09 — FEATURED PROJECTS */}
-      <section className="py-16 lg:py-20 bg-black text-white">
+      {/* SECTION 09 — FEATURED PROJECTS (VIEWPORT-OPTIMIZED) */}
+      <section className="py-8 lg:py-12 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="REAL PROJECTS. REAL IMPACT."
-            heading="See the Solution in Action"
-            subheading={data.projectsIntro}
-            dark
-          />
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
+            <div>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white/80 mb-2">
+                <Sparkles className="w-3 h-3 text-white/80" />
+                <span>Real Projects • Real Impact</span>
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-[1.1]">
+                See the Solution in Action
+              </h2>
+            </div>
+            <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed max-w-md">
+              {data.projectsIntro}
+            </p>
+          </div>
 
-          <div className="relative flex flex-col lg:flex-row border-t border-white/10 mt-16 w-full max-w-[120rem] mx-auto">
-            
-            {/* Left: Sticky Fullscreen Image (Featured Project) */}
-            <div className="w-full lg:w-1/2 lg:sticky lg:top-0 lg:h-screen bg-black overflow-hidden group">
-              <div className="absolute inset-0">
-                <SafeImage src={data.featuredProject.img} alt={data.featuredProject.title} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-1000 group-hover:scale-105" containerClassName="w-full h-full" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
+            {/* Left: Featured Project (Primary Showcase Card) */}
+            <div className="lg:col-span-7 group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-950 border border-white/10 shadow-xl flex flex-col justify-end min-h-[340px] sm:min-h-[360px]">
+              <SafeImage 
+                src={data.featuredProject.img} 
+                alt={data.featuredProject.title} 
+                className="w-full h-full object-cover opacity-60 group-hover:opacity-45 transition-all duration-700 group-hover:scale-105" 
+                containerClassName="w-full h-full" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
               
-              <div className="relative z-10 w-full h-full flex flex-col justify-end p-8 lg:p-16 xl:p-24">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 mb-4 block">{data.featuredProject.industry}</span>
-                <h3 className="text-white mb-6 leading-[1.1]">{data.featuredProject.title}</h3>
-                
-                <div className="flex items-center gap-2 text-[11px] text-white/70 mb-6">
-                  <MapPin className="w-3.5 h-3.5" />
-                  <span>{data.featuredProject.location}</span>
+              <div className="relative z-10 p-5 sm:p-7 flex flex-col justify-end">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white">
+                    {data.featuredProject.industry} • Featured
+                  </span>
+                  <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] text-white/80">
+                    <MapPin className="w-3 h-3 text-white/70" />
+                    <span>{data.featuredProject.location}</span>
+                  </div>
                 </div>
                 
-                <p className="text-base sm:text-lg text-white/70 font-light mb-10 max-w-xl leading-relaxed">{data.featuredProject.desc}</p>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-2 leading-tight tracking-tight">
+                  {data.featuredProject.title}
+                </h3>
                 
-                <div className="flex flex-wrap gap-2 mb-12">
-                  {data.featuredProject.tech.map((t, idx) => (
-                    <span key={idx} className="px-3 py-1.5 rounded-full bg-white/10 text-[10px] font-bold uppercase tracking-widest border border-white/10 backdrop-blur-sm">{t}</span>
-                  ))}
-                </div>
+                <p className="text-xs sm:text-sm text-white/80 font-light mb-3 max-w-xl leading-relaxed line-clamp-2">
+                  {data.featuredProject.desc}
+                </p>
                 
-                <div>
-                  <Link href={data.featuredProject.href} className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white transition-colors">
-                    <span className="border-b border-white/30 pb-1">View Complete Case Study</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-white/10">
+                  <div className="flex flex-wrap gap-1.5">
+                    {data.featuredProject.tech.slice(0, 3).map((t, idx) => (
+                      <span key={idx} className="px-2 py-0.5 rounded bg-white/10 text-[9px] font-mono text-white/70 border border-white/10">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link 
+                    href={data.featuredProject.href} 
+                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors"
+                  >
+                    <span>View Full Case Study</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* Right: Massive Typography Scroll (Other Projects) */}
-            <div className="w-full lg:w-1/2 bg-[#050505] flex flex-col">
-              {data.projects.map((proj, idx) => (
-                <div key={idx} className="group p-8 lg:p-16 xl:p-24 border-b border-white/10 last:border-b-0 hover:bg-white/[0.02] transition-colors min-h-[50vh] flex flex-col justify-center cursor-default">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-6 block">{proj.industry}</span>
-                  <h4 className="text-white mb-6 leading-[1.1] group-hover:-translate-y-1 transition-transform duration-500">{proj.title}</h4>
-                  <p className="text-base sm:text-lg text-white/50 font-light mb-12 max-w-xl leading-relaxed group-hover:text-white/70 transition-colors">{proj.desc}</p>
+            {/* Right: 4 Companion Projects (2x2 Compact Cards) */}
+            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {data.projects.slice(0, 4).map((proj, idx) => (
+                <Link 
+                  key={idx} 
+                  href={proj.href || "/projects"}
+                  className="group p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 flex flex-col justify-between hover:shadow-lg hover:-translate-y-0.5"
+                >
                   <div>
-                    <Link href={proj.href} className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors">
-                      <span className="border-b border-white/20 hover:border-white/50 transition-colors pb-1">Read Study</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-2 py-0.5 rounded bg-white/10 text-[9px] font-mono font-bold uppercase tracking-wider text-white/80">
+                        {proj.industry}
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-white/40 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
+                    </div>
+                    <h4 className="text-sm font-bold text-white mb-1 tracking-tight group-hover:text-blue-300 transition-colors line-clamp-1">
+                      {proj.title}
+                    </h4>
+                    <p className="text-[11px] text-white/60 font-light leading-relaxed line-clamp-2">
+                      {proj.desc}
+                    </p>
                   </div>
-                </div>
+                  <div className="pt-2 mt-auto border-t border-white/5 flex items-center text-[10px] font-bold uppercase tracking-wider text-white/40 group-hover:text-white transition-colors">
+                    <span>Read Case Study</span>
+                  </div>
+                </Link>
               ))}
             </div>
-
           </div>
         </div>
       </section>
