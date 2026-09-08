@@ -38,30 +38,36 @@ export interface SolutionFullData {
   whatIsVideoPlaceholder: string;
 
   // Section 03: Experience Showcase
+  experienceHeading?: string;
   experienceIntro: string;
   featuredExperience: { title: string; desc: string; img: string; category: string };
   experienceCards: { title: string; desc: string; img: string; category: string }[];
 
   // Section 04: Key Features
+  featuresHeading?: string;
   keyFeaturesIntro: string;
   keyFeatures: { title: string; desc: string }[];
 
   // Section 05: How It Works
+  howItWorksHeading?: string;
   howItWorksIntro: string;
   howItWorksSteps: { title: string; desc: string }[];
 
   // Section 06: Industries We Serve
+  industriesHeading?: string;
   industriesIntro: string;
   featuredIndustry: { title: string; desc: string; img: string; href: string };
   industryCards: { title: string; desc: string; img: string; href: string }[];
 
   // Section 07/08: Tech Stack & Benefits
+  outcomesHeading?: string;
   benefitsIntro: string;
   featuredBenefit: { title: string; desc: string; img: string };
   benefits: { title: string; desc: string }[];
   techStack: string[];
 
   // Section 09: Featured Projects
+  projectsHeading?: string;
   projectsIntro: string;
   featuredProject: { industry: string; title: string; desc: string; img: string; location: string; tech: string[]; href: string };
   projects: { industry: string; title: string; desc: string; href: string }[];
@@ -215,7 +221,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 02 — WHAT IS THIS SOLUTION? */}
-      <section className="pt-14 pb-10 lg:pt-20 lg:pb-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="what-is-it" className="pt-14 pb-10 lg:pt-20 lg:pb-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Image Side */}
@@ -291,7 +297,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 <span>Experience Catalog</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
-                Experience the Possibilities
+                {data.experienceHeading || "Experience the Possibilities"}
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-md">
@@ -377,7 +383,9 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 <span>System Architecture</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
-                Powerful Features.<br className="hidden sm:inline" /> Exceptional Experiences.
+                {data.featuresHeading || (
+                  <>Powerful Features.<br className="hidden sm:inline" /> Exceptional Experiences.</>
+                )}
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-md">
@@ -426,7 +434,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
               <span>Intelligent Technology • Instant Interaction</span>
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight mb-2">
-              From Movement to Immersive Experience
+              {data.howItWorksHeading || "From Movement to Immersive Experience"}
             </h2>
             <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed max-w-2xl mx-auto">
               {data.howItWorksIntro}
@@ -473,7 +481,9 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 <span>Sector Integration</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
-                One Solution.<br className="hidden sm:inline" /> Endless Possibilities.
+                {data.industriesHeading || (
+                  <>One Solution.<br className="hidden sm:inline" /> Endless Possibilities.</>
+                )}
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-md">
@@ -558,7 +568,9 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 <span>Measurable Results</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
-                More Than Technology.<br className="hidden sm:inline" /> Meaningful Outcomes.
+                {data.outcomesHeading || (
+                  <>More Than Technology.<br className="hidden sm:inline" /> Meaningful Outcomes.</>
+                )}
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-md">
@@ -615,7 +627,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 <span>Featured Installations • Live Showcase</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-[1.1]">
-                See the Solution in Action
+                {data.projectsHeading || "See the Solution in Action"}
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed max-w-md">

@@ -140,13 +140,13 @@ export default function Navbar() {
                       <ul className="space-y-1 text-[11px] font-light text-black/70">
                         <li>
                           <Link
-                            href="/solutions/interactive-spaces"
+                            href="/solutions/interactive-floor"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "INTERACTIVE SPACES",
                                 title: "Interactive Motion Floor",
                                 desc: "Ceiling optical sensors turning physical flooring into responsive light canvases.",
-                                href: "/solutions/interactive-spaces",
+                                href: "/solutions/interactive-floor",
                                 img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -157,13 +157,13 @@ export default function Navbar() {
                         </li>
                         <li>
                           <Link
-                            href="/solutions/interactive-spaces"
+                            href="/solutions/interactive-wall"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "INTERACTIVE SPACES",
                                 title: "Interactive Motion Wall",
                                 desc: "Laser projection wall reacting to multi-touch and gesture tracking.",
-                                href: "/solutions/interactive-spaces",
+                                href: "/solutions/interactive-wall",
                                 img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -174,13 +174,13 @@ export default function Navbar() {
                         </li>
                         <li>
                           <Link
-                            href="/solutions/interactive-spaces"
+                            href="/solutions/interactive-ceiling"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "INTERACTIVE SPACES",
                                 title: "Interactive Ceiling Canopy",
                                 desc: "Overhead projection arrays casting dynamic skyward graphics & generative art.",
-                                href: "/solutions/interactive-spaces",
+                                href: "/solutions/interactive-ceiling",
                                 img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -191,13 +191,13 @@ export default function Navbar() {
                         </li>
                         <li>
                           <Link
-                            href="/solutions/interactive-spaces"
+                            href="/solutions/interactive-window"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "INTERACTIVE SPACES",
                                 title: "Storefront Window Projection",
                                 desc: "Rear-projection film turning retail glass windows into touchless interactive screens.",
-                                href: "/solutions/interactive-spaces",
+                                href: "/solutions/interactive-window",
                                 img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -208,13 +208,13 @@ export default function Navbar() {
                         </li>
                         <li>
                           <Link
-                            href="/solutions/interactive-spaces"
+                            href="/solutions/interactive-mirror-table"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "INTERACTIVE SPACES",
                                 title: "Interactive Mirror & Touch Table",
                                 desc: "Multi-user capacitive touch surfaces & reflective smart mirror displays.",
-                                href: "/solutions/interactive-spaces",
+                                href: "/solutions/interactive-mirror-table",
                                 img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -235,13 +235,13 @@ export default function Navbar() {
                       <ul className="space-y-1 text-[11px] font-light text-black/70">
                         <li>
                           <Link
-                            href="/solutions/immersive-environment"
+                            href="/solutions/projection-mapping"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "IMMERSIVE ENVIRONMENT",
                                 title: "Architectural Projection Mapping",
                                 desc: "Sub-millimeter 3D mesh scanning & high-lumen projection mapping onto complex architecture.",
-                                href: "/solutions/immersive-environment",
+                                href: "/solutions/projection-mapping",
                                 img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -252,13 +252,13 @@ export default function Navbar() {
                         </li>
                         <li>
                           <Link
-                            href="/solutions/immersive-environment"
+                            href="/solutions/immersive-room"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "IMMERSIVE ENVIRONMENT",
                                 title: "360° Immersive Room",
                                 desc: "Seamless projection rooms with multi-channel surround audio.",
-                                href: "/solutions/immersive-environment",
+                                href: "/solutions/immersive-room",
                                 img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -269,13 +269,13 @@ export default function Navbar() {
                         </li>
                         <li>
                           <Link
-                            href="/solutions/immersive-environment"
+                            href="/solutions/led-tunnel"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "IMMERSIVE ENVIRONMENT",
                                 title: "Interactive LED Tunnel",
                                 desc: "Curved high-density LED archways with motion proximity tracking.",
-                                href: "/solutions/immersive-environment",
+                                href: "/solutions/led-tunnel",
                                 img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -286,13 +286,13 @@ export default function Navbar() {
                         </li>
                         <li>
                           <Link
-                            href="/solutions/immersive-environment"
+                            href="/solutions/holographic-display"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "IMMERSIVE ENVIRONMENT",
                                 title: "3D Holographic Display",
                                 desc: "Transparent floating 3D visuals that appear mid-air without 3D glasses.",
-                                href: "/solutions/immersive-environment",
+                                href: "/solutions/holographic-display",
                                 img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -313,13 +313,13 @@ export default function Navbar() {
                       <ul className="space-y-1 text-[11px] font-light text-black/70">
                         <li>
                           <Link
-                            href="/solutions/ai-experience"
+                            href="/solutions/ai-avatar-photobooth"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "AI EXPERIENCE",
                                 title: "Autonomous AI Avatar Host",
                                 desc: "Real-time generative spatial voice avatar greeting visitors with computer vision.",
-                                href: "/solutions/ai-experience",
+                                href: "/solutions/ai-avatar-photobooth",
                                 img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -340,13 +340,13 @@ export default function Navbar() {
                       <ul className="space-y-1 text-[11px] font-light text-black/70">
                         <li>
                           <Link
-                            href="/solutions/solution-engagement"
+                            href="/solutions/brand-gamification"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "SOLUTION ENGAGEMENT",
                                 title: "Brand Gamification Activation",
                                 desc: "Custom 3D mini-games and interactive reward systems for flagship retail stores.",
-                                href: "/solutions/solution-engagement",
+                                href: "/solutions/brand-gamification",
                                 img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -357,13 +357,13 @@ export default function Navbar() {
                         </li>
                         <li>
                           <Link
-                            href="/solutions/solution-engagement"
+                            href="/solutions/motion-games"
                             onMouseEnter={() =>
                               setSolPreview({
                                 badge: "SOLUTION ENGAGEMENT",
                                 title: "Multi-User Motion Games",
                                 desc: "Body-tracking spatial motion gaming for museums, venues, and public spaces.",
-                                href: "/solutions/solution-engagement",
+                                href: "/solutions/motion-games",
                                 img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
                               })
                             }
@@ -742,20 +742,48 @@ export default function Navbar() {
         <div className="lg:hidden fixed inset-x-0 top-[76px] bg-white border-b border-black/10 p-6 shadow-xl transition-all duration-200 max-h-[85vh] overflow-y-auto space-y-6">
           <div className="flex flex-col space-y-4">
             <div className="border-b border-black/10 pb-3">
-              <span className="text-sm uppercase text-black/50 block mb-2 font-bold">Solution</span>
-              <div className="pl-3 space-y-1 text-sm text-black/80 font-light">
-                <Link href="/solutions/interactive-spaces" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-black">
-                  • Interactive Spaces (Floor, Wall, Ceiling, Window, Mirror/Table)
-                </Link>
-                <Link href="/solutions/immersive-environment" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-black">
-                  • Immersive Environment (Projection Mapping, Room 180/360, LED Tunnel, Holographic)
-                </Link>
-                <Link href="/solutions/ai-experience" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-black">
-                  • AI Experience (AI Avatar / Photo Booth)
-                </Link>
-                <Link href="/solutions/solution-engagement" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-black">
-                  • Solution Engagement (Brand Gamification, Motion Games)
-                </Link>
+              <span className="text-sm uppercase text-black/50 block mb-2 font-bold">Solutions</span>
+              <div className="pl-3 space-y-2 text-xs text-black/80 font-light">
+                <div>
+                  <Link href="/solutions/interactive-spaces" onClick={() => setMobileMenuOpen(false)} className="font-bold text-black block py-0.5">
+                    Interactive Spaces
+                  </Link>
+                  <div className="pl-2 space-y-0.5 text-black/70">
+                    <Link href="/solutions/interactive-floor" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• Interactive Floor</Link>
+                    <Link href="/solutions/interactive-wall" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• Interactive Wall</Link>
+                    <Link href="/solutions/interactive-ceiling" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• Interactive Ceiling</Link>
+                    <Link href="/solutions/interactive-window" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• Interactive Window</Link>
+                    <Link href="/solutions/interactive-mirror-table" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• Interactive Mirror / Table</Link>
+                  </div>
+                </div>
+                <div>
+                  <Link href="/solutions/immersive-environment" onClick={() => setMobileMenuOpen(false)} className="font-bold text-black block py-0.5">
+                    Immersive Environment
+                  </Link>
+                  <div className="pl-2 space-y-0.5 text-black/70">
+                    <Link href="/solutions/projection-mapping" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• Projection Mapping</Link>
+                    <Link href="/solutions/immersive-room" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• 360° Immersive Room</Link>
+                    <Link href="/solutions/led-tunnel" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• LED Tunnel</Link>
+                    <Link href="/solutions/holographic-display" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• Holographic Display</Link>
+                  </div>
+                </div>
+                <div>
+                  <Link href="/solutions/ai-experience" onClick={() => setMobileMenuOpen(false)} className="font-bold text-black block py-0.5">
+                    AI Experience
+                  </Link>
+                  <div className="pl-2 space-y-0.5 text-black/70">
+                    <Link href="/solutions/ai-avatar-photobooth" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• AI Avatar / Photo Booth</Link>
+                  </div>
+                </div>
+                <div>
+                  <Link href="/solutions/solution-engagement" onClick={() => setMobileMenuOpen(false)} className="font-bold text-black block py-0.5">
+                    Solution Engagement
+                  </Link>
+                  <div className="pl-2 space-y-0.5 text-black/70">
+                    <Link href="/solutions/brand-gamification" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• Brand Gamification</Link>
+                    <Link href="/solutions/motion-games" onClick={() => setMobileMenuOpen(false)} className="block py-0.5 hover:text-black">• Motion Games</Link>
+                  </div>
+                </div>
               </div>
             </div>
 
