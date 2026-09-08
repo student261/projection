@@ -73,6 +73,37 @@ export interface SolutionFullData {
 
 export default function MasterSolutionContent({ data }: { data: SolutionFullData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [activeProjectIdx, setActiveProjectIdx] = useState(0);
+
+  const projectImages: Record<string, string> = {
+    "Education": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    "Museum": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1200&q=80",
+    "Retail": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+    "Healthcare": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    "Entertainment": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+  };
+
+  const showcaseProjects = [
+    {
+      title: data.featuredProject.title,
+      industry: data.featuredProject.industry,
+      location: data.featuredProject.location,
+      desc: data.featuredProject.desc,
+      tech: data.featuredProject.tech,
+      img: data.featuredProject.img,
+      href: data.featuredProject.href,
+    },
+    ...data.projects.slice(0, 4).map((p) => ({
+      title: p.title,
+      industry: p.industry,
+      location: `${p.industry} Sector Installation`,
+      desc: p.desc,
+      tech: ["Motion Sensing", "Projection Mapping", "Interactive Engine"],
+      img: projectImages[p.industry] || data.featuredProject.img,
+      href: p.href,
+    }))
+  ];
+  const activeProject = showcaseProjects[activeProjectIdx] || showcaseProjects[0];
 
   // Layout Variations based on slug to make pages look distinct
   const isFlippedLayout = data.slug === "immersive-environment" || data.slug === "solution-engagement";
@@ -567,14 +598,14 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      {/* SECTION 09 — FEATURED PROJECTS (VIEWPORT-OPTIMIZED) */}
+      {/* SECTION 09 — FEATURED PROJECTS (INTERACTIVE EXHIBITION STAGE) */}
       <section className="py-8 lg:py-12 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
             <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white/80 mb-2">
                 <Sparkles className="w-3 h-3 text-white/80" />
-                <span>Real Projects • Real Impact</span>
+                <span>Featured Installations • Live Showcase</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-[1.1]">
                 See the Solution in Action
@@ -585,83 +616,105 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
-            {/* Left: Featured Project (Primary Showcase Card) */}
-            <div className="lg:col-span-7 group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-950 border border-white/10 shadow-xl flex flex-col justify-end min-h-[340px] sm:min-h-[360px]">
-              <SafeImage 
-                src={data.featuredProject.img} 
-                alt={data.featuredProject.title} 
-                className="w-full h-full object-cover opacity-60 group-hover:opacity-45 transition-all duration-700 group-hover:scale-105" 
-                containerClassName="w-full h-full" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
-              
-              <div className="relative z-10 p-5 sm:p-7 flex flex-col justify-end">
-                <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white">
-                    {data.featuredProject.industry} • Featured
-                  </span>
-                  <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] text-white/80">
-                    <MapPin className="w-3 h-3 text-white/70" />
-                    <span>{data.featuredProject.location}</span>
-                  </div>
-                </div>
-                
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-2 leading-tight tracking-tight">
-                  {data.featuredProject.title}
-                </h3>
-                
-                <p className="text-xs sm:text-sm text-white/80 font-light mb-3 max-w-xl leading-relaxed line-clamp-2">
-                  {data.featuredProject.desc}
-                </p>
-                
-                <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-white/10">
-                  <div className="flex flex-wrap gap-1.5">
-                    {data.featuredProject.tech.slice(0, 3).map((t, idx) => (
-                      <span key={idx} className="px-2 py-0.5 rounded bg-white/10 text-[9px] font-mono text-white/70 border border-white/10">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <Link 
-                    href={data.featuredProject.href} 
-                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors"
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            {/* Left: Interactive Project Index List (Zero Cards, Clean Studio Typography) */}
+            <div className="lg:col-span-5 flex flex-col divide-y divide-white/10 border-y border-white/10">
+              {showcaseProjects.map((proj, idx) => {
+                const isActive = activeProjectIdx === idx;
+                const num = String(idx + 1).padStart(2, "0");
+                return (
+                  <button
+                    key={idx}
+                    type="button"
+                    onMouseEnter={() => setActiveProjectIdx(idx)}
+                    onClick={() => setActiveProjectIdx(idx)}
+                    className={`py-3.5 px-2 text-left transition-all duration-300 flex items-center justify-between group cursor-pointer ${
+                      isActive ? "bg-white/[0.08] px-3.5 rounded-xl -mx-1.5" : "hover:bg-white/[0.03]"
+                    }`}
                   >
-                    <span>View Full Case Study</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
+                    <div className="flex items-center gap-3 min-w-0">
+                      <span className={`text-xs font-mono font-bold transition-colors ${
+                        isActive ? "text-white" : "text-white/30 group-hover:text-white/60"
+                      }`}>
+                        {num}
+                      </span>
+                      <div className="min-w-0">
+                        <span className={`text-[9px] font-mono uppercase tracking-wider block transition-colors ${
+                          isActive ? "text-blue-400 font-bold" : "text-white/40"
+                        }`}>
+                          {proj.industry}
+                        </span>
+                        <h4 className={`text-sm font-bold tracking-tight truncate transition-colors ${
+                          isActive ? "text-white" : "text-white/75 group-hover:text-white"
+                        }`}>
+                          {proj.title}
+                        </h4>
+                      </div>
+                    </div>
+                    <ArrowRight className={`w-4 h-4 shrink-0 transition-all duration-300 ${
+                      isActive 
+                        ? "text-white translate-x-0.5 opacity-100" 
+                        : "text-white/20 opacity-0 group-hover:opacity-60 -translate-x-1 group-hover:translate-x-0"
+                    }`} />
+                  </button>
+                );
+              })}
             </div>
 
-            {/* Right: 4 Companion Projects (2x2 Compact Cards) */}
-            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {data.projects.slice(0, 4).map((proj, idx) => (
-                <Link 
-                  key={idx} 
-                  href={proj.href || "/projects"}
-                  className="group p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 flex flex-col justify-between hover:shadow-lg hover:-translate-y-0.5"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="px-2 py-0.5 rounded bg-white/10 text-[9px] font-mono font-bold uppercase tracking-wider text-white/80">
-                        {proj.industry}
-                      </span>
-                      <ArrowRight className="w-3.5 h-3.5 text-white/40 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
+            {/* Right: Live Interactive Exhibition Viewport (Stage Terminal) */}
+            <div className="lg:col-span-7">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-950 border border-white/15 shadow-2xl aspect-[16/10] sm:aspect-[16/9] flex flex-col justify-end">
+                {/* Background Image with Key Transition */}
+                <SafeImage 
+                  key={activeProject.img + activeProjectIdx}
+                  src={activeProject.img} 
+                  alt={activeProject.title} 
+                  className="w-full h-full object-cover opacity-60 transition-all duration-700" 
+                  containerClassName="w-full h-full absolute inset-0" 
+                />
+                
+                {/* Gradient Vignette */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/10" />
+
+                {/* Overlaid Info */}
+                <div className="relative z-10 p-5 sm:p-7">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white">
+                      {activeProject.industry} Installation
+                    </span>
+                    <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] text-white/80">
+                      <MapPin className="w-3 h-3 text-white/70" />
+                      <span>{activeProject.location}</span>
                     </div>
-                    <h4 className="text-sm font-bold text-white mb-1 tracking-tight group-hover:text-blue-300 transition-colors line-clamp-1">
-                      {proj.title}
-                    </h4>
-                    <p className="text-[11px] text-white/60 font-light leading-relaxed line-clamp-2">
-                      {proj.desc}
-                    </p>
                   </div>
-                  <div className="pt-2 mt-auto border-t border-white/5 flex items-center text-[10px] font-bold uppercase tracking-wider text-white/40 group-hover:text-white transition-colors">
-                    <span>Read Case Study</span>
+
+                  <h3 className="text-xl sm:text-2xl font-black text-white mb-1.5 leading-tight tracking-tight">
+                    {activeProject.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-white/80 font-light mb-3.5 max-w-xl leading-relaxed line-clamp-2">
+                    {activeProject.desc}
+                  </p>
+
+                  <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-white/15">
+                    <div className="flex flex-wrap gap-1.5">
+                      {activeProject.tech.slice(0, 3).map((t, idx) => (
+                        <span key={idx} className="px-2 py-0.5 rounded bg-white/10 text-[9px] font-mono text-white/80 border border-white/10">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                    <Link 
+                      href={activeProject.href || "/projects"} 
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-black hover:bg-gray-200 text-xs font-bold uppercase tracking-wider transition-all shadow-md active:scale-95"
+                    >
+                      <span>Explore Case Study</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
-                </Link>
-              ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
