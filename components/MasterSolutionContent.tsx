@@ -88,7 +88,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
     <div className="w-full bg-white text-black">
       
       {/* SECTION 01 - HERO BANNER */}
-      <section className="relative min-h-[75vh] py-32 flex items-center justify-center overflow-hidden bg-black text-white">
+      <section className="relative min-h-[75vh] py-16 lg:py-20 flex items-center justify-center overflow-hidden bg-black text-white">
         <div className="absolute inset-0 z-0">
           <SafeImage src={data.heroImg} alt={data.heroHeading} className="w-full h-full object-cover opacity-60 scale-105 animate-[slow-pan_20s_ease-in-out_infinite_alternate]" containerClassName="w-full h-full bg-black" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/80" />
@@ -154,8 +154,8 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 02 — WHAT IS THIS SOLUTION? */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
           
           {/* Image Side */}
           <motion.div 
@@ -165,7 +165,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             transition={{ duration: 0.8, ease: "easeOut" }}
             className={`relative w-full lg:w-1/2 ${isFlippedLayout ? "lg:order-2" : "lg:order-1"}`}
           >
-            <div className="relative aspect-square sm:aspect-[4/3] overflow-hidden w-full group">
+            <div className="relative aspect-[16/9] lg:aspect-[16/10] overflow-hidden w-full group">
               <SafeImage src={data.whatIsVideoPlaceholder} alt="Solution Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" containerClassName="w-full h-full" />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="w-24 h-24 rounded-full bg-black/10 backdrop-blur-xl flex items-center justify-center border border-white/20 transition-transform duration-500 group-hover:scale-110">
@@ -202,10 +202,10 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      <Divider />
+      
 
       {/* SECTION 03 — EXPERIENCE SHOWCASE */}
-      <section className="py-24 bg-gray-50/50">
+      <section className="py-16 lg:py-20 bg-gray-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="DISCOVER WHAT'S POSSIBLE"
@@ -259,9 +259,9 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 04 — KEY FEATURES */}
-      <section className="py-24 border-y border-black/10">
+      <section className="py-16 lg:py-20 border-y border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-8">
             <h2 className="text-black mb-4">
               Powerful Features.<br />Exceptional Experiences.
             </h2>
@@ -295,7 +295,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 05 — HOW IT WORKS */}
-      <section className="py-24 bg-black text-white overflow-hidden">
+      <section className="py-16 lg:py-20 bg-black text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionHeading
             label="INTELLIGENT TECHNOLOGY. INSTANT INTERACTION."
@@ -332,7 +332,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 06 — INDUSTRIES WE SERVE */}
-      <section className="py-24 bg-gray-50/50 border-b border-black/10">
+      <section className="py-16 lg:py-20 bg-gray-50/50 border-b border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="WHERE INNOVATION MEETS EVERY INDUSTRY"
@@ -399,7 +399,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 07/08 — TECHNOLOGY & BENEFITS */}
-      <section className="py-24">
+      <section className="py-16 lg:py-20">
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="relative w-full rounded-[3rem] overflow-hidden bg-black mb-12 group shadow-sm hover:shadow-2xl transition-shadow duration-700">
@@ -485,7 +485,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 09 — FEATURED PROJECTS */}
-      <section className="py-24 bg-black text-white">
+      <section className="py-16 lg:py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="REAL PROJECTS. REAL IMPACT."
@@ -551,7 +551,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </section>
 
       {/* SECTION 10 — FAQs */}
-      <section className="py-24 bg-gray-50/50 border-y border-black/10">
+      <section className="py-16 lg:py-20 bg-gray-50/50 border-y border-black/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="EVERYTHING YOU NEED TO KNOW"
