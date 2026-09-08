@@ -17,7 +17,7 @@ const blogs = [
     excerpt: "Explore how optical sensor tracking and projection mapping are revolutionizing interactive environments.",
     category: "Technology",
     date: "Aug 24, 2026",
-    img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2000&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     readTime: "6 min read"
   },
   {
@@ -27,7 +27,7 @@ const blogs = [
     excerpt: "Learn how generative AI avatars allow installations to respond naturally.",
     category: "AI & Innovation",
     date: "Aug 18, 2026",
-    img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=2000&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     readTime: "8 min read"
   },
   {
@@ -37,7 +37,7 @@ const blogs = [
     excerpt: "A comprehensive guide on evaluating throw distance, light, and sensors.",
     category: "Guide",
     date: "Aug 10, 2026",
-    img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=2000&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
     readTime: "5 min read"
   },
 ];

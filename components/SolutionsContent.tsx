@@ -14,7 +14,7 @@ const solutionsData = [
     badge: "Motion Projection • Floor & Wall",
     desc: "Transform everyday surfaces—floors, walls, tables, and windows—into responsive digital environments that encourage movement, participation, and discovery.",
     useCase: "Ideal for retail pop-ups, museum exhibits, and pediatric waiting rooms.",
-    img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     features: [
       "Interactive Motion Floors & Projection Walls",
       "Real-Time Body & Object Tracking Sensors",
@@ -30,7 +30,7 @@ const solutionsData = [
     badge: "360° Rooms • Projection Mapping",
     desc: "Create large-scale projection environments, 360-degree rooms, and architectural projection mapping that transport visitors into extraordinary narrative worlds.",
     useCase: "Ideal for theme parks, flagship showrooms, and digital art galleries.",
-    img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     features: [
       "Seamless Multi-Projector Edge Blending",
       "Spatial Surround Sound Integration",
@@ -46,7 +46,7 @@ const solutionsData = [
     badge: "AI Avatars • Real-Time Responses",
     desc: "Give your visitors a personalized, magical experience that adapts to them instantly. Our intelligent systems greet guests, respond to their movements, and create unique moments for everyone who walks by.",
     useCase: "Ideal for VIP lounges, innovative corporate lobbies, and interactive brand activations.",
-    img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     features: [
       "Interactive AI Avatars & Digital Concierges",
       "Generative Real-Time Particle & Visual Media",
@@ -62,7 +62,7 @@ const solutionsData = [
     badge: "Kiosks • Cloud CMS • Analytics",
     desc: "Drive longer dwell times and higher conversion rates with gamified touchpoints. Capture valuable audience insights while providing a fun, memorable brand interaction.",
     useCase: "Ideal for expo booths, retail gamification, and lead generation stations.",
-    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     features: [
       "Remote Content Management (Cloud CMS)",
       "Interactive Quiz & Product Showcase Kiosks",
@@ -155,7 +155,7 @@ export default function SolutionsContent() {
       <section className="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <SafeImage
-            src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1920&q=80"
+            src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg"
             alt="Interactive Solutions Hero"
             className="w-full h-full object-cover object-center"
             containerClassName="w-full h-full"

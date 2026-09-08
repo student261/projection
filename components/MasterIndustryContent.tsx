@@ -15,7 +15,7 @@ const industriesData = [
     slug: "education",
     badge: "Classrooms • STEM Labs • Libraries",
     desc: "Transform traditional classrooms into active, motion-responsive digital environments where students explore STEM, history, and physical science through active movement.",
-    img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=65&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     highlights: [
       "K-12 & Higher Education Interactive Projection",
       "Gamified STEM & Sensory Math Modules",
@@ -30,7 +30,7 @@ const industriesData = [
     slug: "museums-culture",
     badge: "Exhibits • Archives • Immersive Halls",
     desc: "Bring historical artifacts and digital archives to life with interactive displays, projection mapping, and immersive storytelling halls visitors can touch and explore.",
-    img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=65&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     highlights: [
       "Interactive Projection Walls for Historical Narratives",
       "Touchless Gallery Kiosks & Artifact Zooming",
@@ -45,7 +45,7 @@ const industriesData = [
     slug: "retail-showrooms",
     badge: "Storefronts • Pop-Ups • Experience Centers",
     desc: "Captivate shoppers and increase foot traffic with interactive motion floors, digital storefront windows, and immersive product try-on projection spaces.",
-    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=65&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     highlights: [
       "Motion Interactive Storefront Displays",
       "Brand Activation & Seasonal Pop-Up Floors",
@@ -60,7 +60,7 @@ const industriesData = [
     slug: "healthcare",
     badge: "Pediatrics • Sensory Rooms • Waiting Areas",
     desc: "Create comforting, calming, and sensory-stimulating environments for pediatric wards, rehabilitation centers, and therapy spaces.",
-    img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=65&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     highlights: [
       "Calming Sensory Therapy Floor Projection",
       "Motor-Skill Rehabilitation & Movement Tracking",
@@ -75,7 +75,7 @@ const industriesData = [
     slug: "entertainment",
     badge: "Theme Parks • Arenas • FEC Centers",
     desc: "Build unforgettable attractions with interactive projection arenas, immersive escape rooms, and multiplayer motion gaming zones.",
-    img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=65&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     highlights: [
       "Multiplayer Motion Projection Games",
       "Immersive 360° Attraction Rooms",
@@ -90,7 +90,7 @@ const industriesData = [
     slug: "corporate",
     badge: "Lobbies • Executive Centers • Briefing Rooms",
     desc: "Modernize corporate headquarters and executive briefing rooms with branded interactive lobby installations and AI experience walls.",
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=65&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     highlights: [
       "Architectural Motion Lobby Installations",
       "Interactive Digital Executive Briefing Walls",
@@ -105,7 +105,7 @@ const industriesData = [
     slug: "hospitality",
     badge: "Hotels • Resorts • Atriums & Lounges",
     desc: "Give guests memorable entrance experiences with ambient interactive projection displays in hotel atriums, resort pathways, and luxury lounges.",
-    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=65&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     highlights: [
       "Ambient Atrium Interactive Projections",
       "Luxury Hotel Lobby Water & Floral Visuals",
@@ -120,7 +120,7 @@ const industriesData = [
     slug: "public-spaces",
     badge: "Airports • Plazas • Transit Hubs",
     desc: "Bring interactive projection art and dynamic wayfinding to airport concourses, public plazas, civic venues, and transit terminals.",
-    img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=65&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     highlights: [
       "High-Traffic Transit Concourse Floor Mapping",
       "Interactive Public Art Installations",

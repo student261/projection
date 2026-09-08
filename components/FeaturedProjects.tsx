@@ -13,7 +13,7 @@ const projects = [
     category: "360° Heritage Mapping",
     location: "Montreal / Paris",
     desc: "An architectural projection mapping masterpiece transforming historic stone sanctuaries with responsive light & sound.",
-    img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=75&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     href: "/projects/aura-digital-cathedral",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     category: "Interactive Spaces",
     location: "Manhattan, New York",
     desc: "An interactive high-altitude observation floor responding to visitor footsteps 1,100 feet in the air.",
-    img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=75&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/MomentFactory_HudsonYardsEdge-JE-124.png",
     href: "/projects/edge-nyc-horizon-portal",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     category: "Interactive Museum",
     location: "Global Ocean Pavilion",
     desc: "A 360-degree reactive ocean floor projection reacting dynamically to marine biodiversity interaction.",
-    img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=75&fm=webp",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-188_1_-WS.jpg",
     href: "/projects/biosphere-ocean-experience",
   },
 ];

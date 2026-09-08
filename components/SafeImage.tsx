@@ -10,7 +10,7 @@ interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 }
 
 const DEFAULT_FALLBACK =
-  "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=75&fm=webp";
+  "https://momentfactory.com/cdn/shop/files/KarelChladek-5286-WS.jpg";
 
 export default function SafeImage({
   src,

@@ -5,32 +5,32 @@ import SafeImage from "@/components/SafeImage";
 const clientLogos = [
   {
     name: "National Geographic",
-    src: "https://images.unsplash.com/photo-1542744094-3a3121699499?auto=format&fit=crop&w=400&q=80",
+    src: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     tag: "Museum & Media",
   },
   {
     name: "Futuroscope",
-    src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80",
+    src: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     tag: "Interactive Venue",
   },
   {
     name: "Hudson Yards",
-    src: "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=400&q=80",
+    src: "https://momentfactory.com/cdn/shop/files/6D9A8671-WS.jpg",
     tag: "Architectural Space",
   },
   {
     name: "Sphere Residency",
-    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=400&q=80",
+    src: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_IMG_0457-Modifier-WS.jpg",
     tag: "Immersive Dome",
   },
   {
     name: "Changi Airport",
-    src: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=400&q=80",
+    src: "https://momentfactory.com/cdn/shop/files/Moment-Factory-Changi_Airports_Terminal_4_Theatre_of_experience-7-WS.jpg",
     tag: "Spatial Terminal",
   },
   {
     name: "Real Madrid Games",
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80",
+    src: "https://momentfactory.com/cdn/shop/files/AuraInvalides_MomentFactory_MouvementIII_HD-WS.jpg",
     tag: "Brand Activation",
   },
 ];

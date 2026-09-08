@@ -460,7 +460,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
             {/* Case Study Card 2 */}
             <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
               <div className="relative aspect-[16/9] overflow-hidden bg-black">
-                <SafeImage src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Case Study 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] opacity-80" containerClassName="w-full h-full" />
+                <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg" alt="Case Study 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] opacity-80" containerClassName="w-full h-full" />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
                   Case Study
                 </div>
@@ -477,7 +477,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
             {/* Case Study Card 3 */}
             <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
               <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
-                <SafeImage src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80" alt="Case Study 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" containerClassName="w-full h-full" />
+                <SafeImage src="https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png" alt="Case Study 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" containerClassName="w-full h-full" />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
                   Case Study
                 </div>

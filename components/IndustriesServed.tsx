@@ -24,7 +24,7 @@ const industries = [
     title: "Education",
     description: "Make learning more active with interactive classrooms, digital activities, and movement-based experiences.",
     href: "/industries/education",
-    img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_Space_Center_Houston_Lunar_Obstacle_Run_3-WS.png",
   },
   {
     id: "healthcare",
@@ -32,7 +32,7 @@ const industries = [
     title: "Healthcare",
     description: "Help patients stay engaged with interactive activities that support rehabilitation, movement, and better waiting-room experiences.",
     href: "/industries/healthcare",
-    img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS.jpg",
   },
   {
     id: "retail",
@@ -40,7 +40,7 @@ const industries = [
     title: "Retail",
     description: "Make store visits more engaging with interactive displays, digital content, and experiences that bring customers closer to your brand.",
     href: "/industries/retail-showrooms",
-    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_2_2a04207c-cf51-4e71-92ca-cbe58683722a.jpg",
   },
   {
     id: "museums",
@@ -48,7 +48,7 @@ const industries = [
     title: "Museums & Exhibitions",
     description: "Turn exhibits into experiences where visitors can interact with stories, information, and digital content.",
     href: "/industries/museums-culture",
-    img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
   },
   {
     id: "entertainment",
@@ -56,7 +56,7 @@ const industries = [
     title: "Entertainment",
     description: "Build exciting attractions with interactive games, projection technology, and experiences people want to come back to.",
     href: "/industries/entertainment",
-    img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
   },
   {
     id: "hospitality",
@@ -64,7 +64,7 @@ const industries = [
     title: "Hospitality",
     description: "Give guests something memorable with interactive displays and digital experiences across hotels, resorts, and other hospitality spaces.",
     href: "/industries/hospitality",
-    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/MomentFactoryMagicCircusFixesHD-0013-WS.jpg",
   },
   {
     id: "corporate",
@@ -72,7 +72,7 @@ const industries = [
     title: "Corporate",
     description: "Make offices, meeting spaces, and experience centers more engaging with interactive technology.",
     href: "/industries/corporate",
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/6D9A8671-WS.jpg",
   },
   {
     id: "public-spaces",
@@ -80,7 +80,7 @@ const industries = [
     title: "Public Spaces",
     description: "Bring interactive experiences to airports, malls, parks, community spaces, and other public venues.",
     href: "/industries/public-spaces",
-    img: "https://images.unsplash.com/photo-1473445730015-841f29a949ce?auto=format&fit=crop&w=1200&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/Moment-Factory-Changi_Airports_Terminal_4_Theatre_of_experience-7-WS.jpg",
   },
 ];
 

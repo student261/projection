@@ -12,7 +12,7 @@ const BLOG_DATA: Record<string, any> = {
     category: "Technology",
     date: "August 24, 2026",
     readTime: "6 min read",
-    heroImg: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2000&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     content: (
       <>
         <p className="lead">
@@ -44,7 +44,7 @@ const BLOG_DATA: Record<string, any> = {
     category: "AI & Innovation",
     date: "August 18, 2026",
     readTime: "8 min read",
-    heroImg: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=2000&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
     content: (
       <>
         <p className="lead">
@@ -73,7 +73,7 @@ const BLOG_DATA: Record<string, any> = {
     category: "Guide",
     date: "August 10, 2026",
     readTime: "5 min read",
-    heroImg: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=2000&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
     content: (
       <>
         <p className="lead">
@@ -178,7 +178,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-[11px] uppercase tracking-widest text-black/60 font-bold">
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded-full overflow-hidden bg-black/10">
-                <SafeImage src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Author" className="w-full h-full object-cover" />
+                <SafeImage src="https://momentfactory.com/cdn/shop/files/preview_images/b59ef5b9f49b4ef08d01cf4c431aec6e.thumbnail.0000000000_500x.jpg" alt="Author" className="w-full h-full object-cover" />
               </div>
               <span className="text-black">Dr. Elena Rostova</span>
             </div>

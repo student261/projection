@@ -14,7 +14,7 @@ const blogs = [
     category: "INTERACTIVE TECH",
     date: "AUG 2026",
     readTime: "5 MIN READ",
-    img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=75",
+    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg",
   },
   {
     id: "ai-redefining-experiences",
@@ -24,7 +24,7 @@ const blogs = [
     category: "ARTIFICIAL INTELLIGENCE",
     date: "AUG 2026",
     readTime: "6 MIN READ",
-    img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=75",
+    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png",
   },
   {
     id: "choosing-right-solution",
@@ -34,7 +34,7 @@ const blogs = [
     category: "BUYER'S GUIDE",
     date: "AUG 2026",
     readTime: "4 MIN READ",
-    img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=75",
+    img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg",
   },
 ];
 

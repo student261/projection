@@ -258,7 +258,7 @@ export default function EducationIndustryPage() {
             {/* 1. Interactive Floor */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
-                <SafeImage src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" alt="Interactive Floor" className="w-full h-full object-cover" containerClassName="w-full h-full" />
+                <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_Space_Center_Houston_Lunar_Obstacle_Run_3-WS.png" alt="Interactive Floor" className="w-full h-full object-cover" containerClassName="w-full h-full" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-8 left-8 text-white font-bold tracking-widest text-xs uppercase px-4 py-2 bg-black/40 backdrop-blur-md rounded-full">Floor Projection</div>
               </div>
@@ -308,13 +308,13 @@ export default function EducationIndustryPage() {
                   <h4 className="text-sm font-bold uppercase tracking-widest text-black mb-4">Visual Examples</h4>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="rounded-xl overflow-hidden shadow-md aspect-video relative group">
-                      <SafeImage src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80" alt="STEM Lab" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" containerClassName="w-full h-full" />
+                      <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-094_1_-WS.jpg" alt="STEM Lab" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" containerClassName="w-full h-full" />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <span className="text-white text-xs font-bold uppercase tracking-widest">STEM Robotics</span>
                       </div>
                     </div>
                     <div className="rounded-xl overflow-hidden shadow-md aspect-video relative group">
-                      <SafeImage src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Science Wall" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" containerClassName="w-full h-full" />
+                      <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS.jpg" alt="Science Wall" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" containerClassName="w-full h-full" />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <span className="text-white text-xs font-bold uppercase tracking-widest">Physics Sims</span>
                       </div>
@@ -326,7 +326,7 @@ export default function EducationIndustryPage() {
                 </Link>
               </div>
               <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl order-1 lg:order-2">
-                <SafeImage src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80" alt="Interactive Wall" className="w-full h-full object-cover" containerClassName="w-full h-full" />
+                <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_263-WS.jpg" alt="Interactive Wall" className="w-full h-full object-cover" containerClassName="w-full h-full" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-8 left-8 text-white font-bold tracking-widest text-xs uppercase px-4 py-2 bg-black/40 backdrop-blur-md rounded-full">Wall Projection</div>
               </div>
@@ -335,7 +335,7 @@ export default function EducationIndustryPage() {
             {/* 3. Motion Games */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
-                <SafeImage src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=1200&q=80" alt="Motion Games" className="w-full h-full object-cover" containerClassName="w-full h-full" />
+                <SafeImage src="https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg" alt="Motion Games" className="w-full h-full object-cover" containerClassName="w-full h-full" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-8 left-8 text-white font-bold tracking-widest text-xs uppercase px-4 py-2 bg-black/40 backdrop-blur-md rounded-full">Motion Tracking</div>
               </div>
@@ -588,7 +588,7 @@ export default function EducationIndustryPage() {
             {/* Case Study Card 2 */}
             <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
               <div className="relative aspect-[4/3] overflow-hidden bg-black">
-                <SafeImage src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Case Study 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] opacity-80" containerClassName="w-full h-full" />
+                <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg" alt="Case Study 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] opacity-80" containerClassName="w-full h-full" />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
                   Case Study
                 </div>
@@ -605,7 +605,7 @@ export default function EducationIndustryPage() {
             {/* Case Study Card 3 */}
             <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
               <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                <SafeImage src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80" alt="Case Study 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" containerClassName="w-full h-full" />
+                <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg" alt="Case Study 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" containerClassName="w-full h-full" />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
                   Case Study
                 </div>
@@ -642,7 +642,7 @@ export default function EducationIndustryPage() {
 
       <section className="relative py-32 overflow-hidden bg-black text-white">
         <div className="absolute inset-0 z-0">
-          <SafeImage src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80" alt="CTA Background" className="w-full h-full object-cover opacity-30" containerClassName="w-full h-full" />
+          <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg" alt="CTA Background" className="w-full h-full object-cover opacity-30" containerClassName="w-full h-full" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8">

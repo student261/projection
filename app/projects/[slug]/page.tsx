@@ -35,7 +35,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "Architectural 360° Projection Mapping & Spatial Audio",
     industry: "Museums & Culture",
     industryHref: "/industries/museums-culture",
-    heroImg: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview:
       "An architectural light & sound masterpiece transforming historic stone sanctuaries into immersive digital canvases that respond to ambient acoustics and visitor positioning.",
     challenge:
@@ -56,9 +56,9 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       { metric: "4.9 / 5", description: "Visitor satisfaction & review score" },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     ],
     relatedSolutions: [
       { title: "Projection Mapping", href: "/solutions#immersive" },
@@ -79,7 +79,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "High-Altitude Motion Interactive Floor Installation",
     industry: "Public Spaces",
     industryHref: "/industries/public-spaces",
-    heroImg: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview:
       "An interactive observation floor 1,100 feet above Manhattan that responds to footsteps with simulated glass fractures, atmospheric weather patterns, and NYC cityscape history.",
     challenge:
@@ -100,9 +100,9 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       { metric: "500K+", description: "Social media video impressions" },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     ],
     relatedSolutions: [
       { title: "Interactive Floor & Wall", href: "/solutions#interactive" },
@@ -123,7 +123,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "Interactive Museum Floor & 360° Marine Canvas",
     industry: "Museums & Culture",
     industryHref: "/industries/museums-culture",
-    heroImg: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview:
       "A 360-degree reactive ocean floor projection reacting dynamically to marine biodiversity interaction and visitor presence.",
     challenge:
@@ -144,8 +144,8 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       { metric: "98%", description: "Visitor satisfaction rating" },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     ],
     relatedSolutions: [
       { title: "Interactive Spaces", href: "/solutions#interactive" },
@@ -166,7 +166,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "Outdoor Forest Projection Mapping & Spatial Experience",
     industry: "Entertainment",
     industryHref: "/industries/entertainment",
-    heroImg: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview:
       "A 2.4 km nighttime outdoor illuminated trail featuring motion-tracked projection mapping onto natural forest foliage, waterfalls, and rock faces.",
     challenge:
@@ -187,8 +187,8 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       { metric: "IP66", description: "All-weather continuous reliability" },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     ],
     relatedSolutions: [
       { title: "Immersive Environments", href: "/solutions#immersive" },
@@ -209,7 +209,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "Computer Vision & AI Avatar Chamber",
     industry: "Corporate & Tech",
     industryHref: "/industries/corporate",
-    heroImg: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview:
       "A real-time generative AI mirror chamber reacting to visitor movement, voice, and facial gestures with dynamic digital avatars.",
     challenge:
@@ -230,8 +230,8 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       { metric: "4.9", description: "User experience rating score" },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     ],
     relatedSolutions: [
       { title: "AI Experiences", href: "/solutions#ai" },
@@ -252,7 +252,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "Gamified Touch & Motion Projection Wall",
     industry: "Retail & Showrooms",
     industryHref: "/industries/retail-showrooms",
-    heroImg: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview:
       "A multi-touch interactive projection wall built for luxury nightlife, retail flagships, and brand activations.",
     challenge:
@@ -271,7 +271,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       { metric: "10K+", description: "Daily touch interactions" },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     ],
     relatedSolutions: [
       { title: "Interactive Spaces", href: "/solutions#interactive" },
@@ -290,7 +290,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "360° Architectural Fulldome Environment",
     industry: "Museums & Culture",
     industryHref: "/industries/museums-culture",
-    heroImg: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview:
       "A giant architectural dome projection environment simulating interstellar journeys with spatial audio.",
     challenge:
@@ -308,7 +308,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       { metric: "16x", description: "4K Laser projector array" },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     ],
     relatedSolutions: [
       { title: "Immersive Rooms", href: "/solutions#immersive" },
@@ -327,7 +327,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "LED & Projection Sensory Tunnel",
     industry: "Public Spaces",
     industryHref: "/industries/public-spaces",
-    heroImg: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview:
       "A walk-through sensory tunnel using synchronized projection and optical mirror reflection geometry.",
     challenge: "Creating seamless mirror infinity reflections in high-traffic public concourses.",
@@ -335,7 +335,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     techUsed: ["Mirror Geometry Mapping", "Synchronized LED & Projection Array"],
     experienceDetails: "Pedestrians walking through the tunnel trigger infinite light refraction corridors.",
     results: [{ metric: "1M+", description: "Annual public pedestrians" }],
-    gallery: ["https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80"],
+    gallery: ["https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg"],
     relatedSolutions: [{ title: "Interactive Spaces", href: "/solutions#interactive" }],
     relatedIndustries: [{ title: "Public Spaces", href: "/industries/public-spaces" }],
     nextProject: { title: "Chrono Echoes Artifact Wall", href: "/projects/chrono-echoes-artifact-wall" },
@@ -346,14 +346,14 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "Interactive Heritage Display",
     industry: "Museums & Culture",
     industryHref: "/industries/museums-culture",
-    heroImg: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview: "Historical artifact display coming to life when visitors approach, revealing hidden historical layers.",
     challenge: "Protecting rare physical artifacts while illuminating fine visual details.",
     approach: "We used low-UV directional micro-projection with proximity sensors.",
     techUsed: ["Low-UV Preservation Projection", "Proximity Infrared Radar"],
     experienceDetails: "As visitors approach glass artifact cases, historical digital layers animate softly behind the objects.",
     results: [{ metric: "100%", description: "Artifact preservation compliance" }],
-    gallery: ["https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80"],
+    gallery: ["https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg"],
     relatedSolutions: [{ title: "Projection Mapping", href: "/solutions#immersive" }],
     relatedIndustries: [{ title: "Museums & Culture", href: "/industries/museums-culture" }],
     nextProject: { title: "Sensory Interactive Therapy Room", href: "/projects/sensory-interactive-therapy-room" },
@@ -364,14 +364,14 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     experienceType: "Calming Motion Floor & Pediatric Rehabilitation System",
     industry: "Healthcare",
     industryHref: "/industries/healthcare",
-    heroImg: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview: "A therapeutic motion projection room engineered for pediatric rehabilitation, motor skill improvement, and sensory decompression in medical centers.",
     challenge: "Creating a 100% hygienic, easy to sanitize, and soothing environment for children.",
     approach: "We utilized contactless floor motion projection with gentle ambient soundscapes.",
     techUsed: ["Contactless Motion Tracking", "Spatial Calming Sound Pods"],
     experienceDetails: "Patients engage in gentle stepping and balance games on a soft projected floor canvas.",
     results: [{ metric: "100%", description: "Hygienic touchless technology" }],
-    gallery: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"],
+    gallery: ["https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg"],
     relatedSolutions: [{ title: "Interactive Spaces", href: "/solutions#interactive" }],
     relatedIndustries: [{ title: "Healthcare", href: "/industries/healthcare" }],
     nextProject: { title: "AURA Sanctuary Projection", href: "/projects/aura-digital-cathedral" },
@@ -402,7 +402,7 @@ function getProjectData(slug: string): CaseStudyData {
     experienceType: "Spatial Motion Projection & Interactive Installation",
     industry: "Commercial Architecture",
     industryHref: "/industries",
-    heroImg: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80",
+    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     overview:
       `A custom interactive installation deployed at ${formattedTitle}, combining optical tracking, high-lumen projection mapping, and real-time spatial content.`,
     challenge:
@@ -423,9 +423,9 @@ function getProjectData(slug: string): CaseStudyData {
       { metric: "Multi-User", description: "Simultaneous spatial tracking" },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+      "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
     ],
     relatedSolutions: [
       { title: "Interactive Spaces", href: "/solutions#interactive" },
@@ -560,7 +560,7 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
 
         {/* The Interactive Transformation Slider */}
         <BeforeAfterSlider 
-          beforeImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" // Placeholder for an empty space
+          beforeImage="https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg" // Placeholder for an empty space
           afterImage={project.heroImg} 
         />
 

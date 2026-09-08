@@ -13,7 +13,7 @@ const categories = [
     desc: "Turn ordinary floors and walls into responsive digital canvases.",
     icon: <Layers className="w-6 h-6" />,
     href: "/solutions/interactive-spaces",
-    img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
   },
   {
     id: "immersive-environment",
@@ -21,7 +21,7 @@ const categories = [
     desc: "Create breathtaking 360° projection mapped rooms.",
     icon: <Expand className="w-6 h-6" />,
     href: "/solutions/immersive-environment",
-    img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
   },
   {
     id: "ai-experience",
@@ -29,7 +29,7 @@ const categories = [
     desc: "Integrate computer vision and generative avatars.",
     icon: <Cpu className="w-6 h-6" />,
     href: "/solutions/ai-experience",
-    img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
   },
   {
     id: "solution-engagement",
@@ -37,7 +37,7 @@ const categories = [
     desc: "Deploy interactive kiosks and motion games at scale.",
     icon: <Gamepad2 className="w-6 h-6" />,
     href: "/solutions/solution-engagement",
-    img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
+    img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
   }
 ];
 
@@ -49,7 +49,7 @@ const solutions = [
     title: "Interactive Floors & Walls",
     description:
       "Physical surfaces that respond directly to human movement. As visitors walk across floors or gesture near walls, real-time visual patterns and soundscapes react beneath their feet.",
-    img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1400&q=85",
+    img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
     caption: "Motion tracking floor installation in a modern exhibition room",
     href: "/solutions#interactive",
     highlights: [
@@ -65,7 +65,7 @@ const solutions = [
     title: "360° Immersive Rooms",
     description:
       "Full-room projections that envelope entire galleries, lobbies, and event spaces. Seamless multi-projector edge blending transforms physical architecture into fluid digital environments.",
-    img: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1400&q=85",
+    img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
     caption: "360° projection mapping gallery with spatial surround sound",
     href: "/solutions#immersive",
     highlights: [
@@ -81,7 +81,7 @@ const solutions = [
     title: "AI Interactive Displays",
     description:
       "Installations that observe and adapt. Using computer vision and generative systems, the experience evolves live based on audience positioning, crowd flow, and movement.",
-    img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400&q=85",
+    img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
     caption: "Generative AI visual engine reacting to audience movement",
     href: "/solutions#ai",
     highlights: [
@@ -97,7 +97,7 @@ const solutions = [
     title: "Smart Engagement Hubs",
     description:
       "Interactive mini-games and branded activations designed for retail, expos, and public venues. Effortlessly switch games, seasonal themes, and sponsor visuals through our web portal.",
-    img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=85",
+    img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
     caption: "Smart gamified interaction kiosk with cloud CMS management",
     href: "/solutions#smart",
     highlights: [

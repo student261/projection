@@ -45,7 +45,7 @@ const DEFAULT_INDUSTRY_PREVIEW: MegamenuPreview = {
   title: "Industry Showcase",
   desc: "Explore all targeted architectural sectors.",
   href: "/industries",
-  img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80",
+  img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
 };
 
 export default function Navbar() {
@@ -492,7 +492,7 @@ export default function Navbar() {
                           title: "Storefront Activations",
                           desc: "Interactive window projections & touchless product showcases boosting store foot-traffic.",
                           href: "/industries/retail-showrooms",
-                          img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80",
+                          img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
                         })
                       }
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
@@ -519,7 +519,7 @@ export default function Navbar() {
                           title: "Interactive Classrooms",
                           desc: "Active movement-based projection floors for collaborative STEM labs & schools.",
                           href: "/industries/education",
-                          img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
+                          img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
                         })
                       }
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
@@ -546,7 +546,7 @@ export default function Navbar() {
                           title: "Therapeutic Sensory Rooms",
                           desc: "Pediatric rehabilitation & sensory decompression rooms with soothing motion floor projection.",
                           href: "/industries/healthcare",
-                          img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+                          img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
                         })
                       }
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
@@ -573,7 +573,7 @@ export default function Navbar() {
                           title: "Cultural Installations",
                           desc: "Architectural light mapping, cathedral projection, and 360-degree exhibit tunnels.",
                           href: "/industries/museums-culture",
-                          img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80",
+                          img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
                         })
                       }
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"

@@ -39,7 +39,7 @@ export default function Hero() {
             muted
             playsInline
             // A high-quality placeholder image of an immersive room
-            poster="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80"
+            poster="https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png"
             className="w-full h-full object-cover object-center opacity-90 filter brightness-[1.08] contrast-[1.12] saturate-[1.15]"
           >
             {/* TODO: Replace with final cinematic video showing all 9 product experiences */}

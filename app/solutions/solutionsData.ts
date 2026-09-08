@@ -31,10 +31,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
       img: "https://momentfactory.com/cdn/shop/files/TLJ00185-DxO_DeepPRIMEXD3.png"
     },
     experienceCards: [
-      { category: "Museums & Culture", title: "Living Natural Biomes", desc: "Interactive flora and fauna that react, bloom, and scatter as visitors walk.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Retail Flagships", title: "Footfall-Activated Catalogs", desc: "Dynamic light footprints illuminating shoes and luxury products as customers step near.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" },
-      { category: "Healthcare & Wellness", title: "Pediatric Distraction Floors", desc: "Gentle aquatic animations reducing stress and anxiety in hospital waiting zones.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" },
-      { category: "Public Atriums", title: "Generative Ripple Canopy", desc: "Connecting floor footsteps with overhead ceiling visual acoustics in real-time.", img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80" }
+      { category: "Museums & Culture", title: "Living Natural Biomes", desc: "Interactive flora and fauna that react, bloom, and scatter as visitors walk.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg" },
+      { category: "Retail Flagships", title: "Footfall-Activated Catalogs", desc: "Dynamic light footprints illuminating shoes and luxury products as customers step near.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg" },
+      { category: "Healthcare & Wellness", title: "Pediatric Distraction Floors", desc: "Gentle aquatic animations reducing stress and anxiety in hospital waiting zones.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg" },
+      { category: "Public Atriums", title: "Generative Ripple Canopy", desc: "Connecting floor footsteps with overhead ceiling visual acoustics in real-time.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg" }
     ],
 
     featuresHeading: "Hardware Precision & System Architecture",
@@ -60,11 +60,11 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
     industriesHeading: "Architectural Environments We Transform",
     industriesIntro: "Engineered for high-traffic environments where captivating physical engagement is essential.",
-    featuredIndustry: { title: "Education", desc: "Immersive classrooms driving kinesthetic learning through active physical gameplay.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80", href: "/industries/education" },
+    featuredIndustry: { title: "Education", desc: "Immersive classrooms driving kinesthetic learning through active physical gameplay.", img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png", href: "/industries/education" },
     industryCards: [
-      { title: "Museums & Culture", desc: "Engaging exhibits that encourage tactile exploration of history and science.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
-      { title: "Retail & Showrooms", desc: "Turn store floor space into interactive branded product showcases.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Healthcare", desc: "Therapeutic spaces that foster movement and comfort young patients.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80", href: "/industries/healthcare" }
+      { title: "Museums & Culture", desc: "Engaging exhibits that encourage tactile exploration of history and science.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg", href: "/industries/museums-culture" },
+      { title: "Retail & Showrooms", desc: "Turn store floor space into interactive branded product showcases.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Digital_Art_Experience_Mirror_Mirror_08-WS_grande.jpg", href: "/industries/retail-showrooms" },
+      { title: "Healthcare", desc: "Therapeutic spaces that foster movement and comfort young patients.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_Content_A01cropEN-WS_grande.jpg", href: "/industries/healthcare" }
     ],
 
     outcomesHeading: "Tangible Engagement Metrics & ROI",
@@ -91,9 +91,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Museum", title: "Living Wetland Ecosystem", desc: "Floor projection reacting to visitor footsteps with fish and lily pads.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Brand_Activations___Events_GTAA_Interactive_Installation-045A9050-WS.jpg", href: "/projects" },
-      { industry: "Retail", title: "Luxury Sneaker Portal", desc: "Interactive floor illuminating shoe specifications when walked upon.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Healthcare", title: "Pediatric Wellness Garden", desc: "Calming interactive light paths in main hospital atrium.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Corporate", title: "Dynamic Brand Welcome Matrix", desc: "Sensory floor welcoming VIPs with generative graphics.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Retail", title: "Luxury Sneaker Portal", desc: "Interactive floor illuminating shoe specifications when walked upon.", img: "https://momentfactory.com/cdn/shop/files/6D9A8373-WS_grande.jpg", href: "/projects" },
+      { industry: "Healthcare", title: "Pediatric Wellness Garden", desc: "Calming interactive light paths in main hospital atrium.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS_f78d8835-6aee-47ec-a644-ffcaa1498420_grande.jpg", href: "/projects" },
+      { industry: "Corporate", title: "Dynamic Brand Welcome Matrix", desc: "Sensory floor welcoming VIPs with generative graphics.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding architectural requirements, ceiling heights, and day-to-day operation.",
@@ -136,9 +136,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Nature & Zen", title: "Koi Pond & Water Lilies", desc: "Gentle water ripples follow every step as virtual koi fish swim around feet.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_Igloofest_6U2A1878-6-WS_grande.jpg" },
-      { category: "Music & Art", title: "Giant Foot Piano", desc: "Step on illuminated piano keys to compose symphonies with synchronized lighting.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" },
-      { category: "Retail", title: "Autumn Leaves & Snow Particles", desc: "Kick through virtual fallen leaves or fresh snow to reveal promotional discount codes.", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" },
-      { category: "Edutainment", title: "Math & Solar System Hopscotch", desc: "Children learn planets and arithmetic through active physical jumping games.", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" }
+      { category: "Music & Art", title: "Giant Foot Piano", desc: "Step on illuminated piano keys to compose symphonies with synchronized lighting.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_021-WS_grande.jpg" },
+      { category: "Retail", title: "Autumn Leaves & Snow Particles", desc: "Kick through virtual fallen leaves or fresh snow to reveal promotional discount codes.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS_grande.jpg" },
+      { category: "Edutainment", title: "Math & Solar System Hopscotch", desc: "Children learn planets and arithmetic through active physical jumping games.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_S_lection_Aquascope-0053-WS_grande.jpg" }
     ],
 
     featuresHeading: "Floor Tracking Engine & Optical Specs",
@@ -166,9 +166,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "Proven impact across family entertainment centers, retail malls, pediatric clinics, and school halls.",
     featuredIndustry: { title: "Family Entertainment Centers", desc: "High-energy games that keep children engaged for hours.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS.jpg", href: "/industries/entertainment" },
     industryCards: [
-      { title: "Shopping Malls & Retail", desc: "Draw foot traffic into central atriums with joyful interactive attractions.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Schools & Kindergartens", desc: "Physical exercise combined with interactive cognitive learning.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80", href: "/industries/education" },
-      { title: "Museums & Exhibitions", desc: "Engaging walk-through pathways that educate through play.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" }
+      { title: "Shopping Malls & Retail", desc: "Draw foot traffic into central atriums with joyful interactive attractions.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg", href: "/industries/retail-showrooms" },
+      { title: "Schools & Kindergartens", desc: "Physical exercise combined with interactive cognitive learning.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-194_1_-WS_6c13662d-803d-4e82-b270-fba8c784ddfc_grande.jpg", href: "/industries/education" },
+      { title: "Museums & Exhibitions", desc: "Engaging walk-through pathways that educate through play.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg", href: "/industries/museums-culture" }
     ],
 
     outcomesHeading: "Floor Installation Benefits & Impact",
@@ -195,9 +195,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Education", title: "Primary School Active Gym", desc: "Interactive floor integrated into physical education curriculum.", img: "https://momentfactory.com/cdn/shop/files/preview_images/59e5a9bee82940d1ae2553c0755fc2a8.thumbnail.0000000000_500x.jpg", href: "/projects" },
-      { industry: "Retail", title: "Sporting Goods Shoe Test Track", desc: "Floor that tests agility and measures foot speed.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Healthcare", title: "Children's Clinic Waiting Oasis", desc: "Calming interactive light pond in main lobby.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Museum", title: "Prehistoric Walkway", desc: "Walk on digital lava and ancient fossils.", img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Retail", title: "Sporting Goods Shoe Test Track", desc: "Floor that tests agility and measures foot speed.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg", href: "/projects" },
+      { industry: "Healthcare", title: "Children's Clinic Waiting Oasis", desc: "Calming interactive light pond in main lobby.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg", href: "/projects" },
+      { industry: "Museum", title: "Prehistoric Walkway", desc: "Walk on digital lava and ancient fossils.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding interactive floor installation and operation.",
@@ -240,9 +240,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Corporate Briefing", title: "Executive Interactive Timeline", desc: "Touch milestones across a company's century of innovation to expand video case studies.", img: "https://momentfactory.com/cdn/shop/files/CF-Laval_Moment-Factory_Butterflies_05-WS_grande.jpg" },
-      { category: "Museums", title: "Tactile Living Artifacts", desc: "Touch ancient artifacts projected on museum walls to rotate 3D models and hear audio.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" },
-      { category: "Brand Flagships", title: "Generative Living Floral Wall", desc: "Standing in front of the wall causes virtual vines and exotic blossoms to grow around your silhouette.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" },
-      { category: "Education", title: "Collaborative Science Sandbox", desc: "Multiple students manipulate chemical elements and gravity simulations side-by-side.", img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80" }
+      { category: "Museums", title: "Tactile Living Artifacts", desc: "Touch ancient artifacts projected on museum walls to rotate 3D models and hear audio.", img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png" },
+      { category: "Brand Flagships", title: "Generative Living Floral Wall", desc: "Standing in front of the wall causes virtual vines and exotic blossoms to grow around your silhouette.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg" },
+      { category: "Education", title: "Collaborative Science Sandbox", desc: "Multiple students manipulate chemical elements and gravity simulations side-by-side.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Digital_Art_Experience_Mirror_Mirror_08-WS_grande.jpg" }
     ],
 
     featuresHeading: "Wall Sensor Mechanics & Laser Calibration",
@@ -270,9 +270,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "High-value applications across corporate briefing centers, universities, and brand exhibits.",
     featuredIndustry: { title: "Corporate Briefing Centers", desc: "Impress clients with dynamic executive timelines and strategy pitch walls.", img: "https://momentfactory.com/cdn/shop/files/CF-Laval_Moment-Factory_Butterflies_03-WS.jpg", href: "/industries/corporate" },
     industryCards: [
-      { title: "Museums & Cultural Centers", desc: "Interactive history walls that make archives accessible to the public.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
-      { title: "Automotive & Retail Showrooms", desc: "Full-scale vehicle configurators and interactive product walls.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Universities & Research", desc: "Collaborative brainstorming and data visualization rooms.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80", href: "/industries/education" }
+      { title: "Museums & Cultural Centers", desc: "Interactive history walls that make archives accessible to the public.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_Content_A01cropEN-WS_grande.jpg", href: "/industries/museums-culture" },
+      { title: "Automotive & Retail Showrooms", desc: "Full-scale vehicle configurators and interactive product walls.", img: "https://momentfactory.com/cdn/shop/files/6D9A8373-WS_grande.jpg", href: "/industries/retail-showrooms" },
+      { title: "Universities & Research", desc: "Collaborative brainstorming and data visualization rooms.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS_f78d8835-6aee-47ec-a644-ffcaa1498420_grande.jpg", href: "/industries/education" }
     ],
 
     outcomesHeading: "Interactive Wall Business Outcomes",
@@ -299,9 +299,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Museum", title: "National History Touch Wall", desc: "Touch ancient historical figures to hear narrated speeches.", img: "https://momentfactory.com/cdn/shop/files/preview_images/99bdf4bd3eea41b69576c5a8d77ada53.thumbnail.0000000000_500x.jpg", href: "/projects" },
-      { industry: "Retail", title: "Flagship Apparel Color Wall", desc: "Touch color swatches to recolor digital mannequins.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Education", title: "Interactive Medical Anatomy Wall", desc: "Medical students dissect 3D human models on a 5m wall.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Events", title: "Expo Digital Graffiti Wall", desc: "Over 5,000 visitors painted custom art during a 3-day conference.", img: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Retail", title: "Flagship Apparel Color Wall", desc: "Touch color swatches to recolor digital mannequins.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg", href: "/projects" },
+      { industry: "Education", title: "Interactive Medical Anatomy Wall", desc: "Medical students dissect 3D human models on a 5m wall.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_021-WS_grande.jpg", href: "/projects" },
+      { industry: "Events", title: "Expo Digital Graffiti Wall", desc: "Over 5,000 visitors painted custom art during a 3-day conference.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding interactive wall implementation and projection surfaces.",
@@ -344,9 +344,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Luxury Hospitality", title: "Aurora Borealis Hotel Atrium", desc: "Northern lights dancing across a 30m lobby ceiling synchronized to ambient music.", img: "https://momentfactory.com/cdn/shop/files/preview_images/f5599e89c0b749a5b8660fa173798009.thumbnail.0000000000_500x.jpg" },
-      { category: "Planetariums & Domes", title: "Cosmic Nebula Fly-Through", desc: "Visitors lie back and journey through 3D mapped stellar nurseries and distant constellations.", img: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80" },
-      { category: "Transit Hubs", title: "Subterranean Skylight Portal", desc: "Creating the illusion of natural open sky in windowless underground subway concourses.", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" },
-      { category: "Retail Atriums", title: "Interactive Particle Murmuration", desc: "Flocks of digital starlings that scatter whenever a crowd gathers beneath.", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" }
+      { category: "Planetariums & Domes", title: "Cosmic Nebula Fly-Through", desc: "Visitors lie back and journey through 3D mapped stellar nurseries and distant constellations.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_S_lection_Aquascope-0053-WS_grande.jpg" },
+      { category: "Transit Hubs", title: "Subterranean Skylight Portal", desc: "Creating the illusion of natural open sky in windowless underground subway concourses.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg" },
+      { category: "Retail Atriums", title: "Interactive Particle Murmuration", desc: "Flocks of digital starlings that scatter whenever a crowd gathers beneath.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-194_1_-WS_6c13662d-803d-4e82-b270-fba8c784ddfc_grande.jpg" }
     ],
 
     featuresHeading: "Ceiling Projection Optics & Biophilic Engine",
@@ -374,9 +374,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "From windowless basements to grand luxury hotel lobbies and wellness resorts.",
     featuredIndustry: { title: "Luxury Hospitality", desc: "Captivate hotel guests the moment they enter grand lobbies.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS.jpg", href: "/industries/hospitality" },
     industryCards: [
-      { title: "Healthcare & MRI Suites", desc: "Calm patients with soothing digital skylights during stressful treatments.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80", href: "/industries/healthcare" },
-      { title: "Corporate Headquarters", desc: "Transform executive atriums into memorable architectural landmarks.", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" },
-      { title: "High-End Retail & Spas", desc: "Create serene, otherworldly relaxation environments that encourage longer stays.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" }
+      { title: "Healthcare & MRI Suites", desc: "Calm patients with soothing digital skylights during stressful treatments.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg", href: "/industries/healthcare" },
+      { title: "Corporate Headquarters", desc: "Transform executive atriums into memorable architectural landmarks.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg", href: "/industries/corporate" },
+      { title: "High-End Retail & Spas", desc: "Create serene, otherworldly relaxation environments that encourage longer stays.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg", href: "/industries/retail-showrooms" }
     ],
 
     outcomesHeading: "Architectural & Psychological Outcomes",
@@ -403,9 +403,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Healthcare", title: "Pediatric Hospital Digital Skyway", desc: "Illuminated digital sky over young patient transport corridors.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Themed_Entertainment_Wonderbox_Paradise_city_korea_DSC08138-WS.jpg", href: "/projects" },
-      { industry: "Retail", title: "Luxury Mall Sky Canopy", desc: "Seasonal weather and fireworks projected overhead.", img: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Corporate", title: "Innovation Lab Stargate Dome", desc: "Interactive hemispherical ceiling for executive brainstorms.", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Museum", title: "Ancient Astronomy Dome", desc: "Interactive night sky showing historical star alignments.", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Retail", title: "Luxury Mall Sky Canopy", desc: "Seasonal weather and fireworks projected overhead.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg", href: "/projects" },
+      { industry: "Corporate", title: "Innovation Lab Stargate Dome", desc: "Interactive hemispherical ceiling for executive brainstorms.", img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png", href: "/projects" },
+      { industry: "Museum", title: "Ancient Astronomy Dome", desc: "Interactive night sky showing historical star alignments.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding ceiling projection and architectural integration.",
@@ -448,9 +448,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Real Estate & Agencies", title: "Property Explorer Window", desc: "Search property listings, floorplans, and 3D virtual tours directly on the high street.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Central_World_Bangkok_Retail_172A5352-WS_grande.jpg" },
-      { category: "Automotive", title: "Night Window Car Customizer", desc: "Customize vehicle colors and trims projected onto real showroom glass at midnight.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80" },
-      { category: "Gaming & Brand Promos", title: "Street Gesture Arcade", desc: "Pedestrians use hand waves to play branded street games and win discount coupons.", img: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80" },
-      { category: "Banks & Travel", title: "Interactive Currency & Holiday Planner", desc: "Browse flight deals and exchange rates touchlessly outside branch offices.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" }
+      { category: "Automotive", title: "Night Window Car Customizer", desc: "Customize vehicle colors and trims projected onto real showroom glass at midnight.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Digital_Art_Experience_Mirror_Mirror_08-WS_grande.jpg" },
+      { category: "Gaming & Brand Promos", title: "Street Gesture Arcade", desc: "Pedestrians use hand waves to play branded street games and win discount coupons.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_Content_A01cropEN-WS_grande.jpg" },
+      { category: "Banks & Travel", title: "Interactive Currency & Holiday Planner", desc: "Browse flight deals and exchange rates touchlessly outside branch offices.", img: "https://momentfactory.com/cdn/shop/files/6D9A8373-WS_grande.jpg" }
     ],
 
     featuresHeading: "Optical Film & Sensor Engineering",
@@ -478,9 +478,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "Drive revenue when stores are closed and maximize prime high-street commercial rent.",
     featuredIndustry: { title: "High-Street Retail & Fashion", desc: "Turn after-hours window shopping into direct e-commerce sales.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Central_World_Bangkok_Retail_172A5077-WS.jpg", href: "/industries/retail-showrooms" },
     industryCards: [
-      { title: "Real Estate Brokerages", desc: "Allow buyers to browse home listings 24/7 on prime streetfront corners.", img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" },
-      { title: "Automotive Dealerships", desc: "Showcase new vehicle models in stunning high definition after hours.", img: "https://images.unsplash.com/photo-1605335198270-b74955776d6c?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Travel Agencies & Airlines", desc: "Inspire travelers with interactive destination videos and flight deals.", img: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80", href: "/industries/hospitality" }
+      { title: "Real Estate Brokerages", desc: "Allow buyers to browse home listings 24/7 on prime streetfront corners.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS_f78d8835-6aee-47ec-a644-ffcaa1498420_grande.jpg", href: "/industries/corporate" },
+      { title: "Automotive Dealerships", desc: "Showcase new vehicle models in stunning high definition after hours.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg", href: "/industries/retail-showrooms" },
+      { title: "Travel Agencies & Airlines", desc: "Inspire travelers with interactive destination videos and flight deals.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_021-WS_grande.jpg", href: "/industries/hospitality" }
     ],
 
     outcomesHeading: "Storefront Window ROI & Benefits",
@@ -507,9 +507,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Real Estate", title: "Prime Property Street Kiosk", desc: "Interactive window generating 150+ buyer inquiries weekly.", img: "https://momentfactory.com/cdn/shop/files/preview_images/f0addffbaf234e7ab8d7be78c203ff8f.thumbnail.0000000000_500x.jpg", href: "/projects" },
-      { industry: "Automotive", title: "Midnight Car Configurator", desc: "Pedestrians customize electric vehicles on high-street glass.", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Telecom", title: "Touchless Phone Upgrade Portal", desc: "Customers compare mobile plans touchlessly outside the store.", img: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Tourism", title: "Destination Virtual Window", desc: "Interactive window showcasing tropical beach deals.", img: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Automotive", title: "Midnight Car Configurator", desc: "Pedestrians customize electric vehicles on high-street glass.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS_grande.jpg", href: "/projects" },
+      { industry: "Telecom", title: "Touchless Phone Upgrade Portal", desc: "Customers compare mobile plans touchlessly outside the store.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_S_lection_Aquascope-0053-WS_grande.jpg", href: "/projects" },
+      { industry: "Tourism", title: "Destination Virtual Window", desc: "Interactive window showcasing tropical beach deals.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding interactive storefront windows and glass compatibility.",
@@ -552,9 +552,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Museums & Archives", title: "Interactive Tangible History Table", desc: "Visitors place physical 3D-printed artifacts on the glass to unlock archival documents.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Changi_Experience_Public_Spaces_DSC09640-WS.jpg" },
-      { category: "Corporate Boardrooms", title: "4K Architectural Masterplan Table", desc: "Inspect 3D building models, rotate blueprints, and pinch-to-zoom satellite terrain.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" },
-      { category: "Hospitality & Bars", title: "Interactive Dining & Cocktail Table", desc: "Order cocktails, view chef preparation videos, and play multiplayer casual games while dining.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" },
-      { category: "Fitness & Wellness", title: "Interactive Smart Gym Mirror", desc: "Displays virtual personal trainers, posture correction graphics, and heart rate telemetry.", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" }
+      { category: "Corporate Boardrooms", title: "4K Architectural Masterplan Table", desc: "Inspect 3D building models, rotate blueprints, and pinch-to-zoom satellite terrain.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-194_1_-WS_6c13662d-803d-4e82-b270-fba8c784ddfc_grande.jpg" },
+      { category: "Hospitality & Bars", title: "Interactive Dining & Cocktail Table", desc: "Order cocktails, view chef preparation videos, and play multiplayer casual games while dining.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg" },
+      { category: "Fitness & Wellness", title: "Interactive Smart Gym Mirror", desc: "Displays virtual personal trainers, posture correction graphics, and heart rate telemetry.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg" }
     ],
 
     featuresHeading: "Surface Hardware & Tangible Engine",
@@ -582,9 +582,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "High-impact deployments across luxury retail, executive centers, and boutique hospitality.",
     featuredIndustry: { title: "Luxury Retail & Fitting Rooms", desc: "Enhance fitting room conversion rates with interactive mirrors.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Cultural_Eductional_Mandai_Curiosity_Cove__ISH8017-WS.jpg", href: "/industries/retail-showrooms" },
     industryCards: [
-      { title: "Museums & Cultural Archives", desc: "Hands-on artifact exploration tables that fascinate visitors of all ages.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
-      { title: "Corporate Briefing & Architecture", desc: "Collaborative masterplan tables for reviewing city-scale CAD models.", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" },
-      { title: "Luxury Hospitality & Spas", desc: "Smart vanity mirrors displaying hotel services, weather, and spa bookings.", img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80", href: "/industries/hospitality" }
+      { title: "Museums & Cultural Archives", desc: "Hands-on artifact exploration tables that fascinate visitors of all ages.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg", href: "/industries/museums-culture" },
+      { title: "Corporate Briefing & Architecture", desc: "Collaborative masterplan tables for reviewing city-scale CAD models.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg", href: "/industries/corporate" },
+      { title: "Luxury Hospitality & Spas", desc: "Smart vanity mirrors displaying hotel services, weather, and spa bookings.", img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png", href: "/industries/hospitality" }
     ],
 
     outcomesHeading: "Proven Business Outcomes & Value",
@@ -611,9 +611,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Museum", title: "Archaeology Tangible Exploration Table", desc: "Visitors place pottery shards to reveal complete historical 3D vases.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Changi_Experience_Public_Spaces_DSC09540-WS.jpg", href: "/projects" },
-      { industry: "Corporate", title: "Smart City Masterplan Touch Table", desc: "85-inch 4K collaborative touch table for urban planners.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Hospitality", title: "Interactive VIP Lounge Tables", desc: "Cocktail ordering and gaming touch tables in an upscale lounge.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Automotive", title: "Dealership Material Selection Table", desc: "Place real leather and paint samples on table to see them applied to 3D cars.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Corporate", title: "Smart City Masterplan Touch Table", desc: "85-inch 4K collaborative touch table for urban planners.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg", href: "/projects" },
+      { industry: "Hospitality", title: "Interactive VIP Lounge Tables", desc: "Cocktail ordering and gaming touch tables in an upscale lounge.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Digital_Art_Experience_Mirror_Mirror_08-WS_grande.jpg", href: "/projects" },
+      { industry: "Automotive", title: "Dealership Material Selection Table", desc: "Place real leather and paint samples on table to see them applied to 3D cars.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_Content_A01cropEN-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding smart mirrors, touch tables, and object recognition.",
@@ -656,9 +656,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Public Art", title: "Civic Facade Mapping Spectacle", desc: "Turn historic city halls, cathedrals, and monuments into monumental video landmarks.", img: "https://momentfactory.com/cdn/shop/files/Arbora_Lumina_Moment_Factory_0010_web_grande.jpg" },
-      { category: "Corporate Keynotes", title: "Dynamic Shifting Event Stages", desc: "Transform corporate stage backdrops into shifting, three-dimensional digital environments.", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" },
-      { category: "Brand Launches", title: "Automotive Product Mapping", desc: "Project dynamic animated textures, speed lines, and internal mechanics onto physical vehicles.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" },
-      { category: "Entertainment Venues", title: "Interactive LED Light Tunnels", desc: "Curved high-density archways that pulse with color as visitors pass through.", img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=800&q=80" }
+      { category: "Corporate Keynotes", title: "Dynamic Shifting Event Stages", desc: "Transform corporate stage backdrops into shifting, three-dimensional digital environments.", img: "https://momentfactory.com/cdn/shop/files/6D9A8373-WS_grande.jpg" },
+      { category: "Brand Launches", title: "Automotive Product Mapping", desc: "Project dynamic animated textures, speed lines, and internal mechanics onto physical vehicles.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS_f78d8835-6aee-47ec-a644-ffcaa1498420_grande.jpg" },
+      { category: "Entertainment Venues", title: "Interactive LED Light Tunnels", desc: "Curved high-density archways that pulse with color as visitors pass through.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg" }
     ],
 
     featuresHeading: "Engineered for Massive Scale & Optical Precision",
@@ -686,9 +686,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "Transforming cultural institutions, tourism landmarks, and premier corporate events.",
     featuredIndustry: { title: "Museums & Cultural Centers", desc: "Create ticketed blockbuster exhibitions that attract global audiences.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_ArboraLuminaFinalSelectJPEGHD_0044.png", href: "/industries/museums-culture" },
     industryCards: [
-      { title: "Tourism & Municipal Landmarks", desc: "City festival attractions that stimulate regional nighttime economies.", img: "https://images.unsplash.com/photo-1506461883276-594543d0e228?auto=format&fit=crop&w=800&q=80", href: "/industries/public-spaces" },
-      { title: "Entertainment & Live Events", desc: "Concert stage mapping and theme park dark ride experiences.", img: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
-      { title: "Corporate Product Launches", desc: "Dramatic vehicle reveals and brand keynote presentations.", img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" }
+      { title: "Tourism & Municipal Landmarks", desc: "City festival attractions that stimulate regional nighttime economies.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_021-WS_grande.jpg", href: "/industries/public-spaces" },
+      { title: "Entertainment & Live Events", desc: "Concert stage mapping and theme park dark ride experiences.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS_grande.jpg", href: "/industries/entertainment" },
+      { title: "Corporate Product Launches", desc: "Dramatic vehicle reveals and brand keynote presentations.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_S_lection_Aquascope-0053-WS_grande.jpg", href: "/industries/corporate" }
     ],
 
     outcomesHeading: "Monumental Audience Reach & Impact",
@@ -715,9 +715,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Public Art", title: "Historic Cathedral Facade Mapping", desc: "Celebrated anniversary light show seen by 200,000 spectators.", img: "https://momentfactory.com/cdn/shop/files/preview_images/72167a3a54de4b55a34420b0d3f30e89.thumbnail.0000000000_500x.jpg", href: "/projects" },
-      { industry: "Automotive", title: "Electric Hypercar Launch Reveal", desc: "Projection mapping dynamic aero simulation onto prototype vehicle.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Entertainment", title: "Interactive LED Archway Tunnel", desc: "Pedestrian entrance tunnel with responsive visual fluid dynamics.", img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Hospitality", title: "Immersive Culinary Dining Dome", desc: "Dining table and 360-degree wall mapping narrating each dish.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Automotive", title: "Electric Hypercar Launch Reveal", desc: "Projection mapping dynamic aero simulation onto prototype vehicle.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg", href: "/projects" },
+      { industry: "Entertainment", title: "Interactive LED Archway Tunnel", desc: "Pedestrian entrance tunnel with responsive visual fluid dynamics.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-194_1_-WS_6c13662d-803d-4e82-b270-fba8c784ddfc_grande.jpg", href: "/projects" },
+      { industry: "Hospitality", title: "Immersive Culinary Dining Dome", desc: "Dining table and 360-degree wall mapping narrating each dish.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding projection mapping, logistics, and technical feasibility.",
@@ -760,9 +760,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Product Reveals", title: "Automotive 3D Vehicle Mapping", desc: "Map realistic aerodynamic airflow, metallic paint variations, and engine diagnostics onto cars.", img: "https://momentfactory.com/cdn/shop/files/MomentSoissonsAHDTIFF-0036-WS_grande.jpg" },
-      { category: "Concerts & Theatre", title: "Stage Sculpture Video Warping", desc: "Complex geometric stage sets that shift visual appearance between scenes in real-time.", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" },
-      { category: "Luxury Events", title: "Illuminated Banquet Table Shows", desc: "Tiny animated chefs that prepare miniature meals directly on guest dining plates.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" },
-      { category: "Museums", title: "Relic & Statue Restoration Mapping", desc: "Project the lost original vibrant colors back onto faded ancient classical marble statues.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80" }
+      { category: "Concerts & Theatre", title: "Stage Sculpture Video Warping", desc: "Complex geometric stage sets that shift visual appearance between scenes in real-time.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg" },
+      { category: "Luxury Events", title: "Illuminated Banquet Table Shows", desc: "Tiny animated chefs that prepare miniature meals directly on guest dining plates.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg" },
+      { category: "Museums", title: "Relic & Statue Restoration Mapping", desc: "Project the lost original vibrant colors back onto faded ancient classical marble statues.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg" }
     ],
 
     featuresHeading: "Geometric Calibration & Media Server Specs",
@@ -790,9 +790,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "From government tourism spectacles to private automotive brand launches.",
     featuredIndustry: { title: "Tourism & Municipalities", desc: "Monumental light festivals that draw millions of international visitors.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Soissons_en_Lumi_res_AHD_TIFF-0045-WS.jpg", href: "/industries/public-spaces" },
     industryCards: [
-      { title: "Automotive & Industrial", desc: "High-impact vehicle unveiling shows and factory floor design reviews.", img: "https://images.unsplash.com/photo-1605335198270-b74955776d6c?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Live Concerts & Festivals", desc: "Dynamic stage mapping that adapts to artist setlists and crowd tempo.", img: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
-      { title: "Museums & History", desc: "Project lost colors onto ancient sculptures and animate historical murals.", img: "https://images.unsplash.com/photo-1555529733-0e67056058e1?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" }
+      { title: "Automotive & Industrial", desc: "High-impact vehicle unveiling shows and factory floor design reviews.", img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png", href: "/industries/retail-showrooms" },
+      { title: "Live Concerts & Festivals", desc: "Dynamic stage mapping that adapts to artist setlists and crowd tempo.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg", href: "/industries/entertainment" },
+      { title: "Museums & History", desc: "Project lost colors onto ancient sculptures and animate historical murals.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Digital_Art_Experience_Mirror_Mirror_08-WS_grande.jpg", href: "/industries/museums-culture" }
     ],
 
     outcomesHeading: "Proven Spectacle Value & Impact",
@@ -819,9 +819,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Automotive", title: "Luxury SUV Worldwide Reveal", desc: "3D mapping dynamic mountain terrain across the vehicle body.", img: "https://momentfactory.com/cdn/shop/files/preview_images/5b94b1abdb634f90bbb0d6e1a9ae6f52.thumbnail.0000000000_500x.jpg", href: "/projects" },
-      { industry: "Museum", title: "Egyptian Temple Column Restoration", desc: "Digital light reconstruction of faded hieroglyphics.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Entertainment", title: "Electronic Music Festival Castle Mapping", desc: "3-night continuous live visual mapping across castle battlements.", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Hospitality", title: "Dining Room Animated Banquet", desc: "Bespoke projection mapping onto guest dinnerware.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Museum", title: "Egyptian Temple Column Restoration", desc: "Digital light reconstruction of faded hieroglyphics.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_Content_A01cropEN-WS_grande.jpg", href: "/projects" },
+      { industry: "Entertainment", title: "Electronic Music Festival Castle Mapping", desc: "3-night continuous live visual mapping across castle battlements.", img: "https://momentfactory.com/cdn/shop/files/6D9A8373-WS_grande.jpg", href: "/projects" },
+      { industry: "Hospitality", title: "Dining Room Animated Banquet", desc: "Bespoke projection mapping onto guest dinnerware.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS_f78d8835-6aee-47ec-a644-ffcaa1498420_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding projection mapping technology and production logistics.",
@@ -864,9 +864,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Art Exhibitions", title: "Living Classical Art Sanctuary", desc: "Van Gogh's starry night brushstrokes swirl along the walls and across visitors' shoes.", img: "https://momentfactory.com/cdn/shop/files/01_FURY_Phish_041924_1710_grande.jpg" },
-      { category: "Space & Science", title: "Mars Rover Expedition", desc: "Stand on the red dunes of Mars as dust devils swirl and robotic landers touch down.", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" },
-      { category: "Corporate Briefing", title: "The Executive Holographic Holodeck", desc: "Surround executives with real-time global supply chain data and 3D product prototypes.", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" },
-      { category: "Sensory Therapy", title: "Calming Biophilic Rainforest Retreat", desc: "Gentle rain showers, swaying bamboo, and meditative ambient sound for mental wellness.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" }
+      { category: "Space & Science", title: "Mars Rover Expedition", desc: "Stand on the red dunes of Mars as dust devils swirl and robotic landers touch down.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg" },
+      { category: "Corporate Briefing", title: "The Executive Holographic Holodeck", desc: "Surround executives with real-time global supply chain data and 3D product prototypes.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_021-WS_grande.jpg" },
+      { category: "Sensory Therapy", title: "Calming Biophilic Rainforest Retreat", desc: "Gentle rain showers, swaying bamboo, and meditative ambient sound for mental wellness.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS_grande.jpg" }
     ],
 
     featuresHeading: "Optics, Blending & Room Calibration",
@@ -894,9 +894,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "Turn ordinary real estate into high-ticket experiential destinations.",
     featuredIndustry: { title: "Museums & Ticketed Exhibitions", desc: "Proven blockbuster ticket sales and viral visitor word of mouth.", img: "https://momentfactory.com/cdn/shop/files/02_PhishSphere2024_0420_212130-_ALIVECOVERAGE.jpg", href: "/industries/museums-culture" },
     industryCards: [
-      { title: "Corporate Experience Centers", desc: "The ultimate immersive storytelling chamber for Fortune 500 visitors.", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" },
-      { title: "Hospitality & Dining Concepts", desc: "360-degree dining experiences where room themes change with every course.", img: "https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?auto=format&fit=crop&w=800&q=80", href: "/industries/hospitality" },
-      { title: "Wellness & Therapeutic Sanctuaries", desc: "Immersive sensory relaxation chambers for luxury spas and clinics.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80", href: "/industries/healthcare" }
+      { title: "Corporate Experience Centers", desc: "The ultimate immersive storytelling chamber for Fortune 500 visitors.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_S_lection_Aquascope-0053-WS_grande.jpg", href: "/industries/corporate" },
+      { title: "Hospitality & Dining Concepts", desc: "360-degree dining experiences where room themes change with every course.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg", href: "/industries/hospitality" },
+      { title: "Wellness & Therapeutic Sanctuaries", desc: "Immersive sensory relaxation chambers for luxury spas and clinics.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-194_1_-WS_6c13662d-803d-4e82-b270-fba8c784ddfc_grande.jpg", href: "/industries/healthcare" }
     ],
 
     outcomesHeading: "Immersive Room Return on Investment",
@@ -923,9 +923,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Corporate", title: "Global Energy Experience CAVE", desc: "360-degree holographic room visualizing worldwide energy grids.", img: "https://momentfactory.com/cdn/shop/files/preview_images/05_PhishSphere2024_0419_195738-3771_ALIVECOVERAGE_500x.jpg", href: "/projects" },
-      { industry: "Hospitality", title: "Multi-Sensory Gastronomy Chamber", desc: "12-seat dining room with synchronized 360 visuals and scents.", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Healthcare", title: "Mindfulness & Anxiety Reduction Pod", desc: "Immersive nature sanctuary in a modern cancer treatment center.", img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Entertainment", title: "Haunted Hollow Dark Room", desc: "Interactive horror attraction with reactive wall and floor creatures.", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Hospitality", title: "Multi-Sensory Gastronomy Chamber", desc: "12-seat dining room with synchronized 360 visuals and scents.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg", href: "/projects" },
+      { industry: "Healthcare", title: "Mindfulness & Anxiety Reduction Pod", desc: "Immersive nature sanctuary in a modern cancer treatment center.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg", href: "/projects" },
+      { industry: "Entertainment", title: "Haunted Hollow Dark Room", desc: "Interactive horror attraction with reactive wall and floor creatures.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding room dimensions, projectors, and content management.",
@@ -968,9 +968,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Nature & Biophilic", title: "Subterranean Coral Reef Arch", desc: "Walk beneath a curved transparent ocean archway where sea turtles and rays glide overhead.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Moynihan_Train_Hall_022-WS_grande.jpg" },
-      { category: "Brand Entrances", title: "The Red Carpet Prism Corridor", desc: "Reflective kaleidoscopic patterns and brand logos swirling around guests at galas.", img: "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80" },
-      { category: "Sports Stadiums", title: "Player Walkout Thunder Portal", desc: "High-voltage lightning and roaring crowd energy surrounding athletes before they take the field.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" },
-      { category: "Shopping Malls", title: "Seasonal Blossom Canopy Tunnel", desc: "Interactive cherry blossoms that drift across the curved archway as pedestrians stroll.", img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" }
+      { category: "Brand Entrances", title: "The Red Carpet Prism Corridor", desc: "Reflective kaleidoscopic patterns and brand logos swirling around guests at galas.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg" },
+      { category: "Sports Stadiums", title: "Player Walkout Thunder Portal", desc: "High-voltage lightning and roaring crowd energy surrounding athletes before they take the field.", img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png" },
+      { category: "Shopping Malls", title: "Seasonal Blossom Canopy Tunnel", desc: "Interactive cherry blossoms that drift across the curved archway as pedestrians stroll.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg" }
     ],
 
     featuresHeading: "Panel Architecture & Structural Engineering",
@@ -998,9 +998,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "The ultimate transitional threshold for premier entertainment and corporate venues.",
     featuredIndustry: { title: "Aquariums & Theme Parks", desc: "Enchant visitors with unforgettable walk-through threshold portals.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Moynihan_Train_Hall_IMG_0693-WS.jpg", href: "/industries/entertainment" },
     industryCards: [
-      { title: "Sports Arenas & Stadiums", desc: "Electrify player walkouts and VIP tunnel clubs.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
-      { title: "Flagship Shopping Malls", desc: "Command high-street attention and draw foot traffic between retail wings.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Corporate Headquarters & Expos", desc: "A visionary entrance corridor welcoming partners to global summits.", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" }
+      { title: "Sports Arenas & Stadiums", desc: "Electrify player walkouts and VIP tunnel clubs.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Digital_Art_Experience_Mirror_Mirror_08-WS_grande.jpg", href: "/industries/entertainment" },
+      { title: "Flagship Shopping Malls", desc: "Command high-street attention and draw foot traffic between retail wings.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_Content_A01cropEN-WS_grande.jpg", href: "/industries/retail-showrooms" },
+      { title: "Corporate Headquarters & Expos", desc: "A visionary entrance corridor welcoming partners to global summits.", img: "https://momentfactory.com/cdn/shop/files/6D9A8373-WS_grande.jpg", href: "/industries/corporate" }
     ],
 
     outcomesHeading: "The Power of an Iconic Architectural Threshold",
@@ -1027,9 +1027,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Sports", title: "Championship Tunnel Walkout", desc: "Curved LED tunnel with synchronized strobe lighting for an NBA arena.", img: "https://momentfactory.com/cdn/shop/files/preview_images/99a64c6e6ea84243bfa36201a0bd8ea9.thumbnail.0000000000_500x.jpg", href: "/projects" },
-      { industry: "Retail", title: "Luxury Mall Entrance Atrium", desc: "Archway tunnel generating 10,000+ customer selfies weekly.", img: "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Corporate", title: "Tech Campus Innovation Gateway", desc: "Connecting two main buildings with a responsive data stream tunnel.", img: "https://images.unsplash.com/photo-1598040795256-03d22d952f4d?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Theme Park", title: "Starlight Time Machine Corridor", desc: "Walk-through portal between theme park fantasy zones.", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Retail", title: "Luxury Mall Entrance Atrium", desc: "Archway tunnel generating 10,000+ customer selfies weekly.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS_f78d8835-6aee-47ec-a644-ffcaa1498420_grande.jpg", href: "/projects" },
+      { industry: "Corporate", title: "Tech Campus Innovation Gateway", desc: "Connecting two main buildings with a responsive data stream tunnel.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg", href: "/projects" },
+      { industry: "Theme Park", title: "Starlight Time Machine Corridor", desc: "Walk-through portal between theme park fantasy zones.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_021-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding LED tunnel structural requirements, power, and maintenance.",
@@ -1072,9 +1072,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Keynotes & Events", title: "Monumental Holo-Gauze Stage Illusion", desc: "A CEO or pop star performs alongside gigantic 10-meter floating holographic avatars on stage.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_006-WS.jpg" },
-      { category: "Museums & History", title: "Resurrected Historical Figures", desc: "Life-sized holographic historical figures stand and converse with museum visitors in mid-air.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" },
-      { category: "Medical & Science", title: "Floating 3D Organ & Molecular Viewer", desc: "Doctors and students rotate floating 3D beating hearts and DNA helixes in real space.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" },
-      { category: "Automotive Showrooms", title: "Exploded View Engine Hologram", desc: "A floating vehicle engine that disassembles itself into 500 individual parts hovering in air.", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" }
+      { category: "Museums & History", title: "Resurrected Historical Figures", desc: "Life-sized holographic historical figures stand and converse with museum visitors in mid-air.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS_grande.jpg" },
+      { category: "Medical & Science", title: "Floating 3D Organ & Molecular Viewer", desc: "Doctors and students rotate floating 3D beating hearts and DNA helixes in real space.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_S_lection_Aquascope-0053-WS_grande.jpg" },
+      { category: "Automotive Showrooms", title: "Exploded View Engine Hologram", desc: "A floating vehicle engine that disassembles itself into 500 individual parts hovering in air.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg" }
     ],
 
     featuresHeading: "Optical Physics & Volumetric Specs",
@@ -1102,9 +1102,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "High-end product launches, museum storytelling, and keynote presentations.",
     featuredIndustry: { title: "Luxury Retail & Jewelry", desc: "Elevate high-value jewelry and watches with magical floating narratives.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_021-WS.jpg", href: "/industries/retail-showrooms" },
     industryCards: [
-      { title: "Museums & Historical Exhibits", desc: "Bring ancient pharaohs and extinct creatures back to life before visitors' eyes.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
-      { title: "Concerts, Theatres & Keynotes", desc: "Deliver jaw-dropping stage moments with life-sized holographic performances.", img: "https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
-      { title: "Medical & Technical Briefing", desc: "Review 3D anatomical scans or engineering parts in true floating space.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" }
+      { title: "Museums & Historical Exhibits", desc: "Bring ancient pharaohs and extinct creatures back to life before visitors' eyes.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-194_1_-WS_6c13662d-803d-4e82-b270-fba8c784ddfc_grande.jpg", href: "/industries/museums-culture" },
+      { title: "Concerts, Theatres & Keynotes", desc: "Deliver jaw-dropping stage moments with life-sized holographic performances.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg", href: "/industries/entertainment" },
+      { title: "Medical & Technical Briefing", desc: "Review 3D anatomical scans or engineering parts in true floating space.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg", href: "/industries/corporate" }
     ],
 
     outcomesHeading: "Holographic Impact & Dwell Time",
@@ -1131,9 +1131,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Entertainment", title: "Symphony Hall Holographic Soloist", desc: "Deceased maestro resurrected as a 5-meter holographic stage presence.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_013-WS.jpg", href: "/projects" },
-      { industry: "Museum", title: "Floating T-Rex Hologram", desc: "Life-sized dinosaur hologram that roars and lunges toward visitors.", img: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Corporate", title: "Automotive EV Battery Exploded View", desc: "Holographic showcase demonstrating lithium battery cell chemistry.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Trade Show", title: "Holographic Fan 3D Logo Matrix", desc: "40 synchronized spinning fans creating a massive floating corporate emblem.", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Museum", title: "Floating T-Rex Hologram", desc: "Life-sized dinosaur hologram that roars and lunges toward visitors.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg", href: "/projects" },
+      { industry: "Corporate", title: "Automotive EV Battery Exploded View", desc: "Holographic showcase demonstrating lithium battery cell chemistry.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg", href: "/projects" },
+      { industry: "Trade Show", title: "Holographic Fan 3D Logo Matrix", desc: "40 synchronized spinning fans creating a massive floating corporate emblem.", img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding holographic displays, lighting conditions, and content requirements.",
@@ -1176,9 +1176,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Retail Flagships", title: "Personalized AI Style Advisor", desc: "A digital stylist that scans customer outfit colors and recommends matching boutique apparel.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Concerts_Billie_Eilish1.19.30PM-WS_grande.jpg" },
-      { category: "Museums & History", title: "Conversational Historical Figures", desc: "Visitors hold unscripted spoken interviews with AI replicas of Leonardo da Vinci and Marie Curie.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" },
-      { category: "Public Atriums", title: "Generative Art Kinetic Murals", desc: "Massive lobby video walls that dynamically paint abstract artwork driven by real-time footfall patterns.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" },
-      { category: "Events & Activations", title: "AI Neural Style Photo Booth", desc: "Guests step into a booth and are instantly restyled into Renaissance oil paintings or cyberpunk heroes in 4K.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" }
+      { category: "Museums & History", title: "Conversational Historical Figures", desc: "Visitors hold unscripted spoken interviews with AI replicas of Leonardo da Vinci and Marie Curie.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg" },
+      { category: "Public Atriums", title: "Generative Art Kinetic Murals", desc: "Massive lobby video walls that dynamically paint abstract artwork driven by real-time footfall patterns.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Digital_Art_Experience_Mirror_Mirror_08-WS_grande.jpg" },
+      { category: "Events & Activations", title: "AI Neural Style Photo Booth", desc: "Guests step into a booth and are instantly restyled into Renaissance oil paintings or cyberpunk heroes in 4K.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_Content_A01cropEN-WS_grande.jpg" }
     ],
 
     featuresHeading: "Neural Architecture & Latency Optimization",
@@ -1206,9 +1206,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "Transforming corporate lobbies, museums, luxury retail, and premier events.",
     featuredIndustry: { title: "Corporate Headquarters", desc: "Automate executive reception and impress visiting clients with futuristic AI hosts.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Concerts_Billie_Eilish_2.19.00_PM-WS_2.png", href: "/industries/corporate" },
     industryCards: [
-      { title: "Museums & Cultural Archives", desc: "Enable unscripted, natural conversations with figures from history.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
-      { title: "Retail Showrooms & Boutiques", desc: "AI brand ambassadors that recommend products and answer technical specs.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Conferences & Galas", desc: "High-throughput interactive photo booths and automated bilingual event emcees.", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" }
+      { title: "Museums & Cultural Archives", desc: "Enable unscripted, natural conversations with figures from history.", img: "https://momentfactory.com/cdn/shop/files/6D9A8373-WS_grande.jpg", href: "/industries/museums-culture" },
+      { title: "Retail Showrooms & Boutiques", desc: "AI brand ambassadors that recommend products and answer technical specs.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS_f78d8835-6aee-47ec-a644-ffcaa1498420_grande.jpg", href: "/industries/retail-showrooms" },
+      { title: "Conferences & Galas", desc: "High-throughput interactive photo booths and automated bilingual event emcees.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg", href: "/industries/entertainment" }
     ],
 
     outcomesHeading: "Measurable Value of Spatial AI",
@@ -1235,9 +1235,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Museum", title: "Albert Einstein Interactive Encounter", desc: "Visitors ask theoretical physics questions directly to an AI Einstein avatar.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Concerts_Billie_Eilish1.19.30PM-WS.jpg", href: "/projects" },
-      { industry: "Retail", title: "Generative Art Storefront Window", desc: "AI generates abstract street art matching the clothing colors of passerby pedestrians.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Events", title: "AI Renaissance Photo Studio", desc: "Transformed 2,400 gala guests into museum-quality digital portraits.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Healthcare", title: "Hospital Wayfinding Concierge", desc: "Bilingual avatar guiding patients to clinics and department appointments.", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Retail", title: "Generative Art Storefront Window", desc: "AI generates abstract street art matching the clothing colors of passerby pedestrians.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_021-WS_grande.jpg", href: "/projects" },
+      { industry: "Events", title: "AI Renaissance Photo Studio", desc: "Transformed 2,400 gala guests into museum-quality digital portraits.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS_grande.jpg", href: "/projects" },
+      { industry: "Healthcare", title: "Hospital Wayfinding Concierge", desc: "Bilingual avatar guiding patients to clinics and department appointments.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_S_lection_Aquascope-0053-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding AI avatars, corporate safety, and edge computing.",
@@ -1280,9 +1280,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Tech Conferences", title: "Cyberpunk Holographic Identity", desc: "Attendees receive futuristic biometric badge portraits complete with glowing cyberware.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Skatemapp_BrunoDestombes_078-WS_grande.jpg" },
-      { category: "Entertainment & Film", title: "Movie Superhero Poster Generator", desc: "Puts guests directly into movie posters as the lead protagonist with authentic title typography.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" },
-      { category: "Corporate Briefing", title: "Conversational Executive Concierge", desc: "A sleek digital receptionist answering questions and providing event schedules in real-time.", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" },
-      { category: "Retail Pop-Ups", title: "Haute Couture Magazine Cover", desc: "Shoppers pose and receive an animated Vogue-style digital magazine cover with custom branding.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" }
+      { category: "Entertainment & Film", title: "Movie Superhero Poster Generator", desc: "Puts guests directly into movie posters as the lead protagonist with authentic title typography.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg" },
+      { category: "Corporate Briefing", title: "Conversational Executive Concierge", desc: "A sleek digital receptionist answering questions and providing event schedules in real-time.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-194_1_-WS_6c13662d-803d-4e82-b270-fba8c784ddfc_grande.jpg" },
+      { category: "Retail Pop-Ups", title: "Haute Couture Magazine Cover", desc: "Shoppers pose and receive an animated Vogue-style digital magazine cover with custom branding.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg" }
     ],
 
     featuresHeading: "Diffusion Engine & Hardware Specs",
@@ -1310,9 +1310,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "High-volume corporate galas, trade show booths, and brand activations.",
     featuredIndustry: { title: "Trade Shows & Expos", desc: "Generate massive booth queues and collect hundreds of qualified B2B leads daily.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Skatemapp_BrunoDestombes_047-WS.jpg", href: "/industries/corporate" },
     industryCards: [
-      { title: "Brand Pop-Ups & Retail", desc: "Create viral user-generated content that spreads across Instagram and TikTok.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Galas & Entertainment Events", desc: "Give VIP guests a luxurious, memorable keepsake from the evening.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
-      { title: "Museums & Science Centers", desc: "Let visitors imagine themselves in historical eras or alien environments.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" }
+      { title: "Brand Pop-Ups & Retail", desc: "Create viral user-generated content that spreads across Instagram and TikTok.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg", href: "/industries/retail-showrooms" },
+      { title: "Galas & Entertainment Events", desc: "Give VIP guests a luxurious, memorable keepsake from the evening.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg", href: "/industries/entertainment" },
+      { title: "Museums & Science Centers", desc: "Let visitors imagine themselves in historical eras or alien environments.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg", href: "/industries/museums-culture" }
     ],
 
     outcomesHeading: "Unrivaled Event ROI & Social Footprint",
@@ -1339,9 +1339,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Retail", title: "Luxury Fashion Week Cover Studio", desc: "1,500 VIP attendees received animated digital magazine covers.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Skatemapp_BrunoDestombes_078-WS.jpg", href: "/projects" },
-      { industry: "Entertainment", title: "Blockbuster Movie Premiere Studio", desc: "Fans placed directly alongside actors in movie poster format.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Corporate", title: "Automotive Dealer Gala Avatar Emcee", desc: "Interactive AI host greeting guests and taking executive portraits.", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Museum", title: "Time Travel Historical Studio", desc: "Visitors transformed into Victorian-era historical figures.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Entertainment", title: "Blockbuster Movie Premiere Studio", desc: "Fans placed directly alongside actors in movie poster format.", img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png", href: "/projects" },
+      { industry: "Corporate", title: "Automotive Dealer Gala Avatar Emcee", desc: "Interactive AI host greeting guests and taking executive portraits.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg", href: "/projects" },
+      { industry: "Museum", title: "Time Travel Historical Studio", desc: "Visitors transformed into Victorian-era historical figures.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Digital_Art_Experience_Mirror_Mirror_08-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding AI photo generation, latency, and photo privacy.",
@@ -1384,9 +1384,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Expos & Booths", title: "Trade Show Motion Racing Game", desc: "Visitors steer branded race cars using body movement to compete for top leaderboard spots.", img: "https://momentfactory.com/cdn/shop/files/20160103_momentfactory-0985-WS_grande.jpg" },
-      { category: "Corporate Briefing", title: "Multi-Touch Strategy Wall", desc: "Executives explore historical milestones and global supply chains on an 85-inch touch array.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" },
-      { category: "Public Transit & Malls", title: "Smart 3D Wayfinding Kiosks", desc: "Interactive directories that send personalized 3D walking routes directly to smartphones.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" },
-      { category: "Sports Arenas", title: "Interactive Halftime Trivia Challenge", desc: "Thousands in the concourse play live trivia challenges on giant video walls to win prizes.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" }
+      { category: "Corporate Briefing", title: "Multi-Touch Strategy Wall", desc: "Executives explore historical milestones and global supply chains on an 85-inch touch array.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_Content_A01cropEN-WS_grande.jpg" },
+      { category: "Public Transit & Malls", title: "Smart 3D Wayfinding Kiosks", desc: "Interactive directories that send personalized 3D walking routes directly to smartphones.", img: "https://momentfactory.com/cdn/shop/files/6D9A8373-WS_grande.jpg" },
+      { category: "Sports Arenas", title: "Interactive Halftime Trivia Challenge", desc: "Thousands in the concourse play live trivia challenges on giant video walls to win prizes.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS_f78d8835-6aee-47ec-a644-ffcaa1498420_grande.jpg" }
     ],
 
     featuresHeading: "Industrial Hardware & Cloud Telemetry",
@@ -1414,9 +1414,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "Proven revenue uplift across retail flagships, automotive showrooms, and sports stadiums.",
     featuredIndustry: { title: "Retail & Consumer Electronics", desc: "Accelerate high-ticket purchase decisions through interactive product comparison.", img: "https://momentfactory.com/cdn/shop/files/20160103_momentfactory-1089-WS.jpg", href: "/industries/retail-showrooms" },
     industryCards: [
-      { title: "Trade Shows & Exhibitions", desc: "Turn passive booth visitors into qualified, badge-scanned B2B sales leads.", img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80", href: "/industries/corporate" },
-      { title: "Sports Venues & Arenas", desc: "Monetize stadium concourses with branded sponsor gamification and leaderboards.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
-      { title: "Museums & Visitor Centers", desc: "Engage visitors through interactive touch kiosks and discovery quests.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" }
+      { title: "Trade Shows & Exhibitions", desc: "Turn passive booth visitors into qualified, badge-scanned B2B sales leads.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg", href: "/industries/corporate" },
+      { title: "Sports Venues & Arenas", desc: "Monetize stadium concourses with branded sponsor gamification and leaderboards.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_021-WS_grande.jpg", href: "/industries/entertainment" },
+      { title: "Museums & Visitor Centers", desc: "Engage visitors through interactive touch kiosks and discovery quests.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS_grande.jpg", href: "/industries/museums-culture" }
     ],
 
     outcomesHeading: "Hard Engagement Data & ROI",
@@ -1443,9 +1443,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Expos", title: "Industrial Drone Racing Simulator", desc: "Captured 4,000+ B2B leads at an international aerospace expo.", img: "https://momentfactory.com/cdn/shop/files/preview_images/6650d404ee494fc99fdeda7c1a3b0a3d.thumbnail.0000000000_500x.jpg", href: "/projects" },
-      { industry: "Cosmetics", title: "Lift-and-Learn Skincare Bar", desc: "Lifting cosmetic bottles triggers customized skin tutorials.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Corporate", title: "Interactive ESG Sustainability Kiosk", desc: "Lobby touchscreen tracking real-time building solar generation.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Public Space", title: "Airport Interactive Wayfinding Kiosks", desc: "Smart 3D directories guiding 50,000 travelers daily.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Cosmetics", title: "Lift-and-Learn Skincare Bar", desc: "Lifting cosmetic bottles triggers customized skin tutorials.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_S_lection_Aquascope-0053-WS_grande.jpg", href: "/projects" },
+      { industry: "Corporate", title: "Interactive ESG Sustainability Kiosk", desc: "Lobby touchscreen tracking real-time building solar generation.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg", href: "/projects" },
+      { industry: "Public Space", title: "Airport Interactive Wayfinding Kiosks", desc: "Smart 3D directories guiding 50,000 travelers daily.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-194_1_-WS_6c13662d-803d-4e82-b270-fba8c784ddfc_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding gamification design, RFID hardware, and POS integration.",
@@ -1488,9 +1488,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Sports & Fitness", title: "Virtual Penalty Kick Arena", desc: "Players kick a physical soccer ball into a virtual net with high-speed optical tracking.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Ceremonies_and_Events_Moet_EffervescenceXMAS22_3-WS_grande.jpg" },
-      { category: "Arcade Nostalgia", title: "Branded 3D Retro Runner", desc: "A Subway Surfers-style custom runner where players collect brand products while dodging obstacles.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80" },
-      { category: "Quiz & Discovery", title: "Live Interactive Brand Trivia", desc: "Multiplayer timed quiz stations educating players on your brand's innovation and sustainability.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" },
-      { category: "Puzzle & Strategy", title: "Product Assembly Time Attack", desc: "Assemble complex engineering or luxury products in a 3D digital puzzle before time runs out.", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" }
+      { category: "Arcade Nostalgia", title: "Branded 3D Retro Runner", desc: "A Subway Surfers-style custom runner where players collect brand products while dodging obstacles.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg" },
+      { category: "Quiz & Discovery", title: "Live Interactive Brand Trivia", desc: "Multiplayer timed quiz stations educating players on your brand's innovation and sustainability.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg" },
+      { category: "Puzzle & Strategy", title: "Product Assembly Time Attack", desc: "Assemble complex engineering or luxury products in a 3D digital puzzle before time runs out.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg" }
     ],
 
     featuresHeading: "Game Engine & Multiplayer Tech",
@@ -1518,9 +1518,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "Turn any public space into a magnetic competitive arena.",
     featuredIndustry: { title: "Trade Shows & Exhibitions", desc: "Draw the largest crowd on the expo floor and double your qualified sales leads.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Ceremonies_and_Events_Moet_EffervescenceXMAS22_21-WS_9246f3d1-2e79-4ce0-b076-11ea2e8632a2.jpg", href: "/industries/corporate" },
     industryCards: [
-      { title: "Retail Flagships & Malls", desc: "Drive store foot traffic and reward purchases with instant interactive discounts.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Sports Venues & Fan Zones", desc: "Engage thousands of passionate fans before kickoff with branded stadium games.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/industries/entertainment" },
-      { title: "Automotive Launches", desc: "Create competitive driving simulators that highlight vehicle horsepower and agility.", img: "https://images.unsplash.com/photo-1605335198270-b74955776d6c?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" }
+      { title: "Retail Flagships & Malls", desc: "Drive store foot traffic and reward purchases with instant interactive discounts.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg", href: "/industries/retail-showrooms" },
+      { title: "Sports Venues & Fan Zones", desc: "Engage thousands of passionate fans before kickoff with branded stadium games.", img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png", href: "/industries/entertainment" },
+      { title: "Automotive Launches", desc: "Create competitive driving simulators that highlight vehicle horsepower and agility.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg", href: "/industries/retail-showrooms" }
     ],
 
     outcomesHeading: "Gamification Metrics That Matter",
@@ -1547,9 +1547,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Expos", title: "Semiconductor Drone Racing Game", desc: "Generated 3,500 qualified engineering leads during a 4-day tech expo.", img: "https://momentfactory.com/cdn/shop/files/preview_images/0bce48fa56144559ae950c3e6626ccf8.thumbnail.0000000000_500x.jpg", href: "/projects" },
-      { industry: "Beverage", title: "Summer Festival Catch Challenge", desc: "Multiplayer arcade game with instant canned beverage rewards.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Automotive", title: "EV Battery Efficiency Simulator", desc: "Interactive game educating drivers on regenerative braking.", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Sports", title: "Stadium Concourse Penalty Shootout", desc: "Virtual soccer game played by over 12,000 fans on matchday.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Beverage", title: "Summer Festival Catch Challenge", desc: "Multiplayer arcade game with instant canned beverage rewards.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Digital_Art_Experience_Mirror_Mirror_08-WS_grande.jpg", href: "/projects" },
+      { industry: "Automotive", title: "EV Battery Efficiency Simulator", desc: "Interactive game educating drivers on regenerative braking.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_Content_A01cropEN-WS_grande.jpg", href: "/projects" },
+      { industry: "Sports", title: "Stadium Concourse Penalty Shootout", desc: "Virtual soccer game played by over 12,000 fans on matchday.", img: "https://momentfactory.com/cdn/shop/files/6D9A8373-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding game development timelines, hardware, and lead capture.",
@@ -1592,9 +1592,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     experienceCards: [
       { category: "Sports Arenas", title: "Goalkeeper Penalty Defense", desc: "Step into the shoes of a goalkeeper, diving and swatting away virtual soccer balls in real time.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg" },
-      { category: "Theme Parks", title: "Dragon Flight Body Steering", desc: "Spread your arms like wings to steer a mythical dragon through mountain canyons.", img: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80" },
-      { category: "Family Entertainment", title: "Fruit Slicer & Bubble Pop", desc: "Wave your hands rapidly in mid-air to slice floating fruit and pop bubbles with realistic particle physics.", img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" },
-      { category: "Museums & Science", title: "Zero-Gravity Space Spacewalk", desc: "Float through an interactive space station using gentle swimming body motions.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" }
+      { category: "Theme Parks", title: "Dragon Flight Body Steering", desc: "Spread your arms like wings to steer a mythical dragon through mountain canyons.", img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS_f78d8835-6aee-47ec-a644-ffcaa1498420_grande.jpg" },
+      { category: "Family Entertainment", title: "Fruit Slicer & Bubble Pop", desc: "Wave your hands rapidly in mid-air to slice floating fruit and pop bubbles with realistic particle physics.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_1_grande.jpg" },
+      { category: "Museums & Science", title: "Zero-Gravity Space Spacewalk", desc: "Float through an interactive space station using gentle swimming body motions.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_021-WS_grande.jpg" }
     ],
 
     featuresHeading: "Optical Tracking & Vision Hardware",
@@ -1622,9 +1622,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     industriesIntro: "High-traffic family destinations, entertainment centers, and brand pavilions.",
     featuredIndustry: { title: "Family Entertainment Centers", desc: "Deliver high-energy active attractions that keep children and parents entertained.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_Space_Center_Houston_Lunar_Obstacle_Run_3-WS.png", href: "/industries/entertainment" },
     industryCards: [
-      { title: "Museums & Science Centers", desc: "Physical interactive exhibits that educate through energetic bodily participation.", img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80", href: "/industries/museums-culture" },
-      { title: "Shopping Malls & Atriums", desc: "Free public play areas that boost mall foot traffic and parental dwell time.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", href: "/industries/retail-showrooms" },
-      { title: "Healthcare & Physical Rehab", desc: "Gamify physical therapy and mobility exercises for pediatric and senior patients.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80", href: "/industries/healthcare" }
+      { title: "Museums & Science Centers", desc: "Physical interactive exhibits that educate through energetic bodily participation.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS_grande.jpg", href: "/industries/museums-culture" },
+      { title: "Shopping Malls & Atriums", desc: "Free public play areas that boost mall foot traffic and parental dwell time.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_S_lection_Aquascope-0053-WS_grande.jpg", href: "/industries/retail-showrooms" },
+      { title: "Healthcare & Physical Rehab", desc: "Gamify physical therapy and mobility exercises for pediatric and senior patients.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg", href: "/industries/healthcare" }
     ],
 
     outcomesHeading: "Operational Advantages of Motion Games",
@@ -1651,9 +1651,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     },
     projects: [
       { industry: "Museum", title: "Prehistoric Predator Escape Game", desc: "Kids run and jump to outpace virtual dinosaurs on a massive screen.", img: "https://momentfactory.com/cdn/shop/files/preview_images/6aa135768c214b2ba4f9ab2f00d2f5ac.thumbnail.0000000000_500x.jpg", href: "/projects" },
-      { industry: "Retail", title: "Activewear Jump & Agility Challenge", desc: "Shoppers test new running shoes on an interactive agility course.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Healthcare", title: "Pediatric Physical Therapy Wall", desc: "Transforming rehabilitation exercises into fun dragon-catching games.", img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80", href: "/projects" },
-      { industry: "Sports", title: "Winter Olympics Downhill Ski Simulator", desc: "Body-steering ski simulator in a ski resort lodge.", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80", href: "/projects" }
+      { industry: "Retail", title: "Activewear Jump & Agility Challenge", desc: "Shoppers test new running shoes on an interactive agility course.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-194_1_-WS_6c13662d-803d-4e82-b270-fba8c784ddfc_grande.jpg", href: "/projects" },
+      { industry: "Healthcare", title: "Pediatric Physical Therapy Wall", desc: "Transforming rehabilitation exercises into fun dragon-catching games.", img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg", href: "/projects" },
+      { industry: "Sports", title: "Winter Olympics Downhill Ski Simulator", desc: "Body-steering ski simulator in a ski resort lodge.", img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_116-WS_grande.jpg", href: "/projects" }
     ],
 
     faqsIntro: "Frequently asked questions regarding motion tracking camera placement, player tracking, and lighting.",
