@@ -260,7 +260,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
               {data.whatIsFeatures.map((feat, idx) => (
                 <div key={idx} className="group">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-[10px] font-mono font-bold text-black/40">/{String(idx + 1).padStart(2, "0")}</span>
+                    <span className="text-[10px] font-mono font-bold text-black/40">{String(idx + 1).padStart(2, "0")}</span>
                     <h4 className="text-sm sm:text-base font-bold text-black tracking-tight">{feat.title}</h4>
                   </div>
                   <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed pl-5">
@@ -390,7 +390,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs font-mono font-bold text-black/40 group-hover:text-black transition-colors">
-                      /{num}
+                      {num}
                     </span>
                     <span className="w-1.5 h-1.5 rounded-full bg-black/20 group-hover:bg-black transition-colors" />
                   </div>
@@ -563,7 +563,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             {data.benefits.slice(0, 4).map((b, idx) => (
               <div key={idx} className="p-4 sm:p-5 flex flex-col justify-between group">
                 <span className="text-xs font-mono font-bold text-black/30 mb-4 block group-hover:text-black transition-colors">
-                  0{idx + 1} // IMPACT
+                  0{idx + 1} • IMPACT
                 </span>
                 <div>
                   <h4 className="text-base sm:text-lg font-black text-black tracking-tight mb-2">
@@ -742,7 +742,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                   >
                     <div className="flex items-start gap-4 sm:gap-6">
                       <span className={`font-mono text-xs pt-1 transition-colors ${isOpen ? "text-black font-bold" : "text-black/30 group-hover:text-black/60"}`}>
-                        /{itemNumber}
+                        {itemNumber}
                       </span>
                       <span className={`text-base sm:text-lg font-bold transition-colors leading-snug ${isOpen ? "text-black" : "text-black/80 group-hover:text-black"}`}>
                         {faq.q}
