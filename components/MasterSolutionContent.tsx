@@ -217,91 +217,87 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      {/* SECTION 03 — EXPERIENCE SHOWCASE */}
-      <section className="py-12 lg:py-16 bg-gray-50/70 border-t border-black/5">
+      {/* SECTION 03 — EXPERIENCE SHOWCASE (BENTO VIEWPORT FIT) */}
+      <section className="py-8 lg:py-12 bg-gray-50/70 border-t border-black/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-black" />
+          <div className="max-w-3xl mx-auto text-center mb-6">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
+              <Sparkles className="w-3 h-3 text-black" />
               <span>Discover What&apos;s Possible</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black tracking-tight leading-[1.1] mb-3">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-tight mb-2">
               Experience the Possibilities
             </h2>
-            <p className="text-sm sm:text-base text-black/70 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-xl mx-auto line-clamp-2">
               {data.experienceIntro}
             </p>
           </div>
 
-          <div className="space-y-6">
-            {/* Featured Experience */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
+            {/* Left: Featured Experience Hero Card */}
             <Link 
               href="/solutions" 
-              className="group block relative rounded-3xl overflow-hidden bg-black aspect-[21/9] sm:aspect-[21/8] border border-black/10 shadow-lg hover:shadow-2xl transition-all duration-500"
+              className="lg:col-span-7 group block relative rounded-2xl sm:rounded-3xl overflow-hidden bg-black min-h-[320px] sm:min-h-[380px] border border-black/10 shadow-md hover:shadow-xl transition-all duration-500"
             >
               <SafeImage 
                 src={data.featuredExperience.img} 
                 alt={data.featuredExperience.title} 
-                className="w-full h-full object-cover opacity-70 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 ease-out" 
+                className="w-full h-full object-cover opacity-65 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 ease-out" 
                 containerClassName="w-full h-full" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-6 sm:p-10">
-                <div className="max-w-2xl text-white">
-                  <span className="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white mb-3">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex items-end p-5 sm:p-7">
+                <div className="max-w-xl text-white">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white mb-2">
                     {data.featuredExperience.category}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight mb-2">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight mb-1.5">
                     {data.featuredExperience.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-white/80 font-light mb-4 line-clamp-2 max-w-xl">
+                  <p className="text-xs sm:text-sm text-white/80 font-light mb-3 line-clamp-2">
                     {data.featuredExperience.desc}
                   </p>
-                  <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors">
+                  <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors">
                     <span>Explore {data.featuredExperience.category}</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </div>
             </Link>
 
-            {/* Experience Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {data.experienceCards.map((card, idx) => (
+            {/* Right: 4 Experience Cards (2x2 Compact Bento Grid) */}
+            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              {data.experienceCards.slice(0, 4).map((card, idx) => (
                 <Link 
                   key={idx} 
                   href="/solutions" 
-                  className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-black/10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="group flex flex-col bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-black/10 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-900 shrink-0">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-slate-900 shrink-0">
                     <SafeImage 
                       src={card.img} 
                       alt={card.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" 
                       containerClassName="w-full h-full" 
                     />
-                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-mono font-bold uppercase tracking-wider text-white">
+                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-mono font-bold uppercase tracking-wider text-white">
                       {card.category}
                     </span>
                   </div>
-                  <div className="p-5 flex flex-col flex-1">
-                    <h4 className="text-base font-bold text-black tracking-tight mb-2 group-hover:text-blue-600 transition-colors">
+                  <div className="p-3 sm:p-3.5 flex flex-col flex-1">
+                    <h4 className="text-xs sm:text-sm font-bold text-black tracking-tight mb-1 group-hover:text-blue-600 transition-colors line-clamp-1">
                       {card.title}
                     </h4>
-                    <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed mb-4 flex-1">
+                    <p className="text-[11px] text-black/60 font-light leading-snug mb-2 line-clamp-2 flex-1">
                       {card.desc}
                     </p>
-                    <div className="mt-auto flex items-center gap-2 text-xs font-bold text-black group-hover:text-blue-600 transition-colors pt-2">
-                      <span className="text-[11px] uppercase tracking-wider">Discover</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <div className="mt-auto flex items-center gap-1 text-[10px] font-bold text-black group-hover:text-blue-600 transition-colors">
+                      <span className="uppercase tracking-wider">Discover</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>
                 </Link>
               ))}
             </div>
-            
-            <p className="text-center text-xs font-light text-black/40 pt-4 uppercase tracking-widest">
-              Every interaction is designed to create memorable experiences that inspire learning, exploration, and meaningful engagement across every environment.
-            </p>
           </div>
         </div>
       </section>
