@@ -204,3 +204,16 @@
   50% { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
 }
+
+/* Footer Curtain Reveal Effect */
+.footer-curtain-container {
+  clip-path: inset(0 0 0 0);
+}
+
+.footer-curtain-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}

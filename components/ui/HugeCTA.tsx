@@ -7,7 +7,7 @@ import SafeImage from "@/components/SafeImage";
 
 export default function HugeCTA() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-black text-white w-full">
+    <section className="relative z-10 py-24 lg:py-32 overflow-hidden bg-black text-white w-full shadow-[0_30px_60px_rgba(0,0,0,0.8)] border-b border-white/10">
       {/* Full-width Background Image */}
       <div className="absolute inset-0 z-0">
         <SafeImage
