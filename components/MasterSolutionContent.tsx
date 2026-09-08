@@ -88,7 +88,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
     <div className="w-full bg-white text-black">
       
       {/* SECTION 01 - HERO BANNER */}
-      <section className="relative min-h-[75vh] py-16 lg:py-20 flex items-center justify-center overflow-hidden bg-black text-white">
+      <section className="relative min-h-[90vh] lg:min-h-[100vh] py-32 flex items-center justify-center overflow-hidden bg-black text-white">
         <div className="absolute inset-0 z-0">
           <SafeImage src={data.heroImg} alt={data.heroHeading} className="w-full h-full object-cover opacity-60 scale-105 animate-[slow-pan_20s_ease-in-out_infinite_alternate]" containerClassName="w-full h-full bg-black" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/80" />
