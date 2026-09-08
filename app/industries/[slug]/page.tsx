@@ -24,7 +24,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       <Navbar />
 
       {/* SECTION 01: HERO BANNER (Kept Dark for Image Contrast) */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden py-32">
         <div className="absolute inset-0 z-0">
           <SafeImage 
             src={industry.hero.img} 
@@ -40,10 +40,10 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
           <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-widest text-white backdrop-blur-md mb-8">
             {industry.hero.eyebrow}
           </span>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 max-w-5xl mx-auto drop-shadow-2xl tracking-tight leading-[1.05]">
             {industry.hero.title}
           </h1>
-          <p className="text-white/90 max-w-3xl mx-auto mb-6 text-xl sm:text-2xl font-light leading-relaxed">
+          <p className="text-white/90 max-w-3xl mx-auto mb-6 text-lg sm:text-xl font-light leading-relaxed">
             {industry.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
