@@ -88,7 +88,7 @@ const faqs = [
 ];
 
 export default function SolutionsContent() {
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeSection, setActiveSection] = useState(solutionsData[0].id);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const lastScrollY = useRef(0);
@@ -107,13 +107,46 @@ export default function SolutionsContent() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    // ScrollSpy Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Find the entry that is most visible
+        const visibleEntries = entries.filter(entry => entry.isIntersecting);
+        if (visibleEntries.length > 0) {
+          // Sort by intersection ratio to find the most prominent one
+          visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+          setActiveSection(visibleEntries[0].target.id);
+        }
+      },
+      { rootMargin: "-20% 0px -60% 0px", threshold: [0, 0.2, 0.5] }
+    );
+
+    solutionsData.forEach((s) => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
-  const filteredSolutions =
-    activeFilter === "all"
-      ? solutionsData
-      : solutionsData.filter((s) => s.id === activeFilter);
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 120; // sticky header offset
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth"
+      });
+      setActiveSection(id);
+    }
+  };
 
   return (
     <div className="w-full bg-white text-black pt-16">
@@ -147,22 +180,12 @@ export default function SolutionsContent() {
       <section className={`bg-white/80 backdrop-blur-xl border-b border-gray-200 py-4 sticky z-40 shadow-sm transition-all duration-500 ease-in-out ${isNavVisible ? "top-[76px]" : "top-0"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-nowrap overflow-x-auto gap-3 pb-2 scrollbar-hide snap-x items-center">
-            <button
-              onClick={() => setActiveFilter("all")}
-              className={`shrink-0 snap-start px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
-                activeFilter === "all"
-                  ? "bg-black text-white shadow-lg"
-                  : "bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-black border border-transparent"
-              }`}
-            >
-              All Solutions
-            </button>
             {solutionsData.map((s) => (
               <button
                 key={s.id}
-                onClick={() => setActiveFilter(s.id)}
+                onClick={() => scrollToSection(s.id)}
                 className={`shrink-0 snap-start px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
-                  activeFilter === s.id
+                  activeSection === s.id
                     ? "bg-black text-white shadow-lg"
                     : "bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-black border border-transparent"
                 }`}
@@ -177,7 +200,7 @@ export default function SolutionsContent() {
       {/* Editorial Solutions Grid */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          {filteredSolutions.map((item, idx) => {
+          {solutionsData.map((item, idx) => {
             const isEven = idx % 2 === 0;
             return (
               <div
