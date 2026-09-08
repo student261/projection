@@ -400,69 +400,83 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         </div>
       </section>
 
-      {/* SECTION 06 — INDUSTRIES WE SERVE */}
-      <section className="py-16 lg:py-20 bg-gray-50/50 border-b border-black/10">
+      {/* SECTION 06 — INDUSTRIES WE SERVE (VIEWPORT-OPTIMIZED) */}
+      <section className="py-8 lg:py-12 bg-gray-50/50 border-b border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="WHERE INNOVATION MEETS EVERY INDUSTRY"
-            heading="One Solution. Endless Possibilities."
-            subheading={data.industriesIntro}
-          />
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
+            <div>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
+                <Sparkles className="w-3 h-3 text-black" />
+                <span>Cross-Industry Applications</span>
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
+                One Solution.<br className="hidden sm:inline" /> Endless Possibilities.
+              </h2>
+            </div>
+            <p className="text-xs sm:text-sm text-black/60 font-light leading-relaxed max-w-md">
+              {data.industriesIntro}
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 grid-rows-[300px_300px] lg:grid-rows-[400px_350px] gap-6 mt-16">
-            
-            {/* Bento Top-Left: Featured Industry (Massive) */}
-            <Link href={data.featuredIndustry.href} className="group relative rounded-[2.5rem] overflow-hidden bg-black lg:col-span-8 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
-              <SafeImage src={data.featuredIndustry.img} alt={data.featuredIndustry.title} className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-1000 group-hover:scale-105" containerClassName="w-full h-full" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-8 sm:p-12">
-                <div className="w-full max-w-xl text-white">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/20">Featured</span>
-                  </div>
-                  <h3 className="mb-4">{data.featuredIndustry.title}</h3>
-                  <p className="text-base text-white/70 font-light mb-6 line-clamp-2">{data.featuredIndustry.desc}</p>
-                  
-                  <div className="inline-flex items-center gap-4 group/btn cursor-pointer">
-                    <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover/btn:bg-white group-hover/btn:border-white transition-all duration-300">
-                      <ArrowRight className="w-4 h-4 text-white group-hover/btn:text-black transition-colors" />
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* 1. Featured Industry */}
+            <Link 
+              href={data.featuredIndustry.href} 
+              className="group relative rounded-2xl overflow-hidden bg-black aspect-[3/4] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-black/10"
+            >
+              <SafeImage 
+                src={data.featuredIndustry.img} 
+                alt={data.featuredIndustry.title} 
+                className="w-full h-full object-cover opacity-75 group-hover:opacity-60 transition-all duration-700 group-hover:scale-105" 
+                containerClassName="w-full h-full" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-5">
+                <span className="w-fit px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white mb-2">
+                  Featured
+                </span>
+                <h4 className="text-xl font-bold text-white mb-1.5 tracking-tight group-hover:text-blue-300 transition-colors">
+                  {data.featuredIndustry.title}
+                </h4>
+                <p className="text-xs text-white/70 font-light line-clamp-2 mb-3 leading-relaxed">
+                  {data.featuredIndustry.desc}
+                </p>
+                <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors">
+                  <span>Explore Industry</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </Link>
 
-            {/* Bento Top-Right: Card 1 (Square) */}
-            <Link href={data.industryCards[0]?.href || "/"} className="group relative rounded-[2.5rem] overflow-hidden bg-black lg:col-span-4 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
-              <SafeImage src={data.industryCards[0]?.img || ""} alt={data.industryCards[0]?.title || ""} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-1000 group-hover:scale-110" containerClassName="w-full h-full" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
-                <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-white/80 transition-colors">{data.industryCards[0]?.title}</h4>
-                <p className="text-sm text-white/60 font-light line-clamp-2 mb-4">{data.industryCards[0]?.desc}</p>
-                <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-white transition-colors" />
-              </div>
-            </Link>
-
-            {/* Bento Bottom-Left: Card 2 (Wide-ish) */}
-            <Link href={data.industryCards[1]?.href || "/"} className="group relative rounded-[2.5rem] overflow-hidden bg-black lg:col-span-5 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
-              <SafeImage src={data.industryCards[1]?.img || ""} alt={data.industryCards[1]?.title || ""} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-1000 group-hover:scale-110" containerClassName="w-full h-full" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
-                <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-white/80 transition-colors">{data.industryCards[1]?.title}</h4>
-                <p className="text-base text-white/70 font-light line-clamp-2 mb-6 max-w-sm">{data.industryCards[1]?.desc}</p>
-                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-colors">
-                  <ArrowRight className="w-3.5 h-3.5 text-white/60 group-hover:text-black transition-colors" />
+            {/* 2, 3, 4 Companion Industries */}
+            {data.industryCards.slice(0, 3).map((ind, idx) => (
+              <Link 
+                key={idx} 
+                href={ind.href || "/industries"} 
+                className="group relative rounded-2xl overflow-hidden bg-black aspect-[3/4] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-black/10"
+              >
+                <SafeImage 
+                  src={ind.img} 
+                  alt={ind.title} 
+                  className="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-all duration-700 group-hover:scale-105" 
+                  containerClassName="w-full h-full" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-5">
+                  <span className="w-fit px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-mono font-bold uppercase tracking-wider text-white mb-2">
+                    Industry 0{idx + 2}
+                  </span>
+                  <h4 className="text-xl font-bold text-white mb-1.5 tracking-tight group-hover:text-blue-300 transition-colors">
+                    {ind.title}
+                  </h4>
+                  <p className="text-xs text-white/70 font-light line-clamp-2 mb-3 leading-relaxed">
+                    {ind.desc}
+                  </p>
+                  <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors">
+                    <span>Explore</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
-              </div>
-            </Link>
-
-            {/* Bento Bottom-Right: Card 3 (Very Wide) */}
-            <Link href={data.industryCards[2]?.href || "/"} className="group relative rounded-[2.5rem] overflow-hidden bg-black lg:col-span-7 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
-              <SafeImage src={data.industryCards[2]?.img || ""} alt={data.industryCards[2]?.title || ""} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-1000 group-hover:scale-110" containerClassName="w-full h-full" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-8 sm:p-12 flex flex-col justify-end items-end text-right">
-                <h4 className="text-3xl font-bold text-white mb-3 group-hover:text-white/80 transition-colors">{data.industryCards[2]?.title}</h4>
-                <p className="text-base text-white/70 font-light line-clamp-2 max-w-md mb-6">{data.industryCards[2]?.desc}</p>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">Discover Application <ArrowRight className="inline w-3 h-3 ml-1" /></span>
-              </div>
-            </Link>
-
+              </Link>
+            ))}
           </div>
         </div>
       </section>
