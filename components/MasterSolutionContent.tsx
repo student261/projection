@@ -87,18 +87,18 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
   return (
     <div className="w-full bg-white text-black">
       
-      {/* SECTION 01 — HERO BANNER */}
-      <section className="relative pt-32 pb-24 overflow-hidden bg-black border-b border-black/10 text-white min-h-[90vh] flex flex-col justify-center">
-        <div className="absolute inset-0 opacity-40 pointer-events-none">
-          <SafeImage src={data.heroImg} alt={data.heroHeading} className="w-full h-full object-cover" containerClassName="w-full h-full" priority />
-          <div className={`absolute inset-0 bg-gradient-to-t ${heroGradient}`} />
+      {/* SECTION 01 - HERO BANNER */}
+      <section className="relative min-h-[75vh] py-32 flex items-center justify-center overflow-hidden bg-black text-white">
+        <div className="absolute inset-0 z-0">
+          <SafeImage src={data.heroImg} alt={data.heroHeading} className="w-full h-full object-cover opacity-60 scale-105 animate-[slow-pan_20s_ease-in-out_infinite_alternate]" containerClassName="w-full h-full bg-black" priority />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/80" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-10">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/50 block mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-widest text-white backdrop-blur-md mb-8"
           >
             {data.solutionLabel}
           </motion.span>
@@ -106,7 +106,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl sm:text-7xl font-black text-white max-w-5xl leading-[1.05] mb-6 tracking-tight"
+            className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.05]"
           >
             {data.heroHeading}
           </motion.h1>
@@ -115,34 +115,28 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl sm:text-3xl text-white font-medium max-w-3xl mb-8 leading-tight"
+            className="text-white/90 max-w-3xl mx-auto mb-10 text-xl sm:text-2xl font-light leading-relaxed"
           >
             {data.heroSubtitle}
-          </motion.p>
-
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-lg sm:text-xl text-white/80 font-light max-w-3xl leading-relaxed mb-12"
-          >
-            {data.heroDescription}
           </motion.p>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="flex flex-wrap gap-4"
+            transition={{ delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button href="/projects" variant="primary">
-              Explore Projects
-            </Button>
-            <Link
-              href="/contact"
-              className="px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-transparent border border-white/20 hover:bg-white/10 transition-all duration-200"
+            <Link 
+              href="#what-is-it" 
+              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.08em] px-8 py-4 transition-all duration-300 active:scale-95 cursor-pointer w-full sm:w-auto bg-white text-black hover:bg-gray-200 shadow-md rounded-full"
             >
-              Talk to an Expert
+              Start Your Project
+            </Link>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.08em] px-8 py-4 transition-all duration-300 active:scale-95 cursor-pointer w-full sm:w-auto border border-white/40 bg-black/40 text-white hover:bg-white/20 backdrop-blur-sm rounded-full"
+            >
+              Book a Demo
             </Link>
           </motion.div>
         </div>
@@ -152,10 +146,10 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-80 z-10 animate-bounce"
         >
-          <span className="text-[9px] uppercase tracking-widest font-bold">Scroll to Discover</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-white/40 to-transparent" />
+          <span className="text-[10px] uppercase tracking-widest font-bold text-white drop-shadow-md">Discover More</span>
+          <ChevronDown className="w-4 h-4 text-white drop-shadow-md" />
         </motion.div>
       </section>
 
