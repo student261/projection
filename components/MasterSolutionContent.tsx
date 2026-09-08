@@ -106,7 +106,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl sm:text-7xl font-light text-white max-w-5xl leading-[1.05] mb-6 tracking-tight"
+            className="text-5xl sm:text-7xl font-black text-white max-w-5xl leading-[1.05] mb-6 tracking-tight"
           >
             {data.heroHeading}
           </motion.h1>
@@ -115,7 +115,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl sm:text-2xl text-white/90 font-light max-w-3xl mb-8"
+            className="text-xl sm:text-3xl text-white font-medium max-w-3xl mb-8 leading-tight"
           >
             {data.heroSubtitle}
           </motion.p>
@@ -124,7 +124,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-base sm:text-lg text-white/70 font-light max-w-3xl leading-relaxed mb-12"
+            className="text-lg sm:text-xl text-white/80 font-light max-w-3xl leading-relaxed mb-12"
           >
             {data.heroDescription}
           </motion.p>
@@ -188,9 +188,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 <Sparkles className="w-3 h-3" />
                 <span>Interactive Solution</span>
               </span>
-              <h2 className="text-black mb-4">
-                {data.whatIsHeading}
-              </h2>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black mb-6 tracking-tight leading-[1.1]">\n                {data.whatIsHeading}\n              </h2>
               <p className="text-lg text-black/70 font-light leading-relaxed">
                 {data.whatIsDescription}
               </p>
@@ -372,7 +370,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             <Link href={data.industryCards[0]?.href || "/"} className="group relative rounded-[2.5rem] overflow-hidden bg-black lg:col-span-4 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
               <SafeImage src={data.industryCards[0]?.img || ""} alt={data.industryCards[0]?.title || ""} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-1000 group-hover:scale-110" containerClassName="w-full h-full" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
-                <h4 className="text-white mb-2 group-hover:text-white/80 transition-colors">{data.industryCards[0]?.title}</h4>
+                <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-white/80 transition-colors">{data.industryCards[0]?.title}</h4>
                 <p className="text-sm text-white/60 font-light line-clamp-2 mb-4">{data.industryCards[0]?.desc}</p>
                 <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-white transition-colors" />
               </div>
@@ -382,7 +380,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             <Link href={data.industryCards[1]?.href || "/"} className="group relative rounded-[2.5rem] overflow-hidden bg-black lg:col-span-5 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
               <SafeImage src={data.industryCards[1]?.img || ""} alt={data.industryCards[1]?.title || ""} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-1000 group-hover:scale-110" containerClassName="w-full h-full" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
-                <h4 className="text-white mb-2 group-hover:text-white/80 transition-colors">{data.industryCards[1]?.title}</h4>
+                <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-white/80 transition-colors">{data.industryCards[1]?.title}</h4>
                 <p className="text-base text-white/70 font-light line-clamp-2 mb-6 max-w-sm">{data.industryCards[1]?.desc}</p>
                 <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-colors">
                   <ArrowRight className="w-3.5 h-3.5 text-white/60 group-hover:text-black transition-colors" />
@@ -394,7 +392,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             <Link href={data.industryCards[2]?.href || "/"} className="group relative rounded-[2.5rem] overflow-hidden bg-black lg:col-span-7 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
               <SafeImage src={data.industryCards[2]?.img || ""} alt={data.industryCards[2]?.title || ""} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-1000 group-hover:scale-110" containerClassName="w-full h-full" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-8 sm:p-12 flex flex-col justify-end items-end text-right">
-                <h4 className="text-white mb-3 group-hover:text-white/80 transition-colors">{data.industryCards[2]?.title}</h4>
+                <h4 className="text-3xl font-bold text-white mb-3 group-hover:text-white/80 transition-colors">{data.industryCards[2]?.title}</h4>
                 <p className="text-base text-white/70 font-light line-clamp-2 max-w-md mb-6">{data.industryCards[2]?.desc}</p>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">Discover Application <ArrowRight className="inline w-3 h-3 ml-1" /></span>
               </div>
@@ -417,7 +415,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8 sm:p-12 lg:p-16">
               <div className="max-w-4xl text-white">
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 mb-4 block">More Than Technology — Meaningful Outcomes</span>
-                <h2 className="mb-4 leading-[1.1]">{data.featuredBenefit.title}</h2>
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] tracking-tight">{data.featuredBenefit.title}</h2>
                 <p className="text-lg sm:text-xl text-white/70 font-light leading-relaxed max-w-2xl">
                   {data.featuredBenefit.desc}
                 </p>
