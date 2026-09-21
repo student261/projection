@@ -1,0 +1,339 @@
+
+=================== education.ts ===================
+L10: subtitle: "Turn classrooms, STEM labs, and auditoriums into active physical learning environments that boost retention and student engagement.",
+L14: title: "The Limitations of Traditional Classrooms",
+L15: intro: "Conventional passive classrooms struggle to maintain student focus, accommodate diverse sensory learning styles, and foster active collaboration among digital-native learners.",
+L16: items: [
+L20: { title: "Hardware Breakage & Maintenance", desc: "Tablets and handheld VR controllers suffer high damage rates and constant charging bottlenecks." },
+L22: { title: "Abstract Concept Comprehension", desc: "Complex physics, planetary orbits, and spatial geometry are hard to grasp without 3D interactive models." }
+L28: intro: "We believe education is most effective when students actively participate in the learning journey. By combining physical motion with interactive technology, we transform traditional classrooms into immersive environments where curiosity, collaboration, and innovation thrive.",
+L31: { title: "🌟 Kinesthetic Learning", desc: "Accelerate concept comprehension by allowing children to physically walk, jump, and interact with scientific models on floors and walls." },
+L42: intro: "Our interactive technologies are designed to create engaging learning environments where students actively participate, explore ideas, and collaborate through immersive experiences. Every solution is customized to meet the unique needs of educational institutions.",
+L43: items: [
+L44: { title: "Interactive Motion Floor", desc: "Overhead LiDAR tracking turns classroom floors into active math puzzles, solar systems, and cooperative sports games." },
+L46: { title: "Architectural Projection Mapping", desc: "Transform school auditoriums and libraries into panoramic historical eras, rainforest biomes, and deep-sea trenches." },
+L56: items: [
+L61: { title: "Museum & Science Gallery", desc: "Walk-in exhibit installations where students explore space missions, touch virtual fossils, and investigate world ecosystems.", tags: ["Interactive Exhibits", "Sensory Learning"], img: "/images/biosphere_ocean_gallery.jpg", href: "/projects/interactive-museum-exhibit" },
+L68: items: [
+L69: { title: "Measurably Stronger Concept Retention", desc: "Kinesthetic, movement-based learning solidifies complex spatial and mathematical concepts far longer than passive textbooks." },
+L70: { title: "High Active Student Participation", desc: "Multiplayer motion games motivate even reluctant or shy students to participate in group lessons." },
+L71: { title: "Enhanced Classroom Focus", desc: "Short, movement-integrated learning breaks help students regulate focus and channel energy constructively." },
+L81: items: [
+L83: { title: "Real-Time AI Vision", desc: "Intelligent tracking algorithms translate gestures and footsteps into instant game physics in under 15 milliseconds." },
+L84: { title: "Daylight Laser Projection", desc: "Ultra-bright, high-lumen laser optics cast vibrant, razor-sharp graphics that remain clear in daylight-lit classrooms." },
+L85: { title: "Collaborative Touch & Play", desc: "Zero-latency interactive surfaces allow multiple students to touch, draw, and solve challenges together simultaneously." }
+L92: items: [
+L93: { q: "What types of educational institutions can benefit from interactive learning solutions?", a: "Our solutions are designed for schools, colleges, universities, training centers, libraries, museums, STEM labs, learning centers, and educational exhibitions. Every experience is customized to suit the learning environment and audience." },
+L96: { q: "Are the systems easy for teachers to operate?", a: "Absolutely. We provide comprehensive training, intuitive interfaces, and ongoing technical support so educators can confidently manage and operate every interactive experience." },
+L97: { q: "Can these solutions be installed in existing classrooms?", a: "Yes. Most interactive systems can be integrated into existing classrooms, auditoriums, libraries, museums, and learning spaces with minimal disruption." },
+L100: { q: "How do interactive learning experiences improve student engagement?", a: "Interactive environments encourage students to actively participate, collaborate with peers, explore concepts through hands-on activities, and retain information more effectively, making learning both engaging and memorable." }
+L106: title: "Immersive STEM Lab & Sandbox Installation",
+L109: metric: "High",
+L110: metricLabel: "Active Participation Rate",
+L111: secondaryMetric: "Elevated",
+L112: secondaryMetricLabel: "Higher STEM Retention",
+L114: quote: "Students engage with complex geometry and science concepts far faster when they can interact with simulations on their feet.",
+L123: metric: "Multi-Hour",
+L124: metricLabel: "Dwell Time Increase",
+L125: secondaryMetric: "Complete",
+L126: secondaryMetricLabel: "Daylight Visibility",
+L137: metric: "50+",
+L138: metricLabel: "Simultaneous Players",
+L139: secondaryMetric: "Zero",
+L140: secondaryMetricLabel: "Wearables Required",
+
+=================== healthcare.ts ===================
+L10: subtitle: "We create calming, engaging environments that reduce anxiety and support pediatric therapy through movement.",
+L15: intro: "Medical facilities often feel intimidating, leading to anxiety in patients, especially children. Traditional waiting areas and therapy rooms lack engaging elements to distract and calm patients during stressful times.",
+L16: items: [
+L17: { title: "High Patient Anxiety", desc: "Clinical environments can be frightening and stressful for young patients and their families." },
+L18: { title: "Passive Waiting Areas", desc: "Long wait times with minimal engagement increase frustration and perceived wait duration." },
+L29: statement: "Every clinic and hospital should provide an environment that actively reduces stress and encourages positive engagement.",
+L31: { title: "🌟 Reduce Anxiety", desc: "Transform intimidating waiting rooms into immersive, playful environments that naturally distract and calm patients." },
+L32: { title: "🤝 Support Rehabilitation", desc: "Gamify physical therapy and movement exercises to increase patient compliance and enjoyment." },
+L37: quote: "\"Healing begins with a comforting environment that turns anxiety into wonder.\""
+L41: intro: "Our healthcare solutions focus on sensory engagement, therapeutic movement, and touchless interaction. We provide robust, hygienic systems built for continuous use in clinical environments.",
+L42: items: [
+L45: { title: "Calming Projection Mapping", desc: "Transform clinical ceilings and walls into soothing natural environments, ideal for MRI suites or dental rooms." },
+L48: { title: "Sensory Snoezelen Rooms", desc: "Fully integrated immersive environments designed specifically for autism spectrum and sensory processing support." }
+L55: items: [
+L58: { title: "MRI Distraction Suite", desc: "Calming visual projections and synchronized audio that relax patients during complex procedures.", tags: ["Projection Mapping", "Spatial Audio"], img: "/images/mri_distraction_suite.jpg" },
+L60: { title: "Hospital Corridors", desc: "Dynamic interactive elements that guide children playfully from waiting areas to consultation rooms.", tags: ["Motion Sensors", "Wayfinding"], img: "/images/hospital_interactive_corridor.jpg" },
+L67: items: [
+L68: { title: "Reduced Anxiety", desc: "Patients report significantly lower stress levels when waiting in interactive environments." },
+L79: intro: "Healthcare environments require technology that is safe, reliable, and entirely touchless. Our systems are engineered to operate continuously with zero physical contact required.",
+L80: items: [
+L83: { title: "Quiet Operation Projectors", desc: "Laser projection systems that operate silently to maintain a calming clinical atmosphere." },
+L93: items: [
+L94: { q: "Are the interactive systems safe from a hygiene perspective?", a: "Yes. All our primary healthcare solutions are completely touchless, eliminating the cross-contamination risks found in traditional waiting room toys and touchscreens." },
+L95: { q: "Can the systems be cleaned easily?", a: "The interactive surface is simply your existing floor or wall. You clean it exactly as you normally would, with standard hospital-grade disinfectants." },
+L98: { q: "How much space is required?", a: "We can design systems for spaces as small as 2x2 meters up to entire hospital corridors. We map the projection to fit your specific architectural layout." },
+
+=================== museums.ts ===================
+L4: export const museums: IndustryData = {
+L5: slug: "museums-culture",
+L11: img: "/images/industry_museums_hero.jpg",
+L14: title: "The Challenge in Museums",
+L15: intro: "Modern visitors, especially younger generations, expect more than just static displays. They want to be part of the story, but preserving delicate artifacts while providing deep interaction is a complex balance.",
+L16: items: [
+L18: { title: "Fragile Artifacts", desc: "Historical items cannot be physically handled, creating a barrier between the visitor and the history." },
+L19: { title: "Limited Space", desc: "Museums have vast archives but limited floor space to display information and context." },
+L21: { title: "Dwell Time", desc: "Visitors often move through galleries too quickly without absorbing the educational material." },
+L28: intro: "We believe the best museums don't just display history; they allow you to step inside it. By combining 360-degree projection with touchless interactivity, we turn archival data into emotional, memorable experiences.",
+L43: items: [
+L44: { title: "360° Projection Mapping", desc: "Transform entire rooms into immersive environments that transport visitors to different eras or landscapes." },
+L55: intro: "See how leading museums are using interactive projection to break attendance records and deeply engage their communities.",
+L56: items: [
+L58: { title: "Interactive Dino Dig", desc: "An augmented sandbox where children physically dig to uncover digitally projected fossils.", tags: ["Projection Mapping", "Depth Sensing"], img: "/images/museum_dino_sandbox.jpg" },
+L66: title: "Museum Metrics & Outcomes",
+L68: items: [
+L69: { title: "Increased Attendance", desc: "Immersive exhibits are massive draws, often doubling attendance numbers among younger demographics." },
+L70: { title: "Longer Dwell Times", desc: "Interactive storytelling keeps visitors engaged in galleries substantially longer than static displays." },
+L74: { title: "Social Media Sharing", desc: "Visually stunning immersive rooms naturally encourage photography, driving organic marketing." }
+L80: intro: "We understand that museums require technology that is virtually invisible, entirely silent, and capable of running flawlessly for years.",
+L81: items: [
+L83: { title: "Acoustically Silent Hardware", desc: "Laser projectors and media servers designed to operate silently so they don't disrupt the gallery ambiance." },
+L85: { title: "Touchless Radar Sensors", desc: "Detect hand gestures and body movement accurately without requiring any physical glass screens." },
+L87: { title: "Automated Show Control", desc: "Systems that automatically power on, calibrate, and sync audio/visuals before the museum opens every morning." }
+L94: items: [
+L95: { q: "Can projection mapping damage delicate artifacts?", a: "No. We use specially calibrated LED and Laser light sources that do not emit harmful UV or IR radiation, ensuring total safety for sensitive pigments and materials." },
+L96: { q: "Our building is a heritage site. Can you install without damaging walls?", a: "Yes. We frequently work in Grade I listed buildings. We use freestanding truss systems, tension mounts, and wireless data transmission to avoid drilling into historic architecture." },
+L99: { q: "What happens if a projector loses alignment?", a: "Our systems include automated camera-based recalibration. If a projector is bumped, the system can automatically re-align the edge-blending within seconds." },
+L100: { q: "Can we sync the visuals with spatial audio?", a: "Absolutely. We design and integrate multi-channel spatial audio systems that track with the interactive visual elements to create a truly immersive environment." }
+L109: metric: "1.2M+",
+L110: metricLabel: "Annual Visitors Welcomed",
+L111: secondaryMetric: "Certified",
+L112: secondaryMetricLabel: "Historic Preservation",
+L123: metric: "50+",
+L124: metricLabel: "Simultaneous Tracked Visitors",
+L125: secondaryMetric: "Top-Tier",
+L126: secondaryMetricLabel: "Visitor Satisfaction Rating",
+L128: quote: "Guests of all generations spend hours exploring the interactive reef floor — dwell times tripled overnight.",
+L137: metric: "Certified",
+L138: metricLabel: "UV Preservation Compliance",
+L139: secondaryMetric: "4.9 / 5",
+L140: secondaryMetricLabel: "Educational Review Score",
+L149: title: "Curate Immersive Cultural Journeys.",
+L151: buttonText: "Curate Immersive Cultural Journeys",
+L152: img: "/images/industry_museums_hero.jpg"
+
+=================== retail.ts ===================
+L5: slug: "retail-showrooms",
+L9: title: "Interactive Showrooms That Turn Browsing into High-Value Conversion",
+L10: subtitle: "Transform storefronts, flagship environments, and luxury showrooms into kinetic destinations with motion-reactive display architecture.",
+L16: items: [
+L18: { title: "Short Dwell Times", desc: "Shoppers move through stores quickly without engaging deeply with brand narratives." },
+L21: { title: "Lack of Analytics", desc: "Physical retail often lacks the deep engagement metrics available to digital marketers." },
+L31: { title: "🌟 Captivate Passersby", desc: "Use motion-reactive window displays to instantly grab attention and increase store entry rates." },
+L34: { title: "🌍 Measure Impact", desc: "Gain real-time insights into foot traffic, dwell time, and interaction rates." }
+L43: items: [
+L45: { title: "Lift-and-Learn Displays", desc: "Smart shelving that triggers detailed product information and dynamic visuals when a customer picks up an item." },
+L46: { title: "Immersive Fitting Rooms", desc: "Interactive mirrors and projection mapping that allow customers to change lighting and request different sizes seamlessly." },
+L51: bottomStatement: "Every solution is integrated seamlessly into your store architecture to enhance, not distract from, your products."
+L56: items: [
+L57: { title: "Flagship Storefront Window", desc: "A motion-reactive digital display that increases foot traffic by engaging pedestrians as they walk past.", tags: ["Interactive Window", "Computer Vision"], img: "/images/industry_retail_hero.jpg" },
+L60: { title: "Interactive Cosmetics Counter", desc: "Lift-and-learn technology that instantly displays tutorials and ingredients when a product is picked up.", tags: ["RFID Sensors", "Smart Displays"], img: "/images/cosmetics_smart_counter.jpg" },
+L66: title: "Retail Metrics & Outcomes",
+L67: intro: "Interactive brand experiences deliver measurable returns on investment by driving traffic, extending dwell time, and increasing conversions.",
+L68: items: [
+L69: { title: "Increased Foot Traffic", desc: "Interactive storefronts consistently capture attention, driving substantial increases in storefront-to-interior foot traffic." },
+L70: { title: "Extended Dwell Time", desc: "Immersive in-store activations keep customers engaged longer, directly correlating with higher sales volumes." },
+L71: { title: "Social Media Amplification", desc: "Visually stunning interactive spaces naturally encourage organic sharing and user-generated content on platforms like Instagram and TikTok." },
+L73: { title: "Deep Customer Insights", desc: "Gather anonymous analytics on how many people stopped, interacted, and dwelled at your activations." },
+L81: items: [
+L85: { title: "Anonymous Analytics Cameras", desc: "Edge-computing vision systems that measure footfall and engagement without storing personal data." },
+L86: { title: "Interactive Glass Films", desc: "Specialized films that turn standard storefront windows into high-contrast projection surfaces." },
+L89: bottomStatement: "Reliable, scalable, and completely integrated into your retail architecture."
+L94: items: [
+L95: { q: "Can the interactive window work in direct sunlight?", a: "We use ultra-high brightness laser projectors and specialized ambient-light-rejecting (ALR) films to ensure visibility, though we often optimize content for peak impact during afternoon and evening hours." },
+L97: { q: "Can the system track how many people interact?", a: "Yes. Our computer vision systems provide dashboards showing total passersby, stop rate, interaction rate, and average dwell time." },
+L100: { q: "Can customers use their smartphones to interact?", a: "Yes. We frequently integrate QR code handshakes that allow customers to control the large-scale displays using their own mobile devices, bridging the physical and digital." },
+L102: { q: "Can we integrate this with our inventory system?", a: "Yes, our API allows integrations with POS and inventory systems to ensure 'Lift and Learn' displays only showcase in-stock variations." }
+L111: metric: "Substantial",
+L112: metricLabel: "Dwell Time Increase",
+L113: secondaryMetric: "Continuous",
+L114: secondaryMetricLabel: "Daily Interactions",
+L125: metric: "Substantial",
+L126: metricLabel: "Store Entry Lift",
+L127: secondaryMetric: "Multi-Fold",
+L128: secondaryMetricLabel: "Engagement Duration",
+L139: metric: "Elevated",
+L140: metricLabel: "Sales Conversion Lift",
+L141: secondaryMetric: "Commercial-Grade",
+L142: secondaryMetricLabel: "System Reliability",
+L143: desc: "An experiential pop-up combining RFID lift-and-learn pedestals with custom sneaker projection mapping tables for instant personalized design.",
+
+=================== entertainment.ts ===================
+L16: items: [
+L43: items: [
+L47: { title: "Immersive Escape Rooms", desc: "Replace mechanical locks with dynamic projection mapping and motion-tracked puzzles." },
+L49: { title: "Interactive LED Dance Floors", desc: "High-impact LED floors integrated with Lidar tracking for nightclub and event entertainment." }
+L56: items: [
+L57: { title: "The Grid Motion Arena", desc: "A 50x50ft interactive floor where teams compete in fast-paced neon sports games.", tags: ["Interactive Floor", "Multiplayer"], img: "/images/interactive_floor_motion.jpg" },
+L66: title: "Business Metrics & ROI",
+L68: items: [
+L71: { title: "Instant Theme Changes", desc: "Switch your arena from a pirate adventure to a haunted Halloween maze instantly via software." },
+L74: { title: "Viral Marketing", desc: "The highly visual, active nature of the games generates massive amounts of user-generated content on TikTok and Instagram." }
+L81: items: [
+L82: { title: "High-FPS Optical Tracking", desc: "Custom Lidar and optical sensors that track dozens of fast-moving players with zero latency." },
+L84: { title: "Ruggedized Media Servers", desc: "Industrial-grade PCs built to run complex physics engines 24/7 without overheating." },
+L94: items: [
+L98: { q: "Can it track multiple people on a trampoline?", a: "Yes. Our proprietary tracking algorithms are specifically tuned to handle the complex z-axis depth changes of multiple people bouncing simultaneously." },
+L100: { q: "Is there a subscription fee?", a: "The base system operates perpetually with no mandatory fees. However, we offer an optional 'Game Pass' subscription that delivers new games and seasonal content every month." }
+L109: metric: "300K+",
+L110: metricLabel: "Seasonal Nighttime Visitors",
+L111: secondaryMetric: "IP66",
+L112: secondaryMetricLabel: "Weatherproof Reliability",
+L123: metric: "50+",
+L124: metricLabel: "Simultaneous Active Players",
+L125: secondaryMetric: "Zero",
+L126: secondaryMetricLabel: "Floor Hardware Wear",
+L127: desc: "A 50x50ft interactive floor and strike wall environment where teams compete in fast-paced neon ball sports, obstacle challenges, and team tournaments.",
+L137: metric: "Multi-Fold",
+L138: metricLabel: "Guest Stay Duration",
+L139: secondaryMetric: "Viral",
+L140: secondaryMetricLabel: "Social Media Impressions",
+
+=================== corporate.ts ===================
+L4: export const corporate: IndustryData = {
+L5: slug: "corporate",
+L8: eyebrow: "CORPORATE & EXECUTIVE HEADQUARTERS",
+L9: title: "Inspire Enterprise Clients and Showcase Strategic Innovation",
+L10: subtitle: "Modernize corporate headquarters, executive briefing centers, and lobbies with real-time generative digital architecture.",
+L11: img: "/images/industry_corporate_hero.jpg",
+L14: title: "The Challenge in Corporate Spaces",
+L15: intro: "Corporate headquarters and executive briefing centers are critical tools for closing enterprise deals, recruiting top talent, and communicating brand vision, but they often rely on outdated presentation methods.",
+L16: items: [
+L18: { title: "Uninspiring Lobbies", desc: "Corporate entrances often feature generic architecture that does nothing to communicate the company's forward-thinking brand." },
+L19: { title: "Complex Data Visualization", desc: "Explaining global operations, supply chains, or data networks is difficult without interactive, large-scale visualization." },
+L24: transition: "Interactive spatial architecture transforms corporate spaces into powerful, persuasive environments that communicate innovation instantly."
+L27: title: "Our Vision for Corporate Spaces",
+L29: statement: "Every corporate headquarters should physically embody the innovation and scale of the business it houses.",
+L36: transition: "This is how we help Fortune 500 companies build executive briefing centers that accelerate sales cycles and impress stakeholders.",
+L38: img: "/images/corporate_lobby_wall.jpg"
+L41: title: "Corporate Interactive Solutions",
+L42: intro: "We design high-end interactive installations specifically for the needs of enterprise sales, executive briefings, and corporate branding.",
+L43: items: [
+L44: { title: "Executive Briefing Walls", desc: "Massive ultra-high-resolution touch walls where executives can present complex data, 3D models, and global strategies." },
+L46: { title: "Interactive Product Showrooms", desc: "Projection mapped physical models that allow clients to explore software, machinery, or architectural designs interactively." },
+L48: { title: "Data-Driven Sculptures", desc: "Physical art installations in the atrium that change color and pattern based on live company stock prices or sustainability metrics." },
+L49: { title: "Immersive Boardrooms", desc: "Meeting spaces surrounded by 360-degree projection to completely immerse clients in your brand environment." }
+L54: title: "Featured Corporate Environments",
+L56: items: [
+L58: { title: "Generative Data Lobby", desc: "A lobby floor projection that generates unique digital art patterns based on the real-time volume of global company transactions.", tags: ["Generative Art", "API Integration"], img: "/images/interactive_floor_motion.jpg" },
+L60: { title: "The 360° Innovation Lab", desc: "An immersive room where R&D teams can step inside 3D CAD models of new products before they are physically prototyped.", tags: ["360 Projection", "CAD Integration"], img: "/images/planetarium_projection_dome.jpg" },
+L67: intro: "Corporate interactive installations are powerful sales and recruitment tools that deliver measurable business value.",
+L68: items: [
+L69: { title: "Accelerated Sales Cycles", desc: "Immersive executive briefings increase client comprehension of complex products, leading to faster deal closures." },
+L71: { title: "Centralized Brand Control", desc: "Marketing teams can push updated messaging, videos, and branding to every global office lobby simultaneously." },
+L74: { title: "Dynamic Space Utilization", desc: "Transform a single showroom from a product demo space into a corporate event venue instantly via software." }
+L80: intro: "We understand that corporate IT environments require strict security, seamless AV integration, and absolute reliability.",
+L81: items: [
+L82: { title: "Secure On-Premise Servers", desc: "Options for fully air-gapped or securely networked local rendering servers to protect sensitive corporate data." },
+L84: { title: "Unified AV Control", desc: "Deep integration with Crestron, AMX, and Extron systems so executives can control the room from a single familiar interface." },
+L86: { title: "SOC2 Compliant Cloud CMS", desc: "For networked systems, our cloud management platform adheres to strict enterprise security and access control standards." },
+L87: { title: "Redundant Failover Systems", desc: "Mission-critical briefing centers are equipped with automatic failover hardware to ensure a presentation never drops." }
+L92: title: "Corporate Installation FAQs",
+L94: items: [
+L95: { q: "Can we display live, sensitive company data safely?", a: "Yes. Our systems can be installed completely on-premise without external internet access, pulling data securely from your internal network via local APIs." },
+L98: { q: "Can the lobby art reflect our brand colors?", a: "Absolutely. We design generative algorithms that are strictly bound to your corporate brand guidelines, ensuring the art is always on-brand while constantly evolving." },
+L100: { q: "Can we integrate video conferencing into the interactive wall?", a: "Yes. We frequently integrate Zoom, Teams, or Webex into the massive interactive canvases, allowing for hybrid briefings with life-size remote participants." }
+L109: metric: "Sub-Frame",
+L110: metricLabel: "Neural Render Latency",
+L111: secondaryMetric: "Complete",
+L112: secondaryMetricLabel: "Local Edge Privacy",
+L120: title: "Corporate Lobby Installation",
+L123: metric: "Seamless",
+L124: metricLabel: "Real-Time Cloud Sync",
+L125: secondaryMetric: "4K",
+L126: secondaryMetricLabel: "Ultra-High Resolution",
+L127: desc: "A massive interactive data visualization wall reacting to foot traffic, global transactions, and sustainability metrics in real time.",
+L129: img: "/images/corporate_lobby_wall.jpg",
+L130: slug: "corporate-lobby-installation"
+L137: metric: "Enterprise",
+L138: metricLabel: "Greeting Accuracy",
+L139: secondaryMetric: "Sub-Second",
+L140: secondaryMetricLabel: "Response Time",
+L143: img: "/images/industry_corporate_hero.jpg",
+L149: title: "Build Next-Level Corporate Experiences.",
+L151: buttonText: "Build Next-Level Corporate Experiences",
+L152: img: "/images/industry_corporate_hero.jpg"
+
+=================== hospitality.ts ===================
+L16: items: [
+L17: { title: "First Impressions", desc: "The lobby experience sets the tone for the entire stay, yet many lobbies feel static and uninspiring." },
+L21: { title: "Event Customization", desc: "Banquet halls require expensive physical decorations to customize spaces for weddings and corporate events." },
+L22: { title: "Wayfinding", desc: "Large resorts often have confusing layouts that frustrate arriving guests." }
+L36: transition: "This vision empowers hoteliers to curate the perfect mood for any moment, day or night.",
+L43: items: [
+L46: { title: "Banquet Projection Mapping", desc: "Transform plain ballroom walls into immersive 360-degree environments for weddings and corporate galas." },
+L56: items: [
+L62: { title: "Resort Kids Play Cave", desc: "An interactive projection room where younger guests can play motion games while parents relax nearby.", tags: ["Motion Games", "Family Engagement"], img: "/images/education_interactive_floor.jpg" }
+L66: title: "Hospitality Metrics & Outcomes",
+L68: items: [
+L69: { title: "Viral Social Sharing", desc: "Interactive lobbies become the most photographed spot in the hotel, generating millions of organic social impressions." },
+L70: { title: "Premium Event Bookings", desc: "Venues with built-in 360° projection mapping command significant premiums for weddings and corporate events." },
+L71: { title: "Increased F&B Spend", desc: "Interactive dining and bar experiences keep guests on-property rather than seeking entertainment elsewhere." },
+L81: items: [
+L82: { title: "Concealed Projector Lifts", desc: "Motorized lifts that drop projectors from the ceiling only when in use, preserving clean ceiling lines." },
+L83: { title: "Whisper-Quiet Lasers", desc: "Advanced laser projectors with specialized cooling systems that operate silently in quiet lobbies and restaurants." },
+L84: { title: "Ambient Light Rejection", desc: "High-contrast projection techniques that perform flawlessly even in sunlit hotel atriums." },
+L86: { title: "Crestron/Control4 Integration", desc: "Seamless API integration with the hotel's existing AV and lighting control systems." },
+L94: items: [
+L95: { q: "Can the projectors be hidden from guest view?", a: "Yes. We work closely with interior designers and architects to conceal projectors inside ceiling soffits, custom enclosures, or motorized drop-down lifts." },
+L97: { q: "How do we control the content for private events?", a: "We provide an easy-to-use iPad interface. Event staff can instantly switch the ballroom projection from a standard ambient theme to custom corporate branding or wedding visuals." },
+L98: { q: "Does the system require a dedicated AV technician to run?", a: "Not at all. Our systems are fully automated. They turn on in the morning, switch themes throughout the day, and power down at night without any human intervention." },
+L100: { q: "How fast can you develop custom content for a VIP guest?", a: "Our CMS includes a templating engine that allows hotel staff to instantly generate personalized welcome messages or logos on the lobby floor or walls in seconds." }
+L109: metric: "Substantial",
+L110: metricLabel: "Lobby Dwell & Engagement",
+L111: secondaryMetric: "4.9 / 5",
+L112: secondaryMetricLabel: "Guest Delight Score",
+L123: metric: "Extended",
+L124: metricLabel: "Lounge Dwell Time",
+L125: secondaryMetric: "Commercial",
+L126: secondaryMetricLabel: "Operational Reliability",
+L128: quote: "The dynamic light transforms the mood from sunlit tranquility during brunch to intimate luxury cocktails by night.",
+L137: metric: "High Demand",
+L138: metricLabel: "Tasting Reservation Uptake",
+L139: secondaryMetric: "Zero",
+L140: secondaryMetricLabel: "Hardware on Tables",
+L142: quote: "It turned dining into performance art. Our reservations booked out six months in advance.",
+L150: subtitle: "Curate unforgettable arrival moments and interactive dining spectacles that guests share across the world.",
+
+=================== public-spaces.ts ===================
+L16: items: [
+L19: { title: "Confusing Wayfinding", desc: "Navigating massive public transit systems relies on static signage that cannot adapt to real-time changes or crowds." },
+L24: transition: "Large-scale interactive projection transforms these utilitarian transit spaces into engaging, dynamic civic landmarks."
+L31: { title: "🌟 Reduce Travel Stress", desc: "Introduce calming, ambient interactive art into high-stress environments like TSA checkpoints or terminal gates." },
+L43: items: [
+L47: { title: "Interactive Transit Tunnels", desc: "Turn long, boring underground subway transfer tunnels into immersive digital aquariums or interactive light shows." },
+L48: { title: "Digital Plaza Waterfalls", desc: "Large-scale interactive wall projections in shopping mall atriums that simulate nature and respond to crowd density." },
+L56: items: [
+L68: items: [
+L69: { title: "New Advertising Revenue", desc: "Lease interactive zones to premium brands, offering them higher engagement rates than static billboards." },
+L70: { title: "Improved Passenger Experience (PAX)", desc: "Airports with interactive entertainment zones consistently score higher in global passenger satisfaction surveys." },
+L71: { title: "Reduced Congestion", desc: "Dynamic wayfinding moves people through transit hubs more efficiently, reducing bottlenecks during peak hours." },
+L73: { title: "Civic Pride & Press", desc: "Innovative public art installations generate massive global press coverage and elevate the city's modern profile." },
+L76: bottomStatement: "Enhance the public experience while generating new revenue streams for venue operators."
+L81: items: [
+L94: items: [
+L95: { q: "Is the tracking camera system a privacy or security risk?", a: "No. Our sensors do not capture or record video. They only generate anonymous depth data (point clouds) to track movement, making them fully compliant with strict public privacy laws." },
+L96: { q: "Can the projectors withstand airport vibrations or subway trains?", a: "Yes. We use specialized vibration-dampening rigging systems and automated camera-based recalibration software to ensure the projection remains perfectly aligned." },
+L97: { q: "How do you install this in an airport that operates 24/7?", a: "We have extensive experience with phased overnight installations in high-security, 24/7 environments, ensuring zero disruption to daily passenger operations." },
+L98: { q: "Are the outdoor projectors weather-proof?", a: "The projectors themselves are housed in IP65-rated environmental enclosures with active heating and cooling, allowing them to operate year-round in any climate." },
+L100: { q: "Can advertisers measure the ROI of an interactive zone?", a: "Yes. The system provides detailed analytics on how many people passed by, how many stepped onto the active zone, and the average dwell time, providing clear DOOH metrics." }
+L109: metric: "Panoramic",
+L110: metricLabel: "Observation Deck Elevation",
+L111: secondaryMetric: "Substantial",
+L112: secondaryMetricLabel: "Increase in Guest Stay",
+L113: desc: "An interactive observation floor that responds to footsteps with simulated structural glass fractures, dynamic cloud patterns, and regional cartographic projections with zero-latency infrared sensors.",
+L114: quote: "Visitors stepping onto the observation floor trigger dramatic real-time visual ripples — creating unforgettable viral social media impressions.",
+L123: metric: "1M+",
+L124: metricLabel: "Annual Pedestrians Engaged",
+L125: secondaryMetric: "Certified",
+L126: secondaryMetricLabel: "Vandal-Proof Integration",
+L137: metric: "200+ Ft",
+L138: metricLabel: "Continuous Projection Surface",
+L139: secondaryMetric: "Zero",
+L140: secondaryMetricLabel: "Obstruction to Crowd Flow",
+L141: desc: "Ceiling-mounted high-lumen projection creating responsive water ripples and digital wildlife along terminal pathways, reducing travel stress without creating bottlenecks.",

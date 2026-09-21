@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap');
 @import "tailwindcss";
 
 @theme inline {
@@ -25,76 +24,69 @@
   }
 
   /* 
-    STANDARD SAAS TYPOGRAPHY BASELINE
-    Highly readable, balanced text sizes matching modern web standards.
+    UNIVERSAL ARCHITECTURAL TYPOGRAPHY SYSTEM
+    Standardized scale, weights, leading, and tracking across all viewports.
   */
   h1 {
     font-size: 2.25rem;
-    line-height: 1.1;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -0.025em;
   }
   @media (min-width: 640px) {
     h1 {
-      font-size: 3rem;
+      font-size: 3.75rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 4.5rem;
     }
   }
   
   h2 {
     font-size: 1.875rem;
-    line-height: 1.2;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: -0.025em;
   }
   @media (min-width: 640px) {
     h2 {
       font-size: 2.25rem;
     }
   }
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
   
   h3 {
-    font-size: 1.5rem;
-    line-height: 1.25;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
   @media (min-width: 640px) {
     h3 {
-      font-size: 1.875rem;
-    }
-  }
-
-  h4 { 
-    font-size: 1.25rem;
-    line-height: 1.3;
-    font-weight: 600;
-  }
-  @media (min-width: 640px) {
-    h4 {
-      font-size: 1.5rem;
-    }
-  }
-
-  h5 { 
-    font-size: 1.125rem;
-    line-height: 1.4;
-    font-weight: 600;
-  }
-  @media (min-width: 640px) {
-    h5 {
       font-size: 1.25rem;
     }
   }
 
-  h6 { 
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 500;
+  h4 { 
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
   @media (min-width: 640px) {
-    h6 {
-      font-size: 1.125rem;
+    h4 {
+      font-size: 1rem;
     }
+  }
+
+  p {
+    line-height: 1.625;
   }
 }
 
@@ -216,4 +208,32 @@
   left: 0;
   width: 100%;
   z-index: 0;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* GPU Hardware Acceleration for buttery-smooth mobile animations */
+  .gpu-accelerated {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Content visibility optimization for heavy below-the-fold content */
+  .content-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+  }
+
+  /* Smooth momentum touch scrolling */
+  .touch-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
 }

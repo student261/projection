@@ -5,10 +5,10 @@ export const entertainment: IndustryData = {
   slug: "entertainment",
   icon: Gamepad2,
   hero: {
-    eyebrow: "ENTERTAINMENT & LEISURE",
-    title: "High-Energy Multiplayer Interactive Attractions",
-    subtitle: "Turn floors, walls, and arenas into dynamic gaming environments for family entertainment centers and theme parks.",
-    img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
+    eyebrow: "ENTERTAINMENT, THEME PARKS & FECs",
+    title: "High-Energy Multiplayer Attractions That Drive Repeat Footfall",
+    subtitle: "Turn floors, walls, and obstacle arenas into responsive gaming environments with zero mechanical wear.",
+    img: "/images/industry_entertainment_hero.jpg",
   },
   challenges: {
     title: "The Challenge in Entertainment",
@@ -34,7 +34,8 @@ export const entertainment: IndustryData = {
       { title: "🌍 Active Physical Play", desc: "Encourage running, jumping, and teamwork rather than passive screen time." }
     ],
     transition: "This is how we help FECs and theme parks build the most profitable and engaging arenas in the industry.",
-    quote: "\"The best games are the ones you play with your whole body.\""
+    quote: "\"The best games are the ones you play with your whole body.\"",
+    img: "/images/entertainment_motion_arena.jpg"
   },
   solutions: {
     title: "Interactive Attractions",
@@ -53,12 +54,12 @@ export const entertainment: IndustryData = {
     title: "Featured Arenas",
     intro: "Discover the interactive attractions that are driving massive ticket sales and social media buzz around the world.",
     items: [
-      { title: "The Grid Motion Arena", desc: "A 50x50ft interactive floor where teams compete in fast-paced neon sports games.", tags: ["Interactive Floor", "Multiplayer"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_Igloofest_6U2A3280-55-WS.jpg" },
-      { title: "Augmented Dodgeball", desc: "A trampoline court enhanced with interactive projected targets and digital scoring.", tags: ["Interactive Trampoline", "Motion Tracking"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Themed_Entertainment_Wonderbox_Paradise_city_korea_DSC07507-WS.jpg" },
-      { title: "Zombie Strike Wall", desc: "An immersive wall where guests throw physical balls to fend off hordes of projected zombies.", tags: ["Ball Tracking", "Projection Mapping"], img: "https://momentfactory.com/cdn/shop/files/TME_MomentFactory_THELASTCHANCE_5.jpg" },
-      { title: "The Magic Drawing Room", desc: "Kids color physical paper templates, scan them, and watch their creations come alive on a massive digital wall.", tags: ["Scan & Play", "Interactive Wall"], img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg" },
-      { title: "Immersive Mini Golf", desc: "Projection mapped mini-golf courses where the terrain and obstacles change with every hole.", tags: ["Projection Mapping", "Object Tracking"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_Igloofest_6U2A3280-55-WS.jpg" },
-      { title: "Interactive Queue Lines", desc: "Keep guests entertained during long theme park waits with gesture-controlled games projected onto hallway walls.", tags: ["Gesture Tracking", "Throughput"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Themed_Entertainment_Wonderbox_Paradise_city_korea_DSC07507-WS.jpg" }
+      { title: "The Grid Motion Arena", desc: "A 50x50ft interactive floor where teams compete in fast-paced neon sports games.", tags: ["Interactive Floor", "Multiplayer"], img: "/images/interactive_floor_motion.jpg", href: "/solutions/interactive-floor" },
+      { title: "Augmented Dodgeball", desc: "A trampoline court enhanced with interactive projected targets and digital scoring.", tags: ["Interactive Trampoline", "Motion Tracking"], img: "/images/horizon_glass_floor.jpg", href: "/solutions/interactive-spaces" },
+      { title: "Zombie Strike Wall", desc: "An immersive wall where guests throw physical balls to fend off hordes of projected zombies.", tags: ["Ball Tracking", "Projection Mapping"], img: "/images/interactive_strike_wall.jpg", href: "/solutions/interactive-wall" },
+      { title: "The Magic Drawing Room", desc: "Kids color physical paper templates, scan them, and watch their creations come alive on a massive digital wall.", tags: ["Scan & Play", "Interactive Wall"], img: "/images/museum_dino_sandbox.jpg", href: "/projects/interactive-museum-exhibit" },
+      { title: "Immersive Mini Golf", desc: "Projection mapped mini-golf courses where the terrain and obstacles change with every hole.", tags: ["Projection Mapping", "Object Tracking"], img: "/images/interactive_minigolf_course.jpg", href: "/solutions/immersive-room" },
+      { title: "Interactive Queue Lines", desc: "Keep guests entertained during long theme park waits with gesture-controlled games projected onto hallway walls.", tags: ["Gesture Tracking", "Throughput"], img: "/images/architectural_light_beam.jpg", href: "/solutions/interactive-wall" }
     ]
   },
   benefits: {
@@ -98,5 +99,56 @@ export const entertainment: IndustryData = {
       { q: "What happens if a ball hits the projector or camera?", a: "All hardware is rigged securely to the ceiling (usually 15-20ft high) and encased in custom protective cages to prevent any damage from rogue balls." },
       { q: "Is there a subscription fee?", a: "The base system operates perpetually with no mandatory fees. However, we offer an optional 'Game Pass' subscription that delivers new games and seasonal content every month." }
     ]
+  },
+  caseStudies: [
+    {
+      client: "Sylvan Nature Reserve",
+      title: "Enchanted Night Trail",
+      headline: "2.4 km Outdoor All-Weather Illuminated Nature Trail",
+      tag: "NIGHT WALK & OUTDOOR IMMERSIVE",
+      metric: "High-Volume",
+      metricLabel: "Seasonal Nighttime Visitors",
+      secondaryMetric: "IP66",
+      secondaryMetricLabel: "Weatherproof Reliability",
+      desc: "A 2.4 km nighttime illuminated trail featuring motion-tracked projection mapping onto living trees, rock faces, and waterfall mist with sync-locked spatial audio.",
+      quote: "The outdoor projection transformed our natural park into a sold-out nighttime attraction through all four seasons.",
+      img: "/images/architectural_light_beam.jpg",
+      slug: "enchanted-night-trail"
+    },
+    {
+      client: "Active Arena FEC",
+      title: "Kinesthetic Multiplayer Motion Arena",
+      headline: "Zero-Wearable Dynamic Sports & Interactive Floor Arena",
+      tag: "ACTIVE MOTION ARENA",
+      metric: "Multi-Player",
+      metricLabel: "Simultaneous Active Players",
+      secondaryMetric: "Zero",
+      secondaryMetricLabel: "Floor Hardware Wear",
+      desc: "A 50x50ft interactive floor and strike wall environment where teams compete in fast-paced neon ball sports, obstacle challenges, and team tournaments.",
+      quote: "Because the games are light and camera vision, we have zero broken buttons or arcade breakdowns.",
+      img: "/images/entertainment_motion_arena.jpg",
+      slug: "arcade-active-arena"
+    },
+    {
+      client: "Skyline Observation Experience",
+      title: "Skyline Kinetic Glass Floor",
+      headline: "Shockwave Footstep Simulation in Massive Tourism Venues",
+      tag: "INTERACTIVE FLOOR ATTRACTION",
+      metric: "Multi-Fold",
+      metricLabel: "Guest Stay Duration",
+      secondaryMetric: "Viral",
+      secondaryMetricLabel: "Social Media Impressions",
+      desc: "High-altitude observation deck floor responding to footsteps with simulated structural glass fractures and kinetic visual ripples, creating viral social media moments.",
+      quote: "Every single visitor captures video of the floor reacting to their steps — unmatched social marketing.",
+      img: "/images/horizon_glass_floor.jpg",
+      slug: "skyline-observation-floor"
+    }
+  ],
+  cta: {
+    eyebrow: "NEXT-GEN ATTRACTION DESIGN",
+    title: "Engineer Next-Gen Attractions.",
+    subtitle: "Design high-throughput, motion-tracked gaming arenas and immersive night walks that captivate thousands of visitors daily.",
+    buttonText: "Engineer Next-Gen Attractions",
+    img: "/images/industry_entertainment_hero.jpg"
   }
 };

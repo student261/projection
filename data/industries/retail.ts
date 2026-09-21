@@ -2,13 +2,13 @@ import { ShoppingBag } from 'lucide-react';
 import { IndustryData } from './types';
 
 export const retail: IndustryData = {
-  slug: "retail",
+  slug: "retail-showrooms",
   icon: ShoppingBag,
   hero: {
-    eyebrow: "RETAIL INNOVATION",
-    title: "Interactive Experiences That Drive Foot Traffic and Engagement",
-    subtitle: "Transform storefronts and flagship locations into immersive brand destinations that captivate shoppers.",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_2_2a04207c-cf51-4e71-92ca-cbe58683722a.jpg",
+    eyebrow: "RETAIL & SHOWROOM INNOVATION",
+    title: "Interactive Showrooms That Turn Browsing into High-Value Conversion",
+    subtitle: "Transform storefronts, flagship environments, and luxury showrooms into kinetic destinations with motion-reactive display architecture.",
+    img: "/images/industry_retail_hero.jpg",
   },
   challenges: {
     title: "The Challenge in Modern Retail",
@@ -34,7 +34,8 @@ export const retail: IndustryData = {
       { title: "🌍 Measure Impact", desc: "Gain real-time insights into foot traffic, dwell time, and interaction rates." }
     ],
     transition: "We deliver this vision through scalable interactive installations tailored for global retail brands.",
-    quote: "\"The most successful retail spaces are no longer just stores; they are interactive brand experiences.\""
+    quote: "\"The most successful retail spaces are no longer just stores; they are interactive brand experiences.\"",
+    img: "/images/retail_interactive_showcase.jpg"
   },
   solutions: {
     title: "Interactive Retail Solutions",
@@ -53,19 +54,19 @@ export const retail: IndustryData = {
     title: "Featured Brand Activations",
     intro: "Explore how leading global brands are using interactive spatial technology to redefine the in-store experience.",
     items: [
-      { title: "Flagship Storefront Window", desc: "A motion-reactive digital display that increases foot traffic by engaging pedestrians as they walk past.", tags: ["Interactive Window", "Computer Vision"], img: "https://momentfactory.com/cdn/shop/files/20160103_momentfactory-1089-WS.jpg" },
-      { title: "Sneaker Customization Zone", desc: "An interactive projection mapping table where customers can design and preview custom sneakers in real-time.", tags: ["Projection Mapping", "Touch Integration"], img: "https://momentfactory.com/cdn/shop/files/OAKLEY_NYC_MOMENT_FACTORY_12_a4e033e8-d175-41d4-8b97-01eb3528897e.jpg" },
-      { title: "Luxury Fashion Pop-Up", desc: "A fully immersive 360-degree projection room detailing the heritage and craftsmanship of the brand.", tags: ["360 Projection", "Spatial Audio"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experiences_Sports_Entertainment_Real_Madrid_Games_087-WS_46fdefce-745c-4f6c-91a6-97cbf378a1d3.jpg" },
-      { title: "Interactive Cosmetics Counter", desc: "Lift-and-learn technology that instantly displays tutorials and ingredients when a product is picked up.", tags: ["RFID Sensors", "Smart Displays"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Holt_Renfrew_2_2a04207c-cf51-4e71-92ca-cbe58683722a.jpg" },
-      { title: "Gamified Kids Apparel Section", desc: "An interactive floor projector that keeps children entertained while parents shop nearby.", tags: ["Interactive Floor", "Motion Tracking"], img: "https://momentfactory.com/cdn/shop/files/20160103_momentfactory-1089-WS.jpg" },
-      { title: "Digital Brand Atrium", desc: "A massive, multi-story LED and projection installation that acts as the vibrant heartbeat of the retail space.", tags: ["Large Scale LED", "Generative Content"], img: "https://momentfactory.com/cdn/shop/files/OAKLEY_NYC_MOMENT_FACTORY_12_a4e033e8-d175-41d4-8b97-01eb3528897e.jpg" }
+      { title: "Flagship Storefront Window", desc: "A motion-reactive digital display that increases foot traffic by engaging pedestrians as they walk past.", tags: ["Interactive Window", "Computer Vision"], img: "/images/industry_retail_hero.jpg", href: "/projects/flagship-store-activation" },
+      { title: "Sneaker Customization Zone", desc: "An interactive projection mapping table where customers can design and preview custom sneakers in real-time.", tags: ["Projection Mapping", "Touch Integration"], img: "/images/sneaker_customization_table.jpg", href: "/projects/neo-tokyo-retail-popup" },
+      { title: "Luxury Fashion Pop-Up", desc: "A fully immersive 360-degree projection room detailing the heritage and craftsmanship of the brand.", tags: ["360 Projection", "Spatial Audio"], img: "/images/cathedral_projection_mapping.jpg", href: "/projects/neo-shinjuku-interactive-wall" },
+      { title: "Interactive Cosmetics Counter", desc: "Lift-and-learn technology that instantly displays tutorials and ingredients when a product is picked up.", tags: ["RFID Sensors", "Smart Displays"], img: "/images/cosmetics_smart_counter.jpg", href: "/contact" },
+      { title: "Gamified Kids Apparel Section", desc: "An interactive floor projector that keeps children entertained while parents shop nearby.", tags: ["Interactive Floor", "Motion Tracking"], img: "/images/education_interactive_floor.jpg", href: "/contact" },
+      { title: "Digital Brand Atrium", desc: "A massive, multi-story LED and projection installation that acts as the vibrant heartbeat of the retail space.", tags: ["Large Scale LED", "Generative Content"], img: "/images/hospitality_ambient_atrium.jpg", href: "/contact" }
     ]
   },
   benefits: {
     title: "Retail Metrics & Outcomes",
     intro: "Interactive brand experiences deliver measurable returns on investment by driving traffic, extending dwell time, and increasing conversions.",
     items: [
-      { title: "Increased Foot Traffic", desc: "Interactive storefronts consistently capture attention, driving a 40-60% increase in store entries." },
+      { title: "Increased Foot Traffic", desc: "Interactive storefronts consistently capture attention, driving substantial increases in storefront-to-interior foot traffic." },
       { title: "Extended Dwell Time", desc: "Immersive in-store activations keep customers engaged longer, directly correlating with higher sales volumes." },
       { title: "Social Media Amplification", desc: "Visually stunning interactive spaces naturally encourage organic sharing and user-generated content on platforms like Instagram and TikTok." },
       { title: "Agile Campaign Management", desc: "Update visuals across hundreds of stores globally with a single click via our cloud CMS." },
@@ -100,5 +101,56 @@ export const retail: IndustryData = {
       { q: "How do you handle maintenance if a projector goes down?", a: "We actively monitor system health remotely. If a unit fails, we receive an alert instantly and coordinate with local AV partners for rapid swap-outs." },
       { q: "Can we integrate this with our inventory system?", a: "Yes, our API allows integrations with POS and inventory systems to ensure 'Lift and Learn' displays only showcase in-stock variations." }
     ]
+  },
+  caseStudies: [
+    {
+      client: "Neo-Shinjuku District",
+      title: "Gamified Touch & Motion Projection Wall",
+      headline: "Multi-Touch Dynamic Façade Driving Viral Footfall",
+      tag: "TOUCH & GESTURE WALL",
+      metric: "Substantial",
+      metricLabel: "Dwell Time Increase",
+      secondaryMetric: "Continuous",
+      secondaryMetricLabel: "Daily Interactions",
+      desc: "A multi-touch interactive projection wall built for luxury retail fashion pop-ups and nightlife activations, responding instantly to pedestrian touch and body gestures.",
+      quote: "Passersby couldn't resist stopping to play with the wall, translating directly into a massive surge in store entries.",
+      img: "/images/retail_interactive_showcase.jpg",
+      slug: "neo-shinjuku-interactive-wall"
+    },
+    {
+      client: "Haute Horlogerie Luxury Flagship",
+      title: "Flagship Store Activation",
+      headline: "Footstep-Responsive Floral Motion Floor & Kinetic Display",
+      tag: "INTERACTIVE FLOOR & WALL",
+      metric: "Substantial",
+      metricLabel: "Store Entry Lift",
+      secondaryMetric: "Multi-Fold",
+      secondaryMetricLabel: "Engagement Duration",
+      desc: "An immersive retail brand activation where footsteps trigger blooming floral particle simulations and highlight seasonal product capsules.",
+      quote: "The storefront became the defining spectacle of the entire shopping district during our holiday campaign.",
+      img: "/images/industry_retail_hero.jpg",
+      slug: "flagship-store-activation"
+    },
+    {
+      client: "Neo-Tokyo Brand Lab",
+      title: "Neo-Tokyo Retail Pop-Up",
+      headline: "Interactive Product Customization & Holographic Shelving",
+      tag: "SMART MERCHANDISING",
+      metric: "Elevated",
+      metricLabel: "Sales Conversion Lift",
+      secondaryMetric: "Commercial-Grade",
+      secondaryMetricLabel: "System Reliability",
+      desc: "An experiential pop-up combining RFID lift-and-learn pedestals with custom sneaker projection mapping tables for instant personalized design.",
+      quote: "Shoppers customized products in real time right in front of their eyes, resulting in our highest sales velocity ever.",
+      img: "/images/sneaker_customization_table.jpg",
+      slug: "neo-tokyo-retail-popup"
+    }
+  ],
+  cta: {
+    eyebrow: "RETAIL SPATIAL TRANSFORMATION",
+    title: "Elevate Your Retail Experience.",
+    subtitle: "Ready to convert passersby into loyal customers with motion-responsive storefronts and interactive product showcases?",
+    buttonText: "Elevate Your Retail Experience",
+    img: "/images/industry_retail_hero.jpg"
   }
 };

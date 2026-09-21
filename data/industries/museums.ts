@@ -2,13 +2,13 @@ import { Landmark } from 'lucide-react';
 import { IndustryData } from './types';
 
 export const museums: IndustryData = {
-  slug: "museums",
+  slug: "museums-culture",
   icon: Landmark,
   hero: {
-    eyebrow: "MUSEUMS & CULTURE",
-    title: "Bring History and Art to Life with Immersive Storytelling",
-    subtitle: "Transform static galleries into highly engaging, interactive spaces that connect with modern audiences.",
-    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
+    eyebrow: "MUSEUMS, CULTURE & HERITAGE",
+    title: "Bring Art and Living History to Life with Immersive Storytelling",
+    subtitle: "Transform static archives and quiet galleries into multisensory, interactive journeys that inspire modern audiences.",
+    img: "/images/industry_museums_hero.jpg",
   },
   challenges: {
     title: "The Challenge in Museums",
@@ -34,7 +34,8 @@ export const museums: IndustryData = {
       { title: "🌍 Inclusive Design", desc: "Offer content that adapts to different languages, ages, and learning styles instantly." }
     ],
     transition: "Our interactive solutions bring this vision to life for galleries, heritage sites, and science centers worldwide.",
-    quote: "\"We don't just want visitors to see history; we want them to feel it.\""
+    quote: "\"We don't just want visitors to see history; we want them to feel it.\"",
+    img: "/images/cathedral_projection_mapping.jpg"
   },
   solutions: {
     title: "Interactive Museum Solutions",
@@ -53,12 +54,12 @@ export const museums: IndustryData = {
     title: "Featured Cultural Exhibits",
     intro: "See how leading museums are using interactive projection to break attendance records and deeply engage their communities.",
     items: [
-      { title: "The Immersive History Hall", desc: "A 360-degree projection room detailing the rise and fall of ancient civilizations.", tags: ["360 Projection", "Spatial Audio"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg" },
-      { title: "Interactive Dino Dig", desc: "An augmented sandbox where children physically dig to uncover digitally projected fossils.", tags: ["Projection Mapping", "Depth Sensing"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-188_1_-WS.jpg" },
-      { title: "Touchless Art Gallery", desc: "High-resolution digital canvases that let visitors zoom into the brushstrokes of masterpieces using hand gestures.", tags: ["Gesture Recognition", "4K Displays"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Heritage_Sites_Aura_GraceCathedral_8314-WS.jpg" },
-      { title: "The Ocean Floor Experience", desc: "A motion-reactive floor projection that simulates walking through a coral reef, parting the water with every step.", tags: ["Interactive Floor", "Generative Art"], img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png" },
-      { title: "Interactive City Model", desc: "A physical architectural model brought to life with dynamic overhead projection mapping showing urban growth.", tags: ["Object Mapping", "Data Visualization"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg" },
-      { title: "Digital Planetarium Dome", desc: "Immersive space exploration using ultra-short-throw projectors mapped to curved ceiling architecture.", tags: ["Dome Projection", "Real-time Rendering"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-188_1_-WS.jpg" }
+      { title: "The Immersive History Hall", desc: "A 360-degree projection room detailing the rise and fall of ancient civilizations.", tags: ["360 Projection", "Spatial Audio"], img: "/images/cathedral_projection_mapping.jpg", href: "/projects/aura-digital-cathedral" },
+      { title: "Interactive Dino Dig", desc: "An augmented sandbox where children physically dig to uncover digitally projected fossils.", tags: ["Projection Mapping", "Depth Sensing"], img: "/images/museum_dino_sandbox.jpg", href: "/contact" },
+      { title: "Touchless Art Gallery", desc: "High-resolution digital canvases that let visitors zoom into the brushstrokes of masterpieces using hand gestures.", tags: ["Gesture Recognition", "4K Displays"], img: "/images/biosphere_ocean_gallery.jpg", href: "/projects/chrono-echoes-artifact-wall" },
+      { title: "The Ocean Floor Experience", desc: "A motion-reactive floor projection that simulates walking through a coral reef, parting the water with every step.", tags: ["Interactive Floor", "Generative Art"], img: "/images/interactive_floor_motion.jpg", href: "/projects/biosphere-ocean-experience" },
+      { title: "Interactive City Model", desc: "A physical architectural model brought to life with dynamic overhead projection mapping showing urban growth.", tags: ["Object Mapping", "Data Visualization"], img: "/images/projection_cityscape_model.jpg", href: "/contact" },
+      { title: "Digital Planetarium Dome", desc: "Immersive space exploration using ultra-short-throw projectors mapped to curved ceiling architecture.", tags: ["Dome Projection", "Real-time Rendering"], img: "/images/planetarium_projection_dome.jpg", href: "/projects/celestial-dome-observatory" }
     ]
   },
   benefits: {
@@ -66,7 +67,7 @@ export const museums: IndustryData = {
     intro: "Investing in interactive spatial technology yields measurable returns in visitor satisfaction, attendance, and operational flexibility.",
     items: [
       { title: "Increased Attendance", desc: "Immersive exhibits are massive draws, often doubling attendance numbers among younger demographics." },
-      { title: "Longer Dwell Times", desc: "Interactive storytelling keeps visitors engaged in galleries 3x longer than static displays." },
+      { title: "Longer Dwell Times", desc: "Interactive storytelling keeps visitors engaged in galleries substantially longer than static displays." },
       { title: "Flexible Gallery Space", desc: "Change entire exhibitions overnight simply by updating the software content, saving millions in physical build costs." },
       { title: "Multi-language Support", desc: "Easily switch languages or offer personalized content based on visitor profiles." },
       { title: "Enhanced Accessibility", desc: "Touchless and large-scale visual installations are more accessible to visitors with varying physical abilities." },
@@ -98,5 +99,56 @@ export const museums: IndustryData = {
       { q: "What happens if a projector loses alignment?", a: "Our systems include automated camera-based recalibration. If a projector is bumped, the system can automatically re-align the edge-blending within seconds." },
       { q: "Can we sync the visuals with spatial audio?", a: "Absolutely. We design and integrate multi-channel spatial audio systems that track with the interactive visual elements to create a truly immersive environment." }
     ]
+  },
+  caseStudies: [
+    {
+      client: "Gothic Heritage Sanctuary",
+      title: "Architectural 360° Projection Mapping & Spatial Audio",
+      headline: "Transforming Historic Stone Sanctuaries into Living Digital Canvases",
+      tag: "ARCHITECTURAL PROJECTION",
+      metric: "Global",
+      metricLabel: "Annual Visitors Welcomed",
+      secondaryMetric: "Certified",
+      secondaryMetricLabel: "Historic Preservation",
+      desc: "An architectural light and sound masterpiece mapping 28 high-lumen 4K laser projectors across 60-foot vaulted ceilings with sub-millimeter precision and spatial 3D audio.",
+      quote: "The installation completely transformed how visitors experience our cathedral without placing a single screw in historic stonework.",
+      img: "/images/cathedral_projection_mapping.jpg",
+      slug: "aura-digital-cathedral"
+    },
+    {
+      client: "BioSphere Science Center",
+      title: "Interactive Museum Floor & 360° Marine Canvas",
+      headline: "Touchless Deep-Sea Exploration Through Kinetic Motion Projection",
+      tag: "INTERACTIVE FLOOR & WALL",
+      metric: "Multi-User",
+      metricLabel: "Simultaneous Tracked Visitors",
+      secondaryMetric: "Top-Tier",
+      secondaryMetricLabel: "Visitor Satisfaction Rating",
+      desc: "A 360-degree reactive ocean floor projection reacting dynamically to marine biodiversity interaction, scattering schools of fish and parting bioluminescent water ripples underfoot.",
+      quote: "Guests of all generations spend hours exploring the interactive reef floor — substantially extended gallery dwell times.",
+      img: "/images/biosphere_ocean_gallery.jpg",
+      slug: "biosphere-ocean-experience"
+    },
+    {
+      client: "National Antiquities Wing",
+      title: "Chrono Echoes Artifact Wall",
+      headline: "Low-UV Micro-Projection Unlocking Hidden Historical Layers",
+      tag: "HERITAGE PRESERVATION DISPLAY",
+      metric: "Certified",
+      metricLabel: "UV Preservation Compliance",
+      secondaryMetric: "Top-Tier",
+      secondaryMetricLabel: "Educational Review Score",
+      desc: "Directional low-UV micro-projection with infrared radar proximity tracking that softly illuminates historical digital layers and animations behind glass artifact cases.",
+      quote: "Delicate historical artifacts can now communicate their full context and history safely without compromising conservation rules.",
+      img: "/images/museum_interactive_exhibit.jpg",
+      slug: "chrono-echoes-artifact-wall"
+    }
+  ],
+  cta: {
+    eyebrow: "CULTURAL SPATIAL DESIGN",
+    title: "Curate Immersive Cultural Journeys.",
+    subtitle: "Bring your historic archives, fine art, and scientific exhibitions into vivid, interactive reality.",
+    buttonText: "Curate Immersive Cultural Journeys",
+    img: "/images/industry_museums_hero.jpg"
   }
 };

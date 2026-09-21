@@ -18,7 +18,7 @@ export default function SolutionsAccordion({ items }: { items: SolutionItem[] })
   const icons = [Lightbulb, Layers, Sparkles, Brain, Cpu, Network];
 
   return (
-    <div className="w-full border-t border-black/10">
+    <div className="w-full">
       {items.map((item, idx) => {
         const isOpen = openIdx === idx;
         const IconComponent = icons[idx % icons.length];

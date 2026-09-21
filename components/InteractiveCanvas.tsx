@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export interface SensorNode {
   id: string;
@@ -8,25 +8,115 @@ export interface SensorNode {
   y: number;
   type: 'lidar' | 'optical';
   phase: number;
+  range?: number;
 }
+
+export type ColorPhase = 'blue' | 'red' | 'green' | 'multi';
 
 interface InteractiveCanvasProps {
   nodes: SensorNode[];
   onAddNode: (x: number, y: number) => void;
-  colorPhase: 'blue' | 'red' | 'green' | 'multi';
+  onUpdateNodePosition?: (id: string, x: number, y: number) => void;
+  onSelectNode?: (id: string | null) => void;
+  selectedNodeId?: string | null;
+  colorPhase: ColorPhase;
 }
 
-export default function InteractiveCanvas({ nodes, onAddNode, colorPhase }: InteractiveCanvasProps) {
+export default function InteractiveCanvas({ 
+  nodes, 
+  onAddNode, 
+  onUpdateNodePosition,
+  onSelectNode,
+  selectedNodeId,
+  colorPhase
+}: InteractiveCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   
-  const handleClick = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
+  // Persistent refs for smooth 60 FPS rendering
+  const mousePosRef = useRef<{ x: number; y: number } | null>(null);
+  const draggingNodeIdRef = useRef<string | null>(null);
+  const dragStartPosRef = useRef<{ x: number; y: number } | null>(null);
+  const hasDraggedRef = useRef<boolean>(false);
+
+  // Sync latest props into ref so animation loop runs uninterrupted
+  const stateRef = useRef({
+    nodes,
+    colorPhase,
+    selectedNodeId
+  });
+
+  useEffect(() => {
+    stateRef.current = {
+      nodes,
+      colorPhase,
+      selectedNodeId
+    };
+  }, [nodes, colorPhase, selectedNodeId]);
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const rect = canvasRef.current?.getBoundingClientRect();
     if (!rect) return;
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    onAddNode(x, y);
-  }, [onAddNode]);
 
+    const currentNodes = stateRef.current.nodes;
+    const clickedNode = currentNodes.find(n => Math.hypot(n.x - x, n.y - y) < 32);
+
+    if (clickedNode) {
+      draggingNodeIdRef.current = clickedNode.id;
+      dragStartPosRef.current = { x, y };
+      hasDraggedRef.current = false;
+      if (onSelectNode) onSelectNode(clickedNode.id);
+    } else {
+      draggingNodeIdRef.current = null;
+      dragStartPosRef.current = { x, y };
+      hasDraggedRef.current = false;
+      if (onSelectNode) onSelectNode(null);
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    const rect = canvasRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    mousePosRef.current = { x, y };
+
+    if (draggingNodeIdRef.current) {
+      if (dragStartPosRef.current) {
+        const distMoved = Math.hypot(x - dragStartPosRef.current.x, y - dragStartPosRef.current.y);
+        if (distMoved > 4) {
+          hasDraggedRef.current = true;
+        }
+      }
+      if (onUpdateNodePosition) {
+        onUpdateNodePosition(draggingNodeIdRef.current, x, y);
+      }
+    }
+  };
+
+  const handleMouseUp = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    const rect = canvasRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    if (!draggingNodeIdRef.current && !hasDraggedRef.current) {
+      onAddNode(x, y);
+    }
+
+    draggingNodeIdRef.current = null;
+    dragStartPosRef.current = null;
+    hasDraggedRef.current = false;
+  };
+
+  const handleMouseLeave = () => {
+    mousePosRef.current = null;
+    draggingNodeIdRef.current = null;
+  };
+
+  // High-performance animation loop running ONCE on mount
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -48,121 +138,218 @@ export default function InteractiveCanvas({ nodes, onAddNode, colorPhase }: Inte
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    const GRID_SIZE = 18;
-    const cols = Math.floor(width / GRID_SIZE) + 1;
-    const rows = Math.floor(height / GRID_SIZE) + 1;
-
+    const GRID_SIZE = 28;
     let time = 0;
 
-    const getBaseColor = (intensity: number) => {
-      if (colorPhase === 'blue') return `rgba(59, 130, 246, ${intensity})`; // Blue
-      if (colorPhase === 'red') return `rgba(239, 68, 68, ${intensity})`; // Red
-      if (colorPhase === 'green') return `rgba(16, 185, 129, ${intensity})`; // Green
-      return `rgba(139, 92, 246, ${intensity})`; // Purple for multi
+    const getColorTheme = (color: ColorPhase) => {
+      switch (color) {
+        case 'blue':
+          return { hex: '#00f0ff', rgb: '0, 240, 255' };
+        case 'red':
+          return { hex: '#ff0055', rgb: '255, 0, 85' };
+        case 'green':
+          return { hex: '#00ff88', rgb: '0, 255, 136' };
+        default:
+          return { hex: '#b026ff', rgb: '176, 38, 255' };
+      }
     };
 
     const render = () => {
-      time += 0.02;
-      
-      // Clear background
+      time += 0.025;
+      const { 
+        nodes: currentNodes, 
+        colorPhase: currentColor, 
+        selectedNodeId: currentSelectedId 
+      } = stateRef.current;
+
+      const mouse = mousePosRef.current;
+      const theme = getColorTheme(currentColor);
+
+      // 1. CLEAR BACKGROUND
       ctx.fillStyle = '#050508';
       ctx.fillRect(0, 0, width, height);
 
-      // Draw Grid
-      ctx.lineWidth = 1;
+      const cols = Math.floor(width / GRID_SIZE) + 1;
+      const rows = Math.floor(height / GRID_SIZE) + 1;
+
+      // 2. AMBIENT BLUEPRINT DOTS (1 fast batched call)
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.04)';
+      ctx.beginPath();
       for (let i = 0; i < cols; i++) {
+        const px = i * GRID_SIZE;
         for (let j = 0; j < rows; j++) {
+          ctx.rect(px, j * GRID_SIZE, 1.2, 1.2);
+        }
+      }
+      ctx.fill();
+
+      // 3. SCAN FIELD INTERSECTION RIPPLES
+      if (currentNodes.length > 0) {
+        ctx.fillStyle = `rgba(${theme.rgb}, 0.85)`;
+        ctx.beginPath();
+
+        for (let i = 0; i < cols; i++) {
           const px = i * GRID_SIZE;
-          const py = j * GRID_SIZE;
+          for (let j = 0; j < rows; j++) {
+            const py = j * GRID_SIZE;
 
-          let influenceCount = 0;
-          let maxInfluence = 0;
-          let totalWave = 0;
+            let influenceCount = 0;
+            let waveTotal = 0;
 
-          // Calculate sensor influences on this grid point
-          for (const node of nodes) {
-            const dx = px - node.x;
-            const dy = py - node.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            
-            // Base range of sensor
-            const range = 250; 
-            
-            if (dist < range) {
-              influenceCount++;
-              const normalizedDist = dist / range;
-              const influence = 1 - normalizedDist;
-              maxInfluence = Math.max(maxInfluence, influence);
-              
-              // Pulsing wave originating from sensor
-              const wave = Math.sin(dist * 0.05 - time * 3 + node.phase);
-              totalWave += wave * influence;
+            for (let k = 0; k < currentNodes.length; k++) {
+              const node = currentNodes[k];
+              const dx = px - node.x;
+              const dy = py - node.y;
+              const distSq = dx * dx + dy * dy;
+              const range = node.range || 260;
+
+              if (distSq < range * range) {
+                influenceCount++;
+                const dist = Math.sqrt(distSq);
+                const norm = 1 - dist / range;
+                waveTotal += Math.sin(dist * 0.05 - time * 3 + node.phase) * norm;
+              }
+            }
+
+            if (influenceCount >= 2) {
+              // Intersecting generative fusion point
+              const r = Math.max(0.8, 2.2 + waveTotal * 1.5);
+              ctx.moveTo(px + r, py);
+              ctx.arc(px, py, r, 0, Math.PI * 2);
+            } else if (influenceCount === 1 && waveTotal > 0.25) {
+              ctx.moveTo(px + 1.3, py);
+              ctx.arc(px, py, 1.3, 0, Math.PI * 2);
             }
           }
+        }
+        ctx.fill();
+      }
 
-          // Render point based on influence
-          if (influenceCount > 0) {
-            // FUSION ACHIEVED: Point is under multiple sensors
-            if (influenceCount >= 2) {
+      // 4. LASER TRIANGULATION BETWEEN NODES
+      if (currentNodes.length > 1) {
+        ctx.lineWidth = 1.2;
+        for (let a = 0; a < currentNodes.length; a++) {
+          for (let b = a + 1; b < currentNodes.length; b++) {
+            const na = currentNodes[a];
+            const nb = currentNodes[b];
+            const dist = Math.hypot(na.x - nb.x, na.y - nb.y);
+
+            if (dist < 480) {
+              const alpha = Math.max(0.12, (1 - dist / 480) * 0.65);
+              ctx.strokeStyle = `rgba(${theme.rgb}, ${alpha})`;
               ctx.beginPath();
-              const radius = Math.max(0.1, 2.5 + (totalWave * 1.5));
-              ctx.arc(px, py, radius, 0, Math.PI * 2);
-              const intensity = Math.max(0, Math.min(1, 0.8 + totalWave * 0.2));
-              ctx.fillStyle = getBaseColor(intensity);
-              ctx.fill();
-              
-              // Draw neural connections to adjacent cells if highly stimulated
-              if (totalWave > 0.5) {
-                ctx.beginPath();
-                ctx.moveTo(px, py);
-                ctx.lineTo(px + GRID_SIZE, py);
-                ctx.strokeStyle = getBaseColor(0.3);
-                ctx.stroke();
-                
-                ctx.beginPath();
-                ctx.moveTo(px, py);
-                ctx.lineTo(px, py + GRID_SIZE);
-                ctx.strokeStyle = getBaseColor(0.3);
-                ctx.stroke();
-              }
-            } 
-            // SINGLE SENSOR: Basic scanning mode
-            else {
+              ctx.moveTo(na.x, na.y);
+              ctx.lineTo(nb.x, nb.y);
+              ctx.stroke();
+
+              // Moving photon data packet
+              const packetPos = (time * 1.4 + (a * 7 + b * 11)) % 1;
+              const px = na.x + (nb.x - na.x) * packetPos;
+              const py = na.y + (nb.y - na.y) * packetPos;
+
+              ctx.fillStyle = '#ffffff';
               ctx.beginPath();
-              ctx.arc(px, py, 1.5, 0, Math.PI * 2);
-              ctx.fillStyle = `rgba(255, 255, 255, ${0.1 + maxInfluence * 0.2})`;
+              ctx.arc(px, py, 2.5, 0, Math.PI * 2);
               ctx.fill();
             }
-          } else {
-            // NO SENSOR: Ambient dark blueprint grid
-            ctx.beginPath();
-            ctx.arc(px, py, 1, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.03)';
-            ctx.fill();
           }
         }
       }
 
-      // Draw the Sensors themselves
-      for (const node of nodes) {
-        // Outer pulsing ring
+      // 5. SENSORS WITH RADAR SWEEPS & RANGE RINGS
+      for (let i = 0; i < currentNodes.length; i++) {
+        const node = currentNodes[i];
+        const isSelected = node.id === currentSelectedId;
+        const range = node.range || 260;
+
+        // Concentric distance rings
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 15 + Math.sin(time * 2 + node.phase) * 5, 0, Math.PI * 2);
-        ctx.strokeStyle = getBaseColor(0.5);
-        ctx.lineWidth = 2;
+        ctx.arc(node.x, node.y, range * 0.45, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, range * 0.8, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, range, 0, Math.PI * 2);
         ctx.stroke();
 
-        // Inner core
+        // Smooth rotating radar beam
+        const sweepAngle = (time * 1.6 + node.phase) % (Math.PI * 2);
+        const sweepWedge = Math.PI / 4.5; // ~40 degree sector
+
+        ctx.save();
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 6, 0, Math.PI * 2);
+        ctx.moveTo(node.x, node.y);
+        ctx.arc(node.x, node.y, range, sweepAngle - sweepWedge, sweepAngle);
+        ctx.closePath();
+        ctx.fillStyle = `rgba(${theme.rgb}, 0.12)`;
+        ctx.fill();
+
+        // Radar leading edge line
+        ctx.beginPath();
+        ctx.moveTo(node.x, node.y);
+        ctx.lineTo(node.x + Math.cos(sweepAngle) * range, node.y + Math.sin(sweepAngle) * range);
+        ctx.strokeStyle = `rgba(${theme.rgb}, 0.65)`;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+        ctx.restore();
+
+        // Pulsing sensor core
+        const pulseSize = 16 + Math.sin(time * 3 + node.phase) * 5;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, pulseSize, 0, Math.PI * 2);
+        ctx.strokeStyle = isSelected ? '#ffffff' : theme.hex;
+        ctx.lineWidth = isSelected ? 2.5 : 1.5;
+        ctx.stroke();
+
+        // White center dot
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
         ctx.fillStyle = '#ffffff';
         ctx.fill();
-        
-        // Label
-        ctx.font = '10px monospace';
-        ctx.fillStyle = 'rgba(255,255,255,0.7)';
-        ctx.fillText(node.type.toUpperCase(), node.x + 15, node.y - 15);
-        ctx.fillText(node.id, node.x + 15, node.y - 5);
+
+        // Clean label
+        ctx.font = 'bold 10px monospace';
+        ctx.fillStyle = isSelected ? '#ffffff' : 'rgba(255, 255, 255, 0.9)';
+        ctx.textAlign = 'left';
+        ctx.fillText(`[${node.id}]`, node.x + 16, node.y - 8);
+
+        ctx.font = '9px monospace';
+        ctx.fillStyle = theme.hex;
+        ctx.fillText(node.type.toUpperCase(), node.x + 16, node.y + 3);
+      }
+
+      // 6. SUBTLE CURSOR SCANNER (Clean & minimal)
+      if (mouse && !draggingNodeIdRef.current) {
+        const { x: mx, y: my } = mouse;
+
+        ctx.save();
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+        ctx.lineWidth = 1;
+
+        // Small crosshair
+        ctx.beginPath();
+        ctx.moveTo(mx - 8, my);
+        ctx.lineTo(mx + 8, my);
+        ctx.moveTo(mx, my - 8);
+        ctx.lineTo(mx, my + 8);
+        ctx.stroke();
+
+        // Raycast from sensors to cursor
+        for (let i = 0; i < currentNodes.length; i++) {
+          const n = currentNodes[i];
+          const dist = Math.hypot(n.x - mx, n.y - my);
+          const range = n.range || 260;
+
+          if (dist < range) {
+            ctx.beginPath();
+            ctx.setLineDash([3, 5]);
+            ctx.moveTo(n.x, n.y);
+            ctx.lineTo(mx, my);
+            ctx.strokeStyle = `rgba(${theme.rgb}, 0.35)`;
+            ctx.stroke();
+            ctx.setLineDash([]);
+          }
+        }
+        ctx.restore();
       }
 
       animationFrameId = requestAnimationFrame(render);
@@ -174,14 +361,18 @@ export default function InteractiveCanvas({ nodes, onAddNode, colorPhase }: Inte
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [nodes, colorPhase]);
+  }, []);
 
   return (
     <canvas 
       ref={canvasRef} 
-      onClick={handleClick}
-      className="absolute inset-0 w-full h-full block cursor-crosshair touch-none"
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
+      className="absolute inset-0 w-full h-full block cursor-crosshair touch-none select-none"
       style={{ background: '#050508' }}
     />
   );
 }
+

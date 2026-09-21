@@ -1,16 +1,17 @@
 import { notFound } from "next/navigation";
-import { industriesData, sharedDelivery } from "@/data/industries";
+import { industriesData, sharedDelivery, getIndustryCaseStudies } from "@/data/industries";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
-import { ArrowRight, ChevronDown, Activity, Lightbulb, Sparkles, Network, Terminal, CheckCircle2, ShieldAlert, TrendingDown, Layers, Brain, Cpu, Users, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Activity, Lightbulb, Sparkles, Network, Terminal, CheckCircle2, ShieldAlert, TrendingDown, Layers, Brain, Cpu, Users, ArrowUpRight, Compass, Wrench, GraduationCap, ShieldCheck } from "lucide-react";
 import Button from "@/components/ui/Button";
-import Divider from "@/components/ui/Divider";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FAQAccordion from "../[slug]/FAQAccordion";
 import SolutionsAccordion from "@/components/SolutionsAccordion";
 import StickyExperiences from "@/components/StickyExperiences";
+import CaseStudiesSpotlight from "@/components/CaseStudiesSpotlight";
+
 export default function EducationIndustryPage() {
   const industry = industriesData["education"];
 
@@ -18,631 +19,466 @@ export default function EducationIndustryPage() {
     notFound();
   }
 
+  const caseStudies = getIndustryCaseStudies(industry);
+
   return (
     <main className="min-h-screen bg-white text-black flex flex-col selection:bg-black selection:text-white">
       <Navbar />
 
-      {/* SECTION 01: HERO BANNER (Enhanced & Immersive) */}
-      <section className="relative h-[95vh] min-h-[700px] flex items-center overflow-hidden bg-black">
+      {/* SECTION 01: HERO BANNER (Clean & Cinematic) */}
+      <section className="relative h-screen min-h-screen flex flex-col justify-between items-center overflow-hidden pt-24 sm:pt-28 pb-4 sm:pb-6 bg-black">
         <div className="absolute inset-0 z-0">
           <SafeImage 
             src={industry.hero.img} 
             alt={industry.hero.title} 
-            className="w-full h-full object-cover opacity-50 scale-105 animate-[slow-pan_20s_ease-in-out_infinite_alternate]" 
+            className="w-full h-full object-cover opacity-55 scale-105" 
             containerClassName="w-full h-full bg-black"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90 pointer-events-none" />
         </div>
         
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16 pt-20">
-          <div className="flex-1 text-left">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-bold uppercase tracking-widest text-emerald-400 backdrop-blur-md mb-8">
-              <Sparkles className="w-4 h-4" /> {industry.hero.eyebrow}
-            </span>
-            <h1 className="text-white text-5xl md:text-7xl font-black mb-6 drop-shadow-2xl leading-[1.1] tracking-tight">
-              {industry.hero.title}
-            </h1>
-            <p className="text-gray-300 mb-10 text-lg md:text-2xl font-light leading-relaxed max-w-2xl border-l-2 border-emerald-500 pl-6">
-              {industry.hero.subtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row items-start gap-4">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-[0.08em] px-8 py-4 bg-emerald-500 text-black hover:bg-emerald-400 transition-all duration-300 rounded-full shadow-[0_0_40px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.5)] hover:-translate-y-1"
-              >
-                Create an Interactive Learning Space
-              </Link>
-              <Link 
-                href="#experiences" 
-                className="inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-[0.08em] px-8 py-4 bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-300 rounded-full hover:-translate-y-1"
-              >
-                Explore Experiences
-              </Link>
-            </div>
+        <div className="my-auto relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/90 backdrop-blur-md mb-3 sm:mb-4 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-white/80" />
+            {industry.hero.eyebrow}
+          </span>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-3 sm:mb-4 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.08]">
+            {industry.hero.title}
+          </h1>
+          <p className="text-white/80 max-w-2xl mx-auto mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg font-light leading-relaxed">
+            {industry.hero.subtitle}
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-7 py-3 sm:py-3.5 rounded-full bg-white text-black hover:bg-white/90 shadow-xl transition-all duration-300 active:scale-95 w-full sm:w-auto"
+            >
+              Create an Interactive Learning Space
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link 
+              href="#experiences" 
+              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-7 py-3 sm:py-3.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-300 active:scale-95 w-full sm:w-auto"
+            >
+              Explore Experiences
+            </Link>
           </div>
+        </div>
+      </section>
+
+      {/* SECTION 02: THE CHALLENGE (Pure Editorial — Zero Boxes / Zero Cards) */}
+      <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="flex-1 w-full hidden lg:block relative h-[600px]">
-             {/* Floating Interactive Elements */}
-             <div className="absolute top-10 right-10 w-64 p-6 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl animate-[float_6s_ease-in-out_infinite]">
-               <div className="flex items-center gap-4 mb-4">
-                 <div className="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-black">
-                   <Activity className="w-6 h-6" />
-                 </div>
-                 <div>
-                   <div className="text-white font-bold">Motion Tracking</div>
-                   <div className="text-emerald-400 text-xs">Real-time response</div>
-                 </div>
-               </div>
-               <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                 <div className="w-3/4 h-full bg-emerald-500 rounded-full animate-pulse" />
-               </div>
-             </div>
-
-             <div className="absolute bottom-20 left-10 w-72 p-6 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl animate-[float_8s_ease-in-out_infinite_reverse]">
-               <div className="flex items-center gap-4 mb-4">
-                 <div className="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center text-white">
-                   <Brain className="w-6 h-6" />
-                 </div>
-                 <div>
-                   <div className="text-white font-bold">Kinesthetic Learning</div>
-                   <div className="text-blue-400 text-xs">+40% Retention Rate</div>
-                 </div>
-               </div>
-               <div className="flex -space-x-2">
-                 <div className="w-8 h-8 rounded-full border-2 border-white bg-gray-200" />
-                 <div className="w-8 h-8 rounded-full border-2 border-white bg-gray-300" />
-                 <div className="w-8 h-8 rounded-full border-2 border-white bg-gray-400" />
-                 <div className="w-8 h-8 rounded-full border-2 border-white bg-emerald-500 flex items-center justify-center text-[10px] font-bold">+12</div>
-               </div>
-             </div>
+          {/* Section Header */}
+          <div className="max-w-3xl mb-10 sm:mb-12">
+            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+              INDUSTRY OBSTACLES
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black mb-3">
+              {industry.challenges.title}
+            </h2>
+            <p className="text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
+              {industry.challenges.intro}
+            </p>
           </div>
-        </div>
 
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-80 z-10">
-          <span className="text-[10px] uppercase tracking-widest font-bold text-white drop-shadow-md">Scroll to Discover</span>
-          <ChevronDown className="w-4 h-4 text-white drop-shadow-md" />
-        </div>
-      </section>
-
-      {/* SECTION 02: THE CHALLENGE */}
-      <section className="py-28 bg-[#F8F9FA] border-t border-slate-200/80 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-16 items-start">
-            
-            {/* Left Column: Eyebrow Badge, Title, Intro & Dark Studio Quote Card */}
-            <div className="lg:col-span-5 sticky top-32">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black text-white text-[11px] font-bold uppercase tracking-widest mb-6 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>Industry Obstacles</span>
-              </div>
-
-              <h2 className="text-slate-900 font-black text-3xl sm:text-4xl tracking-tight mb-4">
-                {industry.challenges.title}
-              </h2>
-              
-              <p className="text-slate-600 font-normal leading-relaxed text-base sm:text-lg">
-                {industry.challenges.intro}
-              </p>
-
-              {/* Dark Studio Opportunity Card */}
-              <div className="mt-10 p-8 rounded-2xl bg-black text-white shadow-xl relative overflow-hidden border border-slate-800">
-                <div className="flex items-center gap-2 mb-3 text-xs font-bold uppercase tracking-widest text-amber-400">
-                  <Sparkles className="w-4 h-4" />
-                  <span>The Strategic Pivot</span>
-                </div>
-                <p className="text-slate-200 font-medium text-base sm:text-lg leading-relaxed italic relative z-10">
-                  "{industry.challenges.transition}"
+          {/* 6 Open Typographic Challenge Points — Zero Boxes, Zero Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8">
+            {industry.challenges.items.map((item, idx) => (
+              <div key={idx} className="space-y-1.5">
+                <span className="text-xs font-mono font-bold text-neutral-400 block tracking-wider">
+                  0{idx + 1}
+                </span>
+                <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-neutral-600 font-light leading-relaxed">
+                  {item.desc}
                 </p>
-                <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
-                  <span>TRANSFORMATION</span>
-                  <span className="text-amber-400 font-bold">READY</span>
-                </div>
               </div>
-            </div>
-            
-            {/* Right Column: Crisp White High-Contrast Challenge Cards */}
-            <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
-              {industry.challenges.items.map((item, idx) => {
-                const icons = [TrendingDown, Layers, Brain, Cpu, Users, Sparkles];
-                const IconComponent = icons[idx % icons.length];
-                
-                return (
-                  <div 
-                    key={idx} 
-                    className="p-8 rounded-2xl bg-white border border-slate-200/90 hover:border-black transition-all duration-300 group shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
-                          <IconComponent className="w-5 h-5" />
-                        </div>
-                        <span className="text-xs font-mono font-bold text-slate-500 px-3 py-1 rounded-md bg-slate-100 group-hover:bg-black group-hover:text-white transition-colors">
-                          0{idx + 1}
-                        </span>
-                      </div>
-
-                      <h3 className="text-slate-900 mb-3 text-lg font-bold tracking-tight">{item.title}</h3>
-                      <p className="text-slate-600 text-sm font-normal leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
+            ))}
           </div>
+
         </div>
       </section>
 
-      {/* SECTION 03: OUR VISION */}
-      <section className="py-24 bg-gray-50/50 border-y border-gray-200/70 relative">
+      {/* SECTION 03: OUR VISION (EDITORIAL SPLIT SHOWCASE - SINGLE SCREEN) */}
+      <section className="py-10 sm:py-12 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
-            {/* Left Column: Heading, Vision Statement & Clean Pillars List */}
-            <div className="lg:col-span-6">
-              <SectionHeading 
-                label="OUR VISION"
-                heading={industry.vision.title}
-              />
+            {/* Left Column: Vision Narrative & Statement */}
+            <div className="lg:col-span-6 space-y-4 sm:space-y-5">
+              <div>
+                <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+                  OUR VISION
+                </span>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black tracking-tight leading-[1.1]">
+                  {industry.vision.title}
+                </h2>
+              </div>
 
-              <p className="text-xl sm:text-2xl text-black font-semibold leading-snug mt-6 mb-4">
+              <p className="text-lg sm:text-xl text-black font-semibold leading-snug">
                 {industry.vision.statement}
               </p>
               
-              <p className="text-gray-600 font-light leading-relaxed mb-8 text-base">
-                {industry.vision.intro}
-              </p>
-              
-              {/* Clean 2-Column Pillars Grid */}
-              <div className="grid sm:grid-cols-2 gap-6 pt-6 border-t border-gray-200">
-                {industry.vision.pillars.map((pillar, idx) => {
-                  const titleText = pillar.title.replace(/[\u{1F300}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}🌟🤝🚀🌍]/gu, '').trim();
-                  
-                  return (
-                    <div key={idx} className="space-y-1.5">
-                      <div className="flex items-center gap-2.5 text-black font-bold text-base">
-                        <CheckCircle2 className="w-4 h-4 text-black shrink-0" />
-                        <span>{titleText}</span>
-                      </div>
-                      <p className="text-gray-600 text-sm font-light leading-relaxed pl-6">
-                        {pillar.desc}
-                      </p>
-                    </div>
-                  );
-                })}
+              <div className="space-y-3 text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
+                <p>
+                  {industry.vision.intro}
+                </p>
+                <p>
+                  By bridging the gap between digital interaction and foundational curriculum, we create spaces where students discover concepts through movement, collaborate effortlessly, and build enduring curiosity.
+                </p>
+              </div>
+
+              {/* Editorial Quote directly on canvas */}
+              <div className="pt-1.5 pl-4 border-l-2 border-black">
+                <p className="font-medium italic text-sm sm:text-base text-neutral-900 leading-relaxed">
+                  &ldquo;{industry.vision.quote.replace(/^["'“]+|["'”]+$/g, '').trim()}&rdquo;
+                </p>
               </div>
             </div>
             
-            {/* Right Column: Hero Image with Clean Dark Glass Quote Box */}
-            <div className="lg:col-span-6 relative h-[560px] rounded-3xl overflow-hidden border border-gray-200/80 shadow-xl group">
-               <SafeImage 
-                  src={industry.hero.img} 
-                  alt="Vision"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            {/* Right Column: Tall Unified Media Showcase */}
+            <div className="lg:col-span-6">
+              <div className="relative h-[380px] sm:h-[440px] lg:h-[480px] w-full rounded-3xl overflow-hidden bg-neutral-100">
+                <SafeImage 
+                  src={industry.vision?.img || "/images/var_sandbox_projection.jpg"} 
+                  alt="Vision for Education"
+                  className="w-full h-full object-cover"
                   containerClassName="w-full h-full"
-               />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-               <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-black/85 backdrop-blur-md border border-white/10 text-white shadow-xl">
-                  <p className="font-medium italic text-base sm:text-lg leading-relaxed text-center text-gray-100">
-                    {industry.vision.quote}
-                  </p>
-               </div>
+                />
+              </div>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* SECTION 04: CUSTOM EDUCATION SOLUTIONS */}
-      <section className="py-32 bg-[#F8F9FA] relative border-y border-black/5">
+      {/* SECTION 04: CUSTOM EDUCATION SOLUTIONS (SINGLE-SCREEN EDITORIAL) */}
+      <section className="pt-8 sm:pt-10 pb-10 sm:pb-12 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-24">
-            <span className="text-[10px] uppercase tracking-widest font-bold text-black/50 block mb-4">
+          
+          {/* Compact Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
               CORE CAPABILITIES
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-black mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
               Interactive Tools for Every Learning Space
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed font-light">
+            <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
               Transform classrooms and STEM labs with responsive, motion-activated environments that inspire collaboration.
             </p>
           </div>
 
-          <div className="space-y-32">
+          {/* 3-Column Single-Screen Layout (Zero Cards / Zero Containers) */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
             
-            {/* 1. Interactive Floor */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
-                <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_Space_Center_Houston_Lunar_Obstacle_Run_3-WS.png" alt="Interactive Floor" className="w-full h-full object-cover" containerClassName="w-full h-full" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-8 left-8 text-white font-bold tracking-widest text-xs uppercase px-4 py-2 bg-black/40 backdrop-blur-md rounded-full">Floor Projection</div>
+            {/* Capability 01: Interactive Floor */}
+            <div className="flex flex-col group">
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-100 mb-4">
+                <SafeImage 
+                  src="/images/education_interactive_floor.jpg" 
+                  alt="Interactive Learning Floor" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  containerClassName="w-full h-full" 
+                />
               </div>
+              <div className="flex items-center gap-2 mb-2">
+                <Activity className="w-5 h-5 text-black shrink-0" />
+                <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight">Interactive Floor</h3>
+              </div>
+              <p className="text-neutral-600 text-sm leading-relaxed font-light mb-5">
+                Turn floors into interactive learning zones where students solve math challenges, explore geography, and stay active while learning.
+              </p>
               <div>
-                <div className="w-14 h-14 bg-white rounded-2xl border border-gray-100 flex items-center justify-center text-black mb-6 shadow-sm">
-                  <Activity className="w-6 h-6" />
-                </div>
-                <h3 className="text-3xl font-extrabold text-black mb-6">Interactive Floor</h3>
-                <p className="text-gray-600 text-lg leading-relaxed font-light mb-8">
-                  Motion-responsive floors that transform physical movement into engaging educational games, activities, and collaborative learning experiences.
-                </p>
-                <div className="space-y-6 mb-8">
-                  <div>
-                    <h4 className="text-sm font-bold uppercase tracking-widest text-black mb-3">Use Cases</h4>
-                    <ul className="grid grid-cols-2 gap-3">
-                      <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Math & Logic Puzzles</li>
-                      <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Geography Quizzes</li>
-                      <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Spelling & Literacy</li>
-                      <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Active Brain Breaks</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold uppercase tracking-widest text-black mb-3">Key Benefits</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2 text-sm text-gray-600"><strong>Kinesthetic Learning:</strong> Improves retention through physical movement.</li>
-                      <li className="flex items-center gap-2 text-sm text-gray-600"><strong>Teamwork:</strong> Multi-touch tracking encourages group collaboration.</li>
-                    </ul>
-                  </div>
-                </div>
-                <Link href="/solutions/interactive-spaces" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white bg-black px-6 py-3 rounded-full hover:bg-gray-800 transition-colors">
-                  Explore Solution <ArrowRight className="w-4 h-4" />
+                <Link href="/solutions/interactive-floor" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-black hover:text-neutral-600 transition-colors">
+                  Explore Solution <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
 
-            {/* 2. Interactive Wall */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="order-2 lg:order-1">
-                <div className="w-14 h-14 bg-white rounded-2xl border border-gray-100 flex items-center justify-center text-black mb-6 shadow-sm">
-                  <Layers className="w-6 h-6" />
-                </div>
-                <h3 className="text-3xl font-extrabold text-black mb-6">Interactive Wall</h3>
-                <p className="text-gray-600 text-lg leading-relaxed font-light mb-8">
-                  Interactive walls encourage hands-on participation through touch, gesture recognition, and dynamic educational content. Perfect for STEM labs and auditoriums.
-                </p>
-                <div className="mb-8">
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-black mb-4">Visual Examples</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="rounded-xl overflow-hidden shadow-md aspect-video relative group">
-                      <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-094_1_-WS.jpg" alt="STEM Lab" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" containerClassName="w-full h-full" />
-                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span className="text-white text-xs font-bold uppercase tracking-widest">STEM Robotics</span>
-                      </div>
-                    </div>
-                    <div className="rounded-xl overflow-hidden shadow-md aspect-video relative group">
-                      <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS.jpg" alt="Science Wall" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" containerClassName="w-full h-full" />
-                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span className="text-white text-xs font-bold uppercase tracking-widest">Physics Sims</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <Link href="/solutions/interactive-spaces" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white bg-black px-6 py-3 rounded-full hover:bg-gray-800 transition-colors">
-                  Explore Solution <ArrowRight className="w-4 h-4" />
-                </Link>
+            {/* Capability 02: Interactive Wall */}
+            <div className="flex flex-col group">
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-100 mb-4">
+                <SafeImage 
+                  src="/images/museum_interactive_exhibit.jpg" 
+                  alt="Interactive Wall" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  containerClassName="w-full h-full" 
+                />
               </div>
-              <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl order-1 lg:order-2">
-                <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_263-WS.jpg" alt="Interactive Wall" className="w-full h-full object-cover" containerClassName="w-full h-full" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-8 left-8 text-white font-bold tracking-widest text-xs uppercase px-4 py-2 bg-black/40 backdrop-blur-md rounded-full">Wall Projection</div>
+              <div className="flex items-center gap-2 mb-2">
+                <Layers className="w-5 h-5 text-black shrink-0" />
+                <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight">Interactive Wall</h3>
+              </div>
+              <p className="text-neutral-600 text-sm leading-relaxed font-light mb-5">
+                Transform walls into hands-on digital canvases for science simulations, collaborative group research, and interactive presentations.
+              </p>
+              <div>
+                <Link href="/solutions/interactive-wall" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-black hover:text-neutral-600 transition-colors">
+                  Explore Solution <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
 
-            {/* 3. Motion Games */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
-                <SafeImage src="https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg" alt="Motion Games" className="w-full h-full object-cover" containerClassName="w-full h-full" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-8 left-8 text-white font-bold tracking-widest text-xs uppercase px-4 py-2 bg-black/40 backdrop-blur-md rounded-full">Motion Tracking</div>
+            {/* Capability 03: Motion Games */}
+            <div className="flex flex-col group">
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-100 mb-4">
+                <SafeImage 
+                  src="/images/entertainment_motion_arena.jpg" 
+                  alt="Motion Games" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  containerClassName="w-full h-full" 
+                />
               </div>
+              <div className="flex items-center gap-2 mb-2">
+                <Sparkles className="w-5 h-5 text-black shrink-0" />
+                <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight">Motion Games</h3>
+              </div>
+              <p className="text-neutral-600 text-sm leading-relaxed font-light mb-5">
+                Bring active movement into the classroom with motion-tracked games designed for gym classes, brain breaks, and team challenges.
+              </p>
               <div>
-                <div className="w-14 h-14 bg-white rounded-2xl border border-gray-100 flex items-center justify-center text-black mb-6 shadow-sm">
-                  <Sparkles className="w-6 h-6" />
-                </div>
-                <h3 className="text-3xl font-extrabold text-black mb-6">Motion Games</h3>
-                <p className="text-gray-600 text-lg leading-relaxed font-light mb-8">
-                  Combine physical activity with learning through computer vision and sensor technology. Great for P.E., recess, and after-school programs.
-                </p>
-                <div className="space-y-6 mb-8">
-                  <div>
-                    <h4 className="text-sm font-bold uppercase tracking-widest text-black mb-3">Example Activities</h4>
-                    <div className="space-y-3">
-                      <div className="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-                        <div className="font-bold text-black mb-1">Space Explorer</div>
-                        <div className="text-sm text-gray-500">Students jump to "catch" correct planets as they orbit on the projection floor.</div>
-                      </div>
-                      <div className="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-                        <div className="font-bold text-black mb-1">Ecosystem Builder</div>
-                        <div className="text-sm text-gray-500">Collaborative wall game where gestures are used to balance predators and prey in a digital forest.</div>
-                      </div>
-                      <div className="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-                        <div className="font-bold text-black mb-1">Rhythm Math</div>
-                        <div className="text-sm text-gray-500">Solve equations by stepping on the correct numbers to a fast-paced musical beat.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <Link href="/solutions/interactive-spaces" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white bg-black px-6 py-3 rounded-full hover:bg-gray-800 transition-colors">
-                  Explore Solution <ArrowRight className="w-4 h-4" />
+                <Link href="/solutions/interactive-spaces" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-black hover:text-neutral-600 transition-colors">
+                  Explore Solution <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
 
           </div>
+
         </div>
       </section>
 
-      {/* SECTION 05: FEATURED EXPERIENCES (STICKY SCROLL) */}
-      <section id="experiences" className="py-24 lg:py-28 bg-[#F8F9FA] border-y border-gray-200/50">
+      {/* SECTION 05: FEATURED EXPERIENCES (SINGLE-SCREEN INTERACTIVE SHOWCASE) */}
+      <section id="experiences" className="py-8 sm:py-10 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200/80 text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-6 shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-blue-500" />
-              <span>Real World Impact</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-slate-900 mb-6">
+          {/* Compact Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+              REAL WORLD IMPACT
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
               {industry.experiences.title}
             </h2>
-            <p className="text-slate-500 text-lg md:text-xl font-medium leading-relaxed">
+            <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
               {industry.experiences.intro}
             </p>
           </div>
 
-          {/* Sticky Scroll Gallery Component */}
+          {/* Single-Screen Interactive Showcase Component */}
           <StickyExperiences items={industry.experiences.items} />
 
         </div>
       </section>
 
-      {/* SECTION 06: BENEFITS & OUTCOMES */}
-      <section className="py-32 bg-white">
+      {/* SECTION 06: BENEFITS & OUTCOMES (ZERO-BOX / ZERO-CARD SINGLE SCREEN) */}
+      <section id="benefits" className="py-8 sm:py-10 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20">
-            <SectionHeading 
-              label="MEASURABLE VALUE"
-              heading={industry.benefits.title}
-            />
-            <p className="text-black/70 max-w-2xl font-light leading-relaxed mt-6">
+          
+          {/* Section Header */}
+          <div className="max-w-3xl mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+              MEASURABLE VALUE
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
+              {industry.benefits.title}
+            </h2>
+            <p className="text-neutral-600 text-sm sm:text-base font-light leading-relaxed">
               {industry.benefits.intro}
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+          {/* 6 Benefits in 3-Column Grid — Zero Cards, Zero Containers */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8">
             {industry.benefits.items.map((ben, idx) => (
-              <div key={idx} className="relative">
-                <div className="w-10 h-10 rounded-full bg-black border border-black/10 flex items-center justify-center mb-6 text-white font-bold text-sm shadow-md">
+              <div key={idx} className="space-y-1.5">
+                <span className="text-xs font-mono font-bold text-neutral-400 block tracking-wider">
                   0{idx + 1}
-                </div>
-                <h5 className="text-black mb-3 font-bold">{ben.title}</h5>
-                <p className="text-black/60 text-sm font-light leading-relaxed">
+                </span>
+                <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug">
+                  {ben.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
                   {ben.desc}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-20 pt-10 border-t border-black/10 text-center">
-            <p className="text-black font-medium">
+          {/* Clean Bottom Statement */}
+          <div className="mt-8 sm:mt-10 pt-2 text-center">
+            <p className="text-xs sm:text-sm font-medium text-neutral-500 tracking-wide max-w-2xl mx-auto">
               {industry.benefits.bottomStatement}
             </p>
           </div>
+
         </div>
       </section>
 
-      {/* SECTION 07: TECHNOLOGY (PREMIUM BENTO GRID) */}
-      <section className="py-32 bg-[#F8F9FA] border-y border-gray-200/50 relative overflow-hidden">
-        {/* Subtle dot pattern background */}
-        <div className="absolute inset-0 opacity-[0.4]" style={{ backgroundImage: 'radial-gradient(#d1d5db 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-24">
-          <SectionHeading 
-            label="THE ENGINE"
-            heading={industry.technology.title}
-            centered
-          />
-          <p className="text-gray-500 max-w-2xl mx-auto font-medium leading-relaxed mt-6 text-lg md:text-xl">
-            {industry.technology.intro}
-          </p>
-        </div>
+      {/* SECTION 07: REAL-TIME PIPELINE FLOW (ZERO-BOX / ZERO-CARD SINGLE SCREEN) */}
+      <section id="technology" className="pt-10 pb-16 sm:pt-14 sm:pb-20 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Section Header */}
+          <div className="max-w-3xl mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+              REAL-TIME PIPELINE
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
+              {industry.technology.title}
+            </h2>
+            <p className="text-neutral-600 text-sm sm:text-base font-light leading-relaxed">
+              {industry.technology.intro}
+            </p>
+          </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Horizontal Pipeline Steps (Zero Cards, Zero Containers) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start relative">
             {industry.technology.items.map((tech, idx) => {
-              // Asymmetrical Grid Logic
-              // Row 1: col-span-2, col-span-1
-              // Row 2: col-span-1, col-span-2
-              // Row 3: col-span-1, col-span-2 or similar alternating pattern
-              let colSpanClass = "md:col-span-1";
-              if (idx === 0) colSpanClass = "md:col-span-2";
-              if (idx === 3) colSpanClass = "md:col-span-2";
-              if (idx === 5) colSpanClass = "md:col-span-2";
-
-              // Premium styling for icons
-              const icons = [Terminal, Cpu, Network, Sparkles, Brain, Layers];
+              const icons = [Activity, Brain, Sparkles, Users];
               const IconComponent = icons[idx % icons.length];
-              
-              const colorClasses = [
-                "bg-blue-50 text-blue-600 ring-blue-500/20",
-                "bg-amber-50 text-amber-600 ring-amber-500/20",
-                "bg-emerald-50 text-emerald-600 ring-emerald-500/20",
-                "bg-purple-50 text-purple-600 ring-purple-500/20",
-                "bg-rose-50 text-rose-600 ring-rose-500/20",
-                "bg-cyan-50 text-cyan-600 ring-cyan-500/20"
-              ];
-              const colorClass = colorClasses[idx % colorClasses.length];
+              const isLast = idx === industry.technology.items.length - 1;
 
               return (
-                <div 
-                  key={idx} 
-                  className={`group relative p-8 md:p-10 rounded-[32px] bg-white overflow-hidden transition-all duration-500 hover:-translate-y-1 shadow-[0_2px_10px_rgb(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] border border-gray-200/60 ${colSpanClass}`}
-                >
-                  {/* Subtle Gradient Glow on Hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-gradient-to-br from-white via-white to-gray-50" />
-                  
-                  <div className="relative z-10 h-full flex flex-col justify-between">
-                    <div>
-                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 ring-1 ring-inset ${colorClass} transition-transform duration-500 group-hover:scale-110`}>
-                        <IconComponent className="w-6 h-6" strokeWidth={2} />
-                      </div>
-                      
-                      <h3 className="text-2xl font-extrabold text-black tracking-tight mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-black group-hover:to-gray-600 transition-all duration-300">
-                        {tech.title}
-                      </h3>
-                      
-                      <p className="text-gray-500 font-medium leading-relaxed mb-8 max-w-lg">
-                        {tech.desc}
-                      </p>
+                <div key={idx} className="flex flex-col relative">
+                  {/* Step Header: Icon + Number + Connector Arrow */}
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2.5">
+                      <IconComponent className="w-5 h-5 text-black shrink-0" strokeWidth={1.5} />
+                      <span className="text-xs font-mono font-black text-black">
+                        0{idx + 1}
+                      </span>
                     </div>
 
-                    <div className="mt-auto">
-                      <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 group-hover:text-black transition-colors cursor-pointer">
-                        <span>Learn More</span>
-                        <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                      </div>
-                    </div>
+                    {!isLast && (
+                      <ArrowRight className="hidden lg:block w-4 h-4 text-neutral-300 shrink-0" />
+                    )}
                   </div>
+
+                  {/* Title */}
+                  <h3 className="text-base sm:text-lg font-black text-black tracking-tight leading-snug mb-1.5">
+                    {tech.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
+                    {tech.desc}
+                  </p>
                 </div>
               );
             })}
           </div>
+
+          {/* Bottom Statement */}
+          {industry.technology.bottomStatement && (
+            <div className="mt-8 sm:mt-10 pt-2 text-center">
+              <p className="text-xs sm:text-sm font-medium text-neutral-500 tracking-wide max-w-2xl mx-auto">
+                {industry.technology.bottomStatement}
+              </p>
+            </div>
+          )}
+
         </div>
       </section>
 
-      {/* SECTION 08: HOW WE DELIVER */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
-          <SectionHeading 
-            label="OUR PROCESS"
-            heading={sharedDelivery.title}
-            centered
-          />
-          <p className="text-black/70 max-w-2xl mx-auto font-light leading-relaxed mt-6">
-            {sharedDelivery.intro}
-          </p>
-        </div>
-
+      {/* SECTION 08: HOW WE DELIVER (3-STAGE VISUAL ROADMAP — ZERO-CARD SINGLE SCREEN) */}
+      <section id="process" className="py-8 sm:py-10 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-            {/* Connecting Line */}
-            <div className="hidden lg:block absolute top-12 left-20 right-20 h-px bg-gradient-to-r from-transparent via-black/10 to-transparent" />
-            
-            {sharedDelivery.steps.map((step, idx) => (
-              <div key={idx} className="relative z-10 p-8 rounded-3xl bg-gray-50 border border-black/5 hover:-translate-y-2 transition-transform duration-300 hover:shadow-lg">
-                <div className="w-16 h-16 rounded-full bg-white border border-black/10 flex items-center justify-center text-black font-bold text-lg mb-8 shadow-sm">
-                  {step.num}
+          
+          {/* Section Header */}
+          <div className="max-w-3xl mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+              TURNKEY METHODOLOGY
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
+              {sharedDelivery.title}
+            </h2>
+            <p className="text-neutral-600 text-sm sm:text-base font-light leading-relaxed">
+              {sharedDelivery.intro}
+            </p>
+          </div>
+
+          {/* 3-Stage Visual Roadmap Side-by-Side (Zero Cards, Zero Containers) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start">
+            {sharedDelivery.stages.map((stage, idx) => (
+              <div key={idx} className="group flex flex-col">
+                
+                {/* 16:10 Visual Showcase with Smooth Hover Zoom */}
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 mb-3 sm:mb-4">
+                  <SafeImage
+                    src={stage.img}
+                    alt={stage.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    containerClassName="w-full h-full"
+                  />
+                  <div className="absolute top-3 left-3 bg-black/75 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-mono font-bold text-white uppercase tracking-wider">
+                    {stage.timeframe}
+                  </div>
                 </div>
-                <h4 className="text-black mb-4 font-bold">{step.title}</h4>
-                <p className="text-black/60 text-sm font-light leading-relaxed">
-                  {step.desc}
+
+                {/* Stage Number & Title */}
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="text-xs font-mono font-black text-black">
+                    {stage.num}
+                  </span>
+                  <span className="text-neutral-300 select-none">/</span>
+                  <h3 className="text-base sm:text-lg font-black text-black tracking-tight">
+                    {stage.title}
+                  </h3>
+                </div>
+
+                {/* Description */}
+                <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
+                  {stage.desc}
                 </p>
+
               </div>
             ))}
           </div>
-          
-          <div className="mt-20 p-8 rounded-2xl bg-black/5 border border-black/10 text-center">
-            <p className="text-black/80 font-light max-w-3xl mx-auto">
-              {sharedDelivery.bottomStatement}
+
+          {/* Deployment Assurance */}
+          <div className="mt-8 sm:mt-10 pt-2 text-center max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm font-medium text-neutral-800 tracking-wide leading-relaxed">
+              &ldquo;{sharedDelivery.bottomStatement}&rdquo;
             </p>
           </div>
+
         </div>
       </section>
 
-      {/* SECTION 08B: CASE STUDIES (VISUAL CARDS) */}
-      <section className="py-32 bg-[#F8F9FA] border-t border-black/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <SectionHeading 
-              label="PROVEN SUCCESS"
-              heading="Featured Case Studies"
-              centered
-            />
-            <p className="text-black/70 max-w-2xl mx-auto font-light leading-relaxed mt-6">
-              Explore how organizations in {industry.hero.title.toLowerCase()} are using our interactive technology to transform their environments and achieve measurable outcomes.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Case Study Card 1 */}
-            <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <SafeImage src={industry.hero.img} alt="Case Study 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" containerClassName="w-full h-full" />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
-                  Case Study
-                </div>
-              </div>
-              <div className="p-8 flex flex-col flex-1">
-                <h4 className="text-xl font-bold text-black mb-3">Modern Transformation Project</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-1">A massive deployment of interactive walls and floors designed to completely reimagine the visitor experience and increase engagement metrics by over 40%.</p>
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black group-hover:text-blue-600 transition-colors">
-                  Read Full Study <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </Link>
-
-            {/* Case Study Card 2 */}
-            <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
-              <div className="relative aspect-[4/3] overflow-hidden bg-black">
-                <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Brand_Activations_Events_SpaceCenterHouston_AugmentedGames_05822-WS_grande.jpg" alt="Case Study 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] opacity-80" containerClassName="w-full h-full" />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
-                  Case Study
-                </div>
-              </div>
-              <div className="p-8 flex flex-col flex-1">
-                <h4 className="text-xl font-bold text-black mb-3">Sensory & Immersive Installation</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-1">Integrating computer vision and ultra-short throw projection to build an environment that responds naturally to human behavior in real time.</p>
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black group-hover:text-blue-600 transition-colors">
-                  Read Full Study <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </Link>
-
-            {/* Case Study Card 3 */}
-            <Link href="/projects" className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGEC_Geoverse_JE-132_1_-WS_grande.jpg" alt="Case Study 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" containerClassName="w-full h-full" />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-black">
-                  Case Study
-                </div>
-              </div>
-              <div className="p-8 flex flex-col flex-1">
-                <h4 className="text-xl font-bold text-black mb-3">Large-Scale Digital Canvas</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-1">A completely bespoke motion tracking solution extending across hundreds of square feet to deliver a personalized, multi-user digital experience.</p>
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black group-hover:text-blue-600 transition-colors">
-                  Read Full Study <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </Link>
-          </div>
-          
-          <div className="mt-16 text-center">
-            <Link href="/projects" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black px-8 py-4 rounded-full border border-black/20 hover:bg-black hover:text-white transition-all duration-300">
-              View All Case Studies
-            </Link>
-          </div>
+      {/* SECTION 08B: CASE STUDIES (ARCHITECTURAL SPOTLIGHT — ZERO CARDS) */}
+      <section id="case-studies" className="py-12 sm:py-16 min-h-[640px] flex flex-col justify-center bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <CaseStudiesSpotlight 
+            caseStudies={caseStudies} 
+            industryName="education"
+            title="Real Impact in Active Learning"
+            eyebrow="PROVEN CLASSROOM SUCCESS"
+          />
         </div>
       </section>
 
       {/* SECTION 09: FAQS */}
-      <section className="py-32 bg-gray-50 border-t border-black/10">
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-black mb-6">{industry.faqs.title}</h2>
-            <p className="text-black/70 font-light">{industry.faqs.intro}</p>
+          <div className="text-center mb-12">
+            <h2 className="text-black mb-4">{industry.faqs.title}</h2>
+            <p className="text-black/70 font-light text-sm">{industry.faqs.intro}</p>
           </div>
           
           <FAQAccordion faqs={industry.faqs.items} />
         </div>
       </section>
 
-      <section className="relative py-32 overflow-hidden bg-black text-white">
+      <section className="relative py-20 sm:py-24 overflow-hidden bg-black text-white">
         <div className="absolute inset-0 z-0">
-          <SafeImage src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGPA_AnimalsofEarth_Photo_Ark_JE-035_1_-WS_grande.jpg" alt="CTA Background" className="w-full h-full object-cover opacity-30" containerClassName="w-full h-full" />
+          <SafeImage src="/images/architectural_light_beam.jpg" alt="CTA Background" className="w-full h-full object-cover opacity-30" containerClassName="w-full h-full" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8">
@@ -652,7 +488,7 @@ export default function EducationIndustryPage() {
             Ready to transform your school, STEM lab, or educational environment with motion-responsive technology?
           </p>
           <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-black bg-white px-8 py-4 rounded-full hover:bg-gray-200 transition-colors">
-            Start Your Project <ArrowRight className="w-4 h-4" />
+            Create an Interactive Learning Space <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

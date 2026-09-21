@@ -73,7 +73,7 @@ export default function BlogListingClient({ blogs }: { blogs: Blog[] }) {
         <section className="px-4 sm:px-6 lg:px-8 mb-24 max-w-screen-2xl mx-auto w-full">
           <Link 
             href={`/blogs/${featured.slug}`}
-            className="group relative block w-full h-[60vh] lg:h-[75vh] overflow-hidden bg-gray-100 rounded-2xl border border-black/10 shadow-lg"
+            className="group relative block w-full min-h-[460px] sm:min-h-0 h-auto sm:h-[60vh] lg:h-[75vh] overflow-hidden bg-gray-100 rounded-2xl border border-black/10 shadow-lg"
           >
             <SafeImage 
               src={featured.img} 
@@ -84,24 +84,24 @@ export default function BlogListingClient({ blogs }: { blogs: Blog[] }) {
             
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90" />
 
-            <div className="absolute inset-0 p-8 lg:p-16 flex flex-col justify-between">
+            <div className="relative sm:absolute inset-0 p-6 sm:p-8 lg:p-16 flex flex-col justify-between h-full">
               <div className="flex justify-between items-start">
-                <span className="px-4 py-2 border border-white/20 bg-black/40 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold rounded-full text-white">
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 border border-white/20 bg-black/40 backdrop-blur-md text-[9px] sm:text-[10px] uppercase tracking-widest font-bold rounded-full text-white">
                   Featured Insight
                 </span>
               </div>
 
-              <div className="max-w-4xl mt-auto">
-                <div className="flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-bold text-white/80 mb-6">
-                  <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full">{featured.category}</span>
+              <div className="max-w-4xl mt-auto pt-12 sm:pt-0">
+                <div className="flex items-center gap-3 sm:gap-4 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-bold text-white/80 mb-3 sm:mb-6">
+                  <span className="px-2.5 sm:px-3 py-1 bg-white/20 backdrop-blur-md rounded-full">{featured.category}</span>
                   <span className="w-1 h-1 rounded-full bg-white/50"></span>
                   <span>{featured.readTime}</span>
                 </div>
-                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight text-white group-hover:text-gray-300 transition-all duration-500">
+                <h2 className="text-2xl sm:text-4xl lg:text-7xl font-black leading-[1.08] sm:leading-[1.05] mb-3 sm:mb-6 tracking-tight text-white group-hover:text-gray-300 transition-all duration-500">
                   {featured.title}
                 </h2>
                 {/* Excerpt forced visible on featured card */}
-                <p className="text-lg lg:text-xl font-light text-white/80 max-w-2xl leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-xl font-light text-white/80 max-w-2xl leading-relaxed">
                   {featured.excerpt}
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function BlogListingClient({ blogs }: { blogs: Blog[] }) {
       {/* The Archives */}
       {archives.length > 0 && (
         <section className="px-4 sm:px-6 lg:px-8 pb-32 max-w-screen-2xl mx-auto w-full">
-          <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-black/40 mb-12 border-b border-black/10 pb-6">
+          <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-black/40 mb-8">
             Recent Publications
           </h3>
           

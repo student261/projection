@@ -2,119 +2,231 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
-import { ArrowLeft, Clock, Calendar } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Clock, Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 
-// Full blog content dictionary
-const BLOG_DATA: Record<string, any> = {
+interface BlogPost {
+  title: string;
+  subtitle: string;
+  category: string;
+  topic: string;
+  date: string;
+  readTime: string;
+  heroImg: string;
+  heroCaption: string;
+  secondaryImg?: string;
+  secondaryCaption?: string;
+  author: {
+    name: string;
+    role: string;
+  };
+  metrics: { label: string; value: string; detail: string }[];
+  takeaway: string;
+  sections: {
+    partNumber: string;
+    title: string;
+    content: string[];
+    highlight?: string;
+  }[];
+  quote: {
+    text: string;
+    attribution: string;
+  };
+}
+
+// Curated authentic blog content dictionary - STRICTLY NO SLASHES (/) IN CONTENT OR LABELS
+const BLOG_DATA: Record<string, BlogPost> = {
   "future-of-motion-interactive-projection": {
     title: "The Future of Motion Interactive Projection",
-    category: "Technology",
+    subtitle: "How LiDAR sensor fusion, multi-lumen laser arrays, and zero-latency tracking are transforming static physical surfaces into responsive, living architectural canvases.",
+    category: "Spatial Technology",
+    topic: "Architectural Computing and Sensor Fusion",
     date: "August 24, 2026",
-    readTime: "6 min read",
-    heroImg: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
-    content: (
-      <>
-        <p className="lead">
-          The boundaries between the physical and digital worlds are dissolving. What used to require bulky VR headsets or awkward AR glasses is now being seamlessly integrated directly into the architecture around us through advanced motion interactive projection.
-        </p>
-        <h2>The Shift from Screens to Surfaces</h2>
-        <p>
-          For decades, our interaction with digital content has been confined to rectangular screens. However, spatial engineering is breaking this paradigm. By utilizing high-lumen laser projectors combined with precise LiDAR and optical tracking sensors, we can now turn any physical surface—floors, walls, ceilings, and even complex architectural facades—into a responsive, multi-touch canvas.
-        </p>
-        <p>
-          This shift is profound. In retail, it means storefront windows that react to the proximity of pedestrians. In education, it transforms static gymnasiums into collaborative, interactive STEM learning environments.
-        </p>
-        <h2>Hardware Meets Intelligent Software</h2>
-        <p>
-          The true breakthrough isn't just in brighter projectors; it's in the sensor fusion. Modern spatial engines use multiple overlapping optical sensors to create a seamless tracking grid. This allows the software to track dozens of users simultaneously with sub-millimeter precision and zero noticeable latency.
-        </p>
-        <blockquote>
-          "We are no longer looking *at* the digital world. We are stepping *into* it. The architecture itself has become the interface."
-        </blockquote>
-        <h2>What's Next?</h2>
-        <p>
-          As we look towards 2027 and beyond, expect to see the integration of generative AI into these spaces. Imagine an interactive floor that doesn't just ripple when you walk on it, but actively learns from crowd flow to generate new, evolving ecosystems of digital art. The future is truly boundless.
-        </p>
-      </>
-    )
+    readTime: "6 Min Read",
+    heroImg: "/images/interactive_floor_motion.jpg",
+    heroCaption: "Figure 1: Multi-point optical tracking matrix calibrated over an 18-meter floor surface, delivering continuous real-time glass-to-glass response.",
+    secondaryImg: "/images/cathedral_projection_mapping.jpg",
+    secondaryCaption: "Figure 2: Real-time GPU particle simulation responding dynamically to visitor presence across multi-planar surfaces.",
+    author: {
+      name: "Projection Systems Architecture",
+      role: "Spatial Engineering and Research"
+    },
+    metrics: [
+      { label: "Glass-to-Glass Latency", value: "Real-Time", detail: "Near-instantaneous optical response" },
+      { label: "Tracking Pipeline", value: "LiDAR Fusion", detail: "940nm multi-point optical array" },
+      { label: "Surface Luminance", value: "15,000+ Lumens", detail: "Pure laser solid-state engine" },
+      { label: "Spatial Blending", value: "Sub-Pixel", detail: "Automated geometric mesh warping" },
+    ],
+    takeaway: "True spatial integration occurs when the hardware disappears. Recessing projectors and LiDAR arrays flush into ceiling architecture allows the physical material itself—whether concrete, pale oak, or plaster—to become the interactive medium.",
+    sections: [
+      {
+        partNumber: "Part 01",
+        title: "The Shift From Screens to Living Surfaces",
+        content: [
+          "The boundaries between built architecture and digital experience are quietly dissolving. For decades, interactive technology meant putting a rectangular screen in a room—or forcing visitors to wear bulky headsets. Both approaches isolate the participant from their physical environment.",
+          "Spatial motion projection takes the opposite philosophy: it leaves people completely unencumbered and turns the architecture itself into the interactive medium. When a visitor steps into a room, the floor responds to their stride, walls ripple with light as their hands approach, and the space acknowledges their presence without requiring them to hold a controller or stare down at a personal smartphone.",
+          "Unlike LED video walls or floor monitors, projection leaves materials intact. In daylight or when the system is resting, the floor remains natural polished concrete, pale oak, or architectural terrazzo. When energized, light becomes a fluid dynamic layer that lives directly upon those physical textures."
+        ]
+      },
+      {
+        partNumber: "Part 02",
+        title: "Sensor Fusion: Solving Multi-User Occlusion",
+        content: [
+          "The primary technical hurdle in interactive projection has never been raw projection brightness; it has always been tracking fidelity in crowded architectural spaces. Early interactive floors relied on a single ceiling-mounted camera. The moment two people stood close together or daylight shifted across the room, tracking degraded or failed entirely.",
+          "Modern enterprise installations resolve this with sensor fusion. By networking multiple 940nm solid-state LiDAR units with optical depth sensors, the tracking engine creates an overlapping spatial Cartesian coordinate grid. When one sensor's line of sight is obstructed by a visitor's silhouette, adjacent sensors maintain positional lock.",
+          "The result is continuous tracking across dozens of simultaneous participants with near-instantaneous response latency. Footfalls, directional walking velocity, and gestures are captured with millimeter accuracy, ensuring that interactive visuals feel immediate, tactile, and natural."
+        ],
+        highlight: "Sensor fusion networks eliminate the single-point-of-failure inherent in traditional camera systems, ensuring reliable tracking across changing ambient illumination and dense foot traffic."
+      },
+      {
+        partNumber: "Part 03",
+        title: "From Looped Animations to Real-Time Generative Shaders",
+        content: [
+          "Another fundamental shift is taking place inside the graphics pipeline. Traditional interactive installations relied on pre-rendered video clips triggered by bounding boxes. When you stepped on a tile, a 3-second pre-rendered animation played out.",
+          "Today, high-end spatial installations run on real-time GPU compute shaders. The visual canvas is not a video file; it is a live mathematical simulation of fluid dynamics, magnetic particle flow, and volumetric light. When five people cross a lobby simultaneously, their particle wakes collide, merge, and produce emergent organic wave patterns that have never occurred before and will never repeat identically.",
+          "This shift elevates interactive projection from a temporary novelty into permanent architectural art. It transforms public atriums, flagship brand environments, and cultural museums into living ecosystems that breathe in tandem with human movement."
+        ]
+      },
+      {
+        partNumber: "Part 04",
+        title: "Architectural Integration: Concealed Engineering",
+        content: [
+          "The hallmark of an exceptional spatial installation is that the hardware is entirely concealed. AV equipment should never compete with interior architectural aesthetics.",
+          "By specifying ultra-short-throw optics, custom ceiling recess pockets, and integrated thermal ventilation during the schematic design phase, projectors and LiDAR sensors sit flush with acoustic ceiling baffles. All signal transmission runs over single-run fiber infrastructure directly to a centralized server rack, leaving the visual envelope pristine and unobtrusive."
+        ]
+      }
+    ],
+    quote: {
+      text: "When technology is truly embedded in architecture, the hardware vanishes. You are no longer interacting with an appliance; you are stepping directly into the canvas.",
+      attribution: "Projection Systems Architecture Practice"
+    }
   },
   "how-ai-is-redefining-interactive-experiences": {
     title: "How AI is Redefining Interactive Experiences",
-    category: "AI & Innovation",
+    subtitle: "Moving beyond pre-programmed loops toward context-aware generative spaces that perceive, adapt, and converse with human occupants.",
+    category: "Spatial AI and Vision",
+    topic: "Autonomous Spaces and Computer Vision",
     date: "August 18, 2026",
-    readTime: "8 min read",
-    heroImg: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
-    content: (
-      <>
-        <p className="lead">
-          Artificial Intelligence is moving out of the chatbot window and stepping into the physical room. Generative AI is the missing link that is turning interactive installations from pre-programmed loops into truly living, breathing environments.
-        </p>
-        <h2>Beyond Pre-Rendered Graphics</h2>
-        <p>
-          Traditionally, projection mapping and interactive floors relied on pre-rendered graphic loops. A fish would swim away when you stepped near it, but it was a strictly coded behavior. Today, by integrating lightweight Large Language Models (LLMs) and real-time computer vision, the environment can actually "see" and "understand" the audience.
-        </p>
-        <h2>Autonomous AI Avatars</h2>
-        <p>
-          One of the most exciting applications is the rise of spatial AI avatars. Imagine walking into a flagship retail store and being greeted by a life-sized, holographic concierge projected onto a glass partition. Using sentiment analysis via optical cameras, the avatar can detect if you look confused or excited, and adjust its tone and body language accordingly while answering your spoken questions in real-time.
-        </p>
-        <h2>Procedural Environments</h2>
-        <p>
-          AI also allows for procedural environment generation. For instance, in a pediatric hospital's sensory room, an AI engine can monitor a child's heart rate (via contactless sensors) and automatically shift the projected visuals from high-energy gamification to a soothing, slow-moving underwater biome to help lower their anxiety. 
-        </p>
-        <p>
-          The environment is no longer just a display; it is a caretaker, an entertainer, and a responsive partner.
-        </p>
-      </>
-    )
+    readTime: "8 Min Read",
+    heroImg: "/images/corporate_lobby_wall.jpg",
+    heroCaption: "Figure 1: Real-time ambient generative installation responding to collective crowd density and ambient sound levels in an architectural atrium.",
+    author: {
+      name: "Spatial Computing Research",
+      role: "AI and Interactive Media Group"
+    },
+    metrics: [
+      { label: "Perception Engine", value: "Real-Time", detail: "Contactless computer vision" },
+      { label: "Content Generation", value: "Procedural", detail: "Zero pre-rendered video loops" },
+      { label: "Adaptive Response", value: "Instant", detail: "Dynamic visual re-synthesis" },
+      { label: "Sound and Light Sync", value: "Binaural", detail: "Co-localized spatial audio" },
+    ],
+    takeaway: "Generative AI bridges the gap between fixed architectural surfaces and living, empathetic environments. The space ceases to be a static display and becomes a perceptive host.",
+    sections: [
+      {
+        partNumber: "Part 01",
+        title: "Beyond Static Triggers",
+        content: [
+          "For years, interactive installations were deterministic: if input X occurs, execute animation Y. While engaging initially, deterministic systems lose their novelty quickly because regular occupants learn the underlying script.",
+          "Integrating lightweight real-time AI models directly into the spatial pipeline changes the equation. The system doesn't simply detect touch points; it interprets motion vector flow, crowd velocity, dwell time, and group dynamics. A bustling morning rush triggers crisp, energetic flow patterns, while a quiet afternoon visitor induces calm, slow-drifting harmonic visuals."
+        ]
+      },
+      {
+        partNumber: "Part 02",
+        title: "Context-Aware Environments",
+        content: [
+          "In healthcare and therapeutic sensory settings, adaptive algorithms modulate visual contrast and soothing soundscapes based on natural human movement pace. The environment works cooperatively to lower stress levels without requiring physical input buttons or wearable sensors.",
+          "In flagship commercial settings, interactive surfaces synthesize brand storytelling elements dynamically, matching color palettes and kinetic velocity to the natural pace of visitors traversing the space."
+        ]
+      }
+    ],
+    quote: {
+      text: "The environment is no longer just a display. It is an intelligent partner that adapts its visual and acoustic presence to the people who inhabit it.",
+      attribution: "Spatial Computing Research Group"
+    }
   },
   "choosing-the-right-interactive-solution-for-your-space": {
-    title: "Choosing the Right interactive Solution for Your Space",
-    category: "Guide",
+    title: "Choosing the Right Interactive Solution for Your Space",
+    subtitle: "A practical engineering guide to evaluating throw distances, ambient lux levels, surface finishes, and sensor placement.",
+    category: "Engineering Guide",
+    topic: "Field Specification and AV Integration",
     date: "August 10, 2026",
-    readTime: "5 min read",
-    heroImg: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
-    content: (
-      <>
-        <p className="lead">
-          Investing in interactive spatial technology is a major decision. Whether you are an architect designing a new museum wing or a brand manager planning a flagship store, choosing the right hardware and software stack is critical to the success of the installation.
-        </p>
-        <h2>1. Assess the Ambient Light</h2>
-        <p>
-          The number one enemy of projection is ambient light. If your space features massive floor-to-ceiling windows with direct sunlight, a standard interactive floor projection might look washed out. In these scenarios, you have two choices:
-        </p>
-        <ul>
-          <li>Invest in ultra-high lumen laser projectors (15,000+ lumens).</li>
-          <li>Pivot from projection to an interactive LED floor or wall, which emits its own light and can compete directly with the sun.</li>
-        </ul>
-        <h2>2. Define the Interaction Zone</h2>
-        <p>
-          How many people will interact with the installation at once? A single optical sensor can typically cover a 15x15 foot area and track up to 10 people accurately. If you are building a massive 360-degree immersive room, you will need a "Sensor Fusion" network—multiple overlapping sensors calibrated to act as a single tracking grid.
-        </p>
-        <h2>3. Choose the Right Surface</h2>
-        <p>
-          Projection mapping requires a relatively matte surface. Highly reflective gloss floors or mirrors will bounce the light away from the viewer, ruining the effect. We always recommend working with your architectural team to specify matte, light-colored flooring (like light grey concrete or matte white vinyl) for maximum color vibrancy.
-        </p>
-        <h2>Conclusion</h2>
-        <p>
-          The best installations are those where the technology is considered during the architectural blueprint phase, not as an afterthought. Reach out to our engineering team early in your design process for a spatial consultation.
-        </p>
-      </>
-    )
+    readTime: "5 Min Read",
+    heroImg: "/images/technician_calibrating_projection.jpg",
+    heroCaption: "Figure 1: Precision optical calibration verifying geometric grid alignment and lux uniformity across an architectural plane.",
+    author: {
+      name: "Technical Integration Practice",
+      role: "AV Architecture and Calibration"
+    },
+    metrics: [
+      { label: "Illumination Target", value: "10,000+ Lumens", detail: "High ambient light resilience" },
+      { label: "Surface Spec", value: "Matte Finishes", detail: "Gain 0.9 to 1.1 non-reflective" },
+      { label: "Optics Selection", value: "UST 0.25 to 1", detail: "Zero participant shadow cast" },
+      { label: "Ceiling Clearance", value: "3.2m Minimum", detail: "Optimal sensor cone coverage" },
+    ],
+    takeaway: "The most successful spatial installations are planned during the architectural blueprint phase, ensuring thermal ventilation, optical throw distances, and sensor lines of sight are resolved before construction.",
+    sections: [
+      {
+        partNumber: "Part 01",
+        title: "Evaluating Ambient Light and Surface Finishes",
+        content: [
+          "Ambient light is the single most critical factor when specifying projection systems. High-lumen solid-state laser projectors (12,000 to 20,000+ ANSI lumens) allow crisp projection even in naturally lit spaces, provided direct beam sunlight does not wash across the display zone.",
+          "Surface reflectivity is equally critical. High-gloss polished floors cause specular glare and wash out contrast. Specifying matte sealants, honed concrete, or non-specular vinyl maintains deep black levels and vibrant color saturation."
+        ]
+      },
+      {
+        partNumber: "Part 02",
+        title: "Eliminating Shadow Casting with Optics",
+        content: [
+          "In interactive floor installations, participant shadows can interrupt tracking or block the image. Utilizing ultra-short-throw lenses mounted at steep downward angles minimizes the shadow footprint to just a few inches behind the participant's feet.",
+          "Paired with overhead LiDAR scanners positioned outside the primary projection cone, the sensor beam remains clear and uninterrupted regardless of where visitors stand."
+        ]
+      }
+    ],
+    quote: {
+      text: "AV engineering should never be treated as an afterthought. Designing mounting recesses and thermal airflow into the architectural package produces flawless results.",
+      attribution: "Technical Integration Practice"
+    }
   }
 };
+
+const ALL_POSTS_META = [
+  {
+    slug: "future-of-motion-interactive-projection",
+    title: "The Future of Motion Interactive Projection",
+    category: "Spatial Technology",
+    readTime: "6 Min Read",
+    index: "01",
+    summary: "LiDAR sensor fusion, laser arrays, and zero-latency tracking in physical architecture."
+  },
+  {
+    slug: "how-ai-is-redefining-interactive-experiences",
+    title: "How AI is Redefining Interactive Experiences",
+    category: "Spatial AI and Vision",
+    readTime: "8 Min Read",
+    index: "02",
+    summary: "Context-aware generative spaces that perceive and adapt to crowd dynamics."
+  },
+  {
+    slug: "choosing-the-right-interactive-solution-for-your-space",
+    title: "Choosing the Right Interactive Solution",
+    category: "Engineering Guide",
+    readTime: "5 Min Read",
+    index: "03",
+    summary: "A practical guide to throw distance, lux targets, matte surfaces, and optical placement."
+  }
+];
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = BLOG_DATA[slug];
   
   if (!post) {
-    return { title: "Post Not Found - PROJECTION" };
+    return { title: "Publication Not Found - PROJECTION" };
   }
 
   return {
-    title: `${post.title} | PROJECTION Insights`,
-    description: post.content?.props?.children[0]?.props?.children || `Read about ${post.title} on PROJECTION Insights.`,
+    title: `${post.title} | PROJECTION Spatial Intelligence`,
+    description: post.subtitle,
   };
 }
 
@@ -130,12 +242,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
+    "description": post.subtitle,
     "image": [post.heroImg],
     "datePublished": new Date(post.date).toISOString(),
     "dateModified": new Date(post.date).toISOString(),
     "author": [{
-      "@type": "Person",
-      "name": "Dr. Elena Rostova"
+      "@type": "Organization",
+      "name": post.author.name
     }],
     "publisher": {
       "@type": "Organization",
@@ -147,8 +260,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     }
   };
 
+  const otherPosts = ALL_POSTS_META.filter(p => p.slug !== slug);
+
   return (
-    <main className="min-h-screen bg-white text-black flex flex-col pt-24 selection:bg-black selection:text-white">
+    <main className="min-h-screen bg-white text-black flex flex-col pt-24 selection:bg-black selection:text-white font-sans antialiased">
       <Navbar />
 
       <script
@@ -156,101 +271,281 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Article Header */}
-      <article className="w-full">
-        <header className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 text-center">
+      {/* Top Editorial Header */}
+      <header className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-12">
+        {/* Navigation Breadcrumb */}
+        <div className="mb-10">
           <Link 
             href="/blogs"
-            className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-black/50 hover:text-black transition-colors mb-10"
+            className="inline-flex items-center gap-2.5 text-xs font-mono font-medium uppercase tracking-[0.2em] text-black/50 hover:text-black transition-colors group"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
-            Back to All Resources
+            <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
+            <span>All Publications</span>
           </Link>
-          
-          <div className="mb-6 flex items-center justify-center gap-4 text-[10px] uppercase tracking-widest font-bold">
-            <span className="px-3 py-1 bg-black text-white">{post.category}</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-8">
-            {post.title}
-          </h1>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-[11px] uppercase tracking-widest text-black/60 font-bold">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full overflow-hidden bg-black/10">
-                <SafeImage src="https://momentfactory.com/cdn/shop/files/AuraInvalides_MomentFactory_MouvementIII_HD-WS.jpg" alt="Author" className="w-full h-full object-cover" />
-              </div>
-              <span className="text-black">Dr. Elena Rostova</span>
-            </div>
-            <div className="hidden sm:block w-1 h-1 rounded-full bg-black/20"></div>
-            <div className="flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5" />
-              {post.date}
-            </div>
-            <div className="hidden sm:block w-1 h-1 rounded-full bg-black/20"></div>
-            <div className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5" />
-              {post.readTime}
-            </div>
-            <div className="hidden sm:block w-1 h-1 rounded-full bg-black/20"></div>
-            <div className="flex items-center gap-1.5 text-black/40">
-              Updated: {post.date}
-            </div>
-          </div>
-        </header>
-
-        {/* Hero Image */}
-        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 lg:mb-24">
-          <div className="aspect-[21/9] sm:aspect-video w-full relative overflow-hidden bg-gray-100 border border-black/10 rounded-2xl">
-            <SafeImage 
-              src={post.heroImg}
-              alt={post.title}
-              className="w-full h-full object-cover"
-              containerClassName="w-full h-full"
-            />
-          </div>
         </div>
 
-        {/* Article Body */}
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 text-black/80 font-light leading-relaxed text-lg sm:text-xl [&>p]:mb-8 [&>p.lead]:text-2xl [&>p.lead]:font-normal [&>p.lead]:text-black [&>h2]:text-3xl [&>h2]:sm:text-4xl [&>h2]:font-black [&>h2]:text-black [&>h2]:mb-6 [&>h2]:mt-16 [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-8 [&>ul>li]:mb-2 [&>blockquote]:border-l-4 [&>blockquote]:border-black [&>blockquote]:pl-6 [&>blockquote]:italic [&>blockquote]:my-12 [&>blockquote]:text-2xl [&>blockquote]:font-medium [&>blockquote]:text-black">
-          {post.content}
+        {/* Category & Topic - Clean Typography, Strictly No Slashes */}
+        <div className="flex flex-wrap items-center gap-3 text-xs font-mono uppercase tracking-[0.18em] mb-6">
+          <span className="font-bold text-black">
+            {post.category}
+          </span>
+          <span className="text-black/30">•</span>
+          <span className="text-black/50 font-normal">
+            {post.topic}
+          </span>
         </div>
-      </article>
 
-      {/* Internal Links & Related Articles */}
-      <section className="bg-gray-50 border-t border-b border-black/10 py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-2xl font-black mb-8 text-black">Keep Exploring</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <Link href="/solutions" className="p-6 bg-white border border-black/10 hover:border-black/30 rounded-xl transition-all group">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-black/40 mb-2">Capabilities</div>
-              <div className="font-bold text-black group-hover:text-blue-600 transition-colors">Our Spatial Solutions</div>
-            </Link>
-            <Link href="/industries" className="p-6 bg-white border border-black/10 hover:border-black/30 rounded-xl transition-all group">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-black/40 mb-2">Sectors</div>
-              <div className="font-bold text-black group-hover:text-blue-600 transition-colors">Industries We Serve</div>
-            </Link>
-            <Link href="/projects" className="p-6 bg-white border border-black/10 hover:border-black/30 rounded-xl transition-all group">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-black/40 mb-2">Portfolio</div>
-              <div className="font-bold text-black group-hover:text-blue-600 transition-colors">Recent Installations</div>
-            </Link>
+        {/* Main Headline */}
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.04] text-black mb-8 max-w-5xl">
+          {post.title}
+        </h1>
+
+        {/* Subtitle / Deck */}
+        <p className="text-xl sm:text-2xl font-light leading-relaxed text-black/75 max-w-4xl mb-12">
+          {post.subtitle}
+        </p>
+
+        {/* Metadata Byline - Zero Cards, Pure Clean Typography, No Slashes */}
+        <div className="flex flex-wrap items-center gap-y-3 gap-x-8 text-xs font-mono uppercase tracking-[0.16em] text-black/50 pt-6">
+          <div>
+            <span className="text-black/30 mr-2">AUTHORED BY</span>
+            <span className="text-black font-semibold">{post.author.name}</span>
           </div>
+          <div className="flex items-center gap-2">
+            <Calendar className="w-3.5 h-3.5 text-black/40" />
+            <span className="text-black/80">{post.date}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Clock className="w-3.5 h-3.5 text-black/40" />
+            <span className="text-black/80">{post.readTime}</span>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Visual Showcase - Pure Borderless Cinematic Presentation */}
+      <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
+        <div className="w-full aspect-[21/10] sm:aspect-[21/9] relative overflow-hidden bg-neutral-100">
+          <SafeImage 
+            src={post.heroImg}
+            alt={post.title}
+            priority={true}
+            className="w-full h-full object-cover"
+            containerClassName="w-full h-full"
+          />
+        </div>
+        <div className="mt-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 text-xs font-mono text-black/50">
+          <p className="leading-relaxed max-w-3xl">
+            {post.heroCaption}
+          </p>
+          <span className="shrink-0 uppercase tracking-widest text-black/30">
+            Spatial Systems Architecture
+          </span>
         </div>
       </section>
 
-      {/* Next Steps CTA */}
-      <section className="bg-black text-white py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to innovate your space?</h2>
-          <p className="text-white/70 font-light mb-10 max-w-2xl mx-auto">
-            Speak directly with our spatial engineering team to discuss how we can implement these technologies in your next architectural project.
+      {/* Two-Column Editorial Article Grid */}
+      <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          {/* Main Article Content (8 cols) */}
+          <article className="lg:col-span-8 space-y-16">
+            
+            {/* Sections Loop */}
+            {post.sections.map((section, idx) => (
+              <div key={idx} className="space-y-6">
+                <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+                  {section.partNumber}
+                </div>
+                
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-black leading-snug">
+                  {section.title}
+                </h2>
+
+                <div className="space-y-6 text-black/80 font-light leading-relaxed text-lg sm:text-[19px]">
+                  {section.content.map((paragraph, pIdx) => (
+                    <p 
+                      key={pIdx}
+                      className={idx === 0 && pIdx === 0 ? "text-xl sm:text-2xl font-light text-black leading-relaxed" : ""}
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+
+                {section.highlight && (
+                  <div className="pl-6 py-2 my-8 border-l-2 border-black">
+                    <p className="text-base sm:text-lg font-medium text-black italic leading-relaxed">
+                      {section.highlight}
+                    </p>
+                  </div>
+                )}
+
+                {/* Inline Architectural Photographic Accent after Part 02 */}
+                {idx === 1 && post.secondaryImg && (
+                  <div className="pt-8 pb-4 space-y-3">
+                    <div className="w-full aspect-[16/9] relative overflow-hidden bg-neutral-100">
+                      <SafeImage 
+                        src={post.secondaryImg}
+                        alt="Architectural Projection Field Installation"
+                        priority={true}
+                        className="w-full h-full object-cover"
+                        containerClassName="w-full h-full"
+                      />
+                    </div>
+                    {post.secondaryCaption && (
+                      <p className="text-xs font-mono text-black/50 leading-relaxed">
+                        {post.secondaryCaption}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Editorial Pull Quote */}
+            <div className="py-12 my-8">
+              <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-black leading-[1.25]">
+                &ldquo;{post.quote.text}&rdquo;
+              </blockquote>
+              <div className="mt-4 text-xs font-mono uppercase tracking-[0.2em] text-black/50">
+                — {post.quote.attribution}
+              </div>
+            </div>
+
+            {/* Architecture In Practice Summary */}
+            <div className="space-y-4 pt-4">
+              <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+                Synthesis
+              </div>
+              <h3 className="text-2xl font-bold tracking-tight text-black">
+                The Path to Implementation
+              </h3>
+              <p className="text-black/80 font-light leading-relaxed text-lg sm:text-[19px]">
+                Architectural projection has evolved past the era of one-off digital novelties. When optical precision, multi-sensor calibration, and real-time generative software are harmonized from initial design blueprints, spaces gain a dynamic personality that elevates how people congregate, learn, and experience built spaces.
+              </p>
+            </div>
+
+          </article>
+
+          {/* Sticky Editorial Sidebar / Marginalia (4 cols) - Zero Cards, Pure Clean Typography */}
+          <aside className="lg:col-span-4 lg:sticky lg:top-28 space-y-12">
+            
+            {/* System Metrics Panel */}
+            <div className="space-y-6">
+              <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+                Technical Specifications
+              </div>
+              
+              <div className="space-y-6">
+                {post.metrics.map((metric, mIdx) => (
+                  <div key={mIdx} className="space-y-1">
+                    <div className="text-xs font-mono uppercase tracking-wider text-black/50">
+                      {metric.label}
+                    </div>
+                    <div className="text-2xl font-black tracking-tight text-black">
+                      {metric.value}
+                    </div>
+                    <div className="text-xs font-light text-black/60">
+                      {metric.detail}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Specifier Brief */}
+            <div className="space-y-3 pt-6">
+              <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+                Specifier Brief
+              </div>
+              <p className="text-sm font-light text-black/80 leading-relaxed">
+                {post.takeaway}
+              </p>
+            </div>
+
+            {/* Practice Contact Direct */}
+            <div className="space-y-3 pt-6">
+              <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+                Technical Consultation
+              </div>
+              <p className="text-xs font-light text-black/60 leading-relaxed">
+                Consult directly with our systems engineering team regarding optical throw ratios, laser lumens, and LiDAR grid specifications.
+              </p>
+              <Link 
+                href="/contact"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black hover:opacity-70 transition-opacity pt-1"
+              >
+                <span>Request Technical Brief</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+          </aside>
+
+        </div>
+      </section>
+
+      {/* Related Publications - Zero Box Cards, Pure Editorial Typographic Flow, Strictly No Slashes */}
+      <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="mb-12">
+          <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40 mb-2">
+            Further Reading
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-black">
+            Spatial Intelligence Journal
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+          {otherPosts.map((related) => (
+            <Link
+              key={related.slug}
+              href={`/blogs/${related.slug}`}
+              className="group block space-y-4"
+            >
+              <div className="flex items-center justify-between text-xs font-mono text-black/40 uppercase tracking-widest">
+                <span>Article {related.index} • {related.category}</span>
+                <span>{related.readTime}</span>
+              </div>
+              
+              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-black group-hover:text-black/70 transition-colors leading-snug">
+                {related.title}
+              </h3>
+
+              <p className="text-sm sm:text-base font-light text-black/65 leading-relaxed">
+                {related.summary}
+              </p>
+
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black group-hover:gap-3 transition-all pt-2">
+                <span>Read Publication</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Seamless Minimalist Bottom Inquiry Section */}
+      <section className="w-full bg-black text-white py-24 sm:py-32">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+          <div className="text-xs font-mono uppercase tracking-[0.3em] text-white/50">
+            Spatial Systems Integration
+          </div>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.06]">
+            Architect your next interactive surface.
+          </h2>
+          <p className="text-base sm:text-xl font-light text-white/70 max-w-2xl mx-auto leading-relaxed">
+            Collaborate directly with our engineering and creative team to design custom projection mapping and zero-latency sensor experiences for your venue.
           </p>
-          <Link 
-            href="/contact"
-            className="inline-block px-8 py-4 bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors"
-          >
-            Schedule a Consultation
-          </Link>
+          <div className="pt-4">
+            <Link 
+              href="/contact"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-3 px-8 py-4 bg-white text-black text-xs font-mono font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors"
+            >
+              <span>Consult with an Architect</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 

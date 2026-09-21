@@ -1,0 +1,539 @@
+{
+  "about_landmarks": [
+    {
+      "city": "Montreal",
+      "role": "Creative Headquarters & Prototyping Lab",
+      "landmark": "Notre-Dame Heritage Mapping & Arena Labs"
+    },
+    {
+      "city": "New York",
+      "role": "Spatial Software & Interactive Retail Studio",
+      "landmark": "Manhattan Skyline Observation Deck & Hudson Yards"
+    },
+    {
+      "city": "Paris",
+      "role": "European Heritage & Architectural Lab",
+      "landmark": "Historic Sanctuary Mapping & Cultural Atriums"
+    },
+    {
+      "city": "Tokyo",
+      "role": "Transit & High-Density Urban Spatial Lab",
+      "landmark": "Shinjuku Multi-Story Transit Corridor Mapping"
+    },
+    {
+      "city": "Singapore",
+      "role": "Aviation & Destination Media Portals",
+      "landmark": "International Airport Concourse Interactive Portals"
+    }
+  ],
+  "about_landmarks_other": [
+    {
+      "line": 106,
+      "term": "Notre-Dame",
+      "content": "{ city: \"Montreal\", role: \"Creative Headquarters & Prototyping Lab\", landmark: \"Notre-Dame Heritage Mapping & Arena Labs\" },"
+    },
+    {
+      "line": 107,
+      "term": "Hudson Yards",
+      "content": "{ city: \"New York\", role: \"Spatial Software & Interactive Retail Studio\", landmark: \"Manhattan Skyline Observation Deck & Hudson Yards\" },"
+    },
+    {
+      "line": 107,
+      "term": "Manhattan",
+      "content": "{ city: \"New York\", role: \"Spatial Software & Interactive Retail Studio\", landmark: \"Manhattan Skyline Observation Deck & Hudson Yards\" },"
+    },
+    {
+      "line": 109,
+      "term": "Shinjuku",
+      "content": "{ city: \"Tokyo\", role: \"Transit & High-Density Urban Spatial Lab\", landmark: \"Shinjuku Multi-Story Transit Corridor Mapping\" },"
+    },
+    {
+      "line": 110,
+      "term": "Singapore",
+      "content": "{ city: \"Singapore\", role: \"Aviation & Destination Media Portals\", landmark: \"International Airport Concourse Interactive Portals\" },"
+    },
+    {
+      "line": 108,
+      "term": "Paris",
+      "content": "{ city: \"Paris\", role: \"European Heritage & Architectural Lab\", landmark: \"Historic Sanctuary Mapping & Cultural Atriums\" },"
+    },
+    {
+      "line": 109,
+      "term": "Tokyo",
+      "content": "{ city: \"Tokyo\", role: \"Transit & High-Density Urban Spatial Lab\", landmark: \"Shinjuku Multi-Story Transit Corridor Mapping\" },"
+    }
+  ],
+  "about_stats": [
+    {
+      "value": "12+",
+      "label": "Years of R&D",
+      "desc": "Developing proprietary spatial optical engines and computer vision"
+    },
+    {
+      "value": "140+",
+      "label": "Landmark Deployments",
+      "desc": "Permanent installations operating across 5 continents"
+    },
+    {
+      "value": "< 14ms",
+      "label": "Glass-to-Glass Latency",
+      "desc": "Near-instantaneous optical footstep and gesture tracking"
+    },
+    {
+      "value": "99.98%",
+      "label": "Operational Reliability",
+      "desc": "Autonomous 24-7 hardware telemetry and remote health orchestration"
+    },
+    {
+      "line": 30,
+      "content": "metrics: \"Sub-millimeter edge-blending • Custom focal optics\","
+    },
+    {
+      "line": 38,
+      "content": "metrics: \"60 FPS capture • Sub-millimeter tracking accuracy\","
+    },
+    {
+      "line": 124,
+      "content": "desc: \"Our optical engines feature sealed dust-proof optical paths and solid-state laser engines rated for 20,000+ hours of continuous, uninterrupted commercial operation.\","
+    },
+    {
+      "line": 463,
+      "content": "Engineered for hundreds of thousands of annual visitors with zero optical drift"
+    }
+  ],
+  "master_industry_stats": [
+    {
+      "id": "all",
+      "title": "Education & Learning Spaces",
+      "problemSolved": "Replaces passive disengagement and sedentary screen time with motion-reactive learning.",
+      "customerGain": "+38% STEM retention and 94% active student participation across all grade levels.",
+      "keyMetric": "+38% STEM Retention"
+    },
+    {
+      "id": "museums",
+      "title": "Museums & Cultural Venues",
+      "problemSolved": "Overcomes delicate artifact touch restrictions with non-invasive touchless micro-projection.",
+      "customerGain": "Triples visitor dwell time with 100% preservation compliance and 98% visitor review scores.",
+      "keyMetric": "3x Dwell Time Lift"
+    },
+    {
+      "id": "retail",
+      "title": "Retail & Flagship Showrooms",
+      "problemSolved": "Solves high-street foot traffic drop-offs and brief store browsing sessions.",
+      "customerGain": "Drives 40–60% higher store walk-ins and 3.2x longer dwell with lift-and-learn discovery.",
+      "keyMetric": "+54% Walk-In Rate"
+    },
+    {
+      "id": "hospitality",
+      "title": "Hospitality & Resorts",
+      "problemSolved": "Eliminates sterile hotel lobbies and expensive physical banquet decorations.",
+      "customerGain": "+65% lobby dwell, premium event booking rates, and millions of viral social media shares.",
+      "keyMetric": "+65% Lounge Dwell"
+    },
+    {
+      "id": "entertainment",
+      "title": "Entertainment & Theme Venues",
+      "problemSolved": "Eliminates broken buttons, high maintenance costs, and wearable headset bottlenecks.",
+      "customerGain": "Powers 50+ simultaneous active players with 0% floor hardware wear and 65% repeat visits.",
+      "keyMetric": "50+ Multi-Users"
+    },
+    {
+      "id": "corporate",
+      "title": "Corporate & Executive Spaces",
+      "problemSolved": "Replaces static PowerPoint slides and sterile corporate lobbies with real-time digital architecture.",
+      "customerGain": "Accelerates enterprise deal cycles, elevates briefing impact, and greets VIPs in <15ms latency.",
+      "keyMetric": "<15ms Neural Latency"
+    },
+    {
+      "id": "public-spaces",
+      "title": "Public Spaces & Transit Venues",
+      "problemSolved": "Reduces traveler anxiety and activates massive blank concourses with 100% vandal-proof light.",
+      "customerGain": "Entertains millions of annual pedestrians and extends concession dwell by 3.5x without blocking flow.",
+      "keyMetric": "3.5x Concourse Dwell"
+    },
+    {
+      "id": "healthcare",
+      "title": "Healthcare & Sensory Therapy",
+      "problemSolved": "Alleviates clinical stress and pediatric anxiety in waiting corridors and therapy spaces.",
+      "customerGain": "65% anxiety reduction with 100% contactless, easy-to-sanitize touchless motion floors.",
+      "keyMetric": "65% Anxiety Reduction"
+    }
+  ],
+  "data_industry_stats": {
+    "corporate.ts": [
+      {
+        "type": "caseStudy",
+        "client": "Global Tech Headquarters",
+        "title": "Generative AI Mirror Room",
+        "metric": "<15ms",
+        "metricLabel": "Neural Render Latency",
+        "secondaryMetric": "100%",
+        "secondaryMetricLabel": "Local Edge Privacy"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Tech Headquarters Seattle",
+        "title": "Corporate Lobby Installation",
+        "metric": "100%",
+        "metricLabel": "Real-Time Cloud Sync",
+        "secondaryMetric": "4K",
+        "secondaryMetricLabel": "Ultra-High Resolution"
+      },
+      {
+        "type": "caseStudy",
+        "client": "London Financial District",
+        "title": "AI Receptionist Avatar Concierge",
+        "metric": "99.9%",
+        "metricLabel": "Greeting Accuracy",
+        "secondaryMetric": "Sub-Second",
+        "secondaryMetricLabel": "Response Time"
+      },
+      {
+        "type": "inline_stat",
+        "line": 109,
+        "text": "metric: \"<15ms\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 111,
+        "text": "secondaryMetric: \"100%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 123,
+        "text": "metric: \"100%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 137,
+        "text": "metric: \"99.9%\","
+      }
+    ],
+    "education.ts": [
+      {
+        "type": "caseStudy",
+        "client": "Boston Prep Academy",
+        "title": "Immersive STEM Lab & Sandbox Installation",
+        "metric": "94%",
+        "metricLabel": "Active Participation Rate",
+        "secondaryMetric": "+38%",
+        "secondaryMetricLabel": "Higher STEM Retention"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Global Science Museum",
+        "title": "Interactive Museum Exhibit",
+        "metric": "3x",
+        "metricLabel": "Dwell Time Increase",
+        "secondaryMetric": "100%",
+        "secondaryMetricLabel": "Daylight Visibility"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Active Arena Edutainment",
+        "title": "ARcade Active Multimedia Arena",
+        "metric": "50+",
+        "metricLabel": "Simultaneous Players",
+        "secondaryMetric": "Zero",
+        "secondaryMetricLabel": "Wearables Required"
+      },
+      {
+        "type": "inline_stat",
+        "line": 33,
+        "text": "{ title: \"🚀 100% Tag-Free Safety\", desc: \"Ceiling-mounted laser optics mean zero wearable sensors to sanitize, charge, or replace.\" },"
+      },
+      {
+        "type": "inline_stat",
+        "line": 69,
+        "text": "{ title: \"38% Increase in Retention\", desc: \"Kinesthetic, movement-based learning solidifies complex spatial and mathematical concepts far longer than passive textbooks.\" },"
+      },
+      {
+        "type": "inline_stat",
+        "line": 70,
+        "text": "{ title: \"94% Active Participation\", desc: \"Multiplayer motion games motivate even reluctant or shy students to participate in group lessons.\" },"
+      },
+      {
+        "type": "inline_stat",
+        "line": 71,
+        "text": "{ title: \"60% Fewer Distractions\", desc: \"Short, movement-integrated learning breaks help students regulate focus and channel energy constructively.\" },"
+      },
+      {
+        "type": "inline_stat",
+        "line": 109,
+        "text": "metric: \"94%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 111,
+        "text": "secondaryMetric: \"+38%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 123,
+        "text": "metric: \"3x\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 125,
+        "text": "secondaryMetric: \"100%\","
+      }
+    ],
+    "entertainment.ts": [
+      {
+        "type": "caseStudy",
+        "client": "Lumina Night Walk",
+        "title": "Outdoor Forest Projection Mapping & Spatial Experience",
+        "metric": "300K+",
+        "metricLabel": "Seasonal Nighttime Visitors",
+        "secondaryMetric": "IP66",
+        "secondaryMetricLabel": "Weatherproof Reliability"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Active Arena FEC",
+        "title": "Kinesthetic Multiplayer Motion Arena",
+        "metric": "50+",
+        "metricLabel": "Simultaneous Active Players",
+        "secondaryMetric": "0%",
+        "secondaryMetricLabel": "Floor Hardware Wear"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Edge Motion Experience",
+        "title": "High-Altitude Observation Floor",
+        "metric": "3.5x",
+        "metricLabel": "Guest Stay Duration",
+        "secondaryMetric": "500K+",
+        "secondaryMetricLabel": "Social Media Impressions"
+      },
+      {
+        "type": "inline_stat",
+        "line": 125,
+        "text": "secondaryMetric: \"0%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 137,
+        "text": "metric: \"3.5x\","
+      }
+    ],
+    "healthcare.ts": [
+      {
+        "type": "inline_stat",
+        "line": 33,
+        "text": "{ title: \"🚀 Ensure Safety\", desc: \"Provide 100% touchless interactive experiences to completely eliminate cross-contamination risks.\" },"
+      },
+      {
+        "type": "inline_stat",
+        "line": 70,
+        "text": "{ title: \"Zero Cross-Contamination\", desc: \"100% touchless interaction eliminates the hygiene risks associated with traditional waiting room toys.\" },"
+      },
+      {
+        "type": "inline_stat",
+        "line": 94,
+        "text": "{ q: \"Are the interactive systems safe from a hygiene perspective?\", a: \"Yes. All our primary healthcare solutions are 100% touchless, eliminating the cross-contamination risks found in traditional waiting room toys and touchscreens.\" },"
+      },
+      {
+        "type": "inline_stat",
+        "line": 101,
+        "text": "{ q: \"How do you handle maintenance in a sterile environment?\", a: \"All hardware is installed securely in the ceiling or high on walls, keeping it out of reach. We handle 95% of maintenance remotely via the cloud.\" }"
+      }
+    ],
+    "hospitality.ts": [
+      {
+        "type": "caseStudy",
+        "client": "The Grand Palm Resort",
+        "title": "Virtual Koi Pond & Living Arrival Floor",
+        "metric": "+65%",
+        "metricLabel": "Lobby Dwell & Engagement",
+        "secondaryMetric": "4.9 / 5",
+        "secondaryMetricLabel": "Guest Delight Score"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Azure Bay Luxury Resort",
+        "title": "Ambient Atrium Interactive Canopy",
+        "metric": "3.5x",
+        "metricLabel": "Extended Lounge Dwell Time",
+        "secondaryMetric": "99.8%",
+        "secondaryMetricLabel": "Operational Reliability"
+      },
+      {
+        "type": "caseStudy",
+        "client": "L'Ombre Michelin Dining",
+        "title": "Multi-Sensory Table Projection Experience",
+        "metric": "+32%",
+        "metricLabel": "Premium Tasting Bookings",
+        "secondaryMetric": "Zero",
+        "secondaryMetricLabel": "Hardware on Tables"
+      },
+      {
+        "type": "inline_stat",
+        "line": 109,
+        "text": "metric: \"+65%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 123,
+        "text": "metric: \"3.5x\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 125,
+        "text": "secondaryMetric: \"99.8%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 137,
+        "text": "metric: \"+32%\","
+      }
+    ],
+    "museums.ts": [
+      {
+        "type": "caseStudy",
+        "client": "AURA Sanctuary",
+        "title": "Architectural 360° Projection Mapping & Spatial Audio",
+        "metric": "1.2M+",
+        "metricLabel": "Annual Visitors Welcomed",
+        "secondaryMetric": "100%",
+        "secondaryMetricLabel": "Historic Preservation"
+      },
+      {
+        "type": "caseStudy",
+        "client": "BioSphere Science Center",
+        "title": "Interactive Museum Floor & 360° Marine Canvas",
+        "metric": "50+",
+        "metricLabel": "Simultaneous Tracked Visitors",
+        "secondaryMetric": "98%",
+        "secondaryMetricLabel": "Visitor Satisfaction Rating"
+      },
+      {
+        "type": "caseStudy",
+        "client": "National Antiquities Wing",
+        "title": "Chrono Echoes Artifact Wall",
+        "metric": "100%",
+        "metricLabel": "UV Preservation Compliance",
+        "secondaryMetric": "4.9 / 5",
+        "secondaryMetricLabel": "Educational Review Score"
+      },
+      {
+        "type": "inline_stat",
+        "line": 70,
+        "text": "{ title: \"Longer Dwell Times\", desc: \"Interactive storytelling keeps visitors engaged in galleries 3x longer than static displays.\" },"
+      },
+      {
+        "type": "inline_stat",
+        "line": 111,
+        "text": "secondaryMetric: \"100%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 125,
+        "text": "secondaryMetric: \"98%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 137,
+        "text": "metric: \"100%\","
+      }
+    ],
+    "public-spaces.ts": [
+      {
+        "type": "caseStudy",
+        "client": "Edge NYC Horizon Portal",
+        "title": "Horizon Glass Motion Floor",
+        "metric": "1,100 Ft",
+        "metricLabel": "Observation Deck Elevation",
+        "secondaryMetric": "3.5x",
+        "secondaryMetricLabel": "Increase in Guest Stay"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Metropolitan Transit Authority",
+        "title": "Quantum Prism Passage",
+        "metric": "1M+",
+        "metricLabel": "Annual Pedestrians Engaged",
+        "secondaryMetric": "100%",
+        "secondaryMetricLabel": "Vandal-Proof Integration"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Zurich International Transit Hub",
+        "title": "Concourse Motion Interactive Floor",
+        "metric": "200+ Ft",
+        "metricLabel": "Continuous Projection Surface",
+        "secondaryMetric": "Zero",
+        "secondaryMetricLabel": "Obstruction to Crowd Flow"
+      },
+      {
+        "type": "inline_stat",
+        "line": 111,
+        "text": "secondaryMetric: \"3.5x\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 125,
+        "text": "secondaryMetric: \"100%\","
+      }
+    ],
+    "retail.ts": [
+      {
+        "type": "caseStudy",
+        "client": "Neo-Shinjuku District",
+        "title": "Gamified Touch & Motion Projection Wall",
+        "metric": "3.2x",
+        "metricLabel": "Dwell Time Increase",
+        "secondaryMetric": "10K+",
+        "secondaryMetricLabel": "Daily Interactions"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Fifth Avenue Luxury Flagship",
+        "title": "Flagship Store Activation",
+        "metric": "+54%",
+        "metricLabel": "Store Entry Lift",
+        "secondaryMetric": "3.5x",
+        "secondaryMetricLabel": "Engagement Duration"
+      },
+      {
+        "type": "caseStudy",
+        "client": "Neo-Tokyo Brand Lab",
+        "title": "Neo-Tokyo Retail Pop-Up",
+        "metric": "42%",
+        "metricLabel": "Sales Conversion Lift",
+        "secondaryMetric": "99.9%",
+        "secondaryMetricLabel": "System Reliability"
+      },
+      {
+        "type": "inline_stat",
+        "line": 69,
+        "text": "{ title: \"Increased Foot Traffic\", desc: \"Interactive storefronts consistently capture attention, driving a 40-60% increase in store entries.\" },"
+      },
+      {
+        "type": "inline_stat",
+        "line": 111,
+        "text": "metric: \"3.2x\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 125,
+        "text": "metric: \"+54%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 127,
+        "text": "secondaryMetric: \"3.5x\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 139,
+        "text": "metric: \"42%\","
+      },
+      {
+        "type": "inline_stat",
+        "line": 141,
+        "text": "secondaryMetric: \"99.9%\","
+      }
+    ]
+  }
+}

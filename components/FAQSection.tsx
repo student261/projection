@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { Plus, Minus, HelpCircle } from "lucide-react";
 import Link from "next/link";
 
 interface FAQItem {
@@ -16,49 +16,49 @@ const faqs: FAQItem[] = [
     id: "faq-1",
     categoryLabel: "CORE TECHNOLOGY",
     q: "What is Motion Interactive Projection & how does it work?",
-    a: "Motion Interactive Projection turns floors, walls, and physical architecture into highly responsive digital canvases. Depth-sensing optical cameras detect footsteps, gestures, and body movement in real-time with sub-10ms latency, triggering dynamic 3D visuals and spatial sound effects."
+    a: "Motion Interactive Projection turns floors, walls, and physical architecture into highly responsive digital canvases. Depth-sensing optical cameras detect footsteps, gestures, and body movement in real-time with near-instantaneous latency, triggering dynamic 3D visuals and spatial sound effects."
   },
   {
     id: "faq-2",
     categoryLabel: "INDUSTRIES SERVED",
     q: "Which industries can benefit from your solutions?",
-    a: "Education, healthcare, retail, museums and cultural institutions, entertainment venues, hospitality, corporate spaces, and public spaces all use our technology today."
+    a: "Our spatial installations are purpose-engineered across 8 primary verticals: Education (active STEM learning floors & interactive classrooms), Healthcare (pediatric sensory therapy & calming distraction rooms), Retail (interactive storefront windows & touchless product showcases), Museums & Cultural Institutions (artifact projection mapping & interactive historical timelines), Entertainment & Gaming (motion-tracked team sports & arcade pavilions), Hospitality (ambient lobby ceiling mapping & interactive dining lounges), Corporate (executive briefing walls & generative data atriums), and Public Spaces (airport concourse projection & civic transit portals)."
   },
   {
     id: "faq-3",
     categoryLabel: "CUSTOMIZATION & BRANDING",
     q: "Can your solutions be customized for our business?",
-    a: "Yes — every installation is designed around your space, brand identity, and goals, from the visuals and interaction style to the technology mix that fits your budget and venue."
+    a: "Every installation is custom-architected to your specific venue, audience, and commercial objectives. We tailor everything from optical hardware selection (throw distances, ambient lux compensation, surface treatments) to software development (custom 3D shaders, brand identity palettes, interactive physics, soundscapes, and cloud CMS integrations). Whether you require corporate governance, ADA accessibility compliance, or gamified sponsor leaderboards, our engineering team custom-codes the experience to your exact specifications."
   },
   {
     id: "faq-4",
     categoryLabel: "INSTALLATION & SUPPORT",
     q: "Do you provide installation and technical support?",
-    a: "Yes. Our team handles the complete process end-to-end: planning, installation, calibration, testing, and ongoing technical support after launch."
+    a: "Yes, we provide complete end-to-end turnkey delivery worldwide. Our certified spatial engineers handle architectural site surveys, structural rigging, projector laser alignment, sensor grid calibration, and audio synchronization. Post-launch, we provide comprehensive SLA packages that include 24/7 remote cloud telemetry monitoring, automated health diagnostics, scheduled hardware maintenance, and rapid-response on-site engineering support to guarantee continuous, mission-critical operational reliability."
   },
   {
     id: "faq-5",
     categoryLabel: "CONTENT & REFRESHES",
     q: "Can the content be updated after installation?",
-    a: "Yes — content can be refreshed or swapped after launch, useful for seasonal campaigns, new exhibits, or evolving brand needs, without replacing the underlying hardware."
+    a: "Yes. All PROJECTION installations are connected to our proprietary cloud-based Content Management System (CMS). Venue operators can instantly push new games, seasonal holiday campaigns, promotional sponsor overlays, and marketing graphics with a single click—without needing on-site technicians or hardware alterations. We also provide an open SDK and custom template library for clients who prefer generating their own in-house visual assets."
   },
   {
     id: "faq-6",
     categoryLabel: "SPACE & SCALE",
     q: "Are your solutions suitable for small and large spaces?",
-    a: "Yes — from a single interactive display in a small retail corner to large-scale immersive rooms and architectural projection mapping across an entire building facade."
+    a: "Yes, our modular architecture scales seamlessly to fit any physical footprint. For compact environments (such as retail pop-ups, pediatric waiting areas, or boutique hotel entryways), our ultra-short-throw systems deliver high-impact motion interaction in spaces as small as 100 sq ft. For massive venues (such as stadium tunnels, airport concourses, cathedral sanctuaries, and multi-story corporate atriums), our multi-projector edge-blending and distributed LiDAR sensor grids cover thousands of square feet with zero blind spots."
   },
   {
     id: "faq-7",
     categoryLabel: "PROJECT TIMELINE",
     q: "How long does it take to implement a project?",
-    a: "Timelines vary with scope — a simple activation can launch in a few weeks, while a large permanent installation with custom content typically takes a few months from first conversation to opening day."
+    a: "Project timelines depend on spatial complexity and custom content requirements. Turnkey modular packages utilizing our pre-built interactive library can be installed and commissioned within 2 to 4 weeks. Fully bespoke architectural installations—involving custom 3D projection mapping, multi-room sensor fusion, or generative AI avatar development—typically range from 8 to 12 weeks from initial concept and 3D modeling through on-site calibration and staff handover."
   },
   {
     id: "faq-8",
     categoryLabel: "GETTING STARTED",
     q: "How do I get started with PROJECTION?",
-    a: "Reach out through our contact form with a few details about your space and goals, and our team will schedule an initial consultation."
+    a: "Getting started is straightforward. Submit an inquiry through our contact form or book a virtual demonstration detailing your venue dimensions, target industry, and project goals. Our spatial architects will review your blueprints and schedule a discovery consultation within 24 hours, followed by a complimentary spatial feasibility report, hardware specification, and budget estimate tailored to your space."
   }
 ];
 
@@ -70,7 +70,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-12 lg:py-16 relative overflow-hidden bg-[var(--background)] border-y border-[var(--border-light)]" id="faqs">
+    <section className="py-12 lg:py-16 relative overflow-hidden bg-[var(--background)]" id="faqs">
       {/* Subtle background gradients */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-black/5 blur-[140px] rounded-full" />
@@ -80,21 +80,21 @@ export default function FAQSection() {
         
         {/* Section Header */}
         <div className="text-center mb-10 lg:mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 border border-black/10 text-[10px] font-bold uppercase tracking-[0.25em] text-black">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2">
+            <HelpCircle className="w-3.5 h-3.5 text-black/40" />
             <span>KNOWLEDGE BASE</span>
           </div>
 
-          <h2 className="text-[var(--foreground)] leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-[var(--foreground)]">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-sm text-[var(--text-secondary)] font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-[var(--text-secondary)] font-light max-w-2xl mx-auto leading-relaxed">
             Find answers to the most common questions about our interactive solutions, supported industries, customization options, installation process, and ongoing support.
           </p>
         </div>
 
-        {/* FAQ Accordion List */}
-        <div className="space-y-3 mb-10">
+        {/* FAQ Accordion List (Retail-Showrooms / Industry Reference Pattern) */}
+        <div className="space-y-2 mb-10 divide-y divide-neutral-200/80">
           {faqs.map((faq, idx) => {
             const isOpen = openFaqIdx === idx;
             const itemNum = String(idx + 1).padStart(2, "0");
@@ -102,36 +102,51 @@ export default function FAQSection() {
             return (
               <div
                 key={faq.id}
-                className={`rounded-2xl transition-all duration-300 overflow-hidden border ${
-                  isOpen
-                    ? "bg-[var(--background)] border-[#000000] shadow-xl shadow-[#000000]/5 ring-1 ring-[#000000]/10"
-                    : "bg-[var(--background)] border-[var(--border-light)] hover:border-[var(--text-secondary)] shadow-sm"
-                }`}
+                className="py-4 text-left transition-colors"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full text-left p-5 sm:p-6 flex items-start justify-between gap-4 text-[var(--foreground)] font-medium text-sm sm:text-base hover:text-black transition-colors cursor-pointer group"
+                  className="w-full flex items-center justify-between text-left focus:outline-none group cursor-pointer"
                 >
-                  <div className="flex items-start gap-4 sm:gap-6">
-                    <span className={` text-xs font-bold pt-1 transition-colors ${isOpen ? "text-black" : "text-[var(--text-secondary)] opacity-40 group-hover:opacity-70"}`}>
+                  <div className="flex items-start gap-3 sm:gap-4 pr-2">
+                    <span className="text-xs font-mono font-bold text-neutral-400 mt-1 shrink-0">
                       {itemNum}
                     </span>
-                    <span className="leading-snug tracking-tight font-semibold max-w-xl">{faq.q}</span>
-                  </div>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-500 ${isOpen ? "rotate-180 bg-black text-white" : "bg-[var(--foreground)]/5 text-[var(--text-secondary)] group-hover:bg-[var(--foreground)]/10 group-hover:text-[var(--foreground)]"}`}>
-                    <ChevronDown className="w-4 h-4" />
-                  </div>
-                </button>
-                {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 text-black/80 leading-relaxed pt-1 ml-8 sm:ml-12 font-normal space-y-4 max-w-2xl">
-                    <p className="text-xs sm:text-sm">{faq.a}</p>
-                    <div>
-                      <Link href="/contact" className="text-[11px] font-bold uppercase tracking-wider text-black hover:text-gray-500 inline-flex items-center gap-2 transition-colors border-b border-black/20 hover:border-black/50 pb-0.5">
-                        <span>Talk to an Expert</span>
-                      </Link>
+                    <div className="flex flex-col items-start gap-1">
+                      <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-black/40">
+                        {faq.categoryLabel}
+                      </span>
+                      <span className={`text-base sm:text-lg font-bold transition-colors leading-snug ${isOpen ? "text-black" : "text-neutral-800 group-hover:text-black"}`}>
+                        {faq.q}
+                      </span>
                     </div>
                   </div>
-                )}
+                  <div className="shrink-0 ml-2 mt-1 text-neutral-500 group-hover:text-black transition-colors">
+                    {isOpen ? (
+                      <Minus className="w-4 h-4" />
+                    ) : (
+                      <Plus className="w-4 h-4" />
+                    )}
+                  </div>
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    isOpen ? "max-h-[1000px] opacity-100 mt-3" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <p className="pl-9 text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
+                    {faq.a}
+                  </p>
+                  <div className="pl-9 mt-3">
+                    <Link
+                      href="/contact"
+                      className="text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-500 inline-flex items-center gap-1.5 transition-colors border-b border-black/20 hover:border-black/50 pb-0.5"
+                    >
+                      <span>Talk to an Expert</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             );
           })}

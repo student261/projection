@@ -5,38 +5,47 @@ import { Plus, Minus } from "lucide-react";
 import { IndustryFAQ } from "@/data/industries";
 
 export default function FAQAccordion({ faqs }: { faqs: IndustryFAQ[] }) {
-  const [openIdx, setOpenIdx] = useState<number | null>(null);
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   const toggle = (idx: number) => {
     setOpenIdx(openIdx === idx ? null : idx);
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2">
       {faqs.map((faq, idx) => {
         const isOpen = openIdx === idx;
+        const num = String(idx + 1).padStart(2, "0");
+
         return (
           <div 
             key={idx} 
-            className={`border border-black/10 rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? "bg-black/5" : "bg-transparent hover:bg-black/5"}`}
+            className="py-4 text-left transition-colors"
           >
             <button
               onClick={() => toggle(idx)}
-              className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+              className="w-full flex items-center justify-between text-left focus:outline-none group cursor-pointer"
             >
-              <span className="text-black font-medium pr-8">{faq.q}</span>
-              <div className="shrink-0 w-8 h-8 rounded-full border border-black/10 flex items-center justify-center bg-black">
+              <div className="flex items-center gap-4">
+                <span className="text-xs font-mono font-bold text-neutral-400">
+                  {num}
+                </span>
+                <span className={`text-base sm:text-lg font-bold transition-colors ${isOpen ? "text-black" : "text-neutral-800 group-hover:text-black"}`}>
+                  {faq.q}
+                </span>
+              </div>
+              <div className="shrink-0 ml-4 text-neutral-500 group-hover:text-black transition-colors">
                 {isOpen ? (
-                  <Minus className="w-4 h-4 text-white" />
+                  <Minus className="w-4 h-4" />
                 ) : (
-                  <Plus className="w-4 h-4 text-white" />
+                  <Plus className="w-4 h-4" />
                 )}
               </div>
             </button>
             <div 
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[500px] opacity-100 mt-3" : "max-h-0 opacity-0"}`}
             >
-              <p className="p-6 pt-0 text-black/70 font-light leading-relaxed text-sm">
+              <p className="pl-9 text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
                 {faq.a}
               </p>
             </div>

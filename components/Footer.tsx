@@ -1,16 +1,42 @@
+"use client";
+
 import Link from "next/link";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { SITE_CONTACT } from "@/lib/constants";
+import { useEffect, useRef, useState } from "react";
 
 export default function Footer() {
+  const footerRef = useRef<HTMLElement>(null);
+  const [footerHeight, setFooterHeight] = useState(520);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (footerRef.current) {
+        setFooterHeight(footerRef.current.offsetHeight);
+      }
+    };
+    
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
   return (
     <div 
       className="relative w-full overflow-hidden" 
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="relative min-h-[480px] lg:h-[520px] w-full">
-        <footer className="fixed bottom-0 left-0 w-full min-h-[480px] lg:h-[520px] bg-[#0a0a0b] text-white border-t border-white/10 pt-16 lg:pt-20 pb-12 z-0 flex flex-col justify-between">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between">
+      {/* Dynamic Spacer */}
+      <div 
+        className="relative w-full pointer-events-none hidden md:block" 
+        style={{ height: `${footerHeight}px` }} 
+      />
+
+      <footer 
+        ref={footerRef}
+        className="md:fixed bottom-0 left-0 w-full min-h-[480px] lg:min-h-[520px] bg-[#0a0a0b] text-white border-t border-white/10 pt-16 lg:pt-20 pb-12 z-0 flex flex-col justify-between"
+      >
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between">
             
             {/* Main Footer Layout */}
             <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-16 mb-12">
@@ -111,8 +137,17 @@ export default function Footer() {
 
             <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-white/10">
               <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8">
-                <Link href="/" className="inline-flex items-center gap-1.5 opacity-50 hover:opacity-100 transition-opacity">
+                <Link href="/" className="inline-flex items-center gap-1.5 opacity-50 hover:opacity-100 transition-opacity" aria-label="Home">
                    <Sparkles className="w-3.5 h-3.5" />
+                </Link>
+                <Link href="/privacy" className="text-[12px] text-white/50 hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-[12px] text-white/50 hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+                <Link href="/cookies" className="text-[12px] text-white/50 hover:text-white transition-colors">
+                  Cookie Policy
                 </Link>
               </div>
               <div className="text-[12px] font-medium text-white/40">
@@ -122,7 +157,6 @@ export default function Footer() {
             
           </div>
         </footer>
-      </div>
     </div>
   );
 }

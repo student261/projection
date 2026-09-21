@@ -22,11 +22,11 @@ export default function SectionHeading({
   return (
     <div className={`mb-12 ${centered ? "text-center mx-auto max-w-3xl" : "max-w-2xl"} ${className}`}>
       {label && (
-        <span className={`text-[10px] uppercase tracking-[0.25em] block mb-2 ${dark ? "text-white/60" : "text-black/60"}`}>
+        <span className={`text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] block mb-3 ${dark ? "text-white/60" : "text-black/60"}`}>
           {label}
         </span>
       )}
-      <h2 className={`${dark ? "text-white" : "text-black"}`}>
+      <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] ${dark ? "text-white" : "text-black"}`}>
         {heading}
       </h2>
       {subheading && (

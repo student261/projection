@@ -9,8 +9,7 @@ interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   priority?: boolean;
 }
 
-const DEFAULT_FALLBACK =
-  "https://momentfactory.com/cdn/shop/files/KarelChladek-5286-WS.jpg";
+const DEFAULT_FALLBACK = "/images/architectural_light_beam.jpg";
 
 export default function SafeImage({
   src,
@@ -29,9 +28,9 @@ export default function SafeImage({
     if (typeof rawSrc !== "string" || !rawSrc) return fallbackSrc;
     let result = rawSrc;
 
-    // Auto convert local PNG paths to WebP for maximum compression & speed
-    if (result.endsWith(".png") && !result.startsWith("http")) {
-      result = result.replace(/\.png$/, ".webp");
+    // Auto convert local images to WebP for 85%+ compression & ultra-fast loading
+    if ((result.endsWith(".png") || result.endsWith(".jpg") || result.endsWith(".jpeg")) && !result.startsWith("http")) {
+      result = result.replace(/\.(png|jpg|jpeg)$/, ".webp");
     }
 
     if (result.includes("images.unsplash.com")) {
@@ -70,6 +69,12 @@ export default function SafeImage({
   }, [src, fallbackSrc]);
 
   const handleError = () => {
+    // If we tried an optimized .webp URL and it failed, try the original src first
+    if (typeof src === "string" && imgSrc !== src && imgSrc.endsWith(".webp")) {
+      setImgSrc(src);
+      return;
+    }
+
     if (!hasPrimaryError) {
       // First error: switch to fallback
       setHasPrimaryError(true);

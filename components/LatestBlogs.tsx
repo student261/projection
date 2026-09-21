@@ -14,7 +14,7 @@ const blogs = [
     category: "INTERACTIVE TECH",
     date: "AUG 2026",
     readTime: "5 MIN READ",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_bts_072619_016-WS_grande.jpg",
+    img: "/images/interactive_floor_motion.jpg",
   },
   {
     id: "ai-redefining-experiences",
@@ -24,7 +24,7 @@ const blogs = [
     category: "ARTIFICIAL INTELLIGENCE",
     date: "AUG 2026",
     readTime: "6 MIN READ",
-    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory_DSC_4599_grande.png",
+    img: "/images/corporate_lobby_wall.jpg",
   },
   {
     id: "choosing-right-solution",
@@ -34,13 +34,13 @@ const blogs = [
     category: "BUYER'S GUIDE",
     date: "AUG 2026",
     readTime: "4 MIN READ",
-    img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9_grande.jpg",
+    img: "/images/technician_calibrating_projection.jpg",
   },
 ];
 
 export default function LatestBlogs() {
   return (
-    <section className="py-10 lg:py-12 bg-[var(--background)] border-t border-[var(--border-light)]">
+    <section className="py-10 lg:py-12 bg-[var(--background)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
@@ -49,7 +49,7 @@ export default function LatestBlogs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.3em] text-[var(--text-secondary)]"
+            className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2 block"
           >
             LATEST BLOGS & INSIGHTS
           </motion.p>
@@ -76,7 +76,7 @@ export default function LatestBlogs() {
         </div>
 
         {/* 3 Blog Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6 lg:gap-8">
           {blogs.map((blog, index) => (
             <motion.article
               key={blog.id}
@@ -156,7 +156,7 @@ export default function LatestBlogs() {
               <BookOpen className="w-3.5 h-3.5" />
               <span>Continue Learning</span>
             </div>
-            <h3 className="text-white">
+            <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
               Read More Insights
             </h3>
             <p className="text-white/60 font-light text-sm leading-relaxed">
@@ -164,10 +164,10 @@ export default function LatestBlogs() {
             </p>
           </div>
 
-          <div className="relative z-10 shrink-0">
+          <div className="relative z-10 shrink-0 w-full lg:w-auto pt-2 lg:pt-0">
             <Link
               href="/blogs"
-              className="group/btn flex items-center gap-3 px-7 py-4 rounded-full bg-white text-black font-extrabold text-xs uppercase tracking-[0.15em] transition-all duration-500 hover:bg-gray-100 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+              className="group/btn flex items-center justify-center gap-3 w-full sm:w-auto px-7 py-3.5 sm:py-4 rounded-full bg-white text-black font-extrabold text-xs uppercase tracking-[0.15em] transition-all duration-500 hover:bg-gray-100 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.15)]"
             >
               <span>View All Blogs</span>
               <div className="w-7 h-7 rounded-full bg-black flex items-center justify-center group-hover/btn:translate-x-1 transition-transform duration-300">

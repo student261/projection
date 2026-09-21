@@ -1,0 +1,130 @@
+[
+  {
+    "type": "project",
+    "slug": "aura-digital-cathedral",
+    "title": "AURA Digital Cathedral",
+    "trademark": "Aura",
+    "competitor_info": "Moment Factory - trademarked cathedral/basilica projection mapping show",
+    "excerpt": "AURA Digital Cathedral"
+  },
+  {
+    "type": "project",
+    "slug": "lumina-night-walk",
+    "title": "Lumina Enchanted Forest",
+    "trademark": "Lumina",
+    "competitor_info": "Moment Factory - trademarked night walk series",
+    "excerpt": "Lumina Enchanted Forest"
+  },
+  {
+    "type": "code",
+    "file": "data/industries/entertainment.ts",
+    "line": 105,
+    "trademark": "Lumina",
+    "competitor_info": "Moment Factory - trademarked night walk series",
+    "content": "client: \"Lumina Night Walk\","
+  },
+  {
+    "type": "code",
+    "file": "data/industries/entertainment.ts",
+    "line": 116,
+    "trademark": "Lumina",
+    "competitor_info": "Moment Factory - trademarked night walk series",
+    "content": "slug: \"lumina-night-walk\""
+  },
+  {
+    "type": "code",
+    "file": "data/industries/healthcare.ts",
+    "line": 48,
+    "trademark": "Snoezelen",
+    "competitor_info": "Flaghouse / Rompa - trademarked sensory room concept",
+    "content": "{ title: \"Sensory Snoezelen Rooms\", desc: \"Fully integrated immersive environments designed specifically for autism spec"
+  },
+  {
+    "type": "code",
+    "file": "data/industries/museums.ts",
+    "line": 57,
+    "trademark": "Aura",
+    "competitor_info": "Moment Factory - trademarked cathedral/basilica projection mapping show",
+    "content": "{ title: \"The Immersive History Hall\", desc: \"A 360-degree projection room detailing the rise and fall of ancient civili"
+  },
+  {
+    "type": "code",
+    "file": "data/industries/museums.ts",
+    "line": 116,
+    "trademark": "Aura",
+    "competitor_info": "Moment Factory - trademarked cathedral/basilica projection mapping show",
+    "content": "slug: \"aura-digital-cathedral\""
+  },
+  {
+    "type": "code",
+    "file": "components/FeaturedProjects.tsx",
+    "line": 11,
+    "trademark": "Aura",
+    "competitor_info": "Moment Factory - trademarked cathedral/basilica projection mapping show",
+    "content": "id: \"aura-cathedral\","
+  },
+  {
+    "type": "code",
+    "file": "components/FeaturedProjects.tsx",
+    "line": 12,
+    "trademark": "Aura",
+    "competitor_info": "Moment Factory - trademarked cathedral/basilica projection mapping show",
+    "content": "title: \"AURA Digital Cathedral\","
+  },
+  {
+    "type": "code",
+    "file": "components/FeaturedProjects.tsx",
+    "line": 17,
+    "trademark": "Aura",
+    "competitor_info": "Moment Factory - trademarked cathedral/basilica projection mapping show",
+    "content": "href: \"/projects/aura-digital-cathedral\","
+  },
+  {
+    "type": "code",
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 22,
+    "trademark": "Aura",
+    "competitor_info": "Moment Factory - trademarked cathedral/basilica projection mapping show",
+    "content": "id: \"aura-cathedral\", title: \"AURA Digital Cathedral\", category: \"Architectural 360\u00b0 Mapping\","
+  },
+  {
+    "type": "code",
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 26,
+    "trademark": "Aura",
+    "competitor_info": "Moment Factory - trademarked cathedral/basilica projection mapping show",
+    "content": "href: \"/projects/aura-digital-cathedral\", tag: \"PROJECTION MAPPING\", filterCategory: \"museums\", accent: \"#8B5CF6\","
+  },
+  {
+    "type": "code",
+    "file": "components/MasterIndustryContent.tsx",
+    "line": 67,
+    "trademark": "Aura",
+    "competitor_info": "Moment Factory - trademarked cathedral/basilica projection mapping show",
+    "content": "{ name: \"AURA Digital Cathedral\", href: \"/projects/aura-digital-cathedral\" },"
+  },
+  {
+    "type": "code",
+    "file": "components/MasterIndustryContent.tsx",
+    "line": 114,
+    "trademark": "Lumina",
+    "competitor_info": "Moment Factory - trademarked night walk series",
+    "content": "{ name: \"Lumina Enchanted Forest\", href: \"/projects/lumina-night-walk\" },"
+  },
+  {
+    "type": "code",
+    "file": "app/solutions/solutionsData.ts",
+    "line": 177,
+    "trademark": "Planets",
+    "competitor_info": "TeamLab - TeamLab Planets",
+    "content": "{ category: \"Edutainment\", title: \"Math & Solar System Hopscotch\", desc: \"Children learn planets and arithmetic through "
+  },
+  {
+    "type": "code",
+    "file": "app/solutions/solutionsData.ts",
+    "line": 884,
+    "trademark": "Planets",
+    "competitor_info": "TeamLab - TeamLab Planets",
+    "content": "whatIsDescription: \"An Immersive Room (often termed a CAVE environment) surrounds visitors on all four walls and the flo"
+  }
+]

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sliders, Cpu, Award, Workflow, Layers3, Headphones } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
@@ -11,51 +11,59 @@ const whyUsCards = [
     icon: Sliders,
     title: "Custom Solutions",
     desc: "Every project is built around your space, audience, requirements, and goals.",
-    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
+    img: "/images/projection_cityscape_model.jpg",
   },
   {
     id: "advanced-tech",
     icon: Cpu,
     title: "Advanced Interactive Technology",
     desc: "Use the latest AI, motion tracking, projection mapping, and interactive technologies in your space.",
-    img: "https://momentfactory.com/cdn/shop/files/6D9A8671-WS.jpg",
+    img: "/images/ai_receptionist_concierge.jpg",
   },
   {
     id: "industry-expertise",
     icon: Award,
     title: "Industry Expertise",
     desc: "Our experience covers education, healthcare, retail, museums, hospitality, entertainment, and more.",
-    img: "https://momentfactory.com/cdn/shop/files/TLX04130-Moment_Factory_Originals_Digital_Art_Experiences__Brainstorm-WS.jpg",
+    img: "/images/museum_interactive_exhibit.jpg",
   },
   {
     id: "end-to-end",
     icon: Workflow,
     title: "End-to-End Delivery",
     desc: "From the first conversation and design to installation, training, and ongoing support, we handle the complete process.",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Changi_Experience_Public_Spaces_DSC09469-WS.jpg",
+    img: "/images/technician_calibrating_projection.jpg",
   },
   {
     id: "scalable",
     icon: Layers3,
     title: "Scalable & Future-Ready",
     desc: "Start with what you need today and add new features, content, and technologies as your requirements grow.",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_IMG_0457-Modifier-WS.jpg",
+    img: "/images/sneaker_customization_table.jpg",
   },
   {
     id: "dedicated-support",
     icon: Headphones,
     title: "Dedicated Support",
     desc: "Get technical assistance, updates, maintenance, and ongoing support to keep your experience running smoothly.",
-    img: "https://momentfactory.com/cdn/shop/files/AuraInvalides_MomentFactory_MouvementIII_HD-WS.jpg",
+    img: "/images/architectural_light_beam.jpg",
   },
 ];
 
 export default function WhyChooseUs() {
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const update = () => setIsDesktop(window.innerWidth >= 1024);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   return (
-    <section className="py-10 lg:py-12 bg-white border-t border-gray-100 overflow-hidden text-black relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 lg:py-12 bg-white text-black relative">
+      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-8 lg:mb-10 max-w-4xl">
@@ -64,7 +72,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[9px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-2 sm:mb-3"
+            className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2 sm:mb-3 block"
           >
             WHY CHOOSE US
           </motion.p>
@@ -74,17 +82,38 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-3xl lg:text-5xl font-black tracking-tight leading-[1.05]"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1]"
           >
             Why Industry Leaders <br className="hidden lg:block" />
             Choose PROJECTION
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start relative">
           
-          {/* Left Column: Accordion List */}
-          <div className="lg:col-span-6 flex flex-col w-full" onMouseLeave={() => setHoveredIndex(0)}>
+          {/* Right Column: Supporting Image (Hidden on Mobile, Sticky on Desktop) */}
+          <div className="hidden lg:block lg:order-2 lg:col-span-6 relative lg:sticky lg:top-28 h-[480px] rounded-3xl overflow-hidden bg-gray-100 shadow-xl border border-black/5 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={whyUsCards[hoveredIndex].id}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="absolute inset-0 w-full h-full"
+              >
+                <SafeImage
+                  src={whyUsCards[hoveredIndex].img}
+                  alt={whyUsCards[hoveredIndex].title}
+                  className="w-full h-full object-cover object-center"
+                  containerClassName="w-full h-full"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Left Column: Accordion List (Order 2 on Mobile, 1 on Desktop) */}
+          <div className="order-2 lg:order-1 lg:col-span-6 flex flex-col w-full" onMouseLeave={() => setHoveredIndex(0)}>
             {whyUsCards.map((card, index) => {
               const Icon = card.icon;
               const isHovered = hoveredIndex === index;
@@ -122,13 +151,26 @@ export default function WhyChooseUs() {
                   {/* Expanding Description Area */}
                   <motion.div
                     initial={false}
-                    animate={{ height: isHovered ? "auto" : 0, opacity: isHovered ? 1 : 0 }}
+                    animate={{ 
+                      height: (!isDesktop) || isHovered ? "auto" : 0, 
+                      opacity: (!isDesktop) || isHovered ? 1 : 0 
+                    }}
                     className="overflow-hidden"
                   >
                     <div className="pb-4 pl-[35px] sm:pl-[45px] max-w-xl">
                       <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                         {card.desc}
                       </p>
+                      
+                      {/* Mobile Inline Image (Hidden on Desktop) */}
+                      <div className="mt-4 w-full h-[180px] sm:h-[240px] rounded-xl overflow-hidden lg:hidden shadow-md">
+                        <SafeImage
+                          src={card.img}
+                          alt={card.title}
+                          className="w-full h-full object-cover"
+                          containerClassName="w-full h-full"
+                        />
+                      </div>
                     </div>
                   </motion.div>
 
@@ -136,27 +178,6 @@ export default function WhyChooseUs() {
               );
             })}
             <div className="border-t border-gray-200" />
-          </div>
-
-          {/* Right Column: Supporting Image */}
-          <div className="lg:col-span-6 sticky top-24 h-[350px] lg:h-[480px] rounded-3xl overflow-hidden bg-gray-100 shadow-xl border border-black/5">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={whyUsCards[hoveredIndex].id}
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="absolute inset-0 w-full h-full"
-              >
-                <SafeImage
-                  src={whyUsCards[hoveredIndex].img}
-                  alt={whyUsCards[hoveredIndex].title}
-                  className="w-full h-full object-cover object-center"
-                  containerClassName="w-full h-full"
-                />
-              </motion.div>
-            </AnimatePresence>
           </div>
 
         </div>

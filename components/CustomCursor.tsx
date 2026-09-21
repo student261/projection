@@ -13,34 +13,55 @@ export default function CustomCursor() {
 
     let mouseX = 0, mouseY = 0;
     let ringX = 0, ringY = 0;
-    let rafId: number;
+    let rafId: number | null = null;
+    let isLoopRunning = false;
+
+    const animateRing = () => {
+      const dx = mouseX - ringX;
+      const dy = mouseY - ringY;
+
+      // When close enough, snap to position and sleep
+      if (Math.abs(dx) < 0.2 && Math.abs(dy) < 0.2) {
+        ringX = mouseX;
+        ringY = mouseY;
+        if (ringRef.current) {
+          ringRef.current.style.transform = `translate3d(${ringX - RING_SIZE / 2}px, ${ringY - RING_SIZE / 2}px, 0)`;
+        }
+        isLoopRunning = false;
+        rafId = null;
+        return;
+      }
+
+      ringX += dx * 0.18;
+      ringY += dy * 0.18;
+      if (ringRef.current) {
+        ringRef.current.style.transform = `translate3d(${ringX - RING_SIZE / 2}px, ${ringY - RING_SIZE / 2}px, 0)`;
+      }
+
+      rafId = requestAnimationFrame(animateRing);
+    };
 
     const handleMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      dotRef.current?.style.setProperty(
-        "transform",
-        `translate3d(${mouseX - DOT_SIZE / 2}px, ${mouseY - DOT_SIZE / 2}px, 0)`
-      );
+
+      if (dotRef.current) {
+        dotRef.current.style.transform = `translate3d(${mouseX - DOT_SIZE / 2}px, ${mouseY - DOT_SIZE / 2}px, 0)`;
+      }
+
+      if (!isLoopRunning) {
+        isLoopRunning = true;
+        rafId = requestAnimationFrame(animateRing);
+      }
     };
 
-    const animateRing = () => {
-      // reads CURRENT mouseX/mouseY every frame — no stale position
-      ringX += (mouseX - ringX) * 0.15;
-      ringY += (mouseY - ringY) * 0.15;
-      ringRef.current?.style.setProperty(
-        "transform",
-        `translate3d(${ringX - RING_SIZE / 2}px, ${ringY - RING_SIZE / 2}px, 0)`
-      );
-      rafId = requestAnimationFrame(animateRing);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    rafId = requestAnimationFrame(animateRing);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      cancelAnimationFrame(rafId);
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+      }
     };
   }, []);
 

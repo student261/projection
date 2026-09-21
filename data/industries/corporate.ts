@@ -5,10 +5,10 @@ export const corporate: IndustryData = {
   slug: "corporate",
   icon: Monitor,
   hero: {
-    eyebrow: "CORPORATE & EXECUTIVE",
-    title: "Inspire Clients and Showcase Innovation",
-    subtitle: "Modernize corporate headquarters, executive briefing centers, and lobbies with interactive digital architecture.",
-    img: "https://momentfactory.com/cdn/shop/files/6D9A8671-WS.jpg",
+    eyebrow: "CORPORATE & EXECUTIVE HEADQUARTERS",
+    title: "Inspire Enterprise Clients and Showcase Strategic Innovation",
+    subtitle: "Modernize corporate headquarters, executive briefing centers, and lobbies with real-time generative digital architecture.",
+    img: "/images/industry_corporate_hero.jpg",
   },
   challenges: {
     title: "The Challenge in Corporate Spaces",
@@ -34,7 +34,8 @@ export const corporate: IndustryData = {
       { title: "🌍 Agile Branding", desc: "Update the look, feel, and messaging of your entire office instantly from a central cloud dashboard." }
     ],
     transition: "This is how we help Fortune 500 companies build executive briefing centers that accelerate sales cycles and impress stakeholders.",
-    quote: "\"Your headquarters should be a physical manifestation of your company's future.\""
+    quote: "\"Your headquarters should be a physical manifestation of your company's future.\"",
+    img: "/images/corporate_lobby_wall.jpg"
   },
   solutions: {
     title: "Corporate Interactive Solutions",
@@ -53,12 +54,12 @@ export const corporate: IndustryData = {
     title: "Featured Corporate Environments",
     intro: "See how leading enterprises are using interactive spatial design to win business and inspire their workforce.",
     items: [
-      { title: "The Interactive Briefing Center", desc: "A 40-foot touchless interactive wall where executives present global supply chain data using hand gestures.", tags: ["Gesture Recognition", "Data Viz"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_PENN1_22-WS.jpg" },
-      { title: "Generative Data Lobby", desc: "A lobby floor projection that generates unique digital art patterns based on the real-time volume of global company transactions.", tags: ["Generative Art", "API Integration"], img: "https://momentfactory.com/cdn/shop/files/PLAS0776_Events_Thanksgiving-WS_3f9423e9-bfa0-418f-8782-ba5887df3f3b.jpg" },
-      { title: "Projection Mapped Cityscape", desc: "A massive physical model of a smart city in the showroom, brought to life with overhead projection detailing energy usage and traffic flows.", tags: ["Projection Mapping", "Physical + Digital"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Changi_Experience_Public_Spaces_DSC09469-WS.jpg" },
-      { title: "The 360° Innovation Lab", desc: "An immersive room where R&D teams can step inside 3D CAD models of new products before they are physically prototyped.", tags: ["360 Projection", "CAD Integration"], img: "https://momentfactory.com/cdn/shop/files/6D9A8671-WS.jpg" },
-      { title: "Interactive Timeline Wall", desc: "A touch-enabled digital hallway detailing the 100-year history and future roadmap of the corporation.", tags: ["Interactive Wall", "Storytelling"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_PENN1_22-WS.jpg" },
-      { title: "Personalized VIP Welcome", desc: "Lobby displays that use secure opt-in mobile tracking to instantly theme the entrance to a visiting client's brand colors.", tags: ["Proximity Sensing", "CMS Automation"], img: "https://momentfactory.com/cdn/shop/files/PLAS0776_Events_Thanksgiving-WS_3f9423e9-bfa0-418f-8782-ba5887df3f3b.jpg" }
+      { title: "The Interactive Briefing Center", desc: "A 40-foot touchless interactive wall where executives present global supply chain data using hand gestures.", tags: ["Gesture Recognition", "Data Viz"], img: "/images/horizon_glass_floor.jpg", href: "/projects/corporate-lobby-installation" },
+      { title: "Generative Data Lobby", desc: "A lobby floor projection that generates unique digital art patterns based on the real-time volume of global company transactions.", tags: ["Generative Art", "API Integration"], img: "/images/interactive_floor_motion.jpg", href: "/solutions/interactive-floor" },
+      { title: "Projection Mapped Cityscape", desc: "A massive physical model of a smart city in the showroom, brought to life with overhead projection detailing energy usage and traffic flows.", tags: ["Projection Mapping", "Physical + Digital"], img: "/images/projection_cityscape_model.jpg", href: "/solutions/projection-mapping" },
+      { title: "The 360° Innovation Lab", desc: "An immersive room where R&D teams can step inside 3D CAD models of new products before they are physically prototyped.", tags: ["360 Projection", "CAD Integration"], img: "/images/planetarium_projection_dome.jpg", href: "/solutions/immersive-room" },
+      { title: "Interactive Timeline Wall", desc: "A touch-enabled digital hallway detailing the 100-year history and future roadmap of the corporation.", tags: ["Interactive Wall", "Storytelling"], img: "/images/architectural_light_beam.jpg", href: "/solutions/interactive-wall" },
+      { title: "Personalized VIP Welcome", desc: "Lobby displays that use secure opt-in mobile tracking to instantly theme the entrance to a visiting client's brand colors.", tags: ["Proximity Sensing", "CMS Automation"], img: "/images/ai_receptionist_concierge.jpg", href: "/projects/ai-receptionist-avatar" }
     ]
   },
   benefits: {
@@ -98,5 +99,56 @@ export const corporate: IndustryData = {
       { q: "How do you handle maintenance without disrupting the office?", a: "Hardware is installed discreetly. We utilize remote monitoring to diagnose issues and schedule any necessary physical maintenance outside of business hours." },
       { q: "Can we integrate video conferencing into the interactive wall?", a: "Yes. We frequently integrate Zoom, Teams, or Webex into the massive interactive canvases, allowing for hybrid briefings with life-size remote participants." }
     ]
+  },
+  caseStudies: [
+    {
+      client: "Global Tech Headquarters",
+      title: "Generative AI Mirror Room",
+      headline: "Real-Time Neural Renders & Conversational Digital Avatars",
+      tag: "AI & COMPUTER VISION",
+      metric: "Sub-Frame",
+      metricLabel: "Neural Render Latency",
+      secondaryMetric: "Complete",
+      secondaryMetricLabel: "Local Edge Privacy",
+      desc: "A real-time generative AI mirror chamber reacting to visitor movement and voice gestures with dynamic digital avatars and responsive spatial visualizations.",
+      quote: "Executive visitors were stunned by the responsiveness of the generative reflections — it instantly communicated our technological superiority.",
+      img: "/images/ai_receptionist_concierge.jpg",
+      slug: "generative-ai-mirror-room"
+    },
+    {
+      client: "Enterprise Technology Campus",
+      title: "Corporate Lobby Installation",
+      headline: "Generative Foot-Traffic & Employee Data Visualization Wall",
+      tag: "DATA VISUALIZATION WALL",
+      metric: "Seamless",
+      metricLabel: "Real-Time Cloud Sync",
+      secondaryMetric: "4K",
+      secondaryMetricLabel: "Ultra-High Resolution",
+      desc: "A massive interactive data visualization wall reacting to foot traffic, global transactions, and sustainability metrics in real time.",
+      quote: "The lobby installation transformed a mundane waiting area into a breathtaking showcase of our global impact.",
+      img: "/images/corporate_lobby_wall.jpg",
+      slug: "corporate-lobby-installation"
+    },
+    {
+      client: "International Financial Center",
+      title: "AI Receptionist Avatar Concierge",
+      headline: "Conversational Spatial Intelligence Embedded in Smart Mirrors",
+      tag: "AI RECEPTION CONCIERGE",
+      metric: "Enterprise",
+      metricLabel: "Greeting Accuracy",
+      secondaryMetric: "Sub-Second",
+      secondaryMetricLabel: "Response Time",
+      desc: "Real-time conversational AI avatar embedded into architectural smart mirrors for touchless visitor registration, host alerts, and intuitive building wayfinding.",
+      quote: "Clients love the sleek concierge greeting — it streamlines check-in while setting a high-tech tone for every meeting.",
+      img: "/images/industry_corporate_hero.jpg",
+      slug: "ai-receptionist-avatar"
+    }
+  ],
+  cta: {
+    eyebrow: "EXECUTIVE SPATIAL COMPUTING",
+    title: "Build Next-Level Corporate Experiences.",
+    subtitle: "Equip your executive briefing centers and headquarters with interactive digital architecture that closes deals and impresses stakeholders.",
+    buttonText: "Build Next-Level Corporate Experiences",
+    img: "/images/industry_corporate_hero.jpg"
   }
 };

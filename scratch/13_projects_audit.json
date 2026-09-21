@@ -1,0 +1,332 @@
+{
+  "celestial-dome-observatory": {
+    "found_in_page_data": true,
+    "title": "Celestial Dome Observatory",
+    "experienceType": "360\u00b0 Architectural Fulldome Environment",
+    "overview": "A giant architectural dome projection environment simulating interstellar journeys with spatial audio.",
+    "challenge": "Aligning 16 high-resolution projectors across hemispherical acoustics without optical overlap artifacts.",
+    "approach": "We deployed automated camera-based geometric warp algorithms.",
+    "techUsed": [
+      "Hemispherical Projection Alignment Engine",
+      "32-Channel Spatial Dome Acoustics"
+    ],
+    "results": [
+      [
+        "360\u00b0",
+        "Seamless immersive projection"
+      ],
+      [
+        "16x",
+        "4K Laser projector array"
+      ]
+    ],
+    "gallery": [
+      "/images/cathedral_projection_mapping.jpg",
+      "/images/biosphere_ocean_gallery.jpg"
+    ]
+  },
+  "grand-hotel-living-floor": {
+    "found_in_page_data": false,
+    "note": "Generated via getProjectData fallback or alias"
+  },
+  "chrono-echoes-artifact-wall": {
+    "found_in_page_data": true,
+    "title": "Chrono Echoes Artifact Wall",
+    "experienceType": "Interactive Heritage Display",
+    "overview": "Historical artifact display coming to life when visitors approach, revealing hidden historical layers.",
+    "challenge": "Protecting rare physical artifacts while illuminating fine visual details.",
+    "approach": "We used low-UV directional micro-projection with proximity sensors.",
+    "techUsed": [
+      "Low-UV Preservation Projection",
+      "Proximity Infrared Radar"
+    ],
+    "results": [
+      [
+        "Certified",
+        "Artifact preservation compliance"
+      ]
+    ],
+    "gallery": [
+      "/images/museum_dino_sandbox.jpg",
+      "/images/projection_cityscape_model.jpg"
+    ]
+  },
+  "interactive-museum-exhibit": {
+    "found_in_page_data": true,
+    "title": "Interactive Museum Exhibit",
+    "experienceType": "Motion-Responsive Touchless Artifact & Science Canvas",
+    "overview": "A sprawling interactive museum exhibit combining architectural projection mapping with motion-responsive floors to teach physics, astronomy, and world history through tactile exploration.",
+    "challenge": "Designing a high-throughput, wear-free installation that handles thousands of daily student groups without mechanical wear or hygiene concerns.",
+    "approach": "We engineered an overhead laser tracking matrix and optical floor projection system that responds to hundreds of children concurrently without requiring tags or touchscreens.",
+    "techUsed": [
+      "Long-Throw Laser Projection Matrix",
+      "Multi-Zone Ceiling Optical Sensor Fusion",
+      "Interactive Multi-User Educational Engine",
+      "Continuous Sensor Health Telemetry"
+    ],
+    "results": [
+      [
+        "Extended",
+        "Increase in gallery dwell time"
+      ],
+      [
+        "Certified",
+        "Zero-contact sanitary compliance"
+      ],
+      [
+        "50+",
+        "Simultaneous active participants"
+      ]
+    ],
+    "gallery": [
+      "/images/museum_interactive_exhibit.jpg",
+      "/images/museum_dino_sandbox.jpg",
+      "/images/cathedral_projection_mapping.jpg"
+    ]
+  },
+  "corporate-lobby-installation": {
+    "found_in_page_data": true,
+    "title": "Corporate Lobby Installation",
+    "experienceType": "Generative AI Motion Wall & Real-Time Data Canvas",
+    "overview": "A landmark 24-meter interactive architectural media wall in an enterprise headquarters, visualizing live global environmental data and responding dynamically to executive foot traffic.",
+    "challenge": "Achieving seamless multi-projector laser blending and LiDAR footstep tracking across a curved polished concrete atrium flooded with natural daylight through 30-foot glass curtain walls.",
+    "approach": "We deployed 30,000-lumen high-contrast laser projection engines with motorized optical geometry correction, paired with overhead 3D LiDAR sensors and real-time Unreal Engine 5 simulation servers.",
+    "techUsed": [
+      "Overhead 3D LiDAR Tracking Grid",
+      "Real-Time Unreal Engine 5 Generative Simulation",
+      "Sub-Millimeter Edge-Blend Calibration",
+      "Enterprise Cloud Telemetry & Media Scheduler"
+    ],
+    "results": [
+      [
+        "24m",
+        "Seamless curved display canvas"
+      ],
+      [
+        "Enterprise",
+        "Commercial enterprise uptime"
+      ],
+      [
+        "Instant",
+        "Pedestrian velocity reaction speed"
+      ]
+    ],
+    "gallery": [
+      "/images/corporate_lobby_wall.jpg",
+      "/images/architectural_light_beam.jpg",
+      "/images/technician_calibrating_projection.jpg"
+    ]
+  },
+  "pediatric-hospital-floor": {
+    "found_in_page_data": true,
+    "title": "Pediatric Hospital Floor",
+    "experienceType": "Therapeutic Motion Floor & Calming Riverbed",
+    "overview": "Calming interactive aquatic environments projected onto pediatric hospital corridors, reducing stress and encouraging gentle physical rehabilitation for young patients.",
+    "challenge": "Strict hospital sanitation rules banning physical equipment or cables on clinical floors, alongside sensitive patient emotional states.",
+    "approach": "We mounted all optical projection and motion tracking hardware safely above ceiling tiles, projecting soft water ripples and swimming fish onto the existing hospital floor.",
+    "techUsed": [
+      "Recessed Ceiling Optical Projectors",
+      "Zero-Contact Infrared Motion Sensors",
+      "Therapeutic Acoustic Soundscapes",
+      "Medical-Grade Antimicrobial Surface Compatibility"
+    ],
+    "results": [
+      [
+        "Proven",
+        "Reduction in pre-procedure anxiety"
+      ],
+      [
+        "Elevated",
+        "Voluntary physical therapy mobility"
+      ],
+      [
+        "Certified",
+        "Infection-control compliant"
+      ]
+    ],
+    "gallery": [
+      "/images/hospital_interactive_corridor.jpg",
+      "/images/healthcare_sensory_room.jpg",
+      "/images/hospitality_koi_pond.jpg"
+    ]
+  },
+  "flagship-store-activation": {
+    "found_in_page_data": true,
+    "title": "Flagship Store Activation",
+    "experienceType": "Interactive Merchandising & Motion Storefront",
+    "overview": "An experiential retail flagship installation on a luxury shopping boulevard where footsteps trigger blooming floral patterns and dynamic product highlights on luxury displays.",
+    "challenge": "Attracting foot traffic from busy street sidewalks and converting casual window shoppers into engaged in-store visitors.",
+    "approach": "We installed high-brightness rear-projection window glass combined with interior interactive motion floor tiles that react in real-time as shoppers browse.",
+    "techUsed": [
+      "High-Lumen Daylight Laser Projection",
+      "Optical Floor Pedestrian Tracking",
+      "RFID Lift-and-Learn Integration",
+      "Dynamic Cloud Merchandising Scheduler"
+    ],
+    "results": [
+      [
+        "Higher",
+        "Storefront-to-interior conversion"
+      ],
+      [
+        "4.5 min",
+        "Average product zone dwell time"
+      ],
+      [
+        "1.8M",
+        "Organic social video impressions"
+      ]
+    ],
+    "gallery": [
+      "/images/retail_interactive_showcase.jpg",
+      "/images/sneaker_customization_table.jpg",
+      "/images/interactive_strike_wall.jpg"
+    ]
+  },
+  "neo-tokyo-retail-popup": {
+    "found_in_page_data": true,
+    "title": "Neo-Tokyo Retail Pop-Up",
+    "experienceType": "Gamified Touch & Customization Table",
+    "overview": "A futuristic retail pop-up in Tokyo's Shinjuku district featuring interactive sneaker projection mapping tables and responsive graffiti walls.",
+    "challenge": "Fitting ultra-high-density interactive technology into a compact footprint with rapid 48-hour pop-up assembly and teardown.",
+    "approach": "We developed modular self-calibrating projection pedestals with embedded computer vision tracking that calibrate automatically upon power-up.",
+    "techUsed": [
+      "Self-Calibrating Micro Projection Pedestals",
+      "Infrared Touch & Gesture Curtain",
+      "Instant Generative Color Shaders",
+      "Mobile Checkout Sync"
+    ],
+    "results": [
+      [
+        "Measurable",
+        "Sales conversion lift"
+      ],
+      [
+        "10K+",
+        "Custom sneaker designs rendered"
+      ],
+      [
+        "48 Hr",
+        "Full turnkey installation time"
+      ]
+    ],
+    "gallery": [
+      "/images/sneaker_customization_table.jpg",
+      "/images/retail_interactive_showcase.jpg",
+      "/images/corporate_lobby_wall.jpg"
+    ]
+  },
+  "ai-receptionist-avatar": {
+    "found_in_page_data": true,
+    "title": "AI Receptionist Avatar",
+    "experienceType": "Conversational AI Avatar Embedded in Architectural Mirrors",
+    "overview": "A real-time conversational AI avatar host integrated into smart two-way architectural mirrors, welcoming executive visitors and handling guest passes autonomously.",
+    "challenge": "Eliminating uncanny-valley delays while delivering natural voice interaction in noisy corporate reception atriums.",
+    "approach": "We engineered ultra-low-latency voice synthesis with directional beamforming microphone arrays and high-definition micro-LED projection behind dielectric glass.",
+    "techUsed": [
+      "Directional Beamforming Audio Array",
+      "Low-Latency Large Language Model Engine",
+      "Dielectric Two-Way Smart Mirror Optics",
+      "Facial Recognition & Badge Sync"
+    ],
+    "results": [
+      [
+        "Instant",
+        "Voice response glass-to-glass latency"
+      ],
+      [
+        "Dramatically Faster",
+        "Guest check-in throughput"
+      ],
+      [
+        "Touchless",
+        "Hands-free visitor management"
+      ]
+    ],
+    "gallery": [
+      "/images/ai_receptionist_concierge.jpg",
+      "/images/cat_ai_avatar.jpg",
+      "/images/corporate_lobby_wall.jpg"
+    ]
+  },
+  "sensory-interactive-therapy-room": {
+    "found_in_page_data": true,
+    "title": "Sensory Interactive Therapy Room",
+    "experienceType": "Calming Motion Floor & Pediatric Rehabilitation System",
+    "overview": "A therapeutic motion projection room engineered for pediatric rehabilitation, motor skill improvement, and sensory decompression in medical centers.",
+    "challenge": "Creating a fully hygienic, easy to sanitize, and soothing environment for children.",
+    "approach": "We utilized contactless floor motion projection with gentle ambient soundscapes.",
+    "techUsed": [
+      "Contactless Motion Tracking",
+      "Spatial Calming Sound Pods"
+    ],
+    "results": [
+      [
+        "Complete",
+        "Touchless sanitary safety"
+      ]
+    ],
+    "gallery": [
+      "/images/mri_distraction_suite.jpg",
+      "/images/hospitality_koi_pond.jpg"
+    ]
+  },
+  "generative-ai-mirror-room": {
+    "found_in_page_data": true,
+    "title": "Generative AI Mirror Room",
+    "experienceType": "Computer Vision & AI Avatar Chamber",
+    "overview": "A real-time generative AI mirror chamber reacting to visitor movement, voice, and facial gestures with dynamic digital avatars.",
+    "challenge": "Synthesizing 60fps real-time neural renders without latency while tracking multiple audience posture cues simultaneously.",
+    "approach": "We deployed edge neural processors paired with optical camera depth matrices.",
+    "techUsed": [
+      "Edge Neural Processing Grid",
+      "Depth Camera Skeletal Tracking",
+      "Generative Spatial Sound Synth",
+      "High-Contrast Glass Mirror Displays"
+    ],
+    "results": [
+      [
+        "Sub-Frame",
+        "Neural render latency"
+      ],
+      [
+        "Total",
+        "Privacy-first local edge processing"
+      ],
+      [
+        "4.9",
+        "User experience rating score"
+      ]
+    ],
+    "gallery": [
+      "/images/corporate_lobby_wall.jpg",
+      "/images/horizon_glass_floor.jpg"
+    ]
+  },
+  "quantum-prism-passage": {
+    "found_in_page_data": true,
+    "title": "Quantum Prism Passage",
+    "experienceType": "LED & Projection Sensory Tunnel",
+    "overview": "A walk-through sensory tunnel using synchronized projection and optical mirror reflection geometry.",
+    "challenge": "Creating seamless mirror infinity reflections in high-traffic public concourses.",
+    "approach": "We combined optical projection mapping with infinite glass reflection physics.",
+    "techUsed": [
+      "Mirror Geometry Mapping",
+      "Synchronized LED & Projection Array"
+    ],
+    "results": [
+      [
+        "1M+",
+        "Annual public pedestrians"
+      ]
+    ],
+    "gallery": [
+      "/images/architectural_light_beam.jpg",
+      "/images/horizon_glass_floor.jpg"
+    ]
+  },
+  "arcade-active-arena": {
+    "found_in_page_data": false,
+    "note": "Generated via getProjectData fallback or alias"
+  }
+}

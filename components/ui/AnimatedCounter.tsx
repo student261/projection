@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useInView, motion, animate } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
 
 interface AnimatedCounterProps {
   from?: number;
@@ -16,41 +15,69 @@ interface AnimatedCounterProps {
 export default function AnimatedCounter({
   from = 0,
   to,
-  duration = 2,
+  duration = 1.8,
   decimals = 0,
   prefix = "",
   suffix = "",
   className = "",
 }: AnimatedCounterProps) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [displayValue, setDisplayValue] = useState(
-    `${prefix}${from.toFixed(decimals)}${suffix}`
-  );
+  const format = (val: number) => `${prefix}${val.toFixed(decimals)}${suffix}`;
+
+  // Initialize with target 'to' value so SSR, initial HTML, and fast visual scans NEVER show 0
+  const [displayValue, setDisplayValue] = useState<string>(() => format(to));
+  const hasAnimatedRef = useRef(false);
 
   useEffect(() => {
-    if (!isInView) return;
+    // If reduced motion is preferred, keep real target number directly
+    const prefersReducedMotion = typeof window !== "undefined" && 
+      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    if (prefersReducedMotion) {
+      setDisplayValue(format(to));
+      return;
+    }
 
-    const controls = animate(from, to, {
-      duration,
-      ease: [0.16, 1, 0.3, 1], // Smooth cubic-bezier easeOut
-      onUpdate(value) {
-        setDisplayValue(`${prefix}${value.toFixed(decimals)}${suffix}`);
-      },
-    });
+    if (hasAnimatedRef.current) return;
+    hasAnimatedRef.current = true;
 
-    return () => controls.stop();
-  }, [isInView, from, to, duration, decimals, prefix, suffix]);
+    // Start counting smoothly from 'from' to 'to'
+    setDisplayValue(format(from));
+
+    let startTime: number | null = null;
+    let animationFrameId: number;
+
+    // Smooth cubic ease-out
+    const easeOutExpo = (t: number): number => {
+      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+    };
+
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = (timestamp - startTime) / 1000;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeOutExpo(progress);
+      const current = from + (to - from) * easedProgress;
+
+      setDisplayValue(format(current));
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(step);
+      } else {
+        setDisplayValue(format(to));
+      }
+    };
+
+    animationFrameId = requestAnimationFrame(step);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      // Guarantee final real target value
+      setDisplayValue(format(to));
+    };
+  }, [from, to, duration, decimals, prefix, suffix]);
 
   return (
-    <motion.span
-      ref={ref}
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={isInView ? { opacity: 1, scale: 1 } : {}}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`inline-block  font-black ${className}`}
-    >
+    <span className={`inline-block font-black ${className}`}>
       {displayValue}
-    </motion.span>
+    </span>
   );
 }

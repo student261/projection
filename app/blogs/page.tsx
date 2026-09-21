@@ -17,7 +17,7 @@ const blogs = [
     excerpt: "Explore how optical sensor tracking and projection mapping are revolutionizing interactive environments.",
     category: "Technology",
     date: "Aug 24, 2026",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+    img: "/images/interactive_floor_motion.jpg",
     readTime: "6 min read"
   },
   {
@@ -27,7 +27,7 @@ const blogs = [
     excerpt: "Learn how generative AI avatars allow installations to respond naturally.",
     category: "AI & Innovation",
     date: "Aug 18, 2026",
-    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
+    img: "/images/corporate_lobby_wall.jpg",
     readTime: "8 min read"
   },
   {
@@ -37,7 +37,7 @@ const blogs = [
     excerpt: "A comprehensive guide on evaluating throw distance, light, and sensors.",
     category: "Guide",
     date: "Aug 10, 2026",
-    img: "https://momentfactory.com/cdn/shop/files/SQCagARcade_Montreal_MomentFactory_-9.jpg",
+    img: "/images/technician_calibrating_projection.jpg",
     readTime: "5 min read"
   },
 ];
@@ -49,13 +49,13 @@ export default function BlogsPage() {
 
       {/* Engaging Page Header */}
       <section className="px-4 sm:px-6 lg:px-8 pt-16 pb-12 max-w-screen-2xl mx-auto w-full">
-        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase text-black">
-          The Spatial<br />Intelligence<br />Journal.
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-black">
+          The Spatial Intelligence Journal
         </h1>
-        <p className="mt-8 text-xl lg:text-2xl font-light text-black/60 max-w-2xl leading-relaxed">
+        <p className="mt-6 text-base sm:text-lg lg:text-xl font-light text-black/70 max-w-2xl leading-relaxed">
           Deep-dive technical insights, architectural case studies, and the latest trends in interactive environments and spatial computing.
         </p>
-        <div className="mt-8 flex items-center gap-4 text-[10px] uppercase tracking-[0.3em] font-bold text-black/40 border-t border-black/10 pt-6 max-w-sm">
+        <div className="mt-6 flex items-center gap-4 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 pt-2 max-w-sm">
           <span>Explore Knowledge Base</span>
         </div>
       </section>

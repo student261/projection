@@ -8,7 +8,7 @@ export const healthcare: IndustryData = {
     eyebrow: "SENSORY THERAPY",
     title: "Transforming Healthcare with Interactive Sensory Experiences",
     subtitle: "We create calming, engaging environments that reduce anxiety and support pediatric therapy through movement.",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS.jpg",
+    img: "/images/healthcare_sensory_room.jpg",
   },
   challenges: {
     title: "The Challenge in Healthcare",
@@ -30,7 +30,7 @@ export const healthcare: IndustryData = {
     pillars: [
       { title: "🌟 Reduce Anxiety", desc: "Transform intimidating waiting rooms into immersive, playful environments that naturally distract and calm patients." },
       { title: "🤝 Support Rehabilitation", desc: "Gamify physical therapy and movement exercises to increase patient compliance and enjoyment." },
-      { title: "🚀 Ensure Safety", desc: "Provide 100% touchless interactive experiences to completely eliminate cross-contamination risks." },
+      { title: "🚀 Ensure Safety", desc: "Provide fully touchless interactive experiences to completely eliminate cross-contamination risks." },
       { title: "🌍 Foster Inclusivity", desc: "Create adaptable sensory environments tailored for neurodivergent patients and those with special needs." }
     ],
     transition: "This vision is realized through our specialized interactive sensory solutions designed exclusively for healthcare.",
@@ -45,7 +45,7 @@ export const healthcare: IndustryData = {
       { title: "Calming Projection Mapping", desc: "Transform clinical ceilings and walls into soothing natural environments, ideal for MRI suites or dental rooms." },
       { title: "Interactive Wayfinding", desc: "Clear, engaging digital navigation that helps patients and visitors find their way without stress." },
       { title: "Digital Aquarium", desc: "A maintenance-free, highly engaging virtual aquarium that responds to nearby movement." },
-      { title: "Sensory Snoezelen Rooms", desc: "Fully integrated immersive environments designed specifically for autism spectrum and sensory processing support." }
+      { title: "Multisensory Immersion Rooms", desc: "Fully integrated immersive environments designed specifically for autism spectrum and sensory processing support." }
     ],
     bottomStatement: "Every installation is built with hospital-grade hygiene standards and zero-touch interaction."
   },
@@ -53,12 +53,12 @@ export const healthcare: IndustryData = {
     title: "Featured Healing Environments",
     intro: "See how leading hospitals and pediatric clinics are transforming their spaces to prioritize patient experience and therapeutic outcomes.",
     items: [
-      { title: "Pediatric Waiting Room", desc: "An immersive floor installation that turns anxious waiting time into engaging, touchless play.", tags: ["Interactive Floor", "Touchless Sensing"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_263-WS.jpg" },
-      { title: "Physical Therapy Lab", desc: "Gamified rehabilitation exercises projected onto walls to encourage full range of motion.", tags: ["Motion Tracking", "Interactive Wall"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_ArboraLuminaFinalSelectJPEGHD_0044.png" },
-      { title: "MRI Distraction Suite", desc: "Calming visual projections and synchronized audio that relax patients during complex procedures.", tags: ["Projection Mapping", "Spatial Audio"], img: "https://momentfactory.com/cdn/shop/files/MomentFactory_Originals_Lumina_Night_Walks_LakeGeorge_Winter_sDream_22-WS.jpg" },
-      { title: "Sensory Relief Room", desc: "A dedicated environment for neurodivergent patients to control visual and auditory stimuli.", tags: ["Interactive Software", "Custom Content"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Customs_Cultural_Educational_Light_Cycles_Adelaide_10-WS.jpg" },
-      { title: "Hospital Corridors", desc: "Dynamic interactive elements that guide children playfully from waiting areas to consultation rooms.", tags: ["Motion Sensors", "Wayfinding"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Originals_Augmented_Games_IKEA_263-WS.jpg" },
-      { title: "Dental Care Ceiling", desc: "Engaging interactive visuals projected directly above the dental chair to distract and calm patients.", tags: ["Overhead Projection", "Eye Tracking"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_ArboraLuminaFinalSelectJPEGHD_0044.png" }
+      { title: "Pediatric Waiting Room", desc: "An immersive floor installation that turns anxious waiting time into engaging, touchless play.", tags: ["Interactive Floor", "Touchless Sensing"], img: "/images/hospitality_koi_pond.jpg", href: "/solutions/interactive-floor" },
+      { title: "Physical Therapy Lab", desc: "Gamified rehabilitation exercises projected onto walls to encourage full range of motion.", tags: ["Motion Tracking", "Interactive Wall"], img: "/images/interactive_floor_motion.jpg", href: "/solutions/interactive-wall" },
+      { title: "MRI Distraction Suite", desc: "Calming visual projections and synchronized audio that relax patients during complex procedures.", tags: ["Projection Mapping", "Spatial Audio"], img: "/images/mri_distraction_suite.jpg", href: "/solutions/projection-mapping" },
+      { title: "Sensory Relief Room", desc: "A dedicated environment for neurodivergent patients to control visual and auditory stimuli.", tags: ["Interactive Software", "Custom Content"], img: "/images/biosphere_ocean_gallery.jpg", href: "/projects/sensory-interactive-therapy-room" },
+      { title: "Hospital Corridors", desc: "Dynamic interactive elements that guide children playfully from waiting areas to consultation rooms.", tags: ["Motion Sensors", "Wayfinding"], img: "/images/hospital_interactive_corridor.jpg", href: "/projects/pediatric-hospital-floor" },
+      { title: "Dental Care Ceiling", desc: "Engaging interactive visuals projected directly above the dental chair to distract and calm patients.", tags: ["Overhead Projection", "Eye Tracking"], img: "/images/planetarium_projection_dome.jpg", href: "/solutions/interactive-ceiling" }
     ]
   },
   benefits: {
@@ -67,7 +67,7 @@ export const healthcare: IndustryData = {
     items: [
       { title: "Reduced Anxiety", desc: "Patients report significantly lower stress levels when waiting in interactive environments." },
       { title: "Improved Compliance", desc: "Children are more cooperative during procedures after engaging with calming interactive elements." },
-      { title: "Zero Cross-Contamination", desc: "100% touchless interaction eliminates the hygiene risks associated with traditional waiting room toys." },
+      { title: "Zero Cross-Contamination", desc: "Fully touchless interaction eliminates the hygiene risks associated with traditional waiting room toys." },
       { title: "Enhanced Therapy Results", desc: "Gamified exercises encourage patients to complete their physical therapy repetitions with greater enthusiasm." },
       { title: "Better Staff Experience", desc: "Healthcare professionals spend less time managing anxious patients, improving overall clinic efficiency." },
       { title: "Positive Facility Perception", desc: "Hospitals with modern interactive environments are perceived as more innovative and patient-centric." }
@@ -91,14 +91,65 @@ export const healthcare: IndustryData = {
     title: "Healthcare Installation FAQs",
     intro: "Answers to common questions regarding hygiene, safety, and integration in clinical environments.",
     items: [
-      { q: "Are the interactive systems safe from a hygiene perspective?", a: "Yes. All our primary healthcare solutions are 100% touchless, eliminating the cross-contamination risks found in traditional waiting room toys and touchscreens." },
+      { q: "Are the interactive systems safe from a hygiene perspective?", a: "Yes. All our primary healthcare solutions are completely touchless, eliminating the cross-contamination risks found in traditional waiting room toys and touchscreens." },
       { q: "Can the systems be cleaned easily?", a: "The interactive surface is simply your existing floor or wall. You clean it exactly as you normally would, with standard hospital-grade disinfectants." },
       { q: "Do the cameras record patients?", a: "No. Our depth sensors only detect anonymous motion data. No video feeds are recorded, stored, or transmitted, ensuring complete patient privacy." },
       { q: "Can we control the content during different hours?", a: "Yes. The CMS allows you to schedule high-energy games for busy pediatric hours and calming, ambient nature scenes for evenings or specialized sensory hours." },
       { q: "How much space is required?", a: "We can design systems for spaces as small as 2x2 meters up to entire hospital corridors. We map the projection to fit your specific architectural layout." },
       { q: "Is the projection too bright for neurodivergent patients?", a: "We offer complete control over brightness, color palettes, and motion speed to ensure the environment remains sensory-friendly and calming." },
       { q: "Can the system be used for actual physical therapy?", a: "Yes, we develop specific motion-tracking modules designed in consultation with occupational therapists to encourage stretching, balancing, and targeting exercises." },
-      { q: "How do you handle maintenance in a sterile environment?", a: "All hardware is installed securely in the ceiling or high on walls, keeping it out of reach. We handle 95% of maintenance remotely via the cloud." }
+      { q: "How do you handle maintenance in a sterile environment?", a: "All hardware is installed securely in the ceiling or high on walls, keeping it out of reach. We handle the vast majority of diagnostics and calibration remotely via the cloud." }
     ]
+  },
+  caseStudies: [
+    {
+      client: "Pediatric Rehabilitation Center",
+      title: "Sensory Interactive Therapy Room",
+      headline: "Therapeutic Motion Floor & Sensory Decompression Room",
+      tag: "SENSORY REHABILITATION",
+      metric: "Touchless",
+      metricLabel: "Sanitary Safety Compliance",
+      secondaryMetric: "Calming",
+      secondaryMetricLabel: "Non-Invasive Sensory Therapy",
+      desc: "A specialized multisensory immersion room engineered for neurodiverse children and adults undergoing motor recovery and cognitive decompression with zero wearable sensors.",
+      quote: "The calming interactive projections transformed clinical therapy sessions into engaging, stress-free milestones.",
+      img: "/images/healthcare_sensory_room.jpg",
+      slug: "sensory-interactive-therapy-room"
+    },
+    {
+      client: "Children's Medical Pavilion",
+      title: "Pediatric Hospital Floor",
+      headline: "Therapeutic Motion Floor & Calming Riverbed Corridor",
+      tag: "THERAPEUTIC MOTION FLOOR",
+      metric: "Proven",
+      metricLabel: "Reduction in Patient Anxiety",
+      secondaryMetric: "Certified",
+      secondaryMetricLabel: "Infection-Control Compliance",
+      desc: "Calming interactive aquatic environments projected onto pediatric hospital corridors, reducing stress and encouraging gentle physical rehabilitation for young patients.",
+      quote: "Young patients voluntarily walk and interact with the swimming virtual fish, dramatically easing mobility rehabilitation.",
+      img: "/images/hospital_interactive_corridor.jpg",
+      slug: "pediatric-hospital-floor"
+    },
+    {
+      client: "Diagnostic Imaging Pavilion",
+      title: "MRI Distraction & Procedural Suite",
+      headline: "Immersive Visual Calming for Pediatric Diagnostic Imaging",
+      tag: "CLINICAL DISTRACTION",
+      metric: "Substantial",
+      metricLabel: "Sedation Requirement Reduction",
+      secondaryMetric: "100%",
+      secondaryMetricLabel: "Zero Floor Equipment",
+      desc: "Soothing architectural projection and ambient soundscapes engineered to ease claustrophobia and stress during diagnostic scans without physical surface contact.",
+      quote: "Patient anxiety dropped noticeably from the moment they entered the immersive soothing environment.",
+      img: "/images/mri_distraction_suite.jpg",
+      slug: "sensory-therapy-room"
+    }
+  ],
+  cta: {
+    eyebrow: "HEALING SPATIAL ENVIRONMENTS",
+    title: "Transform Healthcare with Touchless Sensory Spaces.",
+    subtitle: "Design calming, hygienic pediatric waiting rooms, therapy suites, and procedural environments that reduce patient stress.",
+    buttonText: "Transform Healthcare Spaces",
+    img: "/images/healthcare_sensory_room.jpg"
   }
 };

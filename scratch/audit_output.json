@@ -1,0 +1,446 @@
+{
+  "about_landmarks": [
+    {
+      "file": "app/about/page.tsx",
+      "line": 106,
+      "matched": [
+        "Notre-Dame"
+      ],
+      "content": "{ city: \"Montreal\", role: \"Creative Headquarters & Prototyping Lab\", landmark: \"Notre-Dame Heritage Mapping & Arena Labs\" },"
+    },
+    {
+      "file": "app/about/page.tsx",
+      "line": 107,
+      "matched": [
+        "Manhattan Skyline",
+        "Hudson Yards"
+      ],
+      "content": "{ city: \"New York\", role: \"Spatial Software & Interactive Retail Studio\", landmark: \"Manhattan Skyline Observation Deck & Hudson Yards\" },"
+    },
+    {
+      "file": "app/about/page.tsx",
+      "line": 109,
+      "matched": [
+        "Shinjuku"
+      ],
+      "content": "{ city: \"Tokyo\", role: \"Transit & High-Density Urban Spatial Lab\", landmark: \"Shinjuku Multi-Story Transit Corridor Mapping\" },"
+    },
+    {
+      "file": "app/about/page.tsx",
+      "line": 110,
+      "matched": [
+        "Airport"
+      ],
+      "content": "{ city: \"Singapore\", role: \"Aviation & Destination Media Portals\", landmark: \"International Airport Concourse Interactive Portals\" },"
+    }
+  ],
+  "about_stats": [
+    {
+      "file": "app/about/page.tsx",
+      "line": 20,
+      "matched": [
+        "< 14ms"
+      ],
+      "content": "{ value: \"< 14ms\", label: \"Glass-to-Glass Latency\", desc: \"Near-instantaneous optical footstep and gesture tracking\" },"
+    },
+    {
+      "file": "app/about/page.tsx",
+      "line": 124,
+      "matched": [
+        "20,000+ hours"
+      ],
+      "content": "desc: \"Our optical engines feature sealed dust-proof optical paths and solid-state laser engines rated for 20,000+ hours of continuous, uninterrupted commercial operation.\","
+    }
+  ],
+  "industries_stats": [
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 64,
+      "matched": [
+        "3x"
+      ],
+      "content": "keyMetric: \"3x Dwell Time Lift\","
+    },
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 79,
+      "matched": [
+        "3.2x"
+      ],
+      "content": "customerGain: \"Drives 40–60% higher store walk-ins and 3.2x longer dwell with lift-and-learn discovery.\","
+    },
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 125,
+      "matched": [
+        "<15ms"
+      ],
+      "content": "customerGain: \"Accelerates enterprise deal cycles, elevates briefing impact, and greets VIPs in <15ms latency.\","
+    },
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 126,
+      "matched": [
+        "<15ms"
+      ],
+      "content": "keyMetric: \"<15ms Neural Latency\","
+    },
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 141,
+      "matched": [
+        "3.5x"
+      ],
+      "content": "customerGain: \"Entertains millions of annual pedestrians and extends concession dwell by 3.5x without blocking flow.\","
+    },
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 142,
+      "matched": [
+        "3.5x"
+      ],
+      "content": "keyMetric: \"3.5x Concourse Dwell\","
+    },
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 331,
+      "matched": [
+        "> 0 "
+      ],
+      "content": "{item.relatedProjects && item.relatedProjects.length > 0 && ("
+    },
+    {
+      "file": "data/industries\\corporate.ts",
+      "line": 109,
+      "matched": [
+        "<15ms"
+      ],
+      "content": "metric: \"<15ms\","
+    },
+    {
+      "file": "data/industries\\education.ts",
+      "line": 123,
+      "matched": [
+        "3x"
+      ],
+      "content": "metric: \"3x\","
+    },
+    {
+      "file": "data/industries\\entertainment.ts",
+      "line": 97,
+      "matched": [
+        "10,000+ "
+      ],
+      "content": "{ q: \"Do we need to turn off the lights in our venue?\", a: \"Not entirely. While projection requires some lighting control, we use ultra-high-brightness commercial lasers (10,000+ lumens) that perform excellently in standard indoor FEC lighting.\" },"
+    },
+    {
+      "file": "data/industries\\entertainment.ts",
+      "line": 137,
+      "matched": [
+        "3.5x"
+      ],
+      "content": "metric: \"3.5x\","
+    },
+    {
+      "file": "data/industries\\hospitality.ts",
+      "line": 123,
+      "matched": [
+        "3.5x"
+      ],
+      "content": "metric: \"3.5x\","
+    },
+    {
+      "file": "data/industries\\index.ts",
+      "line": 52,
+      "matched": [
+        "> 0"
+      ],
+      "content": "if (industry.caseStudies && industry.caseStudies.length > 0) {"
+    },
+    {
+      "file": "data/industries\\museums.ts",
+      "line": 70,
+      "matched": [
+        "3x"
+      ],
+      "content": "{ title: \"Longer Dwell Times\", desc: \"Interactive storytelling keeps visitors engaged in galleries 3x longer than static displays.\" },"
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 83,
+      "matched": [
+        "20,000+ "
+      ],
+      "content": "{ title: \"High-Lumen Commercial Lasers\", desc: \"Massive 20,000+ lumen projectors designed to cut through the bright ambient light of glass-roofed transit hubs.\" },"
+    },
+    {
+      "file": "data/industries\\retail.ts",
+      "line": 111,
+      "matched": [
+        "3.2x"
+      ],
+      "content": "metric: \"3.2x\","
+    }
+  ],
+  "industries_landmarks": [
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 67,
+      "matched": [
+        "AURA",
+        "aura"
+      ],
+      "content": "{ name: \"AURA Digital Cathedral\", href: \"/projects/aura-digital-cathedral\" },"
+    },
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 83,
+      "matched": [
+        "Shinjuku",
+        "shinjuku"
+      ],
+      "content": "{ name: \"Neo-Shinjuku Interactive Wall\", href: \"/projects/neo-shinjuku-interactive-wall\" },"
+    },
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 114,
+      "matched": [
+        "Lumina",
+        "lumina"
+      ],
+      "content": "{ name: \"Lumina Enchanted Forest\", href: \"/projects/lumina-night-walk\" },"
+    },
+    {
+      "file": "components/MasterIndustryContent.tsx",
+      "line": 139,
+      "matched": [
+        "Airport"
+      ],
+      "content": "badge: \"Airports • Plazas • Transit Hubs\","
+    },
+    {
+      "file": "data/industries\\entertainment.ts",
+      "line": 105,
+      "matched": [
+        "Lumina"
+      ],
+      "content": "client: \"Lumina Night Walk\","
+    },
+    {
+      "file": "data/industries\\entertainment.ts",
+      "line": 107,
+      "matched": [
+        "lumina"
+      ],
+      "content": "headline: \"2.4 km Outdoor All-Weather Illuminated Nature Trail\","
+    },
+    {
+      "file": "data/industries\\entertainment.ts",
+      "line": 113,
+      "matched": [
+        "lumina"
+      ],
+      "content": "desc: \"A 2.4 km nighttime illuminated trail featuring motion-tracked projection mapping onto living trees, rock faces, and waterfall mist with sync-locked spatial audio.\","
+    },
+    {
+      "file": "data/industries\\entertainment.ts",
+      "line": 116,
+      "matched": [
+        "lumina"
+      ],
+      "content": "slug: \"lumina-night-walk\""
+    },
+    {
+      "file": "data/industries\\hospitality.ts",
+      "line": 20,
+      "matched": [
+        "aura"
+      ],
+      "content": "{ title: \"Family Engagement\", desc: \"Resorts need ways to keep children entertained in lobbies and restaurants without disrupting other guests.\" },"
+    },
+    {
+      "file": "data/industries\\hospitality.ts",
+      "line": 33,
+      "matched": [
+        "aura"
+      ],
+      "content": "{ title: \"🚀 Dynamic Venues\", desc: \"Instantly change the entire theme of a ballroom or restaurant through projection mapping.\" },"
+    },
+    {
+      "file": "data/industries\\hospitality.ts",
+      "line": 60,
+      "matched": [
+        "lumina"
+      ],
+      "content": "{ title: \"Interactive Hotel Bar\", desc: \"A bar top that illuminates and creates digital ripples around guests' cocktail glasses.\", tags: [\"Interactive Surface\", \"Lidar Sensing\"], img: \"/images/interactive_cocktail_bar.jpg\" },"
+    },
+    {
+      "file": "data/industries\\hospitality.ts",
+      "line": 83,
+      "matched": [
+        "aura"
+      ],
+      "content": "{ title: \"Whisper-Quiet Lasers\", desc: \"Advanced laser projectors with specialized cooling systems that operate silently in quiet lobbies and restaurants.\" },"
+    },
+    {
+      "file": "data/industries\\museums.ts",
+      "line": 105,
+      "matched": [
+        "AURA"
+      ],
+      "content": "client: \"AURA Sanctuary\","
+    },
+    {
+      "file": "data/industries\\museums.ts",
+      "line": 116,
+      "matched": [
+        "aura"
+      ],
+      "content": "slug: \"aura-digital-cathedral\""
+    },
+    {
+      "file": "data/industries\\museums.ts",
+      "line": 141,
+      "matched": [
+        "lumina"
+      ],
+      "content": "desc: \"Directional low-UV micro-projection with infrared radar proximity tracking that softly illuminates historical digital layers and animations behind glass artifact cases.\","
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 8,
+      "matched": [
+        "AIRPORT"
+      ],
+      "content": "eyebrow: \"PUBLIC SPACES, AIRPORTS & CIVIC HUBS\","
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 10,
+      "matched": [
+        "airport"
+      ],
+      "content": "subtitle: \"Turn international airports, transit concourses, and civic plazas into interactive visual landmarks with zero physical footprint.\","
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 15,
+      "matched": [
+        "airport"
+      ],
+      "content": "intro: \"Transit hubs, airports, and public plazas process tens of thousands of people daily. These massive spaces often feel cold, confusing, and purely utilitarian, leading to traveler stress and missed revenue opportunities.\","
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 17,
+      "matched": [
+        "Airport"
+      ],
+      "content": "{ title: \"Traveler Stress\", desc: \"Airports and transit hubs are inherently stressful environments where passengers seek moments of calm or distraction.\" },"
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 29,
+      "matched": [
+        "airport"
+      ],
+      "content": "statement: \"Every airport and public plaza should feature dynamic digital art that connects, guides, and entertains the community.\","
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 44,
+      "matched": [
+        "Airport"
+      ],
+      "content": "{ title: \"Airport Concourse Interactive Floors\", desc: \"Massive projection zones spanning hundreds of feet where children can play and adults can engage with ambient art while walking to their gates.\" },"
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 55,
+      "matched": [
+        "airport"
+      ],
+      "content": "intro: \"Explore how the world's most innovative airports and smart cities are using interactive spatial design to improve public life.\","
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 57,
+      "matched": [
+        "Airport"
+      ],
+      "content": "{ title: \"The Interactive Airport Terminal\", desc: \"A 200-foot interactive floor projection that acts as a digital playground for children waiting for flights.\", tags: [\"Interactive Floor\", \"Airport Tech\"], img: \"/images/horizon_glass_floor.jpg\" },"
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 70,
+      "matched": [
+        "Airport"
+      ],
+      "content": "{ title: \"Improved Passenger Experience (PAX)\", desc: \"Airports with interactive entertainment zones consistently score higher in global passenger satisfaction surveys.\" },"
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 82,
+      "matched": [
+        "airport"
+      ],
+      "content": "{ title: \"Long-Range Optical Sensors\", desc: \"Lidar and depth sensors capable of tracking hundreds of people simultaneously from high airport ceilings.\" },"
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 93,
+      "matched": [
+        "airport"
+      ],
+      "content": "intro: \"Answers to common questions from city planners, airport authorities, and DOOH advertisers.\","
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 96,
+      "matched": [
+        "airport"
+      ],
+      "content": "{ q: \"Can the projectors withstand airport vibrations or subway trains?\", a: \"Yes. We use specialized vibration-dampening rigging systems and automated camera-based recalibration software to ensure the projection remains perfectly aligned.\" },"
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 97,
+      "matched": [
+        "airport"
+      ],
+      "content": "{ q: \"How do you install this in an airport that operates 24/7?\", a: \"We have extensive experience with phased overnight installations in high-security, 24/7 environments, ensuring zero disruption to daily passenger operations.\" },"
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 105,
+      "matched": [
+        "Edge NYC"
+      ],
+      "content": "client: \"Edge NYC Horizon Portal\","
+    },
+    {
+      "file": "data/industries\\public-spaces.ts",
+      "line": 150,
+      "matched": [
+        "airport"
+      ],
+      "content": "subtitle: \"Transform high-traffic transit hubs, airports, and public plazas into unforgettable kinetic landmarks.\","
+    },
+    {
+      "file": "data/industries\\retail.ts",
+      "line": 107,
+      "matched": [
+        "Shinjuku"
+      ],
+      "content": "client: \"Neo-Shinjuku District\","
+    },
+    {
+      "file": "data/industries\\retail.ts",
+      "line": 118,
+      "matched": [
+        "shinjuku"
+      ],
+      "content": "slug: \"neo-shinjuku-interactive-wall\""
+    }
+  ]
+}

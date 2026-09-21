@@ -1,165 +1,153 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import SafeImage from '@/components/SafeImage';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ExperienceItem {
   title: string;
   desc: string;
-  tags: string[];
+  tags?: string[];
   img: string;
+  href?: string;
 }
-
-const ExperienceCard = ({ 
-  exp, 
-  idx, 
-  total,
-  onInView 
-}: { 
-  exp: ExperienceItem, 
-  idx: number, 
-  total: number,
-  onInView: (idx: number) => void 
-}) => {
-  const ref = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            onInView(idx);
-          }
-        });
-      },
-      {
-        // Trigger area is the middle 10% of the viewport height.
-        // Extremely reliable regardless of element height.
-        rootMargin: "-45% 0px -45% 0px", 
-      }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [idx, onInView]);
-
-  return (
-    <div 
-      ref={ref}
-      className="relative min-h-[60vh] lg:min-h-[85vh] py-16 lg:py-24 flex flex-col justify-center"
-    >
-      {/* Mobile Image */}
-      <div className="lg:hidden w-full h-[320px] rounded-[24px] overflow-hidden mb-10 shadow-lg relative bg-slate-900 border border-gray-100">
-        <SafeImage 
-          src={exp.img} 
-          alt={exp.title}
-          className="w-full h-full object-cover"
-          containerClassName="w-full h-full"
-        />
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ margin: "-20% 0px -20% 0px" }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} // Custom smooth ease
-        className="max-w-2xl relative z-10"
-      >
-        {/* Background Watermark Number */}
-        <div className="absolute -top-16 -left-8 text-[12rem] lg:text-[14rem] font-black text-slate-50 opacity-60 pointer-events-none select-none -z-10 leading-none tracking-tighter hidden sm:block">
-          0{idx + 1}
-        </div>
-
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black text-white text-[10px] font-mono font-bold uppercase tracking-widest w-fit mb-8 shadow-sm">
-          <span>Experience</span>
-          <span className="opacity-40">/</span>
-          <span className="opacity-90">0{idx + 1} &mdash; 0{total}</span>
-        </div>
-
-        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
-          {exp.title}
-        </h3>
-        
-        <p className="text-slate-600 text-lg leading-relaxed font-medium mb-10">
-          {exp.desc}
-        </p>
-        
-        <div className="flex flex-wrap gap-3 mb-10">
-          {exp.tags.map((tag, tIdx) => (
-            <span 
-              key={tIdx} 
-              className="px-4 py-2 rounded-xl bg-white border border-gray-200/80 text-[11px] font-bold uppercase tracking-widest text-slate-800 shadow-sm"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-        
-        <div>
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center gap-3 text-xs font-black uppercase tracking-widest text-slate-900 group/link w-fit pb-1 border-b-2 border-slate-900 hover:text-blue-600 hover:border-blue-600 transition-colors"
-          >
-            <span>Explore Experience</span>
-            <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1.5 transition-transform duration-300" />
-          </Link>
-        </div>
-      </motion.div>
-    </div>
-  );
-};
 
 export default function StickyExperiences({ items }: { items: ExperienceItem[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  if (!items || items.length === 0) return null;
+
   return (
-    <div className="relative flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
       
-      {/* LEFT: Sticky Image Preview Container (Desktop) */}
-      <div className="hidden lg:block lg:sticky lg:top-32 w-full lg:w-[45%] h-[600px] lg:h-[75vh] max-h-[700px] rounded-[36px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.1)] border border-gray-200/50 bg-slate-100 shrink-0">
+      {/* LEFT COLUMN: Clean Interactive Selector with Full Visibility for Every Item */}
+      <div className="lg:col-span-6 order-2 lg:order-1 flex flex-col space-y-2 sm:space-y-3">
         {items.map((exp, idx) => {
           const isActive = activeIndex === idx;
+          const num = (idx + 1).toString().padStart(2, "0");
+
           return (
-            <div 
+            <div
               key={idx}
-              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              onMouseEnter={() => setActiveIndex(idx)}
+              onClick={() => setActiveIndex(idx)}
+              className={`group text-left transition-all duration-300 cursor-pointer p-3 sm:p-3.5 rounded-2xl select-none border ${
+                isActive 
+                  ? 'bg-neutral-50 border-neutral-200/80 shadow-sm' 
+                  : 'bg-transparent border-transparent hover:bg-neutral-50/50 hover:border-neutral-100'
               }`}
             >
-              <SafeImage 
-                src={exp.img} 
-                alt={exp.title}
-                // Very subtle scale effect when active for that premium feel
-                className="w-full h-full object-cover transition-transform duration-[3s] ease-out"
-                containerClassName="w-full h-full bg-slate-900"
-                loading={idx === 0 ? "eager" : "lazy"}
-                priority={idx === 0}
-                style={{ transform: isActive ? 'scale(1)' : 'scale(1.05)' }}
-              />
-              {/* Subtle inner shadow overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30 pointer-events-none" />
-              <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-[36px] pointer-events-none" />
+              {/* Header row: Number + Title + Category Tag */}
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className={`text-xs sm:text-sm font-mono transition-colors duration-200 ${
+                    isActive ? 'font-black text-black' : 'font-medium text-neutral-400 group-hover:text-neutral-700'
+                  }`}>
+                    {num}
+                  </span>
+                  <h3 className={`transition-all duration-200 tracking-tight ${
+                    isActive 
+                      ? 'text-base sm:text-lg lg:text-xl font-black text-black' 
+                      : 'text-sm sm:text-base font-bold text-neutral-600 group-hover:text-black'
+                  }`}>
+                    {exp.title}
+                  </h3>
+                </div>
+
+                {/* Visible Tags for Every Item */}
+                {exp.tags && exp.tags.length > 0 && (
+                  <span className={`text-[9px] sm:text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full shrink-0 transition-colors ${
+                    isActive ? 'bg-black text-white font-bold' : 'bg-neutral-100 text-neutral-500 font-medium'
+                  }`}>
+                    {exp.tags[0]}
+                  </span>
+                )}
+              </div>
+
+              {/* Description Body & Link: Populated for every single item */}
+              <div className="pl-7 sm:pl-8 pt-1.5">
+                <p className={`text-xs sm:text-sm leading-relaxed transition-colors mb-2 ${
+                  isActive 
+                    ? 'text-neutral-800 font-normal max-w-lg' 
+                    : 'text-neutral-500 font-light line-clamp-2 group-hover:text-neutral-700'
+                }`}>
+                  {exp.desc}
+                </p>
+                
+                <Link 
+                  href={exp.href || "/contact"}
+                  className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider transition-colors pt-0.5 ${
+                    isActive 
+                      ? 'text-black hover:text-neutral-600 font-bold' 
+                      : 'text-neutral-400 hover:text-black font-medium'
+                  }`}
+                >
+                  <span>Explore Experience</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
             </div>
           );
         })}
       </div>
 
-      {/* RIGHT: Scrolling Editorial Content */}
-      <div className="w-full lg:w-[55%] flex flex-col relative z-10">
-        {items.map((exp, idx) => (
-          <ExperienceCard 
-            key={idx}
-            exp={exp}
-            idx={idx}
-            total={items.length}
-            onInView={setActiveIndex}
-          />
-        ))}
+      {/* RIGHT COLUMN: Dynamic Image Showcase with Sticky Alignment */}
+      <div className="lg:col-span-6 order-1 lg:order-2 lg:sticky lg:top-28">
+        <div className="relative w-full aspect-[4/3] max-h-[460px] rounded-3xl overflow-hidden bg-neutral-900 border border-black/10 shadow-2xl flex flex-col justify-between p-5 sm:p-6">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              initial={{ opacity: 0, scale: 1.04 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute inset-0 w-full h-full"
+            >
+              <SafeImage 
+                src={items[activeIndex].img} 
+                alt={items[activeIndex].title}
+                className="w-full h-full object-cover"
+                containerClassName="w-full h-full"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/30 pointer-events-none" />
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Top Info Badges */}
+          <div className="relative z-10 flex items-center justify-between gap-2">
+            {items[activeIndex].tags && items[activeIndex].tags.length > 0 && (
+              <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white shadow-sm">
+                {items[activeIndex].tags[0]}
+              </span>
+            )}
+            <span className="px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-[10px] font-mono text-white/80">
+              {(activeIndex + 1).toString().padStart(2, "0")} / {items.length.toString().padStart(2, "0")}
+            </span>
+          </div>
+
+          {/* Bottom Captions & Action Link */}
+          <div className="relative z-10 pt-12">
+            <h4 className="text-lg sm:text-xl font-black text-white tracking-tight mb-1 drop-shadow-md">
+              {items[activeIndex].title}
+            </h4>
+            <p className="text-xs sm:text-sm text-white/85 font-light line-clamp-2 mb-3 leading-relaxed">
+              {items[activeIndex].desc}
+            </p>
+            <Link
+              href={items[activeIndex].href || "/contact"}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold uppercase tracking-wider transition-all shadow-md active:scale-95"
+            >
+              <span>Explore Experience</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
       </div>
 
     </div>
   );
 }
+

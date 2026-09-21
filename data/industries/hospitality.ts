@@ -5,10 +5,10 @@ export const hospitality: IndustryData = {
   slug: "hospitality",
   icon: Film,
   hero: {
-    eyebrow: "HOSPITALITY & RESORTS",
-    title: "Unforgettable Guest Welcome Moments",
-    subtitle: "Elevate luxury hotels, resorts, and dining venues with interactive ambient spaces that redefine hospitality.",
-    img: "https://momentfactory.com/cdn/shop/files/MomentFactoryMagicCircusFixesHD-0013-WS.jpg",
+    eyebrow: "LUXURY HOSPITALITY & RESORTS",
+    title: "Unforgettable Guest Welcome Moments and Ambient Atmospheres",
+    subtitle: "Elevate luxury hotels, resorts, and Michelin-tier dining with interactive ambient surfaces that redefine architectural hospitality.",
+    img: "/images/industry_hospitality_hero.jpg",
   },
   challenges: {
     title: "The Challenge in Hospitality",
@@ -34,7 +34,8 @@ export const hospitality: IndustryData = {
       { title: "🌍 Seamless Integration", desc: "Ensure technology blends invisibly into high-end architectural design." }
     ],
     transition: "This vision empowers hoteliers to curate the perfect mood for any moment, day or night.",
-    quote: "\"Luxury is no longer just about service; it's about how an environment makes you feel.\""
+    quote: "\"Luxury is no longer just about service; it's about how an environment makes you feel.\"",
+    img: "/images/hospitality_ambient_atrium.jpg"
   },
   solutions: {
     title: "Interactive Hospitality Solutions",
@@ -53,12 +54,12 @@ export const hospitality: IndustryData = {
     title: "Featured Hospitality Experiences",
     intro: "Explore how premier resorts and dining destinations are using interactive projection to captivate their guests.",
     items: [
-      { title: "The Virtual Koi Pond Entrance", desc: "A massive lobby floor projection of a realistic pond where digital fish swim away from guests' footsteps.", tags: ["Interactive Floor", "Ambient Tech"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_IMG_0457-Modifier-WS.jpg" },
-      { title: "Immersive Fine Dining", desc: "A 12-course culinary experience where the table projections change to match the theme of every dish.", tags: ["Table Projection", "Object Tracking"], img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS.jpg" },
-      { title: "The 360° Wedding Ballroom", desc: "A banquet hall that can transform from a virtual forest to a starry night sky instantly via projection mapping.", tags: ["360 Projection", "Event Tech"], img: "https://momentfactory.com/cdn/shop/files/AuraInvalides_MomentFactory_MouvementIII_HD-WS.jpg" },
-      { title: "Interactive Hotel Bar", desc: "A bar top that illuminates and creates digital ripples around guests' cocktail glasses.", tags: ["Interactive Surface", "Lidar Sensing"], img: "https://momentfactory.com/cdn/shop/files/MomentFactoryMagicCircusFixesHD-0013-WS.jpg" },
-      { title: "Digital Waterfall Atrium", desc: "A multi-story indoor waterfall created entirely with projection mapping that responds to lobby noise levels.", tags: ["Large Scale Projection", "Audio Reactive"], img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Public_Spaces_Shinjuku_Station_IMG_0457-Modifier-WS.jpg" },
-      { title: "Resort Kids Play Cave", desc: "An interactive projection room where younger guests can play motion games while parents relax nearby.", tags: ["Motion Games", "Family Engagement"], img: "https://momentfactory.com/cdn/shop/files/ISH05637-WS.jpg" }
+      { title: "The Virtual Koi Pond Entrance", desc: "A massive lobby floor projection of a realistic pond where digital fish swim away from guests' footsteps.", tags: ["Interactive Floor", "Ambient Tech"], img: "/images/hospitality_koi_pond.jpg", href: "/contact" },
+      { title: "Immersive Fine Dining", desc: "A 12-course culinary experience where the table projections change to match the theme of every dish.", tags: ["Table Projection", "Object Tracking"], img: "/images/dining_projection_table.jpg", href: "/projects/multisensory-dining-experience" },
+      { title: "The 360° Wedding Ballroom", desc: "A banquet hall that can transform from a virtual forest to a starry night sky instantly via projection mapping.", tags: ["360 Projection", "Event Tech"], img: "/images/cathedral_projection_mapping.jpg", href: "/contact" },
+      { title: "Interactive Hotel Bar", desc: "A bar top that illuminates and creates digital ripples around guests' cocktail glasses.", tags: ["Interactive Surface", "Lidar Sensing"], img: "/images/interactive_cocktail_bar.jpg", href: "/contact" },
+      { title: "Digital Waterfall Atrium", desc: "A multi-story indoor waterfall created entirely with projection mapping that responds to lobby noise levels.", tags: ["Large Scale Projection", "Audio Reactive"], img: "/images/architectural_light_beam.jpg", href: "/contact" },
+      { title: "Resort Kids Play Cave", desc: "An interactive projection room where younger guests can play motion games while parents relax nearby.", tags: ["Motion Games", "Family Engagement"], img: "/images/education_interactive_floor.jpg", href: "/contact" }
     ]
   },
   benefits: {
@@ -98,5 +99,56 @@ export const hospitality: IndustryData = {
       { q: "Can you project onto dark surfaces like dark marble or wood?", a: "Yes, though it requires specialized content design. We often use high-contrast, bright generative art (like glowing water or neon accents) that pops beautifully against dark, polished surfaces." },
       { q: "How fast can you develop custom content for a VIP guest?", a: "Our CMS includes a templating engine that allows hotel staff to instantly generate personalized welcome messages or logos on the lobby floor or walls in seconds." }
     ]
+  },
+  caseStudies: [
+    {
+      client: "The Grand Palm Resort",
+      title: "Virtual Koi Pond & Living Arrival Floor",
+      headline: "Footstep-Responsive Water Ripples Welcoming Global Travelers",
+      tag: "INTERACTIVE LOBBY FLOOR",
+      metric: "Substantial",
+      metricLabel: "Lobby Dwell & Engagement",
+      secondaryMetric: "Top-Tier",
+      secondaryMetricLabel: "Guest Delight Score",
+      desc: "A motion-responsive arrival concourse where footsteps create realistic water ripples, parting bioluminescent fish and floating leaves across polished stone flooring.",
+      quote: "Arriving guests pause in awe the moment they enter the lobby — it became the signature social photo spot of our resort.",
+      img: "/images/hospitality_koi_pond.jpg",
+      slug: "grand-hotel-living-floor"
+    },
+    {
+      client: "Azure Bay Luxury Resort",
+      title: "Ambient Atrium Interactive Canopy",
+      headline: "Generative Natural Light & Acoustic-Reactive Spatial Architecture",
+      tag: "ARCHITECTURAL PROJECTION",
+      metric: "Extended",
+      metricLabel: "Lounge Dwell Time",
+      secondaryMetric: "Commercial",
+      secondaryMetricLabel: "Operational Reliability",
+      desc: "Multi-story generative architectural projection mapping evolving with daylight cycles, ambient acoustics, and guest movement in the central atrium.",
+      quote: "The dynamic light transforms the mood from sunlit tranquility during brunch to intimate luxury cocktails by night.",
+      img: "/images/industry_hospitality_hero.jpg",
+      slug: "ambient-atrium-interactive-canopy"
+    },
+    {
+      client: "L'Ombre Michelin Dining",
+      title: "Multi-Sensory Table Projection Experience",
+      headline: "Synchronized Culinary Art & Dynamic Plate Tracking",
+      tag: "TABLETOP PROJECTION",
+      metric: "High Demand",
+      metricLabel: "Tasting Reservation Uptake",
+      secondaryMetric: "Zero",
+      secondaryMetricLabel: "Hardware on Tables",
+      desc: "A 12-course sensory culinary journey where overhead micro-projectors track dish placement and animate story layers around each plate.",
+      quote: "It turned dining into performance art. Our reservations booked out six months in advance.",
+      img: "/images/dining_projection_table.jpg",
+      slug: "multisensory-dining-experience"
+    }
+  ],
+  cta: {
+    eyebrow: "HOSPITALITY SPATIAL ARCHITECTURE",
+    title: "Transform Your Hospitality Space.",
+    subtitle: "Curate unforgettable arrival moments and interactive dining spectacles that guests share across the world.",
+    buttonText: "Transform Your Hospitality Space",
+    img: "/images/industry_hospitality_hero.jpg"
   }
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Eye } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
@@ -9,29 +9,29 @@ import { useState, useEffect } from "react";
 const projects = [
   {
     id: "aura-cathedral",
-    title: "AURA Sanctuary Projection",
+    title: "Sanctuary of Light Cathedral",
     category: "360° Heritage Mapping",
-    location: "Montreal / Paris",
-    desc: "An architectural projection mapping masterpiece transforming historic stone sanctuaries with responsive light & sound.",
-    img: "https://momentfactory.com/cdn/shop/files/Aura_EgliseSaint-Roch_MomentFactory__DSC4360.png",
+    location: "Architectural Sanctuary",
+    desc: "An architectural projection mapping showcase transforming stone archways with responsive light and geometry.",
+    img: "/images/cathedral_projection_mapping.jpg",
     href: "/projects/aura-digital-cathedral",
   },
   {
     id: "edge-skyline",
-    title: "Horizon Glass Motion Floor",
+    title: "Skyline Kinetic Glass Floor",
     category: "Interactive Spaces",
-    location: "Manhattan, New York",
-    desc: "An interactive high-altitude observation floor responding to visitor footsteps 1,100 feet in the air.",
-    img: "https://momentfactory.com/cdn/shop/files/MomentFactory_HudsonYardsEdge-JE-124.png",
-    href: "/projects/edge-nyc-horizon-portal",
+    location: "Skyline Observation Deck",
+    desc: "An interactive high-altitude observation floor responding to visitor footsteps with illuminated fluid patterns.",
+    img: "/images/horizon_glass_floor.jpg",
+    href: "/projects/skyline-observation-floor",
   },
   {
     id: "ocean-wonders",
     title: "BioSphere Ocean Experience",
     category: "Interactive Museum",
-    location: "Global Ocean Pavilion",
-    desc: "A 360-degree reactive ocean floor projection reacting dynamically to marine biodiversity interaction.",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Custom_Experience_Cultural___Educational_NGH_WondersofourWorld_Oceans_JE-188_1_-WS.jpg",
+    location: "Immersive Oceanic Pavilion",
+    desc: "A 360-degree reactive marine projection environment with bioluminescent visual interactions.",
+    img: "/images/biosphere_ocean_gallery.jpg",
     href: "/projects/biosphere-ocean-experience",
   },
 ];
@@ -51,8 +51,8 @@ export default function FeaturedProjects() {
   }, [isAutoPlaying]);
 
   return (
-    <section className="py-12 lg:py-24 bg-white text-black relative border-t border-black/10 flex flex-col justify-center min-h-[90vh]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col h-full">
+    <section className="py-12 lg:py-24 bg-white text-black relative flex flex-col justify-center min-h-[90vh]">
+      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col h-full">
         
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-10 gap-6">
@@ -62,10 +62,10 @@ export default function FeaturedProjects() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-[10px] uppercase tracking-[0.25em] text-black/40 block mb-2 font-bold">
+            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 block mb-2">
               PORTFOLIO SHOWCASE
             </span>
-            <h2 className="text-black">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black">
               Featured Creations
             </h2>
           </motion.div>
@@ -88,18 +88,19 @@ export default function FeaturedProjects() {
 
         {/* Interactive Expansion Accordion */}
         <div 
-          className="flex flex-col lg:flex-row w-full h-[55vh] min-h-[500px] gap-4 lg:gap-6 mt-4"
+          className="flex flex-col lg:flex-row w-full h-auto lg:h-[55vh] lg:min-h-[500px] gap-4 lg:gap-6 mt-4"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
           {projects.map((project, idx) => {
             const isActive = hoveredIdx === idx;
             return (
-              <motion.div
+              <div
                 key={project.id}
-                onHoverStart={() => setHoveredIdx(idx)}
-                className={`relative overflow-hidden rounded-[2rem] cursor-pointer transition-[flex] duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col justify-end group shadow-2xl ${
-                  isActive ? "flex-[1_1_100%] lg:flex-[3.5]" : "flex-[1_1_100%] lg:flex-1"
+                onMouseEnter={() => setHoveredIdx(idx)}
+                onClick={() => setHoveredIdx(idx)}
+                className={`relative overflow-hidden rounded-[2rem] cursor-pointer transition-[flex] duration-[700ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col justify-end group shadow-2xl h-[350px] lg:h-auto ${
+                  isActive ? "lg:flex-[3.5]" : "lg:flex-1"
                 }`}
               >
                 {/* Background Image */}
@@ -114,59 +115,72 @@ export default function FeaturedProjects() {
                 
                 {/* Gradient Overlay for Text Visibility */}
                 <div 
-                  className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 transition-opacity duration-500" 
+                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-500 ${
+                    isActive ? "opacity-90" : "opacity-75"
+                  }`} 
                 />
 
                 {/* Content Overlay */}
                 <div className="relative z-10 p-6 sm:p-8 flex flex-col justify-end h-full">
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 lg:min-w-[400px]">
+                    
                     {/* Badge & Category */}
                     <div className="flex items-center gap-3">
-                      <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0">
+                      <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/20">
                         <Eye className="w-4 h-4 text-white" />
                       </span>
-                      <span className="text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest drop-shadow-md transition-opacity duration-500 leading-snug">
+                      <span className={`text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest drop-shadow-md leading-snug whitespace-nowrap transition-opacity duration-500 ${
+                        isActive ? "opacity-100" : "lg:opacity-0"
+                      }`}>
                         {project.category}
                       </span>
                     </div>
 
-                    {/* Title */}
-                    <h3 className={`text-white mt-2 drop-shadow-lg whitespace-nowrap transition-all duration-700 ${isActive ? "opacity-100" : "lg:opacity-0 lg:translate-y-4 opacity-100"}`}>
+                    {/* Mobile Title (Always visible on mobile, hidden on desktop) */}
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mt-2 drop-shadow-lg leading-tight lg:hidden">
                       {project.title}
                     </h3>
 
-                    {/* Hidden content that reveals when active (Desktop Only mostly) */}
+                    {/* Desktop Expandable Content (Title + Desc + Button) */}
                     <div 
-                      className={`overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] hidden lg:block ${
-                        isActive ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
+                      className={`transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] hidden lg:grid ${
+                        isActive ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0 mt-0"
                       }`}
                     >
-                      <p className="text-sm text-white/80 font-medium max-w-lg mt-4 leading-relaxed line-clamp-2">
-                        {project.desc}
-                      </p>
-                      <div className="mt-6">
-                         <Link 
+                      <div className="overflow-hidden min-h-0">
+                        {/* Desktop Title */}
+                        <h3 className="text-3xl font-bold text-white drop-shadow-lg leading-tight">
+                          {project.title}
+                        </h3>
+                        <p className="text-sm text-white/80 font-medium max-w-lg mt-2 leading-relaxed line-clamp-2">
+                          {project.desc}
+                        </p>
+                        <div className="mt-5">
+                          <Link 
                             href={project.href}
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-[11px] font-bold uppercase tracking-widest hover:bg-white/90 transition-colors"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-[11px] font-bold uppercase tracking-widest hover:bg-white/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl"
                           >
-                            View Case Study
-                         </Link>
+                            <span>View Case Study</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </Link>
+                        </div>
                       </div>
                     </div>
 
                     {/* Mobile always visible minimal link */}
-                    <div className="lg:hidden mt-4">
+                    <div className="lg:hidden mt-3 mb-2">
                        <Link 
                           href={project.href}
-                          className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-white/80 hover:text-white"
+                          className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-black text-[11px] font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors shadow-lg"
                         >
-                          View Case Study <ArrowRight className="w-3 h-3" />
+                          <span>View Case Study</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
                        </Link>
                     </div>
 
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

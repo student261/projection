@@ -1,0 +1,282 @@
+{
+  "education.ts": {
+    "experiences": [
+      {
+        "title": "Interactive Classroom Floor",
+        "desc": "Motion-responsive floors and walls that turn everyday lessons into collaborative, physically active games students love.",
+        "href": "/solutions/interactive-floor"
+      },
+      {
+        "title": "STEM Innovation Lab",
+        "desc": "Hands-on digital labs where students run physics simulations, dissect 3D biology models, and solve coding challenges together.",
+        "href": "/projects/immersive-stem-lab"
+      },
+      {
+        "title": "School Auditorium Showcase",
+        "desc": "Wall-to-wall projection mapping that turns school assemblies, history presentations, and theatre productions into memorable events.",
+        "href": "/solutions/interactive-spaces"
+      },
+      {
+        "title": "Digital Library Discovery",
+        "desc": "Touch-enabled reading corners and animated story walls that spark curiosity and turn reading into an engaging adventure.",
+        "href": "/solutions/interactive-wall"
+      },
+      {
+        "title": "Museum & Science Gallery",
+        "desc": "Walk-in exhibit installations where students explore space missions, touch virtual fossils, and investigate world ecosystems.",
+        "href": "/projects/interactive-museum-exhibit"
+      },
+      {
+        "title": "Active Motion Play Zone",
+        "desc": "Kinetic projection games that keep students energized, active, and cooperating during gym classes, brain breaks, and recess.",
+        "href": "/solutions/interactive-spaces"
+      }
+    ],
+    "stats": []
+  },
+  "healthcare.ts": {
+    "experiences": [
+      {
+        "title": "Pediatric Waiting Room",
+        "desc": "An immersive floor installation that turns anxious waiting time into engaging, touchless play.",
+        "href": null
+      },
+      {
+        "title": "Physical Therapy Lab",
+        "desc": "Gamified rehabilitation exercises projected onto walls to encourage full range of motion.",
+        "href": null
+      },
+      {
+        "title": "MRI Distraction Suite",
+        "desc": "Calming visual projections and synchronized audio that relax patients during complex procedures.",
+        "href": null
+      },
+      {
+        "title": "Sensory Relief Room",
+        "desc": "A dedicated environment for neurodivergent patients to control visual and auditory stimuli.",
+        "href": null
+      },
+      {
+        "title": "Hospital Corridors",
+        "desc": "Dynamic interactive elements that guide children playfully from waiting areas to consultation rooms.",
+        "href": null
+      },
+      {
+        "title": "Dental Care Ceiling",
+        "desc": "Engaging interactive visuals projected directly above the dental chair to distract and calm patients.",
+        "href": null
+      }
+    ],
+    "stats": []
+  },
+  "museums.ts": {
+    "experiences": [
+      {
+        "title": "The Immersive History Hall",
+        "desc": "A 360-degree projection room detailing the rise and fall of ancient civilizations.",
+        "href": null
+      },
+      {
+        "title": "Interactive Dino Dig",
+        "desc": "An augmented sandbox where children physically dig to uncover digitally projected fossils.",
+        "href": null
+      },
+      {
+        "title": "Touchless Art Gallery",
+        "desc": "High-resolution digital canvases that let visitors zoom into the brushstrokes of masterpieces using hand gestures.",
+        "href": null
+      },
+      {
+        "title": "The Ocean Floor Experience",
+        "desc": "A motion-reactive floor projection that simulates walking through a coral reef, parting the water with every step.",
+        "href": null
+      },
+      {
+        "title": "Interactive City Model",
+        "desc": "A physical architectural model brought to life with dynamic overhead projection mapping showing urban growth.",
+        "href": null
+      },
+      {
+        "title": "Digital Planetarium Dome",
+        "desc": "Immersive space exploration using ultra-short-throw projectors mapped to curved ceiling architecture.",
+        "href": null
+      }
+    ],
+    "stats": []
+  },
+  "retail.ts": {
+    "experiences": [
+      {
+        "title": "Flagship Storefront Window",
+        "desc": "A motion-reactive digital display that increases foot traffic by engaging pedestrians as they walk past.",
+        "href": null
+      },
+      {
+        "title": "Sneaker Customization Zone",
+        "desc": "An interactive projection mapping table where customers can design and preview custom sneakers in real-time.",
+        "href": null
+      },
+      {
+        "title": "Luxury Fashion Pop-Up",
+        "desc": "A fully immersive 360-degree projection room detailing the heritage and craftsmanship of the brand.",
+        "href": null
+      },
+      {
+        "title": "Interactive Cosmetics Counter",
+        "desc": "Lift-and-learn technology that instantly displays tutorials and ingredients when a product is picked up.",
+        "href": null
+      },
+      {
+        "title": "Gamified Kids Apparel Section",
+        "desc": "An interactive floor projector that keeps children entertained while parents shop nearby.",
+        "href": null
+      },
+      {
+        "title": "Digital Brand Atrium",
+        "desc": "A massive, multi-story LED and projection installation that acts as the vibrant heartbeat of the retail space.",
+        "href": null
+      }
+    ],
+    "stats": []
+  },
+  "entertainment.ts": {
+    "experiences": [
+      {
+        "title": "The Grid Motion Arena",
+        "desc": "A 50x50ft interactive floor where teams compete in fast-paced neon sports games.",
+        "href": null
+      },
+      {
+        "title": "Augmented Dodgeball",
+        "desc": "A trampoline court enhanced with interactive projected targets and digital scoring.",
+        "href": null
+      },
+      {
+        "title": "Zombie Strike Wall",
+        "desc": "An immersive wall where guests throw physical balls to fend off hordes of projected zombies.",
+        "href": null
+      },
+      {
+        "title": "The Magic Drawing Room",
+        "desc": "Kids color physical paper templates, scan them, and watch their creations come alive on a massive digital wall.",
+        "href": null
+      },
+      {
+        "title": "Immersive Mini Golf",
+        "desc": "Projection mapped mini-golf courses where the terrain and obstacles change with every hole.",
+        "href": null
+      },
+      {
+        "title": "Interactive Queue Lines",
+        "desc": "Keep guests entertained during long theme park waits with gesture-controlled games projected onto hallway walls.",
+        "href": null
+      }
+    ],
+    "stats": []
+  },
+  "corporate.ts": {
+    "experiences": [
+      {
+        "title": "The Interactive Briefing Center",
+        "desc": "A 40-foot touchless interactive wall where executives present global supply chain data using hand gestures.",
+        "href": null
+      },
+      {
+        "title": "Generative Data Lobby",
+        "desc": "A lobby floor projection that generates unique digital art patterns based on the real-time volume of global company transactions.",
+        "href": null
+      },
+      {
+        "title": "Projection Mapped Cityscape",
+        "desc": "A massive physical model of a smart city in the showroom, brought to life with overhead projection detailing energy usage and traffic flows.",
+        "href": null
+      },
+      {
+        "title": "The 360\u00b0 Innovation Lab",
+        "desc": "An immersive room where R&D teams can step inside 3D CAD models of new products before they are physically prototyped.",
+        "href": null
+      },
+      {
+        "title": "Interactive Timeline Wall",
+        "desc": "A touch-enabled digital hallway detailing the 100-year history and future roadmap of the corporation.",
+        "href": null
+      },
+      {
+        "title": "Personalized VIP Welcome",
+        "desc": "Lobby displays that use secure opt-in mobile tracking to instantly theme the entrance to a visiting client's brand colors.",
+        "href": null
+      }
+    ],
+    "stats": []
+  },
+  "hospitality.ts": {
+    "experiences": [
+      {
+        "title": "The Virtual Koi Pond Entrance",
+        "desc": "A massive lobby floor projection of a realistic pond where digital fish swim away from guests' footsteps.",
+        "href": null
+      },
+      {
+        "title": "Immersive Fine Dining",
+        "desc": "A 12-course culinary experience where the table projections change to match the theme of every dish.",
+        "href": null
+      },
+      {
+        "title": "The 360\u00b0 Wedding Ballroom",
+        "desc": "A banquet hall that can transform from a virtual forest to a starry night sky instantly via projection mapping.",
+        "href": null
+      },
+      {
+        "title": "Interactive Hotel Bar",
+        "desc": "A bar top that illuminates and creates digital ripples around guests' cocktail glasses.",
+        "href": null
+      },
+      {
+        "title": "Digital Waterfall Atrium",
+        "desc": "A multi-story indoor waterfall created entirely with projection mapping that responds to lobby noise levels.",
+        "href": null
+      },
+      {
+        "title": "Resort Kids Play Cave",
+        "desc": "An interactive projection room where younger guests can play motion games while parents relax nearby.",
+        "href": null
+      }
+    ],
+    "stats": []
+  },
+  "public-spaces.ts": {
+    "experiences": [
+      {
+        "title": "The Interactive Airport Terminal",
+        "desc": "A 200-foot interactive floor projection that acts as a digital playground for children waiting for flights.",
+        "href": null
+      },
+      {
+        "title": "Smart City Wayfinding",
+        "desc": "A transit hub floor that projects personalized, color-coded arrows to guide passengers to their connecting trains.",
+        "href": null
+      },
+      {
+        "title": "The Digital Subway Tunnel",
+        "desc": "An immersive projection mapped pedestrian tunnel that changes themes based on the season or local events.",
+        "href": null
+      },
+      {
+        "title": "Civic Plaza Monument Mapping",
+        "desc": "Permanent architectural projection mapping on a city hall facade, used for nightly civic storytelling.",
+        "href": null
+      },
+      {
+        "title": "Interactive Mall Atrium",
+        "desc": "A massive multi-story digital waterfall in a shopping center that parts when visitors walk near the base.",
+        "href": null
+      },
+      {
+        "title": "Sponsored Holographic Zone",
+        "desc": "A leased public space where brands deploy interactive 3D campaigns to engage passing crowds without physical builds.",
+        "href": null
+      }
+    ],
+    "stats": []
+  }
+}

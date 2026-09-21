@@ -1,0 +1,578 @@
+[
+  {
+    "file": "components/FeaturedProjects.tsx",
+    "line": 14,
+    "prop": "location:",
+    "text": "location: \"Architectural Sanctuary\","
+  },
+  {
+    "file": "components/FeaturedProjects.tsx",
+    "line": 23,
+    "prop": "location:",
+    "text": "location: \"Skyline Observation Deck\","
+  },
+  {
+    "file": "components/FeaturedProjects.tsx",
+    "line": 32,
+    "prop": "location:",
+    "text": "location: \"Immersive Oceanic Pavilion\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 23,
+    "prop": "location:",
+    "text": "location: \"Historic Grand Cathedral, Montreal\", year: \"2026\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 30,
+    "prop": "location:",
+    "text": "location: \"High-Altitude Observation Atrium, New York\", year: \"2025\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 37,
+    "prop": "location:",
+    "text": "location: \"Oceanic Science Center\", year: \"2026\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 44,
+    "prop": "location:",
+    "text": "location: \"Global Science Museum\", year: \"2026\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 51,
+    "prop": "location:",
+    "text": "location: \"Tech Headquarters, Seattle\", year: \"2025\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 58,
+    "prop": "location:",
+    "text": "location: \"Zurich Medical Center\", year: \"2026\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 65,
+    "prop": "location:",
+    "text": "location: \"Fifth Avenue, NY\", year: \"2025\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 72,
+    "prop": "location:",
+    "text": "location: \"Boston Prep Academy\", year: \"2026\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 79,
+    "prop": "location:",
+    "text": "location: \"Shinjuku District, Tokyo\", year: \"2025\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 86,
+    "prop": "location:",
+    "text": "location: \"London Financial District\", year: \"2026\","
+  },
+  {
+    "file": "components/HorizontalProjectsShowcase.tsx",
+    "line": 93,
+    "prop": "location:",
+    "text": "location: \"Berlin Children's Clinic\", year: \"2025\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 37,
+    "prop": "quote:",
+    "text": "quote: \"\\\"Your headquarters should be a physical manifestation of your company's future.\\\"\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 105,
+    "prop": "client:",
+    "text": "client: \"Global Tech Headquarters\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 107,
+    "prop": "headline:",
+    "text": "headline: \"Real-Time Neural Renders & Conversational Digital Avatars\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 114,
+    "prop": "quote:",
+    "text": "quote: \"Executive visitors were stunned by the responsiveness of the generative reflections \u2014 it instantly communicated our technological superiority.\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 119,
+    "prop": "client:",
+    "text": "client: \"Tech Headquarters Seattle\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 121,
+    "prop": "headline:",
+    "text": "headline: \"Generative Foot-Traffic & Employee Data Visualization Wall\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 128,
+    "prop": "quote:",
+    "text": "quote: \"The lobby installation transformed a mundane waiting area into a breathtaking showcase of our global impact.\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 133,
+    "prop": "client:",
+    "text": "client: \"London Financial District\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 135,
+    "prop": "headline:",
+    "text": "headline: \"Conversational Spatial Intelligence Embedded in Smart Mirrors\","
+  },
+  {
+    "file": "data/industries/corporate.ts",
+    "line": 142,
+    "prop": "quote:",
+    "text": "quote: \"Clients love the sleek concierge greeting \u2014 it streamlines check-in while setting a high-tech tone for every meeting.\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 37,
+    "prop": "quote:",
+    "text": "quote: \"\\\"Every classroom has the potential to become an interactive learning experience.\\\"\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 105,
+    "prop": "client:",
+    "text": "client: \"Boston Prep Academy\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 107,
+    "prop": "headline:",
+    "text": "headline: \"Active Hands-On Science Discovery Through Kinetic Projection\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 114,
+    "prop": "quote:",
+    "text": "quote: \"Students engage with complex geometry and science concepts far faster when they can interact with simulations on their feet.\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 119,
+    "prop": "client:",
+    "text": "client: \"Global Science Museum\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 121,
+    "prop": "headline:",
+    "text": "headline: \"Touchless Interactive Science Walls & Motion Surfaces\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 128,
+    "prop": "quote:",
+    "text": "quote: \"The interactive installations completely transformed how student tour groups interact with scientific concepts.\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 133,
+    "prop": "client:",
+    "text": "client: \"Active Arena Edutainment\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 135,
+    "prop": "headline:",
+    "text": "headline: \"Multiplayer Kinesthetic Gaming in School Gymnasium\","
+  },
+  {
+    "file": "data/industries/education.ts",
+    "line": 142,
+    "prop": "quote:",
+    "text": "quote: \"Every single student gets involved, moving and communicating without any controllers or headsets.\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 37,
+    "prop": "quote:",
+    "text": "quote: \"\\\"The best games are the ones you play with your whole body.\\\"\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 105,
+    "prop": "client:",
+    "text": "client: \"Lumina Night Walk\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 107,
+    "prop": "headline:",
+    "text": "headline: \"2.4 km Outdoor All-Weather Illuminated Nature Trail\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 114,
+    "prop": "quote:",
+    "text": "quote: \"The outdoor projection transformed our natural park into a sold-out nighttime attraction through all four seasons.\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 119,
+    "prop": "client:",
+    "text": "client: \"Active Arena FEC\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 121,
+    "prop": "headline:",
+    "text": "headline: \"Zero-Wearable Dynamic Sports & Interactive Floor Arena\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 128,
+    "prop": "quote:",
+    "text": "quote: \"Because the games are light and camera vision, we have zero broken buttons or arcade breakdowns.\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 133,
+    "prop": "client:",
+    "text": "client: \"Edge Motion Experience\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 135,
+    "prop": "headline:",
+    "text": "headline: \"Shockwave Footstep Simulation in Massive Tourism Venues\","
+  },
+  {
+    "file": "data/industries/entertainment.ts",
+    "line": 142,
+    "prop": "quote:",
+    "text": "quote: \"Every single visitor captures video of the floor reacting to their steps \u2014 unmatched social marketing.\","
+  },
+  {
+    "file": "data/industries/healthcare.ts",
+    "line": 37,
+    "prop": "quote:",
+    "text": "quote: \"\\\"Healing begins with a comforting environment that turns anxiety into wonder.\\\"\""
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 37,
+    "prop": "quote:",
+    "text": "quote: \"\\\"Luxury is no longer just about service; it's about how an environment makes you feel.\\\"\","
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 105,
+    "prop": "client:",
+    "text": "client: \"The Grand Palm Resort\","
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 107,
+    "prop": "headline:",
+    "text": "headline: \"Footstep-Responsive Water Ripples Welcoming Global Travelers\","
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 114,
+    "prop": "quote:",
+    "text": "quote: \"Arriving guests pause in awe the moment they enter the lobby \u2014 it became the signature social photo spot of our resort.\","
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 119,
+    "prop": "client:",
+    "text": "client: \"Azure Bay Luxury Resort\","
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 121,
+    "prop": "headline:",
+    "text": "headline: \"Generative Natural Light & Acoustic-Reactive Spatial Architecture\","
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 128,
+    "prop": "quote:",
+    "text": "quote: \"The dynamic light transforms the mood from sunlit tranquility during brunch to intimate luxury cocktails by night.\","
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 133,
+    "prop": "client:",
+    "text": "client: \"L'Ombre Michelin Dining\","
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 135,
+    "prop": "headline:",
+    "text": "headline: \"Synchronized Culinary Art & Dynamic Plate Tracking\","
+  },
+  {
+    "file": "data/industries/hospitality.ts",
+    "line": 142,
+    "prop": "quote:",
+    "text": "quote: \"It turned dining into performance art. Our reservations booked out six months in advance.\","
+  },
+  {
+    "file": "data/industries/index.ts",
+    "line": 274,
+    "prop": "client:",
+    "text": "client: \"Flagship Installation\","
+  },
+  {
+    "file": "data/industries/index.ts",
+    "line": 276,
+    "prop": "headline:",
+    "text": "headline: \"Transforming Physical Environments with Interactive Motion\","
+  },
+  {
+    "file": "data/industries/index.ts",
+    "line": 283,
+    "prop": "quote:",
+    "text": "quote: \"The interactive installations completely transformed how visitors move through and interact with our space.\","
+  },
+  {
+    "file": "data/industries/index.ts",
+    "line": 288,
+    "prop": "client:",
+    "text": "client: \"Sensory Interactive Surface\","
+  },
+  {
+    "file": "data/industries/index.ts",
+    "line": 290,
+    "prop": "headline:",
+    "text": "headline: \"Intuitive Environments That Respond in Real Time\","
+  },
+  {
+    "file": "data/industries/index.ts",
+    "line": 297,
+    "prop": "quote:",
+    "text": "quote: \"Guests immediately understood the interface without a single instruction manual or tutorial.\","
+  },
+  {
+    "file": "data/industries/index.ts",
+    "line": 302,
+    "prop": "client:",
+    "text": "client: \"Digital Motion Canvas\","
+  },
+  {
+    "file": "data/industries/index.ts",
+    "line": 304,
+    "prop": "headline:",
+    "text": "headline: \"Collaborative Interactive Experiences at Scale\","
+  },
+  {
+    "file": "data/industries/index.ts",
+    "line": 311,
+    "prop": "quote:",
+    "text": "quote: \"It became the defining centerpiece of the facility from opening day onward.\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 37,
+    "prop": "quote:",
+    "text": "quote: \"\\\"We don't just want visitors to see history; we want them to feel it.\\\"\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 105,
+    "prop": "client:",
+    "text": "client: \"AURA Sanctuary\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 107,
+    "prop": "headline:",
+    "text": "headline: \"Transforming Historic Stone Sanctuaries into Living Digital Canvases\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 114,
+    "prop": "quote:",
+    "text": "quote: \"The installation completely transformed how visitors experience our cathedral without placing a single screw in historic stonework.\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 119,
+    "prop": "client:",
+    "text": "client: \"BioSphere Science Center\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 121,
+    "prop": "headline:",
+    "text": "headline: \"Touchless Deep-Sea Exploration Through Kinetic Motion Projection\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 128,
+    "prop": "quote:",
+    "text": "quote: \"Guests of all generations spend hours exploring the interactive reef floor \u2014 dwell times tripled overnight.\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 133,
+    "prop": "client:",
+    "text": "client: \"National Antiquities Wing\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 135,
+    "prop": "headline:",
+    "text": "headline: \"Low-UV Micro-Projection Unlocking Hidden Historical Layers\","
+  },
+  {
+    "file": "data/industries/museums.ts",
+    "line": 142,
+    "prop": "quote:",
+    "text": "quote: \"Delicate historical artifacts can now communicate their full context and history safely without compromising conservation rules.\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 37,
+    "prop": "quote:",
+    "text": "quote: \"\\\"Public spaces shouldn't just move people; they should move people emotionally.\\\"\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 105,
+    "prop": "client:",
+    "text": "client: \"Edge NYC Horizon Portal\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 107,
+    "prop": "headline:",
+    "text": "headline: \"High-Altitude Motion Interactive Floor 1,100 Ft Above Manhattan\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 114,
+    "prop": "quote:",
+    "text": "quote: \"Visitors stepping onto the observation floor trigger dramatic real-time visual ripples \u2014 creating millions of social media impressions.\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 119,
+    "prop": "client:",
+    "text": "client: \"Metropolitan Transit Authority\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 121,
+    "prop": "headline:",
+    "text": "headline: \"LED & Projection Sensory Concourse Tunnel\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 128,
+    "prop": "quote:",
+    "text": "quote: \"The sensory tunnel turned a congested underground pedestrian passage into the highlight of the city's commute.\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 133,
+    "prop": "client:",
+    "text": "client: \"Zurich International Transit Hub\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 135,
+    "prop": "headline:",
+    "text": "headline: \"Contactless Motion-Reactive Flow Zones for Family Travelers\","
+  },
+  {
+    "file": "data/industries/public-spaces.ts",
+    "line": 142,
+    "prop": "quote:",
+    "text": "quote: \"Families waiting for connecting flights have a delightful, safe play area that takes up zero physical floor space.\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 37,
+    "prop": "quote:",
+    "text": "quote: \"\\\"The most successful retail spaces are no longer just stores; they are interactive brand experiences.\\\"\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 107,
+    "prop": "client:",
+    "text": "client: \"Neo-Shinjuku District\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 109,
+    "prop": "headline:",
+    "text": "headline: \"Multi-Touch Dynamic Fa\u00e7ade Driving Viral Footfall\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 116,
+    "prop": "quote:",
+    "text": "quote: \"Passersby couldn't resist stopping to play with the wall, translating directly into a massive surge in store entries.\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 121,
+    "prop": "client:",
+    "text": "client: \"Fifth Avenue Luxury Flagship\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 123,
+    "prop": "headline:",
+    "text": "headline: \"Footstep-Responsive Floral Motion Floor & Kinetic Display\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 130,
+    "prop": "quote:",
+    "text": "quote: \"The storefront became the defining spectacle of the entire shopping district during our holiday campaign.\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 135,
+    "prop": "client:",
+    "text": "client: \"Neo-Tokyo Brand Lab\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 137,
+    "prop": "headline:",
+    "text": "headline: \"Interactive Product Customization & Holographic Shelving\","
+  },
+  {
+    "file": "data/industries/retail.ts",
+    "line": 144,
+    "prop": "quote:",
+    "text": "quote: \"Shoppers customized products in real time right in front of their eyes, resulting in our highest sales velocity ever.\","
+  },
+  {
+    "file": "data/industries/types.ts",
+    "line": 12,
+    "prop": "client:",
+    "text": "client: string;"
+  },
+  {
+    "file": "data/industries/types.ts",
+    "line": 40,
+    "prop": "quote:",
+    "text": "vision: { title: string; intro: string; statement: string; pillars: IndustryVisionPillar[]; transition: string; quote: string; img?: string; };"
+  }
+]

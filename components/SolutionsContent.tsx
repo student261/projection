@@ -164,10 +164,10 @@ export default function SolutionsContent() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white mt-16">
-          <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-            Platform Capabilities
-          </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6 drop-shadow-lg">
+          <div className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/90 mb-6">
+            PLATFORM CAPABILITIES
+          </div>
+          <h1 className="font-black tracking-tight leading-[1.05] mb-6 drop-shadow-lg text-[clamp(2.5rem,6vw,5.5rem)]">
             Interactive Solutions for <br /> Extraordinary Spaces
           </h1>
           <p className="text-lg sm:text-xl text-white/80 font-light max-w-2xl mx-auto">
@@ -236,10 +236,7 @@ export default function SolutionsContent() {
                   {/* Narrative Column */}
                   <div className={`flex flex-col h-full justify-center py-2 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
                     <div className="flex items-baseline gap-3 mb-2">
-                      <span className="text-3xl lg:text-4xl font-black text-gray-200">
-                        {item.num}
-                      </span>
-                      <h2 className="text-2xl lg:text-3xl font-black text-black tracking-tight leading-tight">
+                      <h2 className="font-black text-black tracking-tight leading-tight text-[clamp(1.75rem,4vw,2.5rem)]">
                         {item.title}
                       </h2>
                     </div>
