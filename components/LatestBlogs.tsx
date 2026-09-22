@@ -40,8 +40,8 @@ const blogs = [
 
 export default function LatestBlogs() {
   return (
-    <section className="py-10 lg:py-12 bg-[var(--background)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 lg:py-16 xl:py-20 bg-[var(--background)]">
+      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
           <motion.p

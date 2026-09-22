@@ -31,7 +31,7 @@ export default function HugeCTA({
   bgImg = "/images/architectural_light_beam.jpg",
 }: HugeCTAProps = {}) {
   return (
-    <section className="relative z-10 py-14 sm:py-24 lg:py-32 overflow-hidden bg-black text-white w-full shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
+    <section className="relative z-10 py-10 sm:py-16 lg:py-20 overflow-hidden bg-black text-white w-full shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
       {/* Full-width Background Image */}
       <div className="absolute inset-0 z-0">
         <SafeImage
@@ -43,13 +43,13 @@ export default function HugeCTA({
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20 pointer-events-none" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="p-6 sm:p-12 lg:p-16 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[3rem] bg-black/40 backdrop-blur-md border border-white/10 text-white relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 shadow-2xl shadow-black/20"
+          className="p-6 sm:p-10 lg:p-12 2xl:p-14 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] bg-black/40 backdrop-blur-md border border-white/10 text-white relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 shadow-2xl shadow-black/20"
         >
           {/* Animated Background Glows */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">

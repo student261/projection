@@ -54,8 +54,8 @@ const capabilities = [
 
 export default function SpatialCapabilities() {
   return (
-    <section id="spatial-capabilities" className="py-24 sm:py-32 bg-white text-black relative overflow-hidden">
-      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+    <section id="spatial-capabilities" className="py-14 sm:py-18 lg:py-24 bg-white text-black relative overflow-hidden">
+      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10 lg:space-y-12">
         
         {/* ── Minimalist Editorial Header ── */}
         <div className="max-w-3xl space-y-4">

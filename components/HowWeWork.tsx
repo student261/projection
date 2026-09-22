@@ -49,16 +49,16 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section className="py-14 sm:py-20 lg:py-28 bg-gray-50/50 text-black relative overflow-hidden">
+    <section className="pt-12 sm:pt-16 lg:pt-20 pb-0 bg-gray-50/50 text-black relative overflow-hidden">
       {/* Background ambient light */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-black/5 blur-[160px] rounded-full" />
       </div>
 
-      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-12 sm:pb-16 lg:pb-20">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16 space-y-2 flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0">
+        <div className="max-w-3xl mb-8 sm:mb-10 lg:mb-12 space-y-2 flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0">
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ export default function HowWeWork() {
         </div>
 
         {/* Desktop 5-Column Process Grid (>= lg) */}
-        <div className="hidden lg:grid lg:grid-cols-5 gap-5 xl:gap-6 items-stretch relative z-10">
+        <div className="hidden lg:grid lg:grid-cols-5 gap-5 xl:gap-7 2xl:gap-8 items-start relative z-10">
           {steps.map((step, index) => {
             const Icon = step.icon;
 
@@ -140,26 +140,26 @@ export default function HowWeWork() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="group flex flex-col justify-between items-start text-left h-full w-full"
+                className="group flex flex-col justify-start items-start text-left w-full"
               >
                 {/* Upper Content Area */}
-                <div className="flex-1 flex flex-col justify-start w-full relative">
+                <div className="w-full relative">
                   {/* Icon Squircle Node */}
-                  <div className="w-16 h-16 rounded-2xl bg-white border border-black/10 shadow-sm flex items-center justify-center mb-5 shrink-0 group-hover:border-black group-hover:shadow-md transition-all duration-300 relative z-10">
-                    <Icon className="w-7 h-7 text-black group-hover:scale-105 transition-transform duration-300" />
+                  <div className="w-14 h-14 xl:w-16 xl:h-16 rounded-2xl bg-white border border-black/10 shadow-sm flex items-center justify-center mb-4 xl:mb-5 shrink-0 group-hover:border-black group-hover:shadow-md transition-all duration-300 relative z-10">
+                    <Icon className="w-6 h-6 xl:w-7 xl:h-7 text-black group-hover:scale-105 transition-transform duration-300" />
                   </div>
 
                   {/* Title & Subtitle */}
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-black tracking-tight leading-tight mb-1">
+                  <h3 className="text-lg xl:text-xl 2xl:text-2xl font-extrabold text-black tracking-tight leading-tight mb-1">
                     {step.title}
                   </h3>
 
-                  <span className="text-[10px] sm:text-[11px] font-bold text-black/50 uppercase tracking-widest mb-3 block">
+                  <span className="text-[10px] sm:text-[11px] font-bold text-black/50 uppercase tracking-widest mb-2.5 block">
                     {step.subtitle}
                   </span>
 
                   {/* Body Description */}
-                  <p className="text-xs sm:text-sm text-black/80 font-normal leading-relaxed">
+                  <p className="text-xs sm:text-sm text-black/75 font-normal leading-relaxed">
                     {step.desc}
                   </p>
                 </div>

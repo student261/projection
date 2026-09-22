@@ -324,9 +324,9 @@ export default function SolutionsOverview() {
   return (
     <section id="solutions-overview" className="flex flex-col">
       {/* 4 Cards Solution Overview */}
-      <div className="bg-white text-black py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 max-w-3xl mx-auto space-y-4">
+      <div className="bg-white text-black py-14 sm:py-18 lg:py-20">
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 lg:mb-12 max-w-3xl mx-auto space-y-4">
             <span className="flex justify-center items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black/50">
               <Sparkles className="w-3.5 h-3.5" />
               Discover Our Solutions
@@ -413,7 +413,7 @@ export default function SolutionsOverview() {
 
         {/* Desktop Sticky View (>= 1024px) */}
         <div className="hidden lg:flex sticky top-0 h-screen w-full flex-col justify-center overflow-hidden py-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-between h-full max-h-[820px]">
+          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-between h-full max-h-[820px]">
             
             {/* Header - original style */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-4 shrink-0">
