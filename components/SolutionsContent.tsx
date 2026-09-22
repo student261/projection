@@ -14,7 +14,7 @@ const solutionsData = [
     badge: "Motion Projection • Floor & Wall",
     desc: "Transform everyday surfaces—floors, walls, tables, and windows—into responsive digital environments that encourage movement, participation, and discovery.",
     useCase: "Ideal for retail pop-ups, museum exhibits, and pediatric waiting rooms.",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+    img: "/images/interactive_floor_motion.jpg",
     features: [
       "Interactive Motion Floors & Projection Walls",
       "Real-Time Body & Object Tracking Sensors",
@@ -30,7 +30,7 @@ const solutionsData = [
     badge: "360° Rooms • Projection Mapping",
     desc: "Create large-scale projection environments, 360-degree rooms, and architectural projection mapping that transport visitors into extraordinary narrative worlds.",
     useCase: "Ideal for theme parks, flagship showrooms, and digital art galleries.",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+    img: "/images/cathedral_projection_mapping.jpg",
     features: [
       "Seamless Multi-Projector Edge Blending",
       "Spatial Surround Sound Integration",
@@ -46,7 +46,7 @@ const solutionsData = [
     badge: "AI Avatars • Real-Time Responses",
     desc: "Give your visitors a personalized, magical experience that adapts to them instantly. Our intelligent systems greet guests, respond to their movements, and create unique moments for everyone who walks by.",
     useCase: "Ideal for VIP lounges, innovative corporate lobbies, and interactive brand activations.",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+    img: "/images/ai_receptionist_concierge.jpg",
     features: [
       "Interactive AI Avatars & Digital Concierges",
       "Generative Real-Time Particle & Visual Media",
@@ -62,7 +62,7 @@ const solutionsData = [
     badge: "Kiosks • Cloud CMS • Analytics",
     desc: "Drive longer dwell times and higher conversion rates with gamified touchpoints. Capture valuable audience insights while providing a fun, memorable brand interaction.",
     useCase: "Ideal for expo booths, retail gamification, and lead generation stations.",
-    img: "https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg",
+    img: "/images/entertainment_motion_arena.jpg",
     features: [
       "Remote Content Management (Cloud CMS)",
       "Interactive Quiz & Product Showcase Kiosks",
@@ -152,10 +152,10 @@ export default function SolutionsContent() {
     <div className="w-full bg-white text-black pt-16">
       
       {/* Visual Impact Hero */}
-      <section className="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[60vh] min-h-[480px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <SafeImage
-            src="https://momentfactory.com/cdn/shop/files/Moment_Factory_Signature_Shows_25_SuperReal_D7A1668-WS_5b710a5d-f2e7-4428-ad20-c83c257b7bbe.jpg"
+            src="/images/solutions_hero_hall.jpg"
             alt="Interactive Solutions Hero"
             className="w-full h-full object-cover object-center"
             containerClassName="w-full h-full"
@@ -163,15 +163,15 @@ export default function SolutionsContent() {
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white mt-16">
-          <div className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/90 mb-6">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white mt-12 sm:mt-16">
+          <div className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/90 mb-4 sm:mb-6">
             PLATFORM CAPABILITIES
           </div>
-          <h1 className="font-black tracking-tight leading-[1.05] mb-6 drop-shadow-lg text-[clamp(2.5rem,6vw,5.5rem)]">
+          <h1 className="font-black tracking-tight leading-[1.08] mb-4 sm:mb-6 drop-shadow-lg text-[clamp(2rem,5.5vw,4.5rem)]">
             Interactive Solutions for <br /> Extraordinary Spaces
           </h1>
-          <p className="text-lg sm:text-xl text-white/80 font-light max-w-2xl mx-auto">
-            Explore our suite of motion projection, 360A environments, AI interactions, and audience engagement technologies.
+          <p className="text-sm sm:text-lg lg:text-xl text-white/80 font-light max-w-2xl mx-auto leading-relaxed">
+            Explore our suite of motion projection, 360° environments, AI interactions, and audience engagement technologies.
           </p>
         </div>
       </section>

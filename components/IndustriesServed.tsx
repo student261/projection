@@ -227,19 +227,14 @@ export default function IndustriesServed() {
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="absolute inset-0 w-full h-full"
               >
-                {/* Slow continuous pan effect on the image */}
-                <motion.div
-                  animate={{ scale: 1.08 }}
-                  transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
-                  className="w-full h-full"
-                >
+                <div className="w-full h-full transition-transform duration-700 ease-out">
                   <SafeImage
                     src={activeIndustry.img}
                     alt={activeIndustry.title}
                     className="w-full h-full object-cover object-center"
                     containerClassName="w-full h-full"
                   />
-                </motion.div>
+                </div>
                 
                 {/* Subtle vignette gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 pointer-events-none" />

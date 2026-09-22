@@ -49,7 +49,7 @@ export default function ContactPage() {
               <span>SPATIAL CONSULTATION & BRIEFING</span>
             </div>
 
-            <h1 className="font-black tracking-tight text-black leading-[1.05] text-[clamp(2.5rem,6vw,5.5rem)]">
+            <h1 className="font-black tracking-tight text-black leading-[1.05] text-[clamp(2rem,5.2vw,5rem)]">
               Initiate Your <br />
               <span className="font-light text-black/70">Spatial Transformation</span>
             </h1>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Dr. Elena Rostova"
-                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black placeholder-black/30 text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black placeholder-black/30 text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       />
                     </div>
                     <div>
@@ -159,7 +159,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="elena@institution.org"
-                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black placeholder-black/30 text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black placeholder-black/30 text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       />
                     </div>
                   </div>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                         value={formData.org}
                         onChange={(e) => setFormData({ ...formData, org: e.target.value })}
                         placeholder="Museum of Modern Science"
-                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black placeholder-black/30 text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black placeholder-black/30 text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       />
                     </div>
                     <div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                       <select 
                         value={formData.industry}
                         onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       >
                         {CANONICAL_INDUSTRIES.map((ind) => (
                           <option key={ind.id} value={ind.id}>
@@ -204,7 +204,7 @@ export default function ContactPage() {
                       <select 
                         value={formData.footprint}
                         onChange={(e) => setFormData({ ...formData, footprint: e.target.value })}
-                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       >
                         <option value="under-500">Boutique Zone (&lt; 500 sq ft)</option>
                         <option value="500-2500">Medium Gallery / Lab (500 – 2,500 sq ft)</option>
@@ -219,7 +219,7 @@ export default function ContactPage() {
                       <select 
                         value={formData.timeline}
                         onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
-                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                        className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       >
                         <option value="immediate">Immediate (&lt; 3 Months)</option>
                         <option value="3-6-months">3 – 6 Months</option>
@@ -236,7 +236,7 @@ export default function ContactPage() {
                     <select 
                       value={formData.solution}
                       onChange={(e) => setFormData({ ...formData, solution: e.target.value })}
-                      className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                      className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                     >
                       <option>Interactive Motion Floor &amp; Wall</option>
                       <option>Architectural 360° Projection Mapping</option>
@@ -257,7 +257,7 @@ export default function ContactPage() {
                       value={formData.details}
                       onChange={(e) => setFormData({ ...formData, details: e.target.value })}
                       placeholder="Please describe ceiling height, surface materials (stone, wood, concrete), ambient lighting (lux levels/windows), and target audience throughput..."
-                      className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black placeholder-black/30 text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                      className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black placeholder-black/30 text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                     />
                   </div>
 

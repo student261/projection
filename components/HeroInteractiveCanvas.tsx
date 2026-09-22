@@ -58,8 +58,8 @@ export default function HeroInteractiveCanvas({ onTelemetryUpdate }: HeroInterac
     handleResize();
     window.addEventListener("resize", handleResize);
 
-    // Initial autonomous floating particle nodes (LiDAR sensor cloud)
-    const particleCount = Math.min(Math.floor(width / 26), 40);
+    // Initial autonomous floating particle nodes (LiDAR sensor cloud - mobile optimized)
+    const particleCount = width < 640 ? 12 : Math.min(Math.floor(width / 26), 36);
     const particles: Particle[] = [];
     for (let i = 0; i < particleCount; i++) {
       particles.push({

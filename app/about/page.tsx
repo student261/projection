@@ -171,7 +171,7 @@ export default function AboutPage() {
               {STATS.map((stat, idx) => (
                 <div key={idx} className="flex flex-col justify-start">
                   <div className="h-7 sm:h-9 lg:h-10 flex items-center">
-                    <span className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-none whitespace-nowrap">
+                    <span className="text-lg sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-none">
                       {stat.value}
                     </span>
                   </div>
@@ -238,13 +238,13 @@ export default function AboutPage() {
                 containerClassName="w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
-              <div className="absolute bottom-5 left-5 right-5 sm:bottom-6 sm:left-6 sm:right-6 flex items-end justify-between text-white">
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2 text-white">
                 <div>
                   <span className="text-[10px] font-mono uppercase tracking-widest text-white/70 block mb-1">Interactive Prototyping Lab</span>
-                  <span className="text-sm sm:text-base font-bold">Spatial Immersion & Sensor Calibration Chamber</span>
-                  <p className="text-[11px] sm:text-xs text-white/60 font-light mt-0.5">Real-time LiDAR mesh validation and sub-millimeter throw distance testing</p>
+                  <span className="text-xs sm:text-base font-bold block">Spatial Immersion & Sensor Calibration Chamber</span>
+                  <p className="text-[10px] sm:text-xs text-white/60 font-light mt-0.5">Real-time LiDAR mesh validation and sub-millimeter throw distance testing</p>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-mono font-bold uppercase shrink-0">
+                <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-mono font-bold uppercase shrink-0 self-start sm:self-auto">
                   Active Testing
                 </span>
               </div>

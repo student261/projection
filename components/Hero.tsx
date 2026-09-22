@@ -167,7 +167,7 @@ export default function Hero() {
             {/* Headline */}
             <motion.h1
               variants={fadeUpVariant}
-              className="font-semibold text-white tracking-tight leading-[1.12] max-w-4xl mb-5 sm:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)] text-[clamp(2.5rem,5.5vw,4.5rem)]"
+              className="font-semibold text-white tracking-tight leading-[1.12] max-w-4xl mb-4 sm:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)] text-[clamp(1.75rem,5.2vw,4.5rem)]"
             >
               Transform Spaces into Extraordinary Interactive Experiences
             </motion.h1>
@@ -175,7 +175,7 @@ export default function Hero() {
             {/* Subheadline */}
             <motion.p
               variants={fadeUpVariant}
-              className="text-base sm:text-lg lg:text-xl font-light text-white/90 leading-relaxed max-w-2xl mb-8 sm:mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
+              className="text-sm sm:text-base lg:text-xl font-light text-white/90 leading-relaxed max-w-2xl mb-6 sm:mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
             >
               Spatial Interactive Environments &amp; Architectural Motion Projection
             </motion.p>

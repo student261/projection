@@ -130,6 +130,27 @@ function TiltCard({ cat, isDesktop }: { cat: any; isDesktop: boolean }) {
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  // On mobile touch devices, automatically play video when card is in view, pause when scrolled away
+  useEffect(() => {
+    if (isDesktop) return;
+    const cardEl = ref.current;
+    if (!cardEl) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play().catch(() => {});
+        } else {
+          videoRef.current?.pause();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(cardEl);
+    return () => observer.disconnect();
+  }, [isDesktop]);
+
   const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (!ref.current) return;
     const rect = ref.current.getBoundingClientRect();
@@ -142,13 +163,13 @@ function TiltCard({ cat, isDesktop }: { cat: any; isDesktop: boolean }) {
     x.set(mouseX / width - 0.5);
     y.set(mouseY / height - 0.5);
 
-    if (videoRef.current) {
+    if (isDesktop && videoRef.current) {
       videoRef.current.play().catch(() => {});
     }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (!ref.current) return;
+    if (!isDesktop || !ref.current) return;
     const rect = ref.current.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;
@@ -163,7 +184,7 @@ function TiltCard({ cat, isDesktop }: { cat: any; isDesktop: boolean }) {
   const handleMouseLeave = () => {
     x.set(0);
     y.set(0);
-    if (videoRef.current) {
+    if (isDesktop && videoRef.current) {
       videoRef.current.pause();
     }
   };
@@ -234,7 +255,7 @@ function TiltCard({ cat, isDesktop }: { cat: any; isDesktop: boolean }) {
               <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md mb-4 flex items-center justify-center text-white border border-white/20 shadow-xl">
                 {cat.icon}
               </div>
-              <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-xl">
+              <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 shadow-xl">
                 <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
               </div>
             </div>
@@ -352,7 +373,7 @@ export default function SolutionsOverview() {
                   </span>
                 </div>
 
-                <div className="relative w-[calc(100%+2rem)] -left-4 sm:w-[calc(100%+3rem)] sm:-left-6 h-[260px] sm:h-[340px] overflow-hidden">
+                <div className="relative w-full h-[240px] sm:h-[320px] rounded-2xl overflow-hidden shadow-lg border border-white/10">
                   <SafeImage
                     src={item.img}
                     alt={item.title}

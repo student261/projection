@@ -41,11 +41,11 @@ export default function FeaturedProjects() {
   const [isAutoPlaying, setIsAutoPlaying] = useState<boolean>(true);
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying || typeof window === "undefined" || window.innerWidth < 1024) return;
     
     const interval = setInterval(() => {
       setHoveredIdx((prev) => (prev + 1) % projects.length);
-    }, 4000); // cycle every 4 seconds
+    }, 4500);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);

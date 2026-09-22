@@ -67,8 +67,8 @@ export default function CustomCursor() {
 
   return (
     <>
-      <div ref={dotRef} className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-white pointer-events-none z-[9999] will-change-transform" />
-      <div ref={ringRef} className="fixed top-0 left-0 w-8 h-8 rounded-full border border-white/50 pointer-events-none z-[9999] will-change-transform transition-[width,height,border-color] duration-200" />
+      <div ref={dotRef} className="hidden md:block fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-white pointer-events-none z-[9999] will-change-transform" />
+      <div ref={ringRef} className="hidden md:block fixed top-0 left-0 w-8 h-8 rounded-full border border-white/50 pointer-events-none z-[9999] will-change-transform transition-[width,height,border-color] duration-200" />
     </>
   );
 }
