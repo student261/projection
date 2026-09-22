@@ -31,7 +31,7 @@ export default function HugeCTA({
   bgImg = "/images/architectural_light_beam.jpg",
 }: HugeCTAProps = {}) {
   return (
-    <section className="relative z-10 py-24 lg:py-32 overflow-hidden bg-black text-white w-full shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
+    <section className="relative z-10 py-14 sm:py-24 lg:py-32 overflow-hidden bg-black text-white w-full shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
       {/* Full-width Background Image */}
       <div className="absolute inset-0 z-0">
         <SafeImage
@@ -49,7 +49,7 @@ export default function HugeCTA({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="p-8 sm:p-12 lg:p-16 rounded-[2rem] lg:rounded-[3rem] bg-black/40 backdrop-blur-md border border-white/10 text-white relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10 shadow-2xl shadow-black/20"
+          className="p-6 sm:p-12 lg:p-16 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[3rem] bg-black/40 backdrop-blur-md border border-white/10 text-white relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 shadow-2xl shadow-black/20"
         >
           {/* Animated Background Glows */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -58,12 +58,12 @@ export default function HugeCTA({
           </div>
 
           {/* Left Side Content */}
-          <div className="relative z-10 max-w-2xl text-center lg:text-left space-y-4">
-            <div className="inline-flex items-center justify-center lg:justify-start gap-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 mb-2">
+          <div className="relative z-10 max-w-2xl text-center lg:text-left space-y-3 sm:space-y-4">
+            <div className="inline-flex items-center justify-center lg:justify-start gap-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1 sm:mb-2">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{badge}</span>
             </div>
-            <h4 className="text-white text-3xl sm:text-4xl lg:text-5xl font-black leading-[1.1]">
+            <h4 className="text-white text-2xl sm:text-4xl lg:text-5xl font-black leading-[1.1]">
               {title}
             </h4>
             <p className="text-sm sm:text-base text-white/80 font-light leading-relaxed pt-2 max-w-xl mx-auto lg:mx-0">

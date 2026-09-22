@@ -198,7 +198,7 @@ export default function MasterIndustryContent() {
             <Layers className="w-3.5 h-3.5 text-white/50" />
             <span>INDUSTRY SOLUTIONS ECOSYSTEM</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 sm:mb-6 tracking-tight leading-[1.06] drop-shadow-2xl max-w-4xl text-balance">
+          <h1 className="font-black text-white mb-4 sm:mb-6 tracking-tight leading-[1.08] drop-shadow-2xl max-w-4xl text-balance text-[clamp(1.85rem,5.5vw,4.5rem)]">
             Built for Every Industry. Designed for Every Experience.
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg font-light leading-relaxed mb-8 sm:mb-10">

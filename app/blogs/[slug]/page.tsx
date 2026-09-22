@@ -296,12 +296,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.04] text-black mb-8 max-w-5xl">
+        <h1 className="font-black tracking-tight leading-[1.08] text-black mb-6 sm:mb-8 max-w-5xl text-[clamp(1.85rem,5.5vw,4.5rem)]">
           {post.title}
         </h1>
 
         {/* Subtitle / Deck */}
-        <p className="text-xl sm:text-2xl font-light leading-relaxed text-black/75 max-w-4xl mb-12">
+        <p className="text-base sm:text-xl lg:text-2xl font-light leading-relaxed text-black/75 max-w-4xl mb-8 sm:mb-12">
           {post.subtitle}
         </p>
 

@@ -45,7 +45,7 @@ export default function BlogListingClient({ blogs }: { blogs: Blog[] }) {
               placeholder="Search insights..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-black/20 transition-all"
+              className="w-full pl-12 pr-4 py-3 bg-white border border-black/10 rounded-xl text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-black/20 transition-all"
             />
           </div>
 

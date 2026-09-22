@@ -199,7 +199,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-black text-white mb-4 sm:mb-6 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.05]"
+            className="font-black text-white mb-4 sm:mb-6 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.08] text-[clamp(1.85rem,5.5vw,4.5rem)]"
           >
             {data.heroHeading}
           </motion.h1>

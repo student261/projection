@@ -994,7 +994,7 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
             </div>
 
             {/* Project Title */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.06] drop-shadow-2xl">
+            <h1 className="font-black text-white tracking-tight leading-[1.08] drop-shadow-2xl text-[clamp(1.85rem,5.5vw,4rem)]">
               {project.title}
             </h1>
 
@@ -1082,7 +1082,7 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
             {/* Challenge (Elevated Dark Slate Card) */}
-            <div className="p-8 sm:p-10 rounded-3xl border border-neutral-800 bg-neutral-950 text-white flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+            <div className="p-5 sm:p-8 lg:p-10 rounded-3xl border border-neutral-800 bg-neutral-950 text-white flex flex-col justify-between shadow-2xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-48 h-48 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
               <div className="space-y-4 relative z-10">
                 <div className="flex items-center justify-between">
@@ -1106,7 +1106,7 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
             </div>
 
             {/* Objective (Elevated Pure White Card) */}
-            <div className="p-8 sm:p-10 rounded-3xl border border-black/10 bg-white text-black flex flex-col justify-between shadow-xl relative overflow-hidden group">
+            <div className="p-5 sm:p-8 lg:p-10 rounded-3xl border border-black/10 bg-white text-black flex flex-col justify-between shadow-xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
               <div className="space-y-4 relative z-10">
                 <div className="flex items-center justify-between">

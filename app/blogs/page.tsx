@@ -49,7 +49,7 @@ export default function BlogsPage() {
 
       {/* Engaging Page Header */}
       <section className="px-4 sm:px-6 lg:px-8 pt-16 pb-12 max-w-screen-2xl mx-auto w-full">
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-black">
+        <h1 className="font-black tracking-tight leading-[1.08] text-black text-[clamp(1.85rem,5.5vw,4.5rem)]">
           The Spatial Intelligence Journal
         </h1>
         <p className="mt-6 text-base sm:text-lg lg:text-xl font-light text-black/70 max-w-2xl leading-relaxed">

@@ -135,10 +135,10 @@ export default function FAQSection() {
                     isOpen ? "max-h-[1000px] opacity-100 mt-3" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="pl-9 text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
+                  <p className="pl-6 sm:pl-9 text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
                     {faq.a}
                   </p>
-                  <div className="pl-9 mt-3">
+                  <div className="pl-6 sm:pl-9 mt-3">
                     <Link
                       href="/contact"
                       className="text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-500 inline-flex items-center gap-1.5 transition-colors border-b border-black/20 hover:border-black/50 pb-0.5"
