@@ -71,7 +71,7 @@ export default function LabPage() {
       />
 
       {/* Terminal Overlay UI */}
-      <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-6 sm:p-10">
+      <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-4 sm:p-10">
         
         {/* Top Header */}
         <header className="flex justify-between items-start pointer-events-auto">
@@ -85,23 +85,24 @@ export default function LabPage() {
                 <span className={`w-1.5 h-1.5 rounded-full ${fusionActive ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`} />
                 <span>{fusionActive ? 'GENERATIVE INTERSECTION ACTIVE' : 'WAITING FOR MULTIPLE SENSORS'}</span>
               </p>
-              <p className="text-sm font-medium text-white/80 max-w-md">
-                Try our motion-sensor technology yourself — click anywhere to deploy a sensor node.
+              <p className="text-xs sm:text-sm font-medium text-white/80 max-w-md">
+                Try our motion-sensor technology yourself — tap or click anywhere to deploy a sensor node.
               </p>
             </div>
           </div>
           
           <Link 
             href="/"
-            className="flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full hover:bg-white hover:text-black transition-colors text-xs font-bold uppercase tracking-widest bg-black/50 backdrop-blur-sm"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 border border-white/20 rounded-full hover:bg-white hover:text-black transition-colors text-[10px] sm:text-xs font-bold uppercase tracking-widest bg-black/50 backdrop-blur-sm shrink-0"
           >
             <X className="w-3.5 h-3.5" />
-            <span>EXIT LAB</span>
+            <span className="hidden xs:inline">EXIT LAB</span>
+            <span className="xs:hidden">EXIT</span>
           </Link>
         </header>
 
         {/* Bottom / Left Telemetry Control Panel */}
-        <div className="pointer-events-auto self-end sm:self-start w-full sm:w-80 bg-[#050508]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl relative">
+        <div className="pointer-events-auto self-end sm:self-start w-full sm:w-80 bg-[#050508]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-6 shadow-2xl relative max-h-[52vh] sm:max-h-none overflow-y-auto">
           
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-2">
@@ -183,10 +184,10 @@ export default function LabPage() {
               </div>
 
               {/* Instructions */}
-              <div className="pt-4 border-t border-white/10 bg-white/5 -mx-6 -mb-6 p-6 rounded-b-2xl">
+              <div className="pt-4 border-t border-white/10 bg-white/5 -mx-4 sm:-mx-6 -mb-4 sm:-mb-6 p-4 sm:p-6 rounded-b-2xl">
                 <p className="text-[10px] text-white/60 leading-relaxed uppercase tracking-wider flex items-start gap-2">
                   <Network className="w-4 h-4 text-white/40 shrink-0 mt-0.5" />
-                  <span>Click anywhere to deploy a sensor node. Drag nodes to reshape scan zones.</span>
+                  <span>Tap or click anywhere to deploy a sensor node. Drag nodes to reshape scan zones.</span>
                 </p>
               </div>
             </div>

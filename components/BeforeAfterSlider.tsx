@@ -93,13 +93,13 @@ export default function BeforeAfterSlider({
   return (
     <div className={`w-full mx-auto my-2 sm:my-4 ${className}`}>
       {!hideHeader && (
-        <div className="mb-3 flex items-center justify-between text-[10px] sm:text-xs font-mono uppercase tracking-wider text-black/60">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-xs font-mono uppercase tracking-wider text-black/60">
           <span className="flex items-center gap-1.5 font-bold">
-            <Sparkles className="w-3.5 h-3.5 text-black" />
-            <span>Interactive Spatial Transformation</span>
+            <Sparkles className="w-3.5 h-3.5 text-black shrink-0" />
+            <span>Interactive Transformation</span>
           </span>
           <span className="font-medium text-black/50">
-            Drag slider left / right to compare
+            Drag left / right to compare
           </span>
         </div>
       )}

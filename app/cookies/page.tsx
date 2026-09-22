@@ -1,4 +1,4 @@
-﻿import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Cookie } from "lucide-react";
 
@@ -18,7 +18,7 @@ export default function CookiePolicyPage() {
           <span>LEGAL & COMPLIANCE</span>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-black mb-6">
+        <h1 className="text-[clamp(2rem,6vw,4rem)] font-black tracking-tight leading-[1.05] text-black mb-6">
           Cookie Policy
         </h1>
         

@@ -69,7 +69,7 @@ export default function ProjectsHero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.08, ease: "easeOut" }}
-          className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.05] drop-shadow-2xl"
+          className="text-[clamp(2rem,6vw,4.5rem)] font-black tracking-tight text-white leading-[1.05] drop-shadow-2xl"
         >
           Portfolio of <br />
           <span className="font-light text-white/70">Spatial Installations</span>

@@ -116,6 +116,62 @@ export default function InteractiveCanvas({
     draggingNodeIdRef.current = null;
   };
 
+  const handleTouchStart = (e: React.TouchEvent<HTMLCanvasElement>) => {
+    if (e.touches.length === 0) return;
+    const touch = e.touches[0];
+    const rect = canvasRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+
+    const currentNodes = stateRef.current.nodes;
+    const clickedNode = currentNodes.find(n => Math.hypot(n.x - x, n.y - y) < 40);
+
+    if (clickedNode) {
+      draggingNodeIdRef.current = clickedNode.id;
+      dragStartPosRef.current = { x, y };
+      hasDraggedRef.current = false;
+      if (onSelectNode) onSelectNode(clickedNode.id);
+    } else {
+      draggingNodeIdRef.current = null;
+      dragStartPosRef.current = { x, y };
+      hasDraggedRef.current = false;
+      if (onSelectNode) onSelectNode(null);
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLCanvasElement>) => {
+    if (e.touches.length === 0) return;
+    const touch = e.touches[0];
+    const rect = canvasRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+
+    mousePosRef.current = { x, y };
+
+    if (draggingNodeIdRef.current) {
+      if (dragStartPosRef.current) {
+        const distMoved = Math.hypot(x - dragStartPosRef.current.x, y - dragStartPosRef.current.y);
+        if (distMoved > 6) {
+          hasDraggedRef.current = true;
+        }
+      }
+      if (onUpdateNodePosition) {
+        onUpdateNodePosition(draggingNodeIdRef.current, x, y);
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (dragStartPosRef.current && !draggingNodeIdRef.current && !hasDraggedRef.current) {
+      onAddNode(dragStartPosRef.current.x, dragStartPosRef.current.y);
+    }
+    draggingNodeIdRef.current = null;
+    dragStartPosRef.current = null;
+    hasDraggedRef.current = false;
+  };
+
   // High-performance animation loop running ONCE on mount
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -370,6 +426,9 @@ export default function InteractiveCanvas({
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       className="absolute inset-0 w-full h-full block cursor-crosshair touch-none select-none"
       style={{ background: '#050508' }}
     />

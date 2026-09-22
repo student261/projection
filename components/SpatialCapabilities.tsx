@@ -134,7 +134,7 @@ export default function SpatialCapabilities() {
 
                   <Link
                     href={cap.href}
-                    className="w-9 h-9 rounded-full border border-white/10 text-white/60 group-hover:text-black group-hover:bg-white group-hover:border-white transition-all duration-300 flex items-center justify-center shrink-0"
+                    className="w-9 h-9 rounded-full border border-black/15 text-black/60 group-hover:text-white group-hover:bg-black group-hover:border-black transition-all duration-300 flex items-center justify-center shrink-0"
                     aria-label={`Explore ${cap.title}`}
                   >
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

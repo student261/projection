@@ -45,7 +45,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
             <Sparkles className="w-3.5 h-3.5 text-white/80" />
             {industry.hero.eyebrow}
           </span>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-3 sm:mb-4 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.08]">
+          <h1 className="text-[clamp(1.85rem,5.5vw,3.75rem)] font-black text-white mb-3 sm:mb-4 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.08]">
             {industry.hero.title}
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg font-light leading-relaxed">

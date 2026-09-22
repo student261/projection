@@ -421,7 +421,7 @@ export default function HorizontalProjectsShowcase() {
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>INTERACTIVE GALLERY • {filteredProjects.length} CREATIONS</span>
                   </div>
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black">
+                  <h2 className="text-[clamp(1.85rem,5vw,3rem)] font-black tracking-tight leading-[1.1] text-black">
                     Featured Installations
                   </h2>
                 </div>
@@ -431,7 +431,7 @@ export default function HorizontalProjectsShowcase() {
                 </div>
               </div>
 
-              <div className="flex flex-nowrap lg:flex-wrap items-center gap-2 pt-1 overflow-x-auto scrollbar-hide pb-2 -mb-2">
+              <div className="flex flex-nowrap lg:flex-wrap items-center gap-2 pt-1 overflow-x-auto scrollbar-hide pb-2 -mb-2 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
                 {CATEGORIES.map((cat) => {
                   const isActive = activeCategory === cat.id;
                   return (

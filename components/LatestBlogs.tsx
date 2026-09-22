@@ -144,7 +144,7 @@ export default function LatestBlogs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 lg:mt-20 p-8 sm:p-10 lg:p-12 rounded-[2rem] bg-black text-white relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl shadow-black/20 group border border-white/5"
+          className="mt-16 lg:mt-20 p-6 sm:p-10 lg:p-12 rounded-[2rem] bg-black text-white relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl shadow-black/20 group border border-white/5"
         >
           {/* Ambient Glows */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
