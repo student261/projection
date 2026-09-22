@@ -123,15 +123,6 @@ export default function HowWeWork() {
                 <p className="text-xs sm:text-sm text-black/75 font-normal leading-relaxed">
                   {step.desc}
                 </p>
-
-                <div className="pt-2 border-t border-black/10">
-                  <p className="text-xs text-black/90 font-medium leading-relaxed bg-gray-50 p-3 rounded-xl border border-black/5">
-                    <strong className="font-bold text-black uppercase tracking-wider text-[10px] block mb-0.5">
-                      Deliverable:
-                    </strong>
-                    <span>{step.deliverable}</span>
-                  </p>
-                </div>
               </motion.div>
             );
           })}
@@ -168,15 +159,8 @@ export default function HowWeWork() {
                   </span>
 
                   {/* Body Description */}
-                  <p className="text-xs sm:text-sm text-black/80 font-normal leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-black/80 font-normal leading-relaxed">
                     {step.desc}
-                  </p>
-                </div>
-
-                {/* Deliverable Divider Line (Forced to absolute bottom of row) */}
-                <div className="pt-3.5 border-t border-black/15 w-full mt-auto">
-                  <p className="text-xs text-black/90 font-normal leading-relaxed">
-                    <strong className="font-bold text-black">Deliverable:</strong> {step.deliverable}
                   </p>
                 </div>
               </motion.div>
