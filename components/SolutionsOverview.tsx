@@ -466,7 +466,7 @@ export default function SolutionsOverview() {
               </div>
 
               {/* Column 2: Active Text Content */}
-              <div className="lg:col-span-4 relative h-full flex flex-col justify-center">
+              <div className="lg:col-span-4 relative h-full flex flex-col justify-center z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeSolution.id}
@@ -474,7 +474,7 @@ export default function SolutionsOverview() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -15 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
-                    className="space-y-6 lg:pr-8"
+                    className="space-y-6 lg:pr-4"
                   >
                     <h4 className="text-2xl font-bold leading-[1.1] text-white">
                       {activeSolution.title}
@@ -505,36 +505,30 @@ export default function SolutionsOverview() {
                 </AnimatePresence>
               </div>
 
-              {/* Column 3 Placeholder - Keeps grid layout intact */}
-              <div className="lg:col-span-5 hidden lg:block" />
+              {/* Column 3: Interactive Media Showcase */}
+              <div className="lg:col-span-5 relative h-[440px] xl:h-[480px] 2xl:h-[520px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-black/40 hidden lg:block">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeSolution.id}
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.02 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="absolute inset-0 w-full h-full"
+                  >
+                    <SafeImage
+                      src={activeSolution.img}
+                      alt={activeSolution.title}
+                      className="w-full h-full object-cover object-center"
+                      containerClassName="w-full h-full"
+                    />
+                    {/* Subtle ambient gradients for depth */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent pointer-events-none" />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
-          </div>
-
-          {/* Absolute Media Background - Fades perfectly into the void */}
-          <div 
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-[55vw] h-[85vh] pointer-events-none z-0 hidden lg:block"
-            style={{ 
-              maskImage: 'radial-gradient(ellipse at 70% 50%, black 40%, transparent 80%)',
-              WebkitMaskImage: 'radial-gradient(ellipse at 70% 50%, black 40%, transparent 80%)'
-            }}
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeSolution.id}
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.02 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="absolute inset-0 w-full h-full"
-              >
-                <SafeImage
-                  src={activeSolution.img}
-                  alt={activeSolution.title}
-                  className="w-full h-full object-cover object-center"
-                  containerClassName="w-full h-full"
-                />
-              </motion.div>
-            </AnimatePresence>
           </div>
         </div>
       </div>
