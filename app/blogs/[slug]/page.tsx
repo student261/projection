@@ -216,6 +216,10 @@ const ALL_POSTS_META = [
   }
 ];
 
+export function generateStaticParams() {
+  return Object.keys(BLOG_DATA).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = BLOG_DATA[slug];

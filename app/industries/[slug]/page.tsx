@@ -12,6 +12,10 @@ import SolutionsAccordion from "@/components/SolutionsAccordion";
 import StickyExperiences from "@/components/StickyExperiences";
 import CaseStudiesSpotlight from "@/components/CaseStudiesSpotlight";
 
+export function generateStaticParams() {
+  return Object.keys(industriesData).map((slug) => ({ slug }));
+}
+
 export default async function IndustrySubpage(props: { params: Promise<{ slug: string }> }) {
   const { slug } = await props.params;
   const industry = industriesData[slug];

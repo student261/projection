@@ -466,7 +466,7 @@ export default function SolutionsOverview() {
               </div>
 
               {/* Column 2: Active Text Content */}
-              <div className="lg:col-span-4 relative h-full flex flex-col justify-center z-10">
+              <div className="lg:col-span-5 relative h-full flex flex-col justify-center z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeSolution.id}
@@ -474,7 +474,7 @@ export default function SolutionsOverview() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -15 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
-                    className="space-y-6 lg:pr-4"
+                    className="space-y-6 lg:pr-6"
                   >
                     <h4 className="text-2xl font-bold leading-[1.1] text-white">
                       {activeSolution.title}
@@ -505,41 +505,41 @@ export default function SolutionsOverview() {
                 </AnimatePresence>
               </div>
 
-              {/* Column 3: Atmospheric Media Display (Blends seamlessly into #0f0f11 background) */}
-              <div className="lg:col-span-5 relative h-[500px] xl:h-[560px] 2xl:h-[620px] hidden lg:flex items-center justify-start pointer-events-none select-none">
-                <div 
-                  className="relative w-full lg:w-[125%] xl:w-[135%] h-full flex items-center justify-center"
-                  style={{
-                    maskImage: 'radial-gradient(ellipse at 55% 50%, black 45%, transparent 85%)',
-                    WebkitMaskImage: 'radial-gradient(ellipse at 55% 50%, black 45%, transparent 85%)',
-                  }}
-                >
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={activeSolution.id}
-                      initial={{ opacity: 0, scale: 0.98 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 1.02 }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                      className="absolute inset-0 w-full h-full"
-                    >
-                      <SafeImage
-                        src={activeSolution.img}
-                        alt={activeSolution.title}
-                        className="w-full h-full object-cover object-center"
-                        containerClassName="w-full h-full"
-                      />
-                      
-                      {/* Atmospheric edge blends dissolving into the #0f0f11 void */}
-                      <div className="absolute inset-y-0 left-0 w-44 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/80 to-transparent pointer-events-none" />
-                      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0f0f11] via-[#0f0f11]/60 to-transparent pointer-events-none" />
-                      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0f0f11] via-[#0f0f11]/80 to-transparent pointer-events-none" />
-                      <div className="absolute inset-y-0 right-0 w-36 bg-gradient-to-l from-[#0f0f11] to-transparent pointer-events-none" />
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-              </div>
+              {/* Column 3 Placeholder - Keeps grid layout intact */}
+              <div className="lg:col-span-4 hidden lg:block pointer-events-none" />
             </div>
+          </div>
+
+          {/* Full-Height Atmospheric Media Backdrop (Spans top-to-bottom on the right, perfectly blending into #0f0f11) */}
+          <div 
+            className="absolute right-0 inset-y-0 w-[50vw] xl:w-[48vw] pointer-events-none z-0 hidden lg:block overflow-hidden"
+            style={{ 
+              maskImage: 'linear-gradient(to right, transparent 0%, transparent 14%, black 65%, black 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, transparent 14%, black 65%, black 100%)'
+            }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeSolution.id}
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="absolute inset-0 w-full h-full"
+              >
+                <SafeImage
+                  src={activeSolution.img}
+                  alt={activeSolution.title}
+                  className="w-full h-full object-cover object-center"
+                  containerClassName="w-full h-full"
+                />
+                
+                {/* Dissolve smoothly into the #0f0f11 dark background */}
+                <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/80 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0f0f11] via-[#0f0f11]/40 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0f0f11] via-[#0f0f11]/60 to-transparent pointer-events-none" />
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </div>

@@ -933,6 +933,10 @@ function getProjectData(slug: string): CaseStudyData {
   };
 }
 
+export function generateStaticParams() {
+  return Object.keys(caseStudiesData).map((slug) => ({ slug }));
+}
+
 export default async function CaseStudyPage(props: { params: Promise<{ slug: string }> }) {
   const { slug } = await props.params;
   const project = getProjectData(slug);
