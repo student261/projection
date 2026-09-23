@@ -415,31 +415,22 @@ export default function SolutionsOverview() {
         <div className="hidden lg:flex sticky top-0 h-screen w-full items-center overflow-hidden bg-[#0f0f11]">
           
           {/* Left Panel: Content & Navigation (Strictly left half, zero overlap with right media) */}
-          <div className="relative z-10 w-full lg:w-[52%] xl:w-[50%] 2xl:w-[46%] h-full flex flex-col justify-center pl-6 sm:pl-8 lg:pl-10 xl:pl-16 2xl:pl-24 pr-4 lg:pr-6 xl:pr-8 py-6 xl:py-10">
+          <div className="relative z-10 w-full lg:w-[52%] xl:w-[50%] 2xl:w-[46%] h-full flex flex-col justify-center pl-8 sm:pl-10 lg:pl-12 xl:pl-20 2xl:pl-24 pr-6 lg:pr-8 xl:pr-10 pt-24 lg:pt-28 pb-8">
             
-            {/* Header: Scaled & Integrated */}
-            <div className="space-y-1.5 xl:space-y-2 mb-4 xl:mb-6 shrink-0">
-              <span className="flex items-center gap-2 text-xs xl:text-sm font-mono font-bold uppercase tracking-[0.25em] text-white/60">
-                <Sparkles className="w-3.5 h-3.5 text-white/70" />
-                Core Capabilities
-              </span>
-              <h3 className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-[1.08] font-black text-white tracking-tight">
-                Everything you need in one place
-              </h3>
-            </div>
+            <div className="max-w-xl w-full my-auto space-y-3.5 xl:space-y-5">
+              {/* Header */}
+              <div className="space-y-1">
+                <span className="flex items-center gap-2 text-xs xl:text-sm font-mono font-bold uppercase tracking-[0.25em] text-white/60">
+                  <Sparkles className="w-3.5 h-3.5 text-white/70" />
+                  Core Capabilities
+                </span>
+                <h3 className="text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl leading-[1.08] font-black text-white tracking-tight">
+                  Everything you need in one place
+                </h3>
+              </div>
 
-            {/* Navigation Tabs + Active Content: Clean Side-by-Side Split */}
-            <div className="flex items-start gap-5 xl:gap-8 2xl:gap-10">
-              
-              {/* Column 1: Navigation Tabs with dot pattern */}
-              <div 
-                className="w-[155px] xl:w-[195px] 2xl:w-[225px] shrink-0 space-y-1.5 xl:space-y-2 relative"
-                style={{
-                  backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
-                  backgroundSize: '24px 24px',
-                  backgroundPosition: 'left top',
-                }}
-              >
+              {/* Navigation Tabs - Clean Segmented Pill Bar */}
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-1 pb-1">
                 {solutions.map((item, idx) => {
                   const isActive = activeIndex === idx;
                   return (
@@ -449,20 +440,18 @@ export default function SolutionsOverview() {
                         setActiveIndex(idx);
                         scrollToSegment(idx);
                       }}
-                      className={`w-full text-left flex items-center gap-2.5 xl:gap-3.5 py-2 xl:py-2.5 px-2.5 xl:px-3.5 rounded-xl transition-all duration-300 group cursor-pointer ${
+                      className={`flex items-center gap-2 py-1.5 xl:py-2 px-3 xl:px-4 rounded-full transition-all duration-300 group cursor-pointer text-[11px] xl:text-xs font-bold tracking-wider uppercase ${
                         isActive 
-                          ? "bg-white/[0.1] backdrop-blur-md border border-white/20 shadow-lg opacity-100" 
-                          : "opacity-60 hover:opacity-100 hover:bg-white/[0.04] border border-transparent"
+                          ? "bg-white text-black shadow-lg shadow-white/10 scale-[1.02]" 
+                          : "bg-white/[0.07] text-white/60 hover:text-white hover:bg-white/[0.12] border border-white/5"
                       }`}
                     >
-                      <span className={`text-[10px] xl:text-xs font-mono font-bold px-1.5 py-0.5 rounded transition-colors ${
-                        isActive ? "bg-white text-black shadow-sm" : "bg-white/10 text-white/70 group-hover:text-white"
+                      <span className={`text-[10px] xl:text-[11px] font-mono font-bold ${
+                        isActive ? "text-black/70" : "text-white/40 group-hover:text-white/70"
                       }`}>
                         {item.num}
                       </span>
-                      <span className={`text-[11px] xl:text-xs 2xl:text-sm font-bold tracking-wider uppercase transition-colors leading-tight ${
-                        isActive ? "text-white" : "text-white/60 group-hover:text-white"
-                      }`}>
+                      <span>
                         {item.subtitle}
                       </span>
                     </button>
@@ -470,8 +459,8 @@ export default function SolutionsOverview() {
                 })}
               </div>
 
-              {/* Column 2: Active Text Content */}
-              <div className="flex-1 min-w-0 flex flex-col justify-center">
+              {/* Active Content: Spacious & Beautiful */}
+              <div className="min-w-0">
                 <AnimatePresence initial={false}>
                   <motion.div
                     key={activeSolution.id}
@@ -479,19 +468,19 @@ export default function SolutionsOverview() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.25, ease: "easeOut" }}
-                    className="space-y-3.5 xl:space-y-4"
+                    className="space-y-3 xl:space-y-4"
                   >
-                    <h4 className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-black leading-[1.15] text-white tracking-tight">
+                    <h4 className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-black leading-tight text-white tracking-tight">
                       {activeSolution.title}
                     </h4>
                     
-                    <p className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-white/80 font-light leading-relaxed">
+                    <p className="text-xs sm:text-sm xl:text-base text-white/80 font-light leading-relaxed">
                       {activeSolution.description}
                     </p>
 
-                    <ul className="space-y-2 xl:space-y-2.5 pt-1">
+                    <ul className="space-y-2 xl:space-y-2.5 pt-0.5">
                       {activeSolution.highlights.map((point, i) => (
-                        <li key={i} className="flex items-start gap-2 xl:gap-2.5 text-xs sm:text-sm xl:text-base text-white/90 font-medium">
+                        <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm xl:text-base text-white/90 font-medium">
                           <span className="w-1.5 h-1.5 rounded-full bg-white/70 mt-1.5 shrink-0 shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
                           <span>{point}</span>
                         </li>
