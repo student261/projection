@@ -432,7 +432,7 @@ export default function SolutionsOverview() {
                   <Sparkles className="w-3.5 h-3.5" />
                   Core Capabilities
                 </span>
-                <h3 className="text-2xl sm:text-3xl xl:text-4xl leading-[1.1] font-bold text-white tracking-tight">
+                <h3 className="text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl leading-[1.1] font-bold text-white tracking-tight">
                   Everything you need in one place
                 </h3>
               </div>
@@ -476,7 +476,7 @@ export default function SolutionsOverview() {
               </div>
 
               {/* Column 2: Active Text Content - Grid stacked to eliminate double-height DOM jumping during transitions */}
-              <div className="flex-1 min-w-0 relative z-10 pr-2 lg:pr-4 min-h-[220px] xl:min-h-[250px]">
+              <div className="flex-1 min-w-0 relative z-10 pr-2 lg:pr-4 min-h-[260px] xl:min-h-[300px] 2xl:min-h-[340px]">
                 <div className="grid grid-cols-1 grid-rows-1">
                   <AnimatePresence initial={false}>
                     <motion.div
@@ -487,17 +487,17 @@ export default function SolutionsOverview() {
                       transition={{ duration: 0.2, ease: "easeOut" }}
                       className="col-start-1 row-start-1 space-y-2.5 xl:space-y-4"
                     >
-                      <h4 className="text-lg sm:text-xl xl:text-2xl font-bold leading-tight text-white">
+                      <h4 className="text-xl sm:text-2xl xl:text-3xl 2xl:text-[2rem] font-bold leading-tight text-white">
                         {activeSolution.title}
                       </h4>
                       
-                      <p className="text-white/70 font-light leading-relaxed text-xs xl:text-sm 2xl:text-base">
+                      <p className="text-white/70 font-light leading-relaxed text-sm xl:text-base 2xl:text-lg">
                         {activeSolution.description}
                       </p>
 
                       <ul className="space-y-1.5 xl:space-y-2.5 pt-0.5 xl:pt-1">
                         {activeSolution.highlights.map((point, i) => (
-                          <li key={i} className="flex items-start gap-2 xl:gap-2.5 text-xs xl:text-sm text-white/80 font-medium">
+                          <li key={i} className="flex items-start gap-2 xl:gap-2.5 text-sm xl:text-base text-white/80 font-medium">
                             <span className="w-1.5 h-1.5 rounded-full bg-white/40 mt-1.5 shrink-0" />
                             <span>{point}</span>
                           </li>
@@ -507,7 +507,7 @@ export default function SolutionsOverview() {
                       <div className="pt-1.5 xl:pt-3">
                         <Link
                           href={activeSolution.href}
-                          className="inline-flex items-center justify-center px-5 xl:px-6 py-2 xl:py-2.5 rounded-full text-[10px] xl:text-[11px] font-bold uppercase tracking-widest text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+                          className="inline-flex items-center justify-center px-5 xl:px-7 py-2 xl:py-2.5 rounded-full text-[10px] xl:text-xs font-bold uppercase tracking-widest text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
                         >
                           EXPLORE PLATFORM
                         </Link>
@@ -539,8 +539,8 @@ export default function SolutionsOverview() {
                   priority
                 />
                 
-                {/* Subtle Seam Feather into #0f0f11 background */}
-                <div className="absolute inset-y-0 left-0 w-12 xl:w-20 bg-gradient-to-r from-[#0f0f11] to-transparent pointer-events-none" />
+                {/* Smooth Seam Feather into #0f0f11 background */}
+                <div className="absolute inset-y-0 left-0 w-24 xl:w-40 2xl:w-48 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/60 to-transparent pointer-events-none" />
               </motion.div>
             </AnimatePresence>
           </div>
