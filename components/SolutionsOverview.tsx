@@ -412,25 +412,34 @@ export default function SolutionsOverview() {
         </div>
 
         {/* Desktop Sticky View (>= 1024px) */}
-        <div className="hidden lg:flex sticky top-0 h-screen w-full items-center overflow-hidden bg-[#0f0f11]">
-          
-          {/* Left Panel: Content & Navigation (Strictly left half, zero overlap with right media) */}
-          <div className="relative z-10 w-full lg:w-[52%] xl:w-[50%] 2xl:w-[46%] h-full flex flex-col justify-center pl-8 sm:pl-10 lg:pl-12 xl:pl-20 2xl:pl-24 pr-6 lg:pr-8 xl:pr-10 pt-24 lg:pt-28 pb-8">
+        <div className="hidden lg:flex sticky top-0 h-screen w-full flex-col justify-center overflow-hidden bg-[#0f0f11] pt-16 xl:pt-20 pb-4">
+          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center gap-3 xl:gap-6 relative z-10">
             
-            <div className="max-w-xl w-full my-auto space-y-3.5 xl:space-y-5">
-              {/* Header */}
-              <div className="space-y-1">
-                <span className="flex items-center gap-2 text-xs xl:text-sm font-mono font-bold uppercase tracking-[0.25em] text-white/60">
-                  <Sparkles className="w-3.5 h-3.5 text-white/70" />
+            {/* Header - Original Style */}
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 shrink-0">
+              <div className="max-w-3xl space-y-2 xl:space-y-3">
+                <span className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-white/70">
+                  <Sparkles className="w-3.5 h-3.5" />
                   Core Capabilities
                 </span>
-                <h3 className="text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl leading-[1.08] font-black text-white tracking-tight">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl leading-[1.08] font-bold text-white tracking-tight">
                   Everything you need in one place
                 </h3>
               </div>
+            </div>
 
-              {/* Navigation Tabs - Clean Segmented Pill Bar */}
-              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-1 pb-1">
+            {/* 3-Column Interactive Layout - Original Style */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
+              
+              {/* Column 1: Navigation Tabs with original dot pattern */}
+              <div 
+                className="lg:col-span-3 space-y-2 xl:space-y-3 relative h-fit pr-4 overflow-hidden"
+                style={{
+                  backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
+                  backgroundSize: '24px 24px',
+                  backgroundPosition: 'left top',
+                }}
+              >
                 {solutions.map((item, idx) => {
                   const isActive = activeIndex === idx;
                   return (
@@ -440,18 +449,18 @@ export default function SolutionsOverview() {
                         setActiveIndex(idx);
                         scrollToSegment(idx);
                       }}
-                      className={`flex items-center gap-2 py-1.5 xl:py-2 px-3 xl:px-4 rounded-full transition-all duration-300 group cursor-pointer text-[11px] xl:text-xs font-bold tracking-wider uppercase ${
-                        isActive 
-                          ? "bg-white text-black shadow-lg shadow-white/10 scale-[1.02]" 
-                          : "bg-white/[0.07] text-white/60 hover:text-white hover:bg-white/[0.12] border border-white/5"
+                      className={`w-full text-left flex items-center gap-3 xl:gap-4 py-2 xl:py-2.5 transition-all duration-300 group cursor-pointer ${
+                        isActive ? "opacity-100" : "opacity-50 hover:opacity-100"
                       }`}
                     >
-                      <span className={`text-[10px] xl:text-[11px] font-mono font-bold ${
-                        isActive ? "text-black/70" : "text-white/40 group-hover:text-white/70"
+                      <span className={`text-[10px] sm:text-[11px] font-bold px-2 py-1 transition-colors ${
+                        isActive ? "bg-white text-black" : "bg-transparent text-white/50 group-hover:text-white"
                       }`}>
                         {item.num}
                       </span>
-                      <span>
+                      <span className={`text-[11px] sm:text-xs font-bold tracking-widest uppercase transition-colors leading-tight ${
+                        isActive ? "text-white" : "text-white/50 group-hover:text-white"
+                      }`}>
                         {item.subtitle}
                       </span>
                     </button>
@@ -459,38 +468,38 @@ export default function SolutionsOverview() {
                 })}
               </div>
 
-              {/* Active Content: Spacious & Beautiful */}
-              <div className="min-w-0">
+              {/* Column 2: Active Text Content */}
+              <div className="lg:col-span-5 relative h-full flex flex-col justify-center z-10">
                 <AnimatePresence initial={false}>
                   <motion.div
                     key={activeSolution.id}
-                    initial={{ opacity: 0, y: 8 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{ duration: 0.25, ease: "easeOut" }}
-                    className="space-y-3 xl:space-y-4"
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="space-y-3 xl:space-y-6 lg:pr-6"
                   >
-                    <h4 className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-black leading-tight text-white tracking-tight">
+                    <h4 className="text-xl sm:text-2xl font-bold leading-[1.1] text-white">
                       {activeSolution.title}
                     </h4>
                     
-                    <p className="text-xs sm:text-sm xl:text-base text-white/80 font-light leading-relaxed">
+                    <p className="text-white/70 font-light leading-relaxed text-xs sm:text-sm xl:text-base">
                       {activeSolution.description}
                     </p>
 
-                    <ul className="space-y-2 xl:space-y-2.5 pt-0.5">
+                    <ul className="space-y-2 xl:space-y-3 pt-1">
                       {activeSolution.highlights.map((point, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm xl:text-base text-white/90 font-medium">
-                          <span className="w-1.5 h-1.5 rounded-full bg-white/70 mt-1.5 shrink-0 shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
+                        <li key={i} className="flex items-start gap-2.5 xl:gap-3 text-xs sm:text-sm text-white/80 font-medium">
+                          <span className="w-1.5 h-1.5 rounded-full bg-white/40 mt-1.5 shrink-0" />
                           <span>{point}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="pt-2 xl:pt-3">
+                    <div className="pt-2 xl:pt-4">
                       <Link
                         href={activeSolution.href}
-                        className="inline-flex items-center justify-center px-6 xl:px-8 py-2.5 xl:py-3 rounded-full text-xs xl:text-sm font-bold uppercase tracking-widest text-white border border-white/25 hover:bg-white hover:text-black transition-all duration-300 shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
+                        className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-widest text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
                       >
                         EXPLORE PLATFORM
                       </Link>
@@ -499,11 +508,13 @@ export default function SolutionsOverview() {
                 </AnimatePresence>
               </div>
 
+              {/* Column 3: Spacer to keep layout balanced */}
+              <div className="lg:col-span-4 hidden lg:block pointer-events-none" />
             </div>
           </div>
 
-          {/* Right Panel: 100% Full-Bleed Media Display (Spans top-to-bottom, center to right edge) */}
-          <div className="absolute right-0 inset-y-0 w-[50%] lg:w-[50%] xl:w-[52%] 2xl:w-[55%] pointer-events-none z-0 hidden lg:block overflow-hidden">
+          {/* Full-Height Atmospheric Media Backdrop (Full bleed on the right) */}
+          <div className="absolute right-0 inset-y-0 w-[50vw] xl:w-[48vw] pointer-events-none z-0 hidden lg:block overflow-hidden">
             <AnimatePresence initial={false}>
               <motion.div
                 key={activeSolution.id}
@@ -521,10 +532,8 @@ export default function SolutionsOverview() {
                   priority
                 />
                 
-                {/* Soft Left Edge Seam Transition into #0f0f11 */}
-                <div className="absolute inset-y-0 left-0 w-20 lg:w-28 xl:w-40 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/80 to-transparent pointer-events-none" />
-                
-                {/* Subtle top/bottom edge shade for atmospheric depth */}
+                {/* Soft Seam Blend into #0f0f11 background */}
+                <div className="absolute inset-y-0 left-0 w-32 xl:w-48 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/80 to-transparent pointer-events-none" />
                 <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0f0f11]/40 to-transparent pointer-events-none" />
                 <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0f0f11]/50 to-transparent pointer-events-none" />
               </motion.div>
