@@ -280,6 +280,8 @@ export default function SolutionsOverview() {
   const [isDesktop, setIsDesktop] = useState(false);
   const activeSolution = solutions[activeIndex];
   const containerRef = useRef<HTMLDivElement>(null);
+  const isClickingRef = useRef(false);
+  const clickTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const update = () => setIsDesktop(window.innerWidth >= 1024);
@@ -295,6 +297,7 @@ export default function SolutionsOverview() {
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     if (typeof window !== 'undefined' && window.innerWidth < 1024) return;
+    if (isClickingRef.current) return;
     const index = Math.min(
       Math.floor(latest * solutions.length),
       solutions.length - 1
@@ -305,6 +308,13 @@ export default function SolutionsOverview() {
   });
 
   const scrollToSegment = (idx: number) => {
+    setActiveIndex(idx);
+    isClickingRef.current = true;
+    if (clickTimeoutRef.current) clearTimeout(clickTimeoutRef.current);
+    clickTimeoutRef.current = setTimeout(() => {
+      isClickingRef.current = false;
+    }, 1000);
+
     if (!containerRef.current) return;
     const container = containerRef.current;
     const { top, height } = container.getBoundingClientRect();
@@ -312,8 +322,8 @@ export default function SolutionsOverview() {
     const scrollableDistance = height - window.innerHeight;
     if (scrollableDistance <= 0) return;
     
-    const targetRatio = idx / Math.max(1, solutions.length - 1);
-    const targetY = scrollY + top + targetRatio * scrollableDistance;
+    const segmentRatio = (idx + 0.5) / solutions.length;
+    const targetY = scrollY + top + segmentRatio * scrollableDistance;
     
     window.scrollTo({
       top: targetY,
@@ -412,28 +422,28 @@ export default function SolutionsOverview() {
         </div>
 
         {/* Desktop Sticky View (>= 1024px) */}
-        <div className="hidden lg:flex sticky top-0 h-screen w-full flex-col justify-center overflow-hidden bg-[#0f0f11] pt-16 xl:pt-20 pb-4">
-          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center gap-3 xl:gap-6 relative z-10">
+        <div className="hidden lg:flex sticky top-0 h-screen w-full flex-col justify-start overflow-hidden bg-[#0f0f11] pt-20 xl:pt-28 pb-6">
+          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-start gap-4 xl:gap-6 relative z-10">
             
-            {/* Header - Original Style */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 shrink-0">
-              <div className="max-w-3xl space-y-2 xl:space-y-3">
-                <span className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-white/70">
+            {/* Header - Constrained to left side so it never collides with right image */}
+            <div className="w-full lg:w-[48%] xl:w-[48%] 2xl:w-[46%] shrink-0">
+              <div className="space-y-1.5 xl:space-y-2.5">
+                <span className="flex items-center gap-2 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest text-white/70">
                   <Sparkles className="w-3.5 h-3.5" />
                   Core Capabilities
                 </span>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl leading-[1.08] font-bold text-white tracking-tight">
+                <h3 className="text-2xl sm:text-3xl xl:text-4xl leading-[1.1] font-bold text-white tracking-tight">
                   Everything you need in one place
                 </h3>
               </div>
             </div>
 
-            {/* 3-Column Interactive Layout - Original Style */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
+            {/* 3-Column Interactive Layout - Strictly confined to left half to prevent image overlap */}
+            <div className="w-full lg:w-[48%] xl:w-[48%] 2xl:w-[46%] flex items-start gap-5 xl:gap-8">
               
               {/* Column 1: Navigation Tabs with original dot pattern */}
               <div 
-                className="lg:col-span-3 space-y-2 xl:space-y-3 relative h-fit pr-4 overflow-hidden"
+                className="w-[145px] xl:w-[170px] shrink-0 space-y-1.5 xl:space-y-2.5 relative h-fit pr-2 overflow-hidden"
                 style={{
                   backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
                   backgroundSize: '24px 24px',
@@ -445,20 +455,17 @@ export default function SolutionsOverview() {
                   return (
                     <button
                       key={item.id}
-                      onClick={() => {
-                        setActiveIndex(idx);
-                        scrollToSegment(idx);
-                      }}
-                      className={`w-full text-left flex items-center gap-3 xl:gap-4 py-2 xl:py-2.5 transition-all duration-300 group cursor-pointer ${
+                      onClick={() => scrollToSegment(idx)}
+                      className={`w-full text-left flex items-center gap-3 xl:gap-4 py-1.5 xl:py-2 transition-all duration-300 group cursor-pointer ${
                         isActive ? "opacity-100" : "opacity-50 hover:opacity-100"
                       }`}
                     >
-                      <span className={`text-[10px] sm:text-[11px] font-bold px-2 py-1 transition-colors ${
+                      <span className={`text-[10px] xl:text-[11px] font-bold px-2 py-0.5 xl:py-1 transition-colors ${
                         isActive ? "bg-white text-black" : "bg-transparent text-white/50 group-hover:text-white"
                       }`}>
                         {item.num}
                       </span>
-                      <span className={`text-[11px] sm:text-xs font-bold tracking-widest uppercase transition-colors leading-tight ${
+                      <span className={`text-[10px] xl:text-xs font-bold tracking-wider xl:tracking-widest uppercase transition-colors leading-tight ${
                         isActive ? "text-white" : "text-white/50 group-hover:text-white"
                       }`}>
                         {item.subtitle}
@@ -468,48 +475,48 @@ export default function SolutionsOverview() {
                 })}
               </div>
 
-              {/* Column 2: Active Text Content */}
-              <div className="lg:col-span-5 relative h-full flex flex-col justify-center z-10">
-                <AnimatePresence initial={false}>
-                  <motion.div
-                    key={activeSolution.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="space-y-3 xl:space-y-6 lg:pr-6"
-                  >
-                    <h4 className="text-xl sm:text-2xl font-bold leading-[1.1] text-white">
-                      {activeSolution.title}
-                    </h4>
-                    
-                    <p className="text-white/70 font-light leading-relaxed text-xs sm:text-sm xl:text-base">
-                      {activeSolution.description}
-                    </p>
+              {/* Column 2: Active Text Content - Grid stacked to eliminate double-height DOM jumping during transitions */}
+              <div className="flex-1 min-w-0 relative z-10 pr-2 lg:pr-4 min-h-[220px] xl:min-h-[250px]">
+                <div className="grid grid-cols-1 grid-rows-1">
+                  <AnimatePresence initial={false}>
+                    <motion.div
+                      key={activeSolution.id}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      className="col-start-1 row-start-1 space-y-2.5 xl:space-y-4"
+                    >
+                      <h4 className="text-lg sm:text-xl xl:text-2xl font-bold leading-tight text-white">
+                        {activeSolution.title}
+                      </h4>
+                      
+                      <p className="text-white/70 font-light leading-relaxed text-xs xl:text-sm 2xl:text-base">
+                        {activeSolution.description}
+                      </p>
 
-                    <ul className="space-y-2 xl:space-y-3 pt-1">
-                      {activeSolution.highlights.map((point, i) => (
-                        <li key={i} className="flex items-start gap-2.5 xl:gap-3 text-xs sm:text-sm text-white/80 font-medium">
-                          <span className="w-1.5 h-1.5 rounded-full bg-white/40 mt-1.5 shrink-0" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
+                      <ul className="space-y-1.5 xl:space-y-2.5 pt-0.5 xl:pt-1">
+                        {activeSolution.highlights.map((point, i) => (
+                          <li key={i} className="flex items-start gap-2 xl:gap-2.5 text-xs xl:text-sm text-white/80 font-medium">
+                            <span className="w-1.5 h-1.5 rounded-full bg-white/40 mt-1.5 shrink-0" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
 
-                    <div className="pt-2 xl:pt-4">
-                      <Link
-                        href={activeSolution.href}
-                        className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-widest text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
-                      >
-                        EXPLORE PLATFORM
-                      </Link>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
+                      <div className="pt-1.5 xl:pt-3">
+                        <Link
+                          href={activeSolution.href}
+                          className="inline-flex items-center justify-center px-5 xl:px-6 py-2 xl:py-2.5 rounded-full text-[10px] xl:text-[11px] font-bold uppercase tracking-widest text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+                        >
+                          EXPLORE PLATFORM
+                        </Link>
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
               </div>
 
-              {/* Column 3: Spacer to keep layout balanced */}
-              <div className="lg:col-span-4 hidden lg:block pointer-events-none" />
             </div>
           </div>
 
@@ -521,7 +528,7 @@ export default function SolutionsOverview() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.45, ease: "easeOut" }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
                 className="absolute inset-0 w-full h-full"
               >
                 <SafeImage
@@ -532,10 +539,8 @@ export default function SolutionsOverview() {
                   priority
                 />
                 
-                {/* Soft Seam Blend into #0f0f11 background */}
-                <div className="absolute inset-y-0 left-0 w-32 xl:w-48 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/80 to-transparent pointer-events-none" />
-                <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0f0f11]/40 to-transparent pointer-events-none" />
-                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0f0f11]/50 to-transparent pointer-events-none" />
+                {/* Subtle Seam Feather into #0f0f11 background */}
+                <div className="absolute inset-y-0 left-0 w-12 xl:w-20 bg-gradient-to-r from-[#0f0f11] to-transparent pointer-events-none" />
               </motion.div>
             </AnimatePresence>
           </div>
