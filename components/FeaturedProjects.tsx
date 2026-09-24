@@ -62,7 +62,7 @@ export default function FeaturedProjects() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 block mb-2">
+            <span className="text-[10px] sm:text-xs font-mono font-semibold uppercase tracking-[0.2em] text-black/50 block mb-2">
               PORTFOLIO SHOWCASE
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black">
@@ -78,7 +78,7 @@ export default function FeaturedProjects() {
           >
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-black text-white text-[11px] font-bold uppercase tracking-widest hover:bg-black/80 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-black/80 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl"
             >
               <span>View All Projects</span>
               <ArrowRight className="w-4 h-4" />
@@ -122,7 +122,7 @@ export default function FeaturedProjects() {
 
                 {/* Content Overlay */}
                 <div className="relative z-10 p-6 sm:p-8 flex flex-col justify-end h-full">
-                  <div className="flex flex-col gap-2 lg:min-w-[400px]">
+                  <div className="flex flex-col gap-2">
                     
                     {/* Badge & Category */}
                     <div className="flex items-center gap-3">
@@ -158,7 +158,7 @@ export default function FeaturedProjects() {
                         <div className="mt-5">
                           <Link 
                             href={project.href}
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-[11px] font-bold uppercase tracking-widest hover:bg-white/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-white/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl"
                           >
                             <span>View Case Study</span>
                             <ArrowRight className="w-3.5 h-3.5" />
@@ -171,7 +171,7 @@ export default function FeaturedProjects() {
                     <div className="lg:hidden mt-3 mb-2">
                        <Link 
                           href={project.href}
-                          className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-black text-[11px] font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors shadow-lg"
+                          className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors shadow-lg"
                         >
                           <span>View Case Study</span>
                           <ArrowRight className="w-3.5 h-3.5" />

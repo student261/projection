@@ -75,7 +75,7 @@ export default function HowWeWork() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-black text-black tracking-tight leading-[1.1] text-[clamp(2rem,4vw,3rem)]"
+            className="font-black text-black tracking-tight leading-[1.1] text-[clamp(1.75rem,4vw,3rem)]"
           >
             From Vision to Interactive Reality
           </motion.h2>
@@ -120,7 +120,7 @@ export default function HowWeWork() {
                   </h3>
                 </div>
 
-                <p className="text-xs sm:text-sm text-black/75 font-normal leading-relaxed">
+                <p className="text-sm text-black/75 font-normal leading-relaxed">
                   {step.desc}
                 </p>
               </motion.div>

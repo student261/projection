@@ -422,28 +422,28 @@ export default function SolutionsOverview() {
         </div>
 
         {/* Desktop Sticky View (>= 1024px) */}
-        <div className="hidden lg:flex sticky top-0 h-screen w-full flex-col justify-start overflow-hidden bg-[#0f0f11] pt-20 xl:pt-28 pb-6">
-          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-start gap-4 xl:gap-6 relative z-10">
+        <div className="hidden lg:flex sticky top-0 h-screen w-full flex-col justify-start overflow-hidden bg-[#0f0f11] pt-14 lg:pt-16 xl:pt-20 2xl:pt-24 pb-4">
+          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-start gap-3 xl:gap-5 relative z-10">
             
             {/* Header - Constrained to left side so it never collides with right image */}
             <div className="w-full lg:w-[48%] xl:w-[48%] 2xl:w-[46%] shrink-0">
-              <div className="space-y-1.5 xl:space-y-2.5">
+              <div className="space-y-1 xl:space-y-2">
                 <span className="flex items-center gap-2 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest text-white/70">
                   <Sparkles className="w-3.5 h-3.5" />
                   Core Capabilities
                 </span>
-                <h3 className="text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl leading-[1.1] font-bold text-white tracking-tight">
+                <h3 className="text-xl sm:text-2xl xl:text-4xl 2xl:text-5xl leading-[1.1] font-bold text-white tracking-tight">
                   Everything you need in one place
                 </h3>
               </div>
             </div>
 
-            {/* 3-Column Interactive Layout - Strictly confined to left half to prevent image overlap */}
-            <div className="w-full lg:w-[48%] xl:w-[48%] 2xl:w-[46%] flex items-start gap-5 xl:gap-8">
+            {/* 2-Column Content Layout */}
+            <div className="w-full lg:w-[48%] xl:w-[48%] 2xl:w-[46%] flex items-start gap-4 xl:gap-7">
               
               {/* Column 1: Navigation Tabs with original dot pattern */}
               <div 
-                className="w-[145px] xl:w-[170px] shrink-0 space-y-1.5 xl:space-y-2.5 relative h-fit pr-2 overflow-hidden"
+                className="w-[145px] xl:w-[170px] shrink-0 space-y-1 xl:space-y-2 relative h-fit pr-2 overflow-hidden"
                 style={{
                   backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
                   backgroundSize: '24px 24px',
@@ -475,46 +475,44 @@ export default function SolutionsOverview() {
                 })}
               </div>
 
-              {/* Column 2: Active Text Content - Grid stacked to eliminate double-height DOM jumping during transitions */}
-              <div className="flex-1 min-w-0 relative z-10 pr-2 lg:pr-4 min-h-[260px] xl:min-h-[300px] 2xl:min-h-[340px]">
-                <div className="grid grid-cols-1 grid-rows-1">
-                  <AnimatePresence initial={false}>
-                    <motion.div
-                      key={activeSolution.id}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="col-start-1 row-start-1 space-y-2.5 xl:space-y-4"
-                    >
-                      <h4 className="text-xl sm:text-2xl xl:text-3xl 2xl:text-[2rem] font-bold leading-tight text-white">
-                        {activeSolution.title}
-                      </h4>
-                      
-                      <p className="text-white/70 font-light leading-relaxed text-sm xl:text-base 2xl:text-lg">
-                        {activeSolution.description}
-                      </p>
+              {/* Column 2: Active Text Content */}
+              <div className="flex-1 min-w-0 relative z-10 pr-2 lg:pr-4">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeSolution.id}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                    className="space-y-2 xl:space-y-3.5"
+                  >
+                    <h4 className="text-lg sm:text-xl xl:text-2xl 2xl:text-3xl font-bold leading-tight text-white">
+                      {activeSolution.title}
+                    </h4>
+                    
+                    <p className="text-white/70 font-light leading-relaxed text-xs xl:text-sm 2xl:text-base">
+                      {activeSolution.description}
+                    </p>
 
-                      <ul className="space-y-1.5 xl:space-y-2.5 pt-0.5 xl:pt-1">
-                        {activeSolution.highlights.map((point, i) => (
-                          <li key={i} className="flex items-start gap-2 xl:gap-2.5 text-sm xl:text-base text-white/80 font-medium">
-                            <span className="w-1.5 h-1.5 rounded-full bg-white/40 mt-1.5 shrink-0" />
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <ul className="space-y-1 xl:space-y-2 pt-0.5">
+                      {activeSolution.highlights.map((point, i) => (
+                        <li key={i} className="flex items-start gap-2 xl:gap-2.5 text-xs xl:text-sm text-white/80 font-medium">
+                          <span className="w-1.5 h-1.5 rounded-full bg-white/40 mt-1.5 shrink-0" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                      <div className="pt-1.5 xl:pt-3">
-                        <Link
-                          href={activeSolution.href}
-                          className="inline-flex items-center justify-center px-5 xl:px-7 py-2 xl:py-2.5 rounded-full text-[10px] xl:text-xs font-bold uppercase tracking-widest text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
-                        >
-                          EXPLORE PLATFORM
-                        </Link>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
+                    <div className="pt-2 xl:pt-3">
+                      <Link
+                        href={activeSolution.href}
+                        className="inline-flex items-center justify-center px-5 xl:px-7 py-2 xl:py-2.5 rounded-full text-[10px] xl:text-xs font-bold uppercase tracking-widest text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+                      >
+                        EXPLORE PLATFORM
+                      </Link>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
             </div>
@@ -522,13 +520,13 @@ export default function SolutionsOverview() {
 
           {/* Full-Height Atmospheric Media Backdrop (Full bleed on the right) */}
           <div className="absolute right-0 inset-y-0 w-[50vw] xl:w-[48vw] pointer-events-none z-0 hidden lg:block overflow-hidden">
-            <AnimatePresence initial={false}>
+            <AnimatePresence mode="wait">
               <motion.div
                 key={activeSolution.id}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
                 className="absolute inset-0 w-full h-full"
               >
                 <SafeImage
@@ -539,8 +537,8 @@ export default function SolutionsOverview() {
                   priority
                 />
                 
-                {/* Smooth Seam Feather into #0f0f11 background */}
-                <div className="absolute inset-y-0 left-0 w-24 xl:w-40 2xl:w-48 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/60 to-transparent pointer-events-none" />
+                {/* Subtle Seam Feather into #0f0f11 background */}
+                <div className="absolute inset-y-0 left-0 w-12 xl:w-20 bg-gradient-to-r from-[#0f0f11] to-transparent pointer-events-none" />
               </motion.div>
             </AnimatePresence>
           </div>

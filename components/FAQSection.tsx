@@ -106,14 +106,14 @@ export default function FAQSection() {
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full flex items-center justify-between text-left focus:outline-none group cursor-pointer"
+                  className="w-full flex items-start justify-between text-left focus:outline-none group cursor-pointer"
                 >
                   <div className="flex items-start gap-3 sm:gap-4 pr-2">
                     <span className="text-xs font-mono font-bold text-neutral-400 mt-1 shrink-0">
                       {itemNum}
                     </span>
                     <div className="flex flex-col items-start gap-1">
-                      <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-black/40">
+                      <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.15em] text-black/40">
                         {faq.categoryLabel}
                       </span>
                       <span className={`text-base sm:text-lg font-bold transition-colors leading-snug ${isOpen ? "text-black" : "text-neutral-800 group-hover:text-black"}`}>
@@ -141,7 +141,7 @@ export default function FAQSection() {
                   <div className="pl-6 sm:pl-9 mt-3">
                     <Link
                       href="/contact"
-                      className="text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-500 inline-flex items-center gap-1.5 transition-colors border-b border-black/20 hover:border-black/50 pb-0.5"
+                      className="text-xs sm:text-sm font-bold uppercase tracking-wider text-black hover:text-neutral-500 inline-flex items-center gap-1.5 transition-colors border-b border-black/20 hover:border-black/50 pb-0.5"
                     >
                       <span>Talk to an Expert</span>
                     </Link>

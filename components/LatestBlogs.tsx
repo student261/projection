@@ -84,7 +84,7 @@ export default function LatestBlogs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: index * 0.1 }}
-              className="group flex flex-col justify-between transition-all duration-500 cursor-pointer"
+              className="group flex flex-col justify-between transition-all duration-500 cursor-pointer sm:last:col-span-2 lg:last:col-span-1"
             >
               <div>
                 <Link href={`/blogs/${blog.slug}`} className="block aspect-[16/10] overflow-hidden relative rounded-2xl mb-6 img-hover-wrap">
@@ -94,13 +94,13 @@ export default function LatestBlogs() {
                     className="w-full h-full object-cover"
                     containerClassName="w-full h-full absolute inset-0"
                   />
-                  <div className="absolute top-4 left-4 bg-[var(--background)]/80 backdrop-blur-md px-3 py-1.5 text-[9px] font-bold text-[var(--foreground)] uppercase tracking-widest rounded-full border border-[var(--border-light)]">
+                  <div className="absolute top-4 left-4 bg-[var(--background)]/80 backdrop-blur-md px-3 py-1.5 text-[10px] sm:text-[11px] font-bold text-[var(--foreground)] uppercase tracking-widest rounded-full border border-[var(--border-light)]">
                     {blog.category}
                   </div>
                 </Link>
 
                 <div className="px-1 flex-grow flex flex-col space-y-3">
-                  <div className="flex items-center gap-4 text-[10px] text-[var(--text-secondary)] uppercase font-bold">
+                  <div className="flex items-center gap-4 text-[11px] text-[var(--text-secondary)] uppercase font-bold">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3 h-3 opacity-50" />
                       <span>{blog.date}</span>
@@ -119,7 +119,7 @@ export default function LatestBlogs() {
                     {blog.title}
                   </Link>
 
-                  <p className="text-xs text-[var(--text-secondary)] font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-light leading-relaxed">
                     {blog.desc}
                   </p>
                 </div>
@@ -128,7 +128,7 @@ export default function LatestBlogs() {
               <div className="pt-6 pb-2">
                 <Link
                   href={`/blogs/${blog.slug}`}
-                  className="text-[10px] font-bold uppercase tracking-widest text-black group-hover:text-[var(--foreground)] inline-flex items-center gap-1.5 transition-colors"
+                  className="text-xs font-bold uppercase tracking-widest text-black group-hover:text-[var(--foreground)] inline-flex items-center gap-1.5 transition-colors"
                 >
                   <span>Read Article</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

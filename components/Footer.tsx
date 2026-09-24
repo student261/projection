@@ -83,10 +83,10 @@ export default function Footer() {
                     Solutions
                   </h4>
                   <ul className="space-y-3">
-                    <li><Link href="/solutions#interactive" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Interactive Spaces</Link></li>
-                    <li><Link href="/solutions#immersive" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Immersive Environments</Link></li>
-                    <li><Link href="/solutions#ai" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">AI Experiences</Link></li>
-                    <li><Link href="/solutions#smart" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Smart Engagement</Link></li>
+                    <li><Link href="/solutions#interactive" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Interactive Spaces</Link></li>
+                    <li><Link href="/solutions#immersive" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Immersive Environments</Link></li>
+                    <li><Link href="/solutions#ai" className="text-sm font-medium text-white/70 hover:text-white transition-colors">AI Experiences</Link></li>
+                    <li><Link href="/solutions#smart" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Smart Engagement</Link></li>
                   </ul>
                 </div>
 
@@ -96,14 +96,14 @@ export default function Footer() {
                     Industries
                   </h4>
                   <ul className="space-y-3">
-                    <li><Link href="/industries/education" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Education</Link></li>
-                    <li><Link href="/industries/museums-culture" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Museums & Culture</Link></li>
-                    <li><Link href="/industries/retail-showrooms" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Retail & Showrooms</Link></li>
-                    <li><Link href="/industries/healthcare" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Healthcare</Link></li>
-                    <li><Link href="/industries/corporate" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Corporate</Link></li>
-                    <li><Link href="/industries/public-spaces" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Public Spaces</Link></li>
-                    <li><Link href="/industries/entertainment" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Entertainment</Link></li>
-                    <li><Link href="/industries/hospitality" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Hospitality</Link></li>
+                    <li><Link href="/industries/education" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Education</Link></li>
+                    <li><Link href="/industries/museums-culture" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Museums & Culture</Link></li>
+                    <li><Link href="/industries/retail-showrooms" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Retail & Showrooms</Link></li>
+                    <li><Link href="/industries/healthcare" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Healthcare</Link></li>
+                    <li><Link href="/industries/corporate" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Corporate</Link></li>
+                    <li><Link href="/industries/public-spaces" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Public Spaces</Link></li>
+                    <li><Link href="/industries/entertainment" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Entertainment</Link></li>
+                    <li><Link href="/industries/hospitality" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Hospitality</Link></li>
                   </ul>
                 </div>
 
@@ -113,10 +113,10 @@ export default function Footer() {
                     Company
                   </h4>
                   <ul className="space-y-3">
-                    <li><Link href="/about" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">About Us</Link></li>
-                    <li><Link href="/about#careers" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors flex items-center gap-2">Careers <span className="text-[9px] bg-white/10 px-1.5 py-0.5 rounded text-white">HIRING</span></Link></li>
-                    <li><Link href="/contact" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Contact</Link></li>
-                    <li><Link href="/blogs" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">News</Link></li>
+                    <li><Link href="/about" className="text-sm font-medium text-white/70 hover:text-white transition-colors">About Us</Link></li>
+                    <li><Link href="/about#careers" className="text-sm font-medium text-white/70 hover:text-white transition-colors flex items-center gap-2">Careers <span className="text-[9px] bg-white/10 px-1.5 py-0.5 rounded text-white">HIRING</span></Link></li>
+                    <li><Link href="/contact" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Contact</Link></li>
+                    <li><Link href="/blogs" className="text-sm font-medium text-white/70 hover:text-white transition-colors">News</Link></li>
                   </ul>
                 </div>
 
@@ -126,9 +126,9 @@ export default function Footer() {
                     Resources
                   </h4>
                   <ul className="space-y-3">
-                    <li><Link href="/#faqs" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">FAQs</Link></li>
-                    <li><Link href="/projects" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Case Studies</Link></li>
-                    <li><a href={`mailto:${SITE_CONTACT.email}`} className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">Support</a></li>
+                    <li><Link href="/#faqs" className="text-sm font-medium text-white/70 hover:text-white transition-colors">FAQs</Link></li>
+                    <li><Link href="/projects" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Case Studies</Link></li>
+                    <li><a href={`mailto:${SITE_CONTACT.email}`} className="text-sm font-medium text-white/70 hover:text-white transition-colors">Support</a></li>
                   </ul>
                 </div>
 

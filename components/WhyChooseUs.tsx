@@ -158,7 +158,7 @@ export default function WhyChooseUs() {
                     className="overflow-hidden"
                   >
                     <div className="pb-4 pl-[35px] sm:pl-[45px] max-w-xl">
-                      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                      <p className="text-sm text-gray-600 leading-relaxed">
                         {card.desc}
                       </p>
                       

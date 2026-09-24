@@ -106,7 +106,7 @@ export default function Hero() {
   const contentY = useTransform(smoothScrollProgress, [0, 0.45], [0, -50]);
 
   return (
-    <section ref={containerRef} className="sticky top-0 z-[1] w-full h-screen bg-white flex flex-col items-center overflow-hidden">
+    <section ref={containerRef} className="sticky top-0 z-[1] w-full h-dvh bg-white flex flex-col items-center overflow-hidden">
         
       {/* Background Video Card — Smooth Framer Entrance Shrink to Padded Card */}
       <motion.div
@@ -187,7 +187,7 @@ export default function Hero() {
             >
               <Link
                 href="/solutions"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-black font-medium text-xs tracking-wider transition-all duration-300 shadow-xl hover:bg-neutral-100 hover:scale-105 active:scale-95 text-center cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-black font-medium text-sm tracking-wider transition-all duration-300 shadow-xl hover:bg-neutral-100 hover:scale-105 active:scale-95 text-center cursor-pointer"
               >
                 <span>Explore Solutions</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -195,7 +195,7 @@ export default function Hero() {
 
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 text-white font-medium text-xs tracking-wider transition-all duration-300 hover:scale-105 active:scale-95 text-center cursor-pointer shadow-lg"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 text-white font-medium text-sm tracking-wider transition-all duration-300 hover:scale-105 active:scale-95 text-center cursor-pointer shadow-lg"
               >
                 <Calendar className="w-3.5 h-3.5 opacity-80" />
                 <span>Book a Demo</span>

@@ -166,7 +166,7 @@ export default function Navbar() {
               </Link>
 
               {/* Solutions Full-bleed MegaMenu Tray */}
-              <div className="absolute top-full left-0 w-screen bg-white shadow-2xl border-t border-black/10 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:w-screen before:h-6">
+              <div className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-black/10 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                   <div className="grid grid-cols-12 gap-12">
                     <div className="col-span-7 grid grid-cols-2 gap-3">
@@ -366,7 +366,7 @@ export default function Navbar() {
               </Link>
 
               {/* Industries Full-bleed MegaMenu Tray */}
-              <div className="absolute top-full left-0 w-screen bg-white shadow-2xl border-t border-black/10 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:w-screen before:h-6">
+              <div className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-black/10 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                   <div className="grid grid-cols-12 gap-12">
                     <div className="col-span-7 grid grid-cols-2 gap-3">

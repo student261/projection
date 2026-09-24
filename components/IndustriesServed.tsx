@@ -192,10 +192,10 @@ export default function IndustriesServed() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black tracking-tight leading-[1.05]"
+              className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black"
             >
               Built for Every Industry.<br />
-              <span className="text-black/30">Designed for Every Experience.</span>
+              Designed for Every Experience.
             </motion.h2>
           </div>
 
@@ -250,14 +250,14 @@ export default function IndustriesServed() {
                     <button
                       onClick={handlePrev}
                       aria-label="Previous Industry"
-                      className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all duration-200 active:scale-95"
+                      className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all duration-200 active:scale-95"
                     >
                       <ChevronLeft className="w-4 h-4" />
                     </button>
                     <button
                       onClick={handleNext}
                       aria-label="Next Industry"
-                      className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all duration-200 active:scale-95"
+                      className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all duration-200 active:scale-95"
                     >
                       <ChevronRight className="w-4 h-4" />
                     </button>
@@ -281,13 +281,13 @@ export default function IndustriesServed() {
                       Empower Your <br className="hidden sm:block"/>{activeIndustry.title} Sector
                     </h3>
                     
-                    <p className="text-white/85 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 max-w-md font-light">
+                    <p className="text-white/85 text-sm leading-relaxed mb-4 sm:mb-6 max-w-md font-light">
                       {activeIndustry.description}
                     </p>
                     
                     <Link
                       href={activeIndustry.href}
-                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black font-bold text-[10px] uppercase tracking-widest transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_0_30px_-5px_rgba(255,255,255,0.4)] w-full sm:w-auto"
+                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black font-bold text-xs uppercase tracking-widest transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_0_30px_-5px_rgba(255,255,255,0.4)] w-full sm:w-auto"
                     >
                       Explore Solutions
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -306,7 +306,7 @@ export default function IndustriesServed() {
 
             <div 
               ref={tabContainerRef}
-              className="flex flex-row lg:flex-col gap-2 lg:gap-0 lg:space-y-1.5 overflow-x-auto lg:overflow-visible scrollbar-hide snap-x snap-mandatory pb-2 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0"
+              className="flex flex-row lg:flex-col gap-2 lg:gap-0 lg:space-y-1.5 overflow-x-auto lg:overflow-visible scrollbar-hide snap-x snap-mandatory pb-2 lg:pb-0 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0"
             >
               {industries.map((ind, idx) => {
                 const isActive = activeIndex === idx;
