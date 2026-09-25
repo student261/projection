@@ -473,10 +473,10 @@ export default function SolutionsOverview() {
 
         {/* Desktop Sticky View (>= 1024px) */}
         <div className="hidden lg:flex sticky top-0 h-dvh max-h-screen w-full flex-col justify-center overflow-hidden bg-[#0f0f11] pt-16 lg:pt-20 pb-4">
-          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-6 lg:px-8 xl:px-12 w-full flex flex-col justify-center relative z-10">
+          <div className="w-full max-w-[1480px] 2xl:max-w-[1680px] 3xl:max-w-[1880px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 flex flex-col justify-center relative z-10">
             
             {/* Header */}
-            <div className="w-full lg:w-[54%] xl:w-[50%] 2xl:w-[48%] shrink-0 mb-4 xl:mb-5">
+            <div className="w-full lg:w-[58%] xl:w-[55%] 2xl:w-[52%] 3xl:w-[50%] shrink-0 mb-4 xl:mb-5">
               <span className="flex items-center gap-2 text-[11px] xl:text-xs font-bold uppercase tracking-widest text-white/80 mb-2">
                 <Sparkles className="w-3.5 h-3.5" />
                 Core Capabilities
@@ -487,17 +487,17 @@ export default function SolutionsOverview() {
             </div>
 
             {/* 2-Column: Left Navigation Tabs, Right Active Content */}
-            <div className="w-full lg:w-[54%] xl:w-[50%] 2xl:w-[48%] flex items-start gap-4 lg:gap-6 xl:gap-8">
+            <div className="w-full lg:w-[58%] xl:w-[55%] 2xl:w-[52%] 3xl:w-[50%] flex items-start gap-3 lg:gap-4 xl:gap-5">
               
               {/* Column 1: Vertical Tabs (Containerless, high contrast, active vertical line) */}
-              <div className="w-[155px] xl:w-[175px] shrink-0 space-y-1 xl:space-y-1.5">
+              <div className="w-[135px] sm:w-[140px] xl:w-[155px] shrink-0 space-y-1 xl:space-y-1.5">
                 {solutions.map((item, idx) => {
                   const isActive = activeIndex === idx;
                   return (
                     <button
                       key={item.id}
                       onClick={() => scrollToSegment(idx)}
-                      className={`w-full text-left flex items-center gap-3 py-2 pl-3 relative transition-all duration-300 group cursor-pointer outline-none ${
+                      className={`w-full text-left flex items-start gap-2.5 xl:gap-3 py-1.5 xl:py-2 pl-3 relative transition-all duration-300 group cursor-pointer outline-none ${
                         isActive ? "text-white" : "text-white/60 hover:text-white"
                       }`}
                     >
@@ -508,12 +508,12 @@ export default function SolutionsOverview() {
                           transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         />
                       )}
-                      <span className={`text-[11px] xl:text-xs font-mono font-bold transition-colors ${
+                      <span className={`text-[11px] xl:text-xs font-mono font-bold shrink-0 mt-0.5 transition-colors ${
                         isActive ? "text-white" : "text-white/60 group-hover:text-white"
                       }`}>
                         {item.num}
                       </span>
-                      <span className={`text-[10px] xl:text-[11px] font-bold tracking-wider uppercase leading-tight transition-colors ${
+                      <span className={`text-[10px] xl:text-[11px] font-bold tracking-wider uppercase leading-snug transition-colors ${
                         isActive ? "text-white" : "text-white/60 group-hover:text-white"
                       }`}>
                         {item.subtitle}
@@ -524,7 +524,7 @@ export default function SolutionsOverview() {
               </div>
 
               {/* Column 2: Active Text Content */}
-              <div className="flex-1 min-w-0 pl-4 lg:pl-6 xl:pl-8 border-l border-white/10 relative z-10">
+              <div className="flex-1 min-w-0 pl-4 lg:pl-5 xl:pl-6 border-l border-white/10 relative z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeSolution.id}
@@ -532,14 +532,14 @@ export default function SolutionsOverview() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -8 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="space-y-3.5 xl:space-y-4"
+                    className="space-y-3 xl:space-y-3.5"
                   >
                     <div>
-                      <h4 className="text-xl lg:text-2xl xl:text-3xl font-bold leading-tight text-white mb-2">
+                      <h4 className="text-xl sm:text-[22px] lg:text-[23px] xl:text-2xl 2xl:text-3xl font-bold leading-tight text-white mb-2">
                         {activeSolution.title}
                       </h4>
                       
-                      <p className="text-white/80 font-normal leading-relaxed text-xs xl:text-sm max-w-lg">
+                      <p className="text-white/80 font-normal leading-relaxed text-xs xl:text-sm max-w-xl">
                         {activeSolution.description}
                       </p>
                     </div>
@@ -570,7 +570,7 @@ export default function SolutionsOverview() {
           </div>
 
           {/* Full-Height Atmospheric Media Backdrop (Full bleed on the right) */}
-          <div className="absolute right-0 inset-y-0 w-[48vw] xl:w-[50vw] 2xl:w-[54vw] pointer-events-none z-0 hidden lg:block overflow-hidden">
+          <div className="absolute right-0 inset-y-0 w-[42vw] lg:w-[44vw] xl:w-[46vw] 2xl:w-[48vw] pointer-events-none z-0 hidden lg:block overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeSolution.id}
@@ -588,7 +588,7 @@ export default function SolutionsOverview() {
                 />
                 
                 {/* Velvety Seam Feather into #0f0f11 background */}
-                <div className="absolute inset-y-0 left-0 w-24 lg:w-36 xl:w-52 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/70 to-transparent pointer-events-none" />
+                <div className="absolute inset-y-0 left-0 w-16 lg:w-24 xl:w-32 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/60 to-transparent pointer-events-none" />
               </motion.div>
             </AnimatePresence>
           </div>
