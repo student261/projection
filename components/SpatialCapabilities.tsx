@@ -59,13 +59,13 @@ export default function SpatialCapabilities() {
         
         {/* ── Minimalist Editorial Header ── */}
         <div className="max-w-3xl space-y-4">
-          <span className="text-[10px] sm:text-[11px] font-mono font-semibold tracking-[0.2em] text-black/60 uppercase block">
+          <span className="text-[10px] sm:text-[11px] font-mono font-bold tracking-[0.2em] text-black uppercase block">
             ARCHITECTURE
           </span>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black leading-[1.1]">
             Spatial Engineering <br />
-            <span className="font-light text-black/50">Capabilities</span>
+            Capabilities
           </h2>
           
           <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed pt-1">
@@ -74,7 +74,7 @@ export default function SpatialCapabilities() {
         </div>
 
         {/* ── 4 Elegant Minimalist Cards ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
           {capabilities.map((cap, idx) => (
             <motion.div
               key={cap.num}
@@ -96,48 +96,41 @@ export default function SpatialCapabilities() {
                 {/* Organic bottom fade into card background */}
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-50 via-gray-50/40 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent" />
-
-                {/* Top Left: Clean Monospace Index */}
-                <div className="absolute top-5 left-5">
-                  <span className="text-[10px] font-mono font-bold text-white/90 bg-black/30 backdrop-blur-md px-2 py-1 rounded-md">
-                    {cap.num}
-                  </span>
-                </div>
               </div>
 
               {/* Text Content */}
-              <div className="p-6 sm:p-8 flex flex-col flex-1 relative z-10 -mt-6">
+              <div className="p-5 xl:p-8 flex flex-col flex-1 relative z-10 -mt-6">
                 <div className="space-y-3 flex-1">
-                  <span className="text-[9px] font-bold tracking-widest text-black/40 uppercase block">
-                    {cap.tag}
+                  <span className="text-[10px] font-mono font-bold tracking-widest text-black/70 uppercase block">
+                    {cap.num} • {cap.tag}
                   </span>
                   
-                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-black leading-snug">
+                  <h3 className="text-lg xl:text-xl 2xl:text-2xl font-bold tracking-tight text-black leading-snug md:min-h-[3.25rem] xl:min-h-[3.75rem] flex items-start">
                     {cap.title}
                   </h3>
                   
-                  <p className="text-sm text-gray-600 font-light leading-relaxed">
+                  <p className="text-xs xl:text-sm text-gray-600 font-light leading-relaxed flex-1">
                     {cap.desc}
                   </p>
                 </div>
 
                 {/* Bottom Metric & Link */}
-                <div className="pt-8 mt-auto flex items-end justify-between border-t border-black/5">
+                <div className="pt-5 xl:pt-8 mt-auto flex items-end justify-between border-t border-black/5">
                   <div>
-                    <span className="block text-lg font-black text-black tracking-tight leading-none">
+                    <span className="block text-base xl:text-lg font-black text-black tracking-tight leading-none">
                       {cap.metric}
                     </span>
-                    <span className="block text-[9px] font-bold text-black/40 uppercase tracking-widest pt-1">
+                    <span className="block text-[9px] font-bold text-black/70 uppercase tracking-widest pt-1">
                       {cap.metricLabel}
                     </span>
                   </div>
 
                   <Link
                     href={cap.href}
-                    className="w-9 h-9 rounded-full border border-black/15 text-black/60 group-hover:text-white group-hover:bg-black group-hover:border-black transition-all duration-300 flex items-center justify-center shrink-0"
+                    className="w-8 h-8 xl:w-9 xl:h-9 rounded-full border border-black/15 text-black/60 group-hover:text-white group-hover:bg-black group-hover:border-black transition-all duration-300 flex items-center justify-center shrink-0"
                     aria-label={`Explore ${cap.title}`}
                   >
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="w-3.5 h-3.5 xl:w-4 xl:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </Link>
                 </div>
               </div>

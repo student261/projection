@@ -34,12 +34,12 @@ export default function Footer() {
 
       <footer 
         ref={footerRef}
-        className="md:fixed bottom-0 left-0 w-full min-h-[480px] lg:min-h-[520px] bg-[#0a0a0b] text-white border-t border-white/10 pt-16 lg:pt-20 pb-12 z-0 flex flex-col justify-between"
+        className="md:fixed bottom-0 left-0 w-full min-h-[440px] lg:min-h-[480px] bg-[#0a0a0b] text-white border-t border-white/10 pt-12 lg:pt-14 pb-10 z-0 flex flex-col justify-between"
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between">
             
             {/* Main Footer Layout */}
-            <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-16 mb-12">
+            <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12 mb-8 lg:mb-10">
               
               {/* Left: Brand Identity & Manifesto */}
               <div className="lg:w-1/3 flex flex-col justify-between">

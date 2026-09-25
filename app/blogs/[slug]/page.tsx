@@ -391,7 +391,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                       <SafeImage 
                         src={post.secondaryImg}
                         alt="Architectural Projection Field Installation"
-                        priority={true}
                         className="w-full h-full object-cover"
                         containerClassName="w-full h-full"
                       />

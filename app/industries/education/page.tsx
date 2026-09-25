@@ -39,10 +39,10 @@ export default function EducationIndustryPage() {
         </div>
         
         <div className="my-auto relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/90 backdrop-blur-md mb-3 sm:mb-4 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-white/80" />
-            {industry.hero.eyebrow}
-          </span>
+          <div className="flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/80 mb-3 sm:mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-white/70" />
+            <span>{industry.hero.eyebrow}</span>
+          </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-3 sm:mb-4 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.08]">
             {industry.hero.title}
           </h1>
@@ -73,7 +73,7 @@ export default function EducationIndustryPage() {
           
           {/* Section Header */}
           <div className="max-w-3xl mb-10 sm:mb-12">
-            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
               INDUSTRY OBSTACLES
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black mb-3">
@@ -88,7 +88,7 @@ export default function EducationIndustryPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8">
             {industry.challenges.items.map((item, idx) => (
               <div key={idx} className="space-y-1.5">
-                <span className="text-xs font-mono font-bold text-neutral-400 block tracking-wider">
+                <span className="text-xs font-mono font-bold text-neutral-700 block tracking-wider">
                   0{idx + 1}
                 </span>
                 <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug">
@@ -112,7 +112,7 @@ export default function EducationIndustryPage() {
             {/* Left Column: Vision Narrative & Statement */}
             <div className="lg:col-span-6 space-y-4 sm:space-y-5">
               <div>
-                <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+                <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
                   OUR VISION
                 </span>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black tracking-tight leading-[1.1]">
@@ -133,23 +133,29 @@ export default function EducationIndustryPage() {
                 </p>
               </div>
 
-              {/* Editorial Quote directly on canvas */}
-              <div className="pt-1.5 pl-4 border-l-2 border-black">
-                <p className="font-medium italic text-sm sm:text-base text-neutral-900 leading-relaxed">
-                  &ldquo;{industry.vision.quote.replace(/^["'“]+|["'”]+$/g, '').trim()}&rdquo;
-                </p>
-              </div>
             </div>
             
             {/* Right Column: Tall Unified Media Showcase */}
             <div className="lg:col-span-6">
-              <div className="relative h-[380px] sm:h-[440px] lg:h-[480px] w-full rounded-3xl overflow-hidden bg-neutral-100">
+              <div className="relative h-[380px] sm:h-[440px] lg:h-[480px] w-full rounded-3xl overflow-hidden bg-neutral-100 group shadow-lg">
                 <SafeImage 
                   src={industry.vision?.img || "/images/var_sandbox_projection.jpg"} 
                   alt="Vision for Education"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   containerClassName="w-full h-full"
                 />
+                {industry.vision?.quote && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 sm:p-7 pointer-events-none">
+                    <div className="backdrop-blur-md bg-black/40 border border-white/15 rounded-2xl p-4 sm:p-5 text-white shadow-xl">
+                      <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.2em] text-white/70 block mb-1.5 font-bold">
+                        EDUCATIONAL PHILOSOPHY
+                      </span>
+                      <p className="text-xs sm:text-sm font-light leading-relaxed text-white/95">
+                        &ldquo;{industry.vision.quote.replace(/^["'“]+|["'”]+$/g, '').trim()}&rdquo;
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -163,7 +169,7 @@ export default function EducationIndustryPage() {
           
           {/* Compact Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
               CORE CAPABILITIES
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
@@ -260,7 +266,7 @@ export default function EducationIndustryPage() {
           
           {/* Compact Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
               REAL WORLD IMPACT
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
@@ -283,7 +289,7 @@ export default function EducationIndustryPage() {
           
           {/* Section Header */}
           <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
               MEASURABLE VALUE
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
@@ -295,29 +301,21 @@ export default function EducationIndustryPage() {
           </div>
 
           {/* 6 Benefits in 3-Column Grid — Zero Cards, Zero Containers */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8 items-start">
             {industry.benefits.items.map((ben, idx) => (
-              <div key={idx} className="space-y-1.5">
-                <span className="text-xs font-mono font-bold text-neutral-400 block tracking-wider">
+              <div key={idx} className="space-y-1.5 flex flex-col">
+                <span className="text-xs font-mono font-bold text-neutral-700 block tracking-wider">
                   0{idx + 1}
                 </span>
-                <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug">
+                <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug sm:min-h-[2.75rem] flex items-start">
                   {ben.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed flex-1">
                   {ben.desc}
                 </p>
               </div>
             ))}
           </div>
-
-          {/* Clean Bottom Statement */}
-          <div className="mt-8 sm:mt-10 pt-2 text-center">
-            <p className="text-xs sm:text-sm font-medium text-neutral-500 tracking-wide max-w-2xl mx-auto">
-              {industry.benefits.bottomStatement}
-            </p>
-          </div>
-
         </div>
       </section>
 
@@ -327,7 +325,7 @@ export default function EducationIndustryPage() {
           
           {/* Section Header */}
           <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
               REAL-TIME PIPELINE
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
@@ -362,28 +360,18 @@ export default function EducationIndustryPage() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-base sm:text-lg font-black text-black tracking-tight leading-snug mb-1.5">
+                  <h3 className="text-base sm:text-lg font-black text-black tracking-tight leading-snug mb-1.5 lg:min-h-[2.75rem] flex items-start">
                     {tech.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed flex-1">
                     {tech.desc}
                   </p>
                 </div>
               );
             })}
           </div>
-
-          {/* Bottom Statement */}
-          {industry.technology.bottomStatement && (
-            <div className="mt-8 sm:mt-10 pt-2 text-center">
-              <p className="text-xs sm:text-sm font-medium text-neutral-500 tracking-wide max-w-2xl mx-auto">
-                {industry.technology.bottomStatement}
-              </p>
-            </div>
-          )}
-
         </div>
       </section>
 
@@ -393,7 +381,7 @@ export default function EducationIndustryPage() {
           
           {/* Section Header */}
           <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
+            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
               TURNKEY METHODOLOGY
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
@@ -405,50 +393,43 @@ export default function EducationIndustryPage() {
           </div>
 
           {/* 3-Stage Visual Roadmap Side-by-Side (Zero Cards, Zero Containers) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {sharedDelivery.stages.map((stage, idx) => (
-              <div key={idx} className="group flex flex-col">
+              <div key={idx} className="group flex flex-col h-full">
                 
                 {/* 16:10 Visual Showcase with Smooth Hover Zoom */}
-                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 mb-3 sm:mb-4">
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 mb-3 sm:mb-4 shrink-0">
                   <SafeImage
                     src={stage.img}
                     alt={stage.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     containerClassName="w-full h-full"
                   />
-                  <div className="absolute top-3 left-3 bg-black/75 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-mono font-bold text-white uppercase tracking-wider">
-                    {stage.timeframe}
-                  </div>
                 </div>
 
-                {/* Stage Number & Title */}
-                <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-xs font-mono font-black text-black">
-                    {stage.num}
+                {/* Stage Metadata: Clean Number Badge + Timeframe */}
+                <div className="flex items-center justify-between text-xs font-mono mb-2">
+                  <span className="text-[11px] font-bold text-black tracking-wider">
+                    STAGE {stage.num}
                   </span>
-                  <span className="text-neutral-300 select-none">/</span>
-                  <h3 className="text-base sm:text-lg font-black text-black tracking-tight">
-                    {stage.title}
-                  </h3>
+                  <span className="text-[10px] font-semibold text-neutral-500 uppercase tracking-wider">
+                    {stage.timeframe}
+                  </span>
                 </div>
+
+                {/* Title with locked height for perfect cross-column alignment */}
+                <h3 className="text-base sm:text-lg font-black text-black tracking-tight leading-snug mb-2 md:min-h-[3rem] flex items-start">
+                  {stage.title}
+                </h3>
 
                 {/* Description */}
-                <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed flex-1">
                   {stage.desc}
                 </p>
 
               </div>
             ))}
           </div>
-
-          {/* Deployment Assurance */}
-          <div className="mt-8 sm:mt-10 pt-2 text-center max-w-2xl mx-auto">
-            <p className="text-xs sm:text-sm font-medium text-neutral-800 tracking-wide leading-relaxed">
-              &ldquo;{sharedDelivery.bottomStatement}&rdquo;
-            </p>
-          </div>
-
         </div>
       </section>
 

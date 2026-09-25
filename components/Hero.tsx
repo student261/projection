@@ -140,11 +140,12 @@ export default function Hero() {
           muted={isMuted}
           playsInline
           preload="auto"
-          poster="/hero-main-poster.jpg"
+          poster="/hero-main-poster.webp"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ minWidth: "100%", minHeight: "100%", transform: "translateZ(0)", willChange: "transform" }}
-          src="/hero-0911.mp4"
-        />
+        >
+          <source src="/hero-0911.mp4" type="video/mp4" />
+        </video>
         
         {/* Interactive Optical Sensing Canvas Overlay */}
         <div className="absolute inset-0 z-[5] opacity-25 pointer-events-none">
@@ -220,9 +221,9 @@ export default function Hero() {
               }
             }}
             aria-label={isMuted ? "Unmute ambient audio" : "Mute ambient audio"}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white text-[10px] font-mono tracking-wider transition-all duration-200 cursor-pointer select-none"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white text-[10px] font-mono tracking-wider transition-all duration-200 cursor-pointer select-none"
           >
-            {isMuted ? <VolumeX className="w-3.5 h-3.5 opacity-70" /> : <Volume2 className="w-3.5 h-3.5 text-cyan-400" />}
+            {isMuted ? <VolumeX className="w-3.5 h-3.5 opacity-70" /> : <Volume2 className="w-3.5 h-3.5 text-white" />}
             <span>{isMuted ? "AUDIO OFF" : "AUDIO ON"}</span>
           </button>
         </motion.div>

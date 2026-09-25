@@ -55,39 +55,16 @@ export default function StickyExperiences({ items }: { items: ExperienceItem[] }
                     {exp.title}
                   </h3>
                 </div>
-
-                {/* Visible Tags for Every Item */}
-                {exp.tags && exp.tags.length > 0 && (
-                  <span className={`text-[9px] sm:text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full shrink-0 transition-colors ${
-                    isActive ? 'bg-black text-white font-bold' : 'bg-neutral-100 text-neutral-500 font-medium'
-                  }`}>
-                    {exp.tags[0]}
-                  </span>
-                )}
               </div>
 
-              {/* Description Body & Link: Populated for every single item */}
-              <div className="pl-7 sm:pl-8 pt-1.5">
-                <p className={`text-xs sm:text-sm leading-relaxed transition-colors mb-2 ${
-                  isActive 
-                    ? 'text-neutral-800 font-normal max-w-lg' 
-                    : 'text-neutral-500 font-light line-clamp-2 group-hover:text-neutral-700'
-                }`}>
-                  {exp.desc}
-                </p>
-                
-                <Link 
-                  href={exp.href || "/contact"}
-                  className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider transition-colors pt-0.5 ${
-                    isActive 
-                      ? 'text-black hover:text-neutral-600 font-bold' 
-                      : 'text-neutral-400 hover:text-black font-medium'
-                  }`}
-                >
-                  <span>Explore Experience</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+              {/* Description Body: clean and only subtle for active item */}
+              {isActive && (
+                <div className="pl-7 sm:pl-8 pt-1">
+                  <p className="text-xs sm:text-sm leading-relaxed text-neutral-600 font-light max-w-lg">
+                    {exp.desc}
+                  </p>
+                </div>
+              )}
             </div>
           );
         })}
@@ -95,7 +72,7 @@ export default function StickyExperiences({ items }: { items: ExperienceItem[] }
 
       {/* RIGHT COLUMN: Dynamic Image Showcase with Sticky Alignment */}
       <div className="lg:col-span-6 order-1 lg:order-2 lg:sticky lg:top-28">
-        <div className="relative w-full aspect-[4/3] max-h-[460px] rounded-3xl overflow-hidden bg-neutral-900 border border-black/10 shadow-2xl flex flex-col justify-between p-5 sm:p-6">
+        <div className="relative w-full aspect-[4/3] max-h-[460px] rounded-3xl overflow-hidden bg-neutral-900 border border-black/10 shadow-2xl flex flex-col justify-end p-5 sm:p-6">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -110,26 +87,23 @@ export default function StickyExperiences({ items }: { items: ExperienceItem[] }
                 alt={items[activeIndex].title}
                 className="w-full h-full object-cover"
                 containerClassName="w-full h-full"
-                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/30 pointer-events-none" />
             </motion.div>
           </AnimatePresence>
 
-          {/* Top Info Badges */}
-          <div className="relative z-10 flex items-center justify-between gap-2">
-            {items[activeIndex].tags && items[activeIndex].tags.length > 0 && (
-              <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white shadow-sm">
-                {items[activeIndex].tags[0]}
+          {/* Bottom Captions & Action Link - Clean Typography, No Floating Top Boxes */}
+          <div className="relative z-10 pt-6">
+            <div className="flex items-center justify-between gap-2 text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-white/70 mb-2">
+              {items[activeIndex].tags && items[activeIndex].tags.length > 0 && (
+                <span className="font-semibold text-white/90">
+                  {items[activeIndex].tags[0]}
+                </span>
+              )}
+              <span className="text-white/50 tracking-wider">
+                SYSTEM {(activeIndex + 1).toString().padStart(2, "0")} OF {items.length.toString().padStart(2, "0")}
               </span>
-            )}
-            <span className="px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-[10px] font-mono text-white/80">
-              {(activeIndex + 1).toString().padStart(2, "0")} / {items.length.toString().padStart(2, "0")}
-            </span>
-          </div>
-
-          {/* Bottom Captions & Action Link */}
-          <div className="relative z-10 pt-12">
+            </div>
             <h4 className="text-lg sm:text-xl font-black text-white tracking-tight mb-1 drop-shadow-md">
               {items[activeIndex].title}
             </h4>

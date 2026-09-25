@@ -51,11 +51,11 @@ export default function FeaturedProjects() {
   }, [isAutoPlaying]);
 
   return (
-    <section className="py-12 lg:py-16 xl:py-20 bg-white text-black relative flex flex-col justify-center">
+    <section className="py-10 sm:py-12 lg:py-14 bg-white text-black relative flex flex-col justify-center">
       <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col h-full">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 lg:mb-10 gap-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-6 sm:mb-8 gap-6">
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ export default function FeaturedProjects() {
 
         {/* Interactive Expansion Accordion */}
         <div 
-          className="flex flex-col lg:flex-row w-full h-auto lg:h-[50vh] lg:min-h-[460px] lg:max-h-[580px] 2xl:max-h-[620px] gap-4 lg:gap-6 mt-2 lg:mt-4"
+          className="flex flex-col lg:flex-row w-full h-auto lg:h-[46vh] lg:min-h-[420px] xl:min-h-[460px] lg:max-h-[560px] 2xl:max-h-[620px] gap-4 lg:gap-6 mt-2 lg:mt-4"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
@@ -149,10 +149,10 @@ export default function FeaturedProjects() {
                     >
                       <div className="overflow-hidden min-h-0">
                         {/* Desktop Title */}
-                        <h3 className="text-3xl font-bold text-white drop-shadow-lg leading-tight">
+                        <h3 className="text-2xl xl:text-3xl font-bold text-white drop-shadow-lg leading-tight">
                           {project.title}
                         </h3>
-                        <p className="text-sm text-white/80 font-medium max-w-lg mt-2 leading-relaxed line-clamp-2">
+                        <p className="text-xs xl:text-sm text-white/80 font-medium max-w-lg mt-2 leading-relaxed line-clamp-2">
                           {project.desc}
                         </p>
                         <div className="mt-5">

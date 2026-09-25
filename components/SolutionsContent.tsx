@@ -149,21 +149,21 @@ export default function SolutionsContent() {
   };
 
   return (
-    <div className="w-full bg-white text-black pt-16">
+    <div className="w-full bg-white text-black">
       
       {/* Visual Impact Hero */}
-      <section className="relative w-full h-[60vh] min-h-[480px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full min-h-[520px] lg:h-[65vh] flex flex-col items-center justify-center overflow-hidden bg-black text-center pt-24 sm:pt-28 pb-10">
         <div className="absolute inset-0 z-0">
           <SafeImage
             src="/images/solutions_hero_hall.jpg"
             alt="Interactive Solutions Hero"
-            className="w-full h-full object-cover object-center"
-            containerClassName="w-full h-full"
+            className="w-full h-full object-cover object-center opacity-75 brightness-105"
+            containerClassName="w-full h-full bg-black"
             priority
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white mt-12 sm:mt-16">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white my-auto">
           <div className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/90 mb-4 sm:mb-6">
             PLATFORM CAPABILITIES
           </div>
@@ -184,7 +184,7 @@ export default function SolutionsContent() {
               <button
                 key={s.id}
                 onClick={() => scrollToSection(s.id)}
-                className={`shrink-0 snap-start px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
+                className={`shrink-0 snap-start px-6 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider transition-all ${
                   activeSection === s.id
                     ? "bg-black text-white shadow-lg"
                     : "bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-black border border-transparent"
@@ -198,35 +198,32 @@ export default function SolutionsContent() {
       </section>
 
       {/* Editorial Solutions Grid */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
           {solutionsData.map((item, idx) => {
             const isEven = idx % 2 === 0;
             return (
               <div
                 key={item.id}
                 id={item.id}
-                className="bg-white rounded-[2rem] border border-gray-200 shadow-sm overflow-hidden p-6 lg:p-8 transition-all hover:shadow-xl"
+                className="bg-white rounded-3xl border border-gray-200/90 shadow-sm overflow-hidden p-5 sm:p-7 lg:p-8 transition-all hover:shadow-xl"
               >
-                <div className={`grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch`}>
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center">
                   
                   {/* Visual Image Column */}
                   <div className={`relative ${isEven ? "lg:order-1" : "lg:order-2"}`}>
-                    <div className="relative overflow-hidden rounded-[1.5rem] shadow-lg group w-full h-full min-h-[300px] bg-gray-100">
+                    <div className="relative overflow-hidden rounded-2xl shadow-md group w-full aspect-[16/11] sm:aspect-[16/10] bg-gray-100">
                       <SafeImage
                         src={item.img}
                         alt={item.title}
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                        containerClassName="absolute inset-0 w-full h-full"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        containerClassName="w-full h-full"
                       />
-                      <div className="absolute top-4 left-4 z-20 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white shadow-lg">
-                        {item.badge}
-                      </div>
-                      {/* Add a subtle play icon overlay for video implication */}
+                      {/* Subtle play icon overlay for video implication */}
                       {item.id === "immersive-environment" && (
                          <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
-                            <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center">
-                              <Play className="w-5 h-5 text-white ml-1" />
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/25 backdrop-blur-md border border-white/50 flex items-center justify-center shadow-lg">
+                              <Play className="w-4 h-4 sm:w-5 sm:h-5 text-white ml-0.5 fill-white/80" />
                             </div>
                          </div>
                       )}
@@ -234,45 +231,46 @@ export default function SolutionsContent() {
                   </div>
 
                   {/* Narrative Column */}
-                  <div className={`flex flex-col h-full justify-center py-2 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className="flex items-baseline gap-3 mb-2">
-                      <h2 className="font-black text-black tracking-tight leading-tight text-[clamp(1.75rem,4vw,2.5rem)]">
-                        {item.title}
-                      </h2>
-                    </div>
+                  <div className={`flex flex-col justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/50 font-semibold block mb-1.5">
+                      {item.badge}
+                    </span>
+                    <h2 className="font-black text-black tracking-tight leading-tight text-2xl sm:text-3xl lg:text-[2rem] mb-1.5">
+                      {item.title}
+                    </h2>
                     
-                    <p className="text-[10px] lg:text-xs font-bold uppercase tracking-[0.2em] text-blue-600 mb-4">
+                    <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-black/60 mb-3">
                       {item.subtitle}
                     </p>
                     
-                    <p className="text-gray-600 text-sm lg:text-base leading-relaxed mb-6">
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
                       {item.desc}
                     </p>
 
                     {/* Feature Checklist */}
-                    <ul className="space-y-3 mb-8">
+                    <ul className="space-y-2 mb-6">
                       {item.features.map((feat, fIdx) => (
                         <li
                           key={fIdx}
-                          className="flex items-start gap-3 text-xs lg:text-sm text-gray-700 font-medium"
+                          className="flex items-center gap-2.5 text-xs sm:text-sm text-gray-700 font-medium"
                         >
-                          <CheckCircle2 className="w-4 h-4 text-black shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black shrink-0" />
                           <span className="leading-snug">{feat}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                       <Link 
                         href={`/solutions/${item.id}`} 
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-black text-white font-bold text-[10px] lg:text-xs uppercase tracking-widest hover:bg-gray-800 transition-colors shadow-lg"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-black text-white font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-gray-800 transition-colors shadow-md"
                       >
                         <span>Explore Solution</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                       <Link 
                         href="/contact" 
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-black text-black font-bold text-[10px] lg:text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-colors"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full border-2 border-black text-black font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-colors"
                       >
                         <span>Book a Demo</span>
                       </Link>
@@ -286,7 +284,7 @@ export default function SolutionsContent() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 border-t border-gray-200 bg-gray-50">
+      <section className="pt-8 pb-20 sm:pt-12 sm:pb-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 block">

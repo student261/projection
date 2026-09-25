@@ -135,8 +135,8 @@ export default function AboutPage() {
       <Navbar />
 
       {/* 1. CINEMATIC STUDIO HERO BANNER */}
-      <section className="relative w-full min-h-screen lg:h-screen bg-black text-white flex flex-col justify-between overflow-hidden pt-24 pb-8 sm:pb-10">
-        <div className="absolute inset-0 z-0">
+      <section className="relative w-full min-h-[calc(100vh-4rem)] sm:min-h-screen bg-black text-white flex flex-col justify-center pt-24 sm:pt-28 pb-14 sm:pb-20">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <SafeImage 
             src="/images/planetarium_projection_dome.jpg"
             alt="PROJECTION Spatial Engineering Studio"
@@ -148,37 +148,34 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
         </div>
 
-        {/* Top Spacer */}
-        <div className="hidden sm:block h-2" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
+        <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
           <div className="max-w-5xl">
             <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/90 mb-3 sm:mb-4">
               <Sparkles className="w-3.5 h-3.5 text-white" />
               <span>THE SPATIAL COMPUTING STUDIO</span>
             </div>
             
-            <h1 className="font-black tracking-tight leading-[1.08] text-white mb-3 sm:mb-4 text-[clamp(2rem,5vw,4.5rem)]">
-              We turn physical architecture into <br className="hidden sm:inline" />
-              <span className="text-white drop-shadow-[0_0_35px_rgba(255,255,255,0.45)]">living digital ecosystems.</span>
+            <h1 className="font-black tracking-tight leading-[1.08] text-white mb-3 sm:mb-4 text-[clamp(2rem,4.2vw,4rem)] text-balance">
+              We turn physical architecture <br className="hidden sm:inline" />
+              <span className="text-white drop-shadow-[0_0_35px_rgba(255,255,255,0.45)]">into living digital ecosystems.</span>
             </h1>
 
-            <p className="text-xs sm:text-sm lg:text-base text-white/80 font-light leading-relaxed mb-6 max-w-2xl">
+            <p className="text-xs sm:text-sm lg:text-base text-white/80 font-light leading-relaxed mb-6 sm:mb-8 max-w-2xl">
               PROJECTION is an international spatial collective operating at the intersection of architectural optics, low-latency computer vision, and real-time generative simulation. We eliminate the boundary between human presence and built space.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-2 items-start">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-4 border-t border-white/10 items-start">
               {STATS.map((stat, idx) => (
                 <div key={idx} className="flex flex-col justify-start">
-                  <div className="h-7 sm:h-9 lg:h-10 flex items-center">
-                    <span className="text-lg sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-none">
+                  <div className="flex items-center mb-1">
+                    <span className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-none">
                       {stat.value}
                     </span>
                   </div>
-                  <div className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-white/70 font-bold pt-1">
+                  <div className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-white/75 font-semibold mb-1">
                     {stat.label}
                   </div>
-                  <p className="text-[10px] sm:text-[11px] text-white/50 font-light leading-tight pt-1 max-w-[220px]">
+                  <p className="text-[10px] sm:text-[11px] text-white/55 font-light leading-relaxed max-w-[240px]">
                     {stat.desc}
                   </p>
                 </div>
@@ -190,17 +187,17 @@ export default function AboutPage() {
 
       {/* 2. SPATIAL PHILOSOPHY (SWISS MINIMAL SPLIT) */}
       <section className="py-10 lg:py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
             <div className="lg:col-span-5 space-y-5">
               <div>
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40 mb-2 block font-bold">
+                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
                   ENGINEERING PHILOSOPHY
                 </span>
-                <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)]">
+                <h2 className="font-black tracking-tight leading-[1.1] text-black text-[clamp(1.5rem,3.5vw,2.5rem)]">
                   We don't mount generic screens. <br />
-                  <span className="text-black/40">We engineer the medium.</span>
+                  We engineer the medium.
                 </h2>
               </div>
 
@@ -216,14 +213,14 @@ export default function AboutPage() {
               <div className="pt-2 flex flex-col sm:flex-row gap-3.5">
                 <Link
                   href="/solutions"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full bg-black text-white hover:bg-black/80 transition-all shadow-md active:scale-95"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full bg-black text-white hover:bg-neutral-800 transition-all shadow-md active:scale-95"
                 >
                   <span>Explore Our Technology Suite</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full bg-black/5 text-black hover:bg-black/10 transition-all active:scale-95"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full border border-black text-black hover:bg-black hover:text-white transition-all active:scale-95"
                 >
                   <span>Consult an Optical Engineer</span>
                 </Link>
@@ -244,7 +241,7 @@ export default function AboutPage() {
                   <span className="text-xs sm:text-base font-bold block">Spatial Immersion & Sensor Calibration Chamber</span>
                   <p className="text-[10px] sm:text-xs text-white/60 font-light mt-0.5">Real-time LiDAR mesh validation and sub-millimeter throw distance testing</p>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-mono font-bold uppercase shrink-0 self-start sm:self-auto">
+                <span className="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-[10px] font-mono font-semibold uppercase tracking-wider shrink-0 self-start sm:self-auto">
                   Active Testing
                 </span>
               </div>
@@ -256,10 +253,10 @@ export default function AboutPage() {
 
       {/* 3. FOUR CORE DISCIPLINES (BORDERLESS EDITORIAL 4-COLUMN) */}
       <section className="py-10 lg:py-12 bg-gray-50/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8 sm:mb-10">
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40 mb-2 block font-bold">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
                 CORE DISCIPLINES
               </span>
               <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)]">
@@ -271,7 +268,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
             {DISCIPLINES.map((item, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                 <div>
@@ -282,24 +279,21 @@ export default function AboutPage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       containerClassName="w-full h-full"
                     />
-                    <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[10px] font-mono font-bold text-white">
-                      {item.num}
-                    </div>
                   </div>
 
-                  <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-black/50 block mb-1.5">
-                    {item.tag}
+                  <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-black/70 block mb-1.5">
+                    {item.num} • {item.tag}
                   </span>
-                  <h3 className="text-sm sm:text-base font-black text-black tracking-tight mb-2 leading-snug">
+                  <h3 className="text-sm sm:text-base font-black text-black tracking-tight mb-2 leading-snug sm:min-h-[2.5rem] flex items-start">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-black/70 font-light leading-relaxed mb-4">
+                  <p className="text-xs text-black/70 font-light leading-relaxed mb-4 flex-1">
                     {item.desc}
                   </p>
                 </div>
 
                 <div className="pt-3">
-                  <span className="text-[10px] font-mono text-black/50 block">
+                  <span className="text-[10px] font-mono text-black/60 block">
                     {item.metrics}
                   </span>
                 </div>
@@ -311,9 +305,9 @@ export default function AboutPage() {
 
       {/* 4. THE 4-STAGE PROTOTYPING & DEPLOYMENT PIPELINE */}
       <section className="py-10 lg:py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl mb-8 sm:mb-10">
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40 mb-2 block font-bold">
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
               RIGOROUS METHODOLOGY
             </span>
             <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)] mb-2 sm:mb-3">
@@ -324,19 +318,19 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-8 items-stretch">
             {PIPELINE_STEPS.map((step, idx) => (
-              <div key={idx} className="bg-gray-50/70 rounded-2xl p-5 flex flex-col justify-between group hover:bg-gray-100/70 transition-colors">
-                <div>
+              <div key={idx} className="bg-gray-50/70 rounded-2xl p-5 flex flex-col justify-between group hover:bg-gray-100/70 transition-colors h-full">
+                <div className="flex flex-col flex-1">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="px-2.5 py-1 rounded-full bg-black/5 text-[10px] font-mono font-bold text-black/70 group-hover:bg-black group-hover:text-white transition-colors">
+                    <span className="text-xs font-mono font-bold text-black/75 group-hover:text-black transition-colors">
                       {step.phase}
                     </span>
                   </div>
-                  <h3 className="text-sm sm:text-base font-black text-black tracking-tight mb-2 leading-snug">
+                  <h3 className="text-sm sm:text-base font-black text-black tracking-tight mb-2 leading-snug sm:min-h-[2.5rem] flex items-start">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-black/70 font-light leading-relaxed">
+                  <p className="text-xs text-black/70 font-light leading-relaxed flex-1">
                     {step.desc}
                   </p>
                 </div>
@@ -348,11 +342,11 @@ export default function AboutPage() {
 
       {/* 5. MULTIDISCIPLINARY COLLECTIVE (THE MAKERS) */}
       <section className="py-10 lg:py-12 bg-gray-50/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-5">
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40 mb-2 block font-bold">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
                 THE COLLECTIVE
               </span>
               <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)] mb-4">
@@ -399,11 +393,11 @@ export default function AboutPage() {
 
       {/* 6. GLOBAL NETWORK & PRODUCTION FOOTPRINT */}
       <section className="py-10 lg:py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-5">
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40 mb-2 block font-bold">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
                 GLOBAL FOOTPRINT
               </span>
               <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)] mb-4">
@@ -422,7 +416,7 @@ export default function AboutPage() {
                     <div>
                       <h4 className="text-xs sm:text-sm font-bold text-black tracking-tight flex items-center gap-2">
                         <span>{hub.city}</span>
-                        <span className="text-[10px] font-normal text-black/50 font-mono">• {hub.role}</span>
+                        <span className="text-[10px] font-normal text-neutral-700 font-mono">• {hub.role}</span>
                       </h4>
                       <p className="text-[11px] sm:text-xs text-black/60 font-light mt-0.5">
                         {hub.desc}
@@ -460,9 +454,9 @@ export default function AboutPage() {
 
       {/* 7. ARCHITECTURAL COMMITMENTS & ETHICAL STANDARDS */}
       <section className="py-10 lg:py-12 bg-gray-50/70">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl mb-8 sm:mb-10">
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40 mb-2 block font-bold">
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
               QUALITY STANDARDS
             </span>
             <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)] mb-3">
@@ -491,14 +485,14 @@ export default function AboutPage() {
 
       {/* 8. HIGH-IMPACT STUDIO CALL TO ACTION */}
       <section className="py-16 lg:py-20 bg-black text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
             <div className="lg:col-span-8 space-y-4">
-              <span className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold tracking-[0.2em] text-white/70 bg-white/10 px-3.5 py-1.5 rounded-full uppercase">
-                <Compass className="w-3.5 h-3.5 text-white" />
+              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold tracking-[0.2em] text-white/70 uppercase">
+                <Compass className="w-3.5 h-3.5 text-white/60" />
                 <span>SPATIAL BRIEFING</span>
-              </span>
+              </div>
               <h2 className="font-black text-white tracking-tight leading-[1.08] text-[clamp(2rem,4vw,3rem)]">
                 Ready to engineer an extraordinary interactive space?
               </h2>

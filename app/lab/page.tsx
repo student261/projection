@@ -93,7 +93,7 @@ export default function LabPage() {
           
           <Link 
             href="/"
-            className="flex items-center gap-2 px-3 sm:px-4 py-2 border border-white/20 rounded-full hover:bg-white hover:text-black transition-colors text-[10px] sm:text-xs font-bold uppercase tracking-widest bg-black/50 backdrop-blur-sm shrink-0"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 border border-white/20 rounded-md hover:bg-white hover:text-black transition-colors text-[10px] sm:text-xs font-bold uppercase tracking-widest bg-black/50 backdrop-blur-sm shrink-0"
           >
             <X className="w-3.5 h-3.5" />
             <span className="hidden xs:inline">EXIT LAB</span>

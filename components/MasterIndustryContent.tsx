@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Layers, Sparkles, Filter } from "lucide-react";
-import Button from "@/components/ui/Button";
+import { ArrowRight, ChevronLeft, ChevronRight, Layers, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface RelatedProject {
   name: string;
@@ -165,11 +165,80 @@ const industriesData: IndustryItem[] = [
 ];
 
 export default function MasterIndustryContent() {
+  const [selectedSector, setSelectedSector] = useState<IndustryItem | null>(null);
   const [activeCategory, setActiveCategory] = useState("all");
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  // Scroll visibility for sticky category filter
+  useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY <= 20) {
+            setIsNavVisible(true);
+          } else if (currentScrollY > lastScrollY.current + 6) {
+            setIsNavVisible(false);
+          } else if (currentScrollY < lastScrollY.current - 6) {
+            setIsNavVisible(true);
+          }
+          lastScrollY.current = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Modal navigation (Previous / Next)
+  const handleModalPrev = useCallback(() => {
+    if (!selectedSector) return;
+    const currentIdx = industriesData.findIndex((i) => i.id === selectedSector.id);
+    const prevIdx = currentIdx === 0 ? industriesData.length - 1 : currentIdx - 1;
+    setSelectedSector(industriesData[prevIdx]);
+  }, [selectedSector]);
+
+  const handleModalNext = useCallback(() => {
+    if (!selectedSector) return;
+    const currentIdx = industriesData.findIndex((i) => i.id === selectedSector.id);
+    const nextIdx = (currentIdx + 1) % industriesData.length;
+    setSelectedSector(industriesData[nextIdx]);
+  }, [selectedSector]);
+
+  // Keyboard controls for modal (Escape to close, Left/Right to flip)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedSector(null);
+      } else if (selectedSector) {
+        if (e.key === "ArrowLeft") handleModalPrev();
+        if (e.key === "ArrowRight") handleModalNext();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedSector, handleModalPrev, handleModalNext]);
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (selectedSector) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedSector]);
 
   const filteredIndustries = activeCategory === "all"
     ? industriesData
-    : industriesData.filter(item => item.id === activeCategory);
+    : industriesData.filter((item) => item.id === activeCategory);
 
   const scrollToGrid = () => {
     const el = document.getElementById("industry-matrix");
@@ -180,7 +249,7 @@ export default function MasterIndustryContent() {
 
   return (
     <div className="w-full bg-white text-black">
-      {/* Full-Screen Hero Section (Zero Leakage into Next Fold) */}
+      {/* Full-Screen Hero Section */}
       <section className="relative h-screen min-h-screen flex flex-col justify-between items-center overflow-hidden bg-black text-center pt-24 sm:pt-28 pb-8 px-4">
         <div className="absolute inset-0 z-0">
           <SafeImage 
@@ -223,140 +292,259 @@ export default function MasterIndustryContent() {
         </div>
       </section>
 
-      {/* Sticky Filter & Category Selector Bar */}
-      <section id="industry-matrix" className="sticky top-16 sm:top-20 z-40 bg-white/95 backdrop-blur-md border-y border-neutral-200 py-3 sm:py-4 shadow-sm">
-        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto scrollbar-hide">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 mr-2 shrink-0 hidden sm:inline-block">
-              Filter:
-            </span>
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`text-xs px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer ${
-                  activeCategory === cat.id
-                    ? "bg-black text-white font-bold shadow-md"
-                    : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200 hover:text-black font-medium"
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Visual Card Matrix */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-neutral-50">
+      {/* ── Interactive Sector Visual Gallery (ZERO Cards, ZERO Frames) ── */}
+      <section id="industry-matrix" className="pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-28 lg:pb-36 bg-white scroll-mt-16 sm:scroll-mt-20">
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
-              SECTOR MATRIX
+          {/* Section Heading */}
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
+              SECTOR ARCHITECTURE
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-3">
               Commercial Applications & Outcomes
             </h2>
             <p className="text-neutral-600 text-sm sm:text-base font-light">
-              Explore concrete customer benefits, problem solutions, and proven deployments across each commercial sector.
+              Select any commercial sector to inspect engineering challenges, verified customer gains, and deployed installations.
             </p>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+        {/* Sticky Filter & Category Selector Bar */}
+        <div className={`sticky z-40 bg-white/95 backdrop-blur-md border-y border-neutral-200/80 py-3 sm:py-4 shadow-sm mb-12 sm:mb-16 transition-all duration-300 ease-in-out ${isNavVisible ? "top-[72px]" : "top-0"}`}>
+          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto scrollbar-hide">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-black font-bold mr-2 shrink-0 hidden sm:inline-block">
+                Filter:
+              </span>
+              {CATEGORIES.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`text-xs px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-md transition-all duration-300 whitespace-nowrap cursor-pointer ${
+                    activeCategory === cat.id
+                      ? "bg-black text-white font-bold shadow-md"
+                      : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200 hover:text-black font-medium"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ── Frameless Visual Gallery Grid (Zero Cards, Zero Frames) ── */}
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
             {filteredIndustries.map((item) => (
-              <div 
+              <div
                 key={item.id}
-                className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/80"
+                onClick={() => setSelectedSector(item)}
+                className="group cursor-pointer select-none flex flex-col"
               >
-                {/* Visual Header */}
-                <Link href={`/industries/${item.slug}`} className="block relative aspect-[16/10] overflow-hidden bg-black">
+                {/* Frameless Cinematic Visual Canvas — ZERO floating box badges */}
+                <div className="relative aspect-[16/11] overflow-hidden rounded-xl sm:rounded-2xl bg-neutral-950 mb-3.5 shadow-sm group-hover:shadow-xl transition-all duration-500">
                   <SafeImage
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     containerClassName="w-full h-full"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute top-3.5 left-3.5 bg-black/75 backdrop-blur-md px-2.5 py-1 rounded-full text-[9px] font-mono font-bold uppercase tracking-wider text-white">
-                    {item.badge.split("•")[0]?.trim() || item.title}
-                  </div>
-                  <div className="absolute bottom-3 right-3 bg-white text-black px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold shadow-md">
-                    {item.keyMetric}
-                  </div>
-                </Link>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity pointer-events-none" />
 
-                {/* Card Narrative */}
-                <div className="p-5 sm:p-6 flex flex-col flex-1">
-                  <div className="flex items-baseline gap-2 mb-1.5">
-                    <span className="text-xs font-mono font-bold text-neutral-400">
-                      {item.num}
+                  {/* Corner Sector Number Watermark (Containerless typography) */}
+                  <div className="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-widest text-white/90 drop-shadow pointer-events-none">
+                    SECTOR {item.num}
+                  </div>
+
+                  {/* Live Impact Overlay on Image Bottom (Containerless typography) */}
+                  <div className="absolute bottom-3 left-3 right-3 text-white pointer-events-none">
+                    <span className="text-xs font-semibold text-white/95 line-clamp-1 drop-shadow-sm">
+                      {item.keyMetric}
                     </span>
-                    <span className="text-neutral-300 select-none">/</span>
-                    <Link href={`/industries/${item.slug}`}>
-                      <h3 className="text-base sm:text-lg font-black text-black tracking-tight hover:text-neutral-600 transition-colors">
-                        {item.title}
-                      </h3>
-                    </Link>
+                  </div>
+                </div>
+
+                {/* Pure Typography Content (No Card, No Frame) */}
+                <div className="flex flex-col flex-1">
+                  <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-1">
+                    SECTOR {item.num}
                   </div>
 
-                  {/* Concrete Problem Solved + Customer Gain */}
-                  <div className="space-y-2 my-4 bg-neutral-50 rounded-2xl p-3.5 border border-neutral-200/60 text-xs">
-                    <div>
-                      <span className="font-bold text-black uppercase tracking-wider text-[10px] block mb-0.5">
-                        Problem Solved:
-                      </span>
-                      <p className="text-neutral-600 font-light leading-relaxed">
-                        {item.problemSolved}
-                      </p>
-                    </div>
-                    <div className="pt-1.5 border-t border-neutral-200/60">
-                      <span className="font-bold text-black uppercase tracking-wider text-[10px] block mb-0.5">
-                        Customer Gain:
-                      </span>
-                      <p className="text-neutral-900 font-medium leading-relaxed">
-                        {item.customerGain}
-                      </p>
-                    </div>
-                  </div>
+                  <h3 className="text-base sm:text-lg font-black text-black tracking-tight leading-snug group-hover:text-neutral-600 transition-colors mb-1.5 min-h-[2.75rem] flex items-start">
+                    {item.title}
+                  </h3>
 
-                  {/* Real Related Projects / Case Studies Pills */}
-                  {item.relatedProjects && item.relatedProjects.length > 0 && (
-                    <div className="mb-5">
-                      <span className="text-[9px] font-mono font-bold uppercase tracking-widest text-neutral-400 block mb-2">
-                        Proven Case Studies
-                      </span>
-                      <div className="flex flex-wrap gap-1.5">
-                        {item.relatedProjects.map((p, pIdx) => (
-                          <Link
-                            key={pIdx}
-                            href={p.href}
-                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-neutral-100 hover:bg-neutral-200 text-[10px] font-medium text-neutral-800 border border-neutral-200/80 transition-colors"
-                          >
-                            <span>{p.name}</span>
-                            <ArrowRight className="w-2.5 h-2.5 text-neutral-400" />
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                  <p className="text-xs text-neutral-500 font-normal line-clamp-1 mb-3">
+                    {item.badge}
+                  </p>
 
-                  {/* Explore Button */}
-                  <div className="mt-auto pt-3 border-t border-neutral-100 flex items-center justify-between">
-                    <Link
-                      href={`/industries/${item.slug}`}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-600 transition-colors"
-                    >
-                      <span>Explore Industry</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                  <div className="mt-auto pt-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black group-hover:text-neutral-600 transition-colors">
+                    <span>Inspect Dossier</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
         </div>
+
+        {/* ── Interactive Spatial Dossier Pop-Up (Modal — z-[100] overlays navbar cleanly) ── */}
+        <AnimatePresence>
+          {selectedSector && (
+            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-8">
+              {/* Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setSelectedSector(null)}
+                className="absolute inset-0 bg-black/85 backdrop-blur-md cursor-pointer"
+              />
+
+              {/* Modal Dialog */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 16 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 16 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="relative z-10 w-full max-w-5xl bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden max-h-[88vh] flex flex-col lg:flex-row border border-neutral-200/80 my-auto"
+              >
+                {/* Left: Cinematic Visual Canvas (6 Cols) */}
+                <div className="lg:w-1/2 relative bg-neutral-950 aspect-[16/10] lg:aspect-auto min-h-[280px] lg:min-h-[520px] overflow-hidden">
+                  <SafeImage
+                    src={selectedSector.img}
+                    alt={selectedSector.title}
+                    className="w-full h-full object-cover"
+                    containerClassName="absolute inset-0 w-full h-full"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 pointer-events-none" />
+
+                  {/* Image Overlay Footer — Positioned with comfortable 24-32px bottom padding, never clipped */}
+                  <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 right-6 sm:right-8 z-10 text-white space-y-1 pointer-events-none">
+                    <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/70 block">
+                      Verified Sector Impact
+                    </span>
+                    <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight leading-tight">
+                      {selectedSector.keyMetric}
+                    </h4>
+                  </div>
+                </div>
+
+                {/* Right: Architectural Dossier Content (6 Cols) */}
+                <div className="lg:w-1/2 p-6 sm:p-8 lg:p-10 flex flex-col justify-between overflow-y-auto max-h-[85vh] lg:max-h-[600px]">
+                  {/* Top Bar: Sector Eyebrow & Close Button (Zero orphaned slashes) */}
+                  <div>
+                    <div className="flex items-center justify-between gap-4 mb-3">
+                      <span className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-neutral-400">
+                        SECTOR {selectedSector.num}
+                      </span>
+                      <button
+                        onClick={() => setSelectedSector(null)}
+                        aria-label="Close Dossier"
+                        className="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black hover:text-white flex items-center justify-center text-neutral-700 transition-colors cursor-pointer shrink-0"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
+                    </div>
+
+                    {/* Title */}
+                    <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight mb-2">
+                      {selectedSector.title}
+                    </h2>
+
+                    {/* Venue Environments Subtitle (Cleanly placed under title with zero slashes) */}
+                    <p className="text-xs text-neutral-500 font-mono uppercase tracking-wider mb-6">
+                      {selectedSector.badge}
+                    </p>
+
+                    {/* Transformation Editorial Dossier */}
+                    <div className="space-y-4 mb-6">
+                      <div>
+                        <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-1">
+                          The Challenge
+                        </span>
+                        <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
+                          {selectedSector.problemSolved}
+                        </p>
+                      </div>
+
+                      <div>
+                        <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-1">
+                          Commercial Outcome
+                        </span>
+                        <p className="text-xs sm:text-sm text-neutral-900 font-medium leading-relaxed">
+                          {selectedSector.customerGain}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Deployed Installations */}
+                    {selectedSector.relatedProjects && selectedSector.relatedProjects.length > 0 && (
+                      <div className="pt-4 border-t border-neutral-150 mb-6">
+                        <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
+                          Deployed Installations
+                        </span>
+                        <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs">
+                          {selectedSector.relatedProjects.map((p, pIdx) => (
+                            <span key={pIdx} className="inline-flex items-center">
+                              <Link
+                                href={p.href}
+                                onClick={() => setSelectedSector(null)}
+                                className="text-neutral-700 hover:text-black font-medium transition-colors hover:underline underline-offset-4 decoration-neutral-300"
+                              >
+                                {p.name}
+                              </Link>
+                              {pIdx < selectedSector.relatedProjects.length - 1 && (
+                                <span className="text-neutral-300 ml-3 select-none">/</span>
+                              )}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Footer Controls: Prev / Next + Explore Action */}
+                  <div className="pt-4 border-t border-neutral-150 flex items-center justify-between gap-4 mt-auto">
+                    {/* Prev / Next cycle buttons */}
+                    <div className="flex items-center gap-2 text-xs font-mono text-neutral-500">
+                      <button
+                        onClick={handleModalPrev}
+                        aria-label="Previous Sector"
+                        className="w-8 h-8 rounded-full border border-neutral-200 hover:border-black flex items-center justify-center text-neutral-700 hover:text-black transition-colors cursor-pointer"
+                      >
+                        <ChevronLeft className="w-4 h-4" />
+                      </button>
+                      <span className="font-bold text-black px-1.5 select-none text-xs">
+                        {selectedSector.num} / {String(industriesData.length).padStart(2, "0")}
+                      </span>
+                      <button
+                        onClick={handleModalNext}
+                        aria-label="Next Sector"
+                        className="w-8 h-8 rounded-full border border-neutral-200 hover:border-black flex items-center justify-center text-neutral-700 hover:text-black transition-colors cursor-pointer"
+                      >
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+
+                    {/* Direct Sector Page Link (No pill button) */}
+                    <Link
+                      href={`/industries/${selectedSector.slug}`}
+                      onClick={() => setSelectedSector(null)}
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-600 transition-colors group/link"
+                    >
+                      <span>Explore Sector Architecture</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
       </section>
 
       {/* Page-Level "Start Your Project" CTA Banner */}

@@ -251,7 +251,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
               {data.videoUrl ? (
                 <video
                   src={data.videoUrl}
-                  poster={data.whatIsVideoPlaceholder}
+                  poster={data.whatIsVideoPlaceholder ? (data.whatIsVideoPlaceholder.endsWith('.webp') ? data.whatIsVideoPlaceholder : data.whatIsVideoPlaceholder.replace(/\.(png|jpg|jpeg)$/, '.webp')) : undefined}
                   autoPlay
                   loop
                   muted
@@ -263,20 +263,16 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
               ) : (
                 <SafeImage src={data.whatIsVideoPlaceholder} alt={data.whatIsHeading || "Solution Preview"} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" containerClassName="w-full h-full" />
               )}
-              <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono text-white/90">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>{data.videoUrl ? "Live Demonstration Video" : "Installation Preview"}</span>
-              </div>
             </div>
           </motion.div>
 
           {/* Content Side */}
           <div className={`w-full lg:col-span-7 ${isFlippedLayout ? "lg:order-1" : "lg:order-2"}`}>
             <div>
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-5">
+              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-4">
                 <Sparkles className="w-3.5 h-3.5 text-black" />
                 <span>Interactive Solution</span>
-              </span>
+              </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-5 tracking-tight leading-[1.1]">
                 {data.whatIsHeading}
               </h2>
@@ -315,10 +311,10 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
             <div>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
-                <Sparkles className="w-3 h-3 text-black" />
+              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-black" />
                 <span>Experience Catalog</span>
-              </span>
+              </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
                 {data.experienceHeading || "Experience the Possibilities"}
               </h2>
@@ -341,14 +337,12 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                       className="w-full h-full object-cover"
                       containerClassName="w-full h-full"
                     />
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-wider text-white">
-                        Primary Form Factor 01
-                      </span>
-                    </div>
                   </div>
                   <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                     <div>
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
+                        Primary Form Factor 01
+                      </span>
                       <h3 className="text-2xl sm:text-3xl font-black text-black tracking-tight mb-4">
                         Interactive Floor
                       </h3>
@@ -379,14 +373,12 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                       className="w-full h-full object-cover"
                       containerClassName="w-full h-full"
                     />
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-wider text-white">
-                        Primary Form Factor 02
-                      </span>
-                    </div>
                   </div>
                   <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                     <div>
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
+                        Primary Form Factor 02
+                      </span>
                       <h3 className="text-2xl sm:text-3xl font-black text-black tracking-tight mb-4">
                         Interactive Wall
                       </h3>
@@ -412,10 +404,10 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
               {/* Surface Variants & Form Factors Cards */}
               <div className="pt-6">
                 <div className="mb-6">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
-                    <Sparkles className="w-3 h-3 text-black" />
+                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2">
+                    <Sparkles className="w-3.5 h-3.5 text-black" />
                     <span>Specialized Surface Variants</span>
-                  </span>
+                  </div>
                   <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-black tracking-tight">
                     Extended Form Factors & Architectural Canvases
                   </h3>
@@ -437,14 +429,12 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           containerClassName="w-full h-full"
                         />
-                        <div className="absolute top-3 left-3 z-10">
-                          <span className="px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[9px] font-mono font-bold uppercase tracking-wider text-white">
-                            {variant.category}
-                          </span>
-                        </div>
                       </div>
                       <div className="p-5 flex-1 flex flex-col justify-between">
                         <div>
+                          <span className="text-[9px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-1">
+                            {variant.category}
+                          </span>
                           <h4 className="text-base sm:text-lg font-bold text-black mb-2 tracking-tight">
                             {variant.title}
                           </h4>
@@ -474,21 +464,18 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         containerClassName="w-full h-full"
                       />
-                      <div className="absolute top-3.5 left-3.5 z-10 flex items-center gap-2">
-                        <span className="px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-wider text-white">
-                          {num}
-                        </span>
-                        <span className="px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-wider text-white">
-                          {exp.category}
-                        </span>
-                      </div>
                     </div>
                     <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                       <div>
-                        <h3 className="text-lg sm:text-xl font-black text-black tracking-tight mb-2 group-hover:text-neutral-700 transition-colors">
+                        <div className="flex items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2">
+                          <span>{num}</span>
+                          <span>•</span>
+                          <span>{exp.category}</span>
+                        </div>
+                        <h3 className="text-lg sm:text-xl font-black text-black tracking-tight mb-2 group-hover:text-neutral-700 transition-colors sm:min-h-[3rem] line-clamp-2">
                           {exp.title}
                         </h3>
-                        <p className="text-xs sm:text-sm text-black/70 font-light leading-relaxed mb-4">
+                        <p className="text-xs sm:text-sm text-black/70 font-light leading-relaxed mb-4 flex-1 line-clamp-3">
                           {exp.desc}
                         </p>
                       </div>
@@ -513,8 +500,8 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
             <div>
-              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2">
-                <Sparkles className="w-3.5 h-3.5 text-black/40" />
+              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-black" />
                 <span>SYSTEM ARCHITECTURE</span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black tracking-tight leading-[1.1]">
@@ -540,7 +527,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                   }`}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-bold text-black/40 group-hover:text-black transition-colors">
+                    <span className="text-xs font-mono font-bold text-black/75 group-hover:text-black transition-colors">
                       {num}
                     </span>
                     <span className="w-1.5 h-1.5 rounded-full bg-black/20 group-hover:bg-black transition-colors" />
@@ -591,7 +578,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                   </div>
                   <div className="flex-1 sm:w-full">
                     <div className="sm:h-8 flex items-center sm:justify-center">
-                      <h4 className="text-xs font-bold text-white tracking-wider uppercase group-hover:text-blue-400 transition-colors leading-tight">
+                      <h4 className="text-xs font-bold text-white tracking-wider uppercase group-hover:text-white transition-colors leading-tight">
                         {step.title}
                       </h4>
                     </div>
@@ -611,10 +598,10 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
             <div>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
-                <Sparkles className="w-3 h-3 text-black" />
+              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-black" />
                 <span>Sector Integration</span>
-              </span>
+              </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
                 {data.industriesHeading || (
                   <>One Solution.<br className="hidden sm:inline" /> Endless Possibilities.</>
@@ -636,8 +623,8 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                <span className="text-[11px] font-mono font-bold px-2 text-black/70 select-none">
-                  0{activeIndustryIdx + 1} / 0{allIndustries.length}
+                <span className="text-[11px] font-mono font-bold px-2 text-black/70 select-none tracking-wider whitespace-nowrap">
+                  SECTOR 0{activeIndustryIdx + 1} OF 0{allIndustries.length}
                 </span>
                 <button
                   type="button"
@@ -664,7 +651,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                     key={idx}
                     type="button"
                     onClick={() => handleSelectIndustry(idx)}
-                    className={`shrink-0 snap-center inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer select-none ${
+                    className={`shrink-0 snap-center inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer select-none ${
                       isActive 
                         ? "bg-black text-white shadow-md ring-2 ring-black/10" 
                         : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200 hover:text-black"
@@ -694,16 +681,11 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                     containerClassName="w-full h-full absolute inset-0" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-wider text-white">
-                      {activeInd.tag}
-                    </span>
-                  </div>
                 </div>
 
                 <div className="lg:col-span-5 flex flex-col justify-center">
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40 mb-2 block">
-                    Specialized Application
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/50 mb-2 block font-semibold">
+                    Specialized Application • {activeInd.tag}
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-black text-black tracking-tight mb-3">
                     {activeInd.title}
@@ -730,10 +712,10 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
             <div>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/5 text-[10px] font-bold uppercase tracking-widest text-black mb-2">
-                <Sparkles className="w-3 h-3 text-black" />
+              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-black" />
                 <span>Measurable Results</span>
-              </span>
+              </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-black tracking-tight leading-[1.1]">
                 {data.outcomesHeading || (
                   <>More Than Technology.<br className="hidden sm:inline" /> Meaningful Outcomes.</>
@@ -749,7 +731,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-black/10 border-y border-black/10 py-4 mb-6">
             {data.benefits.slice(0, 4).map((b, idx) => (
               <div key={idx} className="p-4 sm:p-5 flex flex-col justify-between group">
-                <span className="text-xs font-mono font-bold text-black/30 mb-4 block group-hover:text-black transition-colors">
+                <span className="text-xs font-mono font-bold text-black/75 mb-4 block group-hover:text-black transition-colors">
                   0{idx + 1} • IMPACT
                 </span>
                 <div>
@@ -775,7 +757,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                 {data.techStack.map((tech, idx) => (
                   <span 
                     key={idx} 
-                    className="px-3.5 py-1.5 rounded-full bg-white border border-black/10 text-[11px] font-mono font-bold text-black/80 shadow-sm shrink-0"
+                    className="px-2.5 py-1 rounded-md bg-white border border-black/10 text-[11px] font-mono text-black/70 shadow-sm shrink-0"
                   >
                     {tech}
                   </span>
@@ -791,10 +773,10 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
             <div>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white/80 mb-2">
-                <Sparkles className="w-3 h-3 text-white/80" />
+              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/60 mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-white/50" />
                 <span>Featured Installations • Live Showcase</span>
-              </span>
+              </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-[1.1]">
                 {data.projectsHeading || "See the Solution in Action"}
               </h2>
@@ -831,7 +813,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                       <div className="min-w-0">
                         <div className="flex items-center gap-2 mb-0.5">
                           <span className={`text-[10px] font-mono uppercase tracking-wider font-semibold shrink-0 ${
-                            isActive ? "text-blue-400" : "text-blue-400/70"
+                            isActive ? "text-white" : "text-white/60"
                           }`}>
                             {proj.industry}
                           </span>
@@ -871,22 +853,19 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                     className="w-full h-full object-cover opacity-95 brightness-105 contrast-105 transition-all duration-700 hover:scale-105" 
                     containerClassName="w-full h-full" 
                   />
-                  
-                  {/* Floating Metadata Pills at Top */}
-                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2 z-10">
-                    <span className="px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest text-white shadow-sm">
-                      {activeProject.industry} Installation
-                    </span>
-                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/15 text-[10px] font-mono text-white/90 shadow-sm">
-                      <MapPin className="w-3 h-3 text-blue-400" />
-                      <span>{activeProject.location}</span>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Dedicated Content Details Bar - Clean, Legible, Never Clipped */}
                 <div className="p-5 sm:p-6 bg-zinc-950 border-t border-white/10 flex flex-col gap-4">
                   <div>
+                    <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.2em] font-semibold text-white/50 mb-2">
+                      <span className="text-white/80">{activeProject.industry} INSTALLATION</span>
+                      <span>•</span>
+                      <span className="flex items-center gap-1">
+                        <MapPin className="w-3 h-3 text-white/40" />
+                        <span>{activeProject.location}</span>
+                      </span>
+                    </div>
                     <h3 className="text-xl sm:text-2xl font-black text-white mb-1.5 leading-tight tracking-tight">
                       {activeProject.title}
                     </h3>
@@ -945,7 +924,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
                     aria-expanded={isOpen}
                   >
                     <div className="flex items-start gap-4 sm:gap-6">
-                      <span className={`font-mono text-xs pt-1 transition-colors ${isOpen ? "text-black font-bold" : "text-black/30 group-hover:text-black/60"}`}>
+                      <span className={`font-mono text-xs pt-1 transition-colors ${isOpen ? "text-black font-bold" : "text-black/75 group-hover:text-black"}`}>
                         {itemNumber}
                       </span>
                       <span className={`text-base sm:text-lg font-bold transition-colors leading-snug ${isOpen ? "text-black" : "text-black/80 group-hover:text-black"}`}>

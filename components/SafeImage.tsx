@@ -9,7 +9,7 @@ interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   priority?: boolean;
 }
 
-const DEFAULT_FALLBACK = "/images/architectural_light_beam.jpg";
+const DEFAULT_FALLBACK = "/images/architectural_light_beam.webp";
 
 export default function SafeImage({
   src,
@@ -25,7 +25,9 @@ export default function SafeImage({
   const imgRef = useRef<HTMLImageElement | null>(null);
 
   const getOptimizedSrc = (rawSrc?: string | Blob): string => {
-    if (typeof rawSrc !== "string" || !rawSrc) return fallbackSrc;
+    if (typeof rawSrc !== "string" || !rawSrc) {
+      return fallbackSrc.endsWith(".webp") ? fallbackSrc : fallbackSrc.replace(/\.(png|jpg|jpeg)$/, ".webp");
+    }
     let result = rawSrc;
 
     // Auto convert local images to WebP for 85%+ compression & ultra-fast loading
@@ -34,8 +36,6 @@ export default function SafeImage({
     }
 
     if (result.includes("images.unsplash.com")) {
-      const hasQuery = result.includes("?");
-      const joiner = hasQuery ? "&" : "?";
       if (!result.includes("fm=")) {
         result += `${result.includes("?") ? "&" : "?"}fm=webp`;
       }
@@ -43,7 +43,7 @@ export default function SafeImage({
         result += "&q=75";
       }
       if (!result.includes("w=")) {
-        result += "&w=800";
+        result += "&w=1200";
       }
     }
     return result;
@@ -94,18 +94,18 @@ export default function SafeImage({
     <div className={`relative overflow-hidden ${containerClassName}`}>
       {/* Loading Skeleton Indicator */}
       {isLoading && !hasFallbackError && (
-        <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center z-20 pointer-events-none">
-          <Sparkles className="w-5 h-5 text-neutral-400/50 animate-spin" />
+        <div className="absolute inset-0 bg-neutral-900/10 dark:bg-neutral-100/10 animate-pulse flex items-center justify-center z-10 pointer-events-none">
+          <Sparkles className="w-4 h-4 text-neutral-400/40 animate-spin" />
         </div>
       )}
 
       {/* Render Fallback Graphic if double error occurs */}
       {hasFallbackError ? (
-        <div className="absolute inset-0 bg-gray-100 flex flex-col items-center justify-center p-4 text-center z-10">
-          <div className="w-10 h-10 rounded-xl bg-neutral-100 border border-neutral-200 flex items-center justify-center text-black mb-2 shadow-sm">
+        <div className="absolute inset-0 bg-neutral-950/80 backdrop-blur-sm flex flex-col items-center justify-center p-4 text-center z-10 border border-white/10">
+          <div className="w-10 h-10 rounded-xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-white mb-2 shadow-sm">
             <ImageIcon className="w-5 h-5" />
           </div>
-          <span className="text-[10px] font-bold text-gray-700 tracking-wider uppercase">
+          <span className="text-[10px] font-bold text-neutral-300 tracking-wider uppercase font-mono">
             {alt || "Interactive Experience"}
           </span>
         </div>

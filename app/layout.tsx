@@ -39,6 +39,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preload" href="/hero-main-poster.webp" as="image" type="image/webp" fetchPriority="high" />
+      </head>
       <body className={`${geistSans.className} min-h-full flex flex-col bg-white text-black selection:bg-black selection:text-white overflow-x-hidden relative`}>
         <CustomCursor />
         <div className="relative z-10 flex-1 flex flex-col">{children}</div>

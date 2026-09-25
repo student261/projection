@@ -196,7 +196,7 @@ function TiltCard({ cat, isDesktop }: { cat: any; isDesktop: boolean }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ perspective: 1200 }}
-      className="w-full h-[380px] lg:h-[460px] cursor-pointer group"
+      className="w-full h-[380px] lg:h-[410px] xl:h-[460px] cursor-pointer group"
     >
       <Link href={cat.href} className="block w-full h-full outline-none">
         <motion.div
@@ -216,10 +216,11 @@ function TiltCard({ cat, isDesktop }: { cat: any; isDesktop: boolean }) {
               <video
                 ref={videoRef}
                 src={cat.video}
+                poster={cat.img ? (cat.img.endsWith('.webp') ? cat.img : cat.img.replace(/\.(png|jpg|jpeg)$/, '.webp')) : undefined}
                 loop
                 muted
                 playsInline
-                preload="auto"
+                preload="none"
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
               />
             ) : (
@@ -248,23 +249,23 @@ function TiltCard({ cat, isDesktop }: { cat: any; isDesktop: boolean }) {
           
           {/* Floating Content Layer (Pops out in 3D) */}
           <div 
-            className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-between pointer-events-none"
+            className="absolute inset-0 p-6 lg:p-5 xl:p-8 flex flex-col justify-between pointer-events-none"
             style={{ transform: "translateZ(60px)" }} // The 3D pop out effect
           >
             <div className="flex justify-between items-start">
-              <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md mb-4 flex items-center justify-center text-white border border-white/20 shadow-xl">
+              <div className="w-10 h-10 xl:w-12 xl:h-12 rounded-xl xl:rounded-2xl bg-white/10 backdrop-blur-md mb-4 flex items-center justify-center text-white border border-white/20 shadow-xl">
                 {cat.icon}
               </div>
-              <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 shadow-xl">
+              <div className="w-9 h-9 xl:w-10 xl:h-10 rounded-full bg-white text-black flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 shadow-xl">
                 <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
               </div>
             </div>
 
             <div style={{ transform: "translateZ(40px)" }}>
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight drop-shadow-2xl">
+              <h3 className="text-xl sm:text-2xl lg:text-lg xl:text-2xl font-bold text-white mb-2 leading-tight drop-shadow-2xl">
                 {cat.title}
               </h3>
-              <p className="text-white/70 text-sm font-light drop-shadow-md">
+              <p className="text-white/70 text-xs xl:text-sm font-light drop-shadow-md">
                 {cat.desc}
               </p>
             </div>
@@ -334,9 +335,9 @@ export default function SolutionsOverview() {
   return (
     <section id="solutions-overview" className="flex flex-col">
       {/* 4 Cards Solution Overview */}
-      <div className="bg-white text-black py-14 sm:py-18 lg:py-20">
+      <div className="bg-white text-black py-10 sm:py-12 lg:py-14">
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 lg:mb-12 max-w-3xl mx-auto space-y-4">
+          <div className="text-center mb-6 sm:mb-8 max-w-3xl mx-auto space-y-2.5">
             <span className="flex justify-center items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black/50">
               <Sparkles className="w-3.5 h-3.5" />
               Discover Our Solutions
@@ -346,7 +347,7 @@ export default function SolutionsOverview() {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
             {categories.map((cat) => (
               <TiltCard key={cat.id} cat={cat} isDesktop={isDesktop} />
             ))}
@@ -355,118 +356,165 @@ export default function SolutionsOverview() {
       </div>
 
       {/* Core Capabilities Interactive Section */}
-      <div id="core-capabilities" ref={containerRef} className="bg-[#0f0f11] text-white relative lg:h-[350vh] scroll-mt-24">
+      <div id="core-capabilities" ref={containerRef} className="bg-[#0f0f11] text-white relative lg:h-[260vh] scroll-mt-24">
         
-        {/* Mobile Stacked View (< 1024px) */}
-        <div className="lg:hidden pt-28 pb-16 px-4 sm:px-6 max-w-4xl mx-auto space-y-12">
+        {/* Mobile & Tablet Interactive Showcase (< 1024px) */}
+        <div className="lg:hidden py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 max-w-5xl mx-auto w-full">
           {/* Header */}
-          <div className="space-y-3">
-            <span className="flex items-center gap-2 text-[11px] font-mono font-bold uppercase tracking-widest text-white/70">
+          <div className="space-y-2 mb-4 sm:mb-5">
+            <span className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-widest text-white/70">
               <Sparkles className="w-3.5 h-3.5" />
               Core Capabilities
             </span>
-            <h3 className="text-3xl sm:text-4xl leading-[1.08] font-black text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl leading-[1.12] font-black text-white tracking-tight">
               Everything you need in one place
             </h3>
           </div>
 
-          {/* Stacked Cards */}
-          <div className="flex flex-col gap-14">
-            {solutions.map((item) => (
-              <div key={item.id} className="flex flex-col gap-5">
-                <div className="flex items-center gap-3">
-                  <span className="text-xs font-mono font-bold px-2.5 py-1 bg-white text-black rounded">
-                    {item.num}
-                  </span>
-                  <span className="text-xs font-bold tracking-widest uppercase text-white/80">
-                    {item.subtitle}
-                  </span>
-                </div>
+          {/* Horizontal Tab Selector */}
+          <div className="flex items-center gap-5 sm:gap-6 overflow-x-auto pb-3 mb-5 sm:mb-6 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 border-b border-white/15">
+            {solutions.map((item, idx) => {
+              const isActive = activeIndex === idx;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveIndex(idx)}
+                  className="shrink-0 text-left pb-2 relative transition-all duration-300 cursor-pointer outline-none group"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className={`text-xs font-mono font-bold transition-colors ${
+                      isActive ? "text-white" : "text-white/60 group-hover:text-white"
+                    }`}>
+                      {item.num}
+                    </span>
+                    <span className={`text-xs font-bold tracking-wider uppercase whitespace-nowrap transition-colors ${
+                      isActive ? "text-white" : "text-white/60 group-hover:text-white"
+                    }`}>
+                      {item.subtitle}
+                    </span>
+                  </div>
+                  {isActive && (
+                    <motion.div
+                      layoutId="mobileCapabilitiesTab"
+                      className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
 
-                <div className="relative w-full h-[240px] sm:h-[320px] rounded-2xl overflow-hidden shadow-xl border border-white/10">
+          {/* Active Solution Card: Adaptive Stack (Mobile: vertical, Tablet: side-by-side) */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeSolution.id}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center bg-white/[0.02] border border-white/10 rounded-3xl p-5 sm:p-7 md:p-8"
+            >
+              {/* Media Container */}
+              <div className="md:col-span-6 w-full">
+                <div className="relative aspect-[16/10] sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-950">
                   <SafeImage
-                    src={item.img}
-                    alt={item.title}
+                    src={activeSolution.img}
+                    alt={activeSolution.title}
                     className="w-full h-full object-cover object-center"
                     containerClassName="w-full h-full"
                   />
-                </div>
-
-                <div className="space-y-3.5">
-                  <h4 className="text-2xl font-bold leading-[1.15] text-white">
-                    {item.title}
-                  </h4>
-                  <p className="text-white/75 font-light leading-relaxed text-sm sm:text-base">
-                    {item.description}
-                  </p>
-                  <ul className="space-y-2.5 pt-1">
-                    {item.highlights.map((point, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-white/85 font-medium">
-                        <span className="w-1.5 h-1.5 rounded-full bg-white/70 mt-1.5 shrink-0 shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="pt-3">
-                    <Link
-                      href={item.href}
-                      className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-white border border-white/25 hover:bg-white hover:text-black transition-all duration-300 shadow-md"
-                    >
-                      EXPLORE PLATFORM
-                    </Link>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
+                  {activeSolution.caption && (
+                    <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 pointer-events-none">
+                      <span className="text-[10px] sm:text-[11px] font-mono text-white/85 line-clamp-2 backdrop-blur-md bg-black/55 border border-white/10 px-2.5 py-1.5 rounded-lg inline-block">
+                        {activeSolution.caption}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
-            ))}
-          </div>
+
+              {/* Text Details */}
+              <div className="md:col-span-6 space-y-3.5 sm:space-y-4">
+                <div>
+                  <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-white/50 block mb-1">
+                    CAPABILITY {activeSolution.num}
+                  </span>
+                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight text-white">
+                    {activeSolution.title}
+                  </h4>
+                </div>
+
+                <p className="text-white/75 font-light leading-relaxed text-xs sm:text-sm">
+                  {activeSolution.description}
+                </p>
+
+                <ul className="space-y-2 pt-1">
+                  {activeSolution.highlights.map((point, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-white/85 font-medium">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white/70 mt-1.5 shrink-0 shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="pt-2 sm:pt-3">
+                  <Link
+                    href={activeSolution.href}
+                    className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-white border border-white/30 hover:bg-white hover:text-black transition-all duration-300 shadow-md cursor-pointer"
+                  >
+                    EXPLORE PLATFORM
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
         {/* Desktop Sticky View (>= 1024px) */}
-        <div className="hidden lg:flex sticky top-0 h-screen w-full flex-col justify-start overflow-hidden bg-[#0f0f11] pt-14 lg:pt-16 xl:pt-20 2xl:pt-24 pb-4">
-          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-start gap-3 xl:gap-5 relative z-10">
+        <div className="hidden lg:flex sticky top-0 h-dvh max-h-screen w-full flex-col justify-center overflow-hidden bg-[#0f0f11] pt-16 lg:pt-20 pb-4">
+          <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-6 lg:px-8 xl:px-12 w-full flex flex-col justify-center relative z-10">
             
-            {/* Header - Constrained to left side so it never collides with right image */}
-            <div className="w-full lg:w-[48%] xl:w-[48%] 2xl:w-[46%] shrink-0">
-              <div className="space-y-1 xl:space-y-2">
-                <span className="flex items-center gap-2 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest text-white/70">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  Core Capabilities
-                </span>
-                <h3 className="text-xl sm:text-2xl xl:text-4xl 2xl:text-5xl leading-[1.1] font-bold text-white tracking-tight">
-                  Everything you need in one place
-                </h3>
-              </div>
+            {/* Header */}
+            <div className="w-full lg:w-[54%] xl:w-[50%] 2xl:w-[48%] shrink-0 mb-4 xl:mb-5">
+              <span className="flex items-center gap-2 text-[11px] xl:text-xs font-bold uppercase tracking-widest text-white/80 mb-2">
+                <Sparkles className="w-3.5 h-3.5" />
+                Core Capabilities
+              </span>
+              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white tracking-tight leading-tight">
+                Everything you need in one place
+              </h3>
             </div>
 
-            {/* 2-Column Content Layout */}
-            <div className="w-full lg:w-[48%] xl:w-[48%] 2xl:w-[46%] flex items-start gap-4 xl:gap-7">
+            {/* 2-Column: Left Navigation Tabs, Right Active Content */}
+            <div className="w-full lg:w-[54%] xl:w-[50%] 2xl:w-[48%] flex items-start gap-4 lg:gap-6 xl:gap-8">
               
-              {/* Column 1: Navigation Tabs with original dot pattern */}
-              <div 
-                className="w-[145px] xl:w-[170px] shrink-0 space-y-1 xl:space-y-2 relative h-fit pr-2 overflow-hidden"
-                style={{
-                  backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
-                  backgroundSize: '24px 24px',
-                  backgroundPosition: 'left top',
-                }}
-              >
+              {/* Column 1: Vertical Tabs (Containerless, high contrast, active vertical line) */}
+              <div className="w-[155px] xl:w-[175px] shrink-0 space-y-1 xl:space-y-1.5">
                 {solutions.map((item, idx) => {
                   const isActive = activeIndex === idx;
                   return (
                     <button
                       key={item.id}
                       onClick={() => scrollToSegment(idx)}
-                      className={`w-full text-left flex items-center gap-3 xl:gap-4 py-1.5 xl:py-2 transition-all duration-300 group cursor-pointer ${
-                        isActive ? "opacity-100" : "opacity-50 hover:opacity-100"
+                      className={`w-full text-left flex items-center gap-3 py-2 pl-3 relative transition-all duration-300 group cursor-pointer outline-none ${
+                        isActive ? "text-white" : "text-white/60 hover:text-white"
                       }`}
                     >
-                      <span className={`text-[10px] xl:text-[11px] font-bold px-2 py-0.5 xl:py-1 transition-colors ${
-                        isActive ? "bg-white text-black" : "bg-transparent text-white/50 group-hover:text-white"
+                      {isActive && (
+                        <motion.div
+                          layoutId="coreCapabilitiesActiveTab"
+                          className="absolute left-0 top-1.5 bottom-1.5 w-[2px] bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+                          transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                        />
+                      )}
+                      <span className={`text-[11px] xl:text-xs font-mono font-bold transition-colors ${
+                        isActive ? "text-white" : "text-white/60 group-hover:text-white"
                       }`}>
                         {item.num}
                       </span>
-                      <span className={`text-[10px] xl:text-xs font-bold tracking-wider xl:tracking-widest uppercase transition-colors leading-tight ${
-                        isActive ? "text-white" : "text-white/50 group-hover:text-white"
+                      <span className={`text-[10px] xl:text-[11px] font-bold tracking-wider uppercase leading-tight transition-colors ${
+                        isActive ? "text-white" : "text-white/60 group-hover:text-white"
                       }`}>
                         {item.subtitle}
                       </span>
@@ -476,39 +524,42 @@ export default function SolutionsOverview() {
               </div>
 
               {/* Column 2: Active Text Content */}
-              <div className="flex-1 min-w-0 relative z-10 pr-2 lg:pr-4">
+              <div className="flex-1 min-w-0 pl-4 lg:pl-6 xl:pl-8 border-l border-white/10 relative z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeSolution.id}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.15, ease: "easeOut" }}
-                    className="space-y-2 xl:space-y-3.5"
+                    initial={{ opacity: 0, x: 8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -8 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="space-y-3.5 xl:space-y-4"
                   >
-                    <h4 className="text-lg sm:text-xl xl:text-2xl 2xl:text-3xl font-bold leading-tight text-white">
-                      {activeSolution.title}
-                    </h4>
-                    
-                    <p className="text-white/70 font-light leading-relaxed text-xs xl:text-sm 2xl:text-base">
-                      {activeSolution.description}
-                    </p>
+                    <div>
+                      <h4 className="text-xl lg:text-2xl xl:text-3xl font-bold leading-tight text-white mb-2">
+                        {activeSolution.title}
+                      </h4>
+                      
+                      <p className="text-white/80 font-normal leading-relaxed text-xs xl:text-sm max-w-lg">
+                        {activeSolution.description}
+                      </p>
+                    </div>
 
-                    <ul className="space-y-1 xl:space-y-2 pt-0.5">
+                    <ul className="space-y-1.5 xl:space-y-2 pt-0.5">
                       {activeSolution.highlights.map((point, i) => (
-                        <li key={i} className="flex items-start gap-2 xl:gap-2.5 text-xs xl:text-sm text-white/80 font-medium">
-                          <span className="w-1.5 h-1.5 rounded-full bg-white/40 mt-1.5 shrink-0" />
+                        <li key={i} className="flex items-center gap-2.5 text-xs xl:text-sm text-white/90 font-medium">
+                          <span className="w-1.5 h-1.5 rounded-full bg-white shrink-0 shadow-[0_0_6px_rgba(255,255,255,0.8)]" />
                           <span>{point}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="pt-2 xl:pt-3">
+                    <div className="pt-2">
                       <Link
                         href={activeSolution.href}
-                        className="inline-flex items-center justify-center px-5 xl:px-7 py-2 xl:py-2.5 rounded-full text-[10px] xl:text-xs font-bold uppercase tracking-widest text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+                        className="inline-flex items-center justify-center gap-2 px-6 xl:px-7 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-white border border-white/30 hover:border-white hover:bg-white hover:text-black transition-all duration-300 cursor-pointer shadow-sm group/btn"
                       >
-                        EXPLORE PLATFORM
+                        <span>EXPLORE PLATFORM</span>
+                        <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                       </Link>
                     </div>
                   </motion.div>
@@ -519,7 +570,7 @@ export default function SolutionsOverview() {
           </div>
 
           {/* Full-Height Atmospheric Media Backdrop (Full bleed on the right) */}
-          <div className="absolute right-0 inset-y-0 w-[50vw] xl:w-[48vw] pointer-events-none z-0 hidden lg:block overflow-hidden">
+          <div className="absolute right-0 inset-y-0 w-[48vw] xl:w-[50vw] 2xl:w-[54vw] pointer-events-none z-0 hidden lg:block overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeSolution.id}
@@ -534,11 +585,10 @@ export default function SolutionsOverview() {
                   alt={activeSolution.title}
                   className="w-full h-full object-cover object-center"
                   containerClassName="w-full h-full"
-                  priority
                 />
                 
-                {/* Subtle Seam Feather into #0f0f11 background */}
-                <div className="absolute inset-y-0 left-0 w-12 xl:w-20 bg-gradient-to-r from-[#0f0f11] to-transparent pointer-events-none" />
+                {/* Velvety Seam Feather into #0f0f11 background */}
+                <div className="absolute inset-y-0 left-0 w-24 lg:w-36 xl:w-52 bg-gradient-to-r from-[#0f0f11] via-[#0f0f11]/70 to-transparent pointer-events-none" />
               </motion.div>
             </AnimatePresence>
           </div>

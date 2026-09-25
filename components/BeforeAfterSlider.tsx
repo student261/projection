@@ -14,6 +14,14 @@ interface BeforeAfterSliderProps {
   className?: string;
 }
 
+const toWebp = (url: string) => {
+  if (!url) return url;
+  if ((url.endsWith(".png") || url.endsWith(".jpg") || url.endsWith(".jpeg")) && !url.startsWith("http")) {
+    return url.replace(/\.(png|jpg|jpeg)$/, ".webp");
+  }
+  return url;
+};
+
 export default function BeforeAfterSlider({
   beforeImage,
   afterImage,
@@ -99,7 +107,7 @@ export default function BeforeAfterSlider({
             <span>Interactive Transformation</span>
           </span>
           <span className="font-medium text-black/50">
-            Drag left / right to compare
+            Drag left or right to compare
           </span>
         </div>
       )}
@@ -133,14 +141,16 @@ export default function BeforeAfterSlider({
         >
           {/* After Image (Background - Activated Projection Space) */}
           <img
-            src={afterImage}
+            src={toWebp(afterImage)}
             alt="After Installation - Activated Projection"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
             draggable={false}
           />
 
           {/* After Label Badge (Floating HUD style) */}
-          <div className="absolute bottom-3.5 sm:bottom-5 right-3.5 sm:right-5 bg-black/85 backdrop-blur-md text-white text-[9px] sm:text-[11px] font-mono font-bold px-3 sm:px-3.5 py-1.5 rounded-full uppercase tracking-wider z-0 border border-white/20 shadow-lg pointer-events-none whitespace-nowrap">
+          <div className="absolute bottom-3.5 sm:bottom-5 right-3.5 sm:right-5 bg-black/85 backdrop-blur-md text-white text-[9px] sm:text-[11px] font-mono font-bold px-3 sm:px-3.5 py-1.5 rounded-md uppercase tracking-wider z-0 border border-white/20 shadow-lg pointer-events-none whitespace-nowrap">
             {afterLabel}
           </div>
 
@@ -150,8 +160,10 @@ export default function BeforeAfterSlider({
             style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
           >
             <img
-              src={beforeImage}
+              src={toWebp(beforeImage)}
               alt="Before Installation - Raw Architecture"
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
               draggable={false}
             />
@@ -159,13 +171,13 @@ export default function BeforeAfterSlider({
             <div className="absolute inset-0 bg-black/15 mix-blend-multiply pointer-events-none" />
 
             {/* Before Label Badge */}
-            <div className="absolute bottom-3.5 sm:bottom-5 left-3.5 sm:left-5 bg-black/85 backdrop-blur-md text-white text-[9px] sm:text-[11px] font-mono font-bold px-3 sm:px-3.5 py-1.5 rounded-full uppercase tracking-wider border border-white/20 shadow-lg pointer-events-none whitespace-nowrap">
+            <div className="absolute bottom-3.5 sm:bottom-5 left-3.5 sm:left-5 bg-black/85 backdrop-blur-md text-white text-[9px] sm:text-[11px] font-mono font-bold px-3 sm:px-3.5 py-1.5 rounded-md uppercase tracking-wider border border-white/20 shadow-lg pointer-events-none whitespace-nowrap">
               {beforeLabel}
             </div>
           </div>
 
-          {/* Interactive Hint Indicator (Floating Top Pill) */}
-          <div className="absolute top-3.5 sm:top-4 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white/90 text-[9px] sm:text-[11px] font-mono font-semibold px-3 sm:px-4 py-1 rounded-full uppercase tracking-widest border border-white/20 pointer-events-none z-10 shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+          {/* Interactive Hint Indicator (Floating Top HUD) */}
+          <div className="absolute top-3.5 sm:top-4 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white/90 text-[9px] sm:text-[11px] font-mono font-semibold px-3 sm:px-4 py-1 rounded-md uppercase tracking-widest border border-white/20 pointer-events-none z-10 shadow-lg flex items-center gap-1.5 whitespace-nowrap">
             <span className="text-white/60">‹</span>
             <span>DRAG TO REVEAL</span>
             <span className="text-white/60">›</span>

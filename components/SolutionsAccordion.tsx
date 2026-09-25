@@ -36,7 +36,7 @@ export default function SolutionsAccordion({ items }: { items: SolutionItem[] })
               <div className="flex items-center gap-6 md:gap-12 w-full">
                 {/* Number & Icon */}
                 <div className="flex items-center gap-6 md:w-1/4 shrink-0">
-                  <span className="text-xl md:text-2xl font-mono font-medium text-gray-300">
+                  <span className="text-xl md:text-2xl font-mono font-medium text-neutral-700">
                     0{idx + 1}
                   </span>
                   <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-500 shadow-sm ${isOpen ? 'bg-black text-white scale-110' : 'bg-white border border-gray-200 text-black group-hover:border-black'}`}>
@@ -45,7 +45,7 @@ export default function SolutionsAccordion({ items }: { items: SolutionItem[] })
                 </div>
 
                 {/* Title */}
-                <h3 className={`text-2xl md:text-4xl font-extrabold tracking-tight transition-all duration-500 ${isOpen ? 'text-black' : 'text-gray-400 group-hover:text-black'}`}>
+                <h3 className={`text-2xl md:text-4xl font-extrabold tracking-tight transition-all duration-500 ${isOpen ? 'text-black' : 'text-neutral-800 group-hover:text-black'}`}>
                   {item.title}
                 </h3>
               </div>
@@ -55,7 +55,7 @@ export default function SolutionsAccordion({ items }: { items: SolutionItem[] })
                 {isOpen ? (
                   <Minus className="w-6 h-6 md:w-8 md:h-8 text-black" />
                 ) : (
-                  <Plus className="w-6 h-6 md:w-8 md:h-8 text-gray-300 group-hover:text-black transition-colors" />
+                  <Plus className="w-6 h-6 md:w-8 md:h-8 text-neutral-700 group-hover:text-black transition-colors" />
                 )}
               </div>
             </button>

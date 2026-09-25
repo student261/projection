@@ -30,7 +30,7 @@ export default function CaseStudiesSpotlight({
       {/* Top Header & Natural Solution Switcher (Zero Cut Lines) */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-neutral-400 block mb-1">
+          <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-1">
             {eyebrow}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black">
@@ -79,18 +79,17 @@ export default function CaseStudiesSpotlight({
                   alt={active.title}
                   className="w-full h-full object-cover"
                   containerClassName="w-full h-full"
-                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
+                {active.quote && (
+                  <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 pointer-events-none">
+                    <p className="text-xs sm:text-sm text-white/90 font-light italic leading-relaxed backdrop-blur-md bg-black/40 border border-white/10 rounded-xl px-3.5 py-2 sm:px-4 sm:py-2.5">
+                      &ldquo;{active.quote}&rdquo;
+                    </p>
+                  </div>
+                )}
               </motion.div>
             </AnimatePresence>
-
-            {/* Category Tag Badge */}
-            <div className="absolute top-4 left-4 z-10 pointer-events-none">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-[10px] font-mono font-medium uppercase tracking-wider text-white">
-                {active.tag || active.client}
-              </span>
-            </div>
           </div>
         </div>
 
@@ -107,7 +106,7 @@ export default function CaseStudiesSpotlight({
             >
               {/* Category & Headline */}
               <div>
-                <span className="text-[11px] font-mono font-semibold text-neutral-400 uppercase tracking-widest block mb-1">
+                <span className="text-[11px] font-mono font-bold text-black uppercase tracking-widest block mb-1">
                   {active.tag || active.client}
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight leading-snug">
@@ -143,20 +142,6 @@ export default function CaseStudiesSpotlight({
                   </span>
                 </div>
               </div>
-
-              {/* Verified Outcome Quote */}
-              {active.quote && (
-                <blockquote className="border-l-2 border-black pl-3.5 py-0.5">
-                  <p className="text-xs sm:text-sm italic text-neutral-800 leading-relaxed font-serif">
-                    &ldquo;{active.quote}&rdquo;
-                  </p>
-                  {active.quoteAuthor && (
-                    <cite className="not-italic text-xs text-neutral-500 font-medium block mt-1">
-                      — {active.quoteAuthor}
-                    </cite>
-                  )}
-                </blockquote>
-              )}
 
               {/* Action Links */}
               <div className="pt-1 flex items-center justify-between">

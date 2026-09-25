@@ -13,8 +13,8 @@ export default function PrivacyPage() {
       <Navbar />
 
       <section className="px-4 sm:px-6 lg:px-8 pt-16 pb-12 max-w-4xl mx-auto w-full">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 border border-black/10 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/60 mb-6">
-          <ShieldCheck className="w-3.5 h-3.5" />
+        <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-6">
+          <ShieldCheck className="w-3.5 h-3.5 text-black/40" />
           <span>LEGAL & COMPLIANCE</span>
         </div>
 

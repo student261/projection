@@ -167,8 +167,8 @@ export default function Navbar() {
 
               {/* Solutions Full-bleed MegaMenu Tray */}
               <div className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-black/10 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                  <div className="grid grid-cols-12 gap-12">
+                <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                  <div className="grid grid-cols-12 gap-6 xl:gap-12">
                     <div className="col-span-7 grid grid-cols-2 gap-3">
 
                     {/* Interactive Spaces */}
@@ -329,18 +329,16 @@ export default function Navbar() {
                           className="w-full h-full object-cover brightness-105 group-hover/card:scale-105 transition-transform duration-700"
                           containerClassName="w-full h-full"
                         />
-                        <div className="absolute top-2.5 left-2.5 z-10">
-                          <span className="text-[9px] font-mono font-bold tracking-widest text-white bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-full uppercase border border-white/20">
+                      </div>
+                      <div className="pt-3 space-y-1.5 flex-1 flex flex-col justify-between">
+                        <div>
+                          <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/50 font-semibold block mb-1">
                             {solPreview.badge}
                           </span>
-                        </div>
-                      </div>
-                      <div className="pt-4 space-y-2 flex-1 flex flex-col justify-between">
-                        <div>
                           <h4 className="text-base font-black text-white tracking-tight">{solPreview.title}</h4>
                           <p className="text-xs text-white/75 font-light leading-relaxed line-clamp-2 mt-1">{solPreview.desc}</p>
                         </div>
-                        <div className="pt-2 inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover/card:text-blue-300 transition-colors">
+                        <div className="pt-2 inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover/card:text-white/80 transition-colors">
                           <span>Explore Solution</span>
                           <ArrowRight className="w-3.5 h-3.5 group-hover/card:translate-x-1 transition-transform" />
                         </div>
@@ -367,8 +365,8 @@ export default function Navbar() {
 
               {/* Industries Full-bleed MegaMenu Tray */}
               <div className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-black/10 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                  <div className="grid grid-cols-12 gap-12">
+                <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                  <div className="grid grid-cols-12 gap-6 xl:gap-12">
                     <div className="col-span-7 grid grid-cols-2 gap-3">
 
                     {/* 1. Retail */}
@@ -529,18 +527,16 @@ export default function Navbar() {
                           className="w-full h-full object-cover brightness-105 group-hover/card:scale-105 transition-transform duration-700"
                           containerClassName="w-full h-full"
                         />
-                        <div className="absolute top-2.5 left-2.5 z-10">
-                          <span className="text-[9px] font-mono font-bold tracking-widest text-white bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-full uppercase border border-white/20">
+                      </div>
+                      <div className="pt-3 space-y-1.5 flex-1 flex flex-col justify-between">
+                        <div>
+                          <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/50 font-semibold block mb-1">
                             {indPreview.badge}
                           </span>
-                        </div>
-                      </div>
-                      <div className="pt-4 space-y-2 flex-1 flex flex-col justify-between">
-                        <div>
                           <h4 className="text-base font-black text-white tracking-tight">{indPreview.title}</h4>
                           <p className="text-xs text-white/75 font-light leading-relaxed line-clamp-2 mt-1">{indPreview.desc}</p>
                         </div>
-                        <div className="pt-2 inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover/card:text-blue-300 transition-colors">
+                        <div className="pt-2 inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover/card:text-white/80 transition-colors">
                           <span>Explore Sector Portfolio</span>
                           <ArrowRight className="w-3.5 h-3.5 group-hover/card:translate-x-1 transition-transform" />
                         </div>
@@ -686,7 +682,7 @@ export default function Navbar() {
               <div className="pb-6 space-y-6">
                 <div>
                   <Link href="/solutions/interactive-spaces" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
-                    <Sparkles className="w-4 h-4 text-blue-600" />
+                    <Sparkles className="w-4 h-4 text-black" />
                     Interactive Spaces
                   </Link>
                   <div className="pl-6 space-y-2.5 mt-1">
@@ -700,7 +696,7 @@ export default function Navbar() {
 
                 <div>
                   <Link href="/solutions/immersive-environment" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
-                    <Projector className="w-4 h-4 text-purple-600" />
+                    <Projector className="w-4 h-4 text-black" />
                     Immersive Environment
                   </Link>
                   <div className="pl-6 space-y-2.5 mt-1">
@@ -713,7 +709,7 @@ export default function Navbar() {
 
                 <div>
                   <Link href="/solutions/ai-experience" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
-                    <Brain className="w-4 h-4 text-emerald-600" />
+                    <Brain className="w-4 h-4 text-black" />
                     AI Experience
                   </Link>
                   <div className="pl-6 space-y-2.5 mt-1">
@@ -723,7 +719,7 @@ export default function Navbar() {
 
                 <div>
                   <Link href="/solutions/solution-engagement" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
-                    <Gamepad2 className="w-4 h-4 text-orange-600" />
+                    <Gamepad2 className="w-4 h-4 text-black" />
                     Solution Engagement
                   </Link>
                   <div className="pl-6 space-y-2.5 mt-1">

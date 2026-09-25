@@ -31,7 +31,7 @@ export default function HugeCTA({
   bgImg = "/images/architectural_light_beam.jpg",
 }: HugeCTAProps = {}) {
   return (
-    <section className="relative z-10 py-10 sm:py-16 lg:py-20 overflow-hidden bg-black text-white w-full shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
+    <section className="relative z-10 py-8 sm:py-10 lg:py-12 overflow-hidden bg-black text-white w-full shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
       {/* Full-width Background Image */}
       <div className="absolute inset-0 z-0">
         <SafeImage

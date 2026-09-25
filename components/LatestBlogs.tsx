@@ -40,10 +40,10 @@ const blogs = [
 
 export default function LatestBlogs() {
   return (
-    <section className="py-12 lg:py-16 xl:py-20 bg-[var(--background)]">
+    <section className="py-10 sm:py-12 lg:py-14 bg-[var(--background)]">
       <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
+        <div className="max-w-3xl mb-6 sm:mb-8 space-y-3">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function LatestBlogs() {
         </div>
 
         {/* 3 Blog Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
           {blogs.map((blog, index) => (
             <motion.article
               key={blog.id}
@@ -94,13 +94,12 @@ export default function LatestBlogs() {
                     className="w-full h-full object-cover"
                     containerClassName="w-full h-full absolute inset-0"
                   />
-                  <div className="absolute top-4 left-4 bg-[var(--background)]/80 backdrop-blur-md px-3 py-1.5 text-[10px] sm:text-[11px] font-bold text-[var(--foreground)] uppercase tracking-widest rounded-full border border-[var(--border-light)]">
-                    {blog.category}
-                  </div>
                 </Link>
 
                 <div className="px-1 flex-grow flex flex-col space-y-3">
-                  <div className="flex items-center gap-4 text-[11px] text-[var(--text-secondary)] uppercase font-bold">
+                  <div className="flex items-center gap-3 text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-black/50 font-semibold">
+                    <span className="text-black font-bold">{blog.category}</span>
+                    <span>•</span>
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3 h-3 opacity-50" />
                       <span>{blog.date}</span>
@@ -114,12 +113,12 @@ export default function LatestBlogs() {
 
                   <Link
                     href={`/blogs/${blog.slug}`}
-                    className="block text-xl font-black text-[var(--foreground)] tracking-tight group-hover:text-black transition-colors leading-tight"
+                    className="block text-lg xl:text-xl font-black text-[var(--foreground)] tracking-tight group-hover:text-black transition-colors leading-tight sm:min-h-[3.25rem] line-clamp-2"
                   >
                     {blog.title}
                   </Link>
 
-                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-light leading-relaxed flex-1 line-clamp-3">
                     {blog.desc}
                   </p>
                 </div>

@@ -62,17 +62,17 @@ export default function WhyChooseUs() {
   }, []);
 
   return (
-    <section className="py-10 lg:py-12 bg-white text-black relative">
+    <section className="py-10 sm:py-12 lg:py-14 bg-white text-black relative">
       <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="mb-8 lg:mb-10 max-w-4xl">
+        <div className="mb-5 sm:mb-6 max-w-4xl">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2 sm:mb-3 block"
+            className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2 sm:mb-3 block"
           >
             WHY CHOOSE US
           </motion.p>
@@ -89,10 +89,10 @@ export default function WhyChooseUs() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start relative">
           
           {/* Right Column: Supporting Image (Hidden on Mobile, Sticky on Desktop) */}
-          <div className="hidden lg:block lg:order-2 lg:col-span-6 relative lg:sticky lg:top-28 h-[480px] rounded-3xl overflow-hidden bg-gray-100 shadow-xl border border-black/5 z-10">
+          <div className="hidden lg:block lg:order-2 lg:col-span-6 relative lg:sticky lg:top-24 xl:top-28 h-[380px] xl:h-[460px] 2xl:h-[500px] rounded-3xl overflow-hidden bg-gray-100 shadow-xl border border-black/5 z-10">
             <AnimatePresence mode="wait">
               <motion.div
                 key={whyUsCards[hoveredIndex].id}
@@ -130,21 +130,21 @@ export default function WhyChooseUs() {
                   onClick={() => setHoveredIndex(index)}
                   className="group border-t border-gray-200 hover:border-black/50 transition-colors duration-300 cursor-pointer overflow-hidden"
                 >
-                  <div className="py-3 lg:py-4 flex flex-row items-center justify-between gap-4">
+                  <div className="py-3 lg:py-3.5 xl:py-4 flex flex-row items-center justify-between gap-4">
                     
                     {/* Left: Number and Title */}
-                    <div className="flex flex-row items-start lg:items-center gap-3 lg:gap-5">
-                      <span className={`text-sm lg:text-base font-bold font-mono transition-colors duration-300 ${isHovered ? 'text-black' : 'text-gray-400'}`}>
+                    <div className="flex flex-row items-start lg:items-center gap-3 lg:gap-4 xl:gap-5">
+                      <span className={`text-sm lg:text-base font-bold font-mono transition-colors duration-300 ${isHovered ? 'text-black' : 'text-neutral-700'}`}>
                         {num}
                       </span>
-                      <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold transition-colors duration-300 ${isHovered ? 'text-black' : 'text-gray-400'}`}>
+                      <h3 className={`text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold transition-colors duration-300 ${isHovered ? 'text-black' : 'text-neutral-800 group-hover:text-black'}`}>
                         {card.title}
                       </h3>
                     </div>
 
                     {/* Right: Icon */}
-                    <div className={`w-8 h-8 lg:w-10 lg:h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${isHovered ? 'bg-black text-white shadow-md' : 'bg-gray-50 text-gray-500'}`}>
-                       <Icon className="w-4 h-4 lg:w-5 lg:h-5" />
+                    <div className={`w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${isHovered ? 'bg-black text-white shadow-md' : 'bg-gray-50 text-gray-500'}`}>
+                       <Icon className="w-4 h-4 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5" />
                     </div>
                   </div>
 

@@ -40,7 +40,7 @@ export default function ContactPage() {
       {/* SECTION 01: CLEAN LIGHT-THEME HERO BANNER */}
       <section className="relative pt-32 pb-12 sm:pt-40 sm:pb-16 w-full bg-white text-black flex flex-col justify-center overflow-hidden">
         {/* Center Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+        <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
           <div className="max-w-4xl mx-auto space-y-6 sm:space-y-7">
             
             {/* Tag (No Pill Container) */}
@@ -51,7 +51,7 @@ export default function ContactPage() {
 
             <h1 className="font-black tracking-tight text-black leading-[1.05] text-[clamp(2rem,5.2vw,5rem)]">
               Initiate Your <br />
-              <span className="font-light text-black/70">Spatial Transformation</span>
+              Spatial Transformation
             </h1>
 
             <p className="text-sm sm:text-base lg:text-lg text-black/75 font-light leading-relaxed max-w-2xl mx-auto">
@@ -73,21 +73,21 @@ export default function ContactPage() {
             <div className="pt-12 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-neutral-50 border border-black/5 hover:border-black/10 transition-colors">
                 <Clock className="w-5 h-5 text-black mb-3" />
-                <span className="text-[10px] font-mono tracking-widest text-black/50 uppercase font-semibold">RESPONSE TIME</span>
+                <span className="text-[10px] font-mono tracking-widest text-black uppercase font-bold">RESPONSE TIME</span>
                 <p className="text-xs sm:text-sm text-black font-bold mt-1">Sub-24h Technical Review</p>
-                <span className="text-[10px] text-black/40 font-light mt-1">Direct senior engineering review</span>
+                <span className="text-[10px] text-neutral-600 font-light mt-1">Direct senior engineering review</span>
               </div>
               <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-neutral-50 border border-black/5 hover:border-black/10 transition-colors">
                 <ShieldCheck className="w-5 h-5 text-black mb-3" />
-                <span className="text-[10px] font-mono tracking-widest text-black/50 uppercase font-semibold">CONFIDENTIALITY</span>
+                <span className="text-[10px] font-mono tracking-widest text-black uppercase font-bold">CONFIDENTIALITY</span>
                 <p className="text-xs sm:text-sm text-black font-bold mt-1">Mutual NDA Protected</p>
-                <span className="text-[10px] text-black/40 font-light mt-1">Full proprietary IP coverage</span>
+                <span className="text-[10px] text-neutral-600 font-light mt-1">Full proprietary IP coverage</span>
               </div>
               <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-neutral-50 border border-black/5 hover:border-black/10 transition-colors">
                 <Globe className="w-5 h-5 text-black mb-3" />
-                <span className="text-[10px] font-mono tracking-widest text-black/50 uppercase font-semibold">DIRECT ACCESS</span>
+                <span className="text-[10px] font-mono tracking-widest text-black uppercase font-bold">DIRECT ACCESS</span>
                 <p className="text-xs sm:text-sm text-black font-bold mt-1">Lead Hardware Architects</p>
-                <span className="text-[10px] text-black/40 font-light mt-1">No sales intermediaries</span>
+                <span className="text-[10px] text-neutral-600 font-light mt-1">No sales intermediaries</span>
               </div>
             </div>
           </div>
@@ -96,8 +96,8 @@ export default function ContactPage() {
 
       {/* SECTION 02: SCOPING FORM & STUDIO HUBS */}
       <section id="scoping-form" className="py-12 sm:py-16 bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-start">
             
             {/* Left Column: Form (7 Cols) */}
             <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-black/10 shadow-xl">
@@ -288,7 +288,7 @@ export default function ContactPage() {
                 <div className="space-y-4 text-xs font-light text-white/80">
                   <div className="flex items-start gap-3.5 p-3 rounded-xl bg-white/5 border border-white/10">
                     <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <Mail className="w-4 h-4 text-cyan-400" />
+                      <Mail className="w-4 h-4 text-white/80" />
                     </div>
                     <div>
                       <span className="text-[10px] font-mono uppercase tracking-wider text-white/50 block">Engineering Briefs</span>
@@ -300,7 +300,7 @@ export default function ContactPage() {
 
                   <div className="flex items-start gap-3.5 p-3 rounded-xl bg-white/5 border border-white/10">
                     <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <Phone className="w-4 h-4 text-cyan-400" />
+                      <Phone className="w-4 h-4 text-white/80" />
                     </div>
                     <div>
                       <span className="text-[10px] font-mono uppercase tracking-wider text-white/50 block">Studio Hotline</span>
@@ -312,7 +312,7 @@ export default function ContactPage() {
 
                   <div className="flex items-start gap-3.5 p-3 rounded-xl bg-white/5 border border-white/10">
                     <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <MapPin className="w-4 h-4 text-cyan-400" />
+                      <MapPin className="w-4 h-4 text-white/80" />
                     </div>
                     <div>
                       <span className="text-[10px] font-mono uppercase tracking-wider text-white/50 block">R&amp;D Testing Chambers</span>

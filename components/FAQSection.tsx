@@ -70,7 +70,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-12 lg:py-16 relative overflow-hidden bg-[var(--background)]" id="faqs">
+    <section className="py-10 sm:py-12 lg:py-14 relative overflow-hidden bg-[var(--background)]" id="faqs">
       {/* Subtle background gradients */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-black/5 blur-[140px] rounded-full" />
@@ -79,7 +79,7 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-10 lg:mb-12 space-y-3">
+        <div className="text-center mb-6 sm:mb-8 space-y-3">
           <div className="flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2">
             <HelpCircle className="w-3.5 h-3.5 text-black/40" />
             <span>KNOWLEDGE BASE</span>
@@ -88,13 +88,13 @@ export default function FAQSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-[var(--foreground)]">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-[var(--text-secondary)] font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-[var(--text-secondary)] font-light max-w-2xl mx-auto leading-relaxed">
             Find answers to the most common questions about our interactive solutions, supported industries, customization options, installation process, and ongoing support.
           </p>
         </div>
 
         {/* FAQ Accordion List (Retail-Showrooms / Industry Reference Pattern) */}
-        <div className="space-y-2 mb-10 divide-y divide-neutral-200/80">
+        <div className="space-y-2 mb-4 divide-y divide-neutral-200/80">
           {faqs.map((faq, idx) => {
             const isOpen = openFaqIdx === idx;
             const itemNum = String(idx + 1).padStart(2, "0");

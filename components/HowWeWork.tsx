@@ -49,16 +49,16 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section className="pt-12 sm:pt-16 lg:pt-20 pb-0 bg-gray-50/50 text-black relative overflow-hidden">
+    <section className="pt-10 sm:pt-12 lg:pt-14 pb-0 bg-gray-50/50 text-black relative overflow-hidden">
       {/* Background ambient light */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-black/5 blur-[160px] rounded-full" />
       </div>
 
-      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-12 sm:pb-16 lg:pb-20">
+      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-8 sm:pb-10 lg:pb-12">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-8 sm:mb-10 lg:mb-12 space-y-2 flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0">
+        <div className="max-w-3xl mb-6 sm:mb-8 space-y-2 flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0">
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ export default function HowWeWork() {
         </div>
 
         {/* Desktop 5-Column Process Grid (>= lg) */}
-        <div className="hidden lg:grid lg:grid-cols-5 gap-5 xl:gap-7 2xl:gap-8 items-start relative z-10">
+        <div className="hidden lg:grid lg:grid-cols-5 gap-3.5 xl:gap-6 2xl:gap-8 items-start relative z-10">
           {steps.map((step, index) => {
             const Icon = step.icon;
 
@@ -145,21 +145,21 @@ export default function HowWeWork() {
                 {/* Upper Content Area */}
                 <div className="w-full relative">
                   {/* Icon Squircle Node */}
-                  <div className="w-14 h-14 xl:w-16 xl:h-16 rounded-2xl bg-white border border-black/10 shadow-sm flex items-center justify-center mb-4 xl:mb-5 shrink-0 group-hover:border-black group-hover:shadow-md transition-all duration-300 relative z-10">
-                    <Icon className="w-6 h-6 xl:w-7 xl:h-7 text-black group-hover:scale-105 transition-transform duration-300" />
+                  <div className="w-12 h-12 xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 rounded-xl xl:rounded-2xl bg-white border border-black/10 shadow-sm flex items-center justify-center mb-3.5 xl:mb-5 shrink-0 group-hover:border-black group-hover:shadow-md transition-all duration-300 relative z-10">
+                    <Icon className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 text-black group-hover:scale-105 transition-transform duration-300" />
                   </div>
 
                   {/* Title & Subtitle */}
-                  <h3 className="text-lg xl:text-xl 2xl:text-2xl font-extrabold text-black tracking-tight leading-tight mb-1">
+                  <h3 className="text-base xl:text-lg 2xl:text-2xl font-extrabold text-black tracking-tight leading-tight mb-1">
                     {step.title}
                   </h3>
 
-                  <span className="text-[10px] sm:text-[11px] font-bold text-black/50 uppercase tracking-widest mb-2.5 block">
+                  <span className="text-[10px] xl:text-[11px] font-bold text-black/50 uppercase tracking-wider xl:tracking-widest mb-2 xl:mb-2.5 block">
                     {step.subtitle}
                   </span>
 
                   {/* Body Description */}
-                  <p className="text-xs sm:text-sm text-black/75 font-normal leading-relaxed">
+                  <p className="text-xs xl:text-sm text-black/75 font-normal leading-relaxed">
                     {step.desc}
                   </p>
                 </div>

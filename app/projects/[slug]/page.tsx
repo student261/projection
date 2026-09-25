@@ -954,12 +954,12 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
           {project.heroVideo ? (
             <video 
               src={project.heroVideo} 
-              poster={project.heroImg}
+              poster={project.heroImg ? (project.heroImg.endsWith('.webp') ? project.heroImg : project.heroImg.replace(/\.(png|jpg|jpeg)$/, '.webp')) : undefined}
               autoPlay 
               loop 
               muted 
               playsInline 
-              preload="auto"
+              preload="metadata"
               className="w-full h-full object-cover opacity-85 brightness-105 contrast-105" 
             />
           ) : (
@@ -978,20 +978,22 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
         {/* Center Hero Content (Left-aligned over architectural backdrop) */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
           <div className="max-w-3xl space-y-4 sm:space-y-5">
-            {/* Eyebrow Pill Badges */}
-            <div className="flex flex-wrap items-center gap-2.5 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em]">
-              <span className="px-3.5 py-1 rounded-full border border-white/30 text-white bg-white/10 backdrop-blur-md shadow-sm">
-                CASE STUDY
-              </span>
+            {/* Eyebrow Breadcrumb */}
+            <div className="flex flex-wrap items-center gap-2.5 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/70">
+              <span className="text-white font-bold">CASE STUDY</span>
               {project.heroVideo && (
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-400/40 text-emerald-300 bg-emerald-950/60 backdrop-blur-md shadow-sm">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>LIVE FOOTAGE</span>
-                </span>
+                <>
+                  <span className="text-white/30">•</span>
+                  <span className="inline-flex items-center gap-1.5 text-white/90">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                    <span>LIVE FOOTAGE</span>
+                  </span>
+                </>
               )}
+              <span className="text-white/30">•</span>
               <Link
                 href={project.industryHref}
-                className="px-3.5 py-1 rounded-full border border-white/20 text-white/80 hover:text-white hover:bg-white/10 transition-colors backdrop-blur-sm"
+                className="text-white/80 hover:text-white transition-colors"
               >
                 {project.industry}
               </Link>
@@ -1002,10 +1004,17 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
               {project.title}
             </h1>
 
-            {/* Subtitle / Experience Details */}
-            <p className="text-sm sm:text-base lg:text-lg text-white/85 font-light leading-relaxed max-w-2xl drop-shadow-md">
-              {project.experienceType}
-            </p>
+            {/* Subtitle & Executive Project Overview */}
+            <div className="space-y-2 max-w-2xl">
+              <span className="text-xs sm:text-sm font-mono uppercase tracking-wider text-white/70 font-semibold block">
+                {project.experienceType}
+              </span>
+              {project.overview && (
+                <p className="text-sm sm:text-base lg:text-lg text-white/90 font-light leading-relaxed drop-shadow-md">
+                  {project.overview}
+                </p>
+              )}
+            </div>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-1">
@@ -1050,10 +1059,10 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
         {project.beforeImg && (
           <div className="space-y-3 sm:space-y-4">
             <div className="space-y-1 text-center max-w-2xl mx-auto">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/5 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black">
-                <Sparkles className="w-3 h-3 text-black" />
+              <div className="flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50">
+                <Sparkles className="w-3.5 h-3.5 text-black/40" />
                 <span>SPATIAL TRANSFORMATION</span>
-              </span>
+              </div>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight text-black">
                 Raw Architecture vs. Activated Projection
               </h2>
@@ -1087,13 +1096,12 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
             {/* Challenge (Elevated Dark Slate Card) */}
             <div className="p-5 sm:p-8 lg:p-10 rounded-3xl border border-neutral-800 bg-neutral-950 text-white flex flex-col justify-between shadow-2xl relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
               <div className="space-y-4 relative z-10">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider bg-red-500/15 border border-red-500/30 text-red-400 shadow-sm">
-                    <AlertCircle className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/70">
+                    <AlertCircle className="w-3.5 h-3.5 text-white/50" />
                     <span>THE CHALLENGE</span>
-                  </span>
+                  </div>
                   <span className="text-[10px] font-mono text-white/40 uppercase font-semibold">SITE CONSTRAINTS</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white pt-1">
@@ -1103,21 +1111,20 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
                   {project.challenge}
                 </p>
               </div>
-              <div className="mt-8 flex items-center gap-2 text-xs font-mono text-red-400 font-medium relative z-10">
-                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+              <div className="mt-8 flex items-center gap-2 text-xs font-mono text-white/70 font-medium relative z-10">
+                <span className="w-2 h-2 rounded-full bg-white/60 animate-pulse" />
                 <span>Critical Site Obstacles Scoped &amp; Mitigated</span>
               </div>
             </div>
 
             {/* Objective (Elevated Pure White Card) */}
             <div className="p-5 sm:p-8 lg:p-10 rounded-3xl border border-black/10 bg-white text-black flex flex-col justify-between shadow-xl relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
               <div className="space-y-4 relative z-10">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider bg-blue-500/10 border border-blue-500/25 text-blue-600 shadow-sm">
-                    <Target className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50">
+                    <Target className="w-3.5 h-3.5 text-black/40" />
                     <span>THE OBJECTIVE</span>
-                  </span>
+                  </div>
                   <span className="text-[10px] font-mono text-black/40 uppercase font-semibold">STRATEGIC GOALS</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black tracking-tight text-black pt-1">
@@ -1127,8 +1134,8 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
                   {project.objective}
                 </p>
               </div>
-              <div className="mt-8 flex items-center gap-2 text-xs font-mono text-blue-600 font-medium relative z-10">
-                <span className="w-2 h-2 rounded-full bg-blue-500" />
+              <div className="mt-8 flex items-center gap-2 text-xs font-mono text-black/70 font-medium relative z-10">
+                <span className="w-2 h-2 rounded-full bg-black/60" />
                 <span>Verified Visitor Engagement Mandate</span>
               </div>
             </div>
@@ -1151,10 +1158,10 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
             <div className="lg:col-span-7 p-5 sm:p-8 lg:p-10 rounded-3xl border border-black/10 bg-white shadow-xl flex flex-col justify-between space-y-6 relative overflow-hidden group">
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-600 font-bold bg-emerald-50 border border-emerald-200/80 px-3.5 py-1 rounded-full shadow-sm">
-                    <Sparkles className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50">
+                    <Sparkles className="w-3.5 h-3.5 text-black/40" />
                     <span>THE SOLUTION</span>
-                  </span>
+                  </div>
                   <span className="text-[10px] font-mono text-black/40 uppercase font-semibold">SPATIAL CONCEPT &amp; DESIGN</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black tracking-tight text-black pt-1">
@@ -1163,16 +1170,6 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
                 <p className="text-xs sm:text-sm text-neutral-700 font-light leading-relaxed">
                   {project.solution}
                 </p>
-                {project.overview && (
-                  <div className="bg-neutral-50 rounded-2xl p-4 sm:p-5 border border-black/5 space-y-1.5">
-                    <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-black/40 font-bold block">
-                      DEPLOYMENT VISION
-                    </span>
-                    <p className="text-xs sm:text-sm text-neutral-800 font-light italic leading-relaxed">
-                      &ldquo;{project.overview}&rdquo;
-                    </p>
-                  </div>
-                )}
               </div>
 
               {/* Spatial Mechanics Pillars */}
@@ -1194,13 +1191,12 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
 
             {/* Technology Stack (5 Cols) */}
             <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl border border-neutral-800 bg-neutral-950 text-white shadow-2xl flex flex-col justify-between space-y-6 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
               <div className="space-y-5 relative z-10">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.2em] text-cyan-400 font-bold bg-cyan-500/15 border border-cyan-500/30 px-3.5 py-1 rounded-full shadow-sm">
-                    <Cpu className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/70">
+                    <Cpu className="w-3.5 h-3.5 text-white/50" />
                     <span>THE TECHNOLOGY</span>
-                  </span>
+                  </div>
                   <span className="text-[10px] font-mono text-white/40 uppercase font-semibold">HARDWARE &amp; SENSORS</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white pt-1">
@@ -1210,9 +1206,9 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
                   {project.techUsed.map((t, i) => (
                     <div
                       key={i}
-                      className="p-3 sm:p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] hover:border-cyan-500/40 hover:bg-white/[0.07] transition-all flex items-start gap-3 group/item"
+                      className="p-3 sm:p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] hover:border-white/25 hover:bg-white/[0.07] transition-all flex items-start gap-3 group/item"
                     >
-                      <div className="mt-1 w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)] shrink-0" />
+                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/80 shrink-0" />
                       <div className="min-w-0 flex-1">
                         <p className="text-xs sm:text-sm text-neutral-200 font-medium leading-snug tracking-wide">
                           {t}
@@ -1226,10 +1222,10 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
               {/* Status Indicator Bar */}
               <div className="pt-2 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-white/50 relative z-10">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-white/80 animate-pulse" />
                   <span className="text-neutral-300 font-medium">Commercial Duty Cycle</span>
                 </span>
-                <span className="uppercase tracking-widest text-cyan-400/80 font-bold">ACTIVE TELEMETRY</span>
+                <span className="uppercase tracking-widest text-white/80 font-bold">ACTIVE TELEMETRY</span>
               </div>
             </div>
           </div>
@@ -1249,13 +1245,12 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
             {/* Execution (6 Cols - Elevated Dark Obsidian Chassis) */}
             <div className="lg:col-span-6 p-5 sm:p-8 lg:p-10 rounded-3xl border border-neutral-800 bg-neutral-950 text-white shadow-2xl flex flex-col justify-between space-y-6 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
               <div className="space-y-5 relative z-10">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.2em] text-amber-400 font-bold bg-amber-500/15 border border-amber-500/30 px-3.5 py-1 rounded-full shadow-sm">
-                    <Wrench className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/70">
+                    <Wrench className="w-3.5 h-3.5 text-white/50" />
                     <span>THE EXECUTION</span>
-                  </span>
+                  </div>
                   <span className="text-[10px] font-mono text-white/40 uppercase font-semibold">COMMISSIONING PROTOCOL</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white pt-1">
@@ -1269,15 +1264,15 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
               {/* Commissioning Milestones Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 pt-2 relative z-10">
                 <div className="p-3 sm:p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] space-y-1">
-                  <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-amber-400 block">RIGGING</span>
+                  <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-white/60 block">RIGGING</span>
                   <span className="text-[11px] sm:text-xs font-semibold text-white block leading-tight">Non-Invasive Mounts</span>
                 </div>
                 <div className="p-3 sm:p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] space-y-1">
-                  <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-amber-400 block">CALIBRATION</span>
+                  <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-white/60 block">CALIBRATION</span>
                   <span className="text-[11px] sm:text-xs font-semibold text-white block leading-tight">Sub-Millimeter Blend</span>
                 </div>
                 <div className="p-3 sm:p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] space-y-1">
-                  <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-amber-400 block">TELEMETRY</span>
+                  <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-white/60 block">TELEMETRY</span>
                   <span className="text-[11px] sm:text-xs font-semibold text-white block leading-tight">24/7 Cloud Health</span>
                 </div>
               </div>
@@ -1285,22 +1280,21 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
               {/* Commissioning Status Indicator Bar */}
               <div className="pt-2 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-white/50 relative z-10">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-white/80 animate-pulse" />
                   <span className="text-neutral-300 font-medium">Turnkey Field Implementation</span>
                 </span>
-                <span className="uppercase tracking-widest text-amber-400/80 font-bold">CERTIFIED COMMISSIONING</span>
+                <span className="uppercase tracking-widest text-white/80 font-bold">CERTIFIED COMMISSIONING</span>
               </div>
             </div>
 
             {/* Result (6 Cols - Elevated Pure White Card with Metric Pods) */}
             <div className="lg:col-span-6 p-5 sm:p-8 lg:p-10 rounded-3xl border border-black/10 bg-white text-black shadow-xl flex flex-col justify-between space-y-6 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
               <div className="space-y-5 relative z-10">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.2em] text-purple-600 font-bold bg-purple-50 border border-purple-200/80 px-3.5 py-1 rounded-full shadow-sm">
-                    <BarChart3 className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50">
+                    <BarChart3 className="w-3.5 h-3.5 text-black/40" />
                     <span>THE RESULT</span>
-                  </span>
+                  </div>
                   <span className="text-[10px] font-mono text-black/40 uppercase font-semibold">MEASURABLE IMPACT &amp; ROI</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black tracking-tight text-black pt-1">
@@ -1316,7 +1310,7 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
                 {project.results.map((res, i) => (
                   <div
                     key={i}
-                    className="p-3.5 sm:p-4 rounded-2xl bg-neutral-50 border border-black/5 hover:border-purple-300 hover:bg-neutral-100/60 transition-all flex flex-col justify-start space-y-1 group/metric"
+                    className="p-3.5 sm:p-4 rounded-2xl bg-neutral-50 border border-black/5 hover:border-black/20 hover:bg-neutral-100/60 transition-all flex flex-col justify-start space-y-1 group/metric"
                   >
                     <div className="h-7 sm:h-9 lg:h-10 flex items-center">
                       <span className="text-xl sm:text-2xl lg:text-3xl font-black text-black font-sans tracking-tight leading-none">
@@ -1333,10 +1327,10 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
               {/* Result Status Indicator Bar */}
               <div className="pt-2 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-black/50 relative z-10">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-purple-600" />
+                  <span className="w-2 h-2 rounded-full bg-black/60" />
                   <span className="text-neutral-700 font-medium">Audience Validation Verified</span>
                 </span>
-                <span className="uppercase tracking-widest text-purple-600 font-bold">PROJECT TARGET MET</span>
+                <span className="uppercase tracking-widest text-black/70 font-bold">PROJECT TARGET MET</span>
               </div>
             </div>
           </div>
@@ -1365,7 +1359,7 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 <div className="absolute bottom-3 left-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-white bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                  <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-white bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/20">
                     Field View {i + 1}
                   </span>
                 </div>
@@ -1390,10 +1384,10 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
             <div className="p-8 sm:p-10 rounded-3xl border border-black/10 bg-white shadow-xl flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-600 font-bold bg-emerald-50 border border-emerald-200/80 px-3.5 py-1 rounded-full shadow-sm">
-                    <Sparkles className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50">
+                    <Sparkles className="w-3.5 h-3.5 text-black/40" />
                     <span>CAPABILITIES</span>
-                  </span>
+                  </div>
                   <span className="text-[10px] font-mono text-black/40 uppercase font-semibold">SPATIAL SOLUTIONS</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black tracking-tight text-black pt-1">
@@ -1431,10 +1425,10 @@ export default async function CaseStudyPage(props: { params: Promise<{ slug: str
             <div className="p-8 sm:p-10 rounded-3xl border border-black/10 bg-white shadow-xl flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.2em] text-blue-600 font-bold bg-blue-50 border border-blue-200/80 px-3.5 py-1 rounded-full shadow-sm">
-                    <Target className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50">
+                    <Target className="w-3.5 h-3.5 text-black/40" />
                     <span>APPLICATIONS</span>
-                  </span>
+                  </div>
                   <span className="text-[10px] font-mono text-black/40 uppercase font-semibold">COMMERCIAL VERTICALS</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black tracking-tight text-black pt-1">
