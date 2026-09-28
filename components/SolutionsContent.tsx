@@ -7,12 +7,12 @@ import { ArrowRight, CheckCircle2, ChevronDown, Play } from "lucide-react";
 
 const solutionsData = [
   {
-    id: "interactive-spaces",
+    id: "interactive-projection",
     num: "01",
-    title: "Interactive Experiences",
+    title: "Interactive Projection",
     subtitle: "Turn Surfaces Into Active Digital Spaces",
     badge: "Motion Projection • Floor & Wall",
-    desc: "Transform everyday surfaces—floors, walls, tables, and windows—into responsive digital environments that encourage movement, participation, and discovery.",
+    desc: "Transform everyday surfaces including floors, walls, tables, and windows into responsive digital environments that encourage movement, participation, and discovery.",
     useCase: "Ideal for retail pop-ups, museum exhibits, and pediatric waiting rooms.",
     img: "/images/interactive_floor_motion.jpg",
     features: [
@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     q: "Can solutions be customized for small or large commercial spaces?",
-    a: "Yes. Our systems are modular—from single-projector floor units for retail pop-ups to multi-projector 360-degree rooms for theme venues and museums.",
+    a: "Yes. Our systems are modular, from single-projector floor units for retail pop-ups to multi-projector 360-degree rooms for theme venues and museums.",
   },
   {
     q: "Do you provide remote content updates and ongoing support?",

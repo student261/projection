@@ -8,31 +8,37 @@ import { useState, useEffect } from "react";
 
 const projects = [
   {
-    id: "aura-cathedral",
-    title: "Sanctuary of Light Cathedral",
-    category: "360° Heritage Mapping",
-    location: "Architectural Sanctuary",
-    desc: "An architectural projection mapping showcase transforming stone archways with responsive light and geometry.",
-    img: "/images/cathedral_projection_mapping.jpg",
-    href: "/projects/aura-digital-cathedral",
+    id: "retail-hospitality",
+    label: "RETAIL & HOSPITALITY",
+    title: "Interactive Projection",
+    category: "RETAIL & HOSPITALITY",
+    location: "Commercial Environments",
+    desc: "Create engaging environments that give visitors more ways to explore, interact and spend time in a space.",
+    img: "/images/retail_interactive_showcase.jpg",
+    href: "/solutions/interactive-projection",
+    btnText: "Explore Use Case",
   },
   {
-    id: "edge-skyline",
-    title: "Skyline Kinetic Glass Floor",
-    category: "Interactive Spaces",
-    location: "Skyline Observation Deck",
-    desc: "An interactive high-altitude observation floor responding to visitor footsteps with illuminated fluid patterns.",
-    img: "/images/horizon_glass_floor.jpg",
-    href: "/projects/skyline-observation-floor",
+    id: "education-healthcare",
+    label: "EDUCATION & HEALTHCARE",
+    title: "Interactive Learning & Therapy",
+    category: "EDUCATION & HEALTHCARE",
+    location: "Active Spaces",
+    desc: "Use interactive experiences to support learning, participation and activities in education and healthcare spaces.",
+    img: "/images/education_interactive_floor.jpg",
+    href: "/industries/education",
+    btnText: "Explore Use Case",
   },
   {
-    id: "ocean-wonders",
-    title: "BioSphere Ocean Experience",
-    category: "Interactive Museum",
-    location: "Immersive Oceanic Pavilion",
-    desc: "A 360-degree reactive marine projection environment with bioluminescent visual interactions.",
+    id: "museums-entertainment",
+    label: "MUSEUMS & ENTERTAINMENT",
+    title: "Immersive Visitor Experiences",
+    category: "MUSEUMS & ENTERTAINMENT",
+    location: "Cultural Pavilions",
+    desc: "Turn exhibitions and visitor spaces into interactive environments that encourage exploration and participation.",
     img: "/images/biosphere_ocean_gallery.jpg",
-    href: "/projects/biosphere-ocean-experience",
+    href: "/industries/museums-culture",
+    btnText: "Explore Use Case",
   },
 ];
 
@@ -61,28 +67,17 @@ export default function FeaturedProjects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="max-w-2xl"
           >
             <span className="text-[10px] sm:text-xs font-mono font-semibold uppercase tracking-[0.2em] text-black/50 block mb-2">
-              PORTFOLIO SHOWCASE
+              EXPERIENCES &amp; APPLICATIONS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black">
-              Featured Creations
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black mb-2">
+              Where Interactive Experiences Can Be Used
             </h2>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          >
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-black/80 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl"
-            >
-              <span>View All Projects</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <p className="text-sm sm:text-base text-black/70 font-normal leading-relaxed">
+              Explore how interactive projection and immersive experiences can be adapted for different spaces, audiences and purposes.
+            </p>
           </motion.div>
         </div>
 
@@ -160,7 +155,7 @@ export default function FeaturedProjects() {
                             href={project.href}
                             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-white/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl"
                           >
-                            <span>View Case Study</span>
+                            <span>{project.btnText}</span>
                             <ArrowRight className="w-3.5 h-3.5" />
                           </Link>
                         </div>
@@ -173,7 +168,7 @@ export default function FeaturedProjects() {
                           href={project.href}
                           className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors shadow-lg"
                         >
-                          <span>View Case Study</span>
+                          <span>{project.btnText}</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                        </Link>
                     </div>

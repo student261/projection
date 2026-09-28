@@ -23,66 +23,98 @@ const industries = [
   {
     id: "education",
     icon: <GraduationCap className="w-5 h-5" />,
+    num: "01",
+    label: "EDUCATION SPACES",
+    heading: "Make Learning More Interactive",
     title: "Education",
-    description: "Make learning more active with interactive classrooms, digital activities, and movement-based experiences.",
+    description: "Create interactive classrooms and learning spaces where students can learn through movement, visuals and hands-on activities.",
     href: "/industries/education",
     img: "/images/education_interactive_floor.jpg",
+    cta: "Explore Education",
   },
   {
     id: "healthcare",
     icon: <HeartPulse className="w-5 h-5" />,
+    num: "02",
+    label: "HEALTHCARE SPACES",
+    heading: "Create More Engaging Care Environments",
     title: "Healthcare",
-    description: "Help patients stay engaged with interactive activities that support rehabilitation, movement, and better waiting-room experiences.",
+    description: "Use interactive experiences for therapy, rehabilitation, patient engagement and more welcoming healthcare spaces.",
     href: "/industries/healthcare",
     img: "/images/healthcare_sensory_room.jpg",
+    cta: "Explore Healthcare",
   },
   {
     id: "retail",
     icon: <ShoppingBag className="w-5 h-5" />,
+    num: "03",
+    label: "RETAIL SPACES",
+    heading: "Give Visitors More Ways to Engage",
     title: "Retail",
-    description: "Make store visits more engaging with interactive displays, digital content, and experiences that bring customers closer to your brand.",
+    description: "Turn stores, showrooms and shopping spaces into interactive environments that encourage visitors to explore and interact.",
     href: "/industries/retail-showrooms",
     img: "/images/retail_interactive_showcase.jpg",
+    cta: "Explore Retail",
   },
   {
     id: "museums",
     icon: <Landmark className="w-5 h-5" />,
+    num: "04",
+    label: "MUSEUMS & EXHIBITIONS",
+    heading: "Bring Exhibits to Life",
     title: "Museums & Exhibitions",
-    description: "Turn exhibits into experiences where visitors can interact with stories, information, and digital content.",
+    description: "Create interactive exhibits that help visitors explore stories, information and digital content in a more engaging way.",
     href: "/industries/museums-culture",
     img: "/images/museum_interactive_exhibit.jpg",
+    cta: "Explore Museums & Exhibitions",
   },
   {
     id: "entertainment",
     icon: <Gamepad2 className="w-5 h-5" />,
+    num: "05",
+    label: "ENTERTAINMENT SPACES",
+    heading: "Create Experiences People Want to Explore",
     title: "Entertainment",
-    description: "Build exciting attractions with interactive games, projection technology, and experiences people want to come back to.",
+    description: "Add interactive games, immersive environments and digital experiences to entertainment and visitor spaces.",
     href: "/industries/entertainment",
     img: "/images/entertainment_motion_arena.jpg",
+    cta: "Explore Entertainment",
   },
   {
     id: "hospitality",
     icon: <Hotel className="w-5 h-5" />,
+    num: "06",
+    label: "HOSPITALITY SPACES",
+    heading: "Make Every Visit More Engaging",
     title: "Hospitality",
-    description: "Give guests something memorable with interactive displays and digital experiences across hotels, resorts, and other hospitality spaces.",
+    description: "Add interactive experiences to hotels, restaurants, resorts and guest spaces to create memorable moments for visitors.",
     href: "/industries/hospitality",
     img: "/images/hospitality_ambient_atrium.jpg",
+    cta: "Explore Hospitality",
   },
   {
     id: "corporate",
     icon: <Building2 className="w-5 h-5" />,
+    num: "07",
+    label: "CORPORATE SPACES",
+    heading: "Turn Business Spaces Into Experiences",
     title: "Corporate",
-    description: "Make offices, meeting spaces, and experience centers more engaging with interactive technology.",
+    description: "Create interactive environments for offices, experience centres, product showcases, events and corporate spaces.",
     href: "/industries/corporate",
     img: "/images/corporate_lobby_wall.jpg",
+    cta: "Explore Corporate",
   },
   {
     id: "public-spaces",
     icon: <Globe2 className="w-5 h-5" />,
+    num: "08",
+    label: "PUBLIC SPACES",
+    heading: "Make Shared Spaces More Interactive",
     title: "Public Spaces",
-    description: "Bring interactive experiences to airports, malls, parks, community spaces, and other public venues.",
+    description: "Bring interactive digital experiences to public environments such as airports, stations, cultural spaces and large venues.",
     href: "/industries/public-spaces",
     img: "/images/interactive_floor_motion.jpg",
+    cta: "Explore Public Spaces",
   },
 ];
 
@@ -194,9 +226,18 @@ export default function IndustriesServed() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black"
             >
-              Built for Every Industry.<br />
-              Designed for Every Experience.
+              Interactive Experiences for Different Industries
             </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-sm sm:text-base text-black/70 font-normal leading-relaxed"
+            >
+              Create engaging digital experiences around your space, audience and goals.
+            </motion.p>
           </div>
 
           <div className="hidden md:flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-black/30">
@@ -274,11 +315,11 @@ export default function IndustriesServed() {
                   >
                     <div className="flex items-center gap-2 mb-2 text-white/90 drop-shadow">
                       {activeIndustry.icon}
-                      <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em]">{activeIndustry.title} Spaces</span>
+                      <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em]">{activeIndustry.label}</span>
                     </div>
                     
                     <h3 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight mb-2 sm:mb-3 leading-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
-                      Empower Your <br className="hidden sm:block"/>{activeIndustry.title} Sector
+                      {activeIndustry.heading}
                     </h3>
                     
                     <p className="text-white/90 text-sm leading-relaxed mb-4 sm:mb-6 max-w-md font-light drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)]">
@@ -289,7 +330,7 @@ export default function IndustriesServed() {
                       href={activeIndustry.href}
                       className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black font-bold text-xs uppercase tracking-widest transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.4)] w-full sm:w-auto"
                     >
-                      Explore Solutions
+                      {activeIndustry.cta}
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </motion.div>

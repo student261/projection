@@ -108,7 +108,7 @@ export default function Hero() {
   return (
     <section ref={containerRef} className="sticky top-0 z-[1] w-full h-dvh bg-white flex flex-col items-center overflow-hidden">
         
-      {/* Background Video Card — Smooth Framer Entrance Shrink to Padded Card */}
+      {/* Background Video Card: Smooth Framer Entrance Shrink to Padded Card */}
       <motion.div
         style={{
           scale: cardScaleScroll,
@@ -170,7 +170,7 @@ export default function Hero() {
               variants={fadeUpVariant}
               className="font-semibold text-white tracking-tight leading-[1.12] max-w-4xl mb-4 sm:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)] text-[clamp(1.75rem,5.2vw,4.5rem)]"
             >
-              Transform Spaces into Extraordinary Interactive Experiences
+              Interactive Projection That Brings Spaces to Life
             </motion.h1>
 
             {/* Subheadline */}
@@ -178,7 +178,7 @@ export default function Hero() {
               variants={fadeUpVariant}
               className="text-sm sm:text-base lg:text-xl font-light text-white/90 leading-relaxed max-w-2xl mb-6 sm:mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
             >
-              Spatial Interactive Environments &amp; Architectural Motion Projection
+              Create interactive floors, walls and immersive experiences that respond to movement, engage people and turn everyday spaces into memorable experiences.
             </motion.p>
 
             {/* Dual Action Buttons */}
@@ -199,7 +199,7 @@ export default function Hero() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 text-white font-medium text-sm tracking-wider transition-all duration-300 hover:scale-105 active:scale-95 text-center cursor-pointer shadow-lg"
               >
                 <Calendar className="w-3.5 h-3.5 opacity-80" />
-                <span>Book a Demo</span>
+                <span>Book a Meeting</span>
               </Link>
             </motion.div>
           </div>

@@ -66,7 +66,7 @@ export default function Navbar() {
 
   // When at the top of pages with dark heroes, the navbar sits over the dark hero image and requires bright white text.
   // On the homepage, the navbar sits on the white canvas framing the hero card, using dark text.
-  const isDarkHero = (pathname === "/projects" || pathname === "/about" || pathname === "/solutions" || pathname === "/industries" || pathname.startsWith("/solutions/") || pathname.startsWith("/industries/") || pathname.startsWith("/projects/")) && !scrolled && !mobileMenuOpen;
+  const isDarkHero = (pathname === "/projects" || pathname === "/about" || pathname === "/solutions" || pathname === "/industries" || pathname.startsWith("/solutions/") || pathname.startsWith("/industries/") || pathname.startsWith("/projects/") || pathname.startsWith("/use-cases")) && !scrolled && !mobileMenuOpen;
   const navTextActive = isDarkHero ? "text-white font-semibold" : "text-black font-semibold";
   const navTextMuted = isDarkHero ? "text-white/90 hover:text-white font-medium" : "text-neutral-700 hover:text-black font-medium";
   
@@ -171,10 +171,10 @@ export default function Navbar() {
                   <div className="grid grid-cols-12 gap-6 xl:gap-12">
                     <div className="col-span-7 grid grid-cols-2 gap-3">
 
-                    {/* Interactive Spaces */}
+                    {/* Interactive Projection */}
                     <Link
-                      href="/solutions/interactive-spaces"
-                      onMouseEnter={() => setSolPreview({ badge: "INTERACTIVE SPACES", title: "Motion-Responsive Floors & Walls", desc: "Responsive floor and wall projection that reacts to every footstep in real time.", href: "/solutions/interactive-spaces", img: "/images/interactive_floor_motion.jpg" })}
+                      href="/solutions/interactive-projection"
+                      onMouseEnter={() => setSolPreview({ badge: "INTERACTIVE PROJECTION", title: "Motion-Responsive Floors & Walls", desc: "Responsive floor and wall projection that reacts to every footstep in real time.", href: "/solutions/interactive-projection", img: "/images/interactive_floor_motion.jpg" })}
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
                     >
                       <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
@@ -182,7 +182,7 @@ export default function Navbar() {
                       </div>
                       <div>
                         <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>Interactive Spaces</span>
+                          <span>Interactive Projection</span>
                           <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
                         </div>
                         <div className="text-[11px] text-gray-500 font-light leading-snug">Floors, walls & surfaces</div>
@@ -681,9 +681,9 @@ export default function Navbar() {
               </summary>
               <div className="pb-6 space-y-6">
                 <div>
-                  <Link href="/solutions/interactive-spaces" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
+                  <Link href="/solutions/interactive-projection" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
                     <Sparkles className="w-4 h-4 text-black" />
-                    Interactive Spaces
+                    Interactive Projection
                   </Link>
                   <div className="pl-6 space-y-2.5 mt-1">
                     <Link href="/solutions/interactive-floor" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Interactive Floor</Link>

@@ -13,8 +13,8 @@ const FAQSection = dynamic(() => import("@/components/FAQSection"), { ssr: true 
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
 
 export const metadata = {
-  title: "PROJECTION - Interactive Spaces & Motion Projection Experiences",
-  description: "Transform commercial spaces with AI-powered motion interactive projection, immersive 360 environments, and smart audience engagement solutions.",
+  title: "Interactive Projection Solutions and Experiences",
+  description: "Create interactive projection experiences for floors, walls and immersive environments, with projection mapping, interactive installations and digital experiences.",
 };
 
 export default function Home() {

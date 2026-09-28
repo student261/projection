@@ -55,10 +55,10 @@ export const publicSpaces: IndustryData = {
     intro: "Explore how the world's most innovative airports and smart cities are using interactive spatial design to improve public life.",
     items: [
       { title: "The Interactive Airport Terminal", desc: "A 200-foot interactive floor projection that acts as a digital playground for children waiting for flights.", tags: ["Interactive Floor", "Airport Tech"], img: "/images/horizon_glass_floor.jpg", href: "/solutions/interactive-floor" },
-      { title: "Smart City Wayfinding", desc: "A transit hub floor that projects personalized, color-coded arrows to guide passengers to their connecting trains.", tags: ["Dynamic Wayfinding", "API Integration"], img: "/images/projection_cityscape_model.jpg", href: "/solutions/interactive-spaces" },
+      { title: "Smart City Wayfinding", desc: "A transit hub floor that projects personalized, color-coded arrows to guide passengers to their connecting trains.", tags: ["Dynamic Wayfinding", "API Integration"], img: "/images/projection_cityscape_model.jpg", href: "/solutions/interactive-projection" },
       { title: "The Digital Subway Tunnel", desc: "An immersive projection mapped pedestrian tunnel that changes themes based on the season or local events.", tags: ["Projection Mapping", "Public Art"], img: "/images/hospital_interactive_corridor.jpg", href: "/projects/quantum-prism-passage" },
       { title: "Civic Plaza Monument Mapping", desc: "Permanent architectural projection mapping on a city hall facade, used for nightly civic storytelling.", tags: ["Outdoor Projection", "Event Tech"], img: "/images/cathedral_projection_mapping.jpg", href: "/solutions/projection-mapping" },
-      { title: "Interactive Mall Atrium", desc: "A massive multi-story digital waterfall in a shopping center that parts when visitors walk near the base.", tags: ["Large Scale LED", "Motion Tracking"], img: "/images/hospitality_ambient_atrium.jpg", href: "/solutions/interactive-spaces" },
+      { title: "Interactive Mall Atrium", desc: "A massive multi-story digital waterfall in a shopping center that parts when visitors walk near the base.", tags: ["Large Scale LED", "Motion Tracking"], img: "/images/hospitality_ambient_atrium.jpg", href: "/solutions/interactive-projection" },
       { title: "Sponsored Holographic Zone", desc: "A leased public space where brands deploy interactive 3D campaigns to engage passing crowds without physical builds.", tags: ["DOOH Advertising", "Brand Activation"], img: "/images/ai_receptionist_concierge.jpg", href: "/solutions/holographic-display" }
     ]
   },
@@ -111,7 +111,7 @@ export const publicSpaces: IndustryData = {
       secondaryMetric: "Substantial",
       secondaryMetricLabel: "Increase in Guest Stay",
       desc: "An interactive observation floor that responds to footsteps with simulated structural glass fractures, dynamic cloud patterns, and regional cartographic projections with zero-latency infrared sensors.",
-      quote: "Visitors stepping onto the observation floor trigger dramatic real-time visual ripples — creating unforgettable viral social media impressions.",
+      quote: "Visitors stepping onto the observation floor trigger dramatic real-time visual ripples, creating unforgettable viral social media impressions.",
       img: "/images/horizon_glass_floor.jpg",
       slug: "skyline-observation-floor"
     },

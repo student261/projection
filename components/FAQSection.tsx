@@ -14,51 +14,39 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     id: "faq-1",
-    categoryLabel: "CORE TECHNOLOGY",
-    q: "What is Motion Interactive Projection & how does it work?",
-    a: "Motion Interactive Projection turns floors, walls, and physical architecture into highly responsive digital canvases. Depth-sensing optical cameras detect footsteps, gestures, and body movement in real-time with near-instantaneous latency, triggering dynamic 3D visuals and spatial sound effects."
+    categoryLabel: "TECHNOLOGY",
+    q: "What is interactive projection and how does it work?",
+    a: "Interactive projection combines projected digital content with motion or interaction tracking. When people move within the projected area, the visuals can respond to their movement and create an interactive experience."
   },
   {
     id: "faq-2",
-    categoryLabel: "INDUSTRIES SERVED",
-    q: "Which industries can benefit from your solutions?",
-    a: "Our spatial installations are purpose-engineered across 8 primary verticals: Education (active STEM learning floors & interactive classrooms), Healthcare (pediatric sensory therapy & calming distraction rooms), Retail (interactive storefront windows & touchless product showcases), Museums & Cultural Institutions (artifact projection mapping & interactive historical timelines), Entertainment & Gaming (motion-tracked team sports & arcade pavilions), Hospitality (ambient lobby ceiling mapping & interactive dining lounges), Corporate (executive briefing walls & generative data atriums), and Public Spaces (airport concourse projection & civic transit portals)."
+    categoryLabel: "SPACE REQUIREMENTS",
+    q: "What kind of space do I need for interactive projection?",
+    a: "The requirements depend on the experience, projection area and installation setup. Floor or wall space, ceiling height, lighting and equipment placement are considered when planning the system."
   },
   {
     id: "faq-3",
-    categoryLabel: "CUSTOMIZATION & BRANDING",
-    q: "Can your solutions be customized for our business?",
-    a: "Every installation is custom-architected to your specific venue, audience, and commercial objectives. We tailor everything from optical hardware selection (throw distances, ambient lux compensation, surface treatments) to software development (custom 3D shaders, brand identity palettes, interactive physics, soundscapes, and cloud CMS integrations). Whether you require corporate governance, ADA accessibility compliance, or gamified sponsor leaderboards, our engineering team custom-codes the experience to your exact specifications."
+    categoryLabel: "SURFACES",
+    q: "Can interactive projection work on different surfaces?",
+    a: "Yes. Interactive projection can be designed for floors, walls, tables and other suitable surfaces. The setup depends on the surface, lighting and type of interaction required."
   },
   {
     id: "faq-4",
-    categoryLabel: "INSTALLATION & SUPPORT",
-    q: "Do you provide installation and technical support?",
-    a: "Yes, we provide complete end-to-end turnkey delivery worldwide. Our certified spatial engineers handle architectural site surveys, structural rigging, projector laser alignment, sensor grid calibration, and audio synchronization. Post-launch, we provide comprehensive SLA packages that include 24/7 remote cloud telemetry monitoring, automated health diagnostics, scheduled hardware maintenance, and rapid-response on-site engineering support to guarantee continuous, mission-critical operational reliability."
+    categoryLabel: "CUSTOMIZATION",
+    q: "Can the interactive experience be customized?",
+    a: "Yes. Content can be designed around your space, audience, brand and project goals, including custom visuals, games and interactive experiences."
   },
   {
     id: "faq-5",
-    categoryLabel: "CONTENT & REFRESHES",
-    q: "Can the content be updated after installation?",
-    a: "Yes. All PROJECTION installations are connected to our proprietary cloud-based Content Management System (CMS). Venue operators can instantly push new games, seasonal holiday campaigns, promotional sponsor overlays, and marketing graphics with a single click—without needing on-site technicians or hardware alterations. We also provide an open SDK and custom template library for clients who prefer generating their own in-house visual assets."
+    categoryLabel: "SOLUTION SELECTION",
+    q: "How do you decide which interactive solution is right for my space?",
+    a: "The right solution depends on your space, audience, purpose, projection area, lighting and interaction requirements. These factors are reviewed before selecting the appropriate setup."
   },
   {
     id: "faq-6",
-    categoryLabel: "SPACE & SCALE",
-    q: "Are your solutions suitable for small and large spaces?",
-    a: "Yes, our modular architecture scales seamlessly to fit any physical footprint. For compact environments (such as retail pop-ups, pediatric waiting areas, or boutique hotel entryways), our ultra-short-throw systems deliver high-impact motion interaction in spaces as small as 100 sq ft. For massive venues (such as stadium tunnels, airport concourses, cathedral sanctuaries, and multi-story corporate atriums), our multi-projector edge-blending and distributed LiDAR sensor grids cover thousands of square feet with zero blind spots."
-  },
-  {
-    id: "faq-7",
-    categoryLabel: "PROJECT TIMELINE",
-    q: "How long does it take to implement a project?",
-    a: "Project timelines depend on spatial complexity and custom content requirements. Turnkey modular packages utilizing our pre-built interactive library can be installed and commissioned within 2 to 4 weeks. Fully bespoke architectural installations—involving custom 3D projection mapping, multi-room sensor fusion, or generative AI avatar development—typically range from 8 to 12 weeks from initial concept and 3D modeling through on-site calibration and staff handover."
-  },
-  {
-    id: "faq-8",
-    categoryLabel: "GETTING STARTED",
-    q: "How do I get started with PROJECTION?",
-    a: "Getting started is straightforward. Submit an inquiry through our contact form or book a virtual demonstration detailing your venue dimensions, target industry, and project goals. Our spatial architects will review your blueprints and schedule a discovery consultation within 24 hours, followed by a complimentary spatial feasibility report, hardware specification, and budget estimate tailored to your space."
+    categoryLabel: "CONSULTATION",
+    q: "Can you help me choose the right interactive solution?",
+    a: "Yes. We look at your space, audience, goals and the type of experience you want to create, then help you choose the most suitable solution for your project."
   }
 ];
 

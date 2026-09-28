@@ -55,7 +55,7 @@ export const entertainment: IndustryData = {
     intro: "Discover the interactive attractions that are driving massive ticket sales and social media buzz around the world.",
     items: [
       { title: "The Grid Motion Arena", desc: "A 50x50ft interactive floor where teams compete in fast-paced neon sports games.", tags: ["Interactive Floor", "Multiplayer"], img: "/images/interactive_floor_motion.jpg", href: "/solutions/interactive-floor" },
-      { title: "Augmented Dodgeball", desc: "A trampoline court enhanced with interactive projected targets and digital scoring.", tags: ["Interactive Trampoline", "Motion Tracking"], img: "/images/horizon_glass_floor.jpg", href: "/solutions/interactive-spaces" },
+      { title: "Augmented Dodgeball", desc: "A trampoline court enhanced with interactive projected targets and digital scoring.", tags: ["Interactive Trampoline", "Motion Tracking"], img: "/images/horizon_glass_floor.jpg", href: "/solutions/interactive-projection" },
       { title: "Zombie Strike Wall", desc: "An immersive wall where guests throw physical balls to fend off hordes of projected zombies.", tags: ["Ball Tracking", "Projection Mapping"], img: "/images/interactive_strike_wall.jpg", href: "/solutions/interactive-wall" },
       { title: "The Magic Drawing Room", desc: "Kids color physical paper templates, scan them, and watch their creations come alive on a massive digital wall.", tags: ["Scan & Play", "Interactive Wall"], img: "/images/museum_dino_sandbox.jpg", href: "/projects/interactive-museum-exhibit" },
       { title: "Immersive Mini Golf", desc: "Projection mapped mini-golf courses where the terrain and obstacles change with every hole.", tags: ["Projection Mapping", "Object Tracking"], img: "/images/interactive_minigolf_course.jpg", href: "/solutions/immersive-room" },
@@ -139,7 +139,7 @@ export const entertainment: IndustryData = {
       secondaryMetric: "Viral",
       secondaryMetricLabel: "Social Media Impressions",
       desc: "High-altitude observation deck floor responding to footsteps with simulated structural glass fractures and kinetic visual ripples, creating viral social media moments.",
-      quote: "Every single visitor captures video of the floor reacting to their steps — unmatched social marketing.",
+      quote: "Every single visitor captures video of the floor reacting to their steps, producing unmatched social marketing.",
       img: "/images/horizon_glass_floor.jpg",
       slug: "skyline-observation-floor"
     }

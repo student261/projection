@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about',
     '/blogs',
     '/contact',
+    '/use-cases/interactive-learning',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -19,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }))
 
-  // dynamic routes — replace with your actual data source (CMS, DB, or hardcoded array)
+  // dynamic routes: replace with your actual data source (CMS, DB, or hardcoded array)
   const industrySlugs = [
     'education',
     'museums-culture',

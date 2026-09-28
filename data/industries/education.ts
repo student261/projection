@@ -5,150 +5,107 @@ export const education: IndustryData = {
   slug: "education",
   icon: GraduationCap,
   hero: {
-    eyebrow: "EDUCATION & STEM LABS",
-    title: "Transforming Education with Interactive Motion Learning",
-    subtitle: "Turn classrooms, STEM labs, and auditoriums into active physical learning environments that boost retention and student engagement.",
+    eyebrow: "EDUCATION",
+    title: "Turn Classrooms Into Interactive Learning Spaces",
+    subtitle: "Give students a way to explore lessons through movement, projection and hands-on interaction: turning floors, walls and shared spaces into part of the learning experience.",
     img: "/images/industry_education_hero.jpg",
   },
   challenges: {
-    title: "The Limitations of Traditional Classrooms",
-    intro: "Conventional passive classrooms struggle to maintain student focus, accommodate diverse sensory learning styles, and foster active collaboration among digital-native learners.",
+    title: "Creating More Interactive Learning Spaces",
+    intro: "The challenge is to turn traditional learning environments into dynamic, interactive spaces that inspire curiosity, participation and real engagement.",
     items: [
-      { title: "Low Student Engagement", desc: "Traditional teaching methods make it difficult to sustain attention across multi-hour lectures." },
-      { title: "Limited Kinesthetic Interaction", desc: "Most learning spaces rely on sedentary listening instead of tactile, movement-driven exploration." },
-      { title: "Diverse Learning Styles", desc: "Visual and physical learners struggle when curriculum is limited to textbooks and whiteboard notes." },
-      { title: "Hardware Breakage & Maintenance", desc: "Tablets and handheld VR controllers suffer high damage rates and constant charging bottlenecks." },
-      { title: "Siloed Student Collaboration", desc: "Individual screens isolate students rather than building shared communication and teamwork skills." },
-      { title: "Abstract Concept Comprehension", desc: "Complex physics, planetary orbits, and spatial geometry are hard to grasp without 3D interactive models." }
+      { title: "Keeping Students Engaged", desc: "Traditional lessons make it hard to hold attention through a full class period." },
+      { title: "Passive Learning", desc: "Many classrooms still rely on watching and listening rather than doing." },
+      { title: "Different Learning Styles", desc: "A single teaching method does not reach every student the same way." },
+      { title: "Underused Classroom Space", desc: "Floors, walls and shared areas sit idle instead of being part of the lesson." },
+      { title: "Limited Group Participation", desc: "Fewer opportunities for teamwork and collaborative activities." },
+      { title: "Rigid Content", desc: "Static materials are hard to update or adapt across subjects and age groups." }
     ],
-    transition: "These challenges create an opportunity to rethink how learning environments engage, inspire, and empower every student."
+    transition: "Interactive learning spaces turn these challenges into opportunities for active, memorable student participation."
   },
   vision: {
-    title: "Our Vision for Education",
-    intro: "We believe education is most effective when students actively participate in the learning journey. By combining physical motion with interactive technology, we transform traditional classrooms into immersive environments where curiosity, collaboration, and innovation thrive.",
-    statement: "Every classroom should be a place where students don't just learn—they explore, interact, and experience knowledge in unforgettable ways.",
+    title: "Make Learning More Active",
+    intro: "Interactive learning spaces give students more ways to take part in a lesson, not just watch it. Floors, walls and other suitable surfaces become part of the classroom itself, turning movement and participation into part of how students learn.",
+    statement: "Interactive learning spaces give students more ways to take part in a lesson, not just watch it.",
     pillars: [
-      { title: "🌟 Kinesthetic Learning", desc: "Accelerate concept comprehension by allowing children to physically walk, jump, and interact with scientific models on floors and walls." },
-      { title: "🤝 Natural Teamwork", desc: "Multi-user surfaces encourage communication, peer problem-solving, and collaborative discovery without isolated headphones." },
-      { title: "🚀 Tag-Free Safety", desc: "Ceiling-mounted laser optics mean zero wearable sensors to sanitize, charge, or replace." },
-      { title: "🌍 Curriculum-Aligned Content", desc: "Easily switch from STEM geometry to world geography and active kinetic physical education games." }
+      { title: "Active Participation", desc: "Students engage with content through movement, not just observation." },
+      { title: "Group Learning", desc: "Shared activities that multiple students can take part in together." },
+      { title: "Visual Learning", desc: "Subjects presented through projection and interactive display instead of static material." },
+      { title: "Flexible Content", desc: "Activities adapted across subjects, age groups and lesson plans." }
     ],
-    transition: "This vision becomes reality through our interactive solutions, designed specifically for modern educational environments.",
-    quote: "\"Every classroom has the potential to become an interactive learning experience.\"",
+    transition: "Learning works better when students take part in it, not just watch it.",
+    quote: "Learning works better when students take part in it, not just watch it.",
     img: "/images/var_sandbox_projection.jpg"
   },
   solutions: {
-    title: "Interactive Solutions for Education",
-    intro: "Our interactive technologies are designed to create engaging learning environments where students actively participate, explore ideas, and collaborate through immersive experiences. Every solution is customized to meet the unique needs of educational institutions.",
+    title: "Interactive Solutions Built for Learning",
+    intro: "Explore interactive technologies engineered specifically for schools, classrooms, and discovery spaces.",
     items: [
-      { title: "Interactive Motion Floor", desc: "Overhead LiDAR tracking turns classroom floors into active math puzzles, solar systems, and cooperative sports games." },
-      { title: "Interactive Wall & Touch Canvas", desc: "High-resolution vertical surfaces allowing whole groups of students to draw, dissect virtual anatomy, and explore timelines." },
-      { title: "Architectural Projection Mapping", desc: "Transform school auditoriums and libraries into panoramic historical eras, rainforest biomes, and deep-sea trenches." },
-      { title: "STEM & STEAM Discovery Labs", desc: "Hands-on physics simulations, fluid dynamics, and live coding exercises mapped onto tactile physical surfaces." },
-      { title: "AR Topographic Sandbox", desc: "Real-time elevation contour projection that instantly reacts as students sculpt physical sand to study erosion and geography." },
-      { title: "Sensory Calming Corridors", desc: "Gentle aquatic animations that help neurodiverse students decompress and reset between intense academic periods." }
+      { title: "Interactive Projection", desc: "Turn floors and walls into interactive surfaces for lessons, activities and hands-on exploration." },
+      { title: "Immersive Experiences", desc: "Create immersive learning environments using projection and spatial visuals to explore subjects in new ways." },
+      { title: "Interactive Engagement", desc: "Add motion-based games and activities that give students a reason to move and participate." },
+      { title: "LED & 3D Display Solutions", desc: "Use large-format displays for presentations, visual learning and school events." }
     ],
-    bottomStatement: "Every solution is tailored to your educational goals, learning environment, and audience to create memorable interactive experiences."
+    bottomStatement: "Each system is tailored to your classroom layout, lighting conditions, and curriculum goals."
   },
   experiences: {
-    title: "Featured Learning Experiences",
-    intro: "Discover how schools, STEM labs, and cultural spaces bring education to life through hands-on interactive environments.",
+    title: "Ways to Bring Interactive Learning Into Your School",
+    intro: "Practical, proven formats that integrate smoothly into existing school environments.",
     items: [
-      { title: "Interactive Classroom Floor", desc: "Motion-responsive floors and walls that turn everyday lessons into collaborative, physically active games students love.", tags: ["Active Learning", "Group Collaboration"], img: "/images/education_interactive_floor.jpg", href: "/solutions/interactive-floor" },
-      { title: "STEM Innovation Lab", desc: "Hands-on digital labs where students run physics simulations, dissect 3D biology models, and solve coding challenges together.", tags: ["STEM & Science", "Hands-On Discovery"], img: "/images/museum_dino_sandbox.jpg", href: "/projects/immersive-stem-lab" },
-      { title: "School Auditorium Showcase", desc: "Wall-to-wall projection mapping that turns school assemblies, history presentations, and theatre productions into memorable events.", tags: ["Immersive Projections", "Visual Storytelling"], img: "/images/cathedral_projection_mapping.jpg", href: "/solutions/interactive-spaces" },
-      { title: "Digital Library Discovery", desc: "Touch-enabled reading corners and animated story walls that spark curiosity and turn reading into an engaging adventure.", tags: ["Interactive Reading", "Curiosity Driven"], img: "/images/museum_interactive_exhibit.jpg", href: "/solutions/interactive-wall" },
-      { title: "Museum & Science Gallery", desc: "Walk-in exhibit installations where students explore space missions, touch virtual fossils, and investigate world ecosystems.", tags: ["Interactive Exhibits", "Sensory Learning"], img: "/images/biosphere_ocean_gallery.jpg", href: "/projects/interactive-museum-exhibit" },
-      { title: "Active Motion Play Zone", desc: "Kinetic projection games that keep students energized, active, and cooperating during gym classes, brain breaks, and recess.", tags: ["Movement & Health", "Active Play"], img: "/images/interactive_strike_wall.jpg", href: "/solutions/interactive-spaces" }
+      { title: "Interactive Classroom", desc: "Floors and walls used for daily lessons and group activities.", tags: [], img: "/images/education_exp_interactive_classroom.webp", href: "/solutions/interactive-projection" },
+      { title: "STEM Learning Space", desc: "Visual, hands-on activities for science, math and coding.", tags: [], img: "/images/education_exp_stem_space.webp", href: "/solutions/interactive-projection" },
+      { title: "Immersive Learning Room", desc: "Large-scale visuals for storytelling, history and exploration.", tags: [], img: "/images/education_exp_immersive_room.webp", href: "/solutions/immersive-environment" },
+      { title: "Interactive Library Corner", desc: "Digital activities for reading and research.", tags: [], img: "/images/education_exp_library_corner.webp", href: "/solutions/interactive-projection" },
+      { title: "Activity Zone", desc: "Movement-based learning for breaks and group play.", tags: [], img: "/images/education_exp_activity_zone.webp", href: "/solutions/interactive-projection" }
     ]
   },
   benefits: {
-    title: "Proven Educational Outcomes",
-    intro: "Meaningful interactive environments that inspire curiosity, strengthen peer collaboration, and improve student learning outcomes across every grade.",
+    title: "More Ways to Support Interactive Learning",
+    intro: "Delivering lasting educational value across every grade level and space.",
     items: [
-      { title: "Measurably Stronger Concept Retention", desc: "Kinesthetic, movement-based learning solidifies complex spatial and mathematical concepts far longer than passive textbooks." },
-      { title: "High Active Student Participation", desc: "Multiplayer motion games motivate even reluctant or shy students to participate in group lessons." },
-      { title: "Enhanced Classroom Focus", desc: "Short, movement-integrated learning breaks help students regulate focus and channel energy constructively." },
-      { title: "Zero Wearable Hardware", desc: "Optics mount safely on ceilings—no headsets to clean, cables to trip over, or tablets to drop." },
-      { title: "Universal Neuro-Inclusivity", desc: "Proven sensory-friendly software modes designed for ADHD, autism spectrum, and varied developmental speeds." },
-      { title: "Instant Teacher Control", desc: "Educators switch subjects, game modes, and grade levels in seconds using our intuitive cloud-managed tablet CMS." }
+      { title: "Active Participation", desc: "Students engage with content through movement, not just observation." },
+      { title: "Group Learning", desc: "Shared activities that multiple students can take part in together." },
+      { title: "Visual Learning", desc: "Subjects presented through projection and interactive display instead of static material." },
+      { title: "Flexible Content", desc: "Activities adapted across subjects, age groups and lesson plans." },
+      { title: "Multi-Space Use", desc: "Works in classrooms, libraries, STEM labs and auditoriums." },
+      { title: "Reusable Setup", desc: "One installation supports different lessons and content over time." }
     ],
-    bottomStatement: "Every interactive experience is designed to create lasting educational value — not just brief moments of distraction."
+    bottomStatement: "One installation provides enduring, multi-year value across evolving lesson plans."
   },
   technology: {
-    title: "How the Technology Works in Real Time",
-    intro: "From physical movement to instant digital response — follow the millisecond journey that powers every interactive learning space.",
+    title: "How the Experience Comes Together",
+    intro: "A unified system of tracking, optics, and software working seamlessly together.",
     items: [
-      { title: "Optical Motion Sensors", desc: "Sensors continuously track movement and position across the floor or wall in real time with zero wearable tags." },
-      { title: "Real-Time AI Vision", desc: "Intelligent tracking algorithms translate gestures and footsteps into instant game physics with near-instantaneous latency." },
-      { title: "Daylight Laser Projection", desc: "Ultra-bright, high-lumen laser optics cast vibrant, razor-sharp graphics that remain clear in daylight-lit classrooms." },
-      { title: "Collaborative Touch & Play", desc: "Zero-latency interactive surfaces allow multiple students to touch, draw, and solve challenges together simultaneously." }
+      { title: "Motion Tracking", desc: "Detects student movement within the interactive area in real time." },
+      { title: "Projection Systems", desc: "Displays digital content onto classroom floors, walls and other surfaces." },
+      { title: "Computer Vision", desc: "Recognizes gestures and multiple simultaneous users." },
+      { title: "Interactive Software", desc: "Connects movement and interaction with the projected content." },
+      { title: "Sensors", desc: "Provide precise, touch-free detection of student activity." },
+      { title: "Content Management", desc: "Lets teachers select, schedule and update lesson content." }
     ],
-    bottomStatement: "Every step happens in real time — completely seamless and invisible to the students."
+    bottomStatement: "Engineered for real classroom conditions with zero wearable hardware required."
   },
   faqs: {
     title: "Frequently Asked Questions",
-    intro: "Have questions about interactive learning solutions? Here are answers to the most common questions from educators, institutions, and decision-makers.",
+    intro: "Common questions from educators, school administrators, and facilities directors.",
     items: [
-      { q: "What types of educational institutions can benefit from interactive learning solutions?", a: "Our solutions are designed for schools, colleges, universities, training centers, libraries, museums, STEM labs, learning centers, and educational exhibitions. Every experience is customized to suit the learning environment and audience." },
-      { q: "Can the interactive experiences be customized for our curriculum?", a: "Yes. Every solution can be tailored to your curriculum, learning objectives, age groups, subjects, and educational goals. We create experiences that align with your institution's teaching approach." },
-      { q: "What technologies power these interactive experiences?", a: "Our solutions combine motion tracking, projection mapping, touch technology, artificial intelligence, computer vision, interactive software, and real-time content management to create engaging learning environments." },
-      { q: "Are the systems easy for teachers to operate?", a: "Absolutely. We provide comprehensive training, intuitive interfaces, and ongoing technical support so educators can confidently manage and operate every interactive experience." },
-      { q: "Can these solutions be installed in existing classrooms?", a: "Yes. Most interactive systems can be integrated into existing classrooms, auditoriums, libraries, museums, and learning spaces with minimal disruption." },
-      { q: "How long does an interactive education project take to complete?", a: "Project timelines depend on the scope and complexity of the installation. After understanding your requirements, we provide a detailed implementation plan, timeline, and deployment schedule." },
-      { q: "Do you provide maintenance and technical support after installation?", a: "Yes. We offer ongoing maintenance, software updates, technical assistance, and long-term support to ensure your interactive learning environment continues to perform at its best." },
-      { q: "How do interactive learning experiences improve student engagement?", a: "Interactive environments encourage students to actively participate, collaborate with peers, explore concepts through hands-on activities, and retain information more effectively, making learning both engaging and memorable." }
+      { q: "What is an interactive learning space?", a: "It uses projection, motion tracking and interactive software to let students explore and interact with digital content, rather than just view it." },
+      { q: "Can interactive projection be used in a regular classroom?", a: "Yes. It can be set up on suitable floors, walls or other surfaces, depending on the room's layout and lighting." },
+      { q: "Can the content be customized for our curriculum?", a: "Yes. Activities and content are built around the subject, age group and learning goals you specify." },
+      { q: "How many students can use the experience at once?", a: "This depends on the space and setup: systems can be designed for individual or group interaction." },
+      { q: "Which spaces work best for this?", a: "Classrooms, STEM labs, libraries, auditoriums and activity areas are all common setups." },
+      { q: "Does installation require major changes to the room?", a: "Most installations work with existing floors, walls and ceilings, with requirements reviewed during planning." },
+      { q: "Is internet access required for daily use?", a: "No. Core activities run locally; internet is only needed for content updates." },
+      { q: "How long does installation take?", a: "Timeline depends on room size and setup, confirmed during the planning stage." },
+      { q: "Do you provide training for teachers?", a: "Yes, training is included as part of installation and support." },
+      { q: "How do we get started?", a: "Share your space, goals and the kind of learning experience you want to create, and we will recommend the right approach for your school." }
     ]
   },
-  caseStudies: [
-    {
-      client: "Boston Prep Academy",
-      title: "Immersive STEM Lab & Sandbox Installation",
-      headline: "Active Hands-On Science Discovery Through Kinetic Projection",
-      tag: "STEM INNOVATION LAB",
-      metric: "High",
-      metricLabel: "Active Participation Rate",
-      secondaryMetric: "Elevated",
-      secondaryMetricLabel: "Higher STEM Retention",
-      desc: "An educational ecosystem utilizing digital sandboxes and interactive geometry walls for collaborative learning, allowing whole classes to run kinetic physics experiments together.",
-      quote: "Students engage with complex geometry and science concepts far faster when they can interact with simulations on their feet.",
-      img: "/images/education_interactive_floor.jpg",
-      slug: "immersive-stem-lab"
-    },
-    {
-      client: "Global Science Museum",
-      title: "Interactive Museum Exhibit",
-      headline: "Touchless Interactive Science Walls & Motion Surfaces",
-      tag: "INTERACTIVE WALL & FLOOR",
-      metric: "Multi-Hour",
-      metricLabel: "Dwell Time Increase",
-      secondaryMetric: "Complete",
-      secondaryMetricLabel: "Daylight Visibility",
-      desc: "A sprawling interactive museum exhibit combining projection mapping with motion-responsive floors to teach physics, astronomy, and planetary science through active exploration.",
-      quote: "The interactive installations completely transformed how student tour groups interact with scientific concepts.",
-      img: "/images/museum_interactive_exhibit.jpg",
-      slug: "interactive-museum-exhibit"
-    },
-    {
-      client: "Active Arena Edutainment",
-      title: "Kinetic Active Multimedia Arena",
-      headline: "Multiplayer Kinesthetic Gaming in School Gymnasium",
-      tag: "ACTIVE EDUTAINMENT",
-      metric: "Massive",
-      metricLabel: "Multi-Student Capacity",
-      secondaryMetric: "Zero",
-      secondaryMetricLabel: "Wearables Required",
-      desc: "Kinetic projection sports and active gaming floor installed in a school multi-use hall, turning physical education into gamified math and team challenge circuits.",
-      quote: "Every single student gets involved, moving and communicating without any controllers or headsets.",
-      img: "/images/entertainment_motion_arena.jpg",
-      slug: "arcade-active-arena"
-    }
-  ],
   cta: {
     eyebrow: "NEXT-GEN LEARNING SPACES",
-    title: "Create an Interactive Learning Space.",
-    subtitle: "Turn any classroom, auditorium, or STEM lab into an active discovery environment that students never forget.",
-    buttonText: "Create an Interactive Learning Space",
+    title: "Create a More Interactive Learning Space",
+    subtitle: "Bring interactive projection, immersive experiences and hands-on digital activities into your classroom.",
+    buttonText: "Discuss Your Education Project",
     img: "/images/industry_education_hero.jpg"
   }
 };

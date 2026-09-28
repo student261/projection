@@ -16,6 +16,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/solutions/interactive-spaces",
+        destination: "/solutions/interactive-projection",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

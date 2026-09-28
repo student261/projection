@@ -9,40 +9,40 @@ const steps = [
     stepTag: "01",
     icon: Search,
     title: "Discover",
-    subtitle: "Spatial Feasibility",
-    desc: "We learn about your goals, audience, space, and requirements and recommend the right technology for your project.",
+    subtitle: "Understand Your Space",
+    desc: "We learn about your space, audience, goals and requirements to find the right approach for your project.",
     deliverable: "Spatial feasibility report, technical specification, and budget roadmap.",
   },
   {
     stepTag: "02",
     icon: Compass,
     title: "Design",
-    subtitle: "3D Visual Experience",
-    desc: "We plan the experience, visuals, layout, and features around what you want to achieve.",
+    subtitle: "Plan the Experience",
+    desc: "We shape the visuals, interaction and layout around your space and how people will use it.",
     deliverable: "3D architectural mockups, UX storyboard, and spatial interaction blueprint.",
   },
   {
     stepTag: "03",
     icon: Code2,
     title: "Develop",
-    subtitle: "Interactive Code & AI",
-    desc: "Our team builds the experience using AI, motion tracking, interactive projection, and software shaders.",
+    subtitle: "Build the Experience",
+    desc: "We create the interactive content and technology needed to bring the experience to life.",
     deliverable: "Custom real-time software build, interactive shaders, and CMS integration.",
   },
   {
     stepTag: "04",
     icon: Wrench,
     title: "Install",
-    subtitle: "On-Site Calibration",
-    desc: "We take care of installation, setup, calibration, and testing so everything is ready to use.",
+    subtitle: "Set Up and Test",
+    desc: "We install the system, set everything up and test the experience in space before launch.",
     deliverable: "Turnkey hardware installation, optical calibration, and commissioning guide.",
   },
   {
     stepTag: "05",
     icon: ShieldCheck,
     title: "Support",
-    subtitle: "24/7 Cloud Care",
-    desc: "After launch, we provide maintenance, content updates, and technical support whenever you need it.",
+    subtitle: "Support After Launch",
+    desc: "We provide technical support and help with maintenance, content updates and future changes.",
     deliverable: "24/7 remote telemetry monitoring, SLA maintenance agreement, and scheduled content updates.",
   },
 ];
@@ -67,7 +67,7 @@ export default function HowWeWork() {
             className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2"
           >
             <Zap className="w-3.5 h-3.5 text-black/40" />
-            HOW WE WORK · THE WORKFLOW
+            HOW WE WORK
           </motion.div>
 
           <motion.h2
@@ -77,7 +77,7 @@ export default function HowWeWork() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-black text-black tracking-tight leading-[1.1] text-[clamp(1.75rem,4vw,3rem)]"
           >
-            From Vision to Interactive Reality
+            From Idea to Interactive Experience
           </motion.h2>
 
           <motion.p
@@ -87,7 +87,7 @@ export default function HowWeWork() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-sm sm:text-base text-black/70 font-normal leading-relaxed pt-1 max-w-2xl"
           >
-            We work with you from the first idea to the final installation, making sure the technology fits your space, your goals, and the people who will use it.
+            We take your project from the first idea to installation, creating an experience that fits your space, audience and goals.
           </motion.p>
         </div>
 
@@ -169,7 +169,7 @@ export default function HowWeWork() {
         </div>
       </div>
       
-      <HugeCTA />
+      <HugeCTA className="py-8 sm:py-10 lg:py-12" />
     </section>
   );
 }

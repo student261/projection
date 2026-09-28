@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "PROJECTION — Motion Interactive Projection & Spatial AI Experiences",
+  title: "PROJECTION | Motion Interactive Projection & Spatial AI Experiences",
   description: "Transform physical spaces into interactive digital environments. Motion tracking, projection mapping, 360 rooms, and AI experiences.",
 };
 
@@ -37,6 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
@@ -44,7 +45,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="preload" href="/hero-main-poster.webp" as="image" type="image/webp" fetchPriority="high" />
       </head>
-      <body className={`${geistSans.className} min-h-full flex flex-col bg-white text-black selection:bg-black selection:text-white overflow-x-hidden relative`}>
+      <body className={`${geistSans.className} min-h-full flex flex-col bg-white text-black selection:bg-black selection:text-white overflow-x-clip relative`}>
         <CustomCursor />
         <div className="relative z-10 flex-1 flex flex-col">{children}</div>
       </body>

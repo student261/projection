@@ -15,7 +15,7 @@ const capabilities = [
     img: "/images/cathedral_projection_mapping.jpg",
     metric: "16K Native",
     metricLabel: "Pixel Canvas",
-    href: "/solutions/interactive-spaces",
+    href: "/solutions/interactive-projection",
   },
   {
     num: "02",

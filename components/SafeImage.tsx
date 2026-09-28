@@ -26,11 +26,12 @@ export default function SafeImage({
 
   const getOptimizedSrc = (rawSrc?: string | Blob): string => {
     if (typeof rawSrc !== "string" || !rawSrc) {
-      return fallbackSrc.endsWith(".webp") ? fallbackSrc : fallbackSrc.replace(/\.(png|jpg|jpeg)$/, ".webp");
+      return fallbackSrc;
     }
-    let result = rawSrc;
+    const [baseUrl, query] = rawSrc.split("?");
+    let result = baseUrl;
 
-    // Auto convert local images to WebP for 85%+ compression & ultra-fast loading
+    // Convert local images to WebP if needed
     if ((result.endsWith(".png") || result.endsWith(".jpg") || result.endsWith(".jpeg")) && !result.startsWith("http")) {
       result = result.replace(/\.(png|jpg|jpeg)$/, ".webp");
     }
@@ -46,49 +47,58 @@ export default function SafeImage({
         result += "&w=1200";
       }
     }
-    return result;
+    return query ? `${result}?${query}` : result;
   };
 
   const initialSrc = getOptimizedSrc(src);
   const [imgSrc, setImgSrc] = useState<string>(initialSrc);
-  const [hasPrimaryError, setHasPrimaryError] = useState(false);
-  const [hasFallbackError, setHasFallbackError] = useState(false);
+  const [attemptStage, setAttemptStage] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const updated = getOptimizedSrc(src);
     setImgSrc(updated);
-    setHasPrimaryError(false);
-    setHasFallbackError(false);
+    setAttemptStage(0);
     setIsLoading(true);
 
-    // If image is already complete in browser cache, resolve loading state immediately
-    if (imgRef.current?.complete) {
+    if (imgRef.current?.complete && imgRef.current.naturalWidth > 0) {
       setIsLoading(false);
     }
   }, [src, fallbackSrc]);
 
   const handleError = () => {
-    // If we tried an optimized .webp URL and it failed, try the original src first
-    if (typeof src === "string" && imgSrc !== src && imgSrc.endsWith(".webp")) {
-      setImgSrc(src);
+    if (typeof src === "string") {
+      const [baseSrc, query] = src.split("?");
+      const [baseImgSrc] = imgSrc.split("?");
+      const qSuffix = query ? `?${query}` : "";
+
+      // Stage 0: If webp failed, try original src if it was .jpg or .png
+      if (attemptStage === 0 && baseImgSrc.endsWith(".webp") && (baseSrc.endsWith(".jpg") || baseSrc.endsWith(".png") || baseSrc.endsWith(".jpeg"))) {
+        setAttemptStage(1);
+        setImgSrc(src);
+        return;
+      }
+      // If original src was .webp and failed, try .jpg fallback
+      if (attemptStage === 0 && baseSrc.endsWith(".webp")) {
+        setAttemptStage(1);
+        setImgSrc(`${baseSrc.replace(/\.webp$/, ".jpg")}${qSuffix}`);
+        return;
+      }
+    }
+
+    // Stage 1: Try fallbackSrc
+    if (attemptStage < 2 && imgSrc !== fallbackSrc) {
+      setAttemptStage(2);
+      setImgSrc(fallbackSrc);
       return;
     }
 
-    if (!hasPrimaryError) {
-      // First error: switch to fallback
-      setHasPrimaryError(true);
-      if (imgSrc !== fallbackSrc) {
-        setImgSrc(fallbackSrc);
-      } else {
-        // The original src WAS the fallback, so it failed immediately
-        setHasFallbackError(true);
-      }
-    } else {
-      // Second error: fallback also failed
-      setHasFallbackError(true);
-    }
+    // Final stage: Fallback also failed
+    setAttemptStage(3);
+    setIsLoading(false);
   };
+
+  const hasFallbackError = attemptStage >= 3;
 
   return (
     <div className={`relative overflow-hidden ${containerClassName}`}>
@@ -99,7 +109,7 @@ export default function SafeImage({
         </div>
       )}
 
-      {/* Render Fallback Graphic if double error occurs */}
+      {/* Render Fallback Graphic only if all sources failed */}
       {hasFallbackError ? (
         <div className="absolute inset-0 bg-neutral-950/80 backdrop-blur-sm flex flex-col items-center justify-center p-4 text-center z-10 border border-white/10">
           <div className="w-10 h-10 rounded-xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-white mb-2 shadow-sm">
@@ -126,4 +136,3 @@ export default function SafeImage({
     </div>
   );
 }
-

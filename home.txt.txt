@@ -1,0 +1,133 @@
+EDUCATION INDUSTRY PAGE Draft
+URL: /industries/education
+
+ Meta Title: Interactive Learning Solutions for Schools and Classrooms
+
+ Meta Description: Turn classrooms into interactive learning spaces with motion projection, immersive experiences and hands-on digital activities built for education.
+1. Hero
+Label: EDUCATION
+H1: Turn Classrooms Into Interactive Learning Spaces
+Supporting Copy:
+ Give students a way to explore lessons through movement, projection and hands-on interaction — turning floors, walls and shared spaces into part of the learning experience.
+Primary CTA: Explore Education Solutions
+ Secondary CTA: Discuss Your Project
+2. The Challenge
+Label: THE CHALLENGE
+ H2: Creating More Interactive Learning Spaces
+01. Keeping Students Engaged
+ Traditional lessons make it hard to hold attention through a full class period.
+02. Passive Learning
+ Many classrooms still rely on watching and listening rather than doing.
+03. Different Learning Styles
+ A single teaching method doesn't reach every student the same way.
+04. Underused Classroom Space
+ Floors, walls and shared areas sit idle instead of being part of the lesson.
+05. Limited Group Participation
+ Fewer opportunities for teamwork and collaborative activities.
+06. Rigid Content
+ Static materials are hard to update or adapt across subjects and age groups.
+3. Our Vision
+Label: OUR VISION
+ H2: Make Learning More Active
+Interactive learning spaces give students more ways to take part in a lesson, not just watch it. Floors, walls and other suitable surfaces become part of the classroom itself, turning movement and participation into part of how students learn.
+Visual quote: Learning works better when students take part in it, not just watch it.
+4. Interactive Solutions for Education
+Label: SOLUTIONS FOR YOUR SPACE
+ H2: Interactive Solutions Built for Learning
+Interactive Projection
+ Turn floors and walls into interactive surfaces for lessons, activities and hands-on exploration.
+ → Explore Interactive Projection
+Immersive Experiences
+ Create immersive learning environments using projection and spatial visuals to explore subjects in new ways.
+ → Explore Immersive Experiences
+Interactive Engagement
+ Add motion-based games and activities that give students a reason to move and participate.
+ → Explore Interactive Engagement
+LED & 3D Display Solutions
+ Use large-format displays for presentations, visual learning and school events.
+ → Explore LED & 3D Displays
+5. Related Use Case
+Label: SEE IT IN CONTEXT
+ This is part of our Interactive Learning use case → /use-cases/interactive-learning
+6. How It Works
+Label: HOW IT WORKS
+ H2: From Learning Goal to Interactive Experience
+01. Define the Learning Goal
+ We identify the subject, age group and type of activity the space needs to support.
+02. Plan the Experience
+ The layout, content and interaction are planned around how students will use the space.
+03. Create the Content
+ Digital activities and visuals are built around the lesson and learning objective.
+04. Set Up the Space
+ The projection, display and interaction system is installed and configured on-site.
+05. Start Learning
+ Teachers and students use the experience as part of everyday lessons and activities.
+7. Experience Ideas
+Label: EXPERIENCE IDEAS
+ H2: Ways to Bring Interactive Learning Into Your School
+Interactive Classroom — Floors and walls used for daily lessons and group activities.
+ STEM Learning Space — Visual, hands-on activities for science, math and coding.
+ Immersive Learning Room — Large-scale visuals for storytelling, history and exploration.
+ Interactive Library Corner — Digital activities for reading and research.
+ Activity Zone — Movement-based learning for breaks and group play.
+8. What It Enables
+Label: WHAT IT ENABLES
+ H2: More Ways to Support Interactive Learning
+Active Participation — Students engage with content through movement, not just observation.
+ Group Learning — Shared activities that multiple students can take part in together.
+ Visual Learning — Subjects presented through projection and interactive display instead of static material.
+ Flexible Content — Activities adapted across subjects, age groups and lesson plans.
+ Multi-Space Use — Works in classrooms, libraries, STEM labs and auditoriums.
+ Reusable Setup — One installation supports different lessons and content over time.
+9. Technology Behind the Experience
+Label: THE TECHNOLOGY
+ H2: How the Experience Comes Together
+Motion Tracking — Detects student movement within the interactive area in real time.
+ Projection Systems — Displays digital content onto classroom floors, walls and other surfaces.
+ Computer Vision — Recognizes gestures and multiple simultaneous users.
+ Interactive Software — Connects movement and interaction with the projected content.
+ Sensors — Provide precise, touch-free detection of student activity.
+ Content Management — Lets teachers select, schedule and update lesson content.
+10. How We Deliver
+Label: OUR PROCESS
+ H2: How We Create Your Learning Space
+01. Plan & Assess — We review your space, audience, goals and technical requirements.
+ 02. Build & Install — The experience is built, configured and installed on-site.
+ 03. Train & Support — Your team is trained to run the system, with support ongoing.
+11. Why Anronix
+Label: WHY US
+ H2: A Learning Experience Built Around Your Space
+Every school's space, curriculum and audience are different. We plan each installation around how your students will actually use it — not a fixed, one-size-fits-all package — and stay involved from the first conversation through to ongoing support.
+Custom-built content — activities shaped around your subjects and age groups, not a locked content library
+End-to-end delivery — one team from planning through installation and support
+Built for real classroom conditions — installation planned around your room, lighting and layout
+12. Featured Work
+Label: OUR WORK
+ H2: See What's Possible
+(Use this section until verified education projects exist — solution demonstrations, concept visuals, or a walkthrough video. Once real school installations are completed, replace with actual case studies: Client/School, Location, Objective, Solution Used, Verified Outcome, Quote.)
+13. FAQ
+What is an interactive learning space?
+ It uses projection, motion tracking and interactive software to let students explore and interact with digital content, rather than just view it.
+Can interactive projection be used in a regular classroom?
+ Yes. It can be set up on suitable floors, walls or other surfaces, depending on the room's layout and lighting.
+Can the content be customized for our curriculum?
+ Yes. Activities and content are built around the subject, age group and learning goals you specify.
+How many students can use the experience at once?
+ This depends on the space and setup — systems can be designed for individual or group interaction.
+Which spaces work best for this?
+ Classrooms, STEM labs, libraries, auditoriums and activity areas are all common setups.
+Does installation require major changes to the room?
+ Most installations work with existing floors, walls and ceilings, with requirements reviewed during planning.
+Is internet access required for daily use?
+ No. Core activities run locally; internet is only needed for content updates.
+How long does installation take?
+ Timeline depends on room size and setup — this is confirmed during the planning stage.
+Do you provide training for teachers?
+ Yes, training is included as part of installation and support.
+How do we get started?
+ Share your space, goals and the kind of learning experience you want to create, and we'll recommend the right approach for your school.
+14. Final CTA
+H2: Create a More Interactive Learning Space
+Bring interactive projection, immersive experiences and hands-on digital activities into your classroom.
+Button: Discuss Your Education Project →
+

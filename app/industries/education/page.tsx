@@ -1,317 +1,523 @@
-import { notFound } from "next/navigation";
-import { industriesData, sharedDelivery, getIndustryCaseStudies } from "@/data/industries";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
-import { ArrowRight, Activity, Lightbulb, Sparkles, Network, Terminal, CheckCircle2, ShieldAlert, TrendingDown, Layers, Brain, Cpu, Users, ArrowUpRight, Compass, Wrench, GraduationCap, ShieldCheck } from "lucide-react";
-import Button from "@/components/ui/Button";
-import SectionHeading from "@/components/ui/SectionHeading";
+import { ArrowRight, Sparkles, Activity, Layers, Expand, Tv, Lightbulb, Users, Monitor } from "lucide-react";
 import FAQAccordion from "../[slug]/FAQAccordion";
-import SolutionsAccordion from "@/components/SolutionsAccordion";
-import StickyExperiences from "@/components/StickyExperiences";
-import CaseStudiesSpotlight from "@/components/CaseStudiesSpotlight";
+import Curved3DCarousel from "@/components/Curved3DCarousel";
+import { education } from "@/data/industries/education";
+
+export const metadata: Metadata = {
+  title: "Interactive Learning Solutions for Schools and Classrooms",
+  description: "Turn classrooms into interactive learning spaces with motion projection, immersive experiences and hands-on digital activities built for education.",
+  alternates: {
+    canonical: "/industries/education",
+  },
+  openGraph: {
+    title: "Interactive Learning Solutions for Schools and Classrooms",
+    description: "Turn classrooms into interactive learning spaces with motion projection, immersive experiences and hands-on digital activities built for education.",
+    url: "/industries/education",
+    type: "website",
+    images: [
+      {
+        url: "/images/industry_education_hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Interactive classroom projection for education",
+      },
+    ],
+  },
+};
 
 export default function EducationIndustryPage() {
-  const industry = industriesData["education"];
+  const data = education;
 
-  if (!industry) {
-    notFound();
-  }
+  const challengeItems = [
+    {
+      title: data.challenges.items[0]?.title || "Keeping Students Engaged",
+      desc: data.challenges.items[0]?.desc || "Traditional lessons make it hard to hold attention through a full class period.",
+      icon: Users,
+      badgeBg: "bg-[#E0F2FE]",
+      badgeText: "text-[#0284C7]",
+      img: "/images/challenge_engaged_students.webp",
+    },
+    {
+      title: data.challenges.items[1]?.title || "Passive Learning",
+      desc: data.challenges.items[1]?.desc || "Many classrooms still rely on watching and listening rather than doing.",
+      icon: Lightbulb,
+      badgeBg: "bg-[#DCFCE7]",
+      badgeText: "text-[#16A34A]",
+      img: "/images/challenge_passive_learning.webp",
+    },
+    {
+      title: data.challenges.items[2]?.title || "Different Learning Styles",
+      desc: data.challenges.items[2]?.desc || "A single teaching method does not reach every student the same way.",
+      icon: Layers,
+      badgeBg: "bg-[#F3E8FF]",
+      badgeText: "text-[#9333EA]",
+      img: "/images/challenge_learning_styles.webp",
+    },
+    {
+      title: data.challenges.items[3]?.title || "Underused Classroom Space",
+      desc: data.challenges.items[3]?.desc || "Floors, walls and shared areas sit idle instead of being part of the lesson.",
+      isCustomIcon: true,
+      badgeBg: "bg-[#FFEDD5]",
+      badgeText: "text-[#EA580C]",
+      img: "/images/challenge_underused_space.webp",
+    },
+    {
+      title: data.challenges.items[4]?.title || "Limited Group Participation",
+      desc: data.challenges.items[4]?.desc || "Fewer opportunities for teamwork and collaborative activities.",
+      icon: Users,
+      badgeBg: "bg-[#FEF3C7]",
+      badgeText: "text-[#D97706]",
+      img: "/images/challenge_group_collaboration.webp",
+    },
+    {
+      title: data.challenges.items[5]?.title || "Rigid Content",
+      desc: data.challenges.items[5]?.desc || "Static materials are hard to update or adapt across subjects and age groups.",
+      icon: Monitor,
+      badgeBg: "bg-[#FFE4E6]",
+      badgeText: "text-[#E11D48]",
+      img: "/images/challenge_flexible_content.webp",
+    },
+  ];
 
-  const caseStudies = getIndustryCaseStudies(industry);
+  const solutions = [
+    {
+      title: "Interactive Projection",
+      desc: "Turn floors and walls into interactive surfaces for lessons, activities and hands-on exploration.",
+      href: "/solutions/interactive-projection",
+      cta: "Explore Interactive Projection",
+      icon: Activity,
+    },
+    {
+      title: "Immersive Experiences",
+      desc: "Create immersive learning environments using projection and spatial visuals to explore subjects in new ways.",
+      href: "/solutions/immersive-environment",
+      cta: "Explore Immersive Experiences",
+      icon: Expand,
+    },
+    {
+      title: "Interactive Engagement",
+      desc: "Add motion-based games and activities that give students a reason to move and participate.",
+      href: "/solutions/interactive-projection",
+      cta: "Explore Interactive Engagement",
+      icon: Layers,
+    },
+    {
+      title: "LED & 3D Display Solutions",
+      desc: "Use large-format displays for presentations, visual learning and school events.",
+      href: "/solutions",
+      cta: "Explore LED & 3D Displays",
+      icon: Tv,
+    },
+  ];
+
+  const howItWorksSteps = [
+    {
+      num: "01",
+      title: "Define the Learning Goal",
+      desc: "We identify the subject, age group and type of activity the space needs to support.",
+    },
+    {
+      num: "02",
+      title: "Plan the Experience",
+      desc: "The layout, content and interaction are planned around how students will use the space.",
+    },
+    {
+      num: "03",
+      title: "Create the Content",
+      desc: "Digital activities and visuals are built around the lesson and learning objective.",
+    },
+    {
+      num: "04",
+      title: "Set Up the Space",
+      desc: "The projection, display and interaction system is installed and configured on-site.",
+    },
+    {
+      num: "05",
+      title: "Start Learning",
+      desc: "Teachers and students use the experience as part of everyday lessons and activities.",
+    },
+  ];
+
+  const howWeDeliverSteps = [
+    {
+      num: "01",
+      title: "Plan & Assess",
+      desc: "We review your space, audience, goals and technical requirements.",
+    },
+    {
+      num: "02",
+      title: "Build & Install",
+      desc: "The experience is built, configured and installed on-site.",
+    },
+    {
+      num: "03",
+      title: "Train & Support",
+      desc: "Your team is trained to run the system, with support ongoing.",
+    },
+  ];
+
+  const whyUsPoints = [
+    {
+      title: "Custom-built content",
+      desc: "Activities shaped around your subjects and age groups, not a locked content library.",
+    },
+    {
+      title: "End-to-end delivery",
+      desc: "One team from planning through installation and support.",
+    },
+    {
+      title: "Built for real classroom conditions",
+      desc: "Installation planned around your room, lighting and layout.",
+    },
+  ];
+
+  const featuredWork = [
+    {
+      title: "Interactive Classroom Projection",
+      desc: "Motion-responsive surfaces that turn everyday lessons into collaborative, physically active exercises.",
+      img: "/images/education_interactive_floor.jpg",
+    },
+    {
+      title: "Hands-On STEM Discovery Lab",
+      desc: "Digital discovery setups where students run visual experiments and solve interactive puzzles together.",
+      img: "/images/museum_dino_sandbox.jpg",
+    },
+    {
+      title: "Active Learning & Motion Zone",
+      desc: "Movement-integrated games that keep students energized and collaborating during lessons and group breaks.",
+      img: "/images/interactive_strike_wall.jpg",
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-white text-black flex flex-col selection:bg-black selection:text-white">
       <Navbar />
 
-      {/* SECTION 01: HERO BANNER (Clean & Cinematic) */}
-      <section className="relative h-screen min-h-screen flex flex-col justify-between items-center overflow-hidden pt-24 sm:pt-28 pb-4 sm:pb-6 bg-black">
-        <div className="absolute inset-0 z-0">
-          <SafeImage 
-            src={industry.hero.img} 
-            alt={industry.hero.title} 
-            className="w-full h-full object-cover opacity-55 scale-105" 
+      {/* SECTION 1: HERO */}
+      <section className="relative h-screen min-h-[580px] flex flex-col justify-between items-center overflow-hidden pt-24 sm:pt-28 pb-8 bg-black text-white">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <SafeImage
+            src={data.hero.img}
+            alt={data.hero.title}
+            className="w-full h-full object-cover opacity-55 scale-105"
             containerClassName="w-full h-full bg-black"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black pointer-events-none" />
         </div>
-        
+
         <div className="my-auto relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-          <div className="flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/80 mb-3 sm:mb-4">
+          <div className="inline-flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-white/70 mb-3">
             <Sparkles className="w-3.5 h-3.5 text-white/70" />
-            <span>{industry.hero.eyebrow}</span>
+            <span>{data.hero.eyebrow}</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-3 sm:mb-4 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.08]">
-            {industry.hero.title}
+
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08] max-w-4xl mx-auto mb-4">
+            {data.hero.title}
           </h1>
-          <p className="text-white/80 max-w-2xl mx-auto mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg font-light leading-relaxed">
-            {industry.hero.subtitle}
+
+          <p className="text-sm sm:text-base lg:text-lg text-white/80 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
+            {data.hero.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-7 py-3 sm:py-3.5 rounded-full bg-white text-black hover:bg-white/90 shadow-xl transition-all duration-300 active:scale-95 w-full sm:w-auto"
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
+            <Link
+              href="#solutions"
+              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-neutral-200 transition-all active:scale-95 shadow-xl w-full sm:w-auto"
             >
-              Create an Interactive Learning Space
-              <ArrowRight className="w-3.5 h-3.5" />
+              <span>Explore Education Solutions</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link 
-              href="#experiences" 
-              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-7 py-3 sm:py-3.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-300 active:scale-95 w-full sm:w-auto"
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md text-xs sm:text-sm font-bold uppercase tracking-wider transition-all active:scale-95 w-full sm:w-auto"
             >
-              Explore Experiences
+              <span>Discuss Your Project</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* SECTION 02: THE CHALLENGE (Pure Editorial — Zero Boxes / Zero Cards) */}
-      <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Section Header */}
-          <div className="max-w-3xl mb-10 sm:mb-12">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-              INDUSTRY OBSTACLES
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black mb-3">
-              {industry.challenges.title}
-            </h2>
-            <p className="text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
-              {industry.challenges.intro}
-            </p>
+      {/* SECTION 2: THE CHALLENGE (Matching Image 1 Design) */}
+      <section className="w-full">
+        {/* Top Dark Header Banner */}
+        <div className="relative w-full overflow-hidden bg-black text-white py-8 sm:py-10 lg:py-12 flex items-center">
+          <div className="absolute inset-0 z-0">
+            <SafeImage
+              src="/images/education_challenge_banner.webp?v=20260928b"
+              alt="Interactive Learning Spaces"
+              priority={true}
+              loading="eager"
+              className="w-full h-full object-cover opacity-60"
+              containerClassName="w-full h-full bg-black"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/85 pointer-events-none" />
           </div>
 
-          {/* 6 Open Typographic Challenge Points — Zero Boxes, Zero Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8">
-            {industry.challenges.items.map((item, idx) => (
-              <div key={idx} className="space-y-1.5">
-                <span className="text-xs font-mono font-bold text-neutral-700 block tracking-wider">
-                  0{idx + 1}
-                </span>
-                <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-neutral-600 font-light leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* SECTION 03: OUR VISION (EDITORIAL SPLIT SHOWCASE - SINGLE SCREEN) */}
-      <section className="py-10 sm:py-12 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
-            {/* Left Column: Vision Narrative & Statement */}
-            <div className="lg:col-span-6 space-y-4 sm:space-y-5">
-              <div>
-                <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-                  OUR VISION
-                </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black tracking-tight leading-[1.1]">
-                  {industry.vision.title}
+          <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-12">
+              <div className="max-w-2xl">
+                <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
+                  <span className="w-6 sm:w-8 h-[2px] bg-cyan-400"></span>
+                  <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-cyan-300">
+                    SOLUTIONS FOR EDUCATION
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] tracking-tight leading-[1.08] text-white">
+                  <span className="font-extrabold block">Creating More Interactive</span>
+                  <span className="font-light block text-white/90 mt-1">Learning Spaces</span>
                 </h2>
               </div>
 
-              <p className="text-lg sm:text-xl text-black font-semibold leading-snug">
-                {industry.vision.statement}
-              </p>
-              
-              <div className="space-y-3 text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
-                <p>
-                  {industry.vision.intro}
-                </p>
-                <p>
-                  By bridging the gap between digital interaction and foundational curriculum, we create spaces where students discover concepts through movement, collaborate effortlessly, and build enduring curiosity.
+              <div className="lg:max-w-md xl:max-w-lg lg:text-left">
+                <p className="text-xs sm:text-sm lg:text-[14px] text-white/80 font-light leading-relaxed">
+                  {data.challenges.intro}
                 </p>
               </div>
-
             </div>
-            
-            {/* Right Column: Tall Unified Media Showcase */}
-            <div className="lg:col-span-6">
-              <div className="relative h-[380px] sm:h-[440px] lg:h-[480px] w-full rounded-3xl overflow-hidden bg-neutral-100 group shadow-lg">
-                <SafeImage 
-                  src={industry.vision?.img || "/images/var_sandbox_projection.jpg"} 
-                  alt="Vision for Education"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  containerClassName="w-full h-full"
-                />
-                {industry.vision?.quote && (
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 sm:p-7 pointer-events-none">
-                    <div className="backdrop-blur-md bg-black/40 border border-white/15 rounded-2xl p-4 sm:p-5 text-white shadow-xl">
-                      <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.2em] text-white/70 block mb-1.5 font-bold">
-                        EDUCATIONAL PHILOSOPHY
-                      </span>
-                      <p className="text-xs sm:text-sm font-light leading-relaxed text-white/95">
-                        &ldquo;{industry.vision.quote.replace(/^["'“]+|["'”]+$/g, '').trim()}&rdquo;
+          </div>
+        </div>
+
+        {/* 2-Column Card Grid with Dividers & Thumbnail Images */}
+        <div className="bg-white pt-8 pb-12 sm:pt-9 sm:pb-16 text-black">
+          <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {challengeItems.map((item, idx) => {
+                const IconComponent = item.icon;
+                const isLeftColumn = idx % 2 === 0;
+                const rowIndex = Math.floor(idx / 2);
+                const isFirstRow = rowIndex === 0;
+                const isLastRow = rowIndex === Math.floor((challengeItems.length - 1) / 2);
+                const isLastItem = idx === challengeItems.length - 1;
+
+                return (
+                  <div
+                    key={idx}
+                    className={`flex items-center justify-between gap-3.5 sm:gap-6 ${
+                      isLeftColumn
+                        ? "pr-0 lg:pr-10 xl:pr-12 lg:border-r border-neutral-200"
+                        : "pl-0 lg:pl-10 xl:pl-12"
+                    } ${
+                      isFirstRow
+                        ? "pt-0 pb-6 sm:pb-7 lg:pb-8"
+                        : isLastRow
+                        ? "pt-6 sm:pt-7 lg:pt-8 pb-0"
+                        : "py-6 sm:py-7 lg:py-8"
+                    } ${
+                      !isLastRow
+                        ? "border-b border-neutral-200"
+                        : !isLastItem
+                        ? "max-lg:border-b max-lg:border-neutral-200"
+                        : ""
+                    }`}
+                  >
+                    {/* Soft Pastel Circular Icon Badge */}
+                    <div
+                      className={`w-13 h-13 sm:w-14 sm:h-14 lg:w-15 lg:h-15 rounded-full shrink-0 flex items-center justify-center ${item.badgeBg} ${item.badgeText}`}
+                    >
+                      {item.isCustomIcon ? (
+                        <svg
+                          className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.75]"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <rect width="18" height="18" x="3" y="3" rx="2" />
+                          <path d="M9 3v18" />
+                          <rect width="2" height="6" x="5" y="11" rx="0.5" fill="currentColor" />
+                        </svg>
+                      ) : IconComponent ? (
+                        <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.75]" />
+                      ) : null}
+                    </div>
+
+                    {/* Middle Content */}
+                    <div className="flex-1 min-w-0 pr-2 sm:pr-4 space-y-1">
+                      <h3 className="text-base sm:text-[17px] lg:text-lg font-bold text-neutral-900 tracking-tight leading-snug">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs sm:text-[13px] text-neutral-500 font-normal leading-relaxed">
+                        {item.desc}
                       </p>
                     </div>
+
+                    {/* Right Image Thumbnail */}
+                    <div className="relative w-32 h-20 sm:w-40 sm:h-26 md:w-48 md:h-30 lg:w-52 lg:h-32 shrink-0 rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)] bg-neutral-100 group">
+                      <SafeImage
+                        src={`${item.img}?v=20260928b`}
+                        alt={item.title}
+                        priority={true}
+                        loading="eager"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        containerClassName="w-full h-full"
+                      />
+                    </div>
                   </div>
-                )}
-              </div>
+                );
+              })}
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* SECTION 04: CUSTOM EDUCATION SOLUTIONS (SINGLE-SCREEN EDITORIAL) */}
-      <section className="pt-8 sm:pt-10 pb-10 sm:pb-12 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Compact Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-              CORE CAPABILITIES
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
-              Interactive Tools for Every Learning Space
-            </h2>
-            <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
-              Transform classrooms and STEM labs with responsive, motion-activated environments that inspire collaboration.
-            </p>
-          </div>
-
-          {/* 3-Column Single-Screen Layout (Zero Cards / Zero Containers) */}
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
-            
-            {/* Capability 01: Interactive Floor */}
-            <div className="flex flex-col group">
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-100 mb-4">
-                <SafeImage 
-                  src="/images/education_interactive_floor.jpg" 
-                  alt="Interactive Learning Floor" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                  containerClassName="w-full h-full" 
-                />
-              </div>
-              <div className="flex items-center gap-2 mb-2">
-                <Activity className="w-5 h-5 text-black shrink-0" />
-                <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight">Interactive Floor</h3>
-              </div>
-              <p className="text-neutral-600 text-sm leading-relaxed font-light mb-5">
-                Turn floors into interactive learning zones where students solve math challenges, explore geography, and stay active while learning.
-              </p>
+      {/* SECTION 3: OUR VISION */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-[#F8F6F2] text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-6 space-y-4">
               <div>
-                <Link href="/solutions/interactive-floor" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-black hover:text-neutral-600 transition-colors">
-                  Explore Solution <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Capability 02: Interactive Wall */}
-            <div className="flex flex-col group">
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-100 mb-4">
-                <SafeImage 
-                  src="/images/museum_interactive_exhibit.jpg" 
-                  alt="Interactive Wall" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                  containerClassName="w-full h-full" 
-                />
-              </div>
-              <div className="flex items-center gap-2 mb-2">
-                <Layers className="w-5 h-5 text-black shrink-0" />
-                <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight">Interactive Wall</h3>
-              </div>
-              <p className="text-neutral-600 text-sm leading-relaxed font-light mb-5">
-                Transform walls into hands-on digital canvases for science simulations, collaborative group research, and interactive presentations.
-              </p>
-              <div>
-                <Link href="/solutions/interactive-wall" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-black hover:text-neutral-600 transition-colors">
-                  Explore Solution <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Capability 03: Motion Games */}
-            <div className="flex flex-col group">
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-100 mb-4">
-                <SafeImage 
-                  src="/images/entertainment_motion_arena.jpg" 
-                  alt="Motion Games" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                  containerClassName="w-full h-full" 
-                />
-              </div>
-              <div className="flex items-center gap-2 mb-2">
-                <Sparkles className="w-5 h-5 text-black shrink-0" />
-                <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight">Motion Games</h3>
-              </div>
-              <p className="text-neutral-600 text-sm leading-relaxed font-light mb-5">
-                Bring active movement into the classroom with motion-tracked games designed for gym classes, brain breaks, and team challenges.
-              </p>
-              <div>
-                <Link href="/solutions/interactive-spaces" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-black hover:text-neutral-600 transition-colors">
-                  Explore Solution <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* SECTION 05: FEATURED EXPERIENCES (SINGLE-SCREEN INTERACTIVE SHOWCASE) */}
-      <section id="experiences" className="py-8 sm:py-10 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Compact Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-              REAL WORLD IMPACT
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
-              {industry.experiences.title}
-            </h2>
-            <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
-              {industry.experiences.intro}
-            </p>
-          </div>
-
-          {/* Single-Screen Interactive Showcase Component */}
-          <StickyExperiences items={industry.experiences.items} />
-
-        </div>
-      </section>
-
-      {/* SECTION 06: BENEFITS & OUTCOMES (ZERO-BOX / ZERO-CARD SINGLE SCREEN) */}
-      <section id="benefits" className="py-8 sm:py-10 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Section Header */}
-          <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-              MEASURABLE VALUE
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
-              {industry.benefits.title}
-            </h2>
-            <p className="text-neutral-600 text-sm sm:text-base font-light leading-relaxed">
-              {industry.benefits.intro}
-            </p>
-          </div>
-
-          {/* 6 Benefits in 3-Column Grid — Zero Cards, Zero Containers */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8 items-start">
-            {industry.benefits.items.map((ben, idx) => (
-              <div key={idx} className="space-y-1.5 flex flex-col">
-                <span className="text-xs font-mono font-bold text-neutral-700 block tracking-wider">
-                  0{idx + 1}
+                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+                  OUR VISION
                 </span>
-                <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug sm:min-h-[2.75rem] flex items-start">
-                  {ben.title}
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+                  {data.vision.title}
+                </h2>
+              </div>
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-600 font-light leading-relaxed">
+                {data.vision.intro}
+              </p>
+              <div className="pt-2 border-l-2 border-black/40 pl-4 my-2">
+                <p className="text-sm sm:text-base font-medium text-black italic">
+                  &ldquo;{data.vision.quote}&rdquo;
+                </p>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6">
+              <div className="relative aspect-[16/11] rounded-2xl overflow-hidden bg-neutral-200 shadow-xl">
+                <SafeImage
+                  src={data.vision.img || "/images/var_sandbox_projection.jpg"}
+                  alt="Students engaged in active interactive learning"
+                  className="w-full h-full object-cover"
+                  containerClassName="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: INTERACTIVE SOLUTIONS FOR EDUCATION */}
+      <section id="solutions" className="py-14 sm:py-16 lg:py-20 bg-white text-black scroll-mt-20">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+              SOLUTIONS FOR YOUR SPACE
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+              {data.solutions.title}
+            </h2>
+          </div>
+
+          <div className="border-t border-black/10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-14 gap-y-8 sm:gap-y-10 pt-6 sm:pt-8">
+              {solutions.map((item, idx) => {
+                const IconComponent = item.icon;
+                return (
+                  <div key={idx} className="flex flex-col justify-between space-y-3 pb-6 border-b border-black/10">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2.5">
+                        <IconComponent className="w-5 h-5 text-black shrink-0" strokeWidth={1.75} />
+                        <h3 className="text-lg sm:text-xl font-bold text-black tracking-tight">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                    <div>
+                      <Link
+                        href={item.href}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-600 transition-colors pt-1"
+                      >
+                        <span>{item.cta}</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: RELATED USE CASE (Clean Full-Width Dark Banner) */}
+      <section className="relative w-full overflow-hidden bg-black text-white py-10 sm:py-14 lg:py-16">
+        {/* Background Image with Dark Gradient Overlay */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <SafeImage
+            src="/images/education_exp_interactive_classroom.webp"
+            alt="Interactive Learning Environment"
+            className="w-full h-full object-cover opacity-20"
+            containerClassName="w-full h-full bg-black"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black pointer-events-none" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-10">
+            {/* Left Content */}
+            <div className="flex-1 min-w-0 max-w-3xl xl:max-w-4xl">
+              <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.14em] text-neutral-400 uppercase block mb-2.5 sm:mb-3">
+                SEE IT IN CONTEXT
+              </span>
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[28px] xl:text-[34px] 2xl:text-4xl font-extrabold text-white tracking-tight leading-tight lg:whitespace-nowrap">
+                <span className="block sm:inline">Explore the Interactive</span>{" "}
+                <span className="block sm:inline">Learning Use Case</span>
+              </h3>
+              <p className="text-xs sm:text-sm lg:text-base text-neutral-400 font-light mt-2 max-w-xl leading-relaxed">
+                See how motion-tracked projections, gesture walls, and immersive curriculum modules come together in real school environments.
+              </p>
+            </div>
+
+            {/* Right Premium CTA Button */}
+            <div className="shrink-0">
+              <Link
+                href="/use-cases/interactive-learning"
+                className="group inline-flex items-center justify-center gap-3.5 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-black text-xs sm:text-sm font-extrabold uppercase tracking-wider transition-all duration-300 hover:bg-neutral-100 hover:scale-[1.03] active:scale-95 shadow-[0_0_35px_rgba(255,255,255,0.18)]"
+              >
+                <span>Explore Interactive Learning</span>
+                <span className="w-7 h-7 rounded-full bg-black text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1 shrink-0">
+                  <ArrowRight className="w-3.5 h-3.5 text-white" />
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6: HOW IT WORKS */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+              HOW IT WORKS
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+              From Learning Goal to Interactive Experience
+            </h2>
+          </div>
+
+          <div className="border-t border-black/15 pt-6 sm:pt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
+            {howItWorksSteps.map((step, idx) => (
+              <div key={idx} className="flex flex-col space-y-2">
+                <span className="text-xs font-mono font-bold text-neutral-400 block">
+                  {step.num}
+                </span>
+                <h3 className="text-base sm:text-lg font-bold text-black tracking-tight leading-snug">
+                  {step.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed flex-1">
-                  {ben.desc}
+                <p className="text-sm text-neutral-600 font-light leading-relaxed">
+                  {step.desc}
                 </p>
               </div>
             ))}
@@ -319,157 +525,227 @@ export default function EducationIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 07: REAL-TIME PIPELINE FLOW (ZERO-BOX / ZERO-CARD SINGLE SCREEN) */}
-      <section id="technology" className="pt-10 pb-16 sm:pt-14 sm:pb-20 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Section Header */}
-          <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-              REAL-TIME PIPELINE
+      {/* SECTION 7: EXPERIENCE IDEAS (Curved 360 Concave Carousel matching user reference) */}
+      <section className="pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 bg-black text-white overflow-hidden">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-2 sm:mb-3">
+          <div className="max-w-3xl">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-white/60 uppercase block mb-2">
+              EXPERIENCE IDEAS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
-              {industry.technology.title}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-white">
+              {data.experiences.title}
             </h2>
-            <p className="text-neutral-600 text-sm sm:text-base font-light leading-relaxed">
-              {industry.technology.intro}
+            <p className="text-sm sm:text-base text-neutral-400 font-light mt-2 max-w-2xl leading-relaxed">
+              {data.experiences.intro}
             </p>
           </div>
+        </div>
 
-          {/* Horizontal Pipeline Steps (Zero Cards, Zero Containers) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start relative">
-            {industry.technology.items.map((tech, idx) => {
-              const icons = [Activity, Brain, Sparkles, Users];
-              const IconComponent = icons[idx % icons.length];
-              const isLast = idx === industry.technology.items.length - 1;
+        <div className="w-full max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-6">
+          <Curved3DCarousel items={data.experiences.items} />
+        </div>
+      </section>
 
-              return (
-                <div key={idx} className="flex flex-col relative">
-                  {/* Step Header: Icon + Number + Connector Arrow */}
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-2.5">
-                      <IconComponent className="w-5 h-5 text-black shrink-0" strokeWidth={1.5} />
-                      <span className="text-xs font-mono font-black text-black">
-                        0{idx + 1}
-                      </span>
-                    </div>
+      {/* SECTION 8: WHAT IT ENABLES */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+              WHAT IT ENABLES
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+              {data.benefits.title}
+            </h2>
+          </div>
 
-                    {!isLast && (
-                      <ArrowRight className="hidden lg:block w-4 h-4 text-neutral-300 shrink-0" />
-                    )}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-base sm:text-lg font-black text-black tracking-tight leading-snug mb-1.5 lg:min-h-[2.75rem] flex items-start">
-                    {tech.title}
+          <div className="border-t border-black/10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8 pt-6 sm:pt-8">
+              {data.benefits.items.map((item, idx) => (
+                <div key={idx} className="space-y-1.5">
+                  <h3 className="text-base sm:text-lg font-bold text-black tracking-tight leading-snug">
+                    {item.title}
                   </h3>
-
-                  {/* Description */}
-                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed flex-1">
-                    {tech.desc}
+                  <p className="text-sm text-neutral-600 font-light leading-relaxed">
+                    {item.desc}
                   </p>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 08: HOW WE DELIVER (3-STAGE VISUAL ROADMAP — ZERO-CARD SINGLE SCREEN) */}
-      <section id="process" className="py-8 sm:py-10 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Section Header */}
+      {/* SECTION 9: TECHNOLOGY BEHIND THE EXPERIENCE */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-              TURNKEY METHODOLOGY
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+              THE TECHNOLOGY
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
-              {sharedDelivery.title}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+              {data.technology.title}
             </h2>
-            <p className="text-neutral-600 text-sm sm:text-base font-light leading-relaxed">
-              {sharedDelivery.intro}
-            </p>
           </div>
 
-          {/* 3-Stage Visual Roadmap Side-by-Side (Zero Cards, Zero Containers) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-            {sharedDelivery.stages.map((stage, idx) => (
-              <div key={idx} className="group flex flex-col h-full">
-                
-                {/* 16:10 Visual Showcase with Smooth Hover Zoom */}
-                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 mb-3 sm:mb-4 shrink-0">
+          <div className="border-t border-black/10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8 pt-6 sm:pt-8">
+              {data.technology.items.map((item, idx) => (
+                <div key={idx} className="space-y-1.5">
+                  <h3 className="text-base sm:text-lg font-bold text-black tracking-tight leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-neutral-600 font-light leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 10: HOW WE DELIVER */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+              OUR PROCESS
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+              How We Create Your Learning Space
+            </h2>
+          </div>
+
+          <div className="border-t border-black/15 pt-6 sm:pt-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            {howWeDeliverSteps.map((step, idx) => (
+              <div key={idx} className="flex flex-col space-y-2">
+                <span className="text-xs font-mono font-bold text-neutral-400 block">
+                  STAGE {step.num}
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-black tracking-tight">
+                  {step.title}
+                </h3>
+                <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 11: WHY PROJECTION */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
+            <div className="lg:col-span-5 space-y-3">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block">
+                WHY PROJECTION
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+                A Learning Experience Built Around Your Space
+              </h2>
+              <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed pt-1">
+                Every school&apos;s space, curriculum and audience are different. We plan each installation around how your students will actually use it: not a fixed, one-size-fits-all package: and stay involved from the first conversation through to ongoing support.
+              </p>
+            </div>
+
+            <div className="lg:col-span-7 border-t lg:border-t-0 lg:border-l border-black/10 pt-6 lg:pt-0 lg:pl-10 space-y-6">
+              {whyUsPoints.map((pt, idx) => (
+                <div key={idx} className="space-y-1">
+                  <h3 className="text-base sm:text-lg font-bold text-black tracking-tight">
+                    {pt.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed">
+                    {pt.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 12: FEATURED WORK */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+              OUR WORK
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+              See What&apos;s Possible
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {featuredWork.map((work, idx) => (
+              <div key={idx} className="flex flex-col space-y-3">
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-md">
                   <SafeImage
-                    src={stage.img}
-                    alt={stage.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    src={work.img}
+                    alt={work.title}
+                    className="w-full h-full object-cover"
                     containerClassName="w-full h-full"
                   />
                 </div>
-
-                {/* Stage Metadata: Clean Number Badge + Timeframe */}
-                <div className="flex items-center justify-between text-xs font-mono mb-2">
-                  <span className="text-[11px] font-bold text-black tracking-wider">
-                    STAGE {stage.num}
-                  </span>
-                  <span className="text-[10px] font-semibold text-neutral-500 uppercase tracking-wider">
-                    {stage.timeframe}
-                  </span>
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold text-black tracking-tight leading-snug">
+                    {work.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed mt-1">
+                    {work.desc}
+                  </p>
                 </div>
-
-                {/* Title with locked height for perfect cross-column alignment */}
-                <h3 className="text-base sm:text-lg font-black text-black tracking-tight leading-snug mb-2 md:min-h-[3rem] flex items-start">
-                  {stage.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed flex-1">
-                  {stage.desc}
-                </p>
-
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 08B: CASE STUDIES (ARCHITECTURAL SPOTLIGHT — ZERO CARDS) */}
-      <section id="case-studies" className="py-12 sm:py-16 min-h-[640px] flex flex-col justify-center bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <CaseStudiesSpotlight 
-            caseStudies={caseStudies} 
-            industryName="education"
-            title="Real Impact in Active Learning"
-            eyebrow="PROVEN CLASSROOM SUCCESS"
-          />
-        </div>
-      </section>
-
-      {/* SECTION 09: FAQS */}
-      <section className="py-16 sm:py-20 bg-gray-50">
+      {/* SECTION 13: FAQ */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-black mb-4">{industry.faqs.title}</h2>
-            <p className="text-black/70 font-light text-sm">{industry.faqs.intro}</p>
+          <div className="text-center mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+              COMMON QUESTIONS
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+              Frequently Asked Questions
+            </h2>
           </div>
-          
-          <FAQAccordion faqs={industry.faqs.items} />
+
+          <div className="border-t border-black/15">
+            <FAQAccordion faqs={data.faqs.items} />
+          </div>
         </div>
       </section>
 
-      <section className="relative py-20 sm:py-24 overflow-hidden bg-black text-white">
-        <div className="absolute inset-0 z-0">
-          <SafeImage src="/images/architectural_light_beam.jpg" alt="CTA Background" className="w-full h-full object-cover opacity-30" containerClassName="w-full h-full" />
+      {/* SECTION 14: FINAL CTA */}
+      <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-black text-white">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <SafeImage
+            src="/images/industry_education_hero.jpg"
+            alt="Interactive learning space"
+            className="w-full h-full object-cover opacity-35"
+            containerClassName="w-full h-full bg-black"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8">
-            Create an Interactive Learning Space.
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight mb-4">
+            {data.cta?.title || "Create a More Interactive Learning Space"}
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 font-light mb-12 max-w-2xl mx-auto">
-            Ready to transform your school, STEM lab, or educational environment with motion-responsive technology?
+          <p className="text-sm sm:text-base text-white/80 font-light max-w-2xl mx-auto mb-6 leading-relaxed">
+            {data.cta?.subtitle || "Bring interactive projection, immersive experiences and hands-on digital activities into your classroom."}
           </p>
-          <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-black bg-white px-8 py-4 rounded-full hover:bg-gray-200 transition-colors">
-            Create an Interactive Learning Space <ArrowRight className="w-4 h-4" />
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-neutral-200 transition-all duration-300 active:scale-95 shadow-2xl"
+          >
+            <span>{data.cta?.buttonText || "Discuss Your Education Project"}</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
