@@ -3,9 +3,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
-import { ArrowRight, Sparkles, Activity, Layers, Expand, Tv, Lightbulb, Users, Monitor } from "lucide-react";
+import { ArrowRight, Sparkles, Activity, Layers, Expand, Tv, Lightbulb, Users, Monitor, Target, Compass, Palette, Wrench, GraduationCap, ChevronRight, RefreshCw } from "lucide-react";
 import FAQAccordion from "../[slug]/FAQAccordion";
 import Curved3DCarousel from "@/components/Curved3DCarousel";
+import CapabilitiesStudio from "./CapabilitiesStudio";
 import { education } from "@/data/industries/education";
 
 export const metadata: Metadata = {
@@ -86,93 +87,82 @@ export default function EducationIndustryPage() {
 
   const solutions = [
     {
+      tag: "SURFACE PROJECTION",
       title: "Interactive Projection",
-      desc: "Turn floors and walls into interactive surfaces for lessons, activities and hands-on exploration.",
+      desc: "Turn floors and walls into interactive surfaces for active lessons, motor-skill games and hands-on discovery.",
       href: "/solutions/interactive-projection",
       cta: "Explore Interactive Projection",
       icon: Activity,
+      img: "/images/education_interactive_floor.jpg",
+      features: ["Motion floors & projection walls", "Real-time body tracking", "Active curriculum packages"],
     },
     {
+      tag: "SPATIAL VISUALS",
       title: "Immersive Experiences",
-      desc: "Create immersive learning environments using projection and spatial visuals to explore subjects in new ways.",
+      desc: "Create immersive learning environments using projection and spatial visuals to explore subjects in new dimensions.",
       href: "/solutions/immersive-environment",
       cta: "Explore Immersive Experiences",
       icon: Expand,
+      img: "/images/education_exp_immersive_room.webp",
+      features: ["360 panoramic room visuals", "Spatial surround audio", "Full sensory environment"],
     },
     {
+      tag: "MOTION ENGAGEMENT",
       title: "Interactive Engagement",
-      desc: "Add motion-based games and activities that give students a reason to move and participate.",
+      desc: "Add motion-based games and activities that give students an active reason to move, collaborate and participate.",
       href: "/solutions/interactive-projection",
       cta: "Explore Interactive Engagement",
       icon: Layers,
+      img: "/images/education_strike_wall_activity.jpg",
+      features: ["Motion strike & touch walls", "Collaborative team exercises", "Instant interactive feedback"],
     },
     {
+      tag: "LARGE FORMAT DISPLAY",
       title: "LED & 3D Display Solutions",
-      desc: "Use large-format displays for presentations, visual learning and school events.",
+      desc: "Deploy high-impact displays for multi-student presentations, visual STEM learning and school auditorium events.",
       href: "/solutions",
       cta: "Explore LED & 3D Displays",
       icon: Tv,
+      img: "/images/education_stem_led_display.jpg",
+      features: ["High-brightness fine pitch LED", "STEM experiment visualizers", "Multi-student group viewing"],
     },
   ];
 
   const howItWorksSteps = [
     {
       num: "01",
+      phase: "Discovery",
       title: "Define the Learning Goal",
       desc: "We identify the subject, age group and type of activity the space needs to support.",
+      icon: Target,
     },
     {
       num: "02",
+      phase: "Planning",
       title: "Plan the Experience",
       desc: "The layout, content and interaction are planned around how students will use the space.",
+      icon: Compass,
     },
     {
       num: "03",
+      phase: "Creation",
       title: "Create the Content",
       desc: "Digital activities and visuals are built around the lesson and learning objective.",
+      icon: Palette,
     },
     {
       num: "04",
+      phase: "Deployment",
       title: "Set Up the Space",
       desc: "The projection, display and interaction system is installed and configured on-site.",
+      icon: Wrench,
     },
     {
       num: "05",
+      phase: "Launch",
       title: "Start Learning",
       desc: "Teachers and students use the experience as part of everyday lessons and activities.",
-    },
-  ];
-
-  const howWeDeliverSteps = [
-    {
-      num: "01",
-      title: "Plan & Assess",
-      desc: "We review your space, audience, goals and technical requirements.",
-    },
-    {
-      num: "02",
-      title: "Build & Install",
-      desc: "The experience is built, configured and installed on-site.",
-    },
-    {
-      num: "03",
-      title: "Train & Support",
-      desc: "Your team is trained to run the system, with support ongoing.",
-    },
-  ];
-
-  const whyUsPoints = [
-    {
-      title: "Custom-built content",
-      desc: "Activities shaped around your subjects and age groups, not a locked content library.",
-    },
-    {
-      title: "End-to-end delivery",
-      desc: "One team from planning through installation and support.",
-    },
-    {
-      title: "Built for real classroom conditions",
-      desc: "Installation planned around your room, lighting and layout.",
+      icon: GraduationCap,
     },
   ];
 
@@ -180,17 +170,17 @@ export default function EducationIndustryPage() {
     {
       title: "Interactive Classroom Projection",
       desc: "Motion-responsive surfaces that turn everyday lessons into collaborative, physically active exercises.",
-      img: "/images/education_interactive_floor.jpg",
+      img: "/images/education_classroom_floor_projection.jpg",
     },
     {
       title: "Hands-On STEM Discovery Lab",
       desc: "Digital discovery setups where students run visual experiments and solve interactive puzzles together.",
-      img: "/images/museum_dino_sandbox.jpg",
+      img: "/images/education_stem_discovery_lab.jpg",
     },
     {
       title: "Active Learning & Motion Zone",
       desc: "Movement-integrated games that keep students energized and collaborating during lessons and group breaks.",
-      img: "/images/interactive_strike_wall.jpg",
+      img: "/images/education_motion_zone.jpg",
     },
   ];
 
@@ -263,8 +253,8 @@ export default function EducationIndustryPage() {
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-12">
               <div className="max-w-2xl">
                 <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
-                  <span className="w-6 sm:w-8 h-[2px] bg-cyan-400"></span>
-                  <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-cyan-300">
+                  <span className="w-6 sm:w-8 h-[2px] bg-white"></span>
+                  <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-white">
                     SOLUTIONS FOR EDUCATION
                   </span>
                 </div>
@@ -404,49 +394,88 @@ export default function EducationIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 4: INTERACTIVE SOLUTIONS FOR EDUCATION */}
+      {/* SECTION 4: INTERACTIVE SOLUTIONS FOR EDUCATION (Open Architectural Spread: Zero Cards, Zero Boxes, Zero Frames) */}
       <section id="solutions" className="py-14 sm:py-16 lg:py-20 bg-white text-black scroll-mt-20">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
-              SOLUTIONS FOR YOUR SPACE
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
-              {data.solutions.title}
-            </h2>
+          
+          {/* Section Header */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 sm:pb-8 border-b border-black/15 mb-8 sm:mb-10">
+            <div className="max-w-2xl">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-2.5">
+                SOLUTIONS FOR YOUR SPACE
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight text-black">
+                {data.solutions.title}
+              </h2>
+            </div>
+            <p className="text-xs sm:text-sm lg:text-base text-neutral-500 font-light max-w-md leading-relaxed">
+              Purpose-built motion tracking and projection systems engineered to turn conventional classrooms into collaborative discovery spaces.
+            </p>
           </div>
 
-          <div className="border-t border-black/10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-14 gap-y-8 sm:gap-y-10 pt-6 sm:pt-8">
-              {solutions.map((item, idx) => {
-                const IconComponent = item.icon;
-                return (
-                  <div key={idx} className="flex flex-col justify-between space-y-3 pb-6 border-b border-black/10">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2.5">
-                        <IconComponent className="w-5 h-5 text-black shrink-0" strokeWidth={1.75} />
-                        <h3 className="text-lg sm:text-xl font-bold text-black tracking-tight">
-                          {item.title}
-                        </h3>
-                      </div>
-                      <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed">
-                        {item.desc}
-                      </p>
+          {/* 4 Open Architectural Columns (Zero Cards, Zero Boxes, Zero Frames) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 xl:gap-10">
+            {solutions.map((item, idx) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={idx} className="group flex flex-col justify-between h-full">
+                  <div>
+                    {/* Top Tag Rule (Numbers Removed) */}
+                    <div className="flex items-center justify-between text-xs font-mono pb-2.5 border-b border-black/15 mb-4">
+                      <span className="text-[10px] uppercase tracking-wider text-neutral-400 font-medium">
+                        {item.tag}
+                      </span>
                     </div>
-                    <div>
-                      <Link
-                        href={item.href}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-600 transition-colors pt-1"
-                      >
-                        <span>{item.cta}</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
+
+                    {/* Unframed Open Photo */}
+                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-neutral-100 mb-4">
+                      <SafeImage
+                        src={item.img}
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        containerClassName="w-full h-full"
+                      />
+                    </div>
+
+                    {/* Title */}
+                    <div className="flex items-center gap-2 mb-2">
+                      <IconComponent className="w-4 h-4 text-black shrink-0" strokeWidth={1.75} />
+                      <h3 className="text-lg font-bold text-black tracking-tight group-hover:text-neutral-600 transition-colors">
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed mb-4">
+                      {item.desc}
+                    </p>
+
+                    {/* Feature Bullets */}
+                    <div className="space-y-1.5 mb-6">
+                      {item.features.map((feat, fIdx) => (
+                        <div key={fIdx} className="flex items-center gap-2 text-xs text-neutral-500 font-normal">
+                          <span className="w-1 h-1 rounded-full bg-black/40 shrink-0" />
+                          <span>{feat}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                );
-              })}
-            </div>
+
+                  {/* Clean Minimalist Link */}
+                  <div>
+                    <Link
+                      href={item.href}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black group-hover:text-neutral-600 transition-colors pt-2 border-t border-black/10 w-full justify-between"
+                    >
+                      <span>{item.cta}</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform duration-300" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
+
         </div>
       </section>
 
@@ -495,32 +524,102 @@ export default function EducationIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 6: HOW IT WORKS */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
+      {/* SECTION 6: HOW IT WORKS (Architectural Connected Process Line: Zero Cards, Zero Boxes, Zero Frames, Zero Images) */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+          {/* Header */}
+          <div className="max-w-3xl mb-12 sm:mb-16">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
               HOW IT WORKS
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
               From Learning Goal to Interactive Experience
             </h2>
+            <p className="text-sm sm:text-base text-neutral-500 font-light mt-2 max-w-2xl leading-relaxed">
+              A structured five-step path from curriculum planning to immersive classroom activation.
+            </p>
           </div>
 
-          <div className="border-t border-black/15 pt-6 sm:pt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
-            {howItWorksSteps.map((step, idx) => (
-              <div key={idx} className="flex flex-col space-y-2">
-                <span className="text-xs font-mono font-bold text-neutral-400 block">
-                  {step.num}
-                </span>
-                <h3 className="text-base sm:text-lg font-bold text-black tracking-tight leading-snug">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-neutral-600 font-light leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
+          {/* Desktop Flow: Connected Architectural Rail (lg and above) */}
+          <div className="hidden lg:grid grid-cols-5 gap-6 xl:gap-8 relative">
+            {howItWorksSteps.map((step, idx) => {
+              const IconComponent = step.icon;
+              const isLast = idx === howItWorksSteps.length - 1;
+              return (
+                <div key={idx} className="group flex flex-col">
+                  {/* Process Node and Connector Line */}
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-800 transition-all duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white group-hover:scale-105 shrink-0 shadow-sm z-10">
+                      <IconComponent className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    {!isLast && (
+                      <div className="flex-1 h-[1px] bg-neutral-200 ml-4 -mr-6 xl:-mr-8 relative hidden lg:flex items-center justify-end z-0">
+                        <ChevronRight className="w-3.5 h-3.5 text-neutral-300 -mr-1.5 shrink-0" />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Step Meta & Content */}
+                  <div className="space-y-2 pr-2">
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono text-xs font-bold tracking-widest text-neutral-400 group-hover:text-black transition-colors">
+                        {step.num}
+                      </span>
+                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
+                        {step.phase}
+                      </span>
+                    </div>
+                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug group-hover:text-black transition-colors">
+                      {step.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-neutral-500 font-normal leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Mobile & Tablet Flow: Vertical Architectural Timeline (< lg) */}
+          <div className="lg:hidden relative pl-2 sm:pl-4">
+            <div className="space-y-8 sm:space-y-10 relative">
+              {howItWorksSteps.map((step, idx) => {
+                const IconComponent = step.icon;
+                const isLast = idx === howItWorksSteps.length - 1;
+                return (
+                  <div key={idx} className="group flex items-start gap-4 sm:gap-6 relative">
+                    {/* Vertical connecting rail between nodes */}
+                    {!isLast && (
+                      <div className="absolute left-[23px] top-12 bottom-[-32px] sm:bottom-[-40px] w-[1px] bg-neutral-200 z-0" />
+                    )}
+
+                    {/* Node */}
+                    <div className="w-12 h-12 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-800 transition-all duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white shrink-0 shadow-sm relative z-10">
+                      <IconComponent className="w-5 h-5" />
+                    </div>
+
+                    {/* Step Content */}
+                    <div className="pt-0.5 space-y-1.5 flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-xs font-bold tracking-widest text-neutral-400">
+                          {step.num}
+                        </span>
+                        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
+                          {step.phase}
+                        </span>
+                      </div>
+                      <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug">
+                        {step.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-neutral-600 font-normal leading-relaxed">
+                        {step.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -546,159 +645,73 @@ export default function EducationIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 8: WHAT IT ENABLES */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
+      {/* SECTION 8: WHAT IT ENABLES (Interactive Architectural Capability Studio: Zero Cards, Zero Boxes, Zero Frames, Zero Images) */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
-              WHAT IT ENABLES
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
-              {data.benefits.title}
-            </h2>
-          </div>
-
-          <div className="border-t border-black/10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8 pt-6 sm:pt-8">
-              {data.benefits.items.map((item, idx) => (
-                <div key={idx} className="space-y-1.5">
-                  <h3 className="text-base sm:text-lg font-bold text-black tracking-tight leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-neutral-600 font-light leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 9: TECHNOLOGY BEHIND THE EXPERIENCE */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black">
-        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
-              THE TECHNOLOGY
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
-              {data.technology.title}
-            </h2>
-          </div>
-
-          <div className="border-t border-black/10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8 pt-6 sm:pt-8">
-              {data.technology.items.map((item, idx) => (
-                <div key={idx} className="space-y-1.5">
-                  <h3 className="text-base sm:text-lg font-bold text-black tracking-tight leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-neutral-600 font-light leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 10: HOW WE DELIVER */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
-        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
-              OUR PROCESS
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
-              How We Create Your Learning Space
-            </h2>
-          </div>
-
-          <div className="border-t border-black/15 pt-6 sm:pt-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            {howWeDeliverSteps.map((step, idx) => (
-              <div key={idx} className="flex flex-col space-y-2">
-                <span className="text-xs font-mono font-bold text-neutral-400 block">
-                  STAGE {step.num}
-                </span>
-                <h3 className="text-lg sm:text-xl font-bold text-black tracking-tight">
-                  {step.title}
-                </h3>
-                <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 11: WHY PROJECTION */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black">
-        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
-            <div className="lg:col-span-5 space-y-3">
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block">
-                WHY PROJECTION
+          {/* Section Header */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-14 gap-4">
+            <div className="max-w-2xl">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
+                WHAT IT ENABLES
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
-                A Learning Experience Built Around Your Space
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
+                {data.benefits.title}
               </h2>
-              <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed pt-1">
-                Every school&apos;s space, curriculum and audience are different. We plan each installation around how your students will actually use it: not a fixed, one-size-fits-all package: and stay involved from the first conversation through to ongoing support.
-              </p>
             </div>
-
-            <div className="lg:col-span-7 border-t lg:border-t-0 lg:border-l border-black/10 pt-6 lg:pt-0 lg:pl-10 space-y-6">
-              {whyUsPoints.map((pt, idx) => (
-                <div key={idx} className="space-y-1">
-                  <h3 className="text-base sm:text-lg font-bold text-black tracking-tight">
-                    {pt.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed">
-                    {pt.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <p className="text-sm sm:text-base text-neutral-500 font-light max-w-md lg:text-right leading-relaxed">
+              {data.benefits.intro}
+            </p>
           </div>
+
+          {/* Interactive Capability Studio */}
+          <CapabilitiesStudio />
         </div>
       </section>
 
-      {/* SECTION 12: FEATURED WORK */}
+      {/* SECTION 9: FEATURED WORK (3-Panel Cinematic Exhibition Spread) */}
       <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2">
               OUR WORK
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
               See What&apos;s Possible
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {featuredWork.map((work, idx) => (
-              <div key={idx} className="flex flex-col space-y-3">
-                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-md">
-                  <SafeImage
-                    src={work.img}
-                    alt={work.title}
-                    className="w-full h-full object-cover"
-                    containerClassName="w-full h-full"
-                  />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+            {featuredWork.map((work, idx) => {
+              const types = ["Surface Projection", "STEM Innovation", "Motion Zone"];
+              return (
+                <div key={idx} className="group flex flex-col space-y-4">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                    <SafeImage
+                      src={work.img}
+                      alt={work.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      containerClassName="w-full h-full"
+                    />
+                  </div>
+                  <div className="space-y-1.5 pt-1">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
+                        {types[idx] || "Installation"}
+                      </span>
+                      <span className="font-mono text-xs text-neutral-400">
+                        0{idx + 1}
+                      </span>
+                    </div>
+                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug group-hover:text-black transition-colors">
+                      {work.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
+                      {work.desc}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-base sm:text-lg font-bold text-black tracking-tight leading-snug">
-                    {work.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed mt-1">
-                    {work.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

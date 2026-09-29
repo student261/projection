@@ -35,7 +35,7 @@ export const education: IndustryData = {
     ],
     transition: "Learning works better when students take part in it, not just watch it.",
     quote: "Learning works better when students take part in it, not just watch it.",
-    img: "/images/var_sandbox_projection.jpg"
+    img: "/images/education_vision_active_learning.jpg"
   },
   solutions: {
     title: "Interactive Solutions Built for Learning",

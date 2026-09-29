@@ -22,10 +22,13 @@ export default function Curved3DCarousel({
   items,
   autoPlaySpeed = 8,
 }: Curved3DCarouselProps) {
-  // Build a 12-slot circular array repeating the items seamlessly
-  const totalSlots = 12;
-  const slotItems = Array.from({ length: totalSlots }, (_, i) => items[i % items.length]);
-  const angleStep = 360 / totalSlots; // 30 degrees per slot
+  // Ensure totalSlots is a clean multiple of items.length so items loop seamlessly
+  // without any duplicates appearing next to each other on the screen
+  const itemCount = items.length;
+  const multiplier = Math.max(3, Math.ceil(12 / Math.max(itemCount, 1)));
+  const totalSlots = itemCount * multiplier;
+  const slotItems = Array.from({ length: totalSlots }, (_, i) => items[i % itemCount]);
+  const angleStep = 360 / totalSlots;
 
   const [viewportWidth, setViewportWidth] = useState(1200);
 
@@ -68,6 +71,10 @@ export default function Curved3DCarousel({
     const rot1 = isMobile ? 26 : isTablet ? 30 : 33;
     const rot2 = isMobile ? 46 : isTablet ? 52 : 57;
 
+    // Strict angle bound ensures only up to 2 wings on each side (max 5 unique cards) are visible on screen
+    const maxAngle = isMobile ? 1.35 * angleStep : 2.2 * angleStep;
+    const fadeStart = isMobile ? 0.9 * angleStep : 1.7 * angleStep;
+
     for (let i = 0; i < totalSlots; i++) {
       const el = cardRefs.current[i];
       if (!el) continue;
@@ -78,19 +85,19 @@ export default function Curved3DCarousel({
 
       const absAngle = Math.abs(angle);
 
-      if (absAngle <= 72) {
+      if (absAngle <= maxAngle) {
         const dirSign = angle > 0 ? 1 : angle < 0 ? -1 : 0;
         let x = 0;
         let z = baseZ;
         let rotY = 0;
 
-        if (absAngle <= 30) {
-          const t = absAngle / 30;
+        if (absAngle <= angleStep) {
+          const t = absAngle / angleStep;
           x = dirSign * step1X * t;
           z = baseZ + (z1 - baseZ) * t;
           rotY = -dirSign * rot1 * t;
         } else {
-          const t = Math.min((absAngle - 30) / 30, 1.4);
+          const t = Math.min((absAngle - angleStep) / angleStep, 1.4);
           x = dirSign * (step1X + (step2X - step1X) * t);
           z = z1 + (z2 - z1) * t;
           rotY = -dirSign * (rot1 + (rot2 - rot1) * t);
@@ -98,14 +105,14 @@ export default function Curved3DCarousel({
 
         // Smooth fade out near the outer periphery
         let opacity = 1;
-        if (absAngle > 56) {
-          opacity = Math.max(0, 1 - (absAngle - 56) / 14);
+        if (absAngle > fadeStart) {
+          opacity = Math.max(0, 1 - (absAngle - fadeStart) / (maxAngle - fadeStart));
         }
 
         const zIndex = Math.round(z + 200);
 
         // 3D perspective shading: subtle brightness contrast with depth
-        const brightness = (0.86 + 0.14 * (1 - absAngle / 70)).toFixed(2);
+        const brightness = (0.86 + 0.14 * (1 - absAngle / (maxAngle * 1.2))).toFixed(2);
 
         el.style.transform = `translateX(${x.toFixed(1)}px) translateZ(${z.toFixed(1)}px) rotateY(${rotY.toFixed(1)}deg)`;
         el.style.opacity = opacity.toFixed(2);
