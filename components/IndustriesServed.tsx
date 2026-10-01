@@ -280,12 +280,8 @@ export default function IndustriesServed() {
                 {/* Gradient overlay: smooth bottom fade for text readability while leaving image fully visible and clear */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 via-45% to-transparent pointer-events-none" />
                 
-                {/* Top Controls: Counter & Navigation Buttons */}
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-20 pointer-events-none">
-                  <span className="text-[10px] font-mono font-bold text-white/90 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md border border-white/15 tracking-widest">
-                    SECTOR {String(activeIndex + 1).padStart(2, '0')} OF {String(industries.length).padStart(2, '0')}
-                  </span>
-
+                {/* Top Controls: Navigation Buttons */}
+                <div className="absolute top-4 right-4 flex items-center justify-end z-20 pointer-events-none">
                   {/* Desktop / Mobile Prev & Next Arrows */}
                   <div className="flex items-center gap-2 pointer-events-auto">
                     <button

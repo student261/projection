@@ -197,4 +197,76 @@ Always run these verification commands before delivering work:
    *Expected: Prerenders all static routes without errors.*
 
 4. **Visual Regression Verification**:
-   Use Playwright script in `scratch/verify_changes.py` to capture high-resolution screenshots across 1440px desktop, 1024px laptop, 768px tablet, and 390px mobile viewports.
+   Use headless Edge CDP script in `scratch/take_immersive_screenshots.js` or `scratch/take_screenshot.js` to capture high-resolution screenshots across all key sections.
+
+---
+
+## 8. Core Solutions Architecture (`app/solutions/`)
+
+The website's primary offerings are organized into 4 flagship solutions, streamlined in the global Navbar dropdown:
+1. **Interactive Projection** (`/solutions/interactive-projection`, alias: `/solutions/interactive-spaces`)
+2. **Immersive Environments** (`/solutions/immersive-environment`, alias: `/solutions/immersive-environments`)
+3. **AI Experiences** (`/solutions/ai-experience`)
+4. **Interactive Engagement** (`/solutions/solution-engagement`)
+
+### Immutable Design Template: `components/MasterSolutionContent.tsx`
+Every solution subpage uses the unified luxury design template:
+- **Hero Section**: Full-height atmospheric background photography with dark gradient overlays, dual rounded pill CTAs (`Start Your Project`, `Book a Demo`), and H1 balanced into 2 clean lines.
+- **Experience Possibilities (`#what-is-it`)**: Side-by-side layout with 4:3 high-definition video/preview player on one side and numbered architectural feature matrix on the other.
+- **Surface Formats (`#surface-formats`)**: Sticky viewport carousel (`StickySurfaceFormats`) with alternating text and visual columns that smoothly transition as the user scrolls.
+- **Capabilities (`#capabilities`)**: Architectural Orbital Interaction System diagram with tilted ellipse ring, central ripples, monospace badge (`INTERACTION` / `IMMERSION`), and 4-6 balanced quadrant nodes with leader lines.
+- **How It Works (`#how-it-works`)**: Connected 4-step calibrated workflow with circular icon badges, dashed connection lines, directional arrow badges, and prominent bottom CTA.
+- **Where It Fits (`#industries`)**: Full-bleed photographic background that dynamically crossfades when hovering or clicking any of the 6 industry cards on the right. Left column features strictly 2-line heading and direct exploration CTA.
+- **The Experience (`#the-experience`)**: Light/black typography contrast (`Make the Room` / `Part of the Experience`), right-side decorative architectural arc and tag, and vertical organic Wavy S-Curve Spine with indicator dots and circular icon badges.
+- **Related Projects (`#projects`)**: Live showcase with interactive sector selection tabs and large 16:10 project display with technical specifications badges.
+- **Related Solutions (`#related-solutions`)**: 4 slanted-top ascending cards with hover elevation and clean footer navigation links.
+- **FAQs (`#faqs`)**: Clean numbered accordion items (01 to 07) with +/- circular toggle badges.
+- **Huge CTA**: Atmospheric background image, glow backdrop blur card, dual pill action buttons.
+
+### Content Specification for Immersive Environments (`home.txt.txt`)
+- **Route**: `/solutions/immersive-environment` & `/solutions/immersive-environments`
+- **Hero H1**: `Rooms and Surfaces That Surround People With Visual Content` (broken into 2 balanced lines)
+- **The Formats**: 6 formats (Immersive Rooms, 180 and 360 Degree Projection, Projection Mapping, Dome and Fulldome Projection, LED Tunnels, Large Format and 3D LED Displays).
+- **Where It Fits**: 6 sectors (Museums & Exhibitions, Entertainment, Retail, Hospitality, Corporate & Events, Education).
+- **Experience Possibilities**: 3 core abilities (Walk Into a Visual Story, See a Building Differently, Spend Longer in a Space).
+- **How It Works**: 4 steps (Review the Room or Structure, Plan the Visual Layout, Build the Content, Install and Calibrate).
+- **Capabilities**: 4 items (Multi Surface Projection, Projection Mapping, Dome and Curved Surface Projection, Large Format Display Integration).
+- **Why It Matters / The Experience**: 3 items (Content Surrounds People, A Space Can Change Its Feel, Attention Moves Through the Space).
+- **Related Solutions**: Interactive Projection, AI Experiences, Interactive Engagement, LED & 3D Displays.
+- **FAQs**: 7 verbatim Q&As from `home.txt.txt`.
+- **Final CTA**: `Build a Room People Want to Walk Into` / `Discuss Your Project`.
+
+### Content Specification for AI Experiences (`home.txt.txt`)
+- **Route**: `/solutions/ai-experiences` & `/solutions/ai-experience`
+- **Hero H1**: `AI Avatars and AI Photo Experiences for Physical Spaces` (broken into 2 balanced lines)
+- **Hero Subtitle**: `An AI avatar can greet, answer questions or host at a booth. An AI photo experience can turn a guest photo into something shareable in seconds.`
+- **The Formats**: 2 formats (`AI Avatars`, `AI Photo Experiences`).
+- **Where It Fits**: 5 sectors (`Corporate & Events`, `Retail`, `Museums & Exhibitions`, `Entertainment`, `Hospitality`).
+- **Experience Possibilities**: 3 core abilities (`Ask a Question and Get an Answer`, `Get a Personalized Result`, `Interact Without Waiting in Line`).
+- **How It Works**: 4 steps (`01. Define the Role`, `02. Set Up the Content and Responses`, `03. Install the Display or Booth`, `04. Test the Interaction`).
+- **Capabilities**: 4 items (`AI Avatar Interaction`, `AI Generated Photo Content`, `Branded Visual Styling`, `Real-Time Response Engine`) with `INTELLIGENCE` badge.
+- **Why It Matters / The Experience**: 3 items (`People Remember a Conversation`, `Guests Leave With Something to Share`, `One Setup Can Handle Many Visitors`).
+- **Related Solutions**: Interactive Projection, Immersive Environments, Interactive Engagement, LED & 3D Displays.
+- **FAQs**: 7 verbatim Q&As from `home.txt.txt`.
+- **Final CTA**: `Give Your Event an AI Experience Worth Talking About` / `Discuss Your Project`.
+
+### Content Specification for Interactive Engagement (`home.txt.txt`)
+- **Route**: `/solutions/interactive-engagement` & `/solutions/solution-engagement`
+- **Hero H1**: `Games and Activities That Get People Moving and Playing` (broken into 2 balanced lines)
+- **Hero Subtitle**: `A floor or wall can host more than visuals. It can host a game people play together, a challenge they compete in, or a brand activity they take part in.`
+- **The Formats**: 4 formats (`Motion Games`, `Brand Gamification`, `Group Challenges`, `Movement Based Activities`).
+- **Where It Fits**: 5 sectors (`Retail`, `Education`, `Entertainment`, `Corporate & Events`, `Healthcare`).
+- **Experience Possibilities**: 3 core abilities (`Play Instead of Watch`, `Compete or Collaborate`, `Take Part in a Brand Moment`).
+- **How It Works**: 4 steps (`01. Define the Activity`, `02. Design the Game Content`, `03. Set Up Tracking`, `04. Test the Gameplay`).
+- **Capabilities**: 4 items (`Motion Tracking for Gameplay`, `Multiplayer Setup`, `Custom Game Content`, `Real-Time Game Engine`) with `PARTICIPATION` badge.
+- **Why It Matters / The Experience**: 3 items (`Participation Creates Memory`, `Games Bring Groups Together`, `A Brand Becomes an Activity`).
+- **Related Solutions**: Interactive Projection, Immersive Environments, AI Experiences, LED & 3D Displays.
+- **FAQs**: 7 verbatim Q&As from `home.txt.txt`.
+- **Final CTA**: `Give People Something to Play, Not Just Watch` / `Discuss Your Project`.
+
+### Strict Operational Rules
+- **NEVER RUN `git push`** without explicit user permission.
+- **NEVER ALTER THE DESIGN** or component layouts when populating new content.
+- **ZERO EM DASHES (`-`) AND ZERO EN DASHES (`-`)**.
+- **ZERO BULLET POINTS / POINTOUTS**.
+

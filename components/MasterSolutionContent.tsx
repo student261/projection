@@ -98,6 +98,12 @@ export interface SolutionFullData {
   // Section 10: FAQs
   faqsIntro: string;
   faqs: { q: string; a: string }[];
+
+  // Section 11: Call To Action
+  ctaHeading?: string;
+  ctaSubtitle?: string;
+  ctaButtonText?: string;
+  relatedSolutionsHeading?: string;
 }
 
 export default function MasterSolutionContent({ data }: { data: SolutionFullData }) {
@@ -164,33 +170,51 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
     "Public Spaces": "/images/cathedral_projection_mapping.jpg",
   };
 
+  const isAiSlug = data.slug.includes("ai");
+  const isImmersiveSlug = data.slug.includes("immersive");
+  const isEngagementSlug = data.slug.includes("engagement");
+
   const allOtherSolutions = [
     {
       slug: "interactive-projection",
       title: "Interactive Projection",
-      desc: "Turn floors, walls, ceilings and other suitable surfaces into interactive experiences that respond to movement and participation.",
+      desc: isAiSlug
+        ? "Add a touch or motion responsive floor or wall alongside an AI experience."
+        : isEngagementSlug
+        ? "See the physical floor, wall or table formats a game can be built on."
+        : "Turn floors, walls, ceilings and other suitable surfaces into interactive experiences that respond to movement and participation.",
       href: "/solutions/interactive-projection",
       img: "/images/interactive_floor_motion.jpg",
     },
     {
       slug: "immersive-environment",
-      title: "Immersive Experiences",
-      desc: "Create larger visual environments using projection, immersive rooms and projection mapping.",
+      title: "Immersive Environments",
+      desc: isAiSlug
+        ? "Place an AI avatar inside a larger projected or display led environment."
+        : isEngagementSlug
+        ? "Place a game inside a larger projected or display led room."
+        : "Create larger visual environments using projection, immersive rooms and projection mapping.",
       href: "/solutions/immersive-environment",
       img: "/images/biosphere_ocean_gallery.jpg",
     },
     {
       slug: "ai-experience",
       title: "AI Experiences",
-      desc: "Add AI avatars, generative content and interactive AI experiences.",
+      desc: isImmersiveSlug
+        ? "Add an AI avatar or AI photo experience inside an immersive room."
+        : isEngagementSlug
+        ? "Add an AI avatar as a host or guide for a game or challenge."
+        : "Add AI avatars, generative content and interactive AI experiences.",
       href: "/solutions/ai-experience",
-      img: "/images/cat_ai_avatar.jpg",
+      img: "/images/ai_receptionist_concierge.jpg",
     },
     {
       slug: "solution-engagement",
       title: "Interactive Engagement",
-      desc: "Create interactive games, motion experiences and installations focused on participation.",
-      href: "/solutions/solution-engagement",
+      desc: isAiSlug
+        ? "Turn an AI photo experience into part of a wider game or group activity."
+        : "Create interactive games, motion experiences and installations focused on participation.",
+      href: "/solutions/interactive-engagement",
       img: "/images/education_interactive_floor.jpg",
     },
     {
@@ -227,7 +251,6 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
   // Layout Variations based on slug to make pages look distinct
   const isFlippedLayout = data.slug === "immersive-environment" || data.slug === "solution-engagement";
   const isAltLayout = data.slug === "ai-experience" || data.slug === "solution-engagement";
-  const isAlignedWithHomeTxt = data.slug === "interactive-projection" || data.slug === "interactive-spaces";
 
   // ---------------------------------------------------------------------------
   // SECTION COMPONENTS
@@ -235,7 +258,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
 
   // Section 01: Hero Banner
   const heroSection = (
-    <section className="relative min-h-[85vh] sm:min-h-[88vh] flex flex-col justify-center items-center overflow-hidden bg-black text-white pt-20 sm:pt-24 pb-8 sm:pb-12 px-4">
+    <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-black text-white pt-20 sm:pt-24 pb-8 sm:pb-12 px-4">
       <div className="absolute inset-0 z-0">
         <SafeImage
           src={data.heroImg}
@@ -247,8 +270,8 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center my-auto flex flex-col items-center">
-        {!isAlignedWithHomeTxt && data.solutionLabel && (
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center my-auto flex flex-col items-center">
+        {data.solutionLabel && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -262,9 +285,31 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="font-black text-white mb-3 sm:mb-5 max-w-3xl mx-auto drop-shadow-2xl tracking-tight leading-[1.1] text-3xl sm:text-5xl lg:text-5xl xl:text-6xl"
+          className="font-black text-white mb-3 sm:mb-5 max-w-4xl lg:max-w-5xl mx-auto drop-shadow-2xl tracking-tight leading-[1.08] text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl"
         >
-          {data.heroHeading}
+          {data.slug === "interactive-projection" || data.heroHeading.includes("Surfaces That Respond When") ? (
+            <>
+              <span className="block">Surfaces That Respond When</span>
+              <span className="block">People Touch or Move Across Them</span>
+            </>
+          ) : data.slug.includes("ai") || data.heroHeading.includes("AI Avatars") ? (
+            <>
+              <span className="block sm:whitespace-nowrap">AI Avatars and AI Photo Experiences</span>
+              <span className="block sm:whitespace-nowrap">for Physical Spaces</span>
+            </>
+          ) : data.slug.includes("immersive") || data.heroHeading.includes("Surfaces That Surround People") ? (
+            <>
+              <span className="block sm:whitespace-nowrap">Rooms and Surfaces That Surround</span>
+              <span className="block sm:whitespace-nowrap">People With Visual Content</span>
+            </>
+          ) : data.slug.includes("engagement") || data.heroHeading.includes("Moving and Playing") ? (
+            <>
+              <span className="block sm:whitespace-nowrap">Games and Activities That Get</span>
+              <span className="block sm:whitespace-nowrap">People Moving and Playing</span>
+            </>
+          ) : (
+            data.heroHeading
+          )}
         </motion.h1>
 
         <motion.p
@@ -283,7 +328,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
           className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto"
         >
           <Link
-            href={isAlignedWithHomeTxt ? "#surface-formats" : "#what-is-it"}
+            href="#what-is-it"
             className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.08em] px-7 py-3 sm:py-3.5 transition-all duration-300 active:scale-95 cursor-pointer w-full sm:w-auto bg-white text-black hover:bg-gray-200 shadow-md rounded-full"
           >
             Start Your Project
@@ -321,10 +366,10 @@ function StickySurfaceFormats({
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     if (numItems <= 1) return;
 
-    // Distribute card transitions smoothly across the first 82% of the scroll track.
-    // The 5th (final) card remains locked in place from 0.82 to 1.00 (and beyond),
-    // guaranteeing it is fully visible, readable, and never skipped during scroll.
-    const activeThreshold = 0.82;
+    // Distribute card transitions smoothly across the scroll track.
+    // For 2 items (e.g. AI Experiences), 50% scroll transitions between format 1 and 2.
+    // For 5 items, transitions happen across the first 82% of the track.
+    const activeThreshold = numItems === 2 ? 0.5 : 0.82;
     let newIndex = 0;
     if (latest >= activeThreshold) {
       newIndex = numItems - 1;
@@ -349,7 +394,7 @@ function StickySurfaceFormats({
       ref={containerRef}
       id="surface-formats"
       className="relative bg-neutral-50/70 scroll-mt-20 pb-16 sm:pb-20 lg:pb-28"
-      style={{ height: `${Math.max(numItems, 3) * 110}vh` }}
+      style={{ height: `${Math.max(numItems, 2) * (numItems === 2 ? 100 : 110)}vh` }}
     >
       <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-center pt-12 sm:pt-14 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto w-full flex flex-col justify-center">
@@ -421,15 +466,13 @@ function StickySurfaceFormats({
           </div>
         </div>
       </div>
-      {/* Smooth Cinematic Dissolve into Industries Section */}
-      <div className="absolute bottom-0 inset-x-0 h-44 sm:h-56 lg:h-72 bg-gradient-to-b from-transparent via-neutral-900/40 to-black pointer-events-none z-10" />
     </div>
   );
 }
 
-  // Section: Surface Formats / Experience Horizon Gallery (WAYS TO INTERACT)
+  // Section: Surface Formats / Experience Horizon Gallery (WAYS TO INTERACT / THE FORMATS)
   const surfaceFormatsSection = (
-    data.slug === "interactive-projection" || data.slug === "interactive-spaces" ? (
+    data.slug === "interactive-projection" || data.slug === "interactive-spaces" || data.slug.includes("immersive") || data.slug.includes("ai") || data.slug.includes("engagement") ? (
       <StickySurfaceFormats
         data={data}
         items={[data.featuredExperience, ...data.experienceCards]}
@@ -472,7 +515,7 @@ function StickySurfaceFormats({
                     <div>
                       <div className="flex items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2">
                         <span>{num}</span>
-                        <span>•</span>
+                        <span>/</span>
                         <span>{exp.category}</span>
                       </div>
                       <h3 className="text-lg sm:text-xl font-black text-black tracking-tight mb-2 group-hover:text-neutral-700 transition-colors sm:min-h-[3rem] line-clamp-2">
@@ -495,8 +538,6 @@ function StickySurfaceFormats({
             })}
           </div>
         </div>
-        {/* Smooth Cinematic Dissolve into Industries Section */}
-        <div className="absolute bottom-0 inset-x-0 h-32 sm:h-44 bg-gradient-to-b from-transparent via-neutral-900/40 to-black pointer-events-none z-10" />
       </section>
     )
   );
@@ -543,8 +584,19 @@ function StickySurfaceFormats({
               </div>
               
               <h2 className="text-2xl sm:text-3xl lg:text-[32px] xl:text-[40px] 2xl:text-[44px] font-black text-white tracking-tight leading-[1.15] mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-                <span className="block sm:whitespace-nowrap">Interactive Projection</span>
-                <span className="block sm:whitespace-nowrap">Across Different Industries</span>
+                {data.industriesHeading && data.industriesHeading.includes("Across Different Industries") ? (
+                  <>
+                    <span className="block sm:whitespace-nowrap">{data.industriesHeading.replace("Across Different Industries", "").trim()}</span>
+                    <span className="block sm:whitespace-nowrap">Across Different Industries</span>
+                  </>
+                ) : data.industriesHeading ? (
+                  <span className="block">{data.industriesHeading}</span>
+                ) : (
+                  <>
+                    <span className="block sm:whitespace-nowrap">Interactive Projection</span>
+                    <span className="block sm:whitespace-nowrap">Across Different Industries</span>
+                  </>
+                )}
               </h2>
 
               <p className="text-xs sm:text-sm lg:text-base text-white/90 font-light leading-relaxed mb-6 sm:mb-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
@@ -652,10 +704,14 @@ function StickySurfaceFormats({
 
             {/* High-End Architectural Feature Matrix */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-4">
-              {data.whatIsFeatures.map((feat, idx) => (
-                <div 
-                  key={idx} 
-                  className="group relative pl-4 sm:pl-5 py-2 transition-all duration-300 border-l-2 border-black/10 hover:border-black"
+              {data.whatIsFeatures.map((feat, idx) => {
+                const isThirdOfThree = data.whatIsFeatures.length === 3 && idx === 2;
+                return (
+                  <div 
+                    key={idx} 
+                    className={`group relative pl-4 sm:pl-5 py-2 transition-all duration-300 border-l-2 border-black/10 hover:border-black ${
+                      isThirdOfThree ? "sm:col-span-2" : ""
+                    }`}
                 >
                   <div className="flex items-center gap-2 mb-1.5">
                     <span className="inline-flex items-center justify-center text-[10px] font-mono font-bold tracking-wider text-black/50 group-hover:text-black transition-colors">
@@ -668,8 +724,9 @@ function StickySurfaceFormats({
                   <p className="text-xs sm:text-sm text-black/65 font-light leading-relaxed">
                     {feat.desc}
                   </p>
-                </div>
-              ))}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -699,8 +756,8 @@ function StickySurfaceFormats({
             </p>
           </div>
 
-          {/* Desktop 5-Step Connected Flow (>= lg) */}
-          <div className="hidden lg:grid lg:grid-cols-5 gap-4 relative">
+          {/* Desktop Connected Flow (>= lg) */}
+          <div className={`hidden lg:grid ${data.howItWorksSteps.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-5"} gap-4 relative`}>
             {data.howItWorksSteps.map((step, idx) => {
               const StepIcon = defaultStepIcons[idx % defaultStepIcons.length];
               const isLast = idx === data.howItWorksSteps.length - 1;
@@ -799,12 +856,12 @@ function StickySurfaceFormats({
               <span className="w-5 h-[1.5px] bg-black/40 inline-block" />
               <span>{data.capabilitiesLabel || "CAPABILITIES"}</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-[54px] xl:text-6xl font-black text-black tracking-tight leading-[1.05]">
-              Built Around<br />Interaction
+            <h2 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] font-black text-black tracking-tight leading-[1.08]">
+              {data.featuresHeading || "What the Solution Can Deliver"}
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-black/65 font-light leading-relaxed max-w-sm lg:pt-8">
-            {data.keyFeaturesIntro || "Creative and engineered around human movement, flexible formats and real-time digital response. This is how we turn spaces into interactive experiences."}
+            {data.keyFeaturesIntro || "Designed around architectural scale, optical precision and seamless multi-surface display integration."}
           </p>
         </div>
 
@@ -823,7 +880,7 @@ function StickySurfaceFormats({
 
             {/* Central Monospace Label */}
             <text x="490" y="335" textAnchor="middle" className="font-mono text-[11px] font-bold tracking-[0.35em] fill-[#262626]">
-              INTERACTION
+              {data.slug.includes("immersive") ? "IMMERSION" : data.slug.includes("ai") ? "INTELLIGENCE" : data.slug.includes("engagement") ? "PARTICIPATION" : "INTERACTION"}
             </text>
 
             {/* Central Ripples (Bottom Arcs) */}
@@ -833,160 +890,192 @@ function StickySurfaceFormats({
             <path d="M 426 390 A 66 66 0 0 0 554 390" stroke="#CBBFB2" strokeWidth="1" fill="none" />
 
             {/* Leader Lines & Dots matching Reference Mockup */}
-            {/* 1. Motion Responsive Leader Line */}
+            {/* 1. Top-Left Feature */}
             <circle cx="392" cy="272" r="2.5" fill="#A89886" />
             <path d="M 295 218 L 370 218 L 398 238" stroke="#D3C9BD" strokeWidth="1" fill="none" />
             <circle cx="295" cy="218" r="2" fill="#A89886" />
             <circle cx="398" cy="238" r="2" fill="#A89886" />
 
-            {/* 2. Custom Interactive Content Leader Line */}
+            {/* 2. Top-Right Feature */}
             <circle cx="590" cy="238" r="2.5" fill="#A89886" />
             <path d="M 632 208 L 650 194 L 722 194" stroke="#D3C9BD" strokeWidth="1" fill="none" />
             <circle cx="632" cy="208" r="2" fill="#A89886" />
             <circle cx="722" cy="194" r="2" fill="#A89886" />
 
-            {/* 3. Multiple Surface Formats Leader Line */}
-            <circle cx="684" cy="285" r="2.5" fill="#A89886" />
-            <path d="M 712 322 L 730 310 L 772 310" stroke="#D3C9BD" strokeWidth="1" fill="none" />
-            <circle cx="730" cy="310" r="2" fill="#A89886" />
-            <circle cx="772" cy="310" r="2" fill="#A89886" />
+            {/* 3. Middle-Right Feature (if 6 features) */}
+            {data.keyFeatures.length >= 6 && (
+              <>
+                <circle cx="684" cy="285" r="2.5" fill="#A89886" />
+                <path d="M 712 322 L 730 310 L 772 310" stroke="#D3C9BD" strokeWidth="1" fill="none" />
+                <circle cx="730" cy="310" r="2" fill="#A89886" />
+                <circle cx="772" cy="310" r="2" fill="#A89886" />
+              </>
+            )}
 
-            {/* 4. Real-Time Response Leader Line */}
+            {/* 4. Bottom-Right Feature */}
             <circle cx="590" cy="475" r="2.5" fill="#A89886" />
             <path d="M 584 466 L 606 480 L 678 480" stroke="#D3C9BD" strokeWidth="1" fill="none" />
             <circle cx="606" cy="480" r="2" fill="#A89886" />
 
-            {/* 5. Interactive Games & Activities Leader Line */}
+            {/* 5. Bottom-Left Feature */}
             <circle cx="480" cy="470" r="2.5" fill="#A89886" />
             <path d="M 345 492 L 362 492 L 372 482" stroke="#D3C9BD" strokeWidth="1" fill="none" />
             <circle cx="372" cy="482" r="2" fill="#A89886" />
 
-            {/* 6. Flexible Experience Design Leader Line */}
-            <circle cx="288" cy="380" r="2.5" fill="#A89886" />
-            <path d="M 220 318 L 270 318 L 285 330" stroke="#D3C9BD" strokeWidth="1" fill="none" />
-            <circle cx="220" cy="318" r="2" fill="#A89886" />
-            <circle cx="285" cy="330" r="2" fill="#A89886" />
+            {/* 6. Middle-Left Feature (if 6 features) */}
+            {data.keyFeatures.length >= 6 && (
+              <>
+                <circle cx="288" cy="380" r="2.5" fill="#A89886" />
+                <path d="M 220 318 L 270 318 L 285 330" stroke="#D3C9BD" strokeWidth="1" fill="none" />
+                <circle cx="220" cy="318" r="2" fill="#A89886" />
+                <circle cx="285" cy="330" r="2" fill="#A89886" />
+              </>
+            )}
           </svg>
 
-          {/* 6 Circular Node Badges & Text Blocks */}
+          {/* Node Badges & Dynamic Text Blocks */}
           
-          {/* Node 1: Motion Responsive Experiences (Top-Left) */}
-          <div className="absolute left-[40.2%] top-[15.1%] -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round">
-                <circle cx="12" cy="7" r="3" />
-                <path d="M7 21c0-4 2.5-6.5 5-6.5s5 2.5 5 6.5" />
-                <path d="M8 15l-3 3" />
-                <path d="M16 15l3 3" />
-              </svg>
-            </div>
-          </div>
-          <div className="absolute left-[16%] top-[13.6%] -translate-y-1/2 text-left max-w-[210px] z-10">
-            <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
-              Motion Responsive Experiences
-            </h3>
-            <p className="text-[12px] text-black/60 font-light leading-relaxed">
-              Create experiences that respond to movement in the projected area.
-            </p>
-          </div>
+          {/* Node 1: Top-Left */}
+          {data.keyFeatures[0] && (
+            <>
+              <div className="absolute left-[40.2%] top-[15.1%] -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round">
+                    <circle cx="12" cy="7" r="3" />
+                    <path d="M7 21c0-4 2.5-6.5 5-6.5s5 2.5 5 6.5" />
+                    <path d="M8 15l-3 3" />
+                    <path d="M16 15l3 3" />
+                  </svg>
+                </div>
+              </div>
+              <div className="absolute left-[16%] top-[13.6%] -translate-y-1/2 text-left max-w-[210px] z-10">
+                <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
+                  {data.keyFeatures[0].title}
+                </h3>
+                <p className="text-[12px] text-black/60 font-light leading-relaxed">
+                  {data.keyFeatures[0].desc}
+                </p>
+              </div>
+            </>
+          )}
 
-          {/* Node 2: Custom Interactive Content (Top-Right) */}
-          <div className="absolute left-[61.5%] top-[8.7%] -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="5" width="18" height="14" rx="3" />
-                <path d="M6 8h2M6 8v2M18 8h-2M18 8v2M6 16h2M6 16v-2M18 16h-2M18 16v-2" />
-                <polygon points="10 9 15 12 10 15 10 9" fill="currentColor" stroke="none" />
-              </svg>
-            </div>
-          </div>
-          <div className="absolute left-[73.5%] top-[7.7%] -translate-y-1/2 text-left max-w-[230px] z-10">
-            <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
-              Custom Interactive Content
-            </h3>
-            <p className="text-[12px] text-black/60 font-light leading-relaxed">
-              Turn static spaces into dynamic and interactive stories with custom content and project requirements.
-            </p>
-          </div>
+          {/* Node 2: Top-Right */}
+          {data.keyFeatures[1] && (
+            <>
+              <div className="absolute left-[61.5%] top-[8.7%] -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="3" />
+                    <path d="M6 8h2M6 8v2M18 8h-2M18 8v2M6 16h2M6 16v-2M18 16h-2M18 16v-2" />
+                    <polygon points="10 9 15 12 10 15 10 9" fill="currentColor" stroke="none" />
+                  </svg>
+                </div>
+              </div>
+              <div className="absolute left-[73.5%] top-[7.7%] -translate-y-1/2 text-left max-w-[230px] z-10">
+                <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
+                  {data.keyFeatures[1].title}
+                </h3>
+                <p className="text-[12px] text-black/60 font-light leading-relaxed">
+                  {data.keyFeatures[1].desc}
+                </p>
+              </div>
+            </>
+          )}
 
-          {/* Node 3: Multiple Surface Formats (Right) */}
-          <div className="absolute left-[68.4%] top-[39.7%] -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="m12 2 10 5-10 5-10-5Z" />
-                <path d="m2 12 10 5 10-5" />
-                <path d="m2 17 10 5 10-5" />
-              </svg>
-            </div>
-          </div>
-          <div className="absolute left-[78%] top-[37.2%] -translate-y-1/2 text-left max-w-[220px] z-10">
-            <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
-              Multiple Surface Formats
-            </h3>
-            <p className="text-[12px] text-black/60 font-light leading-relaxed">
-              Designed for a variety of surfaces like floors, walls, ceilings, tables and other 3D spaces.
-            </p>
-          </div>
+          {/* Node 3: Middle-Right (if 6 features) */}
+          {data.keyFeatures.length >= 6 && data.keyFeatures[4] && (
+            <>
+              <div className="absolute left-[68.4%] top-[39.7%] -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m12 2 10 5-10 5-10-5Z" />
+                    <path d="m2 12 10 5 10-5" />
+                    <path d="m2 17 10 5 10-5" />
+                  </svg>
+                </div>
+              </div>
+              <div className="absolute left-[78%] top-[37.2%] -translate-y-1/2 text-left max-w-[220px] z-10">
+                <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
+                  {data.keyFeatures[4].title}
+                </h3>
+                <p className="text-[12px] text-black/60 font-light leading-relaxed">
+                  {data.keyFeatures[4].desc}
+                </p>
+              </div>
+            </>
+          )}
 
-          {/* Node 4: Real-Time Response (Bottom-Right) */}
-          <div className="absolute left-[56.7%] top-[71.8%] -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="13" cy="14" r="7" />
-                <polyline points="13 11 13 14 15 16" />
-                <path d="M13 3v2" />
-                <path d="M3 11h4M4 14h3M2 17h5" />
-              </svg>
-            </div>
-          </div>
-          <div className="absolute left-[68.5%] top-[80.8%] -translate-y-1/2 text-left max-w-[210px] z-10">
-            <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
-              Real-Time Response
-            </h3>
-            <p className="text-[12px] text-black/60 font-light leading-relaxed">
-              Instant feedback and interaction with real-time processing in digital content.
-            </p>
-          </div>
+          {/* Node 4: Bottom-Right */}
+          {data.keyFeatures[2] && (
+            <>
+              <div className="absolute left-[56.7%] top-[71.8%] -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="13" cy="14" r="7" />
+                    <polyline points="13 11 13 14 15 16" />
+                    <path d="M13 3v2" />
+                    <path d="M3 11h4M4 14h3M2 17h5" />
+                  </svg>
+                </div>
+              </div>
+              <div className="absolute left-[68.5%] top-[80.8%] -translate-y-1/2 text-left max-w-[210px] z-10">
+                <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
+                  {data.keyFeatures[2].title}
+                </h3>
+                <p className="text-[12px] text-black/60 font-light leading-relaxed">
+                  {data.keyFeatures[2].desc}
+                </p>
+              </div>
+            </>
+          )}
 
-          {/* Node 5: Interactive Games & Activities (Bottom-Left) */}
-          <div className="absolute left-[38.0%] top-[77.7%] -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 11h4m-2-2v4" />
-                <circle cx="15" cy="11" r="1" fill="currentColor" />
-                <circle cx="17" cy="13" r="1" fill="currentColor" />
-                <path d="M17.3 5H6.7A4.7 4.7 0 0 0 2 9.7v4.6A4.7 4.7 0 0 0 6.7 19h.6a2 2 0 0 0 1.8-1.1l1.1-2.2a2 2 0 0 1 1.8-1.1h1.9a2 2 0 0 1 1.8 1.1l1.1 2.2a2 2 0 0 0 1.8 1.1h.7a4.7 4.7 0 0 0 4.7-4.7V9.7A4.7 4.7 0 0 0 17.3 5Z" />
-              </svg>
-            </div>
-          </div>
-          <div className="absolute left-[11%] top-[84.1%] -translate-y-1/2 text-left max-w-[220px] z-10">
-            <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
-              Interactive Games & Activities
-            </h3>
-            <p className="text-[12px] text-black/60 font-light leading-relaxed">
-              Engage your audience with interactive games, play and engaging experiences.
-            </p>
-          </div>
+          {/* Node 5: Bottom-Left */}
+          {data.keyFeatures[3] && (
+            <>
+              <div className="absolute left-[38.0%] top-[77.7%] -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M6 11h4m-2-2v4" />
+                    <circle cx="15" cy="11" r="1" fill="currentColor" />
+                    <circle cx="17" cy="13" r="1" fill="currentColor" />
+                    <path d="M17.3 5H6.7A4.7 4.7 0 0 0 2 9.7v4.6A4.7 4.7 0 0 0 6.7 19h.6a2 2 0 0 0 1.8-1.1l1.1-2.2a2 2 0 0 1 1.8-1.1h1.9a2 2 0 0 1 1.8 1.1l1.1 2.2a2 2 0 0 0 1.8 1.1h.7a4.7 4.7 0 0 0 4.7-4.7V9.7A4.7 4.7 0 0 0 17.3 5Z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="absolute left-[11%] top-[84.1%] -translate-y-1/2 text-left max-w-[220px] z-10">
+                <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
+                  {data.keyFeatures[3].title}
+                </h3>
+                <p className="text-[12px] text-black/60 font-light leading-relaxed">
+                  {data.keyFeatures[3].desc}
+                </p>
+              </div>
+            </>
+          )}
 
-          {/* Node 6: Flexible Experience Design (Left) */}
-          <div className="absolute left-[29.5%] top-[44.1%] -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="3" width="7" height="7" rx="1.5" />
-                <rect x="14" y="3" width="7" height="7" rx="1.5" />
-                <rect x="3" y="14" width="7" height="7" rx="1.5" />
-                <rect x="14" y="14" width="7" height="7" rx="1.5" />
-              </svg>
-            </div>
-          </div>
-          <div className="absolute left-[5%] top-[42.3%] -translate-y-1/2 text-left max-w-[210px] z-10">
-            <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
-              Flexible Experience Design
-            </h3>
-            <p className="text-[12px] text-black/60 font-light leading-relaxed">
-              Adapt the experience for different spaces, audiences and use cases with flexible design and delivery.
-            </p>
-          </div>
+          {/* Node 6: Middle-Left (if 6 features) */}
+          {data.keyFeatures.length >= 6 && data.keyFeatures[5] && (
+            <>
+              <div className="absolute left-[29.5%] top-[44.1%] -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                  </svg>
+                </div>
+              </div>
+              <div className="absolute left-[5%] top-[42.3%] -translate-y-1/2 text-left max-w-[210px] z-10">
+                <h3 className="text-[14px] font-bold text-black tracking-tight leading-tight mb-1.5">
+                  {data.keyFeatures[5].title}
+                </h3>
+                <p className="text-[12px] text-black/60 font-light leading-relaxed">
+                  {data.keyFeatures[5].desc}
+                </p>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Mobile & Tablet View (< lg): Clean architectural card system with the exact same icons */}
@@ -998,7 +1087,7 @@ function StickySurfaceFormats({
                 <Sparkles className="w-5 h-5 text-black/70" />
               </div>
               <span className="font-mono text-[11px] font-bold tracking-[0.3em] text-neutral-800 uppercase">
-                INTERACTION
+                {data.slug.includes("immersive") ? "IMMERSION" : data.slug.includes("ai") ? "INTELLIGENCE" : data.slug.includes("engagement") ? "PARTICIPATION" : "INTERACTION"}
               </span>
             </div>
           </div>
@@ -1058,7 +1147,7 @@ function StickySurfaceFormats({
         <div className="absolute right-10 xl:right-16 top-1/2 -translate-y-1/2 flex flex-col items-start gap-3">
           <div className="w-10 h-[1.5px] bg-neutral-300" />
           <span className="font-mono text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] text-neutral-400 uppercase leading-relaxed">
-            INTERACTIVE SPACES<br />REAL IMPACT
+            {data.solutionLabel || "IMMERSIVE SPACES"}<br />REAL IMPACT
           </span>
         </div>
       </div>
@@ -1074,17 +1163,52 @@ function StickySurfaceFormats({
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[50px] tracking-tight leading-[1.12]">
-              <span className="block font-light text-neutral-800">
-                Give People More Than
-              </span>
-              <span className="block font-black text-black">
-                Something to Watch
-              </span>
+              {data.outcomesHeading === "Make the Room Part of the Experience" ? (
+                <>
+                  <span className="block font-light text-neutral-800">
+                    Make the Room
+                  </span>
+                  <span className="block font-black text-black">
+                    Part of the Experience
+                  </span>
+                </>
+              ) : data.outcomesHeading === "Give Visitors Something to Talk To, Not Just Look At" ? (
+                <>
+                  <span className="block font-light text-neutral-800">
+                    Give Visitors Something to Talk To,
+                  </span>
+                  <span className="block font-black text-black">
+                    Not Just Look At
+                  </span>
+                </>
+              ) : data.outcomesHeading === "Turn a Surface Into Something People Play" ? (
+                <>
+                  <span className="block font-light text-neutral-800">
+                    Turn a Surface
+                  </span>
+                  <span className="block font-black text-black">
+                    Into Something People Play
+                  </span>
+                </>
+              ) : data.outcomesHeading ? (
+                <span className="block font-black text-black">
+                  {data.outcomesHeading}
+                </span>
+              ) : (
+                <>
+                  <span className="block font-light text-neutral-800">
+                    Give People More Than
+                  </span>
+                  <span className="block font-black text-black">
+                    Something to Watch
+                  </span>
+                </>
+              )}
             </h2>
           </div>
           <div className="max-w-xs sm:max-w-sm lg:pt-8 text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
             <p>
-              {data.benefitsIntro || "Interactive projection changes the role of the visitor. Instead of simply viewing digital content, people can become part of the experience."}
+              {data.benefitsIntro || "A surrounding environment gives people more reason to stay and look around than a flat screen."}
             </p>
           </div>
         </div>
@@ -1094,12 +1218,14 @@ function StickySurfaceFormats({
           {/* Vertical Organic Wavy Path with Dots */}
           <div className="w-10 sm:w-14 lg:w-16 shrink-0 relative self-stretch mr-3 sm:mr-4 select-none pointer-events-none">
             <svg 
-              viewBox="0 0 50 500" 
+              viewBox={data.benefits.length <= 3 ? "0 0 50 300" : "0 0 50 500"} 
               preserveAspectRatio="none" 
               className="w-full h-full overflow-visible"
             >
               <path 
-                d="M 34,15 C 29,25 24,38 20,50 C 10,75 10,110 24,130 C 31,140 36,146 39,150 C 45,170 45,210 32,230 C 24,240 18,246 15,250 C 12,270 12,310 25,330 C 33,340 39,346 42,350 C 46,370 46,410 31,430 C 23,440 17,446 14,450 C 13,470 14,485 14,495" 
+                d={data.benefits.length <= 3 
+                  ? "M 34,15 C 29,25 24,38 20,50 C 10,75 10,110 24,130 C 31,140 36,146 39,150 C 45,170 45,210 32,230 C 24,240 18,246 15,250 C 12,270 14,285 14,295"
+                  : "M 34,15 C 29,25 24,38 20,50 C 10,75 10,110 24,130 C 31,140 36,146 39,150 C 45,170 45,210 32,230 C 24,240 18,246 15,250 C 12,270 12,310 25,330 C 33,340 39,346 42,350 C 46,370 46,410 31,430 C 23,440 17,446 14,450 C 13,470 14,485 14,495"} 
                 fill="none" 
                 stroke="#d4d4d4" 
                 strokeWidth="1.5" 
@@ -1108,8 +1234,8 @@ function StickySurfaceFormats({
               <circle cx="20" cy="50" r="3.5" fill="#171717" />
               <circle cx="39" cy="150" r="3.5" fill="#171717" />
               <circle cx="15" cy="250" r="3.5" fill="#171717" />
-              <circle cx="42" cy="350" r="3.5" fill="#171717" />
-              <circle cx="14" cy="450" r="3.5" fill="#171717" />
+              {data.benefits.length > 3 && <circle cx="42" cy="350" r="3.5" fill="#171717" />}
+              {data.benefits.length > 4 && <circle cx="14" cy="450" r="3.5" fill="#171717" />}
             </svg>
           </div>
 
@@ -1156,25 +1282,33 @@ function StickySurfaceFormats({
 
   // Section: Featured Projects (Exhibition Stage for other solution subpages)
   const featuredProjectsSection = (
-    <section id="projects" className="py-8 lg:py-12 bg-black text-white scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-black text-white scroll-mt-20 relative overflow-hidden">
+      {/* Background ambient radial glow */}
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-white/[0.03] rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
           <div>
-            <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/60 mb-2">
-              <Sparkles className="w-3.5 h-3.5 text-white/50" />
-              <span>Featured Installations • Live Showcase</span>
+            <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/70 mb-2">
+              <Sparkles className="w-3.5 h-3.5 text-white/60" />
+              <span>Featured Installations / Live Showcase</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-[1.1]">
               {data.projectsHeading || "See the Solution in Action"}
             </h2>
           </div>
-          <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed max-w-md">
+          <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed max-w-md lg:text-right">
             {data.projectsIntro}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-          <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col gap-2">
+        {/* Unified Layout: Left Selector Tabs, Right Blended Cinematic Visual */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          
+          {/* Left Column: 5 Interactive Project Selector Tabs */}
+          <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-between gap-2.5">
             {showcaseProjects.map((proj, idx) => {
               const isActive = activeProjectIdx === idx;
               const num = String(idx + 1).padStart(2, "0");
@@ -1184,31 +1318,33 @@ function StickySurfaceFormats({
                   type="button"
                   onMouseEnter={() => setActiveProjectIdx(idx)}
                   onClick={() => setActiveProjectIdx(idx)}
-                  className={`w-full text-left p-3.5 sm:p-4 rounded-2xl transition-all duration-300 border flex items-center justify-between gap-3 ${
+                  className={`w-full text-left p-3 sm:p-3.5 rounded-xl transition-all duration-300 border flex items-center justify-between gap-3.5 cursor-pointer group ${
                     isActive 
-                      ? "bg-white/10 border-white/30 shadow-lg text-white" 
-                      : "bg-white/[0.02] border-white/5 text-white/60 hover:bg-white/[0.06] hover:text-white/90"
+                      ? "bg-gradient-to-r from-white/15 via-white/10 to-white/5 border-white/40 shadow-[0_0_25px_rgba(255,255,255,0.08)] text-white" 
+                      : "bg-white/[0.03] border-white/10 text-white/70 hover:bg-white/[0.07] hover:border-white/20 hover:text-white"
                   }`}
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    <span className={`text-xs font-mono font-bold shrink-0 transition-colors ${
-                      isActive ? "text-white" : "text-white/30"
+                    <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-mono font-bold shrink-0 transition-all ${
+                      isActive 
+                        ? "bg-white text-black shadow-sm" 
+                        : "bg-white/5 border border-white/10 text-white/50 group-hover:text-white group-hover:bg-white/10"
                     }`}>
                       {num}
                     </span>
                     <div className="min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
-                        <span className={`text-[10px] font-mono uppercase tracking-wider font-semibold shrink-0 ${
+                        <span className={`text-[10px] font-mono uppercase tracking-[0.15em] font-semibold shrink-0 ${
                           isActive ? "text-white" : "text-white/60"
                         }`}>
                           {proj.industry}
                         </span>
-                        <span className="text-[10px] font-mono text-white/40 truncate">
-                          • {proj.location}
+                        <span className="text-[10px] text-white/40 truncate">
+                          / {proj.location}
                         </span>
                       </div>
-                      <h4 className={`text-sm sm:text-base font-bold tracking-tight truncate transition-colors ${
-                        isActive ? "text-white" : "text-white/80"
+                      <h4 className={`text-sm font-bold tracking-tight truncate transition-colors ${
+                        isActive ? "text-white" : "text-white/85 group-hover:text-white"
                       }`}>
                         {proj.title}
                       </h4>
@@ -1216,10 +1352,12 @@ function StickySurfaceFormats({
                   </div>
 
                   <div className="shrink-0 flex items-center">
-                    <span className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${
-                      isActive ? "bg-white text-black" : "bg-white/5 text-white/30"
+                    <span className={`w-7 h-7 rounded-full border flex items-center justify-center transition-all ${
+                      isActive 
+                        ? "bg-white border-white text-black shadow-[0_0_12px_rgba(255,255,255,0.3)]" 
+                        : "bg-white/5 border-white/10 text-white/40 group-hover:border-white/30 group-hover:text-white group-hover:bg-white/10"
                     }`}>
-                      <ArrowRight className={`w-3.5 h-3.5 transition-transform ${isActive ? "translate-x-0.5" : ""}`} />
+                      <ArrowRight className={`w-3.5 h-3.5 transition-transform duration-300 ${isActive ? "translate-x-0.5" : "group-hover:translate-x-0.5"}`} />
                     </span>
                   </div>
                 </button>
@@ -1227,65 +1365,73 @@ function StickySurfaceFormats({
             })}
           </div>
 
-          <div className="lg:col-span-7 order-1 lg:order-2">
-            <div className="rounded-2xl sm:rounded-3xl overflow-hidden bg-zinc-950 border border-white/15 shadow-2xl flex flex-col">
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-black">
-                <SafeImage 
+          {/* Right Column: Seamlessly Blended Visual Stage (Zero Card Borders, Zero Card Outline) */}
+          <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-between relative min-h-[440px] sm:min-h-[480px]">
+            
+            {/* Blended Image Container with Soft Vignette Dissolve into Pure Black */}
+            <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+              <AnimatePresence mode="wait">
+                <motion.div
                   key={activeProject.img + activeProjectIdx}
-                  src={activeProject.img} 
-                  alt={activeProject.title} 
-                  className="w-full h-full object-cover opacity-95 brightness-105 contrast-105 transition-all duration-700 hover:scale-105" 
-                  containerClassName="w-full h-full" 
-                />
-              </div>
+                  initial={{ opacity: 0, scale: 1.04 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 0.45, ease: "easeOut" }}
+                  className="w-full h-full absolute inset-0"
+                >
+                  <SafeImage 
+                    src={activeProject.img} 
+                    alt={activeProject.title} 
+                    className="w-full h-full object-cover object-center brightness-105 contrast-105" 
+                    containerClassName="w-full h-full" 
+                  />
+                </motion.div>
+              </AnimatePresence>
 
-              <div className="p-5 sm:p-6 bg-zinc-950 border-t border-white/10 flex flex-col gap-4">
-                <div>
-                  <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.2em] font-semibold text-white/50 mb-2">
-                    <span className="text-white/80">{activeProject.industry} INSTALLATION</span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-3 h-3 text-white/40" />
-                      <span>{activeProject.location}</span>
-                    </span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-black text-white mb-1.5 leading-tight tracking-tight">
+              {/* Edge Gradient Blends: Dissolves the image into the black background on all edges */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black/70 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent h-20 pointer-events-none" />
+              <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent pointer-events-none" />
+            </div>
+
+            {/* Bottom Content: Clean Title, Description & CTA (Zero Unnecessary Overlays over the Image) */}
+            <div className="relative z-10 pb-3 px-2 sm:px-3 flex flex-col sm:flex-row sm:items-end justify-between gap-4 mt-auto">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeProject.title + activeProjectIdx}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-1.5 max-w-xl"
+                >
+                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                     {activeProject.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-white/75 font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/80 font-light leading-relaxed drop-shadow-[0_1px_5px_rgba(0,0,0,0.9)]">
                     {activeProject.desc}
                   </p>
-                </div>
+                </motion.div>
+              </AnimatePresence>
 
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-white/10">
-                  <div className="flex flex-wrap items-center gap-1.5">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-white/40 mr-1 hidden sm:inline">
-                      Specs:
-                    </span>
-                    {activeProject.tech.map((t, idx) => (
-                      <span key={idx} className="px-2.5 py-1 rounded-md bg-white/10 text-[10px] font-mono text-white/80 border border-white/10">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
-                  <Link 
-                    href={activeProject.href || "/projects"} 
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-black hover:bg-gray-200 text-xs font-bold uppercase tracking-wider transition-all shadow-xl active:scale-95 shrink-0"
-                  >
-                    <span>Explore Case Study</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
+              <Link 
+                href={activeProject.href || "/projects"} 
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(255,255,255,0.25)] hover:shadow-[0_0_35px_rgba(255,255,255,0.45)] hover:scale-[1.02] active:scale-95 shrink-0 self-start sm:self-auto cursor-pointer"
+              >
+                <span>Explore Case Study</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
   );
 
-  // Section: Related Solutions (Explore Other Interactive Experiences) - Matching Reference Image
+    // Section: Related Solutions (Explore Other Interactive Experiences) - Matching Reference Image
   const relatedSolutionsSection = (
     <section id="related-solutions" className="py-14 sm:py-16 lg:py-20 bg-white scroll-mt-20 relative overflow-hidden">
       {/* SVG ClipPath Definitions for the Angled Card Tops with Rounded Corners */}
@@ -1315,8 +1461,19 @@ function StickySurfaceFormats({
           </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-black text-black tracking-tight leading-[1.12] mb-3">
-            <span className="block">Explore Other</span>
-            <span className="block">Interactive Experiences</span>
+            {data.relatedSolutionsHeading === "Explore More Solutions" ? (
+              <>
+                <span className="block">Explore More</span>
+                <span className="block">Solutions</span>
+              </>
+            ) : data.relatedSolutionsHeading ? (
+              <span className="block">{data.relatedSolutionsHeading}</span>
+            ) : (
+              <>
+                <span className="block">Explore Other</span>
+                <span className="block">Interactive Experiences</span>
+              </>
+            )}
           </h2>
 
           <p className="text-xs sm:text-sm lg:text-base text-black/60 font-light leading-relaxed max-w-md">
@@ -1331,7 +1488,8 @@ function StickySurfaceFormats({
               (s) =>
                 s.slug !== data.slug &&
                 !(data.slug === "interactive-spaces" && s.slug === "interactive-projection") &&
-                !(data.slug === "interactive-projection" && s.slug === "interactive-spaces")
+                !(data.slug === "interactive-projection" && s.slug === "interactive-spaces") &&
+                !(data.slug.includes("engagement") && s.slug.includes("engagement"))
             )
             .slice(0, 4)
             .map((item, idx) => {
@@ -1441,7 +1599,17 @@ function StickySurfaceFormats({
   );
 
   // Section: Call To Action
-  const ctaSection = <HugeCTA />;
+  const ctaSection = (
+    <HugeCTA
+      title={data.ctaHeading || (
+        <>
+          Ready to bring your <br className="hidden sm:block" /> interactive vision to life?
+        </>
+      )}
+      subtitle={data.ctaSubtitle || "Tell us about your space, audience, and goals. Our engineering and creative teams will craft a tailored technical proposal for your project."}
+      primaryBtnText={data.ctaButtonText || "Start Your Project"}
+    />
+  );
 
   // ---------------------------------------------------------------------------
   // RENDER ALIGNED SEQUENCE
@@ -1449,34 +1617,16 @@ function StickySurfaceFormats({
   return (
     <div className="w-full bg-white text-black">
       {heroSection}
-
-      {/* For interactive-projection, align with applications section directly after hero */}
-      {isAlignedWithHomeTxt ? (
-        <>
-          {applicationsSection}
-          {surfaceFormatsSection}
-          {industriesSection}
-          {howItWorksSection}
-          {capabilitiesSection}
-          {theExperienceSection}
-          {relatedSolutionsSection}
-          {faqsSection}
-          {ctaSection}
-        </>
-      ) : (
-        <>
-          {applicationsSection}
-          {surfaceFormatsSection}
-          {capabilitiesSection}
-          {howItWorksSection}
-          {industriesSection}
-          {theExperienceSection}
-          {featuredProjectsSection}
-          {relatedSolutionsSection}
-          {faqsSection}
-          {ctaSection}
-        </>
-      )}
+      {applicationsSection}
+      {surfaceFormatsSection}
+      {capabilitiesSection}
+      {howItWorksSection}
+      {industriesSection}
+      {theExperienceSection}
+      {featuredProjectsSection}
+      {relatedSolutionsSection}
+      {faqsSection}
+      {ctaSection}
     </div>
   );
 }

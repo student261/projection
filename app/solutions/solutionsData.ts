@@ -7,119 +7,119 @@ export const solutionDetails: Record<string, SolutionFullData> = {
  "interactive-projection": {
   slug: "interactive-projection",
   solutionLabel: "INTERACTIVE PROJECTION",
-  heroHeading: "Interactive Projection for Spaces People Can Explore",
-  heroSubtitle: "Turn floors, walls, ceilings and other suitable surfaces into interactive experiences that respond to movement and participation.",
-  heroDescription: "Explore interactive projection for floors, walls, ceilings and other surfaces, with responsive experiences designed for different spaces and audiences.",
+  heroHeading: "Surfaces That Respond When People Touch or Move Across Them",
+  heroSubtitle: "A floor, wall, ceiling, table, window or mirror can react to movement and touch. The surface becomes part of the experience, not just a backdrop.",
+  heroDescription: "Turn floors, walls, ceilings, tables, windows and mirrors into surfaces that respond to touch and movement. See the formats and how they work.",
   heroImg: "/images/interactive_spaces_hero.jpg",
 
-  surfaceFormatsLabel: "WAYS TO INTERACT",
+  surfaceFormatsLabel: "THE FORMATS",
   industriesLabel: "WHERE IT FITS",
   applicationsLabel: "EXPERIENCE POSSIBILITIES",
-  howItWorksLabel: "HOW WE WORK",
+  howItWorksLabel: "HOW IT WORKS",
   capabilitiesLabel: "CAPABILITIES",
   experienceLabel: "THE EXPERIENCE",
-  relatedSolutionsLabel: "RELATED SOLUTIONS",
+  relatedSolutionsLabel: "EXPLORE MORE",
   faqsLabel: "COMMON QUESTIONS",
 
-  whatIsHeading: "More Ways to Use Interactive Projection",
-  whatIsDescription: "Explore key environments and use cases where responsive projection transforms physical surfaces into engaging spaces.",
+  whatIsHeading: "What an Interactive Projection Lets People Do",
+  whatIsDescription: "Turn static surfaces into responsive environments where movement and touch reveal dynamic digital content.",
   whatIsVideoPlaceholder: "/interactive-floor-poster.jpg",
   videoUrl: "/interactive-floor-showreel.mp4",
   whatIsFeatures: [
-   { title: "Interactive Learning", desc: "Create learning experiences where students participate, move and explore instead of only viewing digital content." },
-   { title: "Brand Activations", desc: "Create interactive brand experiences that invite people to participate and engage with campaign content." },
-   { title: "Interactive Games", desc: "Use movement and interaction to create games and activities for education, entertainment, events and visitor experiences." },
-   { title: "Healthcare & Therapy", desc: "Create interactive activities that can support movement, participation and engagement in healthcare and therapy environments." }
+   { title: "Explore Content by Moving", desc: "Walk across a floor or reach toward a wall to bring up new content." },
+   { title: "Browse Without a Screen", desc: "Touch a table or window instead of pulling out a phone or scrolling a kiosk." },
+   { title: "Share the Experience", desc: "Multiple people can interact with the same floor, wall or table at once." },
+   { title: "Change the Content Over Time", desc: "Swap the visuals on the same surface for a new season, campaign or lesson." }
   ],
 
-  experienceHeading: "Interactive Experiences Built Around Your Space",
-  experienceIntro: "Interactive projection can take different forms depending on how people are expected to interact with the experience.",
+  experienceHeading: "Six Ways to Build an Interactive Projection",
+  experienceIntro: "A floor, wall, ceiling, table, window or mirror can react to movement and touch. The surface becomes part of the experience, not just a backdrop.",
   featuredExperience: {
    category: "Interactive Floors",
    title: "Interactive Floors",
-   desc: "Turn floors into responsive digital environments where movement can trigger visuals, activities and interactive content.",
+   desc: "Step, walk or jump across the floor and the content reacts to where people are standing.",
    img: "/images/cat_interactive_floor.jpg"
   },
   experienceCards: [
-   { 
-    category: "Interactive Walls", 
-    title: "Interactive Walls", 
-    desc: "Create responsive wall experiences for exploration, storytelling, learning, brand engagement and visitor interaction.", 
-    img: "/images/corporate_lobby_wall.jpg" 
+   {
+    category: "Interactive Walls",
+    title: "Interactive Walls",
+    desc: "Reach out and touch a wall to open, move or select something on the projected content.",
+    img: "/images/corporate_lobby_wall.jpg"
    },
-   { 
-    category: "Interactive Ceilings", 
-    title: "Interactive Ceilings", 
-    desc: "Extend projected experiences above visitors to create another layer of interaction within a space.", 
-    img: "/images/var_ceiling_projection.jpg" 
+   {
+    category: "Interactive Ceilings",
+    title: "Interactive Ceilings",
+    desc: "Visuals project above people, adding a second layer of interaction to the room.",
+    img: "/images/var_ceiling_projection.webp"
    },
-   { 
-    category: "Interactive Tables", 
-    title: "Interactive Tables", 
-    desc: "Create tabletop experiences where people can explore content and interact with digital information.", 
-    img: "/images/var_table_projection.jpg" 
+   {
+    category: "Interactive Tables",
+    title: "Interactive Tables",
+    desc: "A tabletop surface people gather around and touch, built for shared, close up interaction.",
+    img: "/images/var_table_projection.webp"
    },
-   { 
-    category: "Interactive Windows", 
-    title: "Interactive Windows", 
-    desc: "Use suitable glass and window surfaces to connect digital content with the surrounding environment.", 
-    img: "/images/var_window_projection.jpg" 
+   {
+    category: "Interactive Windows",
+    title: "Interactive Windows",
+    desc: "Suitable glass surfaces display content that connects what is happening inside with the street or room outside.",
+    img: "/images/var_window_projection.webp"
+   },
+   {
+    category: "Interactive Mirrors",
+    title: "Interactive Mirrors",
+    desc: "A mirror surface that can show digital content alongside the reflection.",
+    img: "/images/var_mirror_projection.webp"
    }
   ],
 
-  featuresHeading: "Built Around Interaction",
-  keyFeaturesIntro: "Creative and engineered around human movement, flexible formats and real-time digital response. This is how we turn spaces into interactive experiences.",
+  featuresHeading: "What the Solution Can Deliver",
+  keyFeaturesIntro: "Engineered around human movement, flexible formats and real-time digital response. This is what the solution can deliver across spaces.",
   keyFeatures: [
-   { title: "Motion Responsive Experiences", desc: "Create experiences that respond to movement in the projected area." },
-   { title: "Custom Interactive Content", desc: "Turn static spaces into dynamic and interactive stories with custom content and project requirements." },
-   { title: "Multiple Surface Formats", desc: "Designed for a variety of surfaces like floors, walls, ceilings, tables and other 3D spaces." },
-   { title: "Interactive Games & Activities", desc: "Engage your audience with interactive games, play and engaging experiences." },
-   { title: "Real-Time Response", desc: "Instant feedback and interaction with real-time processing in digital content." },
-   { title: "Flexible Experience Design", desc: "Adapt the experience for different spaces, audiences and use cases with flexible design and delivery." }
+   { title: "Movement Tracking", desc: "Detects where people are standing or moving across a floor or open area." },
+   { title: "Touch Detection", desc: "Detects a direct touch on a wall, table or window surface." },
+   { title: "Multi Surface Setup", desc: "Floor, wall, ceiling and table formats can be combined in the same space." },
+   { title: "Custom Interactive Content", desc: "Content is built around the surface, the activity and the audience." }
   ],
 
-  howItWorksHeading: "From Concept to Creation",
-  howItWorksIntro: "A seamless process that turns ideas into powerful immersive experiences.",
+  howItWorksHeading: "From Surface to Interactive Projection",
+  howItWorksIntro: "A four-step engineering process that takes your physical surface and turns it into a responsive, calibrated interactive experience.",
   howItWorksSteps: [
-   { title: "Discover & Consult", desc: "We understand your goals, space, and audience to define the right experience." },
-   { title: "Design & Plan", desc: "We create concepts, storyboards, and 3D visualizations that bring ideas to life." },
-   { title: "Develop & Integrate", desc: "We build interactive systems and integrate advanced technologies." },
-   { title: "Install & Test", desc: "We install, calibrate, and test everything to ensure a flawless experience." },
-   { title: "Launch & Support", desc: "We go live and provide ongoing support and content updates to keep experiences fresh." }
+   { title: "01. Review the Surface", desc: "We check the floor, wall, ceiling or other surface, along with lighting and room layout." },
+   { title: "02. Choose the Tracking Method", desc: "Movement or touch is detected using a camera, sensor or touch enabled surface, depending on the format." },
+   { title: "03. Build the Content", desc: "Visuals are created to fit the surface and respond to the chosen interaction." },
+   { title: "04. Install and Calibrate", desc: "The projector or display and tracking system are installed and aligned to the exact surface area." }
   ],
 
   industriesHeading: "Interactive Projection Across Different Industries",
   industriesIntro: "Interactive projection can be adapted to different environments based on the audience, space and purpose of the experience.",
-  featuredIndustry: { 
-   title: "Education", 
-   desc: "Create interactive learning environments where students can explore digital content through movement and participation.", 
-   img: "/images/museum_dino_sandbox.jpg", 
-   href: "/industries/education" 
+  featuredIndustry: {
+   title: "Retail",
+   desc: "Interactive windows and floors give shoppers a reason to stop and explore a storefront.",
+   img: "/images/retail_interactive_showcase.jpg",
+   href: "/industries/retail-showrooms"
   },
   industryCards: [
-   { title: "Healthcare", desc: "Support therapy, rehabilitation, patient engagement and interactive healthcare environments.", img: "/images/healthcare_sensory_room.jpg", href: "/industries/healthcare" },
-   { title: "Retail", desc: "Create interactive experiences that encourage visitors to explore products, brands and digital content.", img: "/images/cosmetics_smart_counter.jpg", href: "/industries/retail" },
-   { title: "Museums & Exhibitions", desc: "Make exhibits more engaging by allowing visitors to interact with projected content and visual storytelling.", img: "/images/museum_interactive_exhibition.jpg", href: "/industries/museums-culture" },
-   { title: "Entertainment", desc: "Add interactive games, activities and responsive environments to entertainment and visitor spaces.", img: "/images/entertainment_interactive_arena.jpg", href: "/industries/entertainment" },
-   { title: "Hospitality", desc: "Create interactive experiences for hotels, restaurants, resorts and guest environments.", img: "/images/hospitality_interactive_lounge.jpg", href: "/industries/hospitality" },
-   { title: "Corporate & Events", desc: "Use interactive projection for experience centres, events, product showcases and corporate environments.", img: "/images/corporate_interactive_showcase.jpg", href: "/industries/corporate" }
+   { title: "Education", desc: "Interactive floors and walls turn classroom activities into something students do, not just watch.", img: "/images/museum_dino_sandbox.jpg", href: "/industries/education" },
+   { title: "Museums & Exhibitions", desc: "Interactive tables and walls let visitors explore exhibits at their own pace.", img: "/images/museum_interactive_exhibition.jpg", href: "/industries/museums-culture" },
+   { title: "Corporate & Events", desc: "Interactive floors and tables create a moment at a booth, launch or lobby.", img: "/images/corporate_interactive_showcase.jpg", href: "/industries/corporate" },
+   { title: "Entertainment", desc: "Interactive floors and walls support play based activities in arcades and attractions.", img: "/images/entertainment_interactive_arena.jpg", href: "/industries/entertainment" },
+   { title: "Healthcare", desc: "Interactive floors and walls support movement and sensory activities in therapy and care settings.", img: "/images/healthcare_sensory_room.jpg", href: "/industries/healthcare" }
   ],
 
-  outcomesHeading: "Give People More Than Something to Watch",
-  benefitsIntro: "Interactive projection changes the role of the visitor. Instead of simply viewing digital content, people can become part of the experience.",
-  featuredBenefit: { 
-   title: "Give People More Than Something to Watch", 
-   desc: "Instead of simply viewing digital content, people can become part of the experience. Interactive environments capture attention and foster deeper engagement.", 
-   img: "/images/corporate_lobby_wall.jpg" 
+  outcomesHeading: "Give People a Surface to Interact With, Not Just Look At",
+  benefitsIntro: "A surface that reacts gives people a reason to engage rather than walk past. Everyday surfaces get a new use and multiple people can join in.",
+  featuredBenefit: {
+   title: "Give People a Surface to Interact With, Not Just Look At",
+   desc: "A surface that reacts gives people a reason to engage rather than walk past. Everyday surfaces get a new use and multiple people can join in.",
+   img: "/images/corporate_lobby_wall.jpg"
   },
   benefits: [
-   { title: "Encourage Participation", desc: "Give visitors, students, customers or guests an active role." },
-   { title: "Create More Engaging Environments", desc: "Turn suitable surfaces into spaces that invite exploration and interaction." },
-   { title: "Support Learning and Exploration", desc: "Use movement and interaction to make digital content more active and accessible." },
-   { title: "Create Memorable Moments", desc: "Build experiences that people can participate in rather than simply observe." },
-   { title: "LED & 3D Display Solutions", desc: "Create bold, high-impact visuals with advanced LED and 3D display technologies." }
+   { title: "People Take Part Instead of Watching", desc: "A surface that reacts gives people a reason to engage rather than walk past." },
+   { title: "Everyday Surfaces Get a New Use", desc: "A floor, wall or table already in the space becomes part of the experience." },
+   { title: "Multiple People Can Join In", desc: "Group interaction is possible on a shared surface like a floor or table." }
   ],
-  techStack: ["Motion & Depth Tracking", "Laser Projection Systems", "Real-Time Interaction Engine", "Cloud Content Management"],
+  techStack: ["Movement Tracking", "Touch Detection", "Multi Surface Systems", "Real-Time Interactive Engine"],
 
   projectsHeading: "Related Projects",
   projectsIntro: "Discover our landmark interactive spaces across corporate headquarters, prestigious museums, and educational centers.",
@@ -139,18 +139,25 @@ export const solutionDetails: Record<string, SolutionFullData> = {
    { industry: "Corporate", title: "Dynamic Brand Welcome Matrix", desc: "Sensory floor welcoming VIPs with generative graphics.", img: "/images/ai_receptionist_concierge.jpg", href: "/projects" }
   ],
 
-  faqsIntro: "Frequently asked questions about planning, installing, and customizing interactive projection experiences.",
+  faqsIntro: "Common questions about how interactive projection works, what surfaces are suitable, and how to get started.",
   faqs: [
-   { q: "What is interactive projection?", a: "Interactive projection combines projected digital content with tracking technology so the experience can respond to movement, presence or interaction." },
-   { q: "How does interactive projection work?", a: "A projector displays digital content while a tracking system detects interaction within the projected area. The system then responds by changing or triggering digital content." },
-   { q: "What surfaces can be used for interactive projection?", a: "Interactive projection can be designed for suitable floors, walls, ceilings, tables, windows and other surfaces depending on the installation." },
-   { q: "Can interactive projection be customized?", a: "Yes. Content and interaction can be planned around the space, audience, brand, learning objective, entertainment concept or other project requirements." },
-   { q: "Where can interactive projection be used?", a: "Interactive projection can be used across education, healthcare, retail, museums and exhibitions, entertainment, hospitality, corporate environments and events." },
-   { q: "Can interactive projection include games?", a: "Yes. Interactive projection can support movement-based games, educational activities, entertainment experiences and interactive brand experiences." },
-   { q: "What do I need to plan an interactive projection installation?", a: "The requirements depend on the experience and space. Factors such as available surface area, ceiling height, lighting, projection area, equipment placement and interaction requirements need to be considered." }
-  ]
- },
+   { q: "What is an interactive Projection?", a: "An interactive Projection is a floor, wall, ceiling, table, window or mirror that responds when someone touches or moves across it." },
+   { q: "What surfaces can be made interactive?", a: "Floors, walls, ceilings, tables, windows and mirrors can be used, depending on the surface material, lighting and room layout." },
+   { q: "How does the surface detect movement or touch?", a: "A camera or sensor tracks movement, or the surface itself is touch enabled, depending on the format chosen." },
+   { q: "Can more than one person interact at the same time?", a: "Yes, floors and tables in particular are often used for group interaction." },
+   { q: "What affects the cost of an interactive space installation?", a: "Cost depends on the surface size, the number of projectors or displays, the tracking method and the content required." },
+   { q: "Can the content be changed later?", a: "Content can be updated for new campaigns, lessons or seasons, depending on the system installed." },
+   { q: "How do we get started?", a: "Share the surface you have in mind and what you want people to do with it, and we will recommend a suitable format." }
+  ],
 
+   // Section 08: Related Solutions
+   relatedSolutionsHeading: "Explore More Solutions",
+
+   // Section 10: Final CTA
+   ctaHeading: "Turn a Surface Into Part of the Experience",
+   ctaSubtitle: "Tell us about the space and the surface you have in mind.",
+   ctaButtonText: "Discuss Your Project"
+ },
  // Legacy alias to maintain full backwards compatibility:
  get "interactive-spaces"() {
   return this["interactive-projection"];
@@ -679,85 +686,126 @@ export const solutionDetails: Record<string, SolutionFullData> = {
  },
 
  // -------------------------------------------------------------------------
- // 7. IMMERSIVE ENVIRONMENT (Overview)
+ // 7. IMMERSIVE ENVIRONMENT (Overview / Solution 02)
  // -------------------------------------------------------------------------
  "immersive-environment": {
   slug: "immersive-environment",
-  solutionLabel: "Immersive Architectural Experiences",
-  heroHeading: "Projection Mapping & Immersive Rooms",
-  heroSubtitle: "Transport Audiences with 360-Degree Architectural Storytelling",
-  heroDescription: "Create monumental visual illusions that bend physical space, wrapping historic facades, theatrical stages, and 360-degree exhibition rooms in seamless ultra-HD digital narratives.",
+  solutionLabel: "IMMERSIVE ENVIRONMENTS",
+  heroHeading: "Rooms and Surfaces That Surround People With Visual Content",
+  heroSubtitle: "An immersive environment surrounds a room, building or dome with projected or displayed visuals, so people experience the content around them rather than on one screen.",
+  heroDescription: "Build immersive rooms, projection mapped surfaces, 360 degree projection and dome environments that surround people with visual content.",
   heroImg: "/images/cathedral_projection_mapping.jpg",
 
-  whatIsHeading: "What Is Projection Mapping & Immersive Tech?",
-  whatIsDescription: "Projection Mapping transforms complex physical structures into dynamic video canvases. By precisely scanning 3D geometry with LiDAR and aligning multiple laser projectors, static architecture appears to crumble, transform, and come alive.",
+  surfaceFormatsLabel: "THE FORMATS",
+  industriesLabel: "WHERE IT FITS",
+  applicationsLabel: "EXPERIENCE POSSIBILITIES",
+  howItWorksLabel: "HOW IT WORKS",
+  capabilitiesLabel: "CAPABILITIES",
+  experienceLabel: "THE EXPERIENCE",
+  relatedSolutionsLabel: "EXPLORE MORE",
+  faqsLabel: "COMMON QUESTIONS",
+
+  whatIsHeading: "What an Immersive Environment Lets People Do",
+  whatIsDescription: "An immersive environment surrounds a room, building or dome with projected or displayed visuals, so people experience the content around them rather than on one screen.",
   whatIsVideoPlaceholder: "/immersive-room-poster.jpg",
   videoUrl: "/immersive-room-showreel.mp4",
   whatIsFeatures: [
-   { title: "Geometric Mesh Calibration", desc: "Software warps video pixels to match physical corners, curves, and relief details." },
-   { title: "Edge Blending Technology", desc: "Seamlessly blends multiple projectors into one gigantic ultra-HD resolution canvas." },
-   { title: "Naked-Eye Shared Illusion", desc: "Hundreds of people experience massive spectacle simultaneously without wearing VR headsets." },
-   { title: "Spatial Audio Synchronization", desc: "Visual animations align with 3D multi-channel audio arrays for total sensory immersion." }
+   { title: "Walk Into a Visual Story", desc: "Move through a room or dome and see the content from different angles as they go." },
+   { title: "See a Building Differently", desc: "Projection mapping changes how a familiar structure looks for a launch or event." },
+   { title: "Spend Longer in a Space", desc: "A surrounding environment gives people more reason to stay and look around than a flat screen." }
   ],
 
-  experienceHeading: "Immersive Production Portfolio",
-  experienceIntro: "From monumental municipal facade shows to 360-degree museum galleries that transport audiences.",
+  experienceHeading: "Different Ways to Build an Immersive Environment",
+  experienceIntro: "An enclosed room, curved dome or building facade can become an environment that surrounds people with visual content.",
   featuredExperience: {
-   category: "Museums & Fine Art",
-   title: "360° Living Impressionist Exhibition",
-   desc: "Step directly inside iconic masterpieces as paintings animate across floor-to-ceiling walls with spatial orchestral sound.",
+   category: "Immersive Rooms",
+   title: "Immersive Rooms",
+   desc: "An enclosed room where walls, floor and ceiling work together as one continuous visual.",
    img: "/images/planetarium_projection_dome.jpg"
   },
   experienceCards: [
-   { category: "Public Art", title: "Civic Facade Mapping Spectacle", desc: "Turn historic city halls, cathedrals, and monuments into monumental video landmarks.", img: "/images/horizon_glass_floor.jpg" },
-   { category: "Corporate Keynotes", title: "Dynamic Shifting Event Stages", desc: "Transform corporate stage backdrops into shifting, three-dimensional digital environments.", img: "/images/projection_cityscape_model.jpg" },
-   { category: "Brand Launches", title: "Automotive Product Mapping", desc: "Project dynamic animated textures, speed lines, and internal mechanics onto physical vehicles.", img: "/images/sneaker_customization_table.jpg" },
-   { category: "Entertainment Venues", title: "Interactive LED Light Tunnels", desc: "Curved high-density archways that pulse with color as visitors pass through.", img: "/images/interactive_cocktail_bar.jpg" }
+   {
+    category: "180 and 360 Degree Projection",
+    title: "180 and 360 Degree Projection",
+    desc: "Content is projected across multiple surfaces so people are surrounded rather than facing one direction.",
+    img: "/images/cathedral_projection_mapping.jpg"
+   },
+   {
+    category: "Projection Mapping",
+    title: "Projection Mapping",
+    desc: "Visuals are shaped to fit a building, structure or object based on its exact form.",
+    img: "/images/horizon_glass_floor.jpg"
+   },
+   {
+    category: "Dome and Fulldome Projection",
+    title: "Dome and Fulldome Projection",
+    desc: "A curved dome surface is used to create an overhead or fully surrounding visual.",
+    img: "/images/biosphere_ocean_gallery.jpg"
+   },
+   {
+    category: "LED Tunnels",
+    title: "LED Tunnels",
+    desc: "A walk through passage built from LED panels, with visuals that move as people pass through.",
+    img: "/images/hospital_interactive_corridor.jpg"
+   },
+   {
+    category: "Large Format and 3D LED Displays",
+    title: "Large Format and 3D LED Displays",
+    desc: "High resolution LED and 3D display formats for exhibitions, launches and brand environments.",
+    img: "/images/hospitality_ambient_atrium.jpg"
+   }
   ],
 
-  featuresHeading: "Engineered for Massive Scale & Optical Precision",
-  keyFeaturesIntro: "Enterprise media server clusters handling uncompressed 12K playback and sub-millimeter geometric alignment.",
+  featuresHeading: "What the Solution Can Deliver",
+  keyFeaturesIntro: "Designed around architectural scale, optical precision and seamless multi-surface display integration.",
   keyFeatures: [
-   { title: "LiDAR 3D Point Cloud Scanning", desc: "Millimeter-accurate architectural scanning forms the foundation of all content creation." },
-   { title: "Media Server Clustering", desc: "Disguise / Dataton WATCHOUT servers driving dozens of synchronized 4K video outputs." },
-   { title: "Auto-Camera Calibration", desc: "Automated dome and surface recalibration ensures pixels stay crisp over months of operation." },
-   { title: "High-Lumen Laser Stacking", desc: "Stacking 30,000+ ANSI lumen laser projectors for intense brightness against city lighting." },
-   { title: "Weatherproof Outdoor Enclosures", desc: "Climate-controlled housings engineered for sub-zero snow and scorching desert heat." },
-   { title: "Low Dwell Distortion", desc: "Custom anamorphic perspectives create realistic 3D optical depth illusions from audience viewpoints." }
+   { title: "Multi Surface Projection", desc: "Content extends across walls, floors and ceilings as one connected visual." },
+   { title: "Projection Mapping", desc: "Visuals are shaped to fit buildings, objects and architectural surfaces exactly." },
+   { title: "Dome and Curved Surface Projection", desc: "Content is adapted for curved and overhead dome surfaces." },
+   { title: "Large Format Display Integration", desc: "LED and 3D display panels can be combined with projection in the same environment." }
   ],
 
-  howItWorksHeading: "From 3D Scanning to Architectural Transformation",
-  howItWorksIntro: "A rigorous precision pipeline turning physical buildings into living digital spectacles.",
+  howItWorksHeading: "From Space to Immersive Environment",
+  howItWorksIntro: "A calibrated four-step engineering process that maps, produces and installs surrounding visual environments.",
   howItWorksSteps: [
-   { title: "LiDAR Scanning", desc: "We scan the building facade or interior room to capture every architectural millimeter." },
-   { title: "3D Animation Pipeline", desc: "CGI artists model content specifically tailored to the physical building's features." },
-   { title: "Optical Simulation", desc: "Projector placement, lens throw, and shadow studies are verified in CAD." },
-   { title: "Edge Blending & Warping", desc: "Calibration software blends overlapping projector beams into one continuous surface." },
-   { title: "Show Showtime", desc: "The space transforms, delivering a seamless optical illusion synchronized to audio." }
+   { title: "01. Review the Room or Structure", desc: "We look at the architecture, surfaces, dimensions and viewing angles." },
+   { title: "02. Plan the Visual Layout", desc: "Projection or display areas are mapped against the physical space." },
+   { title: "03. Build the Content", desc: "Visuals are created to match the exact shape and dimensions of the installation." },
+   { title: "04. Install and Calibrate", desc: "Projectors, displays, lighting and audio are installed and aligned to the space." }
   ],
 
-  industriesHeading: "Where Immersive Environments Thrive",
-  industriesIntro: "Transforming cultural institutions, tourism landmarks, and premier corporate events.",
-  featuredIndustry: { title: "Museums & Cultural Centers", desc: "Create ticketed blockbuster exhibitions that attract global audiences.", img: "/images/museum_interactive_exhibit.jpg", href: "/industries/museums-culture" },
+  industriesHeading: "Immersive Environments Across Different Industries",
+  industriesIntro: "Immersive environments can be adapted to different environments based on the audience, space and purpose of the experience.",
+  featuredIndustry: {
+   title: "Museums & Exhibitions",
+   desc: "Immersive rooms and projection mapping let visitors move through a visual story rather than read it off a wall.",
+   img: "/images/museum_interactive_exhibit.jpg",
+   href: "/industries/museums-culture"
+  },
   industryCards: [
-   { title: "Tourism & Municipal Landmarks", desc: "City festival attractions that stimulate regional nighttime economies.", img: "/images/hospitality_ambient_atrium.jpg", href: "/industries/public-spaces" },
-   { title: "Entertainment & Live Events", desc: "Concert stage mapping and theme park dark ride experiences.", img: "/images/entertainment_motion_arena.jpg", href: "/industries/entertainment" },
-   { title: "Corporate Product Launches", desc: "Dramatic vehicle reveals and brand keynote presentations.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/corporate" }
+   { title: "Entertainment", desc: "Dome projection and LED tunnels create attractions people walk into and explore.", img: "/images/planetarium_projection_dome.jpg", href: "/industries/entertainment" },
+   { title: "Retail", desc: "Projection mapping and LED displays turn a storefront or launch into a visual moment.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail-showrooms" },
+   { title: "Hospitality", desc: "Immersive visuals change the feel of a lobby, restaurant or guest space.", img: "/images/dining_projection_table.jpg", href: "/industries/hospitality" },
+   { title: "Corporate & Events", desc: "Immersive rooms and building projection mapping are used for launches, conferences and experience centres.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/corporate" },
+   { title: "Education", desc: "Immersive rooms help students explore a subject or place through surrounding visuals.", img: "/images/education_interactive_floor.jpg", href: "/industries/education" }
   ],
 
-  outcomesHeading: "Monumental Audience Reach & Impact",
-  benefitsIntro: "Projection mapping delivers jaw-dropping scale and viral global social media attention.",
-  featuredBenefit: { title: "Massive Organic Social Reach", desc: "Projection mapping spectacles are intensely photogenic, driving millions of organic views across Instagram and TikTok.", img: "/images/technician_calibrating_projection.jpg" },
+  outcomesHeading: "Make the Room Part of the Experience",
+  benefitsIntro: "A surrounding environment gives people more reason to stay and look around than a flat screen.",
+  featuredBenefit: {
+   title: "Make the Room Part of the Experience",
+   desc: "Visuals extend across the space instead of sitting on one screen in front of them, turning the physical room into an unfolding visual story.",
+   img: "/images/biosphere_ocean_gallery.jpg"
+  },
   benefits: [
-   { title: "No Headsets Required", desc: "Entire crowds share the emotional journey together without wearing isolating goggles." },
-   { title: "Zero Structural Damage", desc: "Light wraps around historic protected buildings without requiring physical nails or screws." },
-   { title: "Dynamic Night Economy", desc: "Drives nighttime foot traffic, restaurant bookings, and tourism revenue to city centers." },
-   { title: "Reconfigurable Shows", desc: "Run a Christmas show in December, an art exhibition in April, and corporate events in June." }
+   { title: "Content Surrounds People", desc: "Visuals extend across the space instead of sitting on one screen in front of them." },
+   { title: "A Space Can Change Its Feel", desc: "The same room can look different for each exhibition, launch or event." },
+   { title: "Attention Moves Through the Space", desc: "Large scale visuals can guide where people look and walk next." }
   ],
-  techStack: ["Barco 30K Lumen Laser Fleet", "Disguise D3 Media Servers", "Leica LiDAR Scanners", "Sub-Millimeter Edge Blending"],
+  techStack: ["Multi Surface Projection", "Architectural 3D Mapping", "Curved Dome Calibration", "Ultra HD LED Integration"],
 
-  projectsHeading: "Selected Immersive Environments",
-  projectsIntro: "Explore monumental architectural mapping projects executed worldwide.",
+  projectsHeading: "Related Projects",
+  projectsIntro: "Discover our landmark immersive environments, dome projection theatres, and architectural mapping spectacles.",
   featuredProject: {
    industry: "Museum",
    title: "Monumental Architectural Immersion",
@@ -768,19 +816,31 @@ export const solutionDetails: Record<string, SolutionFullData> = {
    href: "/projects"
   },
   projects: [
-   { industry: "Public Art", title: "Historic Cathedral Facade Mapping", desc: "Celebrated anniversary light show seen by 200,000 spectators.", img: "/images/interactive_floor_motion.jpg", href: "/projects" },
+   { industry: "Public Art", title: "Historic Cathedral Facade Mapping", desc: "Celebrated anniversary light show seen by 200,000 spectators across the city square.", img: "/images/cathedral_projection_mapping.jpg", href: "/projects" },
    { industry: "Automotive", title: "Electric Hypercar Launch Reveal", desc: "Projection mapping dynamic aero simulation onto prototype vehicle.", img: "/images/retail_interactive_showcase.jpg", href: "/projects" },
-   { industry: "Entertainment", title: "Interactive LED Archway Tunnel", desc: "Pedestrian entrance tunnel with responsive visual fluid dynamics.", img: "/images/hospital_interactive_corridor.jpg", href: "/projects" },
-   { industry: "Hospitality", title: "Immersive Culinary Dining Dome", desc: "Dining table and 360-degree wall mapping narrating each dish.", img: "/images/dining_projection_table.jpg", href: "/projects" }
+   { industry: "Entertainment", title: "Interactive LED Archway Tunnel", desc: "Pedestrian entrance tunnel with responsive visual fluid dynamics and ambient soundscapes.", img: "/images/hospital_interactive_corridor.jpg", href: "/projects" },
+   { industry: "Hospitality", title: "Immersive Culinary Dining Dome", desc: "Dining table and 360-degree wall mapping narrating each dish with sensory visuals.", img: "/images/dining_projection_table.jpg", href: "/projects" }
   ],
 
-  faqsIntro: "Frequently asked questions regarding projection mapping, logistics, and technical feasibility.",
+  faqsIntro: "Common questions about immersive environments, projection mapping, dome structures and installation requirements.",
   faqs: [
-   { q: "What surface materials are best for projection mapping?", a: "Matte stone, concrete, light plaster, and white architectural surfaces yield the best light reflection. Dark glass or mirror surfaces require specialized removable projection film." },
-   { q: "Can projection mapping happen outdoors in rain or snow?", a: "Yes. Our outdoor projection rigs use IP65 climate-controlled tempest enclosures with automated dehumidifiers and heating elements." },
-   { q: "How long does it take to produce a projection mapping show?", a: "Depending on scale, content creation and calibration typically span 4 to 12 weeks from initial 3D LiDAR scan to opening night." },
-   { q: "Does projection mapping damage historic architecture?", a: "Not at all. Projection mapping involves only light; no permanent fixtures or screws touch the facade, making it fully approved by heritage protection committees." }
-  ]
+   { q: "What is an immersive environment?", a: "An immersive environment surrounds a room, building or dome with projected or displayed visuals, so content appears around people rather than on one screen." },
+   { q: "What is projection mapping?", a: "Projection mapping shapes digital content to fit the exact form of a building, object or architectural surface." },
+   { q: "What is the difference between an immersive room and a dome?", a: "An immersive room usually uses flat walls, floor and ceiling together. A dome uses one curved surface for an overhead or fully surrounding visual." },
+   { q: "Can an immersive environment include interaction?", a: "Yes, movement tracking or interactive content can be added when participation is part of the brief. See Interactive Engagement for this." },
+   { q: "What affects the cost of an immersive environment?", a: "Cost depends on the size of the space, the number of projectors or displays, content complexity and installation conditions." },
+   { q: "What spaces suit this kind of setup?", a: "Exhibition halls, event venues, retail environments, museums, dome theatres and similar rooms or structures, depending on the format." },
+   { q: "How do we get started?", a: "Share the room, building or dome you are working with and what you want the environment to do, and we will recommend a format." }
+  ],
+
+  relatedSolutionsHeading: "Explore More Solutions",
+  ctaHeading: "Build a Room People Want to Walk Into",
+  ctaSubtitle: "Tell us about your space and the environment you want to create.",
+  ctaButtonText: "Discuss Your Project"
+ },
+ // Alias for URL /solutions/immersive-environments:
+ get "immersive-environments"() {
+  return this["immersive-environment"];
  },
 
  // -------------------------------------------------------------------------
@@ -1205,111 +1265,253 @@ export const solutionDetails: Record<string, SolutionFullData> = {
  // -------------------------------------------------------------------------
  // 12. AI EXPERIENCE (Overview)
  // -------------------------------------------------------------------------
+ // 12. AI EXPERIENCES (Authentic Core Solution - home.txt)
+ // -------------------------------------------------------------------------
  "ai-experience": {
   slug: "ai-experience",
-  solutionLabel: "Artificial Intelligence Architecture",
-  heroHeading: "AI Avatars & Generative Art",
-  heroSubtitle: "Real-Time Conversational Avatars, Computer Vision & Generative Art",
-  heroDescription: "Move beyond pre-rendered video loops. Our spatial AI systems utilize real-time computer vision and Large Language Models to analyze visitors, converse intelligently in 50+ languages, and generate never-repeating reactive artwork.",
+  // Section 01: Hero
+  solutionLabel: "AI EXPERIENCES",
+  heroHeading: "AI Avatars and AI Photo Experiences for Physical Spaces",
+  heroSubtitle: "An AI avatar can greet, answer questions or host at a booth. An AI photo experience can turn a guest photo into something shareable in seconds.",
+  heroDescription: "Add an AI avatar or AI photo experience to an event, booth or brand space. See how AI driven interactions work in a physical setting.",
   heroImg: "/images/ai_receptionist_concierge.jpg",
 
-  whatIsHeading: "What Is an AI Experience Installation?",
-  whatIsDescription: "An AI Experience combines computer vision, real-time Large Language Models, and generative neural rendering engines. Visitors interact with autonomous 3D Metahumans that hear, see, speak, and adapt their personality based on who is standing in front of them.",
-  whatIsVideoPlaceholder: "/ai-receptionist-poster.jpg",
-  videoUrl: "/ai-receptionist-showreel.mp4",
+  // Section 02: Applications / EXPERIENCE POSSIBILITIES
+  applicationsLabel: "EXPERIENCE POSSIBILITIES",
+  whatIsHeading: "What an AI Experience Lets People Do",
+  whatIsDescription: "Visitors speak to or type a question for an AI avatar instead of reading a brochure or waiting for staff. A photo experience returns something generated specifically from that guest's input, without waiting in line.",
+  whatIsVideoPlaceholder: "/images/ai_receptionist_concierge.jpg",
   whatIsFeatures: [
-   { title: "Real-Time NLP & Speech", desc: "Powered by advanced LLMs for fluid, unscripted, brand-safe voice conversations." },
-   { title: "Computer Vision Audience Sensing", desc: "Detects visitor age, emotion, posture, and gaze direction in milliseconds." },
-   { title: "Generative Living Visuals", desc: "Background environments that paint themselves in real-time based on visitor footfall." },
-   { title: "Unreal Engine 5 Metahumans", desc: "Photorealistic digital humans with hyper-realistic facial micro-expressions and eye contact." }
+   {
+    title: "Ask a Question and Get an Answer",
+    desc: "Visitors speak to or type a question for an AI avatar instead of reading a brochure or waiting for staff."
+   },
+   {
+    title: "Get a Personalized Result",
+    desc: "A photo experience returns something generated specifically from that guest's input."
+   },
+   {
+    title: "Interact Without Waiting in Line",
+    desc: "An AI avatar can handle several visitors in sequence without needing a staff member present for each one."
+   }
   ],
 
-  experienceHeading: "Spatial AI Deployments & Showcase",
-  experienceIntro: "From autonomous corporate receptionists to interactive generative art photo booths.",
+  // Section 03: The Formats / Surface Formats
+  surfaceFormatsLabel: "THE FORMATS",
+  experienceHeading: "Two Ways to Bring AI Into a Space",
+  experienceIntro: "An AI avatar can handle conversations and guidance, while an AI photo experience gives guests a personalized visual to take away.",
   featuredExperience: {
-   category: "Corporate Briefing",
-   title: "Autonomous AI Reception Concierge",
-   desc: "A lifelike digital avatar greets arriving executives by name, manages visitor badges, and answers complex corporate questions.",
-   img: "/images/corporate_lobby_wall.jpg"
+   category: "AI Avatars",
+   title: "AI Avatars",
+   desc: "A digital character, shown on a screen or hologram, that can greet visitors, answer questions and guide them through a space.",
+   img: "/images/ai_receptionist_concierge.jpg"
   },
   experienceCards: [
-   { category: "Retail Flagships", title: "Personalized AI Style Advisor", desc: "A digital stylist that scans customer outfit colors and recommends matching boutique apparel.", img: "/images/retail_interactive_showcase.jpg" },
-   { category: "Museums & History", title: "Conversational Historical Figures", desc: "Visitors hold unscripted spoken interviews with AI replicas of Leonardo da Vinci and Marie Curie.", img: "/images/museum_interactive_exhibit.jpg" },
-   { category: "Public Atriums", title: "Generative Art Kinetic Murals", desc: "Massive lobby video walls that dynamically paint abstract artwork driven by real-time footfall patterns.", img: "/images/hospitality_ambient_atrium.jpg" },
-   { category: "Events & Activations", title: "AI Neural Style Photo Booth", desc: "Guests step into a booth and are instantly restyled into Renaissance oil paintings or cyberpunk heroes in 4K.", img: "/images/cosmetics_smart_counter.jpg" }
+   {
+    category: "AI Photo Experiences",
+    title: "AI Photo Experiences",
+    desc: "Guests take a photo and the system generates a themed or branded version of it in return.",
+    img: "/images/cosmetics_smart_counter.jpg"
+   }
   ],
 
-  featuresHeading: "Neural Architecture & Latency Optimization",
-  keyFeaturesIntro: "Sub-second conversational response loops running on high-performance local edge GPU clusters.",
+  // Section 04: Capabilities
+  capabilitiesLabel: "CAPABILITIES",
+  featuresHeading: "What the Solution Can Deliver",
+  keyFeaturesIntro: "Designed for live interactive deployments with conversational AI avatars, generative image styling and branded visual output.",
   keyFeatures: [
-   { title: "Sub-Second Voice Latency", desc: "Edge-accelerated Whisper speech-to-text and streaming TTS for natural conversational banter." },
-   { title: "Brand-Guarded Knowledge Base", desc: "RAG (Retrieval-Augmented Generation) prevents hallucinations and enforces brand policy." },
-   { title: "Computer Vision Gaze Tracking", desc: "The avatar establishes and holds natural eye contact as visitors move around the room." },
-   { title: "Extensive Multilingual Support", desc: "Real-time multilingual translation across dozens of languages enables seamless communication with international guests." },
-   { title: "Local Edge GPU Deployment", desc: "Can be deployed fully on-premises without internet dependency for maximum data privacy." },
-   { title: "Comprehensive Audience Analytics", desc: "Aggregates anonymized foot-traffic data, dwell time, and sentiment without storing PII." }
+   {
+    title: "AI Avatar Interaction",
+    desc: "A digital character that can respond to visitor questions in real time."
+   },
+   {
+    title: "AI Generated Photo Content",
+    desc: "Guest photos are transformed into a themed or branded result."
+   },
+   {
+    title: "Branded Visual Styling",
+    desc: "Avatar appearance and photo styles can be built around a specific brand or campaign."
+   },
+   {
+    title: "Real-Time Response Engine",
+    desc: "Sub-second conversational response and instant image transformation for physical spaces."
+   }
   ],
 
-  howItWorksHeading: "The Real-Time Spatial AI Pipeline",
-  howItWorksIntro: "From visual presence sensing to photorealistic lip-sync speech delivery.",
+  // Section 05: How It Works
+  howItWorksLabel: "HOW IT WORKS",
+  howItWorksHeading: "From Brief to AI Experience",
+  howItWorksIntro: "A straightforward four-step process to plan, develop, install and test an interactive AI activation.",
   howItWorksSteps: [
-   { title: "Visitor Approach & Sensing", desc: "Wide-angle camera detects a visitor stopping in front of the installation." },
-   { title: "Visual & Gaze Alignment", desc: "The 3D Metahuman turns its head, makes eye contact, and speaks a personalized greeting." },
-   { title: "Acoustic Speech-to-Text", desc: "Directional microphone array isolates the visitor's voice and converts speech to text." },
-   { title: "LLM Reasoning & Guardrails", desc: "Brand-tuned model analyzes the query and retrieves accurate corporate knowledge." },
-   { title: "Metahuman Facial Performance", desc: "Audio stream drives synchronized real-time facial blendshapes and emotional expressions." }
+   {
+    title: "01. Define the Role",
+    desc: "We confirm what the AI avatar or photo experience needs to do, such as greeting, answering questions or generating images."
+   },
+   {
+    title: "02. Set Up the Content and Responses",
+    desc: "The avatar's script, visuals or photo styles are built around the brand and the brief."
+   },
+   {
+    title: "03. Install the Display or Booth",
+    desc: "A screen, hologram unit or photo capture setup is installed in the space."
+   },
+   {
+    title: "04. Test the Interaction",
+    desc: "The experience is tested with real input before the event or launch goes live."
+   }
   ],
 
-  industriesHeading: "Where Spatial AI Reinvents Engagement",
-  industriesIntro: "Transforming corporate lobbies, museums, luxury retail, and premier events.",
-  featuredIndustry: { title: "Corporate Headquarters", desc: "Automate executive reception and impress visiting clients with futuristic AI hosts.", img: "/images/horizon_glass_floor.jpg", href: "/industries/corporate" },
+  // Section 06: Where It Fits / Industries
+  industriesLabel: "WHERE IT FITS",
+  industriesHeading: "AI Experiences Across Different Industries",
+  industriesIntro: "AI experiences can be adapted to different environments based on the audience, space and purpose of the activation.",
+  featuredIndustry: {
+   title: "Corporate & Events",
+   desc: "An AI avatar can greet visitors and answer product questions at a booth or launch.",
+   img: "/images/corporate_lobby_wall.jpg",
+   href: "/industries/corporate"
+  },
   industryCards: [
-   { title: "Museums & Cultural Archives", desc: "Enable unscripted, natural conversations with figures from history.", img: "/images/cathedral_projection_mapping.jpg", href: "/industries/museums-culture" },
-   { title: "Retail Showrooms & Boutiques", desc: "AI brand ambassadors that recommend products and answer technical specs.", img: "/images/sneaker_customization_table.jpg", href: "/industries/retail-showrooms" },
-   { title: "Conferences & Galas", desc: "High-throughput interactive photo booths and automated bilingual event emcees.", img: "/images/interactive_cocktail_bar.jpg", href: "/industries/entertainment" }
+   {
+    title: "Retail",
+    desc: "An AI avatar or photo experience gives shoppers a reason to stop at a storefront or counter.",
+    img: "/images/retail_interactive_showcase.jpg",
+    href: "/industries/retail-showrooms"
+   },
+   {
+    title: "Museums & Exhibitions",
+    desc: "An AI avatar can introduce an exhibit or answer visitor questions.",
+    img: "/images/museum_interactive_exhibit.jpg",
+    href: "/industries/museums-culture"
+   },
+   {
+    title: "Entertainment",
+    desc: "AI photo experiences give visitors something to take home and share from a venue.",
+    img: "/images/entertainment_motion_arena.jpg",
+    href: "/industries/entertainment"
+   },
+   {
+    title: "Hospitality",
+    desc: "An AI avatar can greet guests in a lobby or answer common questions.",
+    img: "/images/hospitality_ambient_atrium.jpg",
+    href: "/industries/hospitality"
+   }
   ],
 
-  outcomesHeading: "Measurable Value of Spatial AI",
-  benefitsIntro: "Deliver 24/7 personalized service while gathering rich anonymized behavioral intelligence.",
-  featuredBenefit: { title: "Global Fluency Around the Clock", desc: "One AI concierge communicates effortlessly in dozens of world languages 24 hours a day without fatigue or variance.", img: "/images/architectural_light_beam.jpg" },
+  // Section 07: Why It Matters / The Experience
+  experienceLabel: "THE EXPERIENCE",
+  outcomesHeading: "Give Visitors Something to Talk To, Not Just Look At",
+  benefitsIntro: "An interactive conversation or personalized photo creates a lasting memory and gives visitors something tangible to take away.",
+  featuredBenefit: {
+   title: "Give Visitors Something to Talk To, Not Just Look At",
+   desc: "An AI avatar that responds to a question stands out more than a static display.",
+   img: "/images/cat_ai_avatar.jpg"
+  },
   benefits: [
-   { title: "Infinite Product Knowledge", desc: "Never forgets a technical specification, price, or historical archive fact." },
-   { title: "Zero Hallucination Guardrails", desc: "Strict system prompt architecture guarantees strictly brand-compliant answers." },
-   { title: "Anonymized Demographic Insights", desc: "Collects aggregate foot traffic and interest trends without storing photos." },
-   { title: "Evergreen Technology Stack", desc: "Easily update the underlying model or add new skills via simple prompt configuration." }
+   {
+    title: "People Remember a Conversation",
+    desc: "An AI avatar that responds to a question stands out more than a static display."
+   },
+   {
+    title: "Guests Leave With Something to Share",
+    desc: "A photo experience gives people a reason to post or forward what they received."
+   },
+   {
+    title: "One Setup Can Handle Many Visitors",
+    desc: "An AI avatar can repeat the same quality of interaction for each person who approaches it."
+   }
   ],
-  techStack: ["NVIDIA RTX Ada Generation GPUs", "Unreal Engine 5 Metahuman SDK", "OpenAI / Claude LLM RAG Pipeline", "Deepgram Streaming Voice"],
+  techStack: ["Real-Time Conversational AI", "Generative Neural Style Engine", "Interactive Touch & Hologram Displays", "Low-Latency Edge Computing"],
 
-  projectsHeading: "Selected Spatial AI Deployments",
-  projectsIntro: "Discover our autonomous AI avatars and generative art installations.",
+  // Section 08: Related Projects
+  projectsHeading: "Related Projects",
+  projectsIntro: "Discover our landmark AI avatars, conversational concierge installations, and generative photo experiences.",
   featuredProject: {
    industry: "Corporate",
-   title: "Regional Telecom HQ Media Canvas",
-   desc: "Real-time AI generative simulations transforming corporate headquarters architecture with dynamic data visualization, climate-responsive artwork, and visitor tracking.",
-   location: "Corporate Innovation Atrium",
-   img: "/images/entertainment_motion_arena.jpg",
-   tech: ["Unreal Metahuman", "Local LLM Inference", "Directional Audio Array"],
+   title: "Autonomous AI Reception Concierge",
+   desc: "An intelligent digital avatar greeting executive visitors, providing company information and guiding guests through an interactive innovation center.",
+   location: "Corporate Innovation Center",
+   img: "/images/ai_receptionist_concierge.jpg",
+   tech: ["Conversational AI", "Speech Synthesis", "Holographic Display"],
    href: "/projects"
   },
   projects: [
-   { industry: "Museum", title: "Theoretical Physics Interactive Encounter", desc: "Visitors ask theoretical physics questions directly to an AI scientist avatar.", img: "/images/education_interactive_floor.jpg", href: "/projects" },
-   { industry: "Retail", title: "Generative Art Storefront Window", desc: "AI generates abstract street art matching the clothing colors of passerby pedestrians.", img: "/images/biosphere_ocean_gallery.jpg", href: "/projects" },
-   { industry: "Events", title: "AI Renaissance Photo Studio", desc: "Transformed thousands of gala guests into museum-quality digital portraits.", img: "/images/dining_projection_table.jpg", href: "/projects" },
-   { industry: "Healthcare", title: "Hospital Wayfinding Concierge", desc: "Bilingual avatar guiding patients to clinics and department appointments.", img: "/images/hospital_interactive_corridor.jpg", href: "/projects" }
+   {
+    industry: "Retail",
+    title: "Interactive AI Style Advisor",
+    desc: "Digital concierge recommending matching apparel and answering customer questions in real time.",
+    img: "/images/retail_interactive_showcase.jpg",
+    href: "/projects"
+   },
+   {
+    industry: "Museum",
+    title: "Conversational Exhibit Guide",
+    desc: "Visitors engage in spoken dialogue with historical character avatars exploring science archives.",
+    img: "/images/museum_interactive_exhibit.jpg",
+    href: "/projects"
+   },
+   {
+    industry: "Entertainment",
+    title: "Generative AI Photo Studio",
+    desc: "Instant guest restyling into branded digital art pieces for event attendees.",
+    img: "/images/entertainment_motion_arena.jpg",
+    href: "/projects"
+   },
+   {
+    industry: "Hospitality",
+    title: "Bilingual Hotel Lobby Host",
+    desc: "Digital concierge answering guest questions and providing local recommendations.",
+    img: "/images/hospitality_ambient_atrium.jpg",
+    href: "/projects"
+   }
   ],
 
-  faqsIntro: "Frequently asked questions regarding AI avatars, corporate safety, and edge computing.",
+  // Section 10: FAQ
+  faqsLabel: "COMMON QUESTIONS",
+  faqsIntro: "Frequently asked questions regarding AI avatars, photo experiences, customization, and event requirements.",
   faqs: [
-   { q: "Can the AI say something inappropriate or off-brand?", a: "No. We implement multi-layered safety guardrails and strict RAG knowledge boundaries that prevent off-topic chatter or inappropriate responses." },
-   { q: "Can the avatar be customized to look like our founder or brand mascot?", a: "Yes. We can photogrammetrically 3D scan a real person to create a digital double, or sculpt bespoke stylized 3D characters and mascots." },
-   { q: "Can it operate without an active internet connection?", a: "Yes. For high-security defense or banking environments, we deploy localized edge-AI models running completely offline on on-premises GPUs." },
-   { q: "How fast is the voice conversational response?", a: "Our optimized streaming audio pipeline achieves a sub-second turnaround, mirroring natural human conversation pauses." }
-  ]
+   {
+    q: "What is an AI avatar experience?",
+    a: "An AI avatar is a digital character, shown on a screen or hologram, that can greet visitors, answer questions or guide them through a space."
+   },
+   {
+    q: "What is an AI photo experience?",
+    a: "Guests take or upload a photo, and the system generates a themed, stylized or branded version in return."
+   },
+   {
+    q: "Can the AI avatar be customized to our brand?",
+    a: "Appearance, script and tone can be built around your brand and the purpose of the activation."
+   },
+   {
+    q: "Does someone need to operate the AI avatar during the event?",
+    a: "This depends on the setup. Some AI avatars run unattended, others work alongside event staff."
+   },
+   {
+    q: "What affects the cost of an AI experience?",
+    a: "Cost depends on the display or hologram hardware, the complexity of the avatar's script or photo styles, and the length of the event."
+   },
+   {
+    q: "Can it work for a single day event?",
+    a: "Yes, AI avatar and photo experiences can be set up for both short events and longer installations."
+   },
+   {
+    q: "How do we get started?",
+    a: "Share your event, your brand and what you want the AI experience to do, and we will recommend a suitable format."
+   }
+  ],
+
+  // Section 11: Call to Action & Related
+  relatedSolutionsLabel: "EXPLORE MORE",
+  relatedSolutionsHeading: "Explore More Solutions",
+  ctaHeading: "Give Your Event an AI Experience Worth Talking About",
+  ctaSubtitle: "Tell us about your event and what you want visitors to experience.",
+  ctaButtonText: "Discuss Your Project"
+ },
+ // Alias for URL /solutions/ai-experiences:
+ get "ai-experiences"() {
+  return this["ai-experience"];
  },
 
- // -------------------------------------------------------------------------
- // 13. AI AVATAR & PHOTO BOOTH (Dedicated Sub-Solution)
- // -------------------------------------------------------------------------
  "ai-avatar-photobooth": {
   slug: "ai-avatar-photobooth",
   solutionLabel: "Conversational & Generative Media",
@@ -1415,111 +1617,265 @@ export const solutionDetails: Record<string, SolutionFullData> = {
  // -------------------------------------------------------------------------
  // 14. SOLUTION ENGAGEMENT (Overview)
  // -------------------------------------------------------------------------
- "solution-engagement": {
-  slug: "solution-engagement",
-  solutionLabel: "Audience Engagement Architecture",
-  heroHeading: "Smart Gamification & Kiosks",
-  heroSubtitle: "Drive Measurable Physical Engagement with Custom Branded Gamification",
-  heroDescription: "High-throughput interactive installations for commercial flagships, expos, and venues. We build custom branded 3D games, RFID lift-and-learn discovery stations, and reward leaderboards that captivate crowds.",
-  heroImg: "/images/sneaker_customization_table.jpg",
+ // 14. INTERACTIVE ENGAGEMENT (Authentic Core Solution - home.txt)
+ // -------------------------------------------------------------------------
+ "interactive-engagement": {
+  slug: "interactive-engagement",
+  // Section 01: Hero
+  solutionLabel: "INTERACTIVE ENGAGEMENT",
+  heroHeading: "Games and Activities That Get People Moving and Playing",
+  heroSubtitle: "A floor or wall can host more than visuals. It can host a game people play together, a challenge they compete in, or a brand activity they take part in.",
+  heroDescription: "Turn a floor, wall or booth into a motion game or group activity. See how interactive engagement gets people playing and taking part.",
+  heroImg: "/images/entertainment_motion_arena.jpg",
 
-  whatIsHeading: "What Are Smart Engagement Solutions?",
-  whatIsDescription: "Smart Engagement combines multi-touch kiosks, RFID sensor triggers, and gamified digital mechanics. These installations turn passive store visitors into active players who explore product features, compete on leaderboards, and willingly share contact data.",
-  whatIsVideoPlaceholder: "/retail-pedestal-poster.jpg",
-  videoUrl: "/retail-pedestal-showreel.mp4",
+  // Section 02: Applications / EXPERIENCE POSSIBILITIES
+  applicationsLabel: "EXPERIENCE POSSIBILITIES",
+  whatIsHeading: "What Interactive Engagement Lets People Do",
+  whatIsDescription: "A game invites action, where a static display only invites a glance. Group challenges can be built for friendly competition or shared teamwork, turning brand moments into active participation.",
+  whatIsVideoPlaceholder: "/images/interactive_strike_wall.jpg",
   whatIsFeatures: [
-   { title: "RFID Lift-and-Learn", desc: "Lifting a physical product instantly displays specs, reviews, and videos on adjacent screens." },
-   { title: "Branded Mini-Games", desc: "Custom 2D/3D games that reward high scores with instant discount codes or prizes." },
-   { title: "Frictionless Lead Capture", desc: "Seamless opt-in via QR code leaderboards and Apple/Google Wallet vouchers." },
-   { title: "Fleet Cloud CMS", desc: "Update game assets, discounts, and product catalogs across 100 stores with one click." }
+   {
+    title: "Play Instead of Watch",
+    desc: "A game invites action, where a static display only invites a glance."
+   },
+   {
+    title: "Compete or Collaborate",
+    desc: "Group challenges can be built for friendly competition or shared teamwork."
+   },
+   {
+    title: "Take Part in a Brand Moment",
+    desc: "Gamification turns a product or campaign into something visitors interact with directly."
+   }
   ],
 
-  experienceHeading: "Commercial Gamification Suite",
-  experienceIntro: "From retail lift-and-learn counters to arena-scale multi-user motion gaming.",
+  // Section 03: The Formats / Surface Formats
+  surfaceFormatsLabel: "THE FORMATS",
+  experienceHeading: "Ways to Build Interactive Engagement",
+  experienceIntro: "From motion games played without controllers to group challenges and branded activations.",
   featuredExperience: {
-   category: "Retail Tech",
-   title: "Interactive Sneaker Lift-and-Learn Wall",
-   desc: "Shoppers lift a sneaker off the shelf; an adjacent 4K display instantly shows cushion technology and athlete reviews.",
-   img: "/images/retail_interactive_showcase.jpg"
+   category: "Motion Games",
+   title: "Motion Games",
+   desc: "Games played by moving across a floor or reaching toward a wall, no controller needed.",
+   img: "/images/entertainment_motion_arena.jpg"
   },
   experienceCards: [
-   { category: "Expos & Booths", title: "Trade Show Motion Racing Game", desc: "Visitors steer branded race cars using body movement to compete for top leaderboard spots.", img: "/images/horizon_glass_floor.jpg" },
-   { category: "Corporate Briefing", title: "Multi-Touch Strategy Wall", desc: "Executives explore historical milestones and global supply chains on an 85-inch touch array.", img: "/images/corporate_lobby_wall.jpg" },
-   { category: "Public Transit & Malls", title: "Smart 3D Wayfinding Kiosks", desc: "Interactive directories that send personalized 3D walking routes directly to smartphones.", img: "/images/hospital_interactive_corridor.jpg" },
-   { category: "Sports Arenas", title: "Interactive Halftime Trivia Challenge", desc: "Thousands in the concourse play live trivia challenges on giant video walls to win prizes.", img: "/images/interactive_strike_wall.jpg" }
+   {
+    category: "Brand Gamification",
+    title: "Brand Gamification",
+    desc: "A game built around a brand, product or campaign that visitors play at a store or event.",
+    img: "/images/sneaker_customization_table.jpg"
+   },
+   {
+    category: "Group Challenges",
+    title: "Group Challenges",
+    desc: "Activities designed for two or more people to play together on the same surface.",
+    img: "/images/interactive_floor_motion.jpg"
+   },
+   {
+    category: "Movement Based Activities",
+    title: "Movement Based Activities",
+    desc: "Simple movement games used for classrooms, therapy settings or family activities.",
+    img: "/images/education_interactive_floor.jpg"
+   }
   ],
 
-  featuresHeading: "Industrial Hardware & Cloud Telemetry",
-  keyFeaturesIntro: "Enterprise hardware designed to withstand millions of public touches with zero downtime.",
+  // Section 04: Capabilities
+  capabilitiesLabel: "CAPABILITIES",
+  featuresHeading: "What the Solution Can Deliver",
+  keyFeaturesIntro: "Engineered for responsive motion tracking, multiplayer participation and bespoke game mechanics.",
   keyFeatures: [
-   { title: "Commercial PCAP Touch (40-Point)", desc: "Smooth capacitive glass with anti-glare, anti-microbial, and scratch-resistant treatment." },
-   { title: "RFID / NFC Near-Field Sensors", desc: "Sub-millisecond detection of tagged merchandise placed on or lifted from pedestals." },
-   { title: "Global Cloud Fleet Management", desc: "Monitor hardware health, update promotions, and analyze interactions remotely." },
-   { title: "Live Leaderboards & CRM Sync", desc: "Syncs game scores and customer opt-ins directly into Salesforce, HubSpot, or Shopify." },
-   { title: "Custom Physics & Animation Engine", desc: "Smooth 60 FPS visuals developed in modern HTML5, Unity, and React frameworks." },
-   { title: "Tamper-Proof Kiosk Enclosures", desc: "Heavy-gauge powder-coated steel chassis with concealed locking mechanisms." }
+   {
+    title: "Motion Tracking for Gameplay",
+    desc: "Detects player movement in real time to drive the game."
+   },
+   {
+    title: "Multiplayer Setup",
+    desc: "Supports more than one player interacting with the same game at once."
+   },
+   {
+    title: "Custom Game Content",
+    desc: "Games are built around a brand, subject or audience, not a fixed library."
+   },
+   {
+    title: "Real-Time Game Engine",
+    desc: "Low-latency physics, real-time feedback and dynamic scoring tailored to physical spaces."
+   }
   ],
 
-  howItWorksHeading: "The Frictionless Engagement Loop",
-  howItWorksIntro: "From magnetic visual attract loop to qualified marketing conversion.",
+  // Section 05: How It Works
+  howItWorksLabel: "HOW IT WORKS",
+  howItWorksHeading: "From Idea to Interactive Game",
+  howItWorksIntro: "A structured four-step process to define, design, install and test an interactive game.",
   howItWorksSteps: [
-   { title: "Attract Loop", desc: "Vibrant high-contrast animations catch pedestrian eyes from across the concourse." },
-   { title: "Tactile Trigger", desc: "User touches the screen or lifts an RFID-tagged product from its display stand." },
-   { title: "Active Gamification", desc: "User plays a fast 45-second branded mini-game or explores customized specifications." },
-   { title: "Reward & Data Capture", desc: "User inputs their phone number or scans a QR code to claim an instant discount voucher." },
-   { title: "Real-Time Telemetry", desc: "Interaction duration and product lift counts are securely synced to your corporate dashboard." }
+   {
+    title: "01. Define the Activity",
+    desc: "We confirm the type of game, the number of players and the setting."
+   },
+   {
+    title: "02. Design the Game Content",
+    desc: "Visuals, rules and scoring are built around the brand, subject or audience."
+   },
+   {
+    title: "03. Set Up Tracking",
+    desc: "Movement is detected using a camera or sensor on the chosen floor or wall."
+   },
+   {
+    title: "04. Test the Gameplay",
+    desc: "The game is tested with real players before it goes live."
+   }
   ],
 
-  industriesHeading: "Key Verticals for Smart Engagement",
-  industriesIntro: "Proven revenue uplift across retail flagships, automotive showrooms, and sports stadiums.",
-  featuredIndustry: { title: "Retail & Consumer Electronics", desc: "Accelerate high-ticket purchase decisions through interactive product comparison.", img: "/images/ai_receptionist_concierge.jpg", href: "/industries/retail-showrooms" },
+  // Section 06: Where It Fits / Industries
+  industriesLabel: "WHERE IT FITS",
+  industriesHeading: "Interactive Engagement Across Different Industries",
+  industriesIntro: "Interactive engagement can be adapted to different environments based on the audience, space and purpose of the activity.",
+  featuredIndustry: {
+   title: "Retail",
+   desc: "A motion game at the entrance gives shoppers a reason to stop before they walk in.",
+   img: "/images/retail_interactive_showcase.jpg",
+   href: "/industries/retail-showrooms"
+  },
   industryCards: [
-   { title: "Trade Shows & Exhibitions", desc: "Turn passive booth visitors into qualified, badge-scanned B2B sales leads.", img: "/images/projection_cityscape_model.jpg", href: "/industries/corporate" },
-   { title: "Sports Venues & Arenas", desc: "Monetize stadium concourses with branded sponsor gamification and leaderboards.", img: "/images/entertainment_motion_arena.jpg", href: "/industries/entertainment" },
-   { title: "Museums & Visitor Centers", desc: "Engage visitors through interactive touch kiosks and discovery quests.", img: "/images/museum_interactive_exhibit.jpg", href: "/industries/museums-culture" }
+   {
+    title: "Education",
+    desc: "Movement based games turn a lesson into something students do rather than watch.",
+    img: "/images/education_interactive_floor.jpg",
+    href: "/industries/education"
+   },
+   {
+    title: "Entertainment",
+    desc: "Motion games and group challenges are a core activity in arcades and family venues.",
+    img: "/images/entertainment_motion_arena.jpg",
+    href: "/industries/entertainment"
+   },
+   {
+    title: "Corporate & Events",
+    desc: "Brand gamification gives booth visitors something to do and remember.",
+    img: "/images/corporate_lobby_wall.jpg",
+    href: "/industries/corporate"
+   },
+   {
+    title: "Healthcare",
+    desc: "Movement based games support activity and participation in therapy and care settings.",
+    img: "/images/healthcare_sensory_room.jpg",
+    href: "/industries/healthcare"
+   }
   ],
 
-  outcomesHeading: "Hard Engagement Data & ROI",
-  benefitsIntro: "Gamification activates dopamine, leaving lasting positive brand associations and actionable leads.",
-  featuredBenefit: { title: "Substantial Lift in Customer Dwell Time", desc: "Interactive gamification and lift-and-learn stations significantly increase the time customers spend exploring your core products.", img: "/images/architectural_light_beam.jpg" },
+  // Section 07: Why It Matters / The Experience
+  experienceLabel: "THE EXPERIENCE",
+  outcomesHeading: "Turn a Surface Into Something People Play",
+  benefitsIntro: "Something people played holds attention longer than something they only watched.",
+  featuredBenefit: {
+   title: "Turn a Surface Into Something People Play",
+   desc: "Something people played holds attention longer than something they only watched.",
+   img: "/images/interactive_floor_motion.jpg"
+  },
   benefits: [
-   { title: "First-Party Opt-In Data", desc: "Customers willingly exchange contact info for high scores, discounts, and prizes." },
-   { title: "Dramatically Higher Recall", desc: "Tactile and physical interaction yields dramatically higher brand recall than passive promotional signage." },
-   { title: "Real-Time Product Interest Metrics", desc: "Know exactly which products are picked up most frequently at every retail location." },
-   { title: "Commercial 24/7 Durability", desc: "Hardware is built for 5+ years of intense public usage without failure." }
+   {
+    title: "Participation Creates Memory",
+    desc: "Something people played holds attention longer than something they only watched."
+   },
+   {
+    title: "Games Bring Groups Together",
+    desc: "A shared challenge gives friends, families or colleagues a reason to interact with each other."
+   },
+   {
+    title: "A Brand Becomes an Activity",
+    desc: "Gamification turns a message into something people experience directly."
+   }
   ],
-  techStack: ["Capacitive Multi-Touch Screens", "RFID / NFC Reader Modules", "Cloud CMS & Telemetry", "Unity / WebGL Engines"],
+  techStack: ["Real-Time Optical Motion Tracking", "Multiplayer Physics Engine", "Custom Game CMS", "Ultra-Low Latency Sensors"],
 
-  projectsHeading: "Selected Engagement Deployments",
-  projectsIntro: "Discover our branded gamification activations around the world.",
+  // Section 08: Related Projects
+  projectsHeading: "Related Projects",
+  projectsIntro: "Discover our high-energy motion arenas, branded gamification kiosks, and active multiplayer spaces.",
   featuredProject: {
-   industry: "Retail",
-   title: "The Grand Cascade at Regional International Airport",
-   desc: "A monumental 14-meter-tall digital waterfall installation captivating millions of global passengers with hyper-realistic fluid dynamics and spatial acoustics.",
-   location: "Regional International Airport Terminal",
-   img: "/images/hospitality_ambient_atrium.jpg",
-   tech: ["RFID Product Triggers", "4K Video Wall", "Instant Mobile Checkout"],
+   industry: "Entertainment",
+   title: "Kinetic Active Multimedia Arena",
+   desc: "An active gaming arena where participants turn floors and walls into competitive sports fields without any controllers.",
+   location: "Urban Family Entertainment Center",
+   img: "/images/entertainment_motion_arena.jpg",
+   tech: ["Interactive Floor", "Optical Motion Tracking", "Laser Projection"],
    href: "/projects"
   },
   projects: [
-   { industry: "Expos", title: "Industrial Drone Racing Simulator", desc: "Captured 4,000+ B2B leads at an international aerospace expo.", img: "/images/cathedral_projection_mapping.jpg", href: "/projects" },
-   { industry: "Cosmetics", title: "Lift-and-Learn Skincare Bar", desc: "Lifting cosmetic bottles triggers customized skin tutorials.", img: "/images/cosmetics_smart_counter.jpg", href: "/projects" },
-   { industry: "Corporate", title: "Interactive ESG Sustainability Kiosk", desc: "Lobby touchscreen tracking real-time building solar generation.", img: "/images/biosphere_ocean_gallery.jpg", href: "/projects" },
-   { industry: "Public Space", title: "Airport Interactive Wayfinding Kiosks", desc: "Smart 3D directories guiding 50,000 travelers daily.", img: "/images/interactive_floor_motion.jpg", href: "/projects" }
+   {
+    industry: "Retail",
+    title: "Interactive Sneaker Customization Arena",
+    desc: "Gamified shopping experience tracking customer movement to personalize products.",
+    img: "/images/sneaker_customization_table.jpg",
+    href: "/projects"
+   },
+   {
+    industry: "Education",
+    title: "Interactive Active Learning Floor",
+    desc: "Students learn science, math and sports through dynamic collaborative jumping games.",
+    img: "/images/education_interactive_floor.jpg",
+    href: "/projects"
+   },
+   {
+    industry: "Corporate",
+    title: "Trade Show Motion Racing Challenge",
+    desc: "Attendees steer branded vehicles using body movement to compete on live leaderboards.",
+    img: "/images/interactive_strike_wall.jpg",
+    href: "/projects"
+   },
+   {
+    industry: "Healthcare",
+    title: "Pediatric Active Recovery Suite",
+    desc: "Therapy-focused interactive movement games motivating rehabilitation through play.",
+    img: "/images/healthcare_sensory_room.jpg",
+    href: "/projects"
+   }
   ],
 
-  faqsIntro: "Frequently asked questions regarding gamification design, RFID hardware, and POS integration.",
+  // Section 10: FAQ
+  faqsLabel: "COMMON QUESTIONS",
+  faqsIntro: "Frequently asked questions regarding interactive games, motion tracking, multiplayer setups, and custom gamification.",
   faqs: [
-   { q: "How do products trigger the screen when lifted?", a: "We embed miniature, passive RFID tags inside or beneath your physical products. A discreet sensor antenna hidden under the display shelf detects removal in under 100 milliseconds." },
-   { q: "Can you build custom branded games matching our guidelines?", a: "Yes. Our in-house game design studio builds bespoke 2D and 3D games tailored strictly to your brand aesthetic, gameplay mechanics, and campaign goals." },
-   { q: "How do users receive prizes or discounts?", a: "Upon winning or completing the game, users scan a dynamic QR code on screen that saves a digital discount voucher directly into their Apple Wallet or Google Wallet." },
-   { q: "Can the kiosk integrate with our e-commerce inventory?", a: "Yes. We regularly connect our systems with Shopify, Magento, Salesforce Commerce Cloud, and custom ERPs to show real-time stock levels." }
-  ]
+   {
+    q: "What is interactive engagement?",
+    a: "Interactive engagement covers games and activities that invite people to move, play or take part, usually on a floor, wall or similar surface."
+   },
+   {
+    q: "What is the difference between interactive engagement and interactive spaces?",
+    a: "Interactive spaces describes the physical surface, such as a floor or wall. Interactive engagement describes the game or activity running on that surface."
+   },
+   {
+    q: "Can games be branded for a specific campaign?",
+    a: "Yes, game content, visuals and scoring can be built around a brand, product or theme."
+   },
+   {
+    q: "How many people can play at once?",
+    a: "This depends on the surface size and the tracking setup, but several formats support group play."
+   },
+   {
+    q: "What affects the cost of an interactive game?",
+    a: "Cost depends on the surface size, the tracking method, the complexity of the game content and the length of the activation."
+   },
+   {
+    q: "Can the same setup run different games over time?",
+    a: "Game content can be swapped for new campaigns or seasons, depending on the system installed."
+   },
+   {
+    q: "How do we get started?",
+    a: "Share your space, your audience and the kind of activity you want people to play, and we will recommend a suitable format."
+   }
+  ],
+
+  // Section 11: Call to Action & Related
+  relatedSolutionsLabel: "EXPLORE MORE",
+  relatedSolutionsHeading: "Explore More Solutions",
+  ctaHeading: "Give People Something to Play, Not Just Watch",
+  ctaSubtitle: "Tell us about your space and the activity you want to create.",
+  ctaButtonText: "Discuss Your Project"
+ },
+ // Aliases for URL compatibility:
+ get "solution-engagement"() {
+  return this["interactive-engagement"];
  },
 
- // -------------------------------------------------------------------------
- // 15. BRAND GAMIFICATION (Dedicated Sub-Solution)
- // -------------------------------------------------------------------------
  "brand-gamification": {
   slug: "brand-gamification",
   solutionLabel: "Branded Digital Mini-Games",

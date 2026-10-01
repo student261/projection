@@ -58,7 +58,7 @@ export default function HowWeWork() {
       <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-8 sm:pb-10 lg:pb-12">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-6 sm:mb-8 space-y-2 flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0">
+        <div className="max-w-4xl xl:max-w-5xl mb-6 sm:mb-8 space-y-2 flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0">
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export default function HowWeWork() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-black text-black tracking-tight leading-[1.1] text-[clamp(1.75rem,4vw,3rem)]"
+            className="font-black text-black tracking-tight leading-[1.1] text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] xl:text-[2.75rem] lg:whitespace-nowrap"
           >
             From Idea to Interactive Experience
           </motion.h2>

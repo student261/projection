@@ -41,7 +41,7 @@ const categories = [
     title: "Interactive Engagement",
     desc: "Use interactive games, motion based experiences and digital installations to encourage participation.",
     icon: <Gamepad2 className="w-6 h-6" />,
-    href: "/solutions/solution-engagement",
+    href: "/solutions/interactive-engagement",
     img: "/images/entertainment_motion_arena.jpg",
     video: "/smart-engagement.mp4",
     cta: "Explore Interactive Engagement",
@@ -107,14 +107,14 @@ const solutions = [
     ],
   },
   {
-    id: "smart-engagement",
+    id: "interactive-engagement",
     num: "04",
-    subtitle: "SMART ENGAGEMENT",
-    title: "Smart Engagement",
+    subtitle: "INTERACTIVE ENGAGEMENT",
+    title: "Interactive Engagement",
     description:
-      "Give visitors more ways to interact with your brand, space or content through digital experiences.",
+      "Turn a floor, wall or booth into a motion game or group activity that gets people playing and taking part.",
     img: "/images/interactive_strike_wall.jpg",
-    href: "/solutions/solution-engagement",
+    href: "/solutions/interactive-engagement",
     cta: "Explore Interactive Engagement",
     highlights: [
       "Motion based games and interactions",
@@ -439,14 +439,14 @@ export default function SolutionsOverview() {
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Header */}
-          <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-14 space-y-2">
+          <div className="max-w-4xl xl:max-w-5xl mb-8 sm:mb-12 lg:mb-14 space-y-2">
             <div className="flex items-center gap-2 mb-2">
               <Sparkles className="w-3.5 h-3.5 text-white/70" />
               <span className="text-[10px] sm:text-xs font-mono font-semibold tracking-[0.2em] text-white/50 uppercase">
                 CORE CAPABILITIES
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1]">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-5xl font-black text-white tracking-tight leading-[1.1] lg:whitespace-nowrap">
               What We Can Create for Your Space
             </h2>
           </div>

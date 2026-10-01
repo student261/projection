@@ -151,8 +151,8 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            {/* 1. SOLUTIONS MEGAMENU */}
-            <div className="group py-2 static" onMouseLeave={() => setSolPreview(DEFAULT_SOLUTION_PREVIEW)}>
+            {/* 1. SOLUTIONS FLOATING COMPACT DROPDOWN */}
+            <div className="relative group py-2" onMouseLeave={() => setSolPreview(DEFAULT_SOLUTION_PREVIEW)}>
               <Link
                 href="/solutions"
                 className={`flex items-center gap-1.5 text-[13px] font-medium transition-colors duration-200 py-1 ${
@@ -165,186 +165,116 @@ export default function Navbar() {
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180 ${isDarkHero ? 'text-white/70' : 'text-[var(--text-secondary)]'}`} />
               </Link>
 
-              {/* Solutions Full-bleed MegaMenu Tray */}
-              <div className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-black/10 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
-                <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                  <div className="grid grid-cols-12 gap-6 xl:gap-12">
-                    <div className="col-span-7 grid grid-cols-2 gap-3">
+              {/* Solutions Floating Compact Card (No wasted screen-wide space) */}
+              <div className="absolute top-[calc(100%-8px)] left-0 pt-4 z-50 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 ease-out">
+                <div className="w-[660px] rounded-2xl p-4 shadow-2xl border border-black/10 bg-white grid grid-cols-12 gap-4 relative">
+                  <div className="absolute -top-2 left-8 w-4 h-4 bg-white border-l border-t border-black/10 rotate-45 rounded-tl-sm z-[-1]" />
+                  
+                  {/* Left Column: 4 items in ONE vertical line */}
+                  <div className="col-span-7 flex flex-col justify-between space-y-1">
 
-                    {/* Interactive Projection */}
+                    {/* 1. Interactive Projection */}
                     <Link
                       href="/solutions/interactive-projection"
                       onMouseEnter={() => setSolPreview({ badge: "INTERACTIVE PROJECTION", title: "Motion-Responsive Floors & Walls", desc: "Responsive floor and wall projection that reacts to every footstep in real time.", href: "/solutions/interactive-projection", img: "/images/interactive_floor_motion.jpg" })}
-                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
+                      className="flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
                     >
                       <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
                         <Layers className="w-4 h-4" />
                       </div>
-                      <div>
-                        <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>Interactive Projection</span>
-                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-bold text-black flex items-center justify-between">
+                          <span className="truncate">Interactive Projection</span>
+                          <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-black shrink-0" />
                         </div>
-                        <div className="text-[11px] text-gray-500 font-light leading-snug">Floors, walls & surfaces</div>
+                        <div className="text-[11px] text-gray-500 font-light truncate leading-snug">Floors, walls & surfaces</div>
                       </div>
                     </Link>
 
-                    {/* Immersive Environment */}
+                    {/* 2. Immersive Environments */}
                     <Link
                       href="/solutions/immersive-environment"
                       onMouseEnter={() => setSolPreview({ badge: "IMMERSIVE ROOMS", title: "360° Projection Environments", desc: "Full-room seamless projection mapping for galleries, lobbies, and event spaces.", href: "/solutions/immersive-environment", img: "/images/biosphere_ocean_gallery.jpg" })}
-                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
+                      className="flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
                     >
                       <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
                         <Expand className="w-4 h-4" />
                       </div>
-                      <div>
-                        <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>Immersive Environments</span>
-                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-bold text-black flex items-center justify-between">
+                          <span className="truncate">Immersive Environments</span>
+                          <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-black shrink-0" />
                         </div>
-                        <div className="text-[11px] text-gray-500 font-light leading-snug">360° rooms & projection mapping</div>
+                        <div className="text-[11px] text-gray-500 font-light truncate leading-snug">360° rooms & projection mapping</div>
                       </div>
                     </Link>
 
-                    {/* AI Experience */}
+                    {/* 3. AI Experiences */}
                     <Link
                       href="/solutions/ai-experience"
                       onMouseEnter={() => setSolPreview({ badge: "AI EXPERIENCES", title: "Generative AI Avatars & Vision", desc: "Computer vision systems and generative AI avatars that respond to visitor presence.", href: "/solutions/ai-experience", img: "/images/ai_receptionist_concierge.jpg" })}
-                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
+                      className="flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
                     >
                       <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
                         <Brain className="w-4 h-4" />
                       </div>
-                      <div>
-                        <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>AI Experiences</span>
-                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-bold text-black flex items-center justify-between">
+                          <span className="truncate">AI Experiences</span>
+                          <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-black shrink-0" />
                         </div>
-                        <div className="text-[11px] text-gray-500 font-light leading-snug">Computer vision & AI avatars</div>
+                        <div className="text-[11px] text-gray-500 font-light truncate leading-snug">Computer vision & AI avatars</div>
                       </div>
                     </Link>
 
-                    {/* Smart Engagement */}
+                    {/* 4. Interactive Engagement */}
                     <Link
-                      href="/solutions/solution-engagement"
-                      onMouseEnter={() => setSolPreview({ badge: "SMART ENGAGEMENT", title: "Kiosks & Motion Games", desc: "Interactive kiosks, gamified activations, and cloud-managed engagement hubs.", href: "/solutions/solution-engagement", img: "/images/interactive_strike_wall.jpg" })}
-                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
+                      href="/solutions/interactive-engagement"
+                      onMouseEnter={() => setSolPreview({ badge: "INTERACTIVE ENGAGEMENT", title: "Motion Games & Gamification", desc: "Turn a floor, wall or booth into a motion game or group activity.", href: "/solutions/interactive-engagement", img: "/images/entertainment_motion_arena.jpg" })}
+                      className="flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
                     >
                       <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
                         <Gamepad2 className="w-4 h-4" />
                       </div>
-                      <div>
-                        <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>Smart Engagement</span>
-                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-bold text-black flex items-center justify-between">
+                          <span className="truncate">Interactive Engagement</span>
+                          <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-black shrink-0" />
                         </div>
-                        <div className="text-[11px] text-gray-500 font-light leading-snug">Kiosks, games & analytics</div>
+                        <div className="text-[11px] text-gray-500 font-light truncate leading-snug">Motion games & gamification</div>
                       </div>
                     </Link>
 
-                    {/* Interactive Floor */}
-                    <Link
-                      href="/solutions/interactive-floor"
-                      onMouseEnter={() => setSolPreview({ badge: "INTERACTIVE FLOOR", title: "Motion-Tracked Floor Projection", desc: "Responsive floor surfaces that track footsteps with real-time visual and audio feedback.", href: "/solutions/interactive-floor", img: "/images/education_interactive_floor.jpg" })}
-                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
-                        <Footprints className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>Interactive Floor</span>
-                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
-                        </div>
-                        <div className="text-[11px] text-gray-500 font-light leading-snug">Footstep-reactive projection surfaces</div>
-                      </div>
-                    </Link>
-
-                    {/* Projection Mapping */}
-                    <Link
-                      href="/solutions/projection-mapping"
-                      onMouseEnter={() => setSolPreview({ badge: "PROJECTION MAPPING", title: "Architectural Surface Mapping", desc: "Large-scale laser and digital mapping over buildings, vaults, and landmark structures.", href: "/solutions/projection-mapping", img: "/images/cathedral_projection_mapping.jpg" })}
-                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
-                        <Projector className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>Projection Mapping</span>
-                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
-                        </div>
-                        <div className="text-[11px] text-gray-500 font-light leading-snug">Landmark & architectural mapping</div>
-                      </div>
-                    </Link>
-
-                    {/* Brand Gamification */}
-                    <Link
-                      href="/solutions/brand-gamification"
-                      onMouseEnter={() => setSolPreview({ badge: "BRAND GAMIFICATION", title: "Gamified Brand Activations", desc: "Leaderboard games and branded motion challenges that drive audience dwell time.", href: "/solutions/brand-gamification", img: "/images/entertainment_motion_arena.jpg" })}
-                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
-                        <Trophy className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>Brand Gamification</span>
-                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
-                        </div>
-                        <div className="text-[11px] text-gray-500 font-light leading-snug">Games, leaderboards & activations</div>
-                      </div>
-                    </Link>
-
-                    {/* AI Avatar */}
-                    <Link
-                      href="/solutions/ai-avatar-photobooth"
-                      onMouseEnter={() => setSolPreview({ badge: "AI AVATAR", title: "AI Photobooth & Concierge", desc: "Generative AI portrait experiences and intelligent digital concierge avatars.", href: "/solutions/ai-avatar-photobooth", img: "/images/projection_cityscape_model.jpg" })}
-                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
-                        <Camera className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-bold text-black flex items-center gap-1">
-                          <span>AI Photobooth & Avatars</span>
-                          <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
-                        </div>
-                        <div className="text-[11px] text-gray-500 font-light leading-snug">Generative portrait & concierge AI</div>
-                      </div>
-                    </Link>
-
-                    </div>
-
-                    {/* Dynamic Solution Preview Card */}
-                    <Link
-                      href={solPreview.href}
-                      className="col-span-5 rounded-2xl p-5 bg-black text-white flex flex-col justify-between relative overflow-hidden group/card transition-all duration-300 border border-white/10 shadow-2xl cursor-pointer"
-                    >
-                      <div className="w-full h-44 rounded-xl overflow-hidden relative border border-white/15 shrink-0 bg-gray-900">
-                        <SafeImage
-                          src={solPreview.img}
-                          alt={solPreview.title}
-                          className="w-full h-full object-cover brightness-105 group-hover/card:scale-105 transition-transform duration-700"
-                          containerClassName="w-full h-full"
-                        />
-                      </div>
-                      <div className="pt-3 space-y-1.5 flex-1 flex flex-col justify-between">
-                        <div>
-                          <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/50 font-semibold block mb-1">
-                            {solPreview.badge}
-                          </span>
-                          <h4 className="text-base font-black text-white tracking-tight">{solPreview.title}</h4>
-                          <p className="text-xs text-white/75 font-light leading-relaxed line-clamp-2 mt-1">{solPreview.desc}</p>
-                        </div>
-                        <div className="pt-2 inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover/card:text-white/80 transition-colors">
-                          <span>Explore Solution</span>
-                          <ArrowRight className="w-3.5 h-3.5 group-hover/card:translate-x-1 transition-transform" />
-                        </div>
-                      </div>
-                    </Link>
                   </div>
+
+                  {/* Right Column: Dynamic Solution Preview Card */}
+                  <Link
+                    href={solPreview.href}
+                    className="col-span-5 rounded-xl p-3 bg-black text-white flex flex-col justify-between relative overflow-hidden group/card transition-all duration-300 border border-white/10 shadow-xl cursor-pointer"
+                  >
+                    <div className="w-full h-32 rounded-lg overflow-hidden relative border border-white/15 shrink-0 bg-gray-900">
+                      <SafeImage
+                        src={solPreview.img}
+                        alt={solPreview.title}
+                        className="w-full h-full object-cover brightness-105 group-hover/card:scale-105 transition-transform duration-700"
+                        containerClassName="w-full h-full"
+                      />
+                    </div>
+                    <div className="pt-2.5 space-y-1 flex-1 flex flex-col justify-between">
+                      <div>
+                        <span className="text-[8px] font-mono uppercase tracking-[0.2em] text-white/50 font-semibold block mb-0.5">
+                          {solPreview.badge}
+                        </span>
+                        <h4 className="text-sm font-black text-white tracking-tight leading-tight line-clamp-1">{solPreview.title}</h4>
+                        <p className="text-[11px] text-white/75 font-light leading-snug line-clamp-2 mt-0.5">{solPreview.desc}</p>
+                      </div>
+                      <div className="pt-1.5 inline-flex items-center gap-1.5 text-[11px] font-bold text-white group-hover/card:text-white/80 transition-colors">
+                        <span>Explore Solution</span>
+                        <ArrowRight className="w-3 h-3 group-hover/card:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Link>
+
                 </div>
               </div>
             </div>
@@ -679,54 +609,66 @@ export default function Navbar() {
                 <span>Solutions</span>
                 <ChevronDown className="w-5 h-5 transition-transform duration-300 group-open:rotate-180 text-black/50 group-hover:text-black" />
               </summary>
-              <div className="pb-6 space-y-6">
-                <div>
-                  <Link href="/solutions/interactive-projection" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
-                    <Sparkles className="w-4 h-4 text-black" />
-                    Interactive Projection
-                  </Link>
-                  <div className="pl-6 space-y-2.5 mt-1">
-                    <Link href="/solutions/interactive-floor" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Interactive Floor</Link>
-                    <Link href="/solutions/interactive-wall" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Interactive Wall</Link>
-                    <Link href="/solutions/interactive-ceiling" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Interactive Ceiling</Link>
-                    <Link href="/solutions/interactive-window" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Interactive Window</Link>
-                    <Link href="/solutions/interactive-mirror-table" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Interactive Mirror / Table</Link>
+              <div className="pb-6 space-y-2 mt-2">
+                <Link
+                  href="/solutions/interactive-projection"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-neutral-100 transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <Layers className="w-4 h-4 text-black" />
+                    <div>
+                      <div className="text-sm font-bold text-black">Interactive Projection</div>
+                      <div className="text-[11px] text-gray-500 font-light">Floors, walls & surfaces</div>
+                    </div>
                   </div>
-                </div>
+                  <ArrowRight className="w-4 h-4 text-black/40" />
+                </Link>
 
-                <div>
-                  <Link href="/solutions/immersive-environment" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
-                    <Projector className="w-4 h-4 text-black" />
-                    Immersive Environment
-                  </Link>
-                  <div className="pl-6 space-y-2.5 mt-1">
-                    <Link href="/solutions/projection-mapping" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Projection Mapping</Link>
-                    <Link href="/solutions/immersive-room" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">360° Immersive Room</Link>
-                    <Link href="/solutions/led-tunnel" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">LED Tunnel</Link>
-                    <Link href="/solutions/holographic-display" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Holographic Display</Link>
+                <Link
+                  href="/solutions/immersive-environment"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-neutral-100 transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <Expand className="w-4 h-4 text-black" />
+                    <div>
+                      <div className="text-sm font-bold text-black">Immersive Environments</div>
+                      <div className="text-[11px] text-gray-500 font-light">360° rooms & projection mapping</div>
+                    </div>
                   </div>
-                </div>
+                  <ArrowRight className="w-4 h-4 text-black/40" />
+                </Link>
 
-                <div>
-                  <Link href="/solutions/ai-experience" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
+                <Link
+                  href="/solutions/ai-experience"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-neutral-100 transition-colors"
+                >
+                  <div className="flex items-center gap-3">
                     <Brain className="w-4 h-4 text-black" />
-                    AI Experience
-                  </Link>
-                  <div className="pl-6 space-y-2.5 mt-1">
-                    <Link href="/solutions/ai-avatar-photobooth" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">AI Avatar / Photo Booth</Link>
+                    <div>
+                      <div className="text-sm font-bold text-black">AI Experiences</div>
+                      <div className="text-[11px] text-gray-500 font-light">Computer vision & AI avatars</div>
+                    </div>
                   </div>
-                </div>
+                  <ArrowRight className="w-4 h-4 text-black/40" />
+                </Link>
 
-                <div>
-                  <Link href="/solutions/solution-engagement" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-black py-2 text-sm">
+                <Link
+                  href="/solutions/interactive-engagement"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-neutral-100 transition-colors"
+                >
+                  <div className="flex items-center gap-3">
                     <Gamepad2 className="w-4 h-4 text-black" />
-                    Solution Engagement
-                  </Link>
-                  <div className="pl-6 space-y-2.5 mt-1">
-                    <Link href="/solutions/brand-gamification" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Brand Gamification</Link>
-                    <Link href="/solutions/motion-games" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-sm text-gray-600 hover:text-black transition-colors">Motion Games</Link>
+                    <div>
+                      <div className="text-sm font-bold text-black">Interactive Engagement</div>
+                      <div className="text-[11px] text-gray-500 font-light">Motion games & gamification</div>
+                    </div>
                   </div>
-                </div>
+                  <ArrowRight className="w-4 h-4 text-black/40" />
+                </Link>
               </div>
             </details>
 
