@@ -13,6 +13,7 @@ export default function CustomCursor() {
 
   const mousePos = useRef({ x: -100, y: -100 });
   const ringPos = useRef({ x: -100, y: -100 });
+  const isVisibleRef = useRef(false);
   const rafId = useRef<number | null>(null);
 
   useEffect(() => {
@@ -48,6 +49,7 @@ export default function CustomCursor() {
     const handlePointerMove = (e: PointerEvent) => {
       // If the interaction originates from touch or stylus, suppress immediately
       if (e.pointerType === "touch" || e.pointerType === "pen") {
+        isVisibleRef.current = false;
         setIsVisible(false);
         setIsTouchDevice(true);
         return;
@@ -56,10 +58,11 @@ export default function CustomCursor() {
       mousePos.current.x = e.clientX;
       mousePos.current.y = e.clientY;
 
-      if (!isVisible) {
+      if (!isVisibleRef.current) {
         // Snap ring immediately on initial entry so it never flies in from (0,0)
         ringPos.current.x = e.clientX;
         ringPos.current.y = e.clientY;
+        isVisibleRef.current = true;
         setIsVisible(true);
       }
 
@@ -80,6 +83,7 @@ export default function CustomCursor() {
 
     const handlePointerDown = (e: PointerEvent) => {
       if (e.pointerType === "touch" || e.pointerType === "pen") {
+        isVisibleRef.current = false;
         setIsVisible(false);
         setIsTouchDevice(true);
         return;
@@ -93,6 +97,7 @@ export default function CustomCursor() {
 
     const handleMouseLeave = () => {
       // Cursor left the browser window or hovered over browser UI: hide immediately to prevent sticking
+      isVisibleRef.current = false;
       setIsVisible(false);
     };
 
@@ -101,6 +106,7 @@ export default function CustomCursor() {
       mousePos.current.y = e.clientY;
       ringPos.current.x = e.clientX;
       ringPos.current.y = e.clientY;
+      isVisibleRef.current = true;
       setIsVisible(true);
     };
 
@@ -121,7 +127,7 @@ export default function CustomCursor() {
       document.documentElement.removeEventListener("mouseleave", handleMouseLeave);
       document.documentElement.removeEventListener("mouseenter", handleMouseEnter);
     };
-  }, [isVisible]);
+  }, []);
 
   // NEVER render on mobile, tablet, or touch devices
   if (isTouchDevice) return null;

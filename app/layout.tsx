@@ -25,6 +25,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://projection.com"),
   title: "PROJECTION | Motion Interactive Projection & Spatial AI Experiences",
   description: "Transform physical spaces into interactive digital environments. Motion tracking, projection mapping, 360 rooms, and AI experiences.",
 };

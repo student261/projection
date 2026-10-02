@@ -32,17 +32,25 @@ export interface IndustryCTA {
   img?: string;
 }
 
+export interface IndustryHowItWorksStep { num: string; title: string; desc: string; }
+export interface IndustryUseCase { title: string; desc: string; href: string; cta: string; }
+export interface IndustryWhyChooseItem { title: string; desc: string; }
+
 export interface IndustryData {
   slug: string;
   icon: any; // Using any for icon import ease
   hero: { eyebrow: string; title: string; subtitle: string; img: string; };
-  challenges: { title: string; intro: string; items: IndustryChallenge[]; transition: string; };
-  vision: { title: string; intro: string; statement: string; pillars: IndustryVisionPillar[]; transition: string; quote: string; img?: string; };
-  solutions: { title: string; intro: string; items: IndustrySolution[]; bottomStatement: string; };
+  challenges: { title: string; intro?: string; items: IndustryChallenge[]; transition?: string; };
+  vision: { title: string; intro: string; statement?: string; pillars?: IndustryVisionPillar[]; transition?: string; quote: string; img?: string; };
+  solutions: { title: string; intro?: string; items: IndustrySolution[]; bottomStatement?: string; };
   experiences: { title: string; intro: string; items: IndustryExperience[]; };
-  benefits: { title: string; intro: string; items: IndustryBenefit[]; bottomStatement: string; };
-  technology: { title: string; intro: string; items: IndustryTech[]; bottomStatement: string; };
-  faqs: { title: string; intro: string; items: IndustryFAQ[]; };
+  benefits: { title: string; intro?: string; items: IndustryBenefit[]; bottomStatement?: string; };
+  technology: { title: string; intro?: string; items: IndustryTech[]; bottomStatement?: string; };
+  faqs: { title: string; intro?: string; items: IndustryFAQ[]; };
   caseStudies?: IndustryCaseStudy[];
   cta?: IndustryCTA;
+  howItWorks?: { label: string; title: string; steps: IndustryHowItWorksStep[]; };
+  useCases?: { label: string; title: string; intro: string; items: IndustryUseCase[]; };
+  whyChooseUs?: { label: string; title: string; items: IndustryWhyChooseItem[]; };
 }
+

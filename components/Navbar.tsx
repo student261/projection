@@ -166,9 +166,9 @@ export default function Navbar() {
               </Link>
 
               {/* Solutions Floating Compact Card (No wasted screen-wide space) */}
-              <div className="absolute top-[calc(100%-8px)] left-0 pt-4 z-50 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 ease-out">
+              <div className="absolute top-[calc(100%-8px)] -left-6 pt-4 z-50 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 ease-out">
                 <div className="w-[660px] rounded-2xl p-4 shadow-2xl border border-black/10 bg-white grid grid-cols-12 gap-4 relative">
-                  <div className="absolute -top-2 left-8 w-4 h-4 bg-white border-l border-t border-black/10 rotate-45 rounded-tl-sm z-[-1]" />
+                  <div className="absolute -top-2 left-14 w-4 h-4 bg-white border-l border-t border-black/10 rotate-45 rounded-tl-sm z-10" />
                   
                   {/* Left Column: 4 items in ONE vertical line */}
                   <div className="col-span-7 flex flex-col justify-between space-y-1">
@@ -301,8 +301,8 @@ export default function Navbar() {
 
                     {/* 1. Retail */}
                     <Link
-                      href="/industries/retail-showrooms"
-                      onMouseEnter={() => setIndPreview({ badge: "RETAIL & SHOWROOMS", title: "Storefront Activations", desc: "Interactive window projections & touchless product showcases boosting store foot-traffic.", href: "/industries/retail-showrooms", img: "/images/retail_interactive_showcase.jpg" })}
+                      href="/industries/retail"
+                      onMouseEnter={() => setIndPreview({ badge: "RETAIL & SHOWROOMS", title: "Storefront Activations", desc: "Interactive window projections & touchless product showcases boosting store foot-traffic.", href: "/industries/retail", img: "/images/retail_interactive_showcase.jpg" })}
                       className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 transition-all duration-200 group/item"
                     >
                       <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-black shrink-0 group-hover/item:bg-black group-hover/item:text-white transition-all">
@@ -678,7 +678,7 @@ export default function Navbar() {
                 <ChevronDown className="w-5 h-5 transition-transform duration-300 group-open:rotate-180 text-black/50 group-hover:text-black" />
               </summary>
               <div className="pb-6 space-y-1 mt-2">
-                <Link href="/industries/retail-showrooms" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 py-3 text-sm text-gray-700 hover:text-black font-medium transition-colors">
+                <Link href="/industries/retail" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 py-3 text-sm text-gray-700 hover:text-black font-medium transition-colors">
                   <ShoppingBag className="w-4 h-4 opacity-50" />
                   Retail & Showrooms
                 </Link>

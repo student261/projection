@@ -111,7 +111,7 @@ export const corporate: IndustryData = {
       secondaryMetric: "Complete",
       secondaryMetricLabel: "Local Edge Privacy",
       desc: "A real-time generative AI mirror chamber reacting to visitor movement and voice gestures with dynamic digital avatars and responsive spatial visualizations.",
-      quote: "Executive visitors were stunned by the responsiveness of the generative reflections — it instantly communicated our technological superiority.",
+      quote: "Executive visitors were stunned by the responsiveness of the generative reflections - it instantly communicated our technological superiority.",
       img: "/images/ai_receptionist_concierge.jpg",
       slug: "generative-ai-mirror-room"
     },
@@ -139,7 +139,7 @@ export const corporate: IndustryData = {
       secondaryMetric: "Sub-Second",
       secondaryMetricLabel: "Response Time",
       desc: "Real-time conversational AI avatar embedded into architectural smart mirrors for touchless visitor registration, host alerts, and intuitive building wayfinding.",
-      quote: "Clients love the sleek concierge greeting — it streamlines check-in while setting a high-tech tone for every meeting.",
+      quote: "Clients love the sleek concierge greeting - it streamlines check-in while setting a high-tech tone for every meeting.",
       img: "/images/industry_corporate_hero.jpg",
       slug: "ai-receptionist-avatar"
     }

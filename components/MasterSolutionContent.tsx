@@ -32,7 +32,7 @@ import {
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import HugeCTA from "@/components/ui/HugeCTA";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export interface SolutionFullData {
   slug: string;
@@ -343,6 +343,72 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
       </div>
     </section>
   );
+
+
+function SolutionVideo({
+  src,
+  poster,
+  alt
+}: {
+  src?: string;
+  poster?: string;
+  alt: string;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || !src) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!videoRef.current) return;
+        if (entry.isIntersecting) {
+          videoRef.current.play().catch(() => {});
+        } else {
+          videoRef.current.pause();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [src]);
+
+  if (!src) {
+    return (
+      <SafeImage
+        src={poster}
+        alt={alt}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+        containerClassName="w-full h-full"
+      />
+    );
+  }
+
+  const posterSrc = poster
+    ? (poster.endsWith(".webp") ? poster : poster.replace(/\.(png|jpg|jpeg)$/, ".webp"))
+    : undefined;
+
+  return (
+    <div ref={containerRef} className="w-full h-full">
+      <video
+        ref={videoRef}
+        src={src}
+        poster={posterSrc}
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls
+        preload="metadata"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  );
+}
 
 function StickySurfaceFormats({
   data,
@@ -669,21 +735,11 @@ function StickySurfaceFormats({
             className={`relative w-full lg:col-span-5 ${isFlippedLayout ? "lg:order-2" : "lg:order-1"}`}
           >
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-black/10 bg-slate-950 group">
-              {data.videoUrl ? (
-                <video
-                  src={data.videoUrl}
-                  poster={data.whatIsVideoPlaceholder ? (data.whatIsVideoPlaceholder.endsWith('.webp') ? data.whatIsVideoPlaceholder : data.whatIsVideoPlaceholder.replace(/\.(png|jpg|jpeg)$/, '.webp')) : undefined}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  controls
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <SafeImage src={data.whatIsVideoPlaceholder} alt={data.whatIsHeading || "Solution Preview"} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" containerClassName="w-full h-full" />
-              )}
+              <SolutionVideo
+                src={data.videoUrl}
+                poster={data.whatIsVideoPlaceholder}
+                alt={data.whatIsHeading || "Solution Preview"}
+              />
             </div>
           </motion.div>
 
@@ -1601,11 +1657,35 @@ function StickySurfaceFormats({
   // Section: Call To Action
   const ctaSection = (
     <HugeCTA
-      title={data.ctaHeading || (
-        <>
-          Ready to bring your <br className="hidden sm:block" /> interactive vision to life?
-        </>
-      )}
+      title={
+        data.ctaHeading === "Turn a Surface Into Part of the Experience" ? (
+          <>
+            <span className="block">Turn a Surface Into</span>
+            <span className="block">Part of the Experience</span>
+          </>
+        ) : data.ctaHeading === "Build a Room People Want to Walk Into" ? (
+          <>
+            <span className="block">Build a Room</span>
+            <span className="block">People Want to Walk Into</span>
+          </>
+        ) : data.ctaHeading === "Give Your Event an AI Experience Worth Talking About" ? (
+          <>
+            <span className="block">Give Your Event an AI Experience</span>
+            <span className="block">Worth Talking About</span>
+          </>
+        ) : data.ctaHeading === "Give People Something to Play, Not Just Watch" ? (
+          <>
+            <span className="block">Give People Something</span>
+            <span className="block">to Play, Not Just Watch</span>
+          </>
+        ) : data.ctaHeading ? (
+          data.ctaHeading
+        ) : (
+          <>
+            Ready to bring your <br className="hidden sm:block" /> interactive vision to life?
+          </>
+        )
+      }
       subtitle={data.ctaSubtitle || "Tell us about your space, audience, and goals. Our engineering and creative teams will craft a tailored technical proposal for your project."}
       primaryBtnText={data.ctaButtonText || "Start Your Project"}
     />

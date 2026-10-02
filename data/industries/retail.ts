@@ -2,155 +2,136 @@ import { ShoppingBag } from 'lucide-react';
 import { IndustryData } from './types';
 
 export const retail: IndustryData = {
-  slug: "retail-showrooms",
+  slug: "retail",
   icon: ShoppingBag,
   hero: {
-    eyebrow: "RETAIL & SHOWROOM INNOVATION",
-    title: "Interactive Showrooms That Turn Browsing into High-Value Conversion",
-    subtitle: "Transform storefronts, flagship environments, and luxury showrooms into kinetic destinations with motion-reactive display architecture.",
+    eyebrow: "RETAIL",
+    title: "Give Shoppers a Reason to Stop and Stay",
+    subtitle: "Turn windows, floors and showrooms into spaces people interact with, not just walk past.",
     img: "/images/industry_retail_hero.jpg",
   },
   challenges: {
     title: "The Challenge in Modern Retail",
-    intro: "Brick-and-mortar retail faces unprecedented competition from e-commerce. To drive foot traffic and sales, physical stores must offer experiences that cannot be replicated online.",
     items: [
-      { title: "Declining Foot Traffic", desc: "Standard window displays no longer capture the attention of modern, distracted consumers." },
-      { title: "Short Dwell Times", desc: "Shoppers move through stores quickly without engaging deeply with brand narratives." },
-      { title: "E-commerce Competition", desc: "Physical stores struggle to match the dynamic, personalized nature of online shopping." },
-      { title: "Static Merchandising", desc: "Traditional printed displays are expensive to update and offer zero interactive value." },
-      { title: "Lack of Analytics", desc: "Physical retail often lacks the deep engagement metrics available to digital marketers." },
-      { title: "Brand Differentiation", desc: "Standing out in crowded malls and high streets requires bold, memorable experiences." }
+      { title: "Declining Foot Traffic", desc: "Static windows and displays don't hold attention the way they used to." },
+      { title: "Short Dwell Times", desc: "Shoppers move through stores quickly, with limited time spent engaging with any one brand." },
+      { title: "E-commerce Competition", desc: "Physical stores struggle to match the convenience and personalization of online shopping." },
+      { title: "Static Merchandising", desc: "Traditional displays rarely update or invite any kind of interaction." },
+      { title: "Lack of Analytics", desc: "Physical retail often has little visibility into how people actually move through and engage with a space." },
+      { title: "Brand Differentiation", desc: "Standing out in a crowded retail environment, mall or high street is harder than ever." }
     ],
-    transition: "To thrive, retail environments must evolve from transactional spaces into immersive, interactive brand destinations."
   },
   vision: {
     title: "Our Vision for Retail",
-    intro: "We believe the future of retail is experiential. By merging digital interactivity with physical spaces, we help brands create immersive environments that stop shoppers in their tracks.",
-    statement: "Every flagship store should offer an unforgettable, interactive journey that deepens brand loyalty and drives conversion.",
-    pillars: [
-      { title: "🌟 Captivate Passersby", desc: "Use motion-reactive window displays to instantly grab attention and increase store entry rates." },
-      { title: "🤝 Deepen Engagement", desc: "Keep customers in-store longer with interactive product discovery and gamified activations." },
-      { title: "🚀 Dynamic Storytelling", desc: "Update campaigns instantly across global locations without printing a single poster." },
-      { title: "🌍 Measure Impact", desc: "Gain real-time insights into foot traffic, dwell time, and interaction rates." }
-    ],
-    transition: "We deliver this vision through scalable interactive installations tailored for global retail brands.",
-    quote: "\"The most successful retail spaces are no longer just stores; they are interactive brand experiences.\"",
+    intro: "A store should give people a reason to stop, not just pass through. We build spaces that respond to movement and touch, turning a storefront, floor or showroom into something shoppers want to explore rather than walk past.",
+    quote: "A store works best when it gives people something to do, not just something to look at.",
     img: "/images/retail_interactive_showcase.jpg"
   },
   solutions: {
-    title: "Interactive Retail Solutions",
-    intro: "From the storefront to the fitting room, our interactive solutions are designed to engage customers at every touchpoint of their shopping journey.",
+    title: "Interactive Solutions for Retail",
+    intro: "All four solutions have verified real-world retail deployments. All four appear on this page.",
     items: [
-      { title: "Interactive Shop Windows", desc: "Glass storefronts that respond to the movement of pedestrians outside, pulling them into the brand narrative." },
-      { title: "Lift-and-Learn Displays", desc: "Smart shelving that triggers detailed product information and dynamic visuals when a customer picks up an item." },
-      { title: "Immersive Fitting Rooms", desc: "Interactive mirrors and projection mapping that allow customers to change lighting and request different sizes seamlessly." },
-      { title: "Gamified Floor Activations", desc: "Motion-responsive floors for seasonal campaigns that encourage play and social media sharing." },
-      { title: "Architectural Projection Mapping", desc: "Transform the interior architecture of flagship stores with breathtaking, dynamic brand visuals." },
-      { title: "Interactive Product Catalogs", desc: "Large-scale touch walls where customers can explore the entire digital inventory in a highly visual way." }
+      { title: "Interactive Spaces", desc: "Turn shop windows, floors and fitting room surfaces into displays that respond to movement and touch." },
+      { title: "Immersive Environments", desc: "Projection mapping and large format LED displays for flagship launches, storefronts and product reveals." },
+      { title: "AI Experiences", desc: "AI avatars or AI photo experiences at the entrance, counter or fitting room." },
+      { title: "Interactive Engagement", desc: "Motion games and brand gamification that give shoppers a reason to stop at the door." }
     ],
-    bottomStatement: "Every solution is integrated seamlessly into your store architecture to enhance, not distract from, your products."
   },
   experiences: {
-    title: "Featured Brand Activations",
-    intro: "Explore how leading global brands are using interactive spatial technology to redefine the in-store experience.",
+    title: "How Retailers Use These Solutions",
+    intro: "This industry connects to two of our use cases:",
     items: [
-      { title: "Flagship Storefront Window", desc: "A motion-reactive digital display that increases foot traffic by engaging pedestrians as they walk past.", tags: ["Interactive Window", "Computer Vision"], img: "/images/industry_retail_hero.jpg", href: "/projects/flagship-store-activation" },
-      { title: "Sneaker Customization Zone", desc: "An interactive projection mapping table where customers can design and preview custom sneakers in real-time.", tags: ["Projection Mapping", "Touch Integration"], img: "/images/sneaker_customization_table.jpg", href: "/projects/neo-tokyo-retail-popup" },
-      { title: "Luxury Fashion Pop-Up", desc: "A fully immersive 360-degree projection room detailing the heritage and craftsmanship of the brand.", tags: ["360 Projection", "Spatial Audio"], img: "/images/cathedral_projection_mapping.jpg", href: "/projects/neo-shinjuku-interactive-wall" },
-      { title: "Interactive Cosmetics Counter", desc: "Lift-and-learn technology that instantly displays tutorials and ingredients when a product is picked up.", tags: ["RFID Sensors", "Smart Displays"], img: "/images/cosmetics_smart_counter.jpg", href: "/contact" },
-      { title: "Gamified Kids Apparel Section", desc: "An interactive floor projector that keeps children entertained while parents shop nearby.", tags: ["Interactive Floor", "Motion Tracking"], img: "/images/education_interactive_floor.jpg", href: "/contact" },
-      { title: "Digital Brand Atrium", desc: "A massive, multi-story LED and projection installation that acts as the vibrant heartbeat of the retail space.", tags: ["Large Scale LED", "Generative Content"], img: "/images/hospitality_ambient_atrium.jpg", href: "/contact" }
+      {
+        title: "Retail Experiences",
+        desc: "The core experience of turning a store, window or showroom into a space shoppers stop and explore.",
+        tags: ["Retail Experience", "Storefront"],
+        img: "/images/retail_interactive_showcase.jpg",
+        href: "/use-cases/retail-experiences"
+      },
+      {
+        title: "Brand Activations",
+        desc: "Campaign and launch moments people take part in, often run as a pop up or seasonal activation inside a retail space.",
+        tags: ["Brand Activation", "Pop Up"],
+        img: "/images/cathedral_projection_mapping.jpg",
+        href: "/use-cases/brand-activations"
+      }
+    ]
+  },
+  useCases: {
+    label: "SEE IT IN CONTEXT",
+    title: "How Retailers Use These Solutions",
+    intro: "This industry connects to two of our use cases:",
+    items: [
+      {
+        title: "Retail Experiences",
+        desc: "The core experience of turning a store, window or showroom into a space shoppers stop and explore.",
+        href: "/use-cases/retail-experiences",
+        cta: "Explore Retail Experiences"
+      },
+      {
+        title: "Brand Activations",
+        desc: "Campaign and launch moments people take part in, often run as a pop up or seasonal activation inside a retail space.",
+        href: "/use-cases/brand-activations",
+        cta: "Explore Brand Activations"
+      }
+    ]
+  },
+  howItWorks: {
+    label: "HOW IT WORKS",
+    title: "From Space to Retail Experience",
+    steps: [
+      { num: "01", title: "Review the Space", desc: "We look at the storefront, floor, lighting and layout." },
+      { num: "02", title: "Plan the Experience", desc: "The interaction, visual layout and content are planned around the brand and the campaign." },
+      { num: "03", title: "Build the Content", desc: "Visuals and activities are created to match the brand, products and campaign goal." },
+      { num: "04", title: "Install and Calibrate", desc: "The system is installed and calibrated to the exact space and surfaces." }
     ]
   },
   benefits: {
-    title: "Retail Metrics & Outcomes",
-    intro: "Interactive brand experiences deliver measurable returns on investment by driving traffic, extending dwell time, and increasing conversions.",
+    title: "Benefits for Retailers and Shoppers",
     items: [
-      { title: "Increased Foot Traffic", desc: "Interactive storefronts consistently capture attention, driving substantial increases in storefront-to-interior foot traffic." },
-      { title: "Extended Dwell Time", desc: "Immersive in-store activations keep customers engaged longer, directly correlating with higher sales volumes." },
-      { title: "Social Media Amplification", desc: "Visually stunning interactive spaces naturally encourage organic sharing and user-generated content on platforms like Instagram and TikTok." },
-      { title: "Agile Campaign Management", desc: "Update visuals across hundreds of stores globally with a single click via our cloud CMS." },
-      { title: "Deep Customer Insights", desc: "Gather anonymous analytics on how many people stopped, interacted, and dwelled at your activations." },
-      { title: "Omnichannel Connection", desc: "Bridge the gap by seamlessly connecting in-store interactive experiences with mobile commerce and loyalty apps." }
+      { title: "A Reason to Stop", desc: "Gives shoppers something to engage with before they decide whether to walk in." },
+      { title: "Products Shown Differently", desc: "Interactive and immersive formats can show more than a shelf, rack or label." },
+      { title: "Flexible Campaigns", desc: "Content can be updated for new products, sales and seasons without replacing the installation." },
+      { title: "Reusable Investment", desc: "One installation can support many campaigns and launches over time." }
     ],
-    bottomStatement: "Turn physical retail spaces into powerful, measurable brand marketing channels."
   },
   technology: {
-    title: "Retail-Ready Technology",
-    intro: "We deploy commercial-grade interactive technologies designed to run flawlessly 24/7 in high-traffic retail environments, backed by powerful cloud management.",
+    title: "Technology Built for Retail Spaces",
     items: [
-      { title: "High-Brightness Projection", desc: "Laser projectors engineered to cut through bright ambient retail lighting and sunlight." },
-      { title: "Cloud Content Management", desc: "A centralized platform to schedule and deploy seasonal campaigns across global store networks." },
-      { title: "RFID & Object Recognition", desc: "Sensors that instantly identify which physical products a customer is holding to trigger relevant content." },
-      { title: "Anonymous Analytics Cameras", desc: "Edge-computing vision systems that measure footfall and engagement without storing personal data." },
-      { title: "Interactive Glass Films", desc: "Specialized films that turn standard storefront windows into high-contrast projection surfaces." },
-      { title: "Hidden Hardware Integration", desc: "Compact media servers and concealed sensors that maintain your store's premium aesthetic." }
+      { title: "Motion Tracking", desc: "Detects shopper movement near windows, floors and displays" },
+      { title: "High Brightness Projection", desc: "Engineered for ambient retail lighting" },
+      { title: "LED and 3D Display Panels", desc: "For storefronts and showroom visuals" },
+      { title: "AI Avatar and Photo Generation", desc: "For guided or personalized interactions" },
+      { title: "Interactive Touch Surfaces", desc: "For tables, counters and fitting rooms" },
+      { title: "Content Management Platform", desc: "Lets store or marketing teams update content centrally" }
     ],
-    bottomStatement: "Reliable, scalable, and completely integrated into your retail architecture."
   },
-  faqs: {
-    title: "Retail Interactive FAQs",
-    intro: "Common questions about deploying interactive experiences in flagship stores and retail rollouts.",
+  whyChooseUs: {
+    label: "WHY PROJECTION",
+    title: "Why Retailers Choose Projection",
     items: [
-      { q: "Can the interactive window work in direct sunlight?", a: "We use ultra-high brightness laser projectors and specialized ambient-light-rejecting (ALR) films to ensure visibility, though we often optimize content for peak impact during afternoon and evening hours." },
-      { q: "How easy is it to change the campaign content?", a: "Extremely easy. Our cloud CMS allows your marketing team to upload new videos, update game assets, or change branding across all store locations instantly from a web browser." },
-      { q: "Can the system track how many people interact?", a: "Yes. Our computer vision systems provide dashboards showing total passersby, stop rate, interaction rate, and average dwell time." },
-      { q: "Do you offer solutions for temporary pop-up stores?", a: "Yes, we offer rapidly deployable, modular interactive setups specifically designed for short-term brand activations, pop-ups, and exhibitions." },
-      { q: "Can the interactive floor handle heavy foot traffic?", a: "The interactive floor is purely projected light and camera tracking. There is no physical hardware on the floor itself, making it immune to wear and tear from heavy foot traffic." },
-      { q: "Can customers use their smartphones to interact?", a: "Yes. We frequently integrate QR code handshakes that allow customers to control the large-scale displays using their own mobile devices, bridging the physical and digital." },
-      { q: "How do you handle maintenance if a projector goes down?", a: "We actively monitor system health remotely. If a unit fails, we receive an alert instantly and coordinate with local AV partners for rapid swap-outs." },
-      { q: "Can we integrate this with our inventory system?", a: "Yes, our API allows integrations with POS and inventory systems to ensure 'Lift and Learn' displays only showcase in-stock variations." }
+      { title: "Content you can update yourself", desc: "New campaigns and seasons without a new installation" },
+      { title: "One partner across formats", desc: "Interactive surfaces, immersive visuals, AI and games from a single team" },
+      { title: "Planned around your calendar", desc: "Installations scoped to launch dates and retail timelines" }
     ]
   },
-  caseStudies: [
-    {
-      client: "Neo-Shinjuku District",
-      title: "Gamified Touch & Motion Projection Wall",
-      headline: "Multi-Touch Dynamic Façade Driving Viral Footfall",
-      tag: "TOUCH & GESTURE WALL",
-      metric: "Substantial",
-      metricLabel: "Dwell Time Increase",
-      secondaryMetric: "Continuous",
-      secondaryMetricLabel: "Daily Interactions",
-      desc: "A multi-touch interactive projection wall built for luxury retail fashion pop-ups and nightlife activations, responding instantly to pedestrian touch and body gestures.",
-      quote: "Passersby couldn't resist stopping to play with the wall, translating directly into a massive surge in store entries.",
-      img: "/images/retail_interactive_showcase.jpg",
-      slug: "neo-shinjuku-interactive-wall"
-    },
-    {
-      client: "Haute Horlogerie Luxury Flagship",
-      title: "Flagship Store Activation",
-      headline: "Footstep-Responsive Floral Motion Floor & Kinetic Display",
-      tag: "INTERACTIVE FLOOR & WALL",
-      metric: "Substantial",
-      metricLabel: "Store Entry Lift",
-      secondaryMetric: "Multi-Fold",
-      secondaryMetricLabel: "Engagement Duration",
-      desc: "An immersive retail brand activation where footsteps trigger blooming floral particle simulations and highlight seasonal product capsules.",
-      quote: "The storefront became the defining spectacle of the entire shopping district during our holiday campaign.",
-      img: "/images/industry_retail_hero.jpg",
-      slug: "flagship-store-activation"
-    },
-    {
-      client: "Neo-Tokyo Brand Lab",
-      title: "Neo-Tokyo Retail Pop-Up",
-      headline: "Interactive Product Customization & Holographic Shelving",
-      tag: "SMART MERCHANDISING",
-      metric: "Elevated",
-      metricLabel: "Sales Conversion Lift",
-      secondaryMetric: "Commercial-Grade",
-      secondaryMetricLabel: "System Reliability",
-      desc: "An experiential pop-up combining RFID lift-and-learn pedestals with custom sneaker projection mapping tables for instant personalized design.",
-      quote: "Shoppers customized products in real time right in front of their eyes, resulting in our highest sales velocity ever.",
-      img: "/images/sneaker_customization_table.jpg",
-      slug: "neo-tokyo-retail-popup"
-    }
-  ],
+  faqs: {
+    title: "Frequently Asked Questions",
+    items: [
+      { q: "Can a shop window be interactive?", a: "Yes, where the window and lighting suit the setup. Content can be projected or displayed so it reacts as people walk past." },
+      { q: "What can shoppers do at an interactive retail display?", a: "They can play a short game, explore products, see large format visuals, or interact with an AI guide, depending on the setup." },
+      { q: "Does the store need major changes?", a: "Requirements depend on the space and the experience. Surface, lighting, ceiling height and equipment placement are reviewed during planning." },
+      { q: "Can it work near windows with strong sunlight?", a: "It depends on the equipment and lighting conditions. This is reviewed during planning." },
+      { q: "Can the content change for different campaigns?", a: "Yes, content can be planned to change with new products, sales and seasons." },
+      { q: "Can it be customized to our brand?", a: "Visuals and activities can be planned around your brand, products and space." },
+      { q: "How do we get started?", a: "Share your store, your audience and what you want shoppers to do. We will discuss a suitable approach for your project." }
+    ]
+  },
   cta: {
-    eyebrow: "RETAIL SPATIAL TRANSFORMATION",
-    title: "Elevate Your Retail Experience.",
-    subtitle: "Ready to convert passersby into loyal customers with motion-responsive storefronts and interactive product showcases?",
-    buttonText: "Elevate Your Retail Experience",
+    eyebrow: "RETAIL",
+    title: "Give Shoppers a Reason to Stop",
+    subtitle: "Tell us about your store and what you want shoppers to do.",
+    buttonText: "Discuss Your Retail Project",
     img: "/images/industry_retail_hero.jpg"
   }
 };

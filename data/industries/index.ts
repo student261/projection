@@ -25,18 +25,18 @@ export const industryDeliveryWorkflows: Record<string, DeliveryWorkflow> = {
   education: {
     title: "How We Deliver Every Space",
     intro: "A turnkey, four-week journey from first classroom walkthrough to white-glove installation and ongoing teacher support.",
-    bottomStatement: "School installations are completed during weekends or academic breaks — ensuring zero disruption to classroom schedules.",
+    bottomStatement: "School installations are completed during weekends or academic breaks - ensuring zero disruption to classroom schedules.",
     stages: [
       {
         num: "01",
-        timeframe: "WEEKS 1–2",
+        timeframe: "WEEKS 1-2",
         title: "Plan & Scan",
         desc: "We scan your room dimensions, evaluate daylight angles, and customize interactive curriculum software to your grade levels.",
         img: "/images/corporate_lobby_wall.jpg"
       },
       {
         num: "02",
-        timeframe: "WEEKS 3–4",
+        timeframe: "WEEKS 3-4",
         title: "Build & Install",
         desc: "White-glove laser mounting, sensor calibration, and game testing scheduled during weekends or breaks with zero class disruption.",
         img: "/images/technician_calibrating_projection.jpg"
@@ -50,30 +50,58 @@ export const industryDeliveryWorkflows: Record<string, DeliveryWorkflow> = {
       }
     ]
   },
-  "retail-showrooms": {
-    title: "How We Deliver Every Space",
-    intro: "A turnkey, four-week journey from storefront walkthrough and 3D space scanning to white-glove installation, staff training, and ongoing campaign management.",
-    bottomStatement: "Retail installations are completed during off-hours or store closing — ensuring zero disruption to store operating hours and customer foot traffic.",
+  retail: {
+    title: "How We Deliver Every Retail Installation",
+    intro: "A dedicated three-stage delivery process tailored to store schedules and retail campaign timelines.",
+    bottomStatement: "Hardware setup, calibration and content configuration on site.",
     stages: [
       {
         num: "01",
-        timeframe: "WEEKS 1–2",
-        title: "Plan & Scan",
-        desc: "We map your retail floor plan, evaluate ambient lux from daylight and mall illumination, and calibrate interactive brand content to your seasonal merchandising campaigns.",
+        timeframe: "STAGE 01",
+        title: "Plan & Assess",
+        desc: "We review the space, brand goals and campaign requirements.",
         img: "/images/corporate_lobby_wall.jpg"
       },
       {
         num: "02",
-        timeframe: "WEEKS 3–4",
+        timeframe: "STAGE 02",
         title: "Build & Install",
-        desc: "Concealed overhead projector mounting, optical tracking grid calibration, and interactive software commissioning scheduled overnight with zero disruption to shopping hours.",
+        desc: "Hardware setup, calibration and content configuration on site.",
         img: "/images/technician_calibrating_projection.jpg"
       },
       {
         num: "03",
-        timeframe: "LAUNCH & BEYOND",
+        timeframe: "STAGE 03",
         title: "Train & Support",
-        desc: "Hands-on store staff and retail manager training so teams can trigger new campaigns effortlessly via cloud CMS, backed by 24/7 proactive hardware monitoring.",
+        desc: "Store team training plus ongoing maintenance and content updates.",
+        img: "/images/ai_receptionist_concierge.jpg"
+      }
+    ]
+  },
+  "retail-showrooms": {
+    title: "How We Deliver Every Retail Installation",
+    intro: "A dedicated three-stage delivery process tailored to store schedules and retail campaign timelines.",
+    bottomStatement: "Hardware setup, calibration and content configuration on site.",
+    stages: [
+      {
+        num: "01",
+        timeframe: "STAGE 01",
+        title: "Plan & Assess",
+        desc: "We review the space, brand goals and campaign requirements.",
+        img: "/images/corporate_lobby_wall.jpg"
+      },
+      {
+        num: "02",
+        timeframe: "STAGE 02",
+        title: "Build & Install",
+        desc: "Hardware setup, calibration and content configuration on site.",
+        img: "/images/technician_calibrating_projection.jpg"
+      },
+      {
+        num: "03",
+        timeframe: "STAGE 03",
+        title: "Train & Support",
+        desc: "Store team training plus ongoing maintenance and content updates.",
         img: "/images/ai_receptionist_concierge.jpg"
       }
     ]
@@ -85,14 +113,14 @@ export const industryDeliveryWorkflows: Record<string, DeliveryWorkflow> = {
     stages: [
       {
         num: "01",
-        timeframe: "WEEKS 1–2",
+        timeframe: "WEEKS 1-2",
         title: "Clinical Space Audit",
         desc: "We assess waiting corridors, sensory therapy rooms, and pediatric suites, ensuring complete compliance with clinical lighting and infection control standards.",
         img: "/images/corporate_lobby_wall.jpg"
       },
       {
         num: "02",
-        timeframe: "WEEKS 3–4",
+        timeframe: "WEEKS 3-4",
         title: "Sterile Concealed Mounting",
         desc: "Overhead ceiling rigging and optical calibration with zero floor-level hardware or loose cabling, keeping therapeutic surfaces fully touchless and sanitary.",
         img: "/images/technician_calibrating_projection.jpg"
@@ -113,14 +141,14 @@ export const industryDeliveryWorkflows: Record<string, DeliveryWorkflow> = {
     stages: [
       {
         num: "01",
-        timeframe: "WEEKS 1–2",
+        timeframe: "WEEKS 1-2",
         title: "Architectural Assessment",
         desc: "We scan high-ceiling atriums, arrival vestibules, and dining zones to calculate multi-surface throw ratios, acoustic integration, and luxury finish preservation.",
         img: "/images/corporate_lobby_wall.jpg"
       },
       {
         num: "02",
-        timeframe: "WEEKS 3–4",
+        timeframe: "WEEKS 3-4",
         title: "Concealed Rigging & Blending",
         desc: "Discreet installation behind architectural coves and ceiling baffles with seamless multi-projector calibration, preserving elegant interior aesthetics.",
         img: "/images/technician_calibrating_projection.jpg"
@@ -137,18 +165,18 @@ export const industryDeliveryWorkflows: Record<string, DeliveryWorkflow> = {
   "museums-culture": {
     title: "How We Deliver Every Space",
     intro: "A curatorially aligned, four-week journey from historic artifact conservation review to non-invasive optical commissioning.",
-    bottomStatement: "Certified non-invasive rigging systems protect historic architecture and sensitive exhibits — preserving archival standards without drilling into sensitive stonework.",
+    bottomStatement: "Certified non-invasive rigging systems protect historic architecture and sensitive exhibits - preserving archival standards without drilling into sensitive stonework.",
     stages: [
       {
         num: "01",
-        timeframe: "WEEKS 1–2",
+        timeframe: "WEEKS 1-2",
         title: "Volumetric Laser Scanning",
         desc: "We capture sub-millimeter 3D scans of gallery surfaces, evaluating surface reflectance and strict conservation lux limits before physical deployment.",
         img: "/images/corporate_lobby_wall.jpg"
       },
       {
         num: "02",
-        timeframe: "WEEKS 3–4",
+        timeframe: "WEEKS 3-4",
         title: "Non-Destructive Rigging",
         desc: "Clamp-based, museum-grade mounts and multi-projector edge blending calibrated during closure days with zero impact on exhibition schedules.",
         img: "/images/technician_calibrating_projection.jpg"
@@ -165,18 +193,18 @@ export const industryDeliveryWorkflows: Record<string, DeliveryWorkflow> = {
   entertainment: {
     title: "How We Deliver Every Space",
     intro: "A turnkey, four-week journey from venue capacity modeling to high-throughput commissioning and operator training.",
-    bottomStatement: "Designed for high-traffic commercial operations with rapid overnight installation — ensuring venues open on schedule without box-office downtime.",
+    bottomStatement: "Designed for high-traffic commercial operations with rapid overnight installation - ensuring venues open on schedule without box-office downtime.",
     stages: [
       {
         num: "01",
-        timeframe: "WEEKS 1–2",
+        timeframe: "WEEKS 1-2",
         title: "Flow Simulation & Tech Spec",
         desc: "We model visitor throughput, kinetic tracking bounds, and ambient sound levels to architect immersive multi-user arenas.",
         img: "/images/corporate_lobby_wall.jpg"
       },
       {
         num: "02",
-        timeframe: "WEEKS 3–4",
+        timeframe: "WEEKS 3-4",
         title: "High-Durability Integration",
         desc: "Industrial-grade overhead projector rigging, wide-angle tracking sensor matrices, and real-time game engine calibration for continuous play.",
         img: "/images/technician_calibrating_projection.jpg"
@@ -197,14 +225,14 @@ export const industryDeliveryWorkflows: Record<string, DeliveryWorkflow> = {
     stages: [
       {
         num: "01",
-        timeframe: "WEEKS 1–2",
+        timeframe: "WEEKS 1-2",
         title: "Spatial Audit & Security Scoping",
         desc: "We review executive briefing centers and lobby dimensions, coordinate with corporate IT on local network privacy, and map generative visual concepts.",
         img: "/images/corporate_lobby_wall.jpg"
       },
       {
         num: "02",
-        timeframe: "WEEKS 3–4",
+        timeframe: "WEEKS 3-4",
         title: "Precision Commercial Installation",
         desc: "Concealed optical mounting, real-time sensor array calibration, and enterprise data API integration completed outside office hours.",
         img: "/images/technician_calibrating_projection.jpg"
@@ -221,18 +249,18 @@ export const industryDeliveryWorkflows: Record<string, DeliveryWorkflow> = {
   "public-spaces": {
     title: "How We Deliver Every Space",
     intro: "A turnkey, four-week civic journey from pedestrian flow analysis to vandal-proof overhead mounting and transit operations handover.",
-    bottomStatement: "Executed within nocturnal municipal engineering windows — maintaining completely unobstructed pedestrian flow through busy public concourses.",
+    bottomStatement: "Executed within nocturnal municipal engineering windows - maintaining completely unobstructed pedestrian flow through busy public concourses.",
     stages: [
       {
         num: "01",
-        timeframe: "WEEKS 1–2",
+        timeframe: "WEEKS 1-2",
         title: "Pedestrian Transit Mapping",
         desc: "We analyze concourse foot-traffic volume, transit lighting fluctuations, and structural ceiling points to plan continuous overhead coverage.",
         img: "/images/corporate_lobby_wall.jpg"
       },
       {
         num: "02",
-        timeframe: "WEEKS 3–4",
+        timeframe: "WEEKS 3-4",
         title: "Vandal-Resistant Overhead Rigging",
         desc: "Tamper-proof overhead mounts and ruggedized laser projectors calibrated during transit closure windows without blocking pedestrian pathways.",
         img: "/images/technician_calibrating_projection.jpg"
@@ -258,6 +286,7 @@ export const industriesData: Record<string, IndustryData> = {
   education,
   healthcare,
   'retail-showrooms': retail,
+  retail,
   'museums-culture': museums,
   entertainment,
   hospitality,

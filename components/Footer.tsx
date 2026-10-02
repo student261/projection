@@ -98,7 +98,7 @@ export default function Footer() {
                   <ul className="space-y-3">
                     <li><Link href="/industries/education" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Education</Link></li>
                     <li><Link href="/industries/museums-culture" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Museums & Culture</Link></li>
-                    <li><Link href="/industries/retail-showrooms" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Retail & Showrooms</Link></li>
+                    <li><Link href="/industries/retail" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Retail & Showrooms</Link></li>
                     <li><Link href="/industries/healthcare" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Healthcare</Link></li>
                     <li><Link href="/industries/corporate" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Corporate</Link></li>
                     <li><Link href="/industries/public-spaces" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Public Spaces</Link></li>

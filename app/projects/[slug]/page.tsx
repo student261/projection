@@ -260,7 +260,7 @@ const caseStudiesData: Record<string, CaseStudyRaw> = {
     ],
     relatedIndustries: [
       { title: "Corporate Venues", href: "/industries/corporate" },
-      { title: "Retail & Showrooms", href: "/industries/retail-showrooms" },
+      { title: "Retail & Showrooms", href: "/industries/retail" },
     ],
     nextProject: {
       title: "Neo-Shinjuku Interactive Wall",
@@ -272,7 +272,7 @@ const caseStudiesData: Record<string, CaseStudyRaw> = {
     title: "Neo-Shinjuku Interactive Wall",
     experienceType: "Gamified Touch & Motion Projection Wall",
     industry: "Retail & Showrooms",
-    industryHref: "/industries/retail-showrooms",
+    industryHref: "/industries/retail",
     heroImg: "/images/retail_interactive_showcase.jpg",
     overview:
       "A multi-touch interactive projection wall built for luxury nightlife, retail flagships, and brand activations.",
@@ -299,7 +299,7 @@ const caseStudiesData: Record<string, CaseStudyRaw> = {
       { title: "Interactive Spaces", href: "/solutions#interactive" },
     ],
     relatedIndustries: [
-      { title: "Retail & Showrooms", href: "/industries/retail-showrooms" },
+      { title: "Retail & Showrooms", href: "/industries/retail" },
     ],
     nextProject: {
       title: "Celestial Dome Observatory",
@@ -544,7 +544,7 @@ const caseStudiesData: Record<string, CaseStudyRaw> = {
     title: "Flagship Store Activation",
     experienceType: "Interactive Merchandising & Motion Storefront",
     industry: "Retail & Showrooms",
-    industryHref: "/industries/retail-showrooms",
+    industryHref: "/industries/retail",
     heroImg: "/images/retail_interactive_showcase.jpg",
     overview:
       "An experiential retail flagship installation on a luxury shopping boulevard where footsteps trigger blooming floral patterns and dynamic product highlights on luxury displays.",
@@ -575,7 +575,7 @@ const caseStudiesData: Record<string, CaseStudyRaw> = {
       { title: "Smart Engagement", href: "/solutions#smart-engagement" }
     ],
     relatedIndustries: [
-      { title: "Retail & Showrooms", href: "/industries/retail-showrooms" }
+      { title: "Retail & Showrooms", href: "/industries/retail" }
     ],
     nextProject: {
       title: "Immersive STEM Lab",
@@ -629,7 +629,7 @@ const caseStudiesData: Record<string, CaseStudyRaw> = {
     title: "Neo-Tokyo Retail Pop-Up",
     experienceType: "Gamified Touch & Customization Table",
     industry: "Retail & Showrooms",
-    industryHref: "/industries/retail-showrooms",
+    industryHref: "/industries/retail",
     heroImg: "/images/sneaker_customization_table.jpg",
     heroVideo: "/retail-pedestal-showreel.mp4",
     overview:
@@ -661,7 +661,7 @@ const caseStudiesData: Record<string, CaseStudyRaw> = {
       { title: "Smart Engagement", href: "/solutions#smart-engagement" }
     ],
     relatedIndustries: [
-      { title: "Retail & Showrooms", href: "/industries/retail-showrooms" }
+      { title: "Retail & Showrooms", href: "/industries/retail" }
     ],
     nextProject: {
       title: "AI Receptionist Avatar",
@@ -917,7 +917,7 @@ function getProjectData(slug: string): CaseStudyData {
     ],
     relatedIndustries: [
       { title: "Museums & Culture", href: "/industries/museums-culture" },
-      { title: "Retail & Showrooms", href: "/industries/retail-showrooms" },
+      { title: "Retail & Showrooms", href: "/industries/retail" },
     ],
     nextProject: {
       title: "Sanctuary of Light Cathedral",

@@ -276,12 +276,14 @@ function TiltCard({ cat, isDesktop }: { cat: any; isDesktop: boolean }) {
             </div>
 
             <div style={{ transform: "translateZ(40px)" }}>
-              <h3 className="text-xl sm:text-2xl lg:text-lg xl:text-2xl font-bold text-white mb-2 leading-tight drop-shadow-2xl">
+              <h3 className="text-xl sm:text-2xl lg:text-lg xl:text-2xl font-bold text-white leading-tight drop-shadow-2xl">
                 {cat.title}
               </h3>
-              <p className="text-white/70 text-xs xl:text-sm font-light drop-shadow-md">
-                {cat.desc}
-              </p>
+              <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-48 group-hover:opacity-100 transition-all duration-500 ease-out">
+                <p className="text-white/70 text-xs xl:text-sm font-light drop-shadow-md pt-2">
+                  {cat.desc}
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>

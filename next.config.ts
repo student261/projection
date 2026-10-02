@@ -23,6 +23,11 @@ const nextConfig: NextConfig = {
         destination: "/solutions/interactive-projection",
         permanent: true,
       },
+      {
+        source: "/industries/retail-showrooms",
+        destination: "/industries/retail",
+        permanent: true,
+      },
     ];
   },
   async headers() {

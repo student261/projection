@@ -31,11 +31,11 @@ export const CANONICAL_INDUSTRIES: IndustryItem[] = [
   },
   {
     id: "retail",
-    slug: "retail-showrooms",
+    slug: "retail",
     title: "Retail & Flagship Showrooms",
     shortTitle: "Retail & Showrooms",
     desc: "Captivate shoppers with interactive storefront displays, digital try-on spaces, and product discovery projection floors.",
-    href: "/industries/retail-showrooms",
+    href: "/industries/retail",
     iconName: "ShoppingBag",
   },
   {

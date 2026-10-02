@@ -52,7 +52,7 @@ const industries = [
     heading: "Give Visitors More Ways to Engage",
     title: "Retail",
     description: "Turn stores, showrooms and shopping spaces into interactive environments that encourage visitors to explore and interact.",
-    href: "/industries/retail-showrooms",
+    href: "/industries/retail",
     img: "/images/retail_interactive_showcase.jpg",
     cta: "Explore Retail",
   },

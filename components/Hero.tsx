@@ -101,6 +101,27 @@ export default function Hero() {
   useEffect(() => {
     setScaleEnd(window.innerWidth < 1024 ? 1.0 : 0.86);
   }, []);
+
+  // Pause video when scrolled out of view to preserve GPU budget for other sections
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!videoRef.current) return;
+        if (entry.isIntersecting) {
+          videoRef.current.play().catch(() => {});
+        } else {
+          videoRef.current.pause();
+        }
+      },
+      { threshold: 0.05 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   const cardScaleScroll = useTransform(smoothScrollProgress, [0, 1], [1.0, scaleEnd]);
   const contentOpacity = useTransform(smoothScrollProgress, [0, 0.45], [1, 0]);
   const contentY = useTransform(smoothScrollProgress, [0, 0.45], [0, -50]);
@@ -236,7 +257,7 @@ export default function Hero() {
           className="absolute bottom-5 left-6 z-20 pointer-events-none hidden sm:flex items-center gap-2 text-[10px] text-white/50 tracking-wider font-mono"
         >
           <span>© 2026 PROJECTION</span>
-          <span>•</span>
+          <span>/</span>
           <span>GLOBAL INTERACTIVE SYSTEMS</span>
         </motion.div>
       </motion.div>

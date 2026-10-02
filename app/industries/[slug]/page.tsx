@@ -1,19 +1,48 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { industriesData, getIndustryDelivery, getIndustryCaseStudies } from "@/data/industries";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
-import { ArrowRight, Activity, Lightbulb, Sparkles, Network, Terminal, CheckCircle2, ShieldAlert, TrendingDown, Layers, Brain, Cpu, Users, ArrowUpRight, Compass, Wrench, GraduationCap, ShieldCheck } from "lucide-react";
-import Button from "@/components/ui/Button";
-import SectionHeading from "@/components/ui/SectionHeading";
+import { ArrowRight, Sparkles, Activity, Lightbulb, Layers, Brain, Cpu, Users, Network, ChevronRight, Target, Compass, Wrench, Palette, CheckCircle2 } from "lucide-react";
 import FAQAccordion from "./FAQAccordion";
-import SolutionsAccordion from "@/components/SolutionsAccordion";
-import StickyExperiences from "@/components/StickyExperiences";
+import Curved3DCarousel from "@/components/Curved3DCarousel";
 import CaseStudiesSpotlight from "@/components/CaseStudiesSpotlight";
 
 export function generateStaticParams() {
-  return Object.keys(industriesData).map((slug) => ({ slug }));
+  return Object.keys(industriesData)
+    .filter((slug) => slug !== "education" && slug !== "retail")
+    .map((slug) => ({ slug }));
+}
+
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await props.params;
+  const industry = industriesData[slug];
+
+  if (!industry) return {};
+
+  return {
+    title: industry.hero.title,
+    description: industry.hero.subtitle,
+    alternates: {
+      canonical: `/industries/${slug}`,
+    },
+    openGraph: {
+      title: industry.hero.title,
+      description: industry.hero.subtitle,
+      url: `/industries/${slug}`,
+      type: "website",
+      images: [
+        {
+          url: industry.hero.img,
+          width: 1200,
+          height: 630,
+          alt: industry.hero.title,
+        },
+      ],
+    },
+  };
 }
 
 export default async function IndustrySubpage(props: { params: Promise<{ slug: string }> }) {
@@ -27,233 +56,309 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
   const caseStudies = getIndustryCaseStudies(industry);
   const delivery = getIndustryDelivery(slug);
 
+  const solutionIcons = [Lightbulb, Layers, Sparkles, Brain, Cpu, Network];
+  const techIcons = [Activity, Brain, Sparkles, Users];
+  const processIcons = [Target, Compass, Palette, Wrench, CheckCircle2];
+
   return (
     <main className="min-h-screen bg-white text-black flex flex-col selection:bg-black selection:text-white">
       <Navbar />
 
-      {/* SECTION 01: HERO BANNER (Clean & Cinematic) */}
-      <section className="relative h-screen min-h-screen flex flex-col justify-between items-center overflow-hidden pt-24 sm:pt-28 pb-4 sm:pb-6 bg-black">
-        <div className="absolute inset-0 z-0">
-          <SafeImage 
-            src={industry.hero.img} 
-            alt={industry.hero.title} 
-            className="w-full h-full object-cover opacity-55 scale-105" 
+      {/* SECTION 1: HERO */}
+      <section className="relative h-screen min-h-[580px] flex flex-col justify-between items-center overflow-hidden pt-24 sm:pt-28 pb-8 bg-black text-white">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <SafeImage
+            src={industry.hero.img}
+            alt={industry.hero.title}
+            className="w-full h-full object-cover opacity-55 scale-105"
             containerClassName="w-full h-full bg-black"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black pointer-events-none" />
         </div>
-        
+
         <div className="my-auto relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-          <div className="flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/80 mb-3 sm:mb-4">
+          <div className="inline-flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-white/70 mb-3">
             <Sparkles className="w-3.5 h-3.5 text-white/70" />
             <span>{industry.hero.eyebrow}</span>
           </div>
-          <h1 className="text-[clamp(1.85rem,5.5vw,3.75rem)] font-black text-white mb-3 sm:mb-4 max-w-4xl mx-auto drop-shadow-2xl tracking-tight leading-[1.08]">
+
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08] max-w-4xl mx-auto mb-4">
             {industry.hero.title}
           </h1>
-          <p className="text-white/80 max-w-2xl mx-auto mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg font-light leading-relaxed">
+
+          <p className="text-sm sm:text-base lg:text-lg text-white/80 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
             {industry.hero.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-7 py-3 sm:py-3.5 rounded-full bg-white text-black hover:bg-white/90 shadow-xl transition-all duration-300 active:scale-95 w-full sm:w-auto"
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
+            <Link
+              href="#solutions"
+              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-neutral-200 transition-all active:scale-95 shadow-xl w-full sm:w-auto"
             >
-              {industry.cta?.buttonText || "Start Your Project"}
-              <ArrowRight className="w-3.5 h-3.5" />
+              <span>Explore Solutions</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link 
-              href="#experiences" 
-              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-7 py-3 sm:py-3.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-300 active:scale-95 w-full sm:w-auto"
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md text-xs sm:text-sm font-bold uppercase tracking-wider transition-all active:scale-95 w-full sm:w-auto"
             >
-              Explore Experiences
+              <span>Discuss Your Project</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* SECTION 02: THE CHALLENGE (Pure Editorial — Zero Boxes / Zero Cards) */}
-      <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Section Header */}
-          <div className="max-w-3xl mb-10 sm:mb-12">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-              INDUSTRY OBSTACLES
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black mb-3">
-              {industry.challenges.title}
-            </h2>
-            <p className="text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
-              {industry.challenges.intro}
-            </p>
+      {/* SECTION 2: THE CHALLENGE (Dark Banner Header + Numbered Grid) */}
+      <section className="w-full">
+        {/* Top Dark Header Banner */}
+        <div className="relative w-full overflow-hidden bg-black text-white py-8 sm:py-10 lg:py-12 flex items-center">
+          <div className="absolute inset-0 z-0">
+            <SafeImage
+              src={industry.hero.img}
+              alt={industry.challenges.title}
+              className="w-full h-full object-cover opacity-40"
+              containerClassName="w-full h-full bg-black"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/85 pointer-events-none" />
           </div>
 
-          {/* 6 Open Typographic Challenge Points — Zero Boxes, Zero Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8">
-            {industry.challenges.items.map((item, idx) => (
-              <div key={idx} className="space-y-1.5">
-                <span className="text-xs font-mono font-bold text-neutral-700 block tracking-wider">
-                  0{idx + 1}
-                </span>
-                <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-neutral-600 font-light leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* SECTION 03: OUR VISION (EDITORIAL SPLIT SHOWCASE - SINGLE SCREEN) */}
-      <section className="py-10 sm:py-12 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
-            {/* Left Column: Vision Narrative & Statement */}
-            <div className="lg:col-span-6 space-y-4 sm:space-y-5">
-              <div>
-                <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-                  OUR VISION
-                </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black tracking-tight leading-[1.1]">
-                  {industry.vision.title}
+          <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-12">
+              <div className="max-w-2xl">
+                <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
+                  <span className="w-6 sm:w-8 h-[2px] bg-white"></span>
+                  <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-white">
+                    THE CHALLENGE
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] tracking-tight leading-[1.08] text-white">
+                  <span className="font-extrabold block">{industry.challenges.title}</span>
                 </h2>
               </div>
 
-              <p className="text-lg sm:text-xl text-black font-semibold leading-snug">
-                {industry.vision.statement}
-              </p>
-              
-              <div className="space-y-3 text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
-                <p>
-                  {industry.vision.intro}
-                </p>
-              </div>
-
+              {industry.challenges.intro && (
+                <div className="lg:max-w-md xl:max-w-lg lg:text-left">
+                  <p className="text-xs sm:text-sm lg:text-[14px] text-white/80 font-light leading-relaxed">
+                    {industry.challenges.intro}
+                  </p>
+                </div>
+              )}
             </div>
-            
-            {/* Right Column: Tall Unified Media Showcase with Integrated Quote */}
-            <div className="lg:col-span-6">
-              <div className="relative h-[380px] sm:h-[440px] lg:h-[480px] w-full rounded-3xl overflow-hidden bg-neutral-100 group shadow-lg">
-                <SafeImage 
-                  src={industry.vision.img || industry.experiences?.items?.[0]?.img || industry.hero.img} 
-                  alt={industry.vision.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  containerClassName="w-full h-full"
-                />
-                {industry.vision.quote && (
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 sm:p-7 pointer-events-none">
-                    <div className="backdrop-blur-md bg-black/40 border border-white/15 rounded-2xl p-4 sm:p-5 text-white shadow-xl">
-                      <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.2em] text-white/70 block mb-1.5 font-bold">
-                        VISION PHILOSOPHY
-                      </span>
-                      <p className="text-xs sm:text-sm font-light leading-relaxed text-white/95">
-                        &ldquo;{industry.vision.quote.replace(/^["'“]+|["'”]+$/g, '').trim()}&rdquo;
+          </div>
+        </div>
+
+        {/* 2-Column Challenge Grid */}
+        <div className="bg-white pt-8 pb-12 sm:pt-9 sm:pb-16 text-black">
+          <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {industry.challenges.items.map((item, idx) => {
+                const isLeftColumn = idx % 2 === 0;
+                const rowIndex = Math.floor(idx / 2);
+                const isFirstRow = rowIndex === 0;
+                const totalRows = Math.ceil(industry.challenges.items.length / 2);
+                const isLastRow = rowIndex === totalRows - 1;
+                const isLastItem = idx === industry.challenges.items.length - 1;
+
+                return (
+                  <div
+                    key={idx}
+                    className={`flex items-start gap-3.5 sm:gap-5 ${
+                      isLeftColumn
+                        ? "pr-0 lg:pr-10 xl:pr-12 lg:border-r border-neutral-200"
+                        : "pl-0 lg:pl-10 xl:pl-12"
+                    } ${
+                      isFirstRow
+                        ? "pt-0 pb-6 sm:pb-7 lg:pb-8"
+                        : isLastRow
+                        ? "pt-6 sm:pt-7 lg:pt-8 pb-0"
+                        : "py-6 sm:py-7 lg:py-8"
+                    } ${
+                      !isLastRow
+                        ? "border-b border-neutral-200"
+                        : !isLastItem
+                        ? "max-lg:border-b max-lg:border-neutral-200"
+                        : ""
+                    }`}
+                  >
+                    {/* Number Badge */}
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full shrink-0 flex items-center justify-center bg-neutral-100 text-neutral-600">
+                      <span className="text-sm sm:text-base font-bold font-mono">0{idx + 1}</span>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 min-w-0 space-y-1">
+                      <h3 className="text-base sm:text-[17px] lg:text-lg font-bold text-neutral-900 tracking-tight leading-snug">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs sm:text-[13px] text-neutral-500 font-normal leading-relaxed">
+                        {item.desc}
                       </p>
                     </div>
                   </div>
-                )}
-              </div>
+                );
+              })}
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* SECTION 04: INTERACTIVE SOLUTIONS (SINGLE-SCREEN EDITORIAL) */}
-      <section className="pt-8 sm:pt-10 pb-10 sm:pb-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl mb-10 sm:mb-12">
-          <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-3">
-            CORE CAPABILITIES
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-4">
-            {industry.solutions.title}
-          </h2>
-          <p className="text-neutral-600 text-base sm:text-lg leading-relaxed font-light">
-            {industry.solutions.intro}
-          </p>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Pure Editorial Borderless Grid — Zero Card Boxes */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
-            {industry.solutions.items.map((sol, idx) => {
-              const icons = [Lightbulb, Layers, Sparkles, Brain, Cpu, Network];
-              const IconComponent = icons[idx % icons.length];
-              
-              return (
-                <Link href="/solutions" key={idx} className="group flex flex-col items-start text-left hover:-translate-y-0.5 transition-transform duration-300">
-                  <div className="w-10 h-10 flex items-center justify-start text-black mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className="w-7 h-7" />
-                  </div>
-                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-black/70 transition-colors">{sol.title}</h3>
-                  <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light mb-6">
-                    {sol.desc}
+      {/* SECTION 3: OUR VISION (Warm Background with Split Layout) */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-[#F8F6F2] text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-6 space-y-4">
+              <div>
+                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+                  OUR VISION
+                </span>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+                  {industry.vision.title}
+                </h2>
+              </div>
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-600 font-light leading-relaxed">
+                {industry.vision.intro}
+              </p>
+              {industry.vision.quote && (
+                <div className="pt-2 border-l-2 border-black/40 pl-4 my-2">
+                  <p className="text-sm sm:text-base font-medium text-black italic">
+                    &ldquo;{industry.vision.quote.replace(/^["'"]+|["'"]+$/g, '').trim()}&rdquo;
                   </p>
-                  <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black/60 group-hover:text-black transition-colors cursor-pointer mt-auto">
-                    Explore Solution <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              )}
+            </div>
+
+            <div className="lg:col-span-6">
+              <div className="relative aspect-[16/11] rounded-2xl overflow-hidden bg-neutral-200 shadow-xl">
+                <SafeImage
+                  src={industry.vision.img || industry.experiences?.items?.[0]?.img || industry.hero.img}
+                  alt={industry.vision.title}
+                  className="w-full h-full object-cover"
+                  containerClassName="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: INTERACTIVE SOLUTIONS (Architectural Column Grid) */}
+      <section id="solutions" className="py-14 sm:py-16 lg:py-20 bg-white text-black scroll-mt-20">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Section Header */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 sm:pb-8 border-b border-black/15 mb-8 sm:mb-10">
+            <div className="max-w-2xl">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-2.5">
+                SOLUTIONS FOR YOUR SPACE
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight text-black">
+                {industry.solutions.title}
+              </h2>
+            </div>
+            {industry.solutions.intro && (
+              <p className="text-xs sm:text-sm lg:text-base text-neutral-500 font-light max-w-md leading-relaxed">
+                {industry.solutions.intro}
+              </p>
+            )}
+          </div>
+
+          {/* Solution Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 xl:gap-10">
+            {industry.solutions.items.map((sol, idx) => {
+              const IconComponent = solutionIcons[idx % solutionIcons.length];
+              return (
+                <div key={idx} className="group flex flex-col justify-between h-full">
+                  <div>
+                    {/* Top Tag Rule */}
+                    <div className="flex items-center justify-between text-xs font-mono pb-2.5 border-b border-black/15 mb-4">
+                      <span className="text-[10px] uppercase tracking-wider text-neutral-400 font-medium">
+                        {String(idx + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <div className="flex items-center gap-2 mb-2">
+                      <IconComponent className="w-4 h-4 text-black shrink-0" strokeWidth={1.75} />
+                      <h3 className="text-lg font-bold text-black tracking-tight group-hover:text-neutral-600 transition-colors">
+                        {sol.title}
+                      </h3>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed mb-6">
+                      {sol.desc}
+                    </p>
                   </div>
-                </Link>
+
+                  {/* Clean Minimalist Link */}
+                  <div>
+                    <Link
+                      href="/solutions"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black group-hover:text-neutral-600 transition-colors pt-2 border-t border-black/10 w-full justify-between"
+                    >
+                      <span>Explore Solution</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform duration-300" />
+                    </Link>
+                  </div>
+                </div>
               );
             })}
           </div>
+
         </div>
       </section>
 
-      {/* SECTION 05: FEATURED EXPERIENCES (SINGLE-SCREEN INTERACTIVE SHOWCASE) */}
-      <section id="experiences" className="py-8 sm:py-10 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Compact Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-              REAL WORLD IMPACT
+      {/* SECTION 5: EXPERIENCE IDEAS (Curved 3D Carousel on Dark Background) */}
+      <section className="pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 bg-black text-white overflow-hidden">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-2 sm:mb-3">
+          <div className="max-w-3xl">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-white/60 uppercase block mb-2">
+              EXPERIENCE IDEAS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-white">
               {industry.experiences.title}
             </h2>
-            <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
+            <p className="text-sm sm:text-base text-neutral-400 font-light mt-2 max-w-2xl leading-relaxed">
               {industry.experiences.intro}
             </p>
           </div>
+        </div>
 
-          {/* Single-Screen Interactive Showcase Component */}
-          <StickyExperiences items={industry.experiences.items} />
-
+        <div className="w-full max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-6">
+          <Curved3DCarousel items={industry.experiences.items} />
         </div>
       </section>
 
-      {/* SECTION 06: BENEFITS & OUTCOMES (ZERO-BOX / ZERO-CARD SINGLE SCREEN) */}
-      <section id="benefits" className="py-8 sm:py-10 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+      {/* SECTION 6: BENEFITS & OUTCOMES (Warm Background Numbered Grid) */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-[#F8F6F2] text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+
           {/* Section Header */}
-          <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
-              MEASURABLE VALUE
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
-              {industry.benefits.title}
-            </h2>
-            <p className="text-neutral-600 text-sm sm:text-base font-light leading-relaxed">
-              {industry.benefits.intro}
-            </p>
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-14 gap-4">
+            <div className="max-w-2xl">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2 sm:mb-3">
+                WHAT IT ENABLES
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
+                {industry.benefits.title}
+              </h2>
+            </div>
+            {industry.benefits.intro && (
+              <p className="text-sm sm:text-base text-neutral-500 font-light max-w-md lg:text-right leading-relaxed">
+                {industry.benefits.intro}
+              </p>
+            )}
           </div>
 
-          {/* 6 Benefits in 3-Column Grid — Zero Cards, Zero Containers */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-6 sm:gap-y-8 items-start">
+          {/* Benefits Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-8 sm:gap-y-10 items-start">
             {industry.benefits.items.map((ben, idx) => (
               <div key={idx} className="space-y-1.5 flex flex-col">
-                <span className="text-xs font-mono font-bold text-neutral-700 block tracking-wider">
+                <span className="text-xs font-mono font-bold text-neutral-400 block tracking-wider">
                   0{idx + 1}
                 </span>
-                <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug sm:min-h-[2.75rem] flex items-start">
+                <h3 className="text-base sm:text-lg font-bold tracking-tight text-neutral-900 leading-snug">
                   {ben.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed flex-1">
@@ -265,85 +370,122 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
         </div>
       </section>
 
-      {/* SECTION 07: REAL-TIME PIPELINE FLOW (ZERO-BOX / ZERO-CARD SINGLE SCREEN) */}
-      <section id="technology" className="pt-10 pb-16 sm:pt-14 sm:pb-20 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Section Header */}
-          <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
+      {/* SECTION 7: TECHNOLOGY PIPELINE (Connected Flow Grid) */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header */}
+          <div className="max-w-3xl mb-12 sm:mb-16">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
               REAL-TIME PIPELINE
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
               {industry.technology.title}
             </h2>
-            <p className="text-neutral-600 text-sm sm:text-base font-light leading-relaxed">
-              {industry.technology.intro}
-            </p>
+            {industry.technology.intro && (
+              <p className="text-sm sm:text-base text-neutral-500 font-light mt-2 max-w-2xl leading-relaxed">
+                {industry.technology.intro}
+              </p>
+            )}
           </div>
 
-          {/* Horizontal Pipeline Steps (Zero Cards, Zero Containers) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start relative">
-            {industry.technology.items.map((tech, idx) => {
-              const icons = [Activity, Brain, Sparkles, Users];
-              const IconComponent = icons[idx % icons.length];
-              const isLast = idx === industry.technology.items.length - 1;
-
+          {/* Desktop Flow: Connected Architectural Rail (lg and above) */}
+          <div className="hidden lg:grid grid-cols-3 gap-6 xl:gap-8 relative">
+            {industry.technology.items.slice(0, 6).map((tech, idx) => {
+              const IconComponent = techIcons[idx % techIcons.length];
+              const isLast = idx === Math.min(industry.technology.items.length, 6) - 1;
+              const isFirstRow = idx < 3;
               return (
-                <div key={idx} className="flex flex-col relative">
-                  {/* Step Header: Icon + Number + Connector Arrow */}
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-2.5">
-                      <IconComponent className="w-5 h-5 text-black shrink-0" strokeWidth={1.5} />
-                      <span className="text-xs font-mono font-black text-black">
-                        0{idx + 1}
-                      </span>
+                <div key={idx} className={`group flex flex-col ${!isFirstRow ? 'mt-2' : ''}`}>
+                  {/* Process Node and Connector Line */}
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-800 transition-all duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white group-hover:scale-105 shrink-0 shadow-sm z-10">
+                      <IconComponent className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
                     </div>
-
-                    {!isLast && (
-                      <ArrowRight className="hidden lg:block w-4 h-4 text-neutral-300 shrink-0" />
+                    {!isLast && (idx + 1) % 3 !== 0 && (
+                      <div className="flex-1 h-[1px] bg-neutral-200 ml-4 -mr-6 xl:-mr-8 relative hidden lg:flex items-center justify-end z-0">
+                        <ChevronRight className="w-3.5 h-3.5 text-neutral-300 -mr-1.5 shrink-0" />
+                      </div>
                     )}
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-base sm:text-lg font-black text-black tracking-tight leading-snug mb-1.5 lg:min-h-[2.75rem] flex items-start">
-                    {tech.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed flex-1">
-                    {tech.desc}
-                  </p>
+                  {/* Step Meta & Content */}
+                  <div className="space-y-2 pr-2">
+                    <span className="font-mono text-xs font-bold tracking-widest text-neutral-400 group-hover:text-black transition-colors">
+                      {String(idx + 1).padStart(2, '0')}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug group-hover:text-black transition-colors">
+                      {tech.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-neutral-500 font-normal leading-relaxed">
+                      {tech.desc}
+                    </p>
+                  </div>
                 </div>
               );
             })}
           </div>
+
+          {/* Mobile & Tablet Flow: Vertical Timeline (< lg) */}
+          <div className="lg:hidden relative pl-2 sm:pl-4">
+            <div className="space-y-8 sm:space-y-10 relative">
+              {industry.technology.items.map((tech, idx) => {
+                const IconComponent = techIcons[idx % techIcons.length];
+                const isLast = idx === industry.technology.items.length - 1;
+                return (
+                  <div key={idx} className="group flex items-start gap-4 sm:gap-6 relative">
+                    {/* Vertical connecting rail between nodes */}
+                    {!isLast && (
+                      <div className="absolute left-[23px] top-12 bottom-[-32px] sm:bottom-[-40px] w-[1px] bg-neutral-200 z-0" />
+                    )}
+
+                    {/* Node */}
+                    <div className="w-12 h-12 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-800 transition-all duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white shrink-0 shadow-sm relative z-10">
+                      <IconComponent className="w-5 h-5" />
+                    </div>
+
+                    {/* Step Content */}
+                    <div className="pt-0.5 space-y-1.5 flex-1 min-w-0">
+                      <span className="font-mono text-xs font-bold tracking-widest text-neutral-400">
+                        {String(idx + 1).padStart(2, '0')}
+                      </span>
+                      <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug">
+                        {tech.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-neutral-600 font-normal leading-relaxed">
+                        {tech.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* SECTION 08: HOW WE DELIVER (3-STAGE VISUAL ROADMAP — ZERO-CARD SINGLE SCREEN) */}
-      <section id="process" className="py-8 sm:py-10 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+      {/* SECTION 8: HOW WE DELIVER (3-Stage Visual Roadmap) */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+
           {/* Section Header */}
           <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
               TURNKEY METHODOLOGY
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-2.5">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
               {delivery.title}
             </h2>
-            <p className="text-neutral-600 text-sm sm:text-base font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-neutral-500 font-light mt-2 max-w-2xl leading-relaxed">
               {delivery.intro}
             </p>
           </div>
 
-          {/* 3-Stage Visual Roadmap Side-by-Side (Zero Cards, Zero Containers) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          {/* 3-Stage Visual Roadmap */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-stretch">
             {delivery.stages.map((stage, idx) => (
               <div key={idx} className="group flex flex-col h-full">
-                
-                {/* 16:10 Visual Showcase with Smooth Hover Zoom */}
+                {/* Visual Showcase */}
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 mb-3 sm:mb-4 shrink-0">
                   <SafeImage
                     src={stage.img}
@@ -353,7 +495,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
                   />
                 </div>
 
-                {/* Stage Metadata: Clean Number Badge + Timeframe */}
+                {/* Stage Metadata */}
                 <div className="flex items-center justify-between text-xs font-mono mb-2">
                   <span className="text-[11px] font-bold text-black tracking-wider">
                     STAGE {stage.num}
@@ -363,8 +505,8 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
                   </span>
                 </div>
 
-                {/* Title with locked height for perfect cross-column alignment */}
-                <h3 className="text-base sm:text-lg font-black text-black tracking-tight leading-snug mb-2 md:min-h-[3rem] flex items-start">
+                {/* Title */}
+                <h3 className="text-base sm:text-lg font-bold text-black tracking-tight leading-snug mb-2 md:min-h-[3rem] flex items-start">
                   {stage.title}
                 </h3>
 
@@ -372,16 +514,15 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
                 <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed flex-1">
                   {stage.desc}
                 </p>
-
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 08B: CASE STUDIES (ARCHITECTURAL SPOTLIGHT — ZERO CARDS) */}
-      <section id="case-studies" className="py-12 sm:py-16 min-h-[640px] flex flex-col justify-center bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      {/* SECTION 9: CASE STUDIES */}
+      <section className="py-12 sm:py-16 min-h-[640px] flex flex-col justify-center bg-white relative">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <CaseStudiesSpotlight 
             caseStudies={caseStudies} 
             industryName={slug}
@@ -391,46 +532,49 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
         </div>
       </section>
 
-      {/* SECTION 09: FAQS */}
-      <section className="py-16 lg:py-20 bg-gray-50">
+      {/* SECTION 10: FAQ */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-black mb-6">{industry.faqs.title}</h2>
-            <p className="text-black/70 font-light">{industry.faqs.intro}</p>
+          <div className="text-center mb-8 sm:mb-10">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+              COMMON QUESTIONS
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
+              {industry.faqs.title}
+            </h2>
           </div>
-          
-          <FAQAccordion faqs={industry.faqs.items} />
+
+          <div className="border-t border-black/15">
+            <FAQAccordion faqs={industry.faqs.items} />
+          </div>
         </div>
       </section>
 
-      {/* SECTION 10: DEDICATED CTA BANNER */}
-      <section className="relative py-20 sm:py-24 overflow-hidden bg-black text-white">
-        <div className="absolute inset-0 z-0">
-          <SafeImage 
-            src={industry.cta?.img || industry.hero.img} 
-            alt={industry.cta?.title || industry.hero.title} 
-            className="w-full h-full object-cover opacity-25" 
-            containerClassName="w-full h-full" 
+      {/* SECTION 11: FINAL CTA */}
+      <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-black text-white">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <SafeImage
+            src={industry.cta?.img || industry.hero.img}
+            alt={industry.cta?.title || industry.hero.title}
+            className="w-full h-full object-cover opacity-35"
+            containerClassName="w-full h-full bg-black"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {industry.cta?.eyebrow && (
-            <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/70 block mb-3">
-              {industry.cta.eyebrow}
-            </span>
-          )}
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 sm:mb-6 text-white leading-tight">
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight mb-4">
             {industry.cta?.title || "Ready to Transform Your Space?"}
           </h2>
-          <p className="text-base sm:text-lg text-white/80 font-light mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed">
-            {industry.cta?.subtitle || "Consult with our spatial computing architects to design, engineer, and deploy turnkey interactive technology tailored to your space."}
+          <p className="text-sm sm:text-base text-white/80 font-light max-w-2xl mx-auto mb-6 leading-relaxed">
+            {industry.cta?.subtitle || "Consult with our team to design, engineer, and deploy interactive technology tailored to your space."}
           </p>
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black bg-white px-8 py-4 rounded-full hover:bg-white/90 shadow-2xl transition-all duration-300 active:scale-95"
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-neutral-200 transition-all duration-300 active:scale-95 shadow-2xl"
           >
-            {industry.cta?.buttonText || "Start Your Project"} <ArrowRight className="w-4 h-4" />
+            <span>{industry.cta?.buttonText || "Start Your Project"}</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

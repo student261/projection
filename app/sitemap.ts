@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const industrySlugs = [
     'education',
     'museums-culture',
-    'retail-showrooms',
+    'retail',
     'healthcare',
     'entertainment',
     'hospitality',

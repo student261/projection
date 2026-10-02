@@ -97,7 +97,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
    title: "Retail",
    desc: "Interactive windows and floors give shoppers a reason to stop and explore a storefront.",
    img: "/images/retail_interactive_showcase.jpg",
-   href: "/industries/retail-showrooms"
+   href: "/industries/retail"
   },
   industryCards: [
    { title: "Education", desc: "Interactive floors and walls turn classroom activities into something students do, not just watch.", img: "/images/museum_dino_sandbox.jpg", href: "/industries/education" },
@@ -225,7 +225,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   industriesIntro: "Proven impact across family entertainment centers, retail malls, pediatric clinics, and school halls.",
   featuredIndustry: { title: "Family Entertainment Centers", desc: "High-energy games that keep children engaged for hours.", img: "/images/interactive_strike_wall.jpg", href: "/industries/entertainment" },
   industryCards: [
-   { title: "Shopping Malls & Retail", desc: "Draw foot traffic into central atriums with joyful interactive attractions.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail-showrooms" },
+   { title: "Shopping Malls & Retail", desc: "Draw foot traffic into central atriums with joyful interactive attractions.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail" },
    { title: "Schools & Kindergartens", desc: "Physical exercise combined with interactive cognitive learning.", img: "/images/museum_dino_sandbox.jpg", href: "/industries/education" },
    { title: "Museums & Exhibitions", desc: "Engaging walk-through pathways that educate through play.", img: "/images/museum_interactive_exhibit.jpg", href: "/industries/museums-culture" }
   ],
@@ -330,7 +330,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   featuredIndustry: { title: "Corporate Briefing Centers", desc: "Impress clients with dynamic executive timelines and strategy pitch walls.", img: "/images/ai_receptionist_concierge.jpg", href: "/industries/corporate" },
   industryCards: [
    { title: "Museums & Cultural Centers", desc: "Interactive history walls that make archives accessible to the public.", img: "/images/cathedral_projection_mapping.jpg", href: "/industries/museums-culture" },
-   { title: "Automotive & Retail Showrooms", desc: "Full-scale vehicle configurators and interactive product walls.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail-showrooms" },
+   { title: "Automotive & Retail Showrooms", desc: "Full-scale vehicle configurators and interactive product walls.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail" },
    { title: "Universities & Research", desc: "Collaborative brainstorming and data visualization rooms.", img: "/images/education_interactive_floor.jpg", href: "/industries/education" }
   ],
 
@@ -435,7 +435,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   industryCards: [
    { title: "Healthcare & MRI Suites", desc: "Calm patients with soothing digital skylights during stressful treatments.", img: "/images/mri_distraction_suite.jpg", href: "/industries/healthcare" },
    { title: "Corporate Headquarters", desc: "Transform executive atriums into memorable architectural landmarks.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/corporate" },
-   { title: "High-End Retail & Spas", desc: "Create serene, otherworldly relaxation environments that encourage longer stays.", img: "/images/cosmetics_smart_counter.jpg", href: "/industries/retail-showrooms" }
+   { title: "High-End Retail & Spas", desc: "Create serene, otherworldly relaxation environments that encourage longer stays.", img: "/images/cosmetics_smart_counter.jpg", href: "/industries/retail" }
   ],
 
   outcomesHeading: "Architectural & Psychological Outcomes",
@@ -535,10 +535,10 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
   industriesHeading: "Industries Utilizing Interactive Windows",
   industriesIntro: "Drive revenue when stores are closed and maximize prime high-street commercial rent.",
-  featuredIndustry: { title: "High-Street Retail & Fashion", desc: "Turn after-hours window shopping into direct e-commerce sales.", img: "/images/ai_receptionist_concierge.jpg", href: "/industries/retail-showrooms" },
+  featuredIndustry: { title: "High-Street Retail & Fashion", desc: "Turn after-hours window shopping into direct e-commerce sales.", img: "/images/ai_receptionist_concierge.jpg", href: "/industries/retail" },
   industryCards: [
    { title: "Real Estate Brokerages", desc: "Allow buyers to browse home listings 24/7 on prime streetfront corners.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/corporate" },
-   { title: "Automotive Dealerships", desc: "Showcase new vehicle models in stunning high definition after hours.", img: "/images/cathedral_projection_mapping.jpg", href: "/industries/retail-showrooms" },
+   { title: "Automotive Dealerships", desc: "Showcase new vehicle models in stunning high definition after hours.", img: "/images/cathedral_projection_mapping.jpg", href: "/industries/retail" },
    { title: "Travel Agencies & Airlines", desc: "Inspire travelers with interactive destination videos and flight deals.", img: "/images/biosphere_ocean_gallery.jpg", href: "/industries/hospitality" }
   ],
 
@@ -640,7 +640,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
   industriesHeading: "Industries Using Smart Mirrors & Tables",
   industriesIntro: "High-impact deployments across luxury retail, executive centers, and boutique hospitality.",
-  featuredIndustry: { title: "Luxury Retail & Fitting Rooms", desc: "Enhance fitting room conversion rates with interactive mirrors.", img: "/images/cosmetics_smart_counter.jpg", href: "/industries/retail-showrooms" },
+  featuredIndustry: { title: "Luxury Retail & Fitting Rooms", desc: "Enhance fitting room conversion rates with interactive mirrors.", img: "/images/cosmetics_smart_counter.jpg", href: "/industries/retail" },
   industryCards: [
    { title: "Museums & Cultural Archives", desc: "Hands-on artifact exploration tables that fascinate visitors of all ages.", img: "/images/museum_dino_sandbox.jpg", href: "/industries/museums-culture" },
    { title: "Corporate Briefing & Architecture", desc: "Collaborative masterplan tables for reviewing city-scale CAD models.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/corporate" },
@@ -784,7 +784,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   },
   industryCards: [
    { title: "Entertainment", desc: "Dome projection and LED tunnels create attractions people walk into and explore.", img: "/images/planetarium_projection_dome.jpg", href: "/industries/entertainment" },
-   { title: "Retail", desc: "Projection mapping and LED displays turn a storefront or launch into a visual moment.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail-showrooms" },
+   { title: "Retail", desc: "Projection mapping and LED displays turn a storefront or launch into a visual moment.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail" },
    { title: "Hospitality", desc: "Immersive visuals change the feel of a lobby, restaurant or guest space.", img: "/images/dining_projection_table.jpg", href: "/industries/hospitality" },
    { title: "Corporate & Events", desc: "Immersive rooms and building projection mapping are used for launches, conferences and experience centres.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/corporate" },
    { title: "Education", desc: "Immersive rooms help students explore a subject or place through surrounding visuals.", img: "/images/education_interactive_floor.jpg", href: "/industries/education" }
@@ -904,7 +904,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   industriesIntro: "From government tourism spectacles to private automotive brand launches.",
   featuredIndustry: { title: "Tourism & Municipalities", desc: "Monumental light festivals that draw millions of international visitors.", img: "/images/hospitality_ambient_atrium.jpg", href: "/industries/public-spaces" },
   industryCards: [
-   { title: "Automotive & Industrial", desc: "High-impact vehicle unveiling shows and factory floor design reviews.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/retail-showrooms" },
+   { title: "Automotive & Industrial", desc: "High-impact vehicle unveiling shows and factory floor design reviews.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/retail" },
    { title: "Live Concerts & Festivals", desc: "Dynamic stage mapping that adapts to artist setlists and crowd tempo.", img: "/images/interactive_cocktail_bar.jpg", href: "/industries/entertainment" },
    { title: "Museums & History", desc: "Project lost colors onto ancient sculptures and animate historical murals.", img: "/images/museum_dino_sandbox.jpg", href: "/industries/museums-culture" }
   ],
@@ -1115,7 +1115,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   featuredIndustry: { title: "Aquariums & Theme Parks", desc: "Enchant visitors with unforgettable walk-through threshold portals.", img: "/images/hospitality_koi_pond.jpg", href: "/industries/entertainment" },
   industryCards: [
    { title: "Sports Arenas & Stadiums", desc: "Electrify player walkouts and VIP tunnel clubs.", img: "/images/entertainment_motion_arena.jpg", href: "/industries/entertainment" },
-   { title: "Flagship Shopping Malls", desc: "Command high-street attention and draw foot traffic between retail wings.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail-showrooms" },
+   { title: "Flagship Shopping Malls", desc: "Command high-street attention and draw foot traffic between retail wings.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail" },
    { title: "Corporate Headquarters & Expos", desc: "A visionary entrance corridor welcoming partners to global summits.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/corporate" }
   ],
 
@@ -1217,7 +1217,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
 
   industriesHeading: "Where Holographic Displays Excel",
   industriesIntro: "High-end product launches, museum storytelling, and keynote presentations.",
-  featuredIndustry: { title: "Luxury Retail & Jewelry", desc: "Elevate high-value jewelry and watches with magical floating narratives.", img: "/images/cosmetics_smart_counter.jpg", href: "/industries/retail-showrooms" },
+  featuredIndustry: { title: "Luxury Retail & Jewelry", desc: "Elevate high-value jewelry and watches with magical floating narratives.", img: "/images/cosmetics_smart_counter.jpg", href: "/industries/retail" },
   industryCards: [
    { title: "Museums & Historical Exhibits", desc: "Bring ancient pharaohs and extinct creatures back to life before visitors' eyes.", img: "/images/museum_dino_sandbox.jpg", href: "/industries/museums-culture" },
    { title: "Concerts, Theatres & Keynotes", desc: "Deliver jaw-dropping stage moments with life-sized holographic performances.", img: "/images/entertainment_motion_arena.jpg", href: "/industries/entertainment" },
@@ -1376,7 +1376,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
     title: "Retail",
     desc: "An AI avatar or photo experience gives shoppers a reason to stop at a storefront or counter.",
     img: "/images/retail_interactive_showcase.jpg",
-    href: "/industries/retail-showrooms"
+    href: "/industries/retail"
    },
    {
     title: "Museums & Exhibitions",
@@ -1571,7 +1571,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   industriesIntro: "High-volume corporate galas, trade show booths, and brand activations.",
   featuredIndustry: { title: "Trade Shows & Expos", desc: "Generate massive booth queues and collect hundreds of qualified B2B leads daily.", img: "/images/projection_cityscape_model.jpg", href: "/industries/corporate" },
   industryCards: [
-   { title: "Brand Pop-Ups & Retail", desc: "Create viral user-generated content that spreads across Instagram and TikTok.", img: "/images/sneaker_customization_table.jpg", href: "/industries/retail-showrooms" },
+   { title: "Brand Pop-Ups & Retail", desc: "Create viral user-generated content that spreads across Instagram and TikTok.", img: "/images/sneaker_customization_table.jpg", href: "/industries/retail" },
    { title: "Galas & Entertainment Events", desc: "Give VIP guests a luxurious, memorable keepsake from the evening.", img: "/images/interactive_cocktail_bar.jpg", href: "/industries/entertainment" },
    { title: "Museums & Science Centers", desc: "Let visitors imagine themselves in historical eras or alien environments.", img: "/images/museum_interactive_exhibit.jpg", href: "/industries/museums-culture" }
   ],
@@ -1733,7 +1733,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
    title: "Retail",
    desc: "A motion game at the entrance gives shoppers a reason to stop before they walk in.",
    img: "/images/retail_interactive_showcase.jpg",
-   href: "/industries/retail-showrooms"
+   href: "/industries/retail"
   },
   industryCards: [
    {
@@ -1935,9 +1935,9 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   industriesIntro: "Turn any public space into a magnetic competitive arena.",
   featuredIndustry: { title: "Trade Shows & Exhibitions", desc: "Draw the largest crowd on the expo floor and double your qualified sales leads.", img: "/images/projection_cityscape_model.jpg", href: "/industries/corporate" },
   industryCards: [
-   { title: "Retail Flagships & Malls", desc: "Drive store foot traffic and reward purchases with instant interactive discounts.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail-showrooms" },
+   { title: "Retail Flagships & Malls", desc: "Drive store foot traffic and reward purchases with instant interactive discounts.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail" },
    { title: "Sports Venues & Fan Zones", desc: "Engage thousands of passionate fans before kickoff with branded stadium games.", img: "/images/horizon_glass_floor.jpg", href: "/industries/entertainment" },
-   { title: "Automotive Launches", desc: "Create competitive driving simulators that highlight vehicle horsepower and agility.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/retail-showrooms" }
+   { title: "Automotive Launches", desc: "Create competitive driving simulators that highlight vehicle horsepower and agility.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/retail" }
   ],
 
   outcomesHeading: "Gamification Metrics That Matter",
@@ -2040,7 +2040,7 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   featuredIndustry: { title: "Family Entertainment Centers", desc: "Deliver high-energy active attractions that keep children and parents entertained.", img: "/images/hospitality_ambient_atrium.jpg", href: "/industries/entertainment" },
   industryCards: [
    { title: "Museums & Science Centers", desc: "Physical interactive exhibits that educate through energetic bodily participation.", img: "/images/museum_dino_sandbox.jpg", href: "/industries/museums-culture" },
-   { title: "Shopping Malls & Atriums", desc: "Free public play areas that boost mall foot traffic and parental dwell time.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail-showrooms" },
+   { title: "Shopping Malls & Atriums", desc: "Free public play areas that boost mall foot traffic and parental dwell time.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail" },
    { title: "Healthcare & Physical Rehab", desc: "Gamify physical therapy and mobility exercises for pediatric and senior patients.", img: "/images/healthcare_sensory_room.jpg", href: "/industries/healthcare" }
   ],
 

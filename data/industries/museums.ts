@@ -125,7 +125,7 @@ export const museums: IndustryData = {
       secondaryMetric: "Top-Tier",
       secondaryMetricLabel: "Visitor Satisfaction Rating",
       desc: "A 360-degree reactive ocean floor projection reacting dynamically to marine biodiversity interaction, scattering schools of fish and parting bioluminescent water ripples underfoot.",
-      quote: "Guests of all generations spend hours exploring the interactive reef floor — substantially extended gallery dwell times.",
+      quote: "Guests of all generations spend hours exploring the interactive reef floor - substantially extended gallery dwell times.",
       img: "/images/biosphere_ocean_gallery.jpg",
       slug: "biosphere-ocean-experience"
     },

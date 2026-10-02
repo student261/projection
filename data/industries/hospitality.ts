@@ -111,7 +111,7 @@ export const hospitality: IndustryData = {
       secondaryMetric: "Top-Tier",
       secondaryMetricLabel: "Guest Delight Score",
       desc: "A motion-responsive arrival concourse where footsteps create realistic water ripples, parting bioluminescent fish and floating leaves across polished stone flooring.",
-      quote: "Arriving guests pause in awe the moment they enter the lobby — it became the signature social photo spot of our resort.",
+      quote: "Arriving guests pause in awe the moment they enter the lobby - it became the signature social photo spot of our resort.",
       img: "/images/hospitality_koi_pond.jpg",
       slug: "grand-hotel-living-floor"
     },
