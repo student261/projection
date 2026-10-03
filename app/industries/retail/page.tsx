@@ -308,7 +308,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 3: OUR VISION */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-[#F8F6F2] text-black">
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black border-b border-neutral-100">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 space-y-4">
@@ -478,7 +478,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 6: HOW IT WORKS (Matching Reference Design) */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-[#FAF8F5] text-black">
+      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
             {/* Left Header Column */}
@@ -751,7 +751,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 9: HOW WE DELIVER (Architectural Delivery Process Rail) */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-[#FAF8F5] text-black">
+      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black border-t border-neutral-100 overflow-hidden">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14 sm:mb-16 lg:mb-20">
             <div className="flex items-center gap-3 mb-4">
@@ -769,31 +769,34 @@ export default function RetailIndustryPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 relative">
-            {/* Desktop continuous architectural rail connecting the nodes */}
-            <div className="hidden md:block absolute top-[28px] left-[12%] right-[12%] h-[1px] bg-neutral-200 z-0" />
-
-            {deliveryStages.map((stage, idx) => (
-              <div key={idx} className="flex flex-col items-start relative z-10">
-                <div className="flex items-center gap-3.5 mb-5">
-                  <div className="w-14 h-14 rounded-full border border-neutral-300 bg-[#FAF8F5] flex items-center justify-center text-neutral-800 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
-                    <span className={`${playfair.className} font-serif text-xl font-normal text-neutral-900`}>
-                      0{idx + 1}
+            {deliveryStages.map((stage, idx) => {
+              const isLast = idx === deliveryStages.length - 1;
+              return (
+                <div key={idx} className="flex flex-col items-start relative">
+                  <div className="flex items-center gap-3.5 mb-5 w-full">
+                    <div className="w-14 h-14 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-800 shrink-0 shadow-[0_1px_3px_rgba(0,0,0,0.02)] relative z-10">
+                      <span className={`${playfair.className} font-serif text-xl font-normal text-neutral-900`}>
+                        0{idx + 1}
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 shrink-0">
+                      {stage.stage}
                     </span>
+                    {!isLast && (
+                      <div className="hidden md:block flex-1 h-[1px] bg-neutral-200 ml-4 -mr-8 lg:-mr-12 z-0" />
+                    )}
                   </div>
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
-                    {stage.stage}
-                  </span>
+
+                  <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-2`}>
+                    {stage.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">
+                    {stage.desc}
+                  </p>
                 </div>
-
-                <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-2`}>
-                  {stage.title}
-                </h3>
-
-                <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">
-                  {stage.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -858,7 +861,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 11: FAQ */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black">
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black border-t border-neutral-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10">
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">

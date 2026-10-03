@@ -203,8 +203,8 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
         </div>
       </section>
 
-      {/* SECTION 3: OUR VISION (Warm Background with Split Layout) */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-[#F8F6F2] text-black">
+      {/* SECTION 3: OUR VISION (White Background with Split Layout) */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black border-b border-neutral-100">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 space-y-4">
@@ -330,8 +330,8 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
         </div>
       </section>
 
-      {/* SECTION 6: BENEFITS & OUTCOMES (Warm Background Numbered Grid) */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-[#F8F6F2] text-black">
+      {/* SECTION 6: BENEFITS & OUTCOMES (Clean White Background Numbered Grid) */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section Header */}
@@ -533,7 +533,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       </section>
 
       {/* SECTION 10: FAQ */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black">
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black border-t border-neutral-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10">
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">

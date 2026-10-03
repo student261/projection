@@ -902,7 +902,7 @@ function StickySurfaceFormats({
 
   // Section: Capabilities / Features (CAPABILITIES) - Architectural Orbital Interaction System (Matching Reference Image)
   const capabilitiesSection = (
-    <section id="capabilities" className="py-12 sm:py-16 lg:py-20 bg-[#FAF9F5] scroll-mt-20 overflow-hidden">
+    <section id="capabilities" className="py-12 sm:py-16 lg:py-20 bg-white scroll-mt-20 overflow-hidden border-b border-neutral-100">
       <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header matching Reference Design */}
@@ -995,7 +995,7 @@ function StickySurfaceFormats({
           {data.keyFeatures[0] && (
             <>
               <div className="absolute left-[40.2%] top-[15.1%] -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                <div className="w-13 h-13 rounded-full bg-white border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
                   <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round">
                     <circle cx="12" cy="7" r="3" />
                     <path d="M7 21c0-4 2.5-6.5 5-6.5s5 2.5 5 6.5" />
@@ -1019,7 +1019,7 @@ function StickySurfaceFormats({
           {data.keyFeatures[1] && (
             <>
               <div className="absolute left-[61.5%] top-[8.7%] -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                <div className="w-13 h-13 rounded-full bg-white border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
                   <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="3" y="5" width="18" height="14" rx="3" />
                     <path d="M6 8h2M6 8v2M18 8h-2M18 8v2M6 16h2M6 16v-2M18 16h-2M18 16v-2" />
@@ -1042,7 +1042,7 @@ function StickySurfaceFormats({
           {data.keyFeatures.length >= 6 && data.keyFeatures[4] && (
             <>
               <div className="absolute left-[68.4%] top-[39.7%] -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                <div className="w-13 h-13 rounded-full bg-white border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
                   <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="m12 2 10 5-10 5-10-5Z" />
                     <path d="m2 12 10 5 10-5" />
@@ -1065,7 +1065,7 @@ function StickySurfaceFormats({
           {data.keyFeatures[2] && (
             <>
               <div className="absolute left-[56.7%] top-[71.8%] -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                <div className="w-13 h-13 rounded-full bg-white border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
                   <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="13" cy="14" r="7" />
                     <polyline points="13 11 13 14 15 16" />
@@ -1089,7 +1089,7 @@ function StickySurfaceFormats({
           {data.keyFeatures[3] && (
             <>
               <div className="absolute left-[38.0%] top-[77.7%] -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                <div className="w-13 h-13 rounded-full bg-white border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
                   <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M6 11h4m-2-2v4" />
                     <circle cx="15" cy="11" r="1" fill="currentColor" />
@@ -1113,7 +1113,7 @@ function StickySurfaceFormats({
           {data.keyFeatures.length >= 6 && data.keyFeatures[5] && (
             <>
               <div className="absolute left-[29.5%] top-[44.1%] -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="w-13 h-13 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
+                <div className="w-13 h-13 rounded-full bg-white border border-[#DDD6CD] shadow-sm flex items-center justify-center p-3 hover:scale-105 transition-transform duration-300">
                   <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-black" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="3" y="3" width="7" height="7" rx="1.5" />
                     <rect x="14" y="3" width="7" height="7" rx="1.5" />
@@ -1139,7 +1139,7 @@ function StickySurfaceFormats({
           {/* Centered Interaction Badge */}
           <div className="flex flex-col items-center justify-center mb-8 py-6 border-y border-[#E2DDD4]">
             <div className="relative flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full border border-[#D3C9BD] flex items-center justify-center mb-2 bg-[#FAF9F5] shadow-sm">
+              <div className="w-12 h-12 rounded-full border border-[#D3C9BD] flex items-center justify-center mb-2 bg-white shadow-sm">
                 <Sparkles className="w-5 h-5 text-black/70" />
               </div>
               <span className="font-mono text-[11px] font-bold tracking-[0.3em] text-neutral-800 uppercase">
@@ -1163,7 +1163,7 @@ function StickySurfaceFormats({
               return (
                 <div key={idx} className="p-5 rounded-2xl bg-white border border-[#E2DDD4] shadow-sm flex flex-col justify-between">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[#FAF9F5] border border-[#DDD6CD] flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-white border border-[#DDD6CD] flex items-center justify-center shrink-0">
                       {icon}
                     </div>
                     <h3 className="text-sm font-bold text-black tracking-tight leading-snug">

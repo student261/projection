@@ -114,7 +114,7 @@ export default function InteractiveLearningContent() {
       <section
         id="the-need"
         aria-labelledby="need-heading"
-        className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black border-y border-black/10"
+        className="py-14 sm:py-16 lg:py-20 bg-white text-black border-y border-black/10"
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-8 sm:mb-10">
@@ -276,7 +276,7 @@ export default function InteractiveLearningContent() {
       <section
         id="what-students-can-do"
         aria-labelledby="activities-heading"
-        className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black border-y border-black/10"
+        className="py-14 sm:py-16 lg:py-20 bg-white text-black border-y border-black/10"
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-10 sm:mb-12">
@@ -457,7 +457,7 @@ export default function InteractiveLearningContent() {
       <section
         id="what-it-enables"
         aria-labelledby="enables-heading"
-        className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black border-y border-black/10"
+        className="py-14 sm:py-16 lg:py-20 bg-white text-black border-y border-black/10"
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-8 sm:mb-10">
@@ -572,7 +572,7 @@ export default function InteractiveLearningContent() {
       <section
         id="faq"
         aria-labelledby="faq-heading"
-        className="py-14 sm:py-16 lg:py-20 bg-[#FAF9F5] text-black border-t border-black/10"
+        className="py-14 sm:py-16 lg:py-20 bg-white text-black border-t border-black/10"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="text-center mb-8 sm:mb-10">

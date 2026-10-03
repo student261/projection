@@ -61,7 +61,7 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
       }}
       transition={transition}
     >
-      <div className="w-16 h-16 rounded-2xl bg-[#F5EFE6] text-black flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-black group-hover:text-white transition-all duration-300 shadow-sm shrink-0">
+      <div className="w-16 h-16 rounded-2xl bg-white border border-neutral-200 text-black flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-black group-hover:text-white transition-all duration-300 shadow-sm shrink-0">
         {item.icon}
       </div>
 
