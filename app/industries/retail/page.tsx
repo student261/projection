@@ -379,77 +379,60 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 5: RELATED USE CASES (Matching Reference Design with Standard Sans Typography) */}
-      <section className="relative w-full overflow-hidden bg-[#07080a] text-white py-14 sm:py-18 lg:py-22">
-        {/* Subtle atmospheric ambient glow and curved accent line */}
-        <div className="absolute top-0 right-0 w-[500px] lg:w-[800px] h-[500px] pointer-events-none overflow-hidden z-0">
-          <svg
-            viewBox="0 0 800 500"
-            className="w-full h-full opacity-25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M 150 -50 C 400 40, 620 180, 800 480"
-              stroke="rgba(255,255,255,0.35)"
-              strokeWidth="1"
-            />
-          </svg>
-          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white/[0.03] blur-3xl" />
-        </div>
-
+      {/* SECTION 5: RELATED USE CASES (White Background with Standard Sans Typography) */}
+      <section className="relative w-full overflow-hidden bg-white text-black py-14 sm:py-18 lg:py-22 border-t border-black/10">
         <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Badge: Label + Trailing Line */}
           <div className="flex items-center gap-4 mb-4 sm:mb-5">
-            <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.25em] text-white/60 uppercase">
+            <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.25em] text-neutral-400 uppercase">
               {data.useCases?.label || "SEE IT IN CONTEXT"}
             </span>
-            <div className="h-px w-16 sm:w-20 bg-white/20" />
+            <div className="h-px w-16 sm:w-20 bg-neutral-300" />
           </div>
 
           {/* Split Header: Left Title/Intro & Right Context Paragraph */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end mb-12 sm:mb-16">
             <div className="lg:col-span-7">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.12]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight leading-[1.12]">
                 {data.useCases?.title || "How Retailers Use These Solutions"}
               </h2>
-              <p className="text-sm sm:text-base text-neutral-400 font-light mt-3 sm:mt-4">
+              <p className="text-sm sm:text-base text-neutral-500 font-light mt-3 sm:mt-4">
                 {data.useCases?.intro || "This industry connects to two of our use cases:"}
               </p>
             </div>
-            <div className="lg:col-span-5 border-l border-white/20 pl-6 sm:pl-8 py-1 lg:mb-1">
-              <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+            <div className="lg:col-span-5 border-l border-neutral-300 pl-6 sm:pl-8 py-1 lg:mb-1">
+              <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed">
                 {data.useCases?.description || "From window displays to in-store experiences, these solutions help retailers attract attention, increase engagement and turn more visitors into customers."}
               </p>
             </div>
           </div>
 
           {/* Two Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {data.useCases?.items.map((item, idx) => (
               <div 
                 key={idx} 
-                className="rounded-2xl p-7 sm:p-9 lg:p-10 bg-[#0d0e12]/80 border border-white/10 hover:border-white/25 transition-all duration-300 flex flex-col justify-between group"
+                className="rounded-2xl p-7 sm:p-9 lg:p-10 bg-[#fbfbfd] border border-black/10 hover:border-black/20 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Top Badge: Number + Tag + Horizontal Line */}
                   <div className="flex items-center gap-3.5 mb-6 sm:mb-8">
-                    <div className="w-7 h-7 rounded-full border border-white/25 flex items-center justify-center text-[10px] font-mono text-white/80 shrink-0">
+                    <div className="w-7 h-7 rounded-full border border-neutral-300 flex items-center justify-center text-[10px] font-mono text-neutral-600 shrink-0">
                       {item.num || (idx === 0 ? "01" : "02")}
                     </div>
-                    <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.22em] text-white/70 uppercase">
+                    <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.22em] text-neutral-500 uppercase">
                       {item.tag || (idx === 0 ? "RETAIL EXPERIENCES" : "BRAND ACTIVATIONS")}
                     </span>
-                    <div className="h-px bg-white/20 w-12 sm:w-16" />
+                    <div className="h-px bg-neutral-200 w-12 sm:w-16" />
                   </div>
 
                   {/* Title in Standard Clean Typography */}
-                  <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-white tracking-tight leading-snug mb-4">
+                  <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-neutral-900 tracking-tight leading-snug mb-4">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm lg:text-[15px] text-neutral-400 font-light leading-relaxed mb-8 sm:mb-10 max-w-xl">
+                  <p className="text-xs sm:text-sm lg:text-[15px] text-neutral-600 font-light leading-relaxed mb-8 sm:mb-10 max-w-xl">
                     {item.desc}
                   </p>
                 </div>
@@ -460,45 +443,17 @@ export default function RetailIndustryPage() {
                     href={item.href}
                     className="inline-flex items-center gap-3.5 group/cta w-fit"
                   >
-                    <div className="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center text-white/90 group-hover/cta:border-white group-hover/cta:bg-white group-hover/cta:text-black transition-all duration-200 shrink-0">
+                    <div className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-900 group-hover/cta:border-black group-hover/cta:bg-black group-hover/cta:text-white transition-all duration-200 shrink-0">
                       <ArrowRight className="w-3.5 h-3.5 group-hover/cta:translate-x-0.5 transition-transform" />
                     </div>
-                    <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.2em] font-medium text-white/85 group-hover/cta:text-white uppercase transition-colors">
+                    <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.2em] font-medium text-neutral-700 group-hover/cta:text-black uppercase transition-colors">
                       {item.cta}
                     </span>
-                    <div className="h-px bg-white/20 w-12 sm:w-16 group-hover/cta:w-20 group-hover/cta:bg-white/40 transition-all duration-300" />
+                    <div className="h-px bg-neutral-300 w-12 sm:w-16 group-hover/cta:w-20 group-hover/cta:bg-black transition-all duration-300" />
                   </Link>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Bottom Indicators Bar */}
-          <div className="flex items-center justify-between pt-6 border-t border-white/5">
-            {/* Left: pagination track with dots */}
-            <div className="flex items-center gap-3 sm:gap-4">
-              <div className="flex items-center">
-                <span className="w-2 h-2 rounded-full border border-white/80 bg-white inline-block" />
-                <span className="w-12 sm:w-16 h-px bg-white/30 inline-block" />
-                <span className="w-2 h-2 rounded-full border border-white/40 bg-transparent inline-block" />
-              </div>
-              <span className="text-[10px] sm:text-[11px] font-mono text-white/50 tracking-widest">
-                01 / 02
-              </span>
-            </div>
-
-            {/* Right: Scroll down indicator */}
-            <a
-              href="#experiences"
-              className="flex items-center gap-3 group/scroll cursor-pointer text-white/50 hover:text-white transition-colors"
-            >
-              <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.25em] uppercase">
-                SCROLL DOWN
-              </span>
-              <div className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center group-hover/scroll:border-white transition-colors">
-                <span className="w-1.5 h-1.5 rounded-full bg-white/70 group-hover/scroll:bg-white transition-colors" />
-              </div>
-            </a>
           </div>
         </div>
       </section>
