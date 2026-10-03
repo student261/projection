@@ -821,8 +821,8 @@ export default function RetailIndustryPage() {
             </p>
           </div>
 
-          {/* 3 Circular Cards with Connecting Arcs (Pure White Background, No Numbering, Spacious Layout) */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0 max-w-6xl mx-auto">
+          {/* 3 Circular Cards with Connecting Arcs (Pure White Background, No Numbering, Spacious Balanced Layout) */}
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0 max-w-6xl xl:max-w-7xl mx-auto">
             {data.whyChooseUs?.items.map((item, idx) => {
               const icons = [Layers, Monitor, Calendar];
               const IconComponent = icons[idx % icons.length];
@@ -830,32 +830,32 @@ export default function RetailIndustryPage() {
               return (
                 <Fragment key={idx}>
                   {/* Circular Card */}
-                  <div className="w-[280px] sm:w-[320px] lg:w-[270px] xl:w-[310px] 2xl:w-[330px] aspect-square rounded-full border border-neutral-300 bg-white hover:border-black/40 hover:shadow-lg transition-all duration-300 p-6 sm:p-8 xl:p-9 flex flex-col justify-between items-center text-center group shrink-0">
+                  <div className="w-[300px] sm:w-[330px] lg:w-[310px] xl:w-[350px] 2xl:w-[370px] aspect-square rounded-full border border-neutral-300 bg-white hover:border-black/40 hover:shadow-xl transition-all duration-300 p-8 sm:p-9 xl:p-10 flex flex-col items-center justify-center text-center group shrink-0">
                     {/* Top: Icon (No numbering) */}
-                    <div className="w-9 h-9 rounded-full border border-neutral-200 bg-neutral-50 flex items-center justify-center text-neutral-800 shrink-0 mt-1 group-hover:border-neutral-300 transition-colors">
+                    <div className="w-9 h-9 rounded-full border border-neutral-200 bg-neutral-50 flex items-center justify-center text-neutral-800 shrink-0 mb-4 sm:mb-5 group-hover:border-neutral-300 transition-colors">
                       <IconComponent className="w-4 h-4 stroke-[1.75]" />
                     </div>
 
                     {/* Middle: Title & Description */}
-                    <div className="my-auto px-2">
-                      <h3 className="text-lg sm:text-xl xl:text-[22px] font-bold text-neutral-900 tracking-tight leading-snug mb-2.5">
+                    <div className="max-w-[220px] sm:max-w-[240px] xl:max-w-[260px] mx-auto mb-5 sm:mb-6">
+                      <h3 className="text-lg sm:text-xl xl:text-[22px] font-bold text-neutral-900 tracking-tight leading-snug mb-2 sm:mb-2.5">
                         {item.title}
                       </h3>
-                      <p className="text-xs sm:text-[13px] text-neutral-600 font-light leading-relaxed max-w-[240px] mx-auto">
+                      <p className="text-xs sm:text-[13px] text-neutral-600 font-light leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
 
                     {/* Bottom: Circular CTA */}
-                    <div className="mb-1">
+                    <div>
                       <Link
                         href={item.href || "/solutions"}
-                        className="inline-flex items-center gap-2.5 sm:gap-3 group/cta"
+                        className="inline-flex items-center justify-center gap-2.5 sm:gap-3 group/cta"
                       >
                         <div className="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-800 group-hover/cta:border-black group-hover/cta:bg-black group-hover/cta:text-white transition-all duration-200 shrink-0">
                           <ArrowRight className="w-3.5 h-3.5 group-hover/cta:translate-x-0.5 transition-transform" />
                         </div>
-                        <span className="text-[10px] font-mono tracking-[0.2em] font-medium text-neutral-700 group-hover/cta:text-black uppercase text-left transition-colors">
+                        <span className="text-[10px] font-mono tracking-[0.2em] font-medium text-neutral-700 group-hover/cta:text-black uppercase text-left transition-colors whitespace-nowrap">
                           {item.cta || "Explore"}
                         </span>
                       </Link>
@@ -864,7 +864,7 @@ export default function RetailIndustryPage() {
 
                   {/* Connecting Arc between circles (Visible only on desktop lg+) */}
                   {idx < (data.whyChooseUs?.items.length || 3) - 1 && (
-                    <div className="hidden lg:flex items-center justify-center flex-1 max-w-[90px] xl:max-w-[130px] px-2 xl:px-4 shrink-0 self-center">
+                    <div className="hidden lg:flex items-center justify-center flex-1 max-w-[80px] xl:max-w-[120px] px-2 xl:px-4 shrink-0 self-center">
                       <svg viewBox="0 0 100 40" fill="none" className="w-full h-auto text-neutral-400">
                         <path
                           d="M 8 30 C 32 8, 68 8, 88 22"
