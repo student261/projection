@@ -28,7 +28,8 @@ import {
   Shield,
   Users,
   Clock,
-  Globe
+  Globe,
+  ShoppingBag
 } from "lucide-react";
 import FAQAccordion from "../[slug]/FAQAccordion";
 import Curved3DCarousel from "@/components/Curved3DCarousel";
@@ -379,10 +380,10 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 5: RELATED USE CASES (Editorial Visual Showcase) */}
-      <section className="relative w-full bg-black text-white py-12 sm:py-14 lg:py-16 border-t border-neutral-900">
+      {/* SECTION 5: RELATED USE CASES (Clean Architectural Split) */}
+      <section className="relative w-full bg-black text-white py-12 sm:py-14 lg:py-16 border-t border-b border-neutral-900">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8 sm:mb-10">
+          <div className="max-w-3xl mb-10 sm:mb-12">
             <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
               {data.useCases?.label || "SEE IT IN CONTEXT"}
             </span>
@@ -394,40 +395,50 @@ export default function RetailIndustryPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {data.useCases?.items.map((item, idx) => (
-              <Link
-                key={idx}
-                href={item.href}
-                className="group flex flex-col space-y-4"
-              >
-                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900">
-                  <SafeImage
-                    src={item.img || (idx === 0 ? "/images/retail_interactive_showcase.jpg" : "/images/retail_popup_activation.jpg")}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    containerClassName="w-full h-full"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-500" />
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
+            {data.useCases?.items.map((item, idx) => {
+              const icons = [ShoppingBag, Sparkles];
+              const IconComponent = icons[idx % icons.length];
+              const itemNum = String(idx + 1).padStart(2, "0");
 
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug group-hover:text-neutral-200 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-neutral-400 font-light leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
+              return (
+                <div
+                  key={idx}
+                  className={`flex flex-col justify-between ${
+                    idx === 0
+                      ? "md:pr-10 lg:pr-16"
+                      : "md:border-l md:border-neutral-800 md:pl-10 lg:pl-16"
+                  }`}
+                >
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-2.5 mb-2">
+                      <IconComponent className="w-5 h-5 text-neutral-300 stroke-[1.5]" />
+                      <span className="font-mono text-xs font-semibold text-neutral-500">
+                        {itemNum}
+                      </span>
+                    </div>
 
-                <div className="pt-1">
-                  <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-white group-hover:text-neutral-300 transition-colors">
-                    <span>{item.cta}</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
-                  </span>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm sm:text-base text-neutral-400 font-light leading-relaxed max-w-xl">
+                      {item.desc}
+                    </p>
+                  </div>
+
+                  <div>
+                    <Link
+                      href={item.href}
+                      className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-white hover:text-neutral-300 transition-colors group"
+                    >
+                      <span>{item.cta}</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
+                    </Link>
+                  </div>
                 </div>
-              </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -96,15 +96,13 @@ export const retail: IndustryData = {
         title: "Retail Experiences",
         desc: "The core experience of turning a store, window or showroom into a space shoppers stop and explore.",
         href: "/use-cases/retail-experiences",
-        cta: "Explore Retail Experiences",
-        img: "/images/retail_interactive_showcase.jpg"
+        cta: "Explore Retail Experiences"
       },
       {
         title: "Brand Activations",
         desc: "Campaign and launch moments people take part in, often run as a pop up or seasonal activation inside a retail space.",
         href: "/use-cases/brand-activations",
-        cta: "Explore Brand Activations",
-        img: "/images/retail_popup_activation.jpg"
+        cta: "Explore Brand Activations"
       }
     ]
   },
