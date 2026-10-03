@@ -38,22 +38,50 @@ export const retail: IndustryData = {
     ],
   },
   experiences: {
-    title: "How Retailers Use These Solutions",
-    intro: "This industry connects to two of our use cases:",
+    title: "Immersive Retail Experience Concepts",
+    intro: "Explore how flagship stores and progressive retailers transform physical spaces into engaging consumer journeys.",
     items: [
       {
-        title: "Retail Experiences",
-        desc: "The core experience of turning a store, window or showroom into a space shoppers stop and explore.",
-        tags: ["Retail Experience", "Storefront"],
-        img: "/images/retail_interactive_showcase.jpg",
-        href: "/use-cases/retail-experiences"
+        title: "Interactive Storefront Window",
+        desc: "Motion-activated storefront projections that react as pedestrians walk past, drawing street traffic into the store.",
+        tags: ["Storefront Window", "Motion Tracking"],
+        img: "/images/retail_window_interactive.jpg",
+        href: "/solutions/interactive-spaces"
       },
       {
-        title: "Brand Activations",
-        desc: "Campaign and launch moments people take part in, often run as a pop up or seasonal activation inside a retail space.",
+        title: "Smart Fitting Room Mirror",
+        desc: "Interactive smart mirrors that let shoppers explore alternative sizes, complementary accessories, and custom lighting.",
+        tags: ["Smart Mirror", "Touch Surface"],
+        img: "/images/retail_smart_mirror.jpg",
+        href: "/solutions/interactive-spaces"
+      },
+      {
+        title: "Interactive Product Table",
+        desc: "Touch-sensitive tables that reveal product specifications, materials, and customization as shoppers touch or lift items.",
+        tags: ["Smart Surface", "Product Exploration"],
+        img: "/images/retail_smart_table.jpg",
+        href: "/solutions/interactive-spaces"
+      },
+      {
+        title: "Motion Reactive Retail Floor",
+        desc: "Dynamic floor projections that ripple and reveal promotional graphics under shopper footsteps through aisles.",
+        tags: ["Interactive Floor", "Dynamic Retail"],
+        img: "/images/retail_floor_projection.jpg",
+        href: "/solutions/interactive-floor"
+      },
+      {
+        title: "Immersive Brand Pop-Up",
+        desc: "High-impact projection mapped tunnels and experiential activations designed for limited-edition product drops.",
         tags: ["Brand Activation", "Pop Up"],
-        img: "/images/cathedral_projection_mapping.jpg",
+        img: "/images/retail_popup_activation.jpg",
         href: "/use-cases/brand-activations"
+      },
+      {
+        title: "AI Brand Concierge Avatar",
+        desc: "Lifelike conversational AI avatar kiosks that welcome shoppers, answer product questions, and guide store navigation.",
+        tags: ["AI Avatar", "Customer Service"],
+        img: "/images/retail_ai_avatar.jpg",
+        href: "/solutions/ai-experiences"
       }
     ]
   },

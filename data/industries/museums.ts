@@ -35,7 +35,7 @@ export const museums: IndustryData = {
     ],
     transition: "Our interactive solutions bring this vision to life for galleries, heritage sites, and science centers worldwide.",
     quote: "\"We don't just want visitors to see history; we want them to feel it.\"",
-    img: "/images/cathedral_projection_mapping.jpg"
+    img: "/images/museum_interactive_exhibition.jpg"
   },
   solutions: {
     title: "Interactive Museum Solutions",
@@ -54,10 +54,10 @@ export const museums: IndustryData = {
     title: "Featured Cultural Exhibits",
     intro: "See how leading museums are using interactive projection to break attendance records and deeply engage their communities.",
     items: [
-      { title: "The Immersive History Hall", desc: "A 360-degree projection room detailing the rise and fall of ancient civilizations.", tags: ["360 Projection", "Spatial Audio"], img: "/images/cathedral_projection_mapping.jpg", href: "/projects/aura-digital-cathedral" },
+      { title: "The Immersive History Hall", desc: "A 360-degree projection room detailing the rise and fall of ancient civilizations.", tags: ["360 Projection", "Spatial Audio"], img: "/images/museum_history_hall.jpg", href: "/projects/aura-digital-cathedral" },
       { title: "Interactive Dino Dig", desc: "An augmented sandbox where children physically dig to uncover digitally projected fossils.", tags: ["Projection Mapping", "Depth Sensing"], img: "/images/museum_dino_sandbox.jpg", href: "/contact" },
-      { title: "Touchless Art Gallery", desc: "High-resolution digital canvases that let visitors zoom into the brushstrokes of masterpieces using hand gestures.", tags: ["Gesture Recognition", "4K Displays"], img: "/images/biosphere_ocean_gallery.jpg", href: "/projects/chrono-echoes-artifact-wall" },
-      { title: "The Ocean Floor Experience", desc: "A motion-reactive floor projection that simulates walking through a coral reef, parting the water with every step.", tags: ["Interactive Floor", "Generative Art"], img: "/images/interactive_floor_motion.jpg", href: "/projects/biosphere-ocean-experience" },
+      { title: "Touchless Art Gallery", desc: "High-resolution digital canvases that let visitors zoom into the brushstrokes of masterpieces using hand gestures.", tags: ["Gesture Recognition", "4K Displays"], img: "/images/museum_interactive_exhibit.jpg", href: "/projects/chrono-echoes-artifact-wall" },
+      { title: "The Ocean Floor Experience", desc: "A motion-reactive floor projection that simulates walking through a coral reef, parting the water with every step.", tags: ["Interactive Floor", "Generative Art"], img: "/images/biosphere_ocean_gallery.jpg", href: "/projects/biosphere-ocean-experience" },
       { title: "Interactive City Model", desc: "A physical architectural model brought to life with dynamic overhead projection mapping showing urban growth.", tags: ["Object Mapping", "Data Visualization"], img: "/images/projection_cityscape_model.jpg", href: "/contact" },
       { title: "Digital Planetarium Dome", desc: "Immersive space exploration using ultra-short-throw projectors mapped to curved ceiling architecture.", tags: ["Dome Projection", "Real-time Rendering"], img: "/images/planetarium_projection_dome.jpg", href: "/projects/celestial-dome-observatory" }
     ]

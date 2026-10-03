@@ -35,7 +35,7 @@ export const corporate: IndustryData = {
     ],
     transition: "This is how we help Fortune 500 companies build executive briefing centers that accelerate sales cycles and impress stakeholders.",
     quote: "\"Your headquarters should be a physical manifestation of your company's future.\"",
-    img: "/images/corporate_lobby_wall.jpg"
+    img: "/images/technician_calibrating_projection.jpg"
   },
   solutions: {
     title: "Corporate Interactive Solutions",
@@ -54,11 +54,11 @@ export const corporate: IndustryData = {
     title: "Featured Corporate Environments",
     intro: "See how leading enterprises are using interactive spatial design to win business and inspire their workforce.",
     items: [
-      { title: "The Interactive Briefing Center", desc: "A 40-foot touchless interactive wall where executives present global supply chain data using hand gestures.", tags: ["Gesture Recognition", "Data Viz"], img: "/images/horizon_glass_floor.jpg", href: "/projects/corporate-lobby-installation" },
-      { title: "Generative Data Lobby", desc: "A lobby floor projection that generates unique digital art patterns based on the real-time volume of global company transactions.", tags: ["Generative Art", "API Integration"], img: "/images/interactive_floor_motion.jpg", href: "/solutions/interactive-floor" },
-      { title: "Projection Mapped Cityscape", desc: "A massive physical model of a smart city in the showroom, brought to life with overhead projection detailing energy usage and traffic flows.", tags: ["Projection Mapping", "Physical + Digital"], img: "/images/projection_cityscape_model.jpg", href: "/solutions/projection-mapping" },
-      { title: "The 360° Innovation Lab", desc: "An immersive room where R&D teams can step inside 3D CAD models of new products before they are physically prototyped.", tags: ["360 Projection", "CAD Integration"], img: "/images/planetarium_projection_dome.jpg", href: "/solutions/immersive-room" },
-      { title: "Interactive Timeline Wall", desc: "A touch-enabled digital hallway detailing the 100-year history and future roadmap of the corporation.", tags: ["Interactive Wall", "Storytelling"], img: "/images/architectural_light_beam.jpg", href: "/solutions/interactive-wall" },
+      { title: "The Interactive Briefing Center", desc: "A 40-foot touchless interactive wall where executives present global telemetry and network analytics using gesture controls.", tags: ["Executive Briefing", "Data Viz"], img: "/images/corporate_interactive_showcase.jpg", href: "/projects/corporate-lobby-installation" },
+      { title: "Generative Data Lobby", desc: "A lobby floor projection that generates unique digital art patterns based on the real-time volume of global company transactions.", tags: ["Generative Art", "API Integration"], img: "/images/corporate_lobby_wall.jpg", href: "/solutions/interactive-floor" },
+      { title: "Interactive Masterplan Table", desc: "A collaborative multi-touch masterplan table brought to life with dynamic data overlays, transit flows, and zoning simulations.", tags: ["Projection Mapping", "Physical + Digital"], img: "/images/var_table_projection.jpg", href: "/solutions/projection-mapping" },
+      { title: "The 360° Innovation Lab", desc: "An immersive geodesic dome where R&D teams step inside full-scale digital twins and futuristic data simulations.", tags: ["360 Projection", "Immersive Dome"], img: "/images/cat_immersive_dome.jpg", href: "/solutions/immersive-room" },
+      { title: "Interactive Innovation Showcase", desc: "A touch-enabled digital display that allows clients to explore advanced R&D systems, neural architectures, and future roadmaps.", tags: ["Interactive Wall", "R&D Showcase"], img: "/images/cat_ai_avatar.jpg", href: "/solutions/interactive-wall" },
       { title: "Personalized VIP Welcome", desc: "Lobby displays that use secure opt-in mobile tracking to instantly theme the entrance to a visiting client's brand colors.", tags: ["Proximity Sensing", "CMS Automation"], img: "/images/ai_receptionist_concierge.jpg", href: "/projects/ai-receptionist-avatar" }
     ]
   },

@@ -35,7 +35,7 @@ export const entertainment: IndustryData = {
     ],
     transition: "This is how we help FECs and theme parks build the most profitable and engaging arenas in the industry.",
     quote: "\"The best games are the ones you play with your whole body.\"",
-    img: "/images/entertainment_motion_arena.jpg"
+    img: "/images/entertainment_interactive_arena.jpg"
   },
   solutions: {
     title: "Interactive Attractions",
@@ -54,12 +54,12 @@ export const entertainment: IndustryData = {
     title: "Featured Arenas",
     intro: "Discover the interactive attractions that are driving massive ticket sales and social media buzz around the world.",
     items: [
-      { title: "The Grid Motion Arena", desc: "A 50x50ft interactive floor where teams compete in fast-paced neon sports games.", tags: ["Interactive Floor", "Multiplayer"], img: "/images/interactive_floor_motion.jpg", href: "/solutions/interactive-floor" },
-      { title: "Augmented Dodgeball", desc: "A trampoline court enhanced with interactive projected targets and digital scoring.", tags: ["Interactive Trampoline", "Motion Tracking"], img: "/images/horizon_glass_floor.jpg", href: "/solutions/interactive-projection" },
+      { title: "The Grid Motion Arena", desc: "A 50x50ft interactive floor where teams compete in fast-paced neon sports games.", tags: ["Interactive Floor", "Multiplayer"], img: "/images/entertainment_motion_arena.jpg", href: "/solutions/interactive-floor" },
+      { title: "Augmented Dodgeball", desc: "A trampoline court enhanced with interactive projected targets and digital scoring.", tags: ["Interactive Trampoline", "Motion Tracking"], img: "/images/entertainment_augmented_dodgeball.jpg", href: "/solutions/interactive-projection" },
       { title: "Zombie Strike Wall", desc: "An immersive wall where guests throw physical balls to fend off hordes of projected zombies.", tags: ["Ball Tracking", "Projection Mapping"], img: "/images/interactive_strike_wall.jpg", href: "/solutions/interactive-wall" },
-      { title: "The Magic Drawing Room", desc: "Kids color physical paper templates, scan them, and watch their creations come alive on a massive digital wall.", tags: ["Scan & Play", "Interactive Wall"], img: "/images/museum_dino_sandbox.jpg", href: "/projects/interactive-museum-exhibit" },
+      { title: "The Magic Drawing Room", desc: "Kids color physical paper templates, scan them, and watch their creations come alive on a massive digital wall.", tags: ["Scan & Play", "Interactive Wall"], img: "/images/entertainment_magic_drawing.jpg", href: "/projects/interactive-museum-exhibit" },
       { title: "Immersive Mini Golf", desc: "Projection mapped mini-golf courses where the terrain and obstacles change with every hole.", tags: ["Projection Mapping", "Object Tracking"], img: "/images/interactive_minigolf_course.jpg", href: "/solutions/immersive-room" },
-      { title: "Interactive Queue Lines", desc: "Keep guests entertained during long theme park waits with gesture-controlled games projected onto hallway walls.", tags: ["Gesture Tracking", "Throughput"], img: "/images/architectural_light_beam.jpg", href: "/solutions/interactive-wall" }
+      { title: "Interactive Queue Lines", desc: "Keep guests entertained during long theme park waits with gesture-controlled games projected onto hallway walls.", tags: ["Gesture Tracking", "Throughput"], img: "/images/entertainment_queue_games.jpg", href: "/solutions/interactive-wall" }
     ]
   },
   benefits: {

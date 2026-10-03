@@ -277,6 +277,7 @@ export const industryDeliveryWorkflows: Record<string, DeliveryWorkflow> = {
 };
 
 export function getIndustryDelivery(slug: string): DeliveryWorkflow {
+  if (slug === 'museums') return industryDeliveryWorkflows['museums-culture'];
   return industryDeliveryWorkflows[slug] || industryDeliveryWorkflows["retail-showrooms"] || industryDeliveryWorkflows.education;
 }
 
@@ -288,6 +289,7 @@ export const industriesData: Record<string, IndustryData> = {
   'retail-showrooms': retail,
   retail,
   'museums-culture': museums,
+  museums,
   entertainment,
   hospitality,
   corporate,

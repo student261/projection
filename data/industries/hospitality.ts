@@ -56,9 +56,9 @@ export const hospitality: IndustryData = {
     items: [
       { title: "The Virtual Koi Pond Entrance", desc: "A massive lobby floor projection of a realistic pond where digital fish swim away from guests' footsteps.", tags: ["Interactive Floor", "Ambient Tech"], img: "/images/hospitality_koi_pond.jpg", href: "/contact" },
       { title: "Immersive Fine Dining", desc: "A 12-course culinary experience where the table projections change to match the theme of every dish.", tags: ["Table Projection", "Object Tracking"], img: "/images/dining_projection_table.jpg", href: "/projects/multisensory-dining-experience" },
-      { title: "The 360° Wedding Ballroom", desc: "A banquet hall that can transform from a virtual forest to a starry night sky instantly via projection mapping.", tags: ["360 Projection", "Event Tech"], img: "/images/cathedral_projection_mapping.jpg", href: "/contact" },
+      { title: "The 360° Wedding Ballroom", desc: "A banquet hall that can transform from a virtual forest to a starry night sky instantly via projection mapping.", tags: ["360 Projection", "Event Tech"], img: "/images/var_ceiling_projection.jpg", href: "/contact" },
       { title: "Interactive Hotel Bar", desc: "A bar top that illuminates and creates digital ripples around guests' cocktail glasses.", tags: ["Interactive Surface", "Lidar Sensing"], img: "/images/interactive_cocktail_bar.jpg", href: "/contact" },
-      { title: "Digital Waterfall Atrium", desc: "A multi-story indoor waterfall created entirely with projection mapping that responds to lobby noise levels.", tags: ["Large Scale Projection", "Audio Reactive"], img: "/images/architectural_light_beam.jpg", href: "/contact" },
+      { title: "Digital Waterfall Atrium", desc: "A multi-story indoor waterfall created entirely with projection mapping that responds to lobby noise levels.", tags: ["Large Scale Projection", "Audio Reactive"], img: "/images/hospitality_interactive_lounge.jpg", href: "/contact" },
       { title: "Resort Kids Play Cave", desc: "An interactive projection room where younger guests can play motion games while parents relax nearby.", tags: ["Motion Games", "Family Engagement"], img: "/images/education_interactive_floor.jpg", href: "/contact" }
     ]
   },

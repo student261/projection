@@ -53,12 +53,12 @@ export const healthcare: IndustryData = {
     title: "Featured Healing Environments",
     intro: "See how leading hospitals and pediatric clinics are transforming their spaces to prioritize patient experience and therapeutic outcomes.",
     items: [
-      { title: "Pediatric Waiting Room", desc: "An immersive floor installation that turns anxious waiting time into engaging, touchless play.", tags: ["Interactive Floor", "Touchless Sensing"], img: "/images/hospitality_koi_pond.jpg", href: "/solutions/interactive-floor" },
-      { title: "Physical Therapy Lab", desc: "Gamified rehabilitation exercises projected onto walls to encourage full range of motion.", tags: ["Motion Tracking", "Interactive Wall"], img: "/images/interactive_floor_motion.jpg", href: "/solutions/interactive-wall" },
+      { title: "Pediatric Waiting Room", desc: "An immersive floor installation that turns anxious waiting time into engaging, touchless play.", tags: ["Interactive Floor", "Touchless Sensing"], img: "/images/healthcare_pediatric_waiting.jpg", href: "/solutions/interactive-floor" },
+      { title: "Physical Therapy Lab", desc: "Gamified rehabilitation exercises projected onto walls to encourage full range of motion.", tags: ["Motion Tracking", "Interactive Wall"], img: "/images/healthcare_physical_therapy.jpg", href: "/solutions/interactive-wall" },
       { title: "MRI Distraction Suite", desc: "Calming visual projections and synchronized audio that relax patients during complex procedures.", tags: ["Projection Mapping", "Spatial Audio"], img: "/images/mri_distraction_suite.jpg", href: "/solutions/projection-mapping" },
-      { title: "Sensory Relief Room", desc: "A dedicated environment for neurodivergent patients to control visual and auditory stimuli.", tags: ["Interactive Software", "Custom Content"], img: "/images/biosphere_ocean_gallery.jpg", href: "/projects/sensory-interactive-therapy-room" },
+      { title: "Sensory Relief Room", desc: "A dedicated environment for neurodivergent patients to control visual and auditory stimuli.", tags: ["Interactive Software", "Custom Content"], img: "/images/healthcare_sensory_room.jpg", href: "/projects/sensory-interactive-therapy-room" },
       { title: "Hospital Corridors", desc: "Dynamic interactive elements that guide children playfully from waiting areas to consultation rooms.", tags: ["Motion Sensors", "Wayfinding"], img: "/images/hospital_interactive_corridor.jpg", href: "/projects/pediatric-hospital-floor" },
-      { title: "Dental Care Ceiling", desc: "Engaging interactive visuals projected directly above the dental chair to distract and calm patients.", tags: ["Overhead Projection", "Eye Tracking"], img: "/images/planetarium_projection_dome.jpg", href: "/solutions/interactive-ceiling" }
+      { title: "Dental Care Ceiling", desc: "Engaging interactive visuals projected directly above the dental chair to distract and calm patients.", tags: ["Overhead Projection", "Eye Tracking"], img: "/images/healthcare_dental_ceiling.jpg", href: "/solutions/interactive-ceiling" }
     ]
   },
   benefits: {
