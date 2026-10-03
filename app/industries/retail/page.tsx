@@ -22,7 +22,11 @@ import {
   Eye,
   Grid2X2,
   Settings,
-  Asterisk
+  Asterisk,
+  Crosshair,
+  SunMedium,
+  BarChart3,
+  Shield
 } from "lucide-react";
 import FAQAccordion from "../[slug]/FAQAccordion";
 import Curved3DCarousel from "@/components/Curved3DCarousel";
@@ -93,30 +97,55 @@ export default function RetailIndustryPage() {
     {
       num: "01",
       title: "Review the Space",
-      desc: "We look at the storefront, floor, lighting and layout to understand your space and goals.",
-      action: "SPACE ANALYSIS",
-      icon: Eye,
+      desc: "We look at the storefront, floor, lighting and layout.",
     },
     {
       num: "02",
       title: "Plan the Experience",
-      desc: "The interaction, visual layout and content are planned around your brand and campaign.",
-      action: "CREATIVE PLANNING",
-      icon: Grid2X2,
+      desc: "The interaction, visual layout and content are planned around the brand and the campaign.",
     },
     {
       num: "03",
       title: "Build the Content",
-      desc: "Visuals and activities are created to match your brand, products and campaign goal.",
-      action: "CONTENT CREATION",
-      icon: Settings,
+      desc: "Visuals and activities are created to match the brand, products and campaign goal.",
     },
     {
       num: "04",
       title: "Install and Calibrate",
       desc: "The system is installed and calibrated to the exact space and surfaces.",
-      action: "ON SITE SETUP",
-      icon: Asterisk,
+    },
+  ];
+
+  const retailTechItems = [
+    {
+      icon: Crosshair,
+      title: "Motion Tracking",
+      desc: "Detects movement and interaction near windows, floors, walls and displays.",
+    },
+    {
+      icon: SunMedium,
+      title: "High Brightness Projection",
+      desc: "Engineered for bright retail spaces and clear visuals.",
+    },
+    {
+      icon: Layers,
+      title: "Interactive Surfaces",
+      desc: "Works across floors, walls, ceilings, tables, windows and mirrors.",
+    },
+    {
+      icon: Settings,
+      title: "Content Management",
+      desc: "Easily update and schedule experiences from a central platform.",
+    },
+    {
+      icon: BarChart3,
+      title: "Analytics",
+      desc: "Understand engagement and improve performance over time.",
+    },
+    {
+      icon: Shield,
+      title: "Reliable Operation",
+      desc: "Built for consistent performance in public spaces.",
     },
   ];
 
@@ -451,138 +480,166 @@ export default function RetailIndustryPage() {
       {/* SECTION 6: HOW IT WORKS (Matching Reference Design) */}
       <section className="py-20 sm:py-24 lg:py-28 bg-[#FAF8F5] text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="max-w-3xl mb-14 sm:mb-16 lg:mb-20">
-            <div className="flex items-center gap-3.5 mb-4">
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-500 uppercase">
-                {data.howItWorks?.label || "HOW IT WORKS"}
-              </span>
-              <span className="w-16 h-[1px] bg-neutral-300"></span>
-            </div>
-            <h2 className={`${playfair.className} font-serif text-3xl sm:text-5xl lg:text-[54px] font-normal tracking-tight text-neutral-900 leading-[1.08] mb-4`}>
-              {data.howItWorks?.title || "From Space to Retail Experience"}
-            </h2>
-            <p className="text-xs sm:text-sm lg:text-base text-neutral-500 font-light max-w-xl leading-relaxed">
-              We turn ordinary spaces into interactive environments that attract attention and bring your brand to life.
-            </p>
-          </div>
-
-          {/* Desktop Flow: Connected Wave Rail (lg and above) */}
-          <div className="hidden lg:block relative">
-            {/* Continuous undulating spline wave passing behind circle nodes */}
-            <div className="absolute left-0 right-0 top-0 h-14 pointer-events-none z-0">
-              <svg 
-                viewBox="0 0 1200 60" 
-                preserveAspectRatio="none" 
-                className="w-full h-full"
-                fill="none"
-              >
-                <path
-                  d="M 0 32 C 60 32, 90 28, 150 28 C 220 28, 250 42, 300 42 C 350 42, 380 28, 450 28 C 520 28, 550 42, 600 42 C 650 42, 680 28, 750 28 C 820 28, 850 42, 900 42 C 950 42, 980 28, 1050 28 C 1110 28, 1140 32, 1200 32"
-                  stroke="#D8D4CC"
-                  strokeWidth="1.25"
-                />
-              </svg>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
+            {/* Left Header Column */}
+            <div className="lg:col-span-4 xl:col-span-4 flex flex-col items-start">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
+                  {data.howItWorks?.label || "HOW IT WORKS"}
+                </span>
+                <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
+              </div>
+              <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-normal tracking-tight text-neutral-900 leading-[1.12] mb-4`}>
+                From Space to <br />
+                Retail Experience
+              </h2>
+              <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-sm">
+                We turn ordinary spaces into interactive environments that attract attention and bring your brand to life.
+              </p>
             </div>
 
-            {/* 4 Columns */}
-            <div className="grid grid-cols-4 gap-8 xl:gap-12 relative z-10">
-              {howItWorksSteps.map((step, idx) => {
-                const IconComponent = step.icon;
-                return (
-                  <div key={idx} className="group flex flex-col items-start">
-                    {/* Circle Node (Centered over the wave) */}
-                    <div className="w-14 h-14 rounded-full border border-neutral-300 bg-[#FAF8F5] flex items-center justify-center text-neutral-800 transition-all duration-300 group-hover:border-black group-hover:scale-105 shrink-0 shadow-[0_1px_3px_rgba(0,0,0,0.02)] z-10">
-                      <IconComponent className="w-5 h-5 text-neutral-800 stroke-[1.25] transition-transform duration-300 group-hover:scale-110" />
+            {/* Right Steps Grid */}
+            <div className="lg:col-span-8 xl:col-span-8 flex flex-col justify-between">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 pt-1">
+                {howItWorksSteps.map((step, idx) => (
+                  <div key={idx} className="flex flex-col items-start">
+                    <div className="flex items-center gap-2.5 mb-4">
+                      <span className={`${playfair.className} font-serif text-3xl lg:text-[34px] font-normal text-neutral-400 leading-none select-none`}>
+                        {step.num}
+                      </span>
+                      <span className="w-8 sm:w-10 h-[1px] bg-neutral-300"></span>
                     </div>
 
-                    {/* Giant Serif Number */}
-                    <span className={`${playfair.className} font-serif text-5xl sm:text-6xl lg:text-[68px] font-normal text-neutral-800/90 tracking-tight mt-7 mb-1 block select-none`}>
-                      {step.num}
-                    </span>
-
-                    {/* Step Title in Serif */}
-                    <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-3 group-hover:text-black transition-colors`}>
+                    <h3 className={`${playfair.className} font-serif text-base sm:text-lg font-normal text-neutral-900 leading-snug mb-2`}>
                       {step.title}
                     </h3>
 
-                    {/* Step Description */}
-                    <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed mb-6 max-w-[270px]">
+                    <p className="text-xs text-neutral-500 font-light leading-relaxed">
                       {step.desc}
                     </p>
-
-                    {/* Bottom Action Link */}
-                    <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-600 font-medium group-hover:text-black transition-colors mt-auto">
-                      <span>{step.action}</span>
-                      <span className="text-neutral-400 group-hover:text-black group-hover:translate-x-1 transition-all inline-block">&rarr;</span>
-                    </div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                ))}
+              </div>
 
-          {/* Mobile & Tablet Flow: Vertical Architectural Timeline (< lg) */}
-          <div className="lg:hidden relative pl-4 sm:pl-6">
-            {/* Vertical connector line */}
-            <div className="absolute left-[27px] sm:left-[35px] top-7 bottom-7 w-[1px] bg-neutral-300/80 z-0" />
-
-            <div className="space-y-12 relative z-10">
-              {howItWorksSteps.map((step, idx) => {
-                const IconComponent = step.icon;
-                return (
-                  <div key={idx} className="group flex items-start gap-5 sm:gap-6 relative">
-                    {/* Circle Node */}
-                    <div className="w-14 h-14 rounded-full border border-neutral-300 bg-[#FAF8F5] flex items-center justify-center text-neutral-800 shrink-0 z-10 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
-                      <IconComponent className="w-5 h-5 text-neutral-800 stroke-[1.25]" />
-                    </div>
-
-                    {/* Content */}
-                    <div className="pt-0 flex-1 min-w-0">
-                      <span className={`${playfair.className} font-serif text-4xl sm:text-5xl font-normal text-neutral-800/90 tracking-tight block mb-1`}>
-                        {step.num}
-                      </span>
-                      <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-2`}>
-                        {step.title}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed mb-4">
-                        {step.desc}
-                      </p>
-                      <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-600 font-medium">
-                        <span>{step.action}</span>
-                        <span className="text-neutral-400">&rarr;</span>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+              {/* Undulating Curve with terminating dot */}
+              <div className="hidden lg:block mt-12 w-full">
+                <svg 
+                  viewBox="0 0 900 60" 
+                  fill="none" 
+                  className="w-full h-10 overflow-visible"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M 20 20 C 140 20, 200 48, 320 46 C 440 44, 520 22, 640 24 C 740 26, 820 40, 880 34"
+                    stroke="#D8D3C8"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="880" cy="34" r="2.5" fill="#171717" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 7: BENEFITS & OUTCOMES */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-[#FAF9F5] text-black">
-        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 sm:mb-16">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
-              WHY IT WORKS
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
-              {data.benefits.title}
-            </h2>
+      {/* SECTION 7: WHY IT WORKS (Matching Reference Design) */}
+      <section className="py-20 sm:py-24 lg:py-28 bg-[#030508] text-white relative overflow-hidden">
+        {/* Ambient Glow and Optical Cyan Crescent Arc */}
+        <div className="absolute top-0 right-0 w-[55%] h-full pointer-events-none overflow-hidden select-none">
+          <div 
+            className="absolute -top-20 right-0 w-[600px] h-[550px] rounded-full blur-[140px] opacity-25 pointer-events-none"
+            style={{
+              background: "radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, rgba(3, 105, 161, 0.2) 45%, transparent 70%)"
+            }}
+          />
+          <svg 
+            viewBox="0 0 700 450" 
+            fill="none" 
+            className="w-full h-full object-cover"
+            preserveAspectRatio="xMaxYMin meet"
+          >
+            <defs>
+              <filter id="arcGlow7" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="5" result="blur1" />
+                <feGaussianBlur stdDeviation="14" result="blur2" />
+                <feMerge>
+                  <feMergeNode in="blur2" />
+                  <feMergeNode in="blur1" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <linearGradient id="arcGlowGrad" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.95" />
+                <stop offset="25%" stopColor="#38bdf8" stopOpacity="0.85" />
+                <stop offset="65%" stopColor="#0284c7" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#0369a1" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient id="arcSoftGrad7" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.35" />
+                <stop offset="50%" stopColor="#0284c7" stopOpacity="0.12" />
+                <stop offset="100%" stopColor="#0369a1" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M 680 -40 C 560 60, 410 180, 320 380 C 290 440, 270 480, 250 520"
+              stroke="url(#arcSoftGrad7)"
+              strokeWidth="32"
+              strokeLinecap="round"
+              filter="url(#arcGlow7)"
+            />
+            <path
+              d="M 680 -40 C 560 60, 410 180, 320 380 C 290 440, 270 480, 250 520"
+              stroke="url(#arcGlowGrad)"
+              strokeWidth="2"
+              strokeLinecap="round"
+              filter="url(#arcGlow7)"
+            />
+          </svg>
+        </div>
+
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header Row */}
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16 sm:mb-20">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-[1.5px] h-3.5 bg-neutral-400 inline-block"></span>
+                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
+                  WHY IT WORKS
+                </span>
+              </div>
+              <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-normal tracking-tight text-white leading-[1.12]`}>
+                Benefits for Retailers <br className="hidden sm:inline" />
+                and Shoppers
+              </h2>
+            </div>
+
+            <div className="flex items-start gap-4 lg:pt-8 max-w-md">
+              <span className="w-10 sm:w-12 h-[1px] bg-neutral-700 shrink-0 mt-2.5"></span>
+              <p className="text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
+                Interactive experiences help you create stronger connections, increase engagement and turn more visitors into customers.
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          {/* 4 Columns with Thin Hairline Dividers */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
             {data.benefits.items.map((item, idx) => (
-              <div key={idx} className="space-y-2">
-                <span className="text-xs font-mono font-bold text-neutral-400 block tracking-wider">
+              <div 
+                key={idx} 
+                className={`flex flex-col ${
+                  idx === 0 
+                    ? "lg:pr-8 xl:pr-10" 
+                    : "lg:border-l lg:border-white/10 lg:pl-8 xl:pl-10"
+                }`}
+              >
+                <span className={`${playfair.className} font-serif text-base sm:text-lg text-neutral-400 block mb-2`}>
                   0{idx + 1}
                 </span>
-                <h3 className="text-base sm:text-lg font-bold tracking-tight text-neutral-900 leading-snug">
+                <h3 className={`${playfair.className} font-serif text-base sm:text-lg font-normal text-white leading-snug mb-2`}>
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
+                <p className="text-xs text-neutral-400 font-light leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -591,41 +648,104 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 8: TECHNOLOGY BEHIND THE EXPERIENCE */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white text-black">
-        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 sm:mb-16">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
-              THE TECHNOLOGY
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
-              {data.technology.title}
-            </h2>
-          </div>
+      {/* SECTION 8: THE TECHNOLOGY (Matching Reference Design) */}
+      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black relative overflow-hidden">
+        {/* Right 3D Parametric Ribs Vector Art */}
+        <div className="absolute top-0 right-0 w-[42%] h-full pointer-events-none overflow-hidden select-none hidden md:block">
+          <svg
+            viewBox="0 0 500 500"
+            fill="none"
+            className="w-full h-full object-cover object-right"
+            preserveAspectRatio="xMaxYMid meet"
+          >
+            <defs>
+              <linearGradient id="finGrad1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#F7F6F3" stopOpacity="0.4" />
+                <stop offset="50%" stopColor="#E5E0D7" stopOpacity="0.75" />
+                <stop offset="100%" stopColor="#F9F8F6" stopOpacity="0.2" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M 520 20 C 440 80, 390 180, 400 320 C 410 420, 480 500, 520 540"
+              fill="url(#finGrad1)"
+              opacity="0.9"
+            />
+            <path
+              d="M 530 60 C 460 120, 420 210, 430 330 C 440 420, 490 490, 530 520"
+              stroke="#E2DDD5"
+              strokeWidth="24"
+              strokeLinecap="round"
+              opacity="0.8"
+            />
+            <path
+              d="M 540 100 C 480 160, 445 240, 455 340 C 465 420, 505 475, 540 500"
+              stroke="#DCD6CC"
+              strokeWidth="18"
+              strokeLinecap="round"
+              opacity="0.85"
+            />
+            <path
+              d="M 550 140 C 500 195, 470 265, 480 350 C 490 415, 520 460, 550 480"
+              stroke="#E7E2D9"
+              strokeWidth="14"
+              strokeLinecap="round"
+              opacity="0.85"
+            />
+            <path
+              d="M 560 180 C 520 230, 495 290, 502 360 C 510 410, 535 445, 560 460"
+              stroke="#EDE9E1"
+              strokeWidth="10"
+              strokeLinecap="round"
+              opacity="0.8"
+            />
+            <path
+              d="M 570 220 C 538 260, 518 310, 524 370 C 530 405, 548 430, 570 440"
+              stroke="#F2EFEB"
+              strokeWidth="6"
+              strokeLinecap="round"
+              opacity="0.8"
+            />
+          </svg>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {data.technology.items.map((item, idx) => {
-              const IconComponent = techIcons[idx % techIcons.length];
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
+            {/* Left Header Column */}
+            <div className="lg:col-span-4 xl:col-span-4 flex flex-col items-start">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
+                  THE TECHNOLOGY
+                </span>
+                <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
+              </div>
+              <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-normal tracking-tight text-neutral-900 leading-[1.12] mb-4`}>
+                Technology Built for <br />
+                Retail Spaces
+              </h2>
+              <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-sm">
+                We combine projection, sensors, software and content to create interactive experiences that work in real spaces.
+              </p>
+            </div>
 
-              return (
-                <div key={idx} className="space-y-3">
-                  <div className="flex items-center gap-2.5">
-                    <IconComponent className="w-5 h-5 text-black shrink-0" strokeWidth={1.5} />
-                    <span className="text-xs font-mono font-bold text-neutral-400">
-                      0{idx + 1}
-                    </span>
-                  </div>
-
-                  <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              );
-            })}
+            {/* Right 3x2 Grid */}
+            <div className="lg:col-span-8 xl:col-span-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 xl:gap-x-10 gap-y-10 lg:gap-y-12">
+                {retailTechItems.map((item, idx) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <div key={idx} className="flex flex-col items-start">
+                      <IconComponent className="w-5 h-5 text-neutral-800 stroke-[1.5] mb-3" />
+                      <h3 className={`${playfair.className} font-serif text-base sm:text-lg font-normal text-neutral-900 leading-snug mb-1.5`}>
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-neutral-500 font-light leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </section>
