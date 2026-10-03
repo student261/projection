@@ -91,16 +91,21 @@ export const retail: IndustryData = {
     label: "SEE IT IN CONTEXT",
     title: "How Retailers Use These Solutions",
     intro: "This industry connects to two of our use cases:",
+    description: "From window displays to in-store experiences, these solutions help retailers attract attention, increase engagement and turn more visitors into customers.",
     items: [
       {
-        title: "Retail Experiences",
-        desc: "The core experience of turning a store, window or showroom into a space shoppers stop and explore.",
+        num: "01",
+        tag: "RETAIL EXPERIENCES",
+        title: "Interactive Stores & Showrooms",
+        desc: "Turn shop windows, floors and showrooms into spaces shoppers stop, play and explore, with interactive surfaces, immersive displays, AI and games.",
         href: "/use-cases/retail-experiences",
         cta: "Explore Retail Experiences"
       },
       {
-        title: "Brand Activations",
-        desc: "Campaign and launch moments people take part in, often run as a pop up or seasonal activation inside a retail space.",
+        num: "02",
+        tag: "BRAND ACTIVATIONS",
+        title: "Campaigns & Experiential Launches",
+        desc: "Bring campaigns to life with interactive installations, immersive spaces and real-time engagement that get people involved - and keep them coming back.",
         href: "/use-cases/brand-activations",
         cta: "Explore Brand Activations"
       }

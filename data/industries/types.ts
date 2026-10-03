@@ -33,7 +33,15 @@ export interface IndustryCTA {
 }
 
 export interface IndustryHowItWorksStep { num: string; title: string; desc: string; }
-export interface IndustryUseCase { title: string; desc: string; href: string; cta: string; img?: string; }
+export interface IndustryUseCase {
+  title: string;
+  desc: string;
+  href: string;
+  cta: string;
+  img?: string;
+  num?: string;
+  tag?: string;
+}
 export interface IndustryWhyChooseItem { title: string; desc: string; }
 
 export interface IndustryData {
@@ -50,7 +58,7 @@ export interface IndustryData {
   caseStudies?: IndustryCaseStudy[];
   cta?: IndustryCTA;
   howItWorks?: { label: string; title: string; steps: IndustryHowItWorksStep[]; };
-  useCases?: { label: string; title: string; intro: string; items: IndustryUseCase[]; };
+  useCases?: { label: string; title: string; intro: string; description?: string; items: IndustryUseCase[]; };
   whyChooseUs?: { label: string; title: string; items: IndustryWhyChooseItem[]; };
 }
 
