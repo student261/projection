@@ -750,80 +750,104 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 9: HOW WE DELIVER */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-[#F8F6F2] text-black">
+      {/* SECTION 9: HOW WE DELIVER (Architectural Delivery Process Rail) */}
+      <section className="py-20 sm:py-24 lg:py-28 bg-[#FAF8F5] text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 sm:mb-16">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
-              OUR PROCESS
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
+          <div className="max-w-3xl mb-14 sm:mb-16 lg:mb-20">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
+                OUR PROCESS
+              </span>
+              <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
+            </div>
+            <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-normal tracking-tight text-neutral-900 leading-[1.12] mb-4`}>
               How We Deliver Every Retail Installation
             </h2>
+            <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-xl">
+              From preliminary space surveying through on-site hardware commissioning and post-launch staff enablement.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-            {deliveryStages.map((stage, idx) => (
-              <div key={idx} className="group flex flex-col space-y-4">
-                <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-neutral-200">
-                  <SafeImage
-                    src={stage.img}
-                    alt={stage.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    containerClassName="w-full h-full"
-                  />
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 relative">
+            {/* Desktop continuous architectural rail connecting the nodes */}
+            <div className="hidden md:block absolute top-[28px] left-[12%] right-[12%] h-[1px] bg-neutral-200 z-0" />
 
-                <div className="space-y-1.5 pt-1">
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-500 block">
+            {deliveryStages.map((stage, idx) => (
+              <div key={idx} className="flex flex-col items-start relative z-10">
+                <div className="flex items-center gap-3.5 mb-5">
+                  <div className="w-14 h-14 rounded-full border border-neutral-300 bg-[#FAF8F5] flex items-center justify-center text-neutral-800 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
+                    <span className={`${playfair.className} font-serif text-xl font-normal text-neutral-900`}>
+                      0{idx + 1}
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
                     {stage.stage}
                   </span>
-                  <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug group-hover:text-black transition-colors">
-                    {stage.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
-                    {stage.desc}
-                  </p>
                 </div>
+
+                <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-2`}>
+                  {stage.title}
+                </h3>
+
+                <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">
+                  {stage.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 10: WHY CHOOSE PROJECTION (Matching Reference Design) */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black">
+      {/* SECTION 10: WHY CHOOSE PROJECTION (Editorial Architectural Showcase) */}
+      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black border-t border-neutral-100">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Eyebrow & Heading */}
           <div className="max-w-3xl mb-14 sm:mb-16 lg:mb-20">
-            <span className="text-[11px] sm:text-xs font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-3.5">
-              {data.whyChooseUs?.label || "WHY PROJECTION"}
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-neutral-900 leading-[1.12]">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
+                {data.whyChooseUs?.label || "WHY PROJECTION"}
+              </span>
+              <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
+            </div>
+            <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-normal tracking-tight text-neutral-900 leading-[1.12] mb-4`}>
               {data.whyChooseUs?.title || "Why Retailers Choose Projection"}
             </h2>
+            <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-xl">
+              Engineered specifically for the demands of retail: autonomous content management, unified multi-format hardware, and launch-date dependability.
+            </p>
           </div>
 
-          {/* 3 Columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 xl:gap-16">
+          {/* 3 Columns separated by fine vertical hairlines */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0">
             {data.whyChooseUs?.items.map((item, idx) => {
               const icons = [Layers, Monitor, Calendar];
               const IconComponent = icons[idx % icons.length];
 
               return (
-                <div key={idx} className="flex flex-col items-start">
-                  <div className="flex items-center gap-2.5 mb-3.5">
-                    <IconComponent className="w-5 h-5 text-neutral-900 shrink-0" strokeWidth={1.5} />
-                    <span className="text-xs font-mono font-medium text-neutral-400">
-                      0{idx + 1}
-                    </span>
+                <div 
+                  key={idx} 
+                  className={`flex flex-col ${
+                    idx === 0 
+                      ? "md:pr-8 lg:pr-12 xl:pr-14" 
+                      : "md:border-l md:border-neutral-200/80 md:pl-8 lg:pl-12 xl:pl-14"
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-neutral-100">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full border border-neutral-200 bg-neutral-50 flex items-center justify-center text-neutral-800 shrink-0">
+                        <IconComponent className="w-5 h-5 text-neutral-800 stroke-[1.5]" />
+                      </div>
+                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
+                        0{idx + 1}
+                      </span>
+                    </div>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-neutral-900 tracking-tight leading-snug mb-2.5">
+                  <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-2.5`}>
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-sm">
+                  <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
