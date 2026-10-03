@@ -149,9 +149,9 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
         </div>
 
         {/* Architectural 3-Column Challenge Grid */}
-        <div className="bg-white py-12 sm:py-16 lg:py-20 text-black">
+        <div className="bg-white pt-8 sm:pt-10 lg:pt-12 pb-12 sm:pb-14 lg:pb-16 text-black">
           <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 xl:gap-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-8 sm:gap-y-10">
               {industry.challenges.items.map((item, idx) => {
                 const challengeIcons = [Users, Target, Compass, Layers, Activity, Sparkles];
                 const IconComponent = challengeIcons[idx % challengeIcons.length];
@@ -159,15 +159,10 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
 
                 return (
                   <div key={idx} className="flex flex-col">
-                    <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-neutral-100">
-                      <div className="flex items-center gap-2.5">
-                        <IconComponent className="w-4 h-4 text-neutral-800 stroke-[1.75]" />
-                        <span className="font-mono text-xs font-semibold text-neutral-400">
-                          {itemNum}
-                        </span>
-                      </div>
-                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
-                        CHALLENGE
+                    <div className="flex items-center gap-2 mb-2.5">
+                      <IconComponent className="w-4 h-4 text-neutral-800 stroke-[1.75]" />
+                      <span className="font-mono text-xs font-semibold text-neutral-400">
+                        {itemNum}
                       </span>
                     </div>
 

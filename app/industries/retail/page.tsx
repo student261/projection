@@ -256,9 +256,9 @@ export default function RetailIndustryPage() {
         </div>
 
         {/* Architectural 3-Column Challenge Grid */}
-        <div className="bg-white py-12 sm:py-16 lg:py-20 text-black">
+        <div className="bg-white pt-8 sm:pt-10 lg:pt-12 pb-12 sm:pb-14 lg:pb-16 text-black">
           <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 xl:gap-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-8 sm:gap-y-10">
               {data.challenges.items.map((item, idx) => {
                 const challengeIcons = [Users, Clock, Globe, Layers, BarChart3, Sparkles];
                 const IconComponent = challengeIcons[idx % challengeIcons.length];
@@ -266,15 +266,10 @@ export default function RetailIndustryPage() {
 
                 return (
                   <div key={idx} className="flex flex-col">
-                    <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-neutral-100">
-                      <div className="flex items-center gap-2.5">
-                        <IconComponent className="w-4 h-4 text-neutral-800 stroke-[1.75]" />
-                        <span className="font-mono text-xs font-semibold text-neutral-400">
-                          {itemNum}
-                        </span>
-                      </div>
-                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
-                        CHALLENGE
+                    <div className="flex items-center gap-2 mb-2.5">
+                      <IconComponent className="w-4 h-4 text-neutral-800 stroke-[1.75]" />
+                      <span className="font-mono text-xs font-semibold text-neutral-400">
+                        {itemNum}
                       </span>
                     </div>
 
@@ -294,7 +289,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 3: OUR VISION */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black border-b border-neutral-100">
+      <section className="py-12 sm:py-14 lg:py-16 bg-white text-black border-b border-neutral-100">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 space-y-4">
@@ -331,9 +326,9 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 4: APPLICABLE SOLUTIONS FOR RETAIL */}
-      <section id="solutions" className="py-14 sm:py-16 lg:py-20 bg-white text-black scroll-mt-20">
+      <section id="solutions" className="py-12 sm:py-14 lg:py-16 bg-white text-black scroll-mt-20">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 sm:pb-8 border-b border-black/15 mb-8 sm:mb-10">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 sm:pb-8 border-b border-black/15 mb-8">
             <div className="max-w-2xl">
               <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-2.5">
                 SOLUTIONS FOR YOUR SPACE
@@ -385,7 +380,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 5: RELATED USE CASES */}
-      <section className="relative w-full overflow-hidden bg-black text-white py-12 sm:py-16 lg:py-20">
+      <section className="relative w-full overflow-hidden bg-black text-white py-12 sm:py-14 lg:py-16">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <SafeImage
             src="/images/retail_interactive_showcase.jpg"
@@ -397,7 +392,7 @@ export default function RetailIndustryPage() {
         </div>
 
         <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-10 sm:mb-12">
+          <div className="max-w-3xl mb-8 sm:mb-10">
             <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.2em] text-neutral-400 uppercase block mb-2 sm:mb-3">
               {data.useCases?.label || "SEE IT IN CONTEXT"}
             </span>
@@ -443,7 +438,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 5B: EXPERIENCE IDEAS (Curved 3D Carousel) */}
-      <section id="experiences" className="pt-14 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20 bg-black text-white overflow-hidden scroll-mt-24">
+      <section id="experiences" className="pt-12 sm:pt-14 lg:pt-16 pb-12 sm:pb-14 lg:pb-16 bg-black text-white overflow-hidden scroll-mt-24">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-2 sm:mb-3">
           <div className="max-w-3xl">
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-white/60 uppercase block mb-2">
@@ -464,7 +459,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 6: HOW IT WORKS (Matching Reference Design) */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
             {/* Left Header Column */}
@@ -530,7 +525,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 7: WHY IT WORKS (Matching Reference Design) */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-[#030508] text-white relative overflow-hidden">
+      <section className="py-14 sm:py-16 lg:py-20 bg-[#030508] text-white relative overflow-hidden">
         {/* Ambient Glow and Optical Cyan Crescent Arc */}
         <div className="absolute top-0 right-0 w-[55%] h-full pointer-events-none overflow-hidden select-none">
           <div 
@@ -586,7 +581,7 @@ export default function RetailIndustryPage() {
 
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header Row */}
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16 sm:mb-20">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-10 sm:mb-12">
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-[1.5px] h-3.5 bg-neutral-400 inline-block"></span>
@@ -635,7 +630,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 8: THE TECHNOLOGY (Matching Reference Design) */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white text-black relative overflow-hidden">
         {/* Right 3D Parametric Ribs Vector Art */}
         <div className="absolute top-0 right-0 w-[42%] h-full pointer-events-none overflow-hidden select-none hidden md:block">
           <svg
@@ -737,7 +732,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 9: HOW WE DELIVER */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black border-t border-neutral-100">
+      <section className="py-12 sm:py-14 lg:py-16 bg-white text-black border-t border-neutral-100">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-6 sm:mb-8">
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
@@ -781,10 +776,10 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 10: WHY CHOOSE PROJECTION (Editorial Architectural Showcase) */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black border-t border-neutral-100">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white text-black border-t border-neutral-100">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Eyebrow & Heading */}
-          <div className="max-w-3xl mb-14 sm:mb-16 lg:mb-20">
+          <div className="max-w-3xl mb-8 sm:mb-10 lg:mb-12">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
                 {data.whyChooseUs?.label || "WHY PROJECTION"}
@@ -840,9 +835,9 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 11: FAQ */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black border-t border-neutral-100">
+      <section className="py-12 sm:py-14 lg:py-16 bg-white text-black border-t border-neutral-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-10">
+          <div className="text-center mb-6 sm:mb-8">
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
               COMMON QUESTIONS
             </span>
@@ -858,7 +853,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 12: FINAL CTA */}
-      <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-black text-white">
+      <section className="relative py-14 sm:py-16 lg:py-20 overflow-hidden bg-black text-white">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <SafeImage
             src={data.cta?.img || "/images/industry_retail_hero.jpg"}
