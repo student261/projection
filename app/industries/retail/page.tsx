@@ -28,8 +28,7 @@ import {
   Shield,
   Users,
   Clock,
-  Globe,
-  ShoppingBag
+  Globe
 } from "lucide-react";
 import FAQAccordion from "../[slug]/FAQAccordion";
 import Curved3DCarousel from "@/components/Curved3DCarousel";
@@ -380,10 +379,20 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 5: RELATED USE CASES (Clean Architectural Split) */}
-      <section className="relative w-full bg-black text-white py-12 sm:py-14 lg:py-16 border-t border-b border-neutral-900">
-        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-10 sm:mb-12">
+      {/* SECTION 5: RELATED USE CASES */}
+      <section className="relative w-full overflow-hidden bg-black text-white py-12 sm:py-14 lg:py-16">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <SafeImage
+            src="/images/retail_interactive_showcase.jpg"
+            alt="Retail Experiences and Brand Activations"
+            className="w-full h-full object-cover opacity-20"
+            containerClassName="w-full h-full bg-black"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black pointer-events-none" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-8 sm:mb-10">
             <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
               {data.useCases?.label || "SEE IT IN CONTEXT"}
             </span>
@@ -395,50 +404,32 @@ export default function RetailIndustryPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
-            {data.useCases?.items.map((item, idx) => {
-              const icons = [ShoppingBag, Sparkles];
-              const IconComponent = icons[idx % icons.length];
-              const itemNum = String(idx + 1).padStart(2, "0");
-
-              return (
-                <div
-                  key={idx}
-                  className={`flex flex-col justify-between ${
-                    idx === 0
-                      ? "md:pr-10 lg:pr-16"
-                      : "md:border-l md:border-neutral-800 md:pl-10 lg:pl-16"
-                  }`}
-                >
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-2.5 mb-2">
-                      <IconComponent className="w-5 h-5 text-neutral-300 stroke-[1.5]" />
-                      <span className="font-mono text-xs font-semibold text-neutral-500">
-                        {itemNum}
-                      </span>
-                    </div>
-
-                    <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-sm sm:text-base text-neutral-400 font-light leading-relaxed max-w-xl">
-                      {item.desc}
-                    </p>
-                  </div>
-
-                  <div>
-                    <Link
-                      href={item.href}
-                      className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-white hover:text-neutral-300 transition-colors group"
-                    >
-                      <span>{item.cta}</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
-                    </Link>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            {data.useCases?.items.map((item, idx) => (
+              <div 
+                key={idx} 
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-9 flex flex-col justify-between hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 backdrop-blur-md group"
+              >
+                <div className="space-y-3 mb-6">
+                  <h3 className="text-xl sm:text-2xl lg:text-[26px] font-bold text-white tracking-tight leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm lg:text-[15px] text-neutral-300 font-light leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-              );
-            })}
+
+                <div>
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white hover:text-white/80 transition-colors"
+                  >
+                    <span>{item.cta}</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
