@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -801,8 +802,8 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 10: WHY CHOOSE PROJECTION (Matching Circular Reference Design without Numbering) */}
-      <section className="py-14 sm:py-18 lg:py-24 bg-[#f8f7f4] text-black border-t border-black/5 overflow-hidden">
+      {/* SECTION 10: WHY CHOOSE PROJECTION (Pure White Background with Elegant Spaced Circles) */}
+      <section className="py-14 sm:py-18 lg:py-24 bg-white text-black border-t border-neutral-100 overflow-hidden">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Eyebrow & Heading */}
           <div className="max-w-3xl mb-12 sm:mb-16 lg:mb-20">
@@ -820,18 +821,18 @@ export default function RetailIndustryPage() {
             </p>
           </div>
 
-          {/* 3 Circular Cards with Connecting Arcs (No numbering) */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8 xl:gap-12 items-center justify-items-center">
+          {/* 3 Circular Cards with Connecting Arcs (Pure White Background, No Numbering, Spacious Layout) */}
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0 max-w-6xl mx-auto">
             {data.whyChooseUs?.items.map((item, idx) => {
               const icons = [Layers, Monitor, Calendar];
               const IconComponent = icons[idx % icons.length];
 
               return (
-                <div key={idx} className="relative w-full flex justify-center">
+                <Fragment key={idx}>
                   {/* Circular Card */}
-                  <div className="w-[300px] sm:w-[330px] lg:w-[310px] xl:w-[360px] aspect-square rounded-full border border-black/15 bg-white/70 hover:bg-white hover:border-black/30 hover:shadow-xl transition-all duration-300 p-7 sm:p-9 xl:p-11 flex flex-col justify-between items-center text-center group">
+                  <div className="w-[280px] sm:w-[320px] lg:w-[270px] xl:w-[310px] 2xl:w-[330px] aspect-square rounded-full border border-neutral-300 bg-white hover:border-black/40 hover:shadow-lg transition-all duration-300 p-6 sm:p-8 xl:p-9 flex flex-col justify-between items-center text-center group shrink-0">
                     {/* Top: Icon (No numbering) */}
-                    <div className="w-9 h-9 rounded-full border border-neutral-300/80 bg-neutral-100/60 flex items-center justify-center text-neutral-800 shrink-0 mt-1">
+                    <div className="w-9 h-9 rounded-full border border-neutral-200 bg-neutral-50 flex items-center justify-center text-neutral-800 shrink-0 mt-1 group-hover:border-neutral-300 transition-colors">
                       <IconComponent className="w-4 h-4 stroke-[1.75]" />
                     </div>
 
@@ -861,16 +862,21 @@ export default function RetailIndustryPage() {
                     </div>
                   </div>
 
-                  {/* Curved Connecting Arc (Between Circle 1 & 2, and Circle 2 & 3 on desktop) */}
-                  {idx < 2 && (
-                    <div className="hidden lg:block absolute -right-5 xl:-right-7 top-1/2 -translate-y-1/2 w-10 xl:w-14 h-8 pointer-events-none z-10">
-                      <svg viewBox="0 0 60 30" fill="none" className="w-full h-full text-neutral-400">
-                        <path d="M 4 24 C 22 6, 38 6, 52 17" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-                        <circle cx="54" cy="18" r="2" fill="currentColor" />
+                  {/* Connecting Arc between circles (Visible only on desktop lg+) */}
+                  {idx < (data.whyChooseUs?.items.length || 3) - 1 && (
+                    <div className="hidden lg:flex items-center justify-center flex-1 max-w-[90px] xl:max-w-[130px] px-2 xl:px-4 shrink-0 self-center">
+                      <svg viewBox="0 0 100 40" fill="none" className="w-full h-auto text-neutral-400">
+                        <path
+                          d="M 8 30 C 32 8, 68 8, 88 22"
+                          stroke="currentColor"
+                          strokeWidth="1.2"
+                          strokeLinecap="round"
+                        />
+                        <circle cx="91" cy="23" r="2.5" fill="currentColor" />
                       </svg>
                     </div>
                   )}
-                </div>
+                </Fragment>
               );
             })}
           </div>
