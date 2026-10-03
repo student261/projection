@@ -12,6 +12,7 @@ export const education: IndustryData = {
   },
   challenges: {
     title: "Creating More Interactive Learning Spaces",
+    img: "/images/education_challenge_banner.jpg",
     intro: "The challenge is to turn traditional learning environments into dynamic, interactive spaces that inspire curiosity, participation and real engagement.",
     items: [
       { title: "Keeping Students Engaged", desc: "Traditional lessons make it hard to hold attention through a full class period." },

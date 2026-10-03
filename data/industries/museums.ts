@@ -12,6 +12,7 @@ export const museums: IndustryData = {
   },
   challenges: {
     title: "The Challenge in Museums",
+    img: "/images/museum_history_hall.jpg",
     intro: "Modern visitors, especially younger generations, expect more than just static displays. They want to be part of the story, but preserving delicate artifacts while providing deep interaction is a complex balance.",
     items: [
       { title: "Static Exhibitions", desc: "Traditional plaques and glass cases struggle to hold the attention of digital-native visitors." },

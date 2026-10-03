@@ -12,6 +12,8 @@ export const retail: IndustryData = {
   },
   challenges: {
     title: "The Challenge in Modern Retail",
+    intro: "Traditional store windows and static merchandising struggle to capture foot traffic and convert digital-native shoppers.",
+    img: "/images/retail_challenge_banner.jpg",
     items: [
       { title: "Declining Foot Traffic", desc: "Static windows and displays don't hold attention the way they used to." },
       { title: "Short Dwell Times", desc: "Shoppers move through stores quickly, with limited time spent engaging with any one brand." },

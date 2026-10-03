@@ -12,6 +12,7 @@ export const healthcare: IndustryData = {
   },
   challenges: {
     title: "The Challenge in Healthcare",
+    img: "/images/healthcare_pediatric_waiting.jpg",
     intro: "Medical facilities often feel intimidating, leading to anxiety in patients, especially children. Traditional waiting areas and therapy rooms lack engaging elements to distract and calm patients during stressful times.",
     items: [
       { title: "High Patient Anxiety", desc: "Clinical environments can be frightening and stressful for young patients and their families." },

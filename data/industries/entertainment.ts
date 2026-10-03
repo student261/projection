@@ -12,6 +12,7 @@ export const entertainment: IndustryData = {
   },
   challenges: {
     title: "The Challenge in Entertainment",
+    img: "/images/entertainment_interactive_arena.jpg",
     intro: "Family Entertainment Centers (FECs), trampoline parks, and arcades face constant pressure to offer new, exciting attractions that encourage physical play and drive repeat visits.",
     items: [
       { title: "Stale Attractions", desc: "Traditional physical play structures quickly lose their novelty after a few visits." },

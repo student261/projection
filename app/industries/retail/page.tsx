@@ -25,7 +25,10 @@ import {
   Crosshair,
   SunMedium,
   BarChart3,
-  Shield
+  Shield,
+  Users,
+  Clock,
+  Globe
 } from "lucide-react";
 import FAQAccordion from "../[slug]/FAQAccordion";
 import Curved3DCarousel from "@/components/Curved3DCarousel";
@@ -215,13 +218,13 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 2: THE CHALLENGE (Dark Banner Header + Numbered Grid) */}
+      {/* SECTION 2: THE CHALLENGE (Dark Banner Header + Modern Architectural Grid) */}
       <section className="w-full">
         {/* Top Dark Header Banner */}
         <div className="relative w-full overflow-hidden bg-black text-white py-8 sm:py-10 lg:py-12 flex items-center">
           <div className="absolute inset-0 z-0">
             <SafeImage
-              src={data.hero.img}
+              src={data.challenges.img || "/images/retail_challenge_banner.jpg"}
               alt={data.challenges.title}
               className="w-full h-full object-cover opacity-40"
               containerClassName="w-full h-full bg-black"
@@ -242,57 +245,46 @@ export default function RetailIndustryPage() {
                   <span className="font-extrabold block">{data.challenges.title}</span>
                 </h2>
               </div>
+
+              <div className="lg:max-w-md xl:max-w-lg lg:text-left">
+                <p className="text-xs sm:text-sm lg:text-[14px] text-white/80 font-light leading-relaxed">
+                  {data.challenges.intro || "Traditional store windows and static merchandising struggle to capture foot traffic and convert digital-native shoppers."}
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* 2-Column Challenge Grid */}
-        <div className="bg-white pt-8 pb-12 sm:pt-9 sm:pb-16 text-black">
+        {/* Architectural 3-Column Challenge Grid */}
+        <div className="bg-white py-12 sm:py-16 lg:py-20 text-black">
           <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 xl:gap-14">
               {data.challenges.items.map((item, idx) => {
-                const isLeftColumn = idx % 2 === 0;
-                const rowIndex = Math.floor(idx / 2);
-                const isFirstRow = rowIndex === 0;
-                const totalRows = Math.ceil(data.challenges.items.length / 2);
-                const isLastRow = rowIndex === totalRows - 1;
-                const isLastItem = idx === data.challenges.items.length - 1;
+                const challengeIcons = [Users, Clock, Globe, Layers, BarChart3, Sparkles];
+                const IconComponent = challengeIcons[idx % challengeIcons.length];
+                const itemNum = String(idx + 1).padStart(2, "0");
 
                 return (
-                  <div
-                    key={idx}
-                    className={`flex items-start gap-3.5 sm:gap-5 ${
-                      isLeftColumn
-                        ? "pr-0 lg:pr-10 xl:pr-12 lg:border-r border-neutral-200"
-                        : "pl-0 lg:pl-10 xl:pl-12"
-                    } ${
-                      isFirstRow
-                        ? "pt-0 pb-6 sm:pb-7 lg:pb-8"
-                        : isLastRow
-                        ? "pt-6 sm:pt-7 lg:pt-8 pb-0"
-                        : "py-6 sm:py-7 lg:py-8"
-                    } ${
-                      !isLastRow
-                        ? "border-b border-neutral-200"
-                        : !isLastItem
-                        ? "max-lg:border-b max-lg:border-neutral-200"
-                        : ""
-                    }`}
-                  >
-                    {/* Number Badge */}
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full shrink-0 flex items-center justify-center bg-neutral-100 text-neutral-600">
-                      <span className="text-sm sm:text-base font-bold font-mono">0{idx + 1}</span>
+                  <div key={idx} className="flex flex-col">
+                    <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-neutral-100">
+                      <div className="flex items-center gap-2.5">
+                        <IconComponent className="w-4 h-4 text-neutral-800 stroke-[1.75]" />
+                        <span className="font-mono text-xs font-semibold text-neutral-400">
+                          {itemNum}
+                        </span>
+                      </div>
+                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
+                        CHALLENGE
+                      </span>
                     </div>
 
-                    {/* Content */}
-                    <div className="flex-1 min-w-0 space-y-1">
-                      <h3 className="text-base sm:text-[17px] lg:text-lg font-bold text-neutral-900 tracking-tight leading-snug">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs sm:text-[13px] text-neutral-500 font-normal leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
+                    <h3 className="text-base sm:text-[17px] lg:text-lg font-bold text-neutral-900 tracking-tight leading-snug mb-2">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-xs sm:text-[13px] text-neutral-500 font-light leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
                 );
               })}

@@ -12,6 +12,7 @@ export const hospitality: IndustryData = {
   },
   challenges: {
     title: "The Challenge in Hospitality",
+    img: "/images/hospitality_ambient_atrium.jpg",
     intro: "Luxury hotels and resorts are constantly searching for ways to differentiate their properties and create memorable 'wow' moments that guests want to capture and share.",
     items: [
       { title: "First Impressions", desc: "The lobby experience sets the tone for the entire stay, yet many lobbies feel static and uninspiring." },

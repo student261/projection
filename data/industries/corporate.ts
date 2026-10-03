@@ -12,6 +12,7 @@ export const corporate: IndustryData = {
   },
   challenges: {
     title: "The Challenge in Corporate Spaces",
+    img: "/images/corporate_interactive_showcase.jpg",
     intro: "Corporate headquarters and executive briefing centers are critical tools for closing enterprise deals, recruiting top talent, and communicating brand vision, but they often rely on outdated presentation methods.",
     items: [
       { title: "Static Presentations", desc: "PowerPoint presentations fail to capture the scale, innovation, and dynamic nature of modern enterprise solutions." },

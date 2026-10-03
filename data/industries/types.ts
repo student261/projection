@@ -40,7 +40,7 @@ export interface IndustryData {
   slug: string;
   icon: any; // Using any for icon import ease
   hero: { eyebrow: string; title: string; subtitle: string; img: string; };
-  challenges: { title: string; intro?: string; items: IndustryChallenge[]; transition?: string; };
+  challenges: { title: string; intro?: string; items: IndustryChallenge[]; transition?: string; img?: string; };
   vision: { title: string; intro: string; statement?: string; pillars?: IndustryVisionPillar[]; transition?: string; quote: string; img?: string; };
   solutions: { title: string; intro?: string; items: IndustrySolution[]; bottomStatement?: string; };
   experiences: { title: string; intro: string; items: IndustryExperience[]; };

@@ -12,6 +12,7 @@ export const publicSpaces: IndustryData = {
   },
   challenges: {
     title: "The Challenge in Public Venues",
+    img: "/images/cathedral_projection_mapping.jpg",
     intro: "Transit hubs, airports, and public plazas process tens of thousands of people daily. These massive spaces often feel cold, confusing, and purely utilitarian, leading to traveler stress and missed revenue opportunities.",
     items: [
       { title: "Traveler Stress", desc: "Airports and transit hubs are inherently stressful environments where passengers seek moments of calm or distraction." },
