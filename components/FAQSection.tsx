@@ -68,7 +68,7 @@ export default function FAQSection() {
         
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-8 space-y-3">
-          <div className="flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2">
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2">
             <HelpCircle className="w-3.5 h-3.5 text-black/40" />
             <span>KNOWLEDGE BASE</span>
           </div>
@@ -101,7 +101,7 @@ export default function FAQSection() {
                       {itemNum}
                     </span>
                     <div className="flex flex-col items-start gap-1">
-                      <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.15em] text-black/40">
+                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
                         {faq.categoryLabel}
                       </span>
                       <span className={`text-base sm:text-lg font-bold transition-colors leading-snug ${isOpen ? "text-black" : "text-neutral-800 group-hover:text-black"}`}>

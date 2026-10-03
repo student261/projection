@@ -413,7 +413,7 @@ export default function SolutionsOverview() {
       <div className="bg-white text-black py-10 sm:py-12 lg:py-14">
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 sm:mb-8 max-w-3xl mx-auto space-y-2.5">
-            <span className="flex justify-center items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black/50">
+            <span className="flex justify-center items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500">
               <Sparkles className="w-3.5 h-3.5" />
               EXPLORE OUR SOLUTIONS
             </span>
@@ -444,7 +444,7 @@ export default function SolutionsOverview() {
           <div className="max-w-4xl xl:max-w-5xl mb-8 sm:mb-12 lg:mb-14 space-y-2">
             <div className="flex items-center gap-2 mb-2">
               <Sparkles className="w-3.5 h-3.5 text-white/70" />
-              <span className="text-[10px] sm:text-xs font-mono font-semibold tracking-[0.2em] text-white/50 uppercase">
+              <span className="text-xs sm:text-sm font-semibold tracking-wide text-white/60 uppercase">
                 CORE CAPABILITIES
               </span>
             </div>

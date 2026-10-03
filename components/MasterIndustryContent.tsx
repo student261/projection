@@ -42,7 +42,7 @@ const industriesData: IndustryItem[] = [
     num: "01",
     title: "Education & Learning Spaces",
     slug: "education",
-    badge: "Classrooms • STEM Labs • Libraries",
+    badge: "Classrooms | STEM Labs | Libraries",
     problemSolved: "Replaces passive disengagement and sedentary screen time with motion-reactive learning.",
     customerGain: "Substantially improves STEM concept retention and drives active student participation across all grade levels.",
     keyMetric: "Elevated STEM Retention",
@@ -58,7 +58,7 @@ const industriesData: IndustryItem[] = [
     num: "02",
     title: "Museums & Cultural Venues",
     slug: "museums-culture",
-    badge: "Exhibits • Archives • Immersive Halls",
+    badge: "Exhibits | Archives | Immersive Halls",
     problemSolved: "Overcomes delicate artifact touch restrictions with non-invasive touchless micro-projection.",
     customerGain: "Substantially extends visitor dwell time with complete heritage preservation compliance and exceptional visitor review ratings.",
     keyMetric: "Extended Dwell Time",
@@ -74,7 +74,7 @@ const industriesData: IndustryItem[] = [
     num: "03",
     title: "Retail & Flagship Showrooms",
     slug: "retail",
-    badge: "Storefronts / Pop-Ups / Flagships",
+    badge: "Storefronts | Pop-Ups | Flagships",
     problemSolved: "Solves high-street foot traffic drop-offs and brief store browsing sessions.",
     customerGain: "Significantly boosts store walk-ins and extends shopper dwell time with interactive lift-and-learn discovery.",
     keyMetric: "Increased Foot Traffic",
@@ -90,7 +90,7 @@ const industriesData: IndustryItem[] = [
     num: "04",
     title: "Hospitality & Resorts",
     slug: "hospitality",
-    badge: "Hotels • Resorts • Atriums & Lounges",
+    badge: "Hotels | Resorts | Atriums & Lounges",
     problemSolved: "Eliminates sterile hotel lobbies and expensive physical banquet decorations.",
     customerGain: "Dramatically extends lobby dwell, boosts premium event bookings, and sparks organic viral social media shares.",
     keyMetric: "Substantial Dwell Lift",
@@ -105,7 +105,7 @@ const industriesData: IndustryItem[] = [
     num: "05",
     title: "Entertainment & Theme Venues",
     slug: "entertainment",
-    badge: "Theme Parks • Arenas • FEC Centers",
+    badge: "Theme Parks | Arenas | FEC Centers",
     problemSolved: "Eliminates broken buttons, high maintenance costs, and wearable headset bottlenecks.",
     customerGain: "Powers mass-scale simultaneous active players with zero floor hardware wear and strong repeat visitor loyalty.",
     keyMetric: "50+ Multi-Users",
@@ -120,7 +120,7 @@ const industriesData: IndustryItem[] = [
     num: "06",
     title: "Corporate & Executive Spaces",
     slug: "corporate",
-    badge: "Lobbies • Executive Centers • Tech Hubs",
+    badge: "Lobbies | Executive Centers | Tech Hubs",
     problemSolved: "Replaces static PowerPoint slides and sterile corporate lobbies with real-time digital architecture.",
     customerGain: "Accelerates enterprise deal cycles, elevates briefing impact, and greets VIPs with fluid, instantaneous responsiveness.",
     keyMetric: "Real-Time Edge Response",
@@ -136,7 +136,7 @@ const industriesData: IndustryItem[] = [
     num: "07",
     title: "Public Spaces & Transit Venues",
     slug: "public-spaces",
-    badge: "Airports • Plazas • Transit Hubs",
+    badge: "Airports | Plazas | Transit Hubs",
     problemSolved: "Soothes traveler stress and activates massive blank concourses with durable, overhead-projected light.",
     customerGain: "Entertains massive daily pedestrian streams and substantially extends concession dwell time without impeding passenger flow.",
     keyMetric: "Extended Concourse Dwell",
@@ -152,7 +152,7 @@ const industriesData: IndustryItem[] = [
     num: "08",
     title: "Healthcare & Sensory Therapy",
     slug: "healthcare",
-    badge: "Pediatrics • Sensory Rooms • Clinics",
+    badge: "Pediatrics | Sensory Rooms | Clinics",
     problemSolved: "Alleviates clinical stress and pediatric anxiety in waiting corridors and therapy spaces.",
     customerGain: "Proven anxiety reduction with completely contactless, easy-to-sanitize touchless motion floors.",
     keyMetric: "Measurable Stress Reduction",
@@ -263,7 +263,7 @@ export default function MasterIndustryContent() {
         </div>
         
         <div className="my-auto relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          <div className="flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/60 mb-4">
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/60 mb-4">
             <Layers className="w-3.5 h-3.5 text-white/50" />
             <span>INDUSTRY SOLUTIONS ECOSYSTEM</span>
           </div>
@@ -277,14 +277,14 @@ export default function MasterIndustryContent() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
             <button
               onClick={scrollToGrid}
-              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-7 py-3 sm:py-3.5 rounded-full bg-white text-black hover:bg-white/90 shadow-xl transition-all duration-300 active:scale-95 cursor-pointer w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wide px-7 py-3 sm:py-3.5 rounded-full bg-white text-black hover:bg-white/90 shadow-xl transition-all duration-300 active:scale-95 cursor-pointer w-full sm:w-auto"
             >
               Explore Industries
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-7 py-3 sm:py-3.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-300 active:scale-95 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wide px-7 py-3 sm:py-3.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-300 active:scale-95 w-full sm:w-auto"
             >
               Start Your Project
             </Link>
@@ -298,7 +298,7 @@ export default function MasterIndustryContent() {
           
           {/* Section Heading */}
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black block mb-2">
               SECTOR ARCHITECTURE
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black mb-3">
@@ -314,7 +314,7 @@ export default function MasterIndustryContent() {
         <div className={`sticky z-40 bg-white/95 backdrop-blur-md border-y border-neutral-200/80 py-3 sm:py-4 shadow-sm mb-12 sm:mb-16 transition-all duration-300 ease-in-out ${isNavVisible ? "top-[72px]" : "top-0"}`}>
           <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto scrollbar-hide">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-black font-bold mr-2 shrink-0 hidden sm:inline-block">
+              <span className="text-xs uppercase tracking-wide text-black font-bold mr-2 shrink-0 hidden sm:inline-block">
                 Filter:
               </span>
               {CATEGORIES.map((cat) => (
@@ -354,7 +354,7 @@ export default function MasterIndustryContent() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity pointer-events-none" />
 
                   {/* Corner Sector Number Watermark (Containerless typography) */}
-                  <div className="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-widest text-white/90 drop-shadow pointer-events-none">
+                  <div className="absolute top-3 left-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-white/90 drop-shadow pointer-events-none">
                     SECTOR {item.num}
                   </div>
 
@@ -368,7 +368,7 @@ export default function MasterIndustryContent() {
 
                 {/* Pure Typography Content (No Card, No Frame) */}
                 <div className="flex flex-col flex-1">
-                  <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-1">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-neutral-400 mb-1">
                     SECTOR {item.num}
                   </div>
 
@@ -380,7 +380,7 @@ export default function MasterIndustryContent() {
                     {item.badge}
                   </p>
 
-                  <div className="mt-auto pt-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black group-hover:text-neutral-600 transition-colors">
+                  <div className="mt-auto pt-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-black group-hover:text-neutral-600 transition-colors">
                     <span>Inspect Dossier</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -424,7 +424,7 @@ export default function MasterIndustryContent() {
 
                   {/* Image Overlay Footer — Positioned with comfortable 24-32px bottom padding, never clipped */}
                   <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 right-6 sm:right-8 z-10 text-white space-y-1 pointer-events-none">
-                    <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/70 block">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-white/70 block">
                       Verified Sector Impact
                     </span>
                     <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight leading-tight">
@@ -438,7 +438,7 @@ export default function MasterIndustryContent() {
                   {/* Top Bar: Sector Eyebrow & Close Button (Zero orphaned slashes) */}
                   <div>
                     <div className="flex items-center justify-between gap-4 mb-3">
-                      <span className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-neutral-400">
+                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
                         SECTOR {selectedSector.num}
                       </span>
                       <button
@@ -456,14 +456,14 @@ export default function MasterIndustryContent() {
                     </h2>
 
                     {/* Venue Environments Subtitle (Cleanly placed under title with zero slashes) */}
-                    <p className="text-xs text-neutral-500 font-mono uppercase tracking-wider mb-6">
+                    <p className="text-xs text-neutral-500 font-semibold uppercase tracking-wide mb-6">
                       {selectedSector.badge}
                     </p>
 
                     {/* Transformation Editorial Dossier */}
                     <div className="space-y-4 mb-6">
                       <div>
-                        <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-1">
+                        <span className="text-xs font-semibold uppercase tracking-wide text-black block mb-1">
                           The Challenge
                         </span>
                         <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
@@ -472,7 +472,7 @@ export default function MasterIndustryContent() {
                       </div>
 
                       <div>
-                        <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-1">
+                        <span className="text-xs font-semibold uppercase tracking-wide text-black block mb-1">
                           Commercial Outcome
                         </span>
                         <p className="text-xs sm:text-sm text-neutral-900 font-medium leading-relaxed">
@@ -484,7 +484,7 @@ export default function MasterIndustryContent() {
                     {/* Deployed Installations */}
                     {selectedSector.relatedProjects && selectedSector.relatedProjects.length > 0 && (
                       <div className="pt-4 border-t border-neutral-150 mb-6">
-                        <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-2">
+                        <span className="text-xs font-semibold uppercase tracking-wide text-black block mb-2">
                           Deployed Installations
                         </span>
                         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs">
@@ -534,7 +534,7 @@ export default function MasterIndustryContent() {
                     <Link
                       href={`/industries/${selectedSector.slug}`}
                       onClick={() => setSelectedSector(null)}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-600 transition-colors group/link"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-black hover:text-neutral-600 transition-colors group/link"
                     >
                       <span>Explore Sector Architecture</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
@@ -559,7 +559,7 @@ export default function MasterIndustryContent() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/70 block mb-3">
+          <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/70 block mb-3">
             BESPOKE SPATIAL ENGINEERING
           </span>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 sm:mb-6 text-white leading-tight">
@@ -570,7 +570,7 @@ export default function MasterIndustryContent() {
           </p>
           <Link 
             href="/contact" 
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-black bg-white px-8 py-3.5 sm:py-4 rounded-full hover:bg-white/90 shadow-2xl transition-all duration-300 active:scale-95"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wide text-black bg-white px-8 py-3.5 sm:py-4 rounded-full hover:bg-white/90 shadow-2xl transition-all duration-300 active:scale-95"
           >
             Start Your Project <ArrowRight className="w-4 h-4 shrink-0" />
           </Link>

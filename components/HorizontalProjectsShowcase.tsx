@@ -159,7 +159,7 @@ function ImmersiveOverlay({ project, onClose }: { project: Project; onClose: () 
         <X className="w-5 h-5" />
       </button>
 
-      <div className="absolute top-6 left-6 z-[1002] text-xs text-white/50 uppercase tracking-widest pointer-events-none font-mono">
+      <div className="absolute top-6 left-6 z-[1002] text-xs font-semibold text-white/60 uppercase tracking-wide pointer-events-none">
         PROJECT {projects.indexOf(project) + 1 < 10 ? `0${projects.indexOf(project) + 1}` : projects.indexOf(project) + 1} OF {projects.length < 10 ? `0${projects.length}` : projects.length}
       </div>
 
@@ -199,12 +199,12 @@ function ImmersiveOverlay({ project, onClose }: { project: Project; onClose: () 
               <Sparkles className="w-3.5 h-3.5 text-white/80" />
               <span>{project.tag}</span>
             </span>
-            <span className="text-white/30">•</span>
+            <span className="text-white/30">|</span>
             <span className="flex items-center gap-1.5 text-white/80">
               <Globe className="w-3.5 h-3.5 text-white/60" />
               <span>{project.location}</span>
             </span>
-            <span className="text-white/30">•</span>
+            <span className="text-white/30">|</span>
             <span className="text-white/60">{project.year}</span>
           </div>
 
@@ -276,10 +276,10 @@ function ProjectCard({
       )}
 
       <div className="absolute bottom-0 left-0 right-0 p-6 z-10 space-y-2">
-        <div className="flex items-center justify-between gap-2 text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-white/70">
+        <div className="flex items-center justify-between gap-2 text-xs font-semibold uppercase tracking-wide text-white/70">
           <div className="flex items-center gap-2">
             <span className="text-white font-semibold">{project.tag}</span>
-            <span>•</span>
+            <span className="text-white/40">|</span>
             <span className="flex items-center gap-1">
               <MapPin className="w-3 h-3 text-white/60" />
               <span>{project.location}</span>
@@ -409,9 +409,9 @@ export default function HorizontalProjectsShowcase() {
             <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-3.5 xl:space-y-4 z-20">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div>
-                  <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black mb-2">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2">
                     <Sparkles className="w-3.5 h-3.5" />
-                    <span>INTERACTIVE GALLERY • {filteredProjects.length} CREATIONS</span>
+                    <span>INTERACTIVE GALLERY | {filteredProjects.length} CREATIONS</span>
                   </div>
                   <h2 className="text-[clamp(1.85rem,5vw,3rem)] font-black tracking-tight leading-[1.1] text-black">
                     Featured Installations
@@ -419,7 +419,7 @@ export default function HorizontalProjectsShowcase() {
                 </div>
                 <div className="hidden md:flex items-center gap-2 text-xs text-black/50 font-medium">
                   <Filter className="w-3.5 h-3.5 text-black" />
-                  <span>Scroll to browse — active card expands automatically</span>
+                  <span>Scroll to browse: active card expands automatically</span>
                 </div>
               </div>
 
@@ -428,7 +428,7 @@ export default function HorizontalProjectsShowcase() {
                   const isActive = activeCategory === cat.id;
                   return (
                     <button key={cat.id} onClick={() => setActiveCategory(cat.id)}
-                      className={`shrink-0 px-3 xl:px-4 py-1.5 xl:py-2 rounded-md text-[10px] xl:text-[11px] font-mono font-semibold uppercase tracking-[0.15em] xl:tracking-[0.2em] transition-all duration-300 cursor-pointer ${
+                      className={`shrink-0 px-3 xl:px-4 py-1.5 xl:py-2 rounded-md text-xs xl:text-sm font-medium transition-all duration-300 cursor-pointer ${
                         isActive ? "bg-black text-white shadow-md" : "bg-white hover:bg-gray-100 text-black/70 border border-black/10"
                       }`}>
                       {cat.label}

@@ -69,7 +69,7 @@ export default function FeaturedProjects() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl"
           >
-            <span className="text-[10px] sm:text-xs font-mono font-semibold uppercase tracking-[0.2em] text-black/50 block mb-2">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 block mb-2">
               EXPERIENCES &amp; APPLICATIONS
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black mb-2">
@@ -124,7 +124,7 @@ export default function FeaturedProjects() {
                       <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/20">
                         <Eye className="w-4 h-4 text-white" />
                       </span>
-                      <span className={`text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest drop-shadow-md leading-snug whitespace-nowrap transition-opacity duration-500 ${
+                      <span className={`text-xs font-semibold text-white uppercase tracking-wide drop-shadow-md leading-snug whitespace-nowrap transition-opacity duration-500 ${
                         isActive ? "opacity-100" : "lg:opacity-0"
                       }`}>
                         {project.category}
@@ -153,7 +153,7 @@ export default function FeaturedProjects() {
                         <div className="mt-5">
                           <Link 
                             href={project.href}
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-white/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-xs font-bold uppercase tracking-wide hover:bg-white/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl"
                           >
                             <span>{project.btnText}</span>
                             <ArrowRight className="w-3.5 h-3.5" />
@@ -166,7 +166,7 @@ export default function FeaturedProjects() {
                     <div className="lg:hidden mt-3 mb-2">
                        <Link 
                           href={project.href}
-                          className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors shadow-lg"
+                          className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-black text-xs font-bold uppercase tracking-wide hover:bg-neutral-200 transition-colors shadow-lg"
                         >
                           <span>{project.btnText}</span>
                           <ArrowRight className="w-3.5 h-3.5" />

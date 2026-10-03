@@ -74,7 +74,7 @@ export default function SolutionsAccordion({ items }: { items: SolutionItem[] })
                   </p>
                   
                   {/* Action Link */}
-                  <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-black cursor-pointer group/link">
+                  <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-black cursor-pointer group/link">
                     <span className="relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-black group-hover/link:after:w-full after:transition-all after:duration-300">
                       Explore Capability
                     </span>

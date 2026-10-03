@@ -76,7 +76,7 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
       {item.cta && item.href && (
         <Link
           href={item.href}
-          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black group-hover:text-black/70 transition-colors mt-auto"
+          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-black group-hover:text-black/70 transition-colors mt-auto"
         >
           <span>{item.cta.replace(' →', '')}</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

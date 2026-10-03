@@ -275,7 +275,7 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center justify-center gap-2 text-[10px] sm:text-xs font-mono font-semibold uppercase tracking-[0.2em] text-white/90 mb-3 sm:mb-4"
+            className="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/90 mb-3 sm:mb-4"
           >
             <Sparkles className="w-3.5 h-3.5 text-white" />
             <span>{data.solutionLabel}</span>
@@ -329,13 +329,13 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
         >
           <Link
             href="#what-is-it"
-            className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.08em] px-7 py-3 sm:py-3.5 transition-all duration-300 active:scale-95 cursor-pointer w-full sm:w-auto bg-white text-black hover:bg-gray-200 shadow-md rounded-full"
+            className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wide px-7 py-3 sm:py-3.5 transition-all duration-300 active:scale-95 cursor-pointer w-full sm:w-auto bg-white text-black hover:bg-gray-200 shadow-md rounded-full"
           >
             Start Your Project
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.08em] px-7 py-3 sm:py-3.5 transition-all duration-300 active:scale-95 cursor-pointer w-full sm:w-auto border border-white/40 bg-black/40 text-white hover:bg-white/20 backdrop-blur-sm rounded-full"
+            className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wide px-7 py-3 sm:py-3.5 transition-all duration-300 active:scale-95 cursor-pointer w-full sm:w-auto border border-white/40 bg-black/40 text-white hover:bg-white/20 backdrop-blur-sm rounded-full"
           >
             Book a Demo
           </Link>
@@ -466,7 +466,7 @@ function StickySurfaceFormats({
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto w-full flex flex-col justify-center">
           {/* Header */}
           <div className="max-w-5xl 2xl:max-w-6xl mx-auto text-center mb-2.5 sm:mb-3 lg:mb-4">
-            <div className="inline-flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-1 sm:mb-1.5 leading-normal py-0.5">
+            <div className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-900 mb-1 sm:mb-1.5 leading-normal py-0.5">
               <Sparkles className="w-3.5 h-3.5 text-black" />
               <span>{data.surfaceFormatsLabel || "WAYS TO INTERACT"}</span>
             </div>
@@ -505,7 +505,7 @@ function StickySurfaceFormats({
                       <div className="pt-1.5 sm:pt-2">
                         <Link
                           href="/contact"
-                          className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-black hover:text-black/70 transition-colors group/link py-1"
+                          className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wide text-black hover:text-black/70 transition-colors group/link py-1"
                         >
                           <span>Plan {activeItem.title} Experience</span>
                           <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1.5 transition-transform duration-300" />
@@ -547,7 +547,7 @@ function StickySurfaceFormats({
       <section id="surface-formats" className="py-12 lg:py-16 bg-neutral-50/70 overflow-hidden scroll-mt-20 relative">
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl 2xl:max-w-6xl mx-auto text-center mb-6 sm:mb-8">
-            <div className="inline-flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2 leading-normal py-0.5">
+            <div className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-900 mb-2 leading-normal py-0.5">
               <Sparkles className="w-3.5 h-3.5 text-black" />
               <span>{data.surfaceFormatsLabel || "WAYS TO INTERACT"}</span>
             </div>
@@ -579,7 +579,7 @@ function StickySurfaceFormats({
                   </div>
                   <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2">
+                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-neutral-900 mb-2">
                         <span>{num}</span>
                         <span>/</span>
                         <span>{exp.category}</span>
@@ -593,7 +593,7 @@ function StickySurfaceFormats({
                     </div>
                     <Link
                       href="/solutions"
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black group-hover:text-neutral-500 transition-colors pt-3 border-t border-black/5"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-black group-hover:text-neutral-500 transition-colors pt-3 border-t border-black/5"
                     >
                       <span>Explore Experience</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -644,7 +644,7 @@ function StickySurfaceFormats({
           {/* Left Column: Heading strictly 2 lines, Subtitle & Action - Transparent card background */}
           <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center max-w-xl">
             <div className="p-0 sm:p-2 bg-transparent">
-              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/80 mb-3 sm:mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/90 mb-3 sm:mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 <Sparkles className="w-3.5 h-3.5 text-white/80" />
                 <span>{data.industriesLabel || "WHERE IT FITS"}</span>
               </div>
@@ -672,7 +672,7 @@ function StickySurfaceFormats({
               <div className="flex items-center">
                 <Link 
                   href={allIndustries[activeIndustryIdx]?.href || "/industries"} 
-                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold uppercase tracking-wider transition-all shadow-2xl active:scale-95 cursor-pointer w-full sm:w-auto group"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold uppercase tracking-wide transition-all shadow-2xl active:scale-95 cursor-pointer w-full sm:w-auto group"
                 >
                   <span>Explore {allIndustries[activeIndustryIdx]?.title}</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -746,7 +746,7 @@ function StickySurfaceFormats({
           {/* Content Side */}
           <div className={`w-full lg:col-span-7 ${isFlippedLayout ? "lg:order-1" : "lg:order-2"}`}>
             <div>
-              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-4">
+              <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-900 mb-4">
                 <Sparkles className="w-3.5 h-3.5 text-black" />
                 <span>{data.applicationsLabel || "EXPERIENCE POSSIBILITIES"}</span>
               </div>
@@ -770,7 +770,7 @@ function StickySurfaceFormats({
                     }`}
                 >
                   <div className="flex items-center gap-2 mb-1.5">
-                    <span className="inline-flex items-center justify-center text-[10px] font-mono font-bold tracking-wider text-black/50 group-hover:text-black transition-colors">
+                    <span className="inline-flex items-center justify-center text-xs font-semibold text-neutral-500 group-hover:text-black transition-colors">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
                     <h4 className="text-sm sm:text-base font-bold text-black tracking-tight group-hover:text-black transition-colors">
@@ -800,7 +800,7 @@ function StickySurfaceFormats({
           
           {/* Header */}
           <div className="max-w-3xl mx-auto text-center mb-14 sm:mb-18">
-            <div className="inline-flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-white/60 mb-3">
+            <div className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/70 mb-3">
               <Sparkles className="w-3.5 h-3.5 text-white/50" />
               <span>{data.howItWorksLabel || "HOW WE WORK"}</span>
             </div>
@@ -888,7 +888,7 @@ function StickySurfaceFormats({
           <div className="mt-14 sm:mt-18 lg:mt-20 flex justify-center">
             <Link
               href="/contact"
-              className="group relative inline-flex items-center justify-center gap-3.5 px-8 sm:px-10 py-4 sm:py-4.5 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-[0.18em] transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.2),0_10px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_0_45px_rgba(255,255,255,0.4),0_15px_35px_rgba(0,0,0,0.7)] hover:bg-neutral-100 hover:scale-[1.02] active:scale-95 cursor-pointer ring-1 ring-white/30"
+              className="group relative inline-flex items-center justify-center gap-3.5 px-8 sm:px-10 py-4 sm:py-4.5 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-wide transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.2),0_10px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_0_45px_rgba(255,255,255,0.4),0_15px_35px_rgba(0,0,0,0.7)] hover:bg-neutral-100 hover:scale-[1.02] active:scale-95 cursor-pointer ring-1 ring-white/30"
             >
               <span>Start Your Project</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5 text-black" />
@@ -908,8 +908,8 @@ function StickySurfaceFormats({
         {/* Header matching Reference Design */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-2 sm:mb-4 lg:mb-6">
           <div>
-            <div className="flex items-center gap-2.5 text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase mb-3">
-              <span className="w-5 h-[1.5px] bg-black/40 inline-block" />
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-900 mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-black" />
               <span>{data.capabilitiesLabel || "CAPABILITIES"}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] font-black text-black tracking-tight leading-[1.08]">
@@ -935,7 +935,7 @@ function StickySurfaceFormats({
             <path d="M 426 272 A 66 66 0 0 1 554 272" stroke="#CBBFB2" strokeWidth="1" fill="none" />
 
             {/* Central Monospace Label */}
-            <text x="490" y="335" textAnchor="middle" className="font-mono text-[11px] font-bold tracking-[0.35em] fill-[#262626]">
+            <text x="490" y="335" textAnchor="middle" className="text-[11px] font-bold tracking-wider fill-[#262626]">
               {data.slug.includes("immersive") ? "IMMERSION" : data.slug.includes("ai") ? "INTELLIGENCE" : data.slug.includes("engagement") ? "PARTICIPATION" : "INTERACTION"}
             </text>
 
@@ -1142,7 +1142,7 @@ function StickySurfaceFormats({
               <div className="w-12 h-12 rounded-full border border-[#D3C9BD] flex items-center justify-center mb-2 bg-white shadow-sm">
                 <Sparkles className="w-5 h-5 text-black/70" />
               </div>
-              <span className="font-mono text-[11px] font-bold tracking-[0.3em] text-neutral-800 uppercase">
+              <span className="text-xs font-bold tracking-wide text-neutral-800 uppercase">
                 {data.slug.includes("immersive") ? "IMMERSION" : data.slug.includes("ai") ? "INTELLIGENCE" : data.slug.includes("engagement") ? "PARTICIPATION" : "INTERACTION"}
               </span>
             </div>
@@ -1201,8 +1201,8 @@ function StickySurfaceFormats({
           />
         </svg>
         <div className="absolute right-10 xl:right-16 top-1/2 -translate-y-1/2 flex flex-col items-start gap-3">
-          <div className="w-10 h-[1.5px] bg-neutral-300" />
-          <span className="font-mono text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] text-neutral-400 uppercase leading-relaxed">
+
+          <span className="text-xs font-semibold tracking-wide text-neutral-500 uppercase leading-relaxed">
             {data.solutionLabel || "IMMERSIVE SPACES"}<br />REAL IMPACT
           </span>
         </div>
@@ -1213,8 +1213,8 @@ function StickySurfaceFormats({
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2.5 mb-3.5">
-              <span className="w-6 h-[1.5px] bg-neutral-400" />
-              <span className="font-mono text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-neutral-500">
+              <Sparkles className="w-3.5 h-3.5 text-neutral-500" />
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-700">
                 {data.experienceLabel || "THE EXPERIENCE"}
               </span>
             </div>
@@ -1347,7 +1347,7 @@ function StickySurfaceFormats({
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
           <div>
-            <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/70 mb-2">
+            <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/80 mb-2">
               <Sparkles className="w-3.5 h-3.5 text-white/60" />
               <span>Featured Installations / Live Showcase</span>
             </div>
@@ -1390,7 +1390,7 @@ function StickySurfaceFormats({
                     </span>
                     <div className="min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
-                        <span className={`text-[10px] font-mono uppercase tracking-[0.15em] font-semibold shrink-0 ${
+                        <span className={`text-xs uppercase tracking-wide font-semibold shrink-0 ${
                           isActive ? "text-white" : "text-white/60"
                         }`}>
                           {proj.industry}
@@ -1473,7 +1473,7 @@ function StickySurfaceFormats({
 
               <Link 
                 href={activeProject.href || "/projects"} 
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(255,255,255,0.25)] hover:shadow-[0_0_35px_rgba(255,255,255,0.45)] hover:scale-[1.02] active:scale-95 shrink-0 self-start sm:self-auto cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold uppercase tracking-wide transition-all shadow-[0_0_25px_rgba(255,255,255,0.25)] hover:shadow-[0_0_35px_rgba(255,255,255,0.45)] hover:scale-[1.02] active:scale-95 shrink-0 self-start sm:self-auto cursor-pointer"
               >
                 <span>Explore Case Study</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -1511,7 +1511,7 @@ function StickySurfaceFormats({
       <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header: Left aligned, lowered on desktop to utilize space above cards 1 & 2 */}
         <div className="max-w-xl lg:w-[48%] mb-6 lg:-mb-28 relative z-10">
-          <div className="flex items-center gap-3 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-black/50 mb-2.5 sm:mb-3">
+          <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-2.5 sm:mb-3">
             <span>09</span>
             <span>{data.relatedSolutionsLabel || "RELATED SOLUTIONS"}</span>
           </div>

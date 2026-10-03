@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "About The Studio — PROJECTION",
+  title: "About The Studio | PROJECTION",
   description: "Meet the spatial architects, optical engineers, and creative technologists transforming physical architecture into living digital ecosystems.",
 };
 
@@ -27,7 +27,7 @@ const DISCIPLINES = [
     tag: "OPTICAL ARCHITECTURE",
     title: "Large-Scale Laser & Projection Engineering",
     desc: "From historic stone sanctuaries to 100-meter transit corridors, we engineer custom optical projection systems that preserve architectural integrity while unlocking breathtaking digital dimensions.",
-    metrics: "Sub-millimeter edge-blending • Custom focal optics",
+    metrics: "Sub-millimeter edge-blending | Custom focal optics",
     img: "/images/cathedral_projection_mapping.jpg",
   },
   {
@@ -35,7 +35,7 @@ const DISCIPLINES = [
     tag: "SPATIAL SENSING",
     title: "LiDAR & Zero-Latency Computer Vision",
     desc: "We build proprietary sensor fusion arrays combining 3D LiDAR, infrared time-of-flight depth cameras, and optical tracking to map hundreds of concurrent visitors without latency or calibration drift.",
-    metrics: "60 FPS capture • Sub-millimeter tracking accuracy",
+    metrics: "60 FPS capture | Sub-millimeter tracking accuracy",
     img: "/images/interactive_floor_motion.jpg",
   },
   {
@@ -43,7 +43,7 @@ const DISCIPLINES = [
     tag: "GENERATIVE COMPUTING",
     title: "Real-Time Physics & Unreal Engine Systems",
     desc: "Our custom GPU edge-servers simulate fluid dynamics, particle collisions, and generative acoustics in real-time, responding organically to every footstep and gesture without pre-rendered loops.",
-    metrics: "Zero pre-baked video loops • Live procedural shaders",
+    metrics: "Zero pre-baked video loops | Live procedural shaders",
     img: "/images/corporate_lobby_wall.jpg",
   },
   {
@@ -51,7 +51,7 @@ const DISCIPLINES = [
     tag: "TURNKEY PRODUCTION",
     title: "Bespoke Scale Modeling to Global Commissioning",
     desc: "Every deployment is designed, prototyped in our physical testing chambers, and commissioned on-site with 24-7 autonomous monitoring and continuous cloud content orchestration.",
-    metrics: "Full structural staging • Lifetime hardware telemetry",
+    metrics: "Full structural staging | Lifetime hardware telemetry",
     img: "/images/projection_cityscape_model.jpg",
   },
 ];
@@ -59,25 +59,25 @@ const DISCIPLINES = [
 const PIPELINE_STEPS = [
   {
     num: "01",
-    phase: "PHASE 01 • SPATIAL SCANNING",
+    phase: "PHASE 01 | SPATIAL SCANNING",
     title: "LiDAR Point-Cloud & Optical Ray Tracing",
     desc: "We capture 3D volumetric laser scans of your space down to the millimeter. Our optical software calculates throw ratios, ambient lux interference, and surface reflectance before physical hardware is ordered.",
   },
   {
     num: "02",
-    phase: "PHASE 02 • PROTOTYPING",
+    phase: "PHASE 02 | PROTOTYPING",
     title: "Chamber Simulation & Shader Development",
     desc: "In our physical immersion testing labs, we mock up exact surface materials, test multi-user pedestrian flow dynamics, and fine-tune real-time procedural shaders under variable daylight conditions.",
   },
   {
     num: "03",
-    phase: "PHASE 03 • COMMISSIONING",
+    phase: "PHASE 03 | COMMISSIONING",
     title: "Concealed Rigging & Precision Calibration",
     desc: "Our white-glove field technicians mount all projectors and sensors safely overhead behind architectural coves. Multi-projector edge blending and optical sensor matrices are tuned to sub-millimeter tolerances.",
   },
   {
     num: "04",
-    phase: "PHASE 04 • LIFETIME OPS",
+    phase: "PHASE 04 | LIFETIME OPS",
     title: "Autonomous Health Monitoring & Cloud CMS",
     desc: "Deployments connect to our proactive 24-7 cloud diagnostics. Operating temperatures, bulb hours, and frame rates are monitored autonomously, while marketing teams update seasonal media effortlessly via web portal.",
   },
@@ -150,7 +150,7 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
           <div className="max-w-5xl">
-            <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/90 mb-3 sm:mb-4">
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/90 mb-3 sm:mb-4">
               <Sparkles className="w-3.5 h-3.5 text-white" />
               <span>THE SPATIAL COMPUTING STUDIO</span>
             </div>
@@ -172,7 +172,7 @@ export default function AboutPage() {
                       {stat.value}
                     </span>
                   </div>
-                  <div className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-white/75 font-semibold mb-1">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-white/75 mb-1">
                     {stat.label}
                   </div>
                   <p className="text-[10px] sm:text-[11px] text-white/55 font-light leading-relaxed max-w-[240px]">
@@ -192,7 +192,7 @@ export default function AboutPage() {
             
             <div className="lg:col-span-5 space-y-5">
               <div>
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2 block">
                   ENGINEERING PHILOSOPHY
                 </span>
                 <h2 className="font-black tracking-tight leading-[1.1] text-black text-[clamp(1.5rem,3.5vw,2.5rem)]">
@@ -237,11 +237,11 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
               <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2 text-white">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-white/70 block mb-1">Interactive Prototyping Lab</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-white/70 block mb-1">Interactive Prototyping Lab</span>
                   <span className="text-xs sm:text-base font-bold block">Spatial Immersion & Sensor Calibration Chamber</span>
                   <p className="text-[10px] sm:text-xs text-white/60 font-light mt-0.5">Real-time LiDAR mesh validation and sub-millimeter throw distance testing</p>
                 </div>
-                <span className="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-[10px] font-mono font-semibold uppercase tracking-wider shrink-0 self-start sm:self-auto">
+                <span className="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-xs font-semibold uppercase tracking-wide shrink-0 self-start sm:self-auto">
                   Active Testing
                 </span>
               </div>
@@ -256,7 +256,7 @@ export default function AboutPage() {
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8 sm:mb-10">
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2 block">
                 CORE DISCIPLINES
               </span>
               <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)]">
@@ -281,8 +281,8 @@ export default function AboutPage() {
                     />
                   </div>
 
-                  <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-black/70 block mb-1.5">
-                    {item.num} • {item.tag}
+                  <span className="text-xs font-semibold uppercase tracking-wide text-black/70 block mb-1.5">
+                    {item.num} | {item.tag}
                   </span>
                   <h3 className="text-sm sm:text-base font-black text-black tracking-tight mb-2 leading-snug sm:min-h-[2.5rem] flex items-start">
                     {item.title}
@@ -293,7 +293,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="pt-3">
-                  <span className="text-[10px] font-mono text-black/60 block">
+                  <span className="text-xs text-black/60 block">
                     {item.metrics}
                   </span>
                 </div>
@@ -307,7 +307,7 @@ export default function AboutPage() {
       <section className="py-10 lg:py-12 bg-white">
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl mb-8 sm:mb-10">
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2 block">
               RIGOROUS METHODOLOGY
             </span>
             <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)] mb-2 sm:mb-3">
@@ -346,7 +346,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-5">
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2 block">
                 THE COLLECTIVE
               </span>
               <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)] mb-4">
@@ -357,7 +357,7 @@ export default function AboutPage() {
               </p>
 
               <div className="p-5 rounded-2xl bg-black text-white space-y-2.5">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-white/60 font-bold block">
+                <span className="text-xs font-semibold uppercase tracking-wide text-white/70 block">
                   Studio Commitment
                 </span>
                 <p className="text-xs sm:text-sm font-bold leading-snug">
@@ -397,7 +397,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-5">
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2 block">
                 GLOBAL FOOTPRINT
               </span>
               <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)] mb-4">
@@ -416,7 +416,7 @@ export default function AboutPage() {
                     <div>
                       <h4 className="text-xs sm:text-sm font-bold text-black tracking-tight flex items-center gap-2">
                         <span>{hub.city}</span>
-                        <span className="text-[10px] font-normal text-neutral-700 font-mono">• {hub.role}</span>
+                        <span className="text-xs font-normal text-neutral-600">| {hub.role}</span>
                       </h4>
                       <p className="text-[11px] sm:text-xs text-black/60 font-light mt-0.5">
                         {hub.desc}
@@ -436,7 +436,7 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-5 left-5 right-5 sm:bottom-6 sm:left-6 sm:right-6 text-white">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-white/60 block mb-1">
+                <span className="text-xs font-semibold uppercase tracking-wide text-white/60 block mb-1">
                   INTERNATIONAL DEPLOYMENT
                 </span>
                 <p className="text-sm sm:text-base font-bold">
@@ -456,7 +456,7 @@ export default function AboutPage() {
       <section className="py-10 lg:py-12 bg-gray-50/70">
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl mb-8 sm:mb-10">
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black mb-2 block font-bold">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2 block">
               QUALITY STANDARDS
             </span>
             <h2 className="font-black tracking-tight leading-[1.1] text-[clamp(1.5rem,3.5vw,2.5rem)] mb-3">
@@ -489,7 +489,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
             <div className="lg:col-span-8 space-y-4">
-              <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold tracking-[0.2em] text-white/70 uppercase">
+              <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/70">
                 <Compass className="w-3.5 h-3.5 text-white/60" />
                 <span>SPATIAL BRIEFING</span>
               </div>

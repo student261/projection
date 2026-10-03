@@ -30,7 +30,7 @@ export default function CaseStudiesSpotlight({
       {/* Top Header & Natural Solution Switcher (Zero Cut Lines) */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black block mb-1">
+          <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 block mb-1">
             {eyebrow}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black">
@@ -106,7 +106,7 @@ export default function CaseStudiesSpotlight({
             >
               {/* Category & Headline */}
               <div>
-                <span className="text-[11px] font-mono font-bold text-black uppercase tracking-widest block mb-1">
+                <span className="text-xs font-semibold text-neutral-900 uppercase tracking-wide block mb-1">
                   {active.tag || active.client}
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight leading-snug">

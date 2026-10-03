@@ -59,7 +59,7 @@ export default function SpatialCapabilities() {
         
         {/* ── Minimalist Editorial Header ── */}
         <div className="max-w-3xl space-y-4">
-          <span className="text-[10px] sm:text-[11px] font-mono font-bold tracking-[0.2em] text-black uppercase block">
+          <span className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase block">
             ARCHITECTURE
           </span>
           
@@ -101,8 +101,8 @@ export default function SpatialCapabilities() {
               {/* Text Content */}
               <div className="p-5 xl:p-8 flex flex-col flex-1 relative z-10 -mt-6">
                 <div className="space-y-3 flex-1">
-                  <span className="text-[10px] font-mono font-bold tracking-widest text-black/70 uppercase block">
-                    {cap.num} • {cap.tag}
+                  <span className="text-xs font-semibold text-neutral-700 uppercase tracking-wide block">
+                    {cap.num} | {cap.tag}
                   </span>
                   
                   <h3 className="text-lg xl:text-xl 2xl:text-2xl font-bold tracking-tight text-black leading-snug md:min-h-[3.25rem] xl:min-h-[3.75rem] flex items-start">
@@ -120,7 +120,7 @@ export default function SpatialCapabilities() {
                     <span className="block text-base xl:text-lg font-black text-black tracking-tight leading-none">
                       {cap.metric}
                     </span>
-                    <span className="block text-[9px] font-bold text-black/70 uppercase tracking-widest pt-1">
+                    <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wide pt-1">
                       {cap.metricLabel}
                     </span>
                   </div>

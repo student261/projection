@@ -55,7 +55,7 @@ export default function BlogsPage() {
         <p className="mt-6 text-base sm:text-lg lg:text-xl font-light text-black/70 max-w-2xl leading-relaxed">
           Deep-dive technical insights, architectural case studies, and the latest trends in interactive environments and spatial computing.
         </p>
-        <div className="mt-6 flex items-center gap-4 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 pt-2 max-w-sm">
+        <div className="mt-6 flex items-center gap-4 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/50 pt-2 max-w-sm">
           <span>Explore Knowledge Base</span>
         </div>
       </section>

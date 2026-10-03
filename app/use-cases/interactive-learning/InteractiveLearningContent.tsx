@@ -39,7 +39,7 @@ export default function InteractiveLearningContent() {
 
         <div className="my-auto relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
           <motion.div {...fadeIn}>
-            <div className="inline-flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-white/70 mb-3">
+            <div className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/70 mb-3">
               <Sparkles className="w-3.5 h-3.5 text-white/70" />
               <span>{data.hero.label}</span>
             </div>
@@ -55,14 +55,14 @@ export default function InteractiveLearningContent() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
               <Link
                 href={data.hero.primaryCtaHref}
-                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-neutral-200 transition-all active:scale-95 shadow-xl w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-wide hover:bg-neutral-200 transition-all active:scale-95 shadow-xl w-full sm:w-auto"
               >
                 <span>{data.hero.primaryCtaText}</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href={data.hero.secondaryCtaHref}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md text-xs sm:text-sm font-bold uppercase tracking-wider transition-all active:scale-95 w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-md text-xs sm:text-sm font-bold uppercase tracking-wide transition-all active:scale-95 w-full sm:w-auto"
               >
                 <span>{data.hero.secondaryCtaText}</span>
               </Link>
@@ -93,7 +93,7 @@ export default function InteractiveLearningContent() {
 
             {/* Editorial Content Column */}
             <motion.div {...fadeIn} className="lg:col-span-5 order-2 lg:order-2 space-y-3 sm:space-y-4">
-              <div className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase">
+              <div className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase">
                 {data.experience.label}
               </div>
               <h2
@@ -118,7 +118,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase block mb-2">
               {data.need.label}
             </span>
             <h2
@@ -160,7 +160,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10">
           <motion.div {...fadeIn}>
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-white/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-white/60 uppercase block mb-2">
               {data.howStudentsInteract.label}
             </span>
             <h2
@@ -214,7 +214,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase block mb-2">
               {data.whereItCanBeUsed.label}
             </span>
             <h2
@@ -280,7 +280,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-10 sm:mb-12">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase block mb-2">
               {data.whatStudentsCanDo.label}
             </span>
             <h2
@@ -347,7 +347,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-white/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-white/60 uppercase block mb-2">
               {data.seeWhatsPossible.label}
             </span>
             <h2
@@ -407,7 +407,7 @@ export default function InteractiveLearningContent() {
           {/* Concept visuals caption controlled by boolean */}
           {data.seeWhatsPossible.showConceptLabel && (
             <div className="mt-6 text-center">
-              <span className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] text-white/40">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-white/40">
                 {data.seeWhatsPossible.conceptLabel}
               </span>
             </div>
@@ -423,7 +423,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase block mb-2">
               {data.howItWorks.label}
             </span>
             <h2
@@ -461,7 +461,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase block mb-2">
               {data.whatItEnables.label}
             </span>
             <h2
@@ -497,7 +497,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase block mb-2">
               {data.relatedSolutions.label}
             </span>
             <h2
@@ -537,7 +537,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="max-w-3xl mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase block mb-2">
               {data.relatedIndustries.label}
             </span>
             <h2
@@ -576,7 +576,7 @@ export default function InteractiveLearningContent() {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="text-center mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold tracking-wide text-black/60 uppercase block mb-2">
               {data.faq.label}
             </span>
             <h2
@@ -660,7 +660,7 @@ export default function InteractiveLearningContent() {
             </p>
             <Link
               href={data.finalCta.buttonHref}
-              className="inline-flex items-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-neutral-200 transition-all duration-300 active:scale-95 shadow-2xl"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full bg-white text-black text-xs sm:text-sm font-bold uppercase tracking-wide hover:bg-neutral-200 transition-all duration-300 active:scale-95 shadow-2xl"
             >
               <span>{data.finalCta.buttonText}</span>
               <ArrowRight className="w-4 h-4" />

@@ -58,7 +58,7 @@ export default function Footer() {
 
                 {/* Newsletter / Contact Prompt (Harmonic style) */}
                 <div className="mt-8 space-y-3">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 block">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-white/50 block">
                     STAY UPDATED
                   </span>
                   <div className="flex items-center gap-0 max-w-xs border border-white/10 rounded-lg overflow-hidden focus-within:border-white/30 transition-colors">
@@ -79,7 +79,7 @@ export default function Footer() {
                 
                 {/* 1. Solutions */}
                 <div>
-                  <h4 className="text-[10px] uppercase tracking-[0.2em] text-white/40 mb-5">
+                  <h4 className="text-xs font-semibold uppercase tracking-wide text-white/50 mb-5">
                     Solutions
                   </h4>
                   <ul className="space-y-3">
@@ -92,7 +92,7 @@ export default function Footer() {
 
                 {/* 2. Industries */}
                 <div>
-                  <h4 className="text-[10px] uppercase tracking-[0.2em] text-white/40 mb-5">
+                  <h4 className="text-xs font-semibold uppercase tracking-wide text-white/50 mb-5">
                     Industries
                   </h4>
                   <ul className="space-y-3">
@@ -109,7 +109,7 @@ export default function Footer() {
 
                 {/* 3. Company */}
                 <div>
-                  <h4 className="text-[10px] uppercase tracking-[0.2em] text-white/40 mb-5">
+                  <h4 className="text-xs font-semibold uppercase tracking-wide text-white/50 mb-5">
                     Company
                   </h4>
                   <ul className="space-y-3">
@@ -122,7 +122,7 @@ export default function Footer() {
 
                 {/* 4. Resources */}
                 <div>
-                  <h4 className="text-[10px] uppercase tracking-[0.2em] text-white/40 mb-5">
+                  <h4 className="text-xs font-semibold uppercase tracking-wide text-white/50 mb-5">
                     Resources
                   </h4>
                   <ul className="space-y-3">

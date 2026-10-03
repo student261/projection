@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       <Navbar />
 
       <section className="px-4 sm:px-6 lg:px-8 pt-16 pb-12 max-w-4xl mx-auto w-full">
-        <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-6">
+        <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/50 mb-6">
           <ShieldCheck className="w-3.5 h-3.5 text-black/40" />
           <span>LEGAL & COMPLIANCE</span>
         </div>
@@ -22,8 +22,8 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         
-        <p className="text-sm text-black/50 font-mono mb-12">
-          Effective Date: August 2026 · Last Updated: August 2026
+        <p className="text-sm text-black/50 font-sans mb-12">
+          Effective Date: August 2026 | Last Updated: August 2026
         </p>
 
         <div className="space-y-8 text-black/80 font-light leading-relaxed text-sm sm:text-base">

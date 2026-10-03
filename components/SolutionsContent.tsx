@@ -11,7 +11,7 @@ const solutionsData = [
     num: "01",
     title: "Interactive Projection",
     subtitle: "Turn Surfaces Into Active Digital Spaces",
-    badge: "Motion Projection • Floor & Wall",
+    badge: "Motion Projection | Floor & Wall",
     desc: "Transform everyday surfaces including floors, walls, tables, and windows into responsive digital environments that encourage movement, participation, and discovery.",
     useCase: "Ideal for retail pop-ups, museum exhibits, and pediatric waiting rooms.",
     img: "/images/interactive_floor_motion.jpg",
@@ -27,7 +27,7 @@ const solutionsData = [
     num: "02",
     title: "Immersive Environments",
     subtitle: "360° Panoramic & Projection Mapping",
-    badge: "360° Rooms • Projection Mapping",
+    badge: "360° Rooms | Projection Mapping",
     desc: "Create large-scale projection environments, 360-degree rooms, and architectural projection mapping that transport visitors into extraordinary narrative worlds.",
     useCase: "Ideal for theme parks, flagship showrooms, and digital art galleries.",
     img: "/images/cathedral_projection_mapping.jpg",
@@ -43,7 +43,7 @@ const solutionsData = [
     num: "03",
     title: "AI Experiences",
     subtitle: "Personalized Digital Interactions",
-    badge: "AI Avatars • Real-Time Responses",
+    badge: "AI Avatars | Real-Time Responses",
     desc: "Give your visitors a personalized, magical experience that adapts to them instantly. Our intelligent systems greet guests, respond to their movements, and create unique moments for everyone who walks by.",
     useCase: "Ideal for VIP lounges, innovative corporate lobbies, and interactive brand activations.",
     img: "/images/ai_receptionist_concierge.jpg",
@@ -59,7 +59,7 @@ const solutionsData = [
     num: "04",
     title: "Smart Audience Engagement",
     subtitle: "Measurable Results & Deep Interactivity",
-    badge: "Kiosks • Cloud CMS • Analytics",
+    badge: "Kiosks | Cloud CMS | Analytics",
     desc: "Drive longer dwell times and higher conversion rates with gamified touchpoints. Capture valuable audience insights while providing a fun, memorable brand interaction.",
     useCase: "Ideal for expo booths, retail gamification, and lead generation stations.",
     img: "/images/entertainment_motion_arena.jpg",
@@ -164,7 +164,7 @@ export default function SolutionsContent() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white my-auto">
-          <div className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/90 mb-4 sm:mb-6">
+          <div className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/90 mb-4 sm:mb-6">
             PLATFORM CAPABILITIES
           </div>
           <h1 className="font-black tracking-tight leading-[1.08] mb-4 sm:mb-6 drop-shadow-lg text-[clamp(2rem,5.5vw,4.5rem)]">
@@ -232,14 +232,14 @@ export default function SolutionsContent() {
 
                   {/* Narrative Column */}
                   <div className={`flex flex-col justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/50 font-semibold block mb-1.5">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-black/60 block mb-1.5">
                       {item.badge}
                     </span>
                     <h2 className="font-black text-black tracking-tight leading-tight text-2xl sm:text-3xl lg:text-[2rem] mb-1.5">
                       {item.title}
                     </h2>
                     
-                    <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-black/60 mb-3">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-black/60 mb-3">
                       {item.subtitle}
                     </p>
                     
@@ -263,14 +263,14 @@ export default function SolutionsContent() {
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                       <Link 
                         href={`/solutions/${item.id}`} 
-                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-black text-white font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-gray-800 transition-colors shadow-md"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-black text-white font-bold text-xs uppercase tracking-wide hover:bg-gray-800 transition-colors shadow-md"
                       >
                         <span>Explore Solution</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                       <Link 
                         href="/contact" 
-                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full border-2 border-black text-black font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-colors"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full border-2 border-black text-black font-bold text-xs uppercase tracking-wide hover:bg-black hover:text-white transition-colors"
                       >
                         <span>Book a Demo</span>
                       </Link>
@@ -287,7 +287,7 @@ export default function SolutionsContent() {
       <section className="pt-8 pb-20 sm:pt-12 sm:pb-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 block">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-4 block">
               TECHNICAL FREQUENTLY ASKED QUESTIONS
             </span>
             <h2 className="text-3xl md:text-4xl font-black text-black">

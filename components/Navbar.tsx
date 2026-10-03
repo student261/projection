@@ -263,7 +263,7 @@ export default function Navbar() {
                     </div>
                     <div className="pt-2.5 space-y-1 flex-1 flex flex-col justify-between">
                       <div>
-                        <span className="text-[8px] font-mono uppercase tracking-[0.2em] text-white/50 font-semibold block mb-0.5">
+                        <span className="text-[10px] uppercase tracking-wide text-white/60 font-semibold block mb-0.5">
                           {solPreview.badge}
                         </span>
                         <h4 className="text-sm font-black text-white tracking-tight leading-tight line-clamp-1">{solPreview.title}</h4>
@@ -461,7 +461,7 @@ export default function Navbar() {
                       </div>
                       <div className="pt-3 space-y-1.5 flex-1 flex flex-col justify-between">
                         <div>
-                          <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/50 font-semibold block mb-1">
+                          <span className="text-[10px] uppercase tracking-wide text-white/60 font-semibold block mb-1">
                             {indPreview.badge}
                           </span>
                           <h4 className="text-base font-black text-white tracking-tight">{indPreview.title}</h4>

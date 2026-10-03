@@ -189,7 +189,7 @@ export default function RetailIndustryPage() {
         </div>
 
         <div className="my-auto relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-          <div className="inline-flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-white/70 mb-3">
+          <div className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/70 mb-3">
             <Sparkles className="w-3.5 h-3.5 text-white/70" />
             <span>{data.hero.eyebrow}</span>
           </div>
@@ -239,7 +239,7 @@ export default function RetailIndustryPage() {
               <div className="max-w-2xl">
                 <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
                   <span className="w-6 sm:w-8 h-[2px] bg-white"></span>
-                  <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-white">
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-white">
                     THE CHALLENGE
                   </span>
                 </div>
@@ -296,7 +296,7 @@ export default function RetailIndustryPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 space-y-4">
               <div>
-                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 block mb-2">
                   OUR VISION
                 </span>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
@@ -332,7 +332,7 @@ export default function RetailIndustryPage() {
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 sm:pb-8 border-b border-black/15 mb-8">
             <div className="max-w-2xl">
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-2.5">
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500 block mb-2 sm:mb-2.5">
                 SOLUTIONS FOR YOUR SPACE
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight text-black">
@@ -384,12 +384,11 @@ export default function RetailIndustryPage() {
       {/* SECTION 5: RELATED USE CASES (White Background with Standard Sans Typography) */}
       <section className="relative w-full overflow-hidden bg-white text-black py-14 sm:py-18 lg:py-22 border-t border-black/10">
         <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top Badge: Label + Trailing Line */}
-          <div className="flex items-center gap-4 mb-4 sm:mb-5">
-            <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.25em] text-neutral-400 uppercase">
+          {/* Top Badge: Label */}
+          <div className="mb-4 sm:mb-5">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500">
               {data.useCases?.label || "SEE IT IN CONTEXT"}
             </span>
-            <div className="h-px w-16 sm:w-20 bg-neutral-300" />
           </div>
 
           {/* Split Header: Left Title/Intro & Right Context Paragraph */}
@@ -417,7 +416,7 @@ export default function RetailIndustryPage() {
                 className="rounded-2xl p-7 sm:p-9 lg:p-10 bg-[#fbfbfd] border border-black/10 hover:border-black/20 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  {/* Top Badge: Icon + Tag + Horizontal Line */}
+                  {/* Top Badge: Icon + Tag */}
                   <div className="flex items-center gap-3.5 mb-6 sm:mb-8">
                     <div className="w-7 h-7 rounded-full border border-neutral-300 bg-neutral-100/70 flex items-center justify-center text-neutral-700 shrink-0">
                       {idx === 0 ? (
@@ -426,10 +425,9 @@ export default function RetailIndustryPage() {
                         <Sparkles className="w-3.5 h-3.5" />
                       )}
                     </div>
-                    <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.22em] text-neutral-500 uppercase">
+                    <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">
                       {item.tag || (idx === 0 ? "RETAIL EXPERIENCES" : "BRAND ACTIVATIONS")}
                     </span>
-                    <div className="h-px bg-neutral-200 w-12 sm:w-16" />
                   </div>
 
                   {/* Title in Standard Clean Typography */}
@@ -443,19 +441,18 @@ export default function RetailIndustryPage() {
                   </p>
                 </div>
 
-                {/* Bottom CTA: Circle Arrow + Text + Horizontal Line */}
+                {/* Bottom CTA: Circle Arrow + Text */}
                 <div className="pt-2">
                   <Link
                     href={item.href}
-                    className="inline-flex items-center gap-3.5 group/cta w-fit"
+                    className="inline-flex items-center gap-3 group/cta w-fit"
                   >
                     <div className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-900 group-hover/cta:border-black group-hover/cta:bg-black group-hover/cta:text-white transition-all duration-200 shrink-0">
                       <ArrowRight className="w-3.5 h-3.5 group-hover/cta:translate-x-0.5 transition-transform" />
                     </div>
-                    <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.2em] font-medium text-neutral-700 group-hover/cta:text-black uppercase transition-colors">
+                    <span className="text-xs sm:text-sm font-semibold text-neutral-700 group-hover/cta:text-black uppercase tracking-wide transition-colors">
                       {item.cta}
                     </span>
-                    <div className="h-px bg-neutral-300 w-12 sm:w-16 group-hover/cta:w-20 group-hover/cta:bg-black transition-all duration-300" />
                   </Link>
                 </div>
               </div>
@@ -468,7 +465,7 @@ export default function RetailIndustryPage() {
       <section id="experiences" className="pt-12 sm:pt-14 lg:pt-16 pb-12 sm:pb-14 lg:pb-16 bg-black text-white overflow-hidden scroll-mt-24">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-2 sm:mb-3">
           <div className="max-w-3xl">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-white/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/60 block mb-2">
               EXPERIENCE IDEAS
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-white">
@@ -491,11 +488,10 @@ export default function RetailIndustryPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
             {/* Left Header Column */}
             <div className="lg:col-span-4 xl:col-span-4 flex flex-col items-start">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
+              <div className="mb-4">
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500">
                   {data.howItWorks?.label || "HOW IT WORKS"}
                 </span>
-                <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-neutral-900 leading-[1.12] mb-4">
                 From Space to <br />
@@ -612,7 +608,7 @@ export default function RetailIndustryPage() {
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-[1.5px] h-3.5 bg-neutral-400 inline-block"></span>
-                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-400">
                   WHY IT WORKS
                 </span>
               </div>
@@ -720,11 +716,10 @@ export default function RetailIndustryPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
             {/* Left Header Column */}
             <div className="lg:col-span-4 xl:col-span-4 flex flex-col items-start">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
+              <div className="mb-4">
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500">
                   THE TECHNOLOGY
                 </span>
-                <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-neutral-900 leading-[1.12] mb-4">
                 Technology Built for <br />
@@ -762,7 +757,7 @@ export default function RetailIndustryPage() {
       <section className="py-12 sm:py-14 lg:py-16 bg-white text-black border-t border-neutral-100">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500 block mb-2 sm:mb-3">
               OUR PROCESS
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
@@ -786,7 +781,7 @@ export default function RetailIndustryPage() {
                 </div>
 
                 <div className="space-y-1.5 pt-1">
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-500 block">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500 block">
                     {stage.stage}
                   </span>
                   <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug group-hover:text-black transition-colors">
@@ -807,11 +802,10 @@ export default function RetailIndustryPage() {
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Eyebrow & Heading */}
           <div className="max-w-3xl mb-12 sm:mb-16 lg:mb-20">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
+            <div className="mb-4">
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500">
                 {data.whyChooseUs?.label || "WHY PROJECTION"}
               </span>
-              <span className="w-12 sm:w-16 h-[1px] bg-neutral-300"></span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-neutral-900 leading-[1.12] mb-4">
               {data.whyChooseUs?.title || "Why Retailers Choose Projection"}
@@ -855,7 +849,7 @@ export default function RetailIndustryPage() {
                         <div className="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-800 group-hover/cta:border-black group-hover/cta:bg-black group-hover/cta:text-white transition-all duration-200 shrink-0">
                           <ArrowRight className="w-3.5 h-3.5 group-hover/cta:translate-x-0.5 transition-transform" />
                         </div>
-                        <span className="text-[10px] font-mono tracking-[0.2em] font-medium text-neutral-700 group-hover/cta:text-black uppercase text-left transition-colors whitespace-nowrap">
+                        <span className="text-xs font-semibold uppercase tracking-wide text-neutral-700 group-hover/cta:text-black text-left transition-colors whitespace-nowrap">
                           {item.cta || "Explore"}
                         </span>
                       </Link>
@@ -887,7 +881,7 @@ export default function RetailIndustryPage() {
       <section className="py-12 sm:py-14 lg:py-16 bg-white text-black border-t border-neutral-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 block mb-2">
               COMMON QUESTIONS
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">

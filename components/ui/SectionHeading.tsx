@@ -22,7 +22,7 @@ export default function SectionHeading({
   return (
     <div className={`mb-12 ${centered ? "text-center mx-auto max-w-3xl" : "max-w-2xl"} ${className}`}>
       {label && (
-        <span className={`text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] block mb-3 ${dark ? "text-white/60" : "text-black/60"}`}>
+        <span className={`text-xs sm:text-sm font-semibold uppercase tracking-wide block mb-3 ${dark ? "text-white/60" : "text-black/60"}`}>
           {label}
         </span>
       )}

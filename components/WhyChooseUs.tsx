@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-black mb-2 sm:mb-3 block"
+            className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2 sm:mb-3 block"
           >
             WHY CHOOSE US
           </motion.p>

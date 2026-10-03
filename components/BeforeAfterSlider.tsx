@@ -150,7 +150,7 @@ export default function BeforeAfterSlider({
           />
 
           {/* After Label Badge (Floating HUD style) */}
-          <div className="absolute bottom-3.5 sm:bottom-5 right-3.5 sm:right-5 bg-black/85 backdrop-blur-md text-white text-[9px] sm:text-[11px] font-mono font-bold px-3 sm:px-3.5 py-1.5 rounded-md uppercase tracking-wider z-0 border border-white/20 shadow-lg pointer-events-none whitespace-nowrap">
+          <div className="absolute bottom-3.5 sm:bottom-5 right-3.5 sm:right-5 bg-black/85 backdrop-blur-md text-white text-xs font-semibold px-3 sm:px-3.5 py-1.5 rounded-md uppercase tracking-wide z-0 border border-white/20 shadow-lg pointer-events-none whitespace-nowrap">
             {afterLabel}
           </div>
 
@@ -171,13 +171,13 @@ export default function BeforeAfterSlider({
             <div className="absolute inset-0 bg-black/15 mix-blend-multiply pointer-events-none" />
 
             {/* Before Label Badge */}
-            <div className="absolute bottom-3.5 sm:bottom-5 left-3.5 sm:left-5 bg-black/85 backdrop-blur-md text-white text-[9px] sm:text-[11px] font-mono font-bold px-3 sm:px-3.5 py-1.5 rounded-md uppercase tracking-wider border border-white/20 shadow-lg pointer-events-none whitespace-nowrap">
+            <div className="absolute bottom-3.5 sm:bottom-5 left-3.5 sm:left-5 bg-black/85 backdrop-blur-md text-white text-xs font-semibold px-3 sm:px-3.5 py-1.5 rounded-md uppercase tracking-wide border border-white/20 shadow-lg pointer-events-none whitespace-nowrap">
               {beforeLabel}
             </div>
           </div>
 
           {/* Interactive Hint Indicator (Floating Top HUD) */}
-          <div className="absolute top-3.5 sm:top-4 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white/90 text-[9px] sm:text-[11px] font-mono font-semibold px-3 sm:px-4 py-1 rounded-md uppercase tracking-widest border border-white/20 pointer-events-none z-10 shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+          <div className="absolute top-3.5 sm:top-4 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white/90 text-xs font-semibold px-3 sm:px-4 py-1 rounded-md uppercase tracking-wide border border-white/20 pointer-events-none z-10 shadow-lg flex items-center gap-1.5 whitespace-nowrap">
             <span className="text-white/60">‹</span>
             <span>DRAG TO REVEAL</span>
             <span className="text-white/60">›</span>

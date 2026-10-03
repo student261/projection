@@ -213,7 +213,7 @@ export default function IndustriesServed() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2"
+              className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2"
             >
               <Sparkles className="w-3.5 h-3.5 text-black/40" />
               INDUSTRIES WE SERVE
@@ -240,7 +240,7 @@ export default function IndustriesServed() {
             </motion.p>
           </div>
 
-          <div className="hidden md:flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-black/30">
+          <div className="hidden md:flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-neutral-400">
             Auto-explore <span className={`w-1.5 h-1.5 rounded-full ${isHovered ? 'bg-black/20' : 'bg-black/60 animate-pulse'}`} />
           </div>
         </div>
@@ -311,7 +311,7 @@ export default function IndustriesServed() {
                   >
                     <div className="flex items-center gap-2 mb-2 text-white/90 drop-shadow">
                       {activeIndustry.icon}
-                      <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em]">{activeIndustry.label}</span>
+                      <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide">{activeIndustry.label}</span>
                     </div>
                     
                     <h3 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight mb-2 sm:mb-3 leading-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
@@ -324,7 +324,7 @@ export default function IndustriesServed() {
                     
                     <Link
                       href={activeIndustry.href}
-                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black font-bold text-xs uppercase tracking-widest transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.4)] w-full sm:w-auto"
+                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black font-bold text-xs uppercase tracking-wide transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.4)] w-full sm:w-auto"
                     >
                       {activeIndustry.cta}
                       <ArrowRight className="w-3.5 h-3.5" />

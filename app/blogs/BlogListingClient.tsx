@@ -55,7 +55,7 @@ export default function BlogListingClient({ blogs }: { blogs: Blog[] }) {
               <button 
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-md text-[10px] font-bold uppercase tracking-widest transition-colors ${
+                className={`px-4 py-2 rounded-md text-[10px] font-bold uppercase tracking-wide transition-colors ${
                   activeCategory === cat 
                     ? "bg-black text-white" 
                     : "bg-white text-black/60 border border-black/10 hover:border-black/30"
@@ -86,15 +86,15 @@ export default function BlogListingClient({ blogs }: { blogs: Blog[] }) {
 
             <div className="relative sm:absolute inset-0 p-6 sm:p-8 lg:p-16 flex flex-col justify-between h-full">
               <div className="flex justify-between items-start">
-                <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-white/80">
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/80">
                   Featured Insight
                 </span>
               </div>
 
               <div className="max-w-4xl mt-auto pt-12 sm:pt-0">
-                <div className="flex items-center gap-3 sm:gap-4 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.2em] font-semibold text-white/80 mb-3 sm:mb-6">
+                <div className="flex items-center gap-3 sm:gap-4 text-xs uppercase tracking-wide font-semibold text-white/80 mb-3 sm:mb-6">
                   <span className="text-white font-bold">{featured.category}</span>
-                  <span>•</span>
+                  <span>|</span>
                   <span>{featured.readTime}</span>
                 </div>
                 <h2 className="text-2xl sm:text-4xl lg:text-7xl font-black leading-[1.08] sm:leading-[1.05] mb-3 sm:mb-6 tracking-tight text-white group-hover:text-gray-300 transition-all duration-500">
@@ -113,7 +113,7 @@ export default function BlogListingClient({ blogs }: { blogs: Blog[] }) {
       {/* The Archives */}
       {archives.length > 0 && (
         <section className="px-4 sm:px-6 lg:px-8 pb-32 max-w-screen-2xl mx-auto w-full">
-          <h3 className="text-[10px] font-mono uppercase tracking-[0.3em] font-bold text-black mb-8">
+          <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black mb-8">
             Recent Publications
           </h3>
           
@@ -133,11 +133,11 @@ export default function BlogListingClient({ blogs }: { blogs: Blog[] }) {
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.2em] font-semibold text-black/50 mb-4">
+                  <div className="flex items-center gap-3 text-xs uppercase tracking-wide font-semibold text-black/50 mb-4">
                     <span className="text-black font-bold">{b.category}</span>
-                    <span>•</span>
+                    <span>|</span>
                     <span>{b.date}</span>
-                    <span>•</span>
+                    <span>|</span>
                     <span>{b.readTime}</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-4 text-black group-hover:text-black/70 transition-colors md:min-h-[4.5rem] line-clamp-2">
@@ -147,7 +147,7 @@ export default function BlogListingClient({ blogs }: { blogs: Blog[] }) {
                   <p className="text-black/60 font-light leading-relaxed max-w-xl mb-6 flex-1 line-clamp-3">
                     {b.excerpt}
                   </p>
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black group-hover:text-black/70 transition-colors">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-black group-hover:text-black/70 transition-colors">
                     Read Article <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </div>
                 </div>

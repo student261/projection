@@ -44,7 +44,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto space-y-6 sm:space-y-7">
             
             {/* Tag (No Pill Container) */}
-            <div className="flex justify-center items-center gap-2.5 text-[10px] sm:text-[11px] font-mono font-semibold tracking-[0.25em] text-black uppercase">
+            <div className="flex justify-center items-center gap-2.5 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black">
               <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
               <span>SPATIAL CONSULTATION & BRIEFING</span>
             </div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
             <div className="pt-2 flex items-center justify-center gap-4">
               <a
                 href="#scoping-form"
-                className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-black text-white font-bold text-xs uppercase tracking-widest hover:bg-neutral-800 transition-all shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-black text-white font-bold text-xs uppercase tracking-wide hover:bg-neutral-800 transition-all shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
               >
                 <span>Begin Project Scoping</span>
                 <Sparkles className="w-3.5 h-3.5" />
@@ -73,19 +73,19 @@ export default function ContactPage() {
             <div className="pt-12 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-neutral-50 border border-black/5 hover:border-black/10 transition-colors">
                 <Clock className="w-5 h-5 text-black mb-3" />
-                <span className="text-[10px] font-mono tracking-widest text-black uppercase font-bold">RESPONSE TIME</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-black">RESPONSE TIME</span>
                 <p className="text-xs sm:text-sm text-black font-bold mt-1">Sub-24h Technical Review</p>
                 <span className="text-[10px] text-neutral-600 font-light mt-1">Direct senior engineering review</span>
               </div>
               <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-neutral-50 border border-black/5 hover:border-black/10 transition-colors">
                 <ShieldCheck className="w-5 h-5 text-black mb-3" />
-                <span className="text-[10px] font-mono tracking-widest text-black uppercase font-bold">CONFIDENTIALITY</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-black">CONFIDENTIALITY</span>
                 <p className="text-xs sm:text-sm text-black font-bold mt-1">Mutual NDA Protected</p>
                 <span className="text-[10px] text-neutral-600 font-light mt-1">Full proprietary IP coverage</span>
               </div>
               <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-neutral-50 border border-black/5 hover:border-black/10 transition-colors">
                 <Globe className="w-5 h-5 text-black mb-3" />
-                <span className="text-[10px] font-mono tracking-widest text-black uppercase font-bold">DIRECT ACCESS</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-black">DIRECT ACCESS</span>
                 <p className="text-xs sm:text-sm text-black font-bold mt-1">Lead Hardware Architects</p>
                 <span className="text-[10px] text-neutral-600 font-light mt-1">No sales intermediaries</span>
               </div>
@@ -106,7 +106,7 @@ export default function ContactPage() {
                   <div className="w-16 h-16 rounded-full bg-black text-white flex items-center justify-center mx-auto shadow-lg">
                     <CheckCircle2 className="w-8 h-8 text-white" />
                   </div>
-                  <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-black/50 font-bold block">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-black/50 block">
                     PROJECT INTAKE RECEIVED
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-black">
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   <div className="pt-4">
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="text-xs font-mono uppercase tracking-wider text-black border-b border-black pb-0.5 hover:text-black/60 transition-colors"
+                      className="text-xs font-semibold uppercase tracking-wide text-black border-b border-black pb-0.5 hover:text-black/60 transition-colors"
                     >
                       Submit Another Spatial Briefing →
                     </button>
@@ -127,7 +127,7 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/50 block font-bold mb-1">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-black/50 block mb-1">
                       TECHNICAL SCOPING WORKFLOW
                     </span>
                     <h2 className="text-xl sm:text-2xl font-black tracking-tight text-black">
@@ -137,7 +137,7 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-black/70 mb-1.5 font-bold">
+                      <label className="block text-xs uppercase tracking-wide text-black/70 mb-1.5 font-semibold">
                         Full Name *
                       </label>
                       <input
@@ -150,7 +150,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-black/70 mb-1.5 font-bold">
+                      <label className="block text-xs uppercase tracking-wide text-black/70 mb-1.5 font-semibold">
                         Work Email *
                       </label>
                       <input
@@ -166,7 +166,7 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-black/70 mb-1.5 font-bold">
+                      <label className="block text-xs uppercase tracking-wide text-black/70 mb-1.5 font-semibold">
                         Organization / Venue *
                       </label>
                       <input
@@ -179,7 +179,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-black/70 mb-1.5 font-bold">
+                      <label className="block text-xs uppercase tracking-wide text-black/70 mb-1.5 font-semibold">
                         Target Industry *
                       </label>
                       <select 
@@ -198,7 +198,7 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-black/70 mb-1.5 font-bold">
+                      <label className="block text-xs uppercase tracking-wide text-black/70 mb-1.5 font-semibold">
                         Estimated Spatial Footprint
                       </label>
                       <select 
@@ -207,13 +207,13 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       >
                         <option value="under-500">Boutique Zone (&lt; 500 sq ft)</option>
-                        <option value="500-2500">Medium Gallery / Lab (500 – 2,500 sq ft)</option>
-                        <option value="2500-10000">Large Venue / Atrium (2,500 – 10,000 sq ft)</option>
+                        <option value="500-2500">Medium Gallery / Lab (500 to 2,500 sq ft)</option>
+                        <option value="2500-10000">Large Venue / Atrium (2,500 to 10,000 sq ft)</option>
                         <option value="over-10000">Architectural Landmark / Façade (10,000+ sq ft)</option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-black/70 mb-1.5 font-bold">
+                      <label className="block text-xs uppercase tracking-wide text-black/70 mb-1.5 font-semibold">
                         Desired Timeline
                       </label>
                       <select 
@@ -222,15 +222,15 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 bg-neutral-50 border border-black/15 rounded-xl text-black text-base sm:text-xs focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       >
                         <option value="immediate">Immediate (&lt; 3 Months)</option>
-                        <option value="3-6-months">3 – 6 Months</option>
-                        <option value="6-12-months">6 – 12 Months</option>
+                        <option value="3-6-months">3 to 6 Months</option>
+                        <option value="6-12-months">6 to 12 Months</option>
                         <option value="feasibility">Preliminary Architectural Feasibility</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-wider text-black/70 mb-1.5 font-bold">
+                    <label className="block text-xs uppercase tracking-wide text-black/70 mb-1.5 font-semibold">
                       Primary Technology Category
                     </label>
                     <select 
@@ -248,7 +248,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-wider text-black/70 mb-1.5 font-bold">
+                    <label className="block text-xs uppercase tracking-wide text-black/70 mb-1.5 font-semibold">
                       Venue Scope &amp; Environmental Conditions *
                     </label>
                     <textarea
@@ -263,7 +263,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-xl bg-black text-white hover:bg-neutral-800 transition-all font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 shadow-lg active:scale-[0.99]"
+                    className="w-full py-4 rounded-xl bg-black text-white hover:bg-neutral-800 transition-all font-bold text-xs uppercase tracking-wide flex items-center justify-center gap-2 shadow-lg active:scale-[0.99]"
                   >
                     <span>Transmit Scoping Briefing</span>
                     <Send className="w-3.5 h-3.5" />
@@ -277,7 +277,7 @@ export default function ContactPage() {
               {/* Direct Studio Contact Card */}
               <div className="bg-black text-white rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-6">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/50 block font-bold mb-1">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-white/50 block mb-1">
                     STUDIO TELEMETRY &amp; DISPATCH
                   </span>
                   <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white">
@@ -291,7 +291,7 @@ export default function ContactPage() {
                       <Mail className="w-4 h-4 text-white/80" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-white/50 block">Engineering Briefs</span>
+                      <span className="text-[10px] font-semibold uppercase tracking-wide text-white/50 block">Engineering Briefs</span>
                       <a href={`mailto:${SITE_CONTACT.email}`} className="text-white font-medium hover:underline text-xs sm:text-sm">
                         {SITE_CONTACT.email}
                       </a>
@@ -303,7 +303,7 @@ export default function ContactPage() {
                       <Phone className="w-4 h-4 text-white/80" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-white/50 block">Studio Hotline</span>
+                      <span className="text-[10px] font-semibold uppercase tracking-wide text-white/50 block">Studio Hotline</span>
                       <a href={`tel:${SITE_CONTACT.phone}`} className="text-white font-medium hover:underline text-xs sm:text-sm">
                         {SITE_CONTACT.phone}
                       </a>
@@ -315,7 +315,7 @@ export default function ContactPage() {
                       <MapPin className="w-4 h-4 text-white/80" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-white/50 block">R&amp;D Testing Chambers</span>
+                      <span className="text-[10px] font-semibold uppercase tracking-wide text-white/50 block">R&amp;D Testing Chambers</span>
                       <span className="text-white font-medium text-xs sm:text-sm">{SITE_CONTACT.address}</span>
                     </div>
                   </div>
@@ -325,7 +325,7 @@ export default function ContactPage() {
               {/* Global Production Labs */}
               <div className="bg-white rounded-3xl p-6 sm:p-8 border border-black/10 shadow-sm space-y-4">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/50 block font-bold mb-1">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-black/50 block mb-1">
                     GLOBAL PRESENCE
                   </span>
                   <h4 className="text-base sm:text-lg font-black text-black">

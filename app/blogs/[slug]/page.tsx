@@ -57,13 +57,13 @@ const BLOG_DATA: Record<string, BlogPost> = {
       { label: "Surface Luminance", value: "15,000+ Lumens", detail: "Pure laser solid-state engine" },
       { label: "Spatial Blending", value: "Sub-Pixel", detail: "Automated geometric mesh warping" },
     ],
-    takeaway: "True spatial integration occurs when the hardware disappears. Recessing projectors and LiDAR arrays flush into ceiling architecture allows the physical material itself—whether concrete, pale oak, or plaster—to become the interactive medium.",
+    takeaway: "True spatial integration occurs when the hardware disappears. Recessing projectors and LiDAR arrays flush into ceiling architecture allows the physical material itself, whether concrete, pale oak, or plaster, to become the interactive medium.",
     sections: [
       {
         partNumber: "Part 01",
         title: "The Shift From Screens to Living Surfaces",
         content: [
-          "The boundaries between built architecture and digital experience are quietly dissolving. For decades, interactive technology meant putting a rectangular screen in a room—or forcing visitors to wear bulky headsets. Both approaches isolate the participant from their physical environment.",
+          "The boundaries between built architecture and digital experience are quietly dissolving. For decades, interactive technology meant putting a rectangular screen in a room, or forcing visitors to wear bulky headsets. Both approaches isolate the participant from their physical environment.",
           "Spatial motion projection takes the opposite philosophy: it leaves people completely unencumbered and turns the architecture itself into the interactive medium. When a visitor steps into a room, the floor responds to their stride, walls ripple with light as their hands approach, and the space acknowledges their presence without requiring them to hold a controller or stare down at a personal smartphone.",
           "Unlike LED video walls or floor monitors, projection leaves materials intact. In daylight or when the system is resting, the floor remains natural polished concrete, pale oak, or architectural terrazzo. When energized, light becomes a fluid dynamic layer that lives directly upon those physical textures."
         ]
@@ -281,7 +281,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="mb-10">
           <Link 
             href="/blogs"
-            className="inline-flex items-center gap-2.5 text-xs font-mono font-medium uppercase tracking-[0.2em] text-black/50 hover:text-black transition-colors group"
+            className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wide text-black/50 hover:text-black transition-colors group"
           >
             <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
             <span>All Publications</span>
@@ -289,11 +289,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
 
         {/* Category & Topic - Clean Typography, Strictly No Slashes */}
-        <div className="flex flex-wrap items-center gap-3 text-xs font-mono uppercase tracking-[0.18em] mb-6">
+        <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wide mb-6">
           <span className="font-bold text-black">
             {post.category}
           </span>
-          <span className="text-black/30">•</span>
+          <span className="text-black/30">|</span>
           <span className="text-black/50 font-normal">
             {post.topic}
           </span>
@@ -310,7 +310,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </p>
 
         {/* Metadata Byline - Zero Cards, Pure Clean Typography, No Slashes */}
-        <div className="flex flex-wrap items-center gap-y-3 gap-x-8 text-xs font-mono uppercase tracking-[0.16em] text-black/50 pt-6">
+        <div className="flex flex-wrap items-center gap-y-3 gap-x-8 text-xs font-semibold uppercase tracking-wide text-black/50 pt-6">
           <div>
             <span className="text-black/30 mr-2">AUTHORED BY</span>
             <span className="text-black font-semibold">{post.author.name}</span>
@@ -337,11 +337,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             containerClassName="w-full h-full"
           />
         </div>
-        <div className="mt-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 text-xs font-mono text-black/50">
+        <div className="mt-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 text-xs text-black/50">
           <p className="leading-relaxed max-w-3xl">
             {post.heroCaption}
           </p>
-          <span className="shrink-0 uppercase tracking-widest text-black/30">
+          <span className="shrink-0 uppercase tracking-wide text-black/40 font-semibold text-[10px] sm:text-xs">
             Spatial Systems Architecture
           </span>
         </div>
@@ -357,7 +357,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {/* Sections Loop */}
             {post.sections.map((section, idx) => (
               <div key={idx} className="space-y-6">
-                <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+                <div className="text-xs font-semibold uppercase tracking-wide text-black/40">
                   {section.partNumber}
                 </div>
                 
@@ -396,7 +396,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                       />
                     </div>
                     {post.secondaryCaption && (
-                      <p className="text-xs font-mono text-black/50 leading-relaxed">
+                      <p className="text-xs text-black/50 leading-relaxed">
                         {post.secondaryCaption}
                       </p>
                     )}
@@ -410,14 +410,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-black leading-[1.25]">
                 &ldquo;{post.quote.text}&rdquo;
               </blockquote>
-              <div className="mt-4 text-xs font-mono uppercase tracking-[0.2em] text-black/50">
-                — {post.quote.attribution}
+              <div className="mt-4 text-xs font-semibold uppercase tracking-wide text-black/50">
+                : {post.quote.attribution}
               </div>
             </div>
 
             {/* Architecture In Practice Summary */}
             <div className="space-y-4 pt-4">
-              <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+              <div className="text-xs font-semibold uppercase tracking-wide text-black/40">
                 Synthesis
               </div>
               <h3 className="text-2xl font-bold tracking-tight text-black">
@@ -435,14 +435,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             
             {/* System Metrics Panel */}
             <div className="space-y-6">
-              <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+              <div className="text-xs font-semibold uppercase tracking-wide text-black/40">
                 Technical Specifications
               </div>
               
               <div className="space-y-6">
                 {post.metrics.map((metric, mIdx) => (
                   <div key={mIdx} className="space-y-1">
-                    <div className="text-xs font-mono uppercase tracking-wider text-black/50">
+                    <div className="text-xs uppercase tracking-wide text-black/50 font-semibold">
                       {metric.label}
                     </div>
                     <div className="text-2xl font-black tracking-tight text-black">
@@ -458,7 +458,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {/* Specifier Brief */}
             <div className="space-y-3 pt-6">
-              <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+              <div className="text-xs font-semibold uppercase tracking-wide text-black/40">
                 Specifier Brief
               </div>
               <p className="text-sm font-light text-black/80 leading-relaxed">
@@ -468,7 +468,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {/* Practice Contact Direct */}
             <div className="space-y-3 pt-6">
-              <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40">
+              <div className="text-xs font-semibold uppercase tracking-wide text-black/40">
                 Technical Consultation
               </div>
               <p className="text-xs font-light text-black/60 leading-relaxed">
@@ -476,7 +476,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </p>
               <Link 
                 href="/contact"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black hover:opacity-70 transition-opacity pt-1"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-black hover:opacity-70 transition-opacity pt-1"
               >
                 <span>Request Technical Brief</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -491,7 +491,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       {/* Related Publications - Zero Box Cards, Pure Editorial Typographic Flow, Strictly No Slashes */}
       <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-12">
-          <div className="text-xs font-mono uppercase tracking-[0.25em] text-black/40 mb-2">
+          <div className="text-xs font-semibold uppercase tracking-wide text-black/40 mb-2">
             Further Reading
           </div>
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-black">
@@ -506,8 +506,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               href={`/blogs/${related.slug}`}
               className="group block space-y-4"
             >
-              <div className="flex items-center justify-between text-xs font-mono text-black/40 uppercase tracking-widest">
-                <span>Article {related.index} • {related.category}</span>
+              <div className="flex items-center justify-between text-xs font-semibold text-black/40 uppercase tracking-wide">
+                <span>Article {related.index} | {related.category}</span>
                 <span>{related.readTime}</span>
               </div>
               
@@ -519,7 +519,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 {related.summary}
               </p>
 
-              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black group-hover:gap-3 transition-all pt-2">
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-black group-hover:gap-3 transition-all pt-2">
                 <span>Read Publication</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
@@ -531,7 +531,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       {/* Seamless Minimalist Bottom Inquiry Section */}
       <section className="w-full bg-black text-white py-24 sm:py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <div className="text-xs font-mono uppercase tracking-[0.3em] text-white/50">
+          <div className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/50">
             Spatial Systems Integration
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.06]">
@@ -543,7 +543,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="pt-4">
             <Link 
               href="/contact"
-              className="w-full sm:w-auto inline-flex justify-center items-center gap-3 px-8 py-4 bg-white text-black text-xs font-mono font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-3 px-8 py-4 bg-white text-black text-xs font-bold uppercase tracking-wide hover:bg-neutral-200 transition-colors"
             >
               <span>Consult with an Architect</span>
               <ArrowUpRight className="w-4 h-4" />

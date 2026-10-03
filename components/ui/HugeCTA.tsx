@@ -61,7 +61,7 @@ export default function HugeCTA({
 
           {/* Left Side Content */}
           <div className="relative z-10 flex-1 max-w-2xl xl:max-w-3xl text-center lg:text-left space-y-3 sm:space-y-4">
-            <div className="inline-flex items-center justify-center lg:justify-start gap-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1 sm:mb-2">
+            <div className="inline-flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/60 mb-1 sm:mb-2">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{badge}</span>
             </div>
@@ -77,7 +77,7 @@ export default function HugeCTA({
           <div className="relative z-10 shrink-0 pt-4 lg:pt-0 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
             <Link
               href={primaryBtnHref}
-              className="group flex items-center justify-center gap-3 sm:gap-4 px-5 sm:px-6 xl:px-8 py-3.5 xl:py-5 rounded-full bg-white text-black font-extrabold text-xs sm:text-[13px] uppercase tracking-[0.15em] transition-all duration-500 hover:bg-gray-100 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.1)] w-full sm:w-auto"
+              className="group flex items-center justify-center gap-3 sm:gap-4 px-5 sm:px-6 xl:px-8 py-3.5 xl:py-5 rounded-full bg-white text-black font-extrabold text-xs sm:text-[13px] uppercase tracking-wide transition-all duration-500 hover:bg-gray-100 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.1)] w-full sm:w-auto"
             >
               <span>{primaryBtnText}</span>
               <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center group-hover:translate-x-1 transition-transform duration-300">
@@ -87,7 +87,7 @@ export default function HugeCTA({
             
             <Link
               href={secondaryBtnHref}
-              className="group flex items-center justify-center gap-2.5 sm:gap-3 px-5 sm:px-6 xl:px-8 py-3.5 xl:py-5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-extrabold text-xs sm:text-[13px] uppercase tracking-[0.15em] transition-all duration-500 hover:bg-white/20 hover:scale-105 active:scale-95 w-full sm:w-auto"
+              className="group flex items-center justify-center gap-2.5 sm:gap-3 px-5 sm:px-6 xl:px-8 py-3.5 xl:py-5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-extrabold text-xs sm:text-[13px] uppercase tracking-wide transition-all duration-500 hover:bg-white/20 hover:scale-105 active:scale-95 w-full sm:w-auto"
             >
               <MessageSquare className="w-4 h-4" />
               <span>{secondaryBtnText}</span>

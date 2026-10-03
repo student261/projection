@@ -78,7 +78,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
         </div>
 
         <div className="my-auto relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-          <div className="inline-flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-white/70 mb-3">
+          <div className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/70 mb-3">
             <Sparkles className="w-3.5 h-3.5 text-white/70" />
             <span>{industry.hero.eyebrow}</span>
           </div>
@@ -128,7 +128,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
               <div className="max-w-2xl">
                 <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
                   <span className="w-6 sm:w-8 h-[2px] bg-white"></span>
-                  <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-white">
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-white">
                     THE CHALLENGE
                   </span>
                 </div>
@@ -187,7 +187,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 space-y-4">
               <div>
-                <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 block mb-2">
                   OUR VISION
                 </span>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">
@@ -227,7 +227,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
           {/* Section Header */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 sm:pb-8 border-b border-black/15 mb-8 sm:mb-10">
             <div className="max-w-2xl">
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-2.5">
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500 block mb-2 sm:mb-2.5">
                 SOLUTIONS FOR YOUR SPACE
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight text-black">
@@ -291,7 +291,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       <section id="experiences" className="pt-14 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20 bg-black text-white overflow-hidden scroll-mt-24">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-2 sm:mb-3">
           <div className="max-w-3xl">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-white/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/60 block mb-2">
               EXPERIENCE IDEAS
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-white">
@@ -315,7 +315,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
           {/* Section Header */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-14 gap-4">
             <div className="max-w-2xl">
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2 sm:mb-3">
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 block mb-2 sm:mb-3">
                 WHAT IT ENABLES
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
@@ -354,7 +354,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
 
           {/* Header */}
           <div className="max-w-3xl mb-12 sm:mb-16">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500 block mb-2 sm:mb-3">
               REAL-TIME PIPELINE
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
@@ -389,7 +389,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
 
                   {/* Step Meta & Content */}
                   <div className="space-y-2 pr-2">
-                    <span className="font-mono text-xs font-bold tracking-widest text-neutral-400 group-hover:text-black transition-colors">
+                    <span className="text-xs font-bold text-neutral-400 group-hover:text-black transition-colors">
                       {String(idx + 1).padStart(2, '0')}
                     </span>
                     <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug group-hover:text-black transition-colors">
@@ -424,7 +424,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
 
                     {/* Step Content */}
                     <div className="pt-0.5 space-y-1.5 flex-1 min-w-0">
-                      <span className="font-mono text-xs font-bold tracking-widest text-neutral-400">
+                      <span className="text-xs font-bold text-neutral-400">
                         {String(idx + 1).padStart(2, '0')}
                       </span>
                       <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug">
@@ -448,7 +448,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
 
           {/* Section Header */}
           <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500 block mb-2 sm:mb-3">
               TURNKEY METHODOLOGY
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
@@ -514,7 +514,7 @@ export default async function IndustrySubpage(props: { params: Promise<{ slug: s
       <section className="py-14 sm:py-16 lg:py-20 bg-white text-black border-t border-neutral-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-black/60 uppercase block mb-2">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 block mb-2">
               COMMON QUESTIONS
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-black">

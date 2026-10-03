@@ -49,7 +49,7 @@ export default function LatestBlogs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2 block"
+            className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2 block"
           >
             LATEST BLOGS & INSIGHTS
           </motion.p>
@@ -97,14 +97,14 @@ export default function LatestBlogs() {
                 </Link>
 
                 <div className="px-1 flex-grow flex flex-col space-y-3">
-                  <div className="flex items-center gap-3 text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-black/50 font-semibold">
+                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wide text-neutral-500">
                     <span className="text-black font-bold">{blog.category}</span>
-                    <span>•</span>
+                    <span className="text-black/30">|</span>
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3 h-3 opacity-50" />
                       <span>{blog.date}</span>
                     </span>
-                    <span>•</span>
+                    <span className="text-black/30">|</span>
                     <span className="flex items-center gap-1">
                       <Clock className="w-3 h-3 opacity-50" />
                       <span>{blog.readTime}</span>
@@ -127,7 +127,7 @@ export default function LatestBlogs() {
               <div className="pt-6 pb-2">
                 <Link
                   href={`/blogs/${blog.slug}`}
-                  className="text-xs font-bold uppercase tracking-widest text-black group-hover:text-[var(--foreground)] inline-flex items-center gap-1.5 transition-colors"
+                  className="text-xs font-bold uppercase tracking-wide text-black group-hover:text-[var(--foreground)] inline-flex items-center gap-1.5 transition-colors"
                 >
                   <span>Read Article</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -151,7 +151,7 @@ export default function LatestBlogs() {
           </div>
 
           <div className="relative z-10 max-w-xl text-center lg:text-left space-y-3">
-            <div className="inline-flex items-center justify-center lg:justify-start gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1">
+            <div className="inline-flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/60 mb-1">
               <BookOpen className="w-3.5 h-3.5" />
               <span>Continue Learning</span>
             </div>
@@ -166,7 +166,7 @@ export default function LatestBlogs() {
           <div className="relative z-10 shrink-0 w-full lg:w-auto pt-2 lg:pt-0">
             <Link
               href="/blogs"
-              className="group/btn flex items-center justify-center gap-3 w-full sm:w-auto px-7 py-3.5 sm:py-4 rounded-full bg-white text-black font-extrabold text-xs uppercase tracking-[0.15em] transition-all duration-500 hover:bg-gray-100 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+              className="group/btn flex items-center justify-center gap-3 w-full sm:w-auto px-7 py-3.5 sm:py-4 rounded-full bg-white text-black font-extrabold text-xs uppercase tracking-wide transition-all duration-500 hover:bg-gray-100 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.15)]"
             >
               <span>View All Blogs</span>
               <div className="w-7 h-7 rounded-full bg-black flex items-center justify-center group-hover/btn:translate-x-1 transition-transform duration-300">

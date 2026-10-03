@@ -58,10 +58,10 @@ export default function ProjectsHero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex justify-center items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold tracking-[0.2em] text-white/60 uppercase"
+          className="flex justify-center items-center gap-2 text-xs sm:text-sm font-semibold tracking-wide text-white/70 uppercase"
         >
           <Sparkles className="w-3.5 h-3.5" />
-          <span>STUDIO ARCHIVE • GLOBAL INSTALLATIONS</span>
+          <span>STUDIO ARCHIVE | GLOBAL INSTALLATIONS</span>
         </motion.div>
 
         {/* Main Title */}

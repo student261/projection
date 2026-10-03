@@ -64,7 +64,7 @@ export default function HowWeWork() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-black/50 mb-2"
+            className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2"
           >
             <Zap className="w-3.5 h-3.5 text-black/40" />
             HOW WE WORK
@@ -112,7 +112,7 @@ export default function HowWeWork() {
                 </div>
 
                 <div>
-                  <span className="text-[10px] font-bold text-black/50 uppercase tracking-widest block mb-1">
+                  <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wide block mb-1">
                     {step.subtitle}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight leading-tight">
@@ -154,7 +154,7 @@ export default function HowWeWork() {
                     {step.title}
                   </h3>
 
-                  <span className="text-[10px] xl:text-[11px] font-bold text-black/50 uppercase tracking-wider xl:tracking-widest mb-2 xl:mb-2.5 block">
+                  <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wide mb-2 xl:mb-2.5 block">
                     {step.subtitle}
                   </span>
 
