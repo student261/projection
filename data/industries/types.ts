@@ -33,7 +33,7 @@ export interface IndustryCTA {
 }
 
 export interface IndustryHowItWorksStep { num: string; title: string; desc: string; }
-export interface IndustryUseCase { title: string; desc: string; href: string; cta: string; }
+export interface IndustryUseCase { title: string; desc: string; href: string; cta: string; img?: string; }
 export interface IndustryWhyChooseItem { title: string; desc: string; }
 
 export interface IndustryData {

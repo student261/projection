@@ -379,21 +379,11 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 5: RELATED USE CASES */}
-      <section className="relative w-full overflow-hidden bg-black text-white py-12 sm:py-14 lg:py-16">
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <SafeImage
-            src="/images/retail_interactive_showcase.jpg"
-            alt="Retail Experiences and Brand Activations"
-            className="w-full h-full object-cover opacity-20"
-            containerClassName="w-full h-full bg-black"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black pointer-events-none" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* SECTION 5: RELATED USE CASES (Editorial Visual Showcase) */}
+      <section className="relative w-full bg-black text-white py-12 sm:py-14 lg:py-16 border-t border-neutral-900">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-8 sm:mb-10">
-            <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.2em] text-neutral-400 uppercase block mb-2 sm:mb-3">
+            <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
               {data.useCases?.label || "SEE IT IN CONTEXT"}
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
@@ -404,34 +394,39 @@ export default function RetailIndustryPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {data.useCases?.items.map((item, idx) => (
-              <div 
-                key={idx} 
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:bg-white/10 transition-colors duration-300"
+              <Link
+                key={idx}
+                href={item.href}
+                className="group flex flex-col space-y-4"
               >
-                <div className="space-y-3 mb-6">
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/60 block">
-                    USE CASE 0{idx + 1}
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900">
+                  <SafeImage
+                    src={item.img || (idx === 0 ? "/images/retail_interactive_showcase.jpg" : "/images/retail_popup_activation.jpg")}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    containerClassName="w-full h-full"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-500" />
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug group-hover:text-neutral-200 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-base text-neutral-400 font-light leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
 
-                <div>
-                  <Link
-                    href={item.href}
-                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white hover:text-white/80 transition-colors"
-                  >
+                <div className="pt-1">
+                  <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-white group-hover:text-neutral-300 transition-colors">
                     <span>{item.cta}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
