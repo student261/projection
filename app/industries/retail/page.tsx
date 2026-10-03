@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SafeImage from "@/components/SafeImage";
@@ -31,11 +30,6 @@ import {
 import FAQAccordion from "../[slug]/FAQAccordion";
 import Curved3DCarousel from "@/components/Curved3DCarousel";
 import { retail } from "@/data/industries/retail";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Interactive Retail Solutions for Stores and Showrooms",
@@ -489,7 +483,7 @@ export default function RetailIndustryPage() {
                 </span>
                 <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
               </div>
-              <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-normal tracking-tight text-neutral-900 leading-[1.12] mb-4`}>
+              <h2 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-neutral-900 leading-[1.12] mb-4">
                 From Space to <br />
                 Retail Experience
               </h2>
@@ -504,13 +498,13 @@ export default function RetailIndustryPage() {
                 {howItWorksSteps.map((step, idx) => (
                   <div key={idx} className="flex flex-col items-start">
                     <div className="flex items-center gap-2.5 mb-4">
-                      <span className={`${playfair.className} font-serif text-3xl lg:text-[34px] font-normal text-neutral-400 leading-none select-none`}>
+                      <span className="font-mono text-2xl lg:text-3xl font-bold text-neutral-400 leading-none select-none">
                         {step.num}
                       </span>
                       <span className="w-8 sm:w-10 h-[1px] bg-neutral-300"></span>
                     </div>
 
-                    <h3 className={`${playfair.className} font-serif text-base sm:text-lg font-normal text-neutral-900 leading-snug mb-2`}>
+                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 leading-snug mb-2">
                       {step.title}
                     </h3>
 
@@ -608,7 +602,7 @@ export default function RetailIndustryPage() {
                   WHY IT WORKS
                 </span>
               </div>
-              <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-normal tracking-tight text-white leading-[1.12]`}>
+              <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold tracking-tight text-white leading-[1.12]">
                 Benefits for Retailers <br className="hidden sm:inline" />
                 and Shoppers
               </h2>
@@ -633,10 +627,10 @@ export default function RetailIndustryPage() {
                     : "lg:border-l lg:border-white/10 lg:pl-8 xl:pl-10"
                 }`}
               >
-                <span className={`${playfair.className} font-serif text-base sm:text-lg text-neutral-400 block mb-2`}>
+                <span className="font-mono text-xs font-bold text-neutral-400 block mb-2">
                   0{idx + 1}
                 </span>
-                <h3 className={`${playfair.className} font-serif text-base sm:text-lg font-normal text-white leading-snug mb-2`}>
+                <h3 className="text-base sm:text-lg font-bold text-white leading-snug mb-2">
                   {item.title}
                 </h3>
                 <p className="text-xs text-neutral-400 font-light leading-relaxed">
@@ -718,7 +712,7 @@ export default function RetailIndustryPage() {
                 </span>
                 <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
               </div>
-              <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-normal tracking-tight text-neutral-900 leading-[1.12] mb-4`}>
+              <h2 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-neutral-900 leading-[1.12] mb-4">
                 Technology Built for <br />
                 Retail Spaces
               </h2>
@@ -735,7 +729,7 @@ export default function RetailIndustryPage() {
                   return (
                     <div key={idx} className="flex flex-col items-start">
                       <IconComponent className="w-5 h-5 text-neutral-800 stroke-[1.5] mb-3" />
-                      <h3 className={`${playfair.className} font-serif text-base sm:text-lg font-normal text-neutral-900 leading-snug mb-1.5`}>
+                      <h3 className="text-base sm:text-lg font-bold text-neutral-900 leading-snug mb-1.5">
                         {item.title}
                       </h3>
                       <p className="text-xs text-neutral-500 font-light leading-relaxed">
@@ -751,9 +745,9 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 9: HOW WE DELIVER */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white text-black border-t border-neutral-100">
+      <section className="py-14 sm:py-16 lg:py-20 bg-white text-black border-t border-neutral-100">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 sm:mb-16">
+          <div className="max-w-3xl mb-6 sm:mb-8">
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
               OUR PROCESS
             </span>
@@ -805,7 +799,7 @@ export default function RetailIndustryPage() {
               </span>
               <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
             </div>
-            <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-normal tracking-tight text-neutral-900 leading-[1.12] mb-4`}>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-neutral-900 leading-[1.12] mb-4">
               {data.whyChooseUs?.title || "Why Retailers Choose Projection"}
             </h2>
             <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-xl">
@@ -839,7 +833,7 @@ export default function RetailIndustryPage() {
                     </div>
                   </div>
 
-                  <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-2.5`}>
+                  <h3 className="text-lg sm:text-xl font-bold text-neutral-900 tracking-tight leading-snug mb-2.5">
                     {item.title}
                   </h3>
 

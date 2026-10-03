@@ -224,7 +224,7 @@ function SchematicDiagram({ type }: { type: DiagramType }) {
         {/* Surrounding Subject Modules with Switch Arrows */}
         {/* Math (Top Left) */}
         <circle cx="70" cy="75" r="22" stroke="#171717" strokeWidth="1.2" fill="white" />
-        <text x="63" y="81" fill="#171717" fontSize="16" fontFamily="serif" fontWeight="bold">∑</text>
+        <text x="63" y="81" fill="#171717" fontSize="16" fontFamily="sans-serif" fontWeight="bold">∑</text>
         <path d="M92 75 Q110 70 125 75" stroke="#171717" strokeWidth="1" strokeDasharray="2 2" />
 
         {/* Globe / Geography (Top Right) */}
