@@ -31,11 +31,6 @@ export default function SafeImage({
     const [baseUrl, query] = rawSrc.split("?");
     let result = baseUrl;
 
-    // Convert local images to WebP if needed
-    if ((result.endsWith(".png") || result.endsWith(".jpg") || result.endsWith(".jpeg")) && !result.startsWith("http")) {
-      result = result.replace(/\.(png|jpg|jpeg)$/, ".webp");
-    }
-
     if (result.includes("images.unsplash.com")) {
       if (!result.includes("fm=")) {
         result += `${result.includes("?") ? "&" : "?"}fm=webp`;
@@ -72,16 +67,16 @@ export default function SafeImage({
       const [baseImgSrc] = imgSrc.split("?");
       const qSuffix = query ? `?${query}` : "";
 
-      // Stage 0: If webp failed, try original src if it was .jpg or .png
-      if (attemptStage === 0 && baseImgSrc.endsWith(".webp") && (baseSrc.endsWith(".jpg") || baseSrc.endsWith(".png") || baseSrc.endsWith(".jpeg"))) {
+      // Stage 0: If .jpg failed, try .webp
+      if (attemptStage === 0 && (baseImgSrc.endsWith(".jpg") || baseImgSrc.endsWith(".png") || baseImgSrc.endsWith(".jpeg"))) {
         setAttemptStage(1);
-        setImgSrc(src);
+        setImgSrc(`${baseImgSrc.replace(/\.(jpg|png|jpeg)$/, ".webp")}${qSuffix}`);
         return;
       }
-      // If original src was .webp and failed, try .jpg fallback
-      if (attemptStage === 0 && baseSrc.endsWith(".webp")) {
+      // If .webp failed, try .jpg fallback
+      if (attemptStage === 0 && baseImgSrc.endsWith(".webp")) {
         setAttemptStage(1);
-        setImgSrc(`${baseSrc.replace(/\.webp$/, ".jpg")}${qSuffix}`);
+        setImgSrc(`${baseImgSrc.replace(/\.webp$/, ".jpg")}${qSuffix}`);
         return;
       }
     }

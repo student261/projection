@@ -457,7 +457,7 @@ export default function RetailIndustryPage() {
       </section>
 
       {/* SECTION 5B: EXPERIENCE IDEAS (Curved 3D Carousel) */}
-      <section className="pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 bg-black text-white overflow-hidden">
+      <section id="experiences" className="pt-14 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20 bg-black text-white overflow-hidden scroll-mt-24">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-2 sm:mb-3">
           <div className="max-w-3xl">
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-white/60 uppercase block mb-2">
