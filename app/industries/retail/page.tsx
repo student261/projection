@@ -6,6 +6,7 @@ import Link from "next/link";
 import { 
   ArrowRight, 
   Sparkles, 
+  Store,
   Activity, 
   Layers, 
   Tv, 
@@ -400,7 +401,7 @@ export default function RetailIndustryPage() {
                 {data.useCases?.intro || "This industry connects to two of our use cases:"}
               </p>
             </div>
-            <div className="lg:col-span-5 border-l border-neutral-300 pl-6 sm:pl-8 py-1 lg:mb-1">
+            <div className="lg:col-span-5 py-1 lg:mb-1">
               <p className="text-sm sm:text-base text-neutral-600 font-light leading-relaxed">
                 {data.useCases?.description || "From window displays to in-store experiences, these solutions help retailers attract attention, increase engagement and turn more visitors into customers."}
               </p>
@@ -415,10 +416,14 @@ export default function RetailIndustryPage() {
                 className="rounded-2xl p-7 sm:p-9 lg:p-10 bg-[#fbfbfd] border border-black/10 hover:border-black/20 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  {/* Top Badge: Number + Tag + Horizontal Line */}
+                  {/* Top Badge: Icon + Tag + Horizontal Line */}
                   <div className="flex items-center gap-3.5 mb-6 sm:mb-8">
-                    <div className="w-7 h-7 rounded-full border border-neutral-300 flex items-center justify-center text-[10px] font-mono text-neutral-600 shrink-0">
-                      {item.num || (idx === 0 ? "01" : "02")}
+                    <div className="w-7 h-7 rounded-full border border-neutral-300 bg-neutral-100/70 flex items-center justify-center text-neutral-700 shrink-0">
+                      {idx === 0 ? (
+                        <Store className="w-3.5 h-3.5" />
+                      ) : (
+                        <Sparkles className="w-3.5 h-3.5" />
+                      )}
                     </div>
                     <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.22em] text-neutral-500 uppercase">
                       {item.tag || (idx === 0 ? "RETAIL EXPERIENCES" : "BRAND ACTIVATIONS")}
