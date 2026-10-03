@@ -750,53 +750,46 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 9: HOW WE DELIVER (Architectural Delivery Process Rail) */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black border-t border-neutral-100 overflow-hidden">
+      {/* SECTION 9: HOW WE DELIVER */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white text-black border-t border-neutral-100">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 sm:mb-16 lg:mb-20">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
-                OUR PROCESS
-              </span>
-              <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
-            </div>
-            <h2 className={`${playfair.className} font-serif text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-normal tracking-tight text-neutral-900 leading-[1.12] mb-4`}>
+          <div className="max-w-3xl mb-12 sm:mb-16">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
+              OUR PROCESS
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
               How We Deliver Every Retail Installation
             </h2>
-            <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-xl mt-2">
               From preliminary space surveying through on-site hardware commissioning and post-launch staff enablement.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 relative">
-            {deliveryStages.map((stage, idx) => {
-              const isLast = idx === deliveryStages.length - 1;
-              return (
-                <div key={idx} className="flex flex-col items-start relative">
-                  <div className="flex items-center gap-3.5 mb-5 w-full">
-                    <div className="w-14 h-14 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-800 shrink-0 shadow-[0_1px_3px_rgba(0,0,0,0.02)] relative z-10">
-                      <span className={`${playfair.className} font-serif text-xl font-normal text-neutral-900`}>
-                        0{idx + 1}
-                      </span>
-                    </div>
-                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 shrink-0">
-                      {stage.stage}
-                    </span>
-                    {!isLast && (
-                      <div className="hidden md:block flex-1 h-[1px] bg-neutral-200 ml-4 -mr-8 lg:-mr-12 z-0" />
-                    )}
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+            {deliveryStages.map((stage, idx) => (
+              <div key={idx} className="group flex flex-col space-y-4">
+                <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-neutral-100">
+                  <SafeImage
+                    src={stage.img}
+                    alt={stage.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    containerClassName="w-full h-full"
+                  />
+                </div>
 
-                  <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-2`}>
+                <div className="space-y-1.5 pt-1">
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-500 block">
+                    {stage.stage}
+                  </span>
+                  <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug group-hover:text-black transition-colors">
                     {stage.title}
                   </h3>
-
-                  <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
                     {stage.desc}
                   </p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
