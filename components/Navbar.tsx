@@ -167,9 +167,9 @@ export default function Navbar() {
               </Link>
 
               {/* Solutions Floating Compact Card (No wasted screen-wide space) */}
-              <div className="absolute top-[calc(100%-8px)] -left-6 pt-4 z-50 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 ease-out">
+              <div className="absolute top-[calc(100%-8px)] -left-[68px] pt-4 z-50 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 ease-out">
                 <div className="w-[660px] rounded-2xl p-4 shadow-2xl border border-black/10 bg-white grid grid-cols-12 gap-4 relative">
-                  <div className="absolute -top-2 left-14 w-4 h-4 bg-white border-l border-t border-black/10 rotate-45 rounded-tl-sm z-10" />
+                  <div className="absolute -top-2 left-[100px] w-4 h-4 bg-white border-l border-t border-black/10 rotate-45 rounded-tl-sm z-10" />
                   
                   {/* Left Column: 4 items in ONE vertical line */}
                   <div className="col-span-7 flex flex-col justify-between space-y-1">
