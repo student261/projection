@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SafeImage from "@/components/SafeImage";
@@ -17,11 +18,20 @@ import {
   ChevronRight,
   Monitor,
   Calendar,
-  CheckCircle2
+  CheckCircle2,
+  Eye,
+  Grid2X2,
+  Settings,
+  Asterisk
 } from "lucide-react";
 import FAQAccordion from "../[slug]/FAQAccordion";
 import Curved3DCarousel from "@/components/Curved3DCarousel";
 import { retail } from "@/data/industries/retail";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Interactive Retail Solutions for Stores and Showrooms",
@@ -76,6 +86,37 @@ export default function RetailIndustryPage() {
       href: "/solutions/interactive-engagement",
       cta: "Explore Interactive Engagement",
       img: "/images/interactive_strike_wall.jpg",
+    },
+  ];
+
+  const howItWorksSteps = [
+    {
+      num: "01",
+      title: "Review the Space",
+      desc: "We look at the storefront, floor, lighting and layout to understand your space and goals.",
+      action: "SPACE ANALYSIS",
+      icon: Eye,
+    },
+    {
+      num: "02",
+      title: "Plan the Experience",
+      desc: "The interaction, visual layout and content are planned around your brand and campaign.",
+      action: "CREATIVE PLANNING",
+      icon: Grid2X2,
+    },
+    {
+      num: "03",
+      title: "Build the Content",
+      desc: "Visuals and activities are created to match your brand, products and campaign goal.",
+      action: "CONTENT CREATION",
+      icon: Settings,
+    },
+    {
+      num: "04",
+      title: "Install and Calibrate",
+      desc: "The system is installed and calibrated to the exact space and surfaces.",
+      action: "ON SITE SETUP",
+      icon: Asterisk,
     },
   ];
 
@@ -407,82 +448,110 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 6: HOW IT WORKS */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white text-black">
+      {/* SECTION 6: HOW IT WORKS (Matching Reference Design) */}
+      <section className="py-20 sm:py-24 lg:py-28 bg-[#FAF8F5] text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 sm:mb-16">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
-              {data.howItWorks?.label || "HOW IT WORKS"}
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
+          {/* Header */}
+          <div className="max-w-3xl mb-14 sm:mb-16 lg:mb-20">
+            <div className="flex items-center gap-3.5 mb-4">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-500 uppercase">
+                {data.howItWorks?.label || "HOW IT WORKS"}
+              </span>
+              <span className="w-16 h-[1px] bg-neutral-300"></span>
+            </div>
+            <h2 className={`${playfair.className} font-serif text-3xl sm:text-5xl lg:text-[54px] font-normal tracking-tight text-neutral-900 leading-[1.08] mb-4`}>
               {data.howItWorks?.title || "From Space to Retail Experience"}
             </h2>
+            <p className="text-xs sm:text-sm lg:text-base text-neutral-500 font-light max-w-xl leading-relaxed">
+              We turn ordinary spaces into interactive environments that attract attention and bring your brand to life.
+            </p>
           </div>
 
-          {/* Desktop Flow: Connected Architectural Rail */}
-          <div className="hidden lg:grid grid-cols-4 gap-6 xl:gap-8 relative">
-            {data.howItWorks?.steps.map((step, idx) => {
-              const icons = [Compass, Palette, Wrench, CheckCircle2];
-              const IconComponent = icons[idx % icons.length];
-              const isLast = idx === (data.howItWorks?.steps.length ?? 0) - 1;
+          {/* Desktop Flow: Connected Wave Rail (lg and above) */}
+          <div className="hidden lg:block relative">
+            {/* Continuous undulating spline wave passing behind circle nodes */}
+            <div className="absolute left-0 right-0 top-0 h-14 pointer-events-none z-0">
+              <svg 
+                viewBox="0 0 1200 60" 
+                preserveAspectRatio="none" 
+                className="w-full h-full"
+                fill="none"
+              >
+                <path
+                  d="M 0 32 C 60 32, 90 28, 150 28 C 220 28, 250 42, 300 42 C 350 42, 380 28, 450 28 C 520 28, 550 42, 600 42 C 650 42, 680 28, 750 28 C 820 28, 850 42, 900 42 C 950 42, 980 28, 1050 28 C 1110 28, 1140 32, 1200 32"
+                  stroke="#D8D4CC"
+                  strokeWidth="1.25"
+                />
+              </svg>
+            </div>
 
-              return (
-                <div key={idx} className="group flex flex-col">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-800 transition-all duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white group-hover:scale-105 shrink-0 shadow-sm z-10">
-                      <IconComponent className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+            {/* 4 Columns */}
+            <div className="grid grid-cols-4 gap-8 xl:gap-12 relative z-10">
+              {howItWorksSteps.map((step, idx) => {
+                const IconComponent = step.icon;
+                return (
+                  <div key={idx} className="group flex flex-col items-start">
+                    {/* Circle Node (Centered over the wave) */}
+                    <div className="w-14 h-14 rounded-full border border-neutral-300 bg-[#FAF8F5] flex items-center justify-center text-neutral-800 transition-all duration-300 group-hover:border-black group-hover:scale-105 shrink-0 shadow-[0_1px_3px_rgba(0,0,0,0.02)] z-10">
+                      <IconComponent className="w-5 h-5 text-neutral-800 stroke-[1.25] transition-transform duration-300 group-hover:scale-110" />
                     </div>
-                    {!isLast && (
-                      <div className="flex-1 h-[1px] bg-neutral-200 ml-4 -mr-6 xl:-mr-8 relative hidden lg:flex items-center justify-end z-0">
-                        <ChevronRight className="w-3.5 h-3.5 text-neutral-300 -mr-1.5 shrink-0" />
-                      </div>
-                    )}
-                  </div>
 
-                  <div className="space-y-2 pr-2">
-                    <span className="font-mono text-xs font-bold tracking-widest text-neutral-400 group-hover:text-black transition-colors block">
+                    {/* Giant Serif Number */}
+                    <span className={`${playfair.className} font-serif text-5xl sm:text-6xl lg:text-[68px] font-normal text-neutral-800/90 tracking-tight mt-7 mb-1 block select-none`}>
                       {step.num}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug group-hover:text-black transition-colors">
+
+                    {/* Step Title in Serif */}
+                    <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-3 group-hover:text-black transition-colors`}>
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-neutral-500 font-normal leading-relaxed">
+
+                    {/* Step Description */}
+                    <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed mb-6 max-w-[270px]">
                       {step.desc}
                     </p>
+
+                    {/* Bottom Action Link */}
+                    <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-600 font-medium group-hover:text-black transition-colors mt-auto">
+                      <span>{step.action}</span>
+                      <span className="text-neutral-400 group-hover:text-black group-hover:translate-x-1 transition-all inline-block">&rarr;</span>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
 
-          {/* Mobile & Tablet Flow: Vertical Architectural Timeline */}
-          <div className="lg:hidden relative pl-2 sm:pl-4">
-            <div className="space-y-8 sm:space-y-10 relative">
-              {data.howItWorks?.steps.map((step, idx) => {
-                const icons = [Compass, Palette, Wrench, CheckCircle2];
-                const IconComponent = icons[idx % icons.length];
-                const isLast = idx === (data.howItWorks?.steps.length ?? 0) - 1;
+          {/* Mobile & Tablet Flow: Vertical Architectural Timeline (< lg) */}
+          <div className="lg:hidden relative pl-4 sm:pl-6">
+            {/* Vertical connector line */}
+            <div className="absolute left-[27px] sm:left-[35px] top-7 bottom-7 w-[1px] bg-neutral-300/80 z-0" />
 
+            <div className="space-y-12 relative z-10">
+              {howItWorksSteps.map((step, idx) => {
+                const IconComponent = step.icon;
                 return (
-                  <div key={idx} className="group flex items-start gap-4 sm:gap-6 relative">
-                    {!isLast && (
-                      <div className="absolute left-[23px] top-12 bottom-[-32px] sm:bottom-[-40px] w-[1px] bg-neutral-200 z-0" />
-                    )}
-
-                    <div className="w-12 h-12 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-800 transition-all duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white shrink-0 shadow-sm relative z-10">
-                      <IconComponent className="w-5 h-5" />
+                  <div key={idx} className="group flex items-start gap-5 sm:gap-6 relative">
+                    {/* Circle Node */}
+                    <div className="w-14 h-14 rounded-full border border-neutral-300 bg-[#FAF8F5] flex items-center justify-center text-neutral-800 shrink-0 z-10 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
+                      <IconComponent className="w-5 h-5 text-neutral-800 stroke-[1.25]" />
                     </div>
 
-                    <div className="pt-0.5 space-y-1.5 flex-1 min-w-0">
-                      <span className="font-mono text-xs font-bold tracking-widest text-neutral-400 block">
+                    {/* Content */}
+                    <div className="pt-0 flex-1 min-w-0">
+                      <span className={`${playfair.className} font-serif text-4xl sm:text-5xl font-normal text-neutral-800/90 tracking-tight block mb-1`}>
                         {step.num}
                       </span>
-                      <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug">
+                      <h3 className={`${playfair.className} font-serif text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug mb-2`}>
                         {step.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-neutral-600 font-normal leading-relaxed">
+                      <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed mb-4">
                         {step.desc}
                       </p>
+                      <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-600 font-medium">
+                        <span>{step.action}</span>
+                        <span className="text-neutral-400">&rarr;</span>
+                      </div>
                     </div>
                   </div>
                 );
