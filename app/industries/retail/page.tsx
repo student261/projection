@@ -791,37 +791,39 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 10: WHY CHOOSE PROJECTION */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white text-black">
+      {/* SECTION 10: WHY CHOOSE PROJECTION (Matching Reference Design) */}
+      <section className="py-20 sm:py-24 lg:py-28 bg-white text-black">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 sm:mb-16">
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-2 sm:mb-3">
+          {/* Eyebrow & Heading */}
+          <div className="max-w-3xl mb-14 sm:mb-16 lg:mb-20">
+            <span className="text-[11px] sm:text-xs font-mono tracking-[0.25em] text-neutral-400 uppercase block mb-3.5">
               {data.whyChooseUs?.label || "WHY PROJECTION"}
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-neutral-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-neutral-900 leading-[1.12]">
               {data.whyChooseUs?.title || "Why Retailers Choose Projection"}
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          {/* 3 Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 xl:gap-16">
             {data.whyChooseUs?.items.map((item, idx) => {
               const icons = [Layers, Monitor, Calendar];
               const IconComponent = icons[idx % icons.length];
 
               return (
-                <div key={idx} className="space-y-3">
-                  <div className="flex items-center gap-2.5">
-                    <IconComponent className="w-5 h-5 text-black shrink-0" strokeWidth={1.5} />
-                    <span className="text-xs font-mono font-bold text-neutral-400">
+                <div key={idx} className="flex flex-col items-start">
+                  <div className="flex items-center gap-2.5 mb-3.5">
+                    <IconComponent className="w-5 h-5 text-neutral-900 shrink-0" strokeWidth={1.5} />
+                    <span className="text-xs font-mono font-medium text-neutral-400">
                       0{idx + 1}
                     </span>
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold text-neutral-900 tracking-tight leading-snug">
+                  <h3 className="text-lg sm:text-xl font-bold text-neutral-900 tracking-tight leading-snug mb-2.5">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-sm">
                     {item.desc}
                   </p>
                 </div>
