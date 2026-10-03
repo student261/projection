@@ -42,7 +42,12 @@ export interface IndustryUseCase {
   num?: string;
   tag?: string;
 }
-export interface IndustryWhyChooseItem { title: string; desc: string; }
+export interface IndustryWhyChooseItem {
+  title: string;
+  desc: string;
+  cta?: string;
+  href?: string;
+}
 
 export interface IndustryData {
   slug: string;

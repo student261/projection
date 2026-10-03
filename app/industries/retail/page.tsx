@@ -801,58 +801,75 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECTION 10: WHY CHOOSE PROJECTION (Editorial Architectural Showcase) */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white text-black border-t border-neutral-100">
+      {/* SECTION 10: WHY CHOOSE PROJECTION (Matching Circular Reference Design without Numbering) */}
+      <section className="py-14 sm:py-18 lg:py-24 bg-[#f8f7f4] text-black border-t border-black/5 overflow-hidden">
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Eyebrow & Heading */}
-          <div className="max-w-3xl mb-8 sm:mb-10 lg:mb-12">
+          <div className="max-w-3xl mb-12 sm:mb-16 lg:mb-20">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-neutral-400 uppercase">
                 {data.whyChooseUs?.label || "WHY PROJECTION"}
               </span>
-              <span className="w-10 sm:w-12 h-[1px] bg-neutral-300"></span>
+              <span className="w-12 sm:w-16 h-[1px] bg-neutral-300"></span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-neutral-900 leading-[1.12] mb-4">
               {data.whyChooseUs?.title || "Why Retailers Choose Projection"}
             </h2>
-            <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed max-w-xl">
               Engineered specifically for the demands of retail: autonomous content management, unified multi-format hardware, and launch-date dependability.
             </p>
           </div>
 
-          {/* 3 Columns separated by fine vertical hairlines */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0">
+          {/* 3 Circular Cards with Connecting Arcs (No numbering) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8 xl:gap-12 items-center justify-items-center">
             {data.whyChooseUs?.items.map((item, idx) => {
               const icons = [Layers, Monitor, Calendar];
               const IconComponent = icons[idx % icons.length];
 
               return (
-                <div 
-                  key={idx} 
-                  className={`flex flex-col ${
-                    idx === 0 
-                      ? "md:pr-8 lg:pr-12 xl:pr-14" 
-                      : "md:border-l md:border-neutral-200/80 md:pl-8 lg:pl-12 xl:pl-14"
-                  }`}
-                >
-                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-neutral-100">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full border border-neutral-200 bg-neutral-50 flex items-center justify-center text-neutral-800 shrink-0">
-                        <IconComponent className="w-5 h-5 text-neutral-800 stroke-[1.5]" />
-                      </div>
-                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">
-                        0{idx + 1}
-                      </span>
+                <div key={idx} className="relative w-full flex justify-center">
+                  {/* Circular Card */}
+                  <div className="w-[300px] sm:w-[330px] lg:w-[310px] xl:w-[360px] aspect-square rounded-full border border-black/15 bg-white/70 hover:bg-white hover:border-black/30 hover:shadow-xl transition-all duration-300 p-7 sm:p-9 xl:p-11 flex flex-col justify-between items-center text-center group">
+                    {/* Top: Icon (No numbering) */}
+                    <div className="w-9 h-9 rounded-full border border-neutral-300/80 bg-neutral-100/60 flex items-center justify-center text-neutral-800 shrink-0 mt-1">
+                      <IconComponent className="w-4 h-4 stroke-[1.75]" />
+                    </div>
+
+                    {/* Middle: Title & Description */}
+                    <div className="my-auto px-2">
+                      <h3 className="text-lg sm:text-xl xl:text-[22px] font-bold text-neutral-900 tracking-tight leading-snug mb-2.5">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs sm:text-[13px] text-neutral-600 font-light leading-relaxed max-w-[240px] mx-auto">
+                        {item.desc}
+                      </p>
+                    </div>
+
+                    {/* Bottom: Circular CTA */}
+                    <div className="mb-1">
+                      <Link
+                        href={item.href || "/solutions"}
+                        className="inline-flex items-center gap-2.5 sm:gap-3 group/cta"
+                      >
+                        <div className="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-800 group-hover/cta:border-black group-hover/cta:bg-black group-hover/cta:text-white transition-all duration-200 shrink-0">
+                          <ArrowRight className="w-3.5 h-3.5 group-hover/cta:translate-x-0.5 transition-transform" />
+                        </div>
+                        <span className="text-[10px] font-mono tracking-[0.2em] font-medium text-neutral-700 group-hover/cta:text-black uppercase text-left transition-colors">
+                          {item.cta || "Explore"}
+                        </span>
+                      </Link>
                     </div>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-neutral-900 tracking-tight leading-snug mb-2.5">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">
-                    {item.desc}
-                  </p>
+                  {/* Curved Connecting Arc (Between Circle 1 & 2, and Circle 2 & 3 on desktop) */}
+                  {idx < 2 && (
+                    <div className="hidden lg:block absolute -right-5 xl:-right-7 top-1/2 -translate-y-1/2 w-10 xl:w-14 h-8 pointer-events-none z-10">
+                      <svg viewBox="0 0 60 30" fill="none" className="w-full h-full text-neutral-400">
+                        <path d="M 4 24 C 22 6, 38 6, 52 17" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+                        <circle cx="54" cy="18" r="2" fill="currentColor" />
+                      </svg>
+                    </div>
+                  )}
                 </div>
               );
             })}

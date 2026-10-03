@@ -145,9 +145,24 @@ export const retail: IndustryData = {
     label: "WHY PROJECTION",
     title: "Why Retailers Choose Projection",
     items: [
-      { title: "Content you can update yourself", desc: "New campaigns and seasons without a new installation" },
-      { title: "One partner across formats", desc: "Interactive surfaces, immersive visuals, AI and games from a single team" },
-      { title: "Planned around your calendar", desc: "Installations scoped to launch dates and retail timelines" }
+      {
+        title: "Content you can update yourself",
+        desc: "New campaigns and seasons without a new installation. Update, refresh and keep your space current.",
+        cta: "Explore Content Management",
+        href: "/solutions"
+      },
+      {
+        title: "One partner across formats",
+        desc: "Interactive surfaces, immersive visuals, AI and games - all from a single team, with seamless integration.",
+        cta: "Explore Our Solutions",
+        href: "/solutions"
+      },
+      {
+        title: "Planned around your calendar",
+        desc: "Installations scoped to launch dates and retail timelines, with clear planning and dependable delivery.",
+        cta: "See How It Works",
+        href: "#how-it-works"
+      }
     ]
   },
   faqs: {
