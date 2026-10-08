@@ -1,0 +1,243 @@
+"use client";
+
+import { useState, useRef, useEffect } from "react";
+import { motion, useScroll, useTransform, useSpring, Variants } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight, Sparkles } from "lucide-react";
+import HeroInteractiveCanvas from "@/components/HeroInteractiveCanvas";
+
+// Staggered pop-in entrance animation sequence
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const fadeUpVariant: Variants = {
+  hidden: { opacity: 0, y: 35, filter: "blur(10px)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 1.2,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const fadeInVariant: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 1.2, ease: "easeOut", delay: 0.6 },
+  },
+};
+
+export default function Hero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [targetMetrics, setTargetMetrics] = useState({
+    width: "calc(100% - 48px)",
+    height: "calc(100vh - 109px)",
+    borderRadius: "32px",
+    marginTop: "83px",
+  });
+
+  useEffect(() => {
+    setIsLoaded(true);
+
+    const updateMetrics = () => {
+      if (window.innerWidth < 640) { // Mobile
+        setTargetMetrics({
+          width: "calc(100% - 16px)", // 8px gaps
+          height: "calc(100vh - 84px)", // Tighter vertical gaps
+          borderRadius: "20px",
+          marginTop: "68px", // Matches standard mobile navbar
+        });
+      } else if (window.innerWidth < 1024) { // Tablet
+        setTargetMetrics({
+          width: "calc(100% - 32px)",
+          height: "calc(100vh - 96px)",
+          borderRadius: "24px",
+          marginTop: "76px",
+        });
+      } else { // Desktop
+        setTargetMetrics({
+          width: "calc(100% - 48px)",
+          height: "calc(100vh - 109px)",
+          borderRadius: "32px",
+          marginTop: "83px",
+        });
+      }
+    };
+
+    updateMetrics();
+    window.addEventListener("resize", updateMetrics);
+    return () => window.removeEventListener("resize", updateMetrics);
+  }, []);
+
+  // Track scroll position with spring physics smoothing for liquid-smooth scroll scaling
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Smooth scroll progress using spring physics (matching Framer Vectura engine)
+  const smoothScrollProgress = useSpring(scrollYProgress, {
+    stiffness: 90,
+    damping: 25,
+    restDelta: 0.001,
+  });
+
+  const [scaleEnd, setScaleEnd] = useState(0.86);
+  useEffect(() => {
+    setScaleEnd(window.innerWidth < 1024 ? 1.0 : 0.86);
+  }, []);
+
+  // Pause video when scrolled out of view to preserve GPU budget for other sections
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!videoRef.current) return;
+        if (entry.isIntersecting) {
+          videoRef.current.play().catch(() => {});
+        } else {
+          videoRef.current.pause();
+        }
+      },
+      { threshold: 0.05 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const cardScaleScroll = useTransform(smoothScrollProgress, [0, 1], [1.0, scaleEnd]);
+  const contentOpacity = useTransform(smoothScrollProgress, [0, 0.45], [1, 0]);
+  const contentY = useTransform(smoothScrollProgress, [0, 0.45], [0, -50]);
+
+  return (
+    <section ref={containerRef} className="sticky top-0 z-[1] w-full h-dvh bg-white flex flex-col items-center overflow-hidden">
+        
+      {/* Background Video Card: Smooth Framer Entrance Shrink to Padded Card */}
+      <motion.div
+        style={{
+          scale: cardScaleScroll,
+          willChange: "transform, width, height, margin-top, border-radius",
+        }}
+        initial={{
+          width: "100%",
+          height: "100vh",
+          borderRadius: "0px",
+          marginTop: "0px",
+        }}
+        animate={isLoaded ? targetMetrics : {
+          width: "100%",
+          height: "100vh",
+          borderRadius: "0px",
+          marginTop: "0px",
+        }}
+        transition={{
+          duration: 2.3,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+        className="relative z-0 overflow-hidden shadow-2xl origin-top"
+      >
+        {/* Hardware-accelerated background video */}
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster="/hero-main-poster.webp"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ minWidth: "100%", minHeight: "100%", transform: "translateZ(0)", willChange: "transform" }}
+        >
+          <source src="/hero-0911.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Interactive Optical Sensing Canvas Overlay */}
+        <div className="absolute inset-0 z-[5] opacity-25 pointer-events-none">
+          <HeroInteractiveCanvas />
+        </div>
+
+        {/* Cinematic Overlay Gradient */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
+
+        {/* Main Content Area */}
+        <motion.div
+          style={{ opacity: contentOpacity, y: contentY }}
+          variants={containerVariants}
+          initial="hidden"
+          animate={isLoaded ? "visible" : "hidden"}
+          className="absolute inset-0 z-20 w-full h-full flex flex-col items-center justify-center pb-0 px-4 sm:px-6 lg:px-8"
+        >
+          <div className="w-full max-w-5xl xl:max-w-6xl flex flex-col items-center text-center">
+
+            {/* Headline */}
+            <motion.h1
+              variants={fadeUpVariant}
+              className="font-semibold text-white tracking-tight leading-[1.12] max-w-5xl mb-4 sm:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)] text-[clamp(1.85rem,4.2vw,3.75rem)] text-balance"
+            >
+              Spaces That React When You Move
+            </motion.h1>
+
+            {/* Subheadline */}
+            <motion.p
+              variants={fadeUpVariant}
+              className="text-sm sm:text-base lg:text-lg font-light text-white/90 leading-relaxed max-w-2xl lg:max-w-3xl mb-6 sm:mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] text-balance"
+            >
+              Projection and interactive technology that turn floors, walls and rooms into experiences that respond as people move through them.
+            </motion.p>
+
+            {/* Dual Action Buttons */}
+            <motion.div
+              variants={fadeUpVariant}
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto"
+            >
+              <Link
+                href="/solutions"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-black font-medium text-sm tracking-wider transition-all duration-300 shadow-xl hover:bg-neutral-100 hover:scale-105 active:scale-95 text-center cursor-pointer"
+              >
+                <span>Explore Experiences</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 text-white font-medium text-sm tracking-wider transition-all duration-300 hover:scale-105 active:scale-95 text-center cursor-pointer shadow-lg"
+              >
+                <Sparkles className="w-3.5 h-3.5 opacity-80" />
+                <span>Start a Project</span>
+              </Link>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* System Badge */}
+        <motion.div
+          variants={fadeInVariant}
+          initial="hidden"
+          animate={isLoaded ? "visible" : "hidden"}
+          className="absolute bottom-5 left-6 z-20 pointer-events-none hidden sm:flex items-center gap-2 text-[10px] text-white/50 tracking-wider font-mono"
+        >
+          <span>© 2026 PROJECTION</span>
+          <span>/</span>
+          <span>GLOBAL INTERACTIVE SYSTEMS</span>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}

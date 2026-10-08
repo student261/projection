@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useMotionValue, useSpring, useTransform, useScroll } from "framer-motion";
 import Link from "next/link";
-import { Sparkles, Layers, Expand, Cpu, Gamepad2, ArrowRight, Tv } from "lucide-react";
+import { Sparkles, Layers, Expand, Cpu, Gamepad2, ArrowRight } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
 
 const categories = [
@@ -45,15 +45,6 @@ const categories = [
     img: "/images/entertainment_motion_arena.jpg",
     video: "/smart-engagement.mp4",
     cta: "Explore Interactive Engagement",
-  },
-  {
-    id: "led-3d-displays",
-    title: "LED & 3D Display Solutions",
-    desc: "Create high impact visual experiences with 3D LED displays and custom LED formats for physical spaces.",
-    icon: <Tv className="w-6 h-6" />,
-    href: "/solutions",
-    img: "/images/hospitality_ambient_atrium.jpg",
-    cta: "Explore LED & 3D Displays",
   },
 ];
 
@@ -425,7 +416,7 @@ export default function SolutionsOverview() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 xl:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {categories.map((cat) => (
               <TiltCard key={cat.id} cat={cat} isDesktop={isDesktop} />
             ))}

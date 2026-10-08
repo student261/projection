@@ -176,19 +176,27 @@
   }
 }
 
-/* Minimalist Scrollbar */
+/* High-Visibility Modern Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: #050811;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--border-light);
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 9999px;
+  border: 2px solid #050811;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-secondary);
+  background: #38bdf8;
+}
+
+/* Firefox & Standard Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) #050811;
 }
 
 
