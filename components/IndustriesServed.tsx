@@ -1,397 +1,338 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import {
-  GraduationCap,
-  HeartPulse,
-  ShoppingBag,
-  Landmark,
-  Gamepad2,
-  Hotel,
-  Building2,
-  Globe2,
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
-  Sparkles
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronDown } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
 
-const industries = [
-  {
-    id: "education",
-    icon: <GraduationCap className="w-5 h-5" />,
-    num: "01",
-    label: "EDUCATION SPACES",
-    heading: "Make Learning More Interactive",
-    title: "Education",
-    description: "Create interactive classrooms and learning spaces where students can learn through movement, visuals and hands-on activities.",
-    href: "/industries/education",
-    img: "/images/education_interactive_floor.jpg",
-    cta: "Explore Education",
-  },
-  {
-    id: "healthcare",
-    icon: <HeartPulse className="w-5 h-5" />,
-    num: "02",
-    label: "HEALTHCARE SPACES",
-    heading: "Create More Engaging Care Environments",
-    title: "Healthcare",
-    description: "Use interactive experiences for therapy, rehabilitation, patient engagement and more welcoming healthcare spaces.",
-    href: "/industries/healthcare",
-    img: "/images/healthcare_sensory_room.jpg",
-    cta: "Explore Healthcare",
-  },
+interface IndustryItem {
+  id: string;
+  num: string;
+  title: string;
+  heading: string;
+  description: string;
+  href: string;
+  img: string;
+  cta: string;
+}
+
+const industries: IndustryItem[] = [
   {
     id: "retail",
-    icon: <ShoppingBag className="w-5 h-5" />,
-    num: "03",
-    label: "RETAIL SPACES",
-    heading: "Give Visitors More Ways to Engage",
-    title: "Retail",
-    description: "Turn stores, showrooms and shopping spaces into interactive environments that encourage visitors to explore and interact.",
+    num: "(01)",
+    title: "RETAIL",
+    heading: "Interactive storefronts, floors and product spaces",
+    description: "Interactive retail displays, touch-sensing pedestals, and digital storefronts that turn browsing into buying.",
     href: "/industries/retail",
     img: "/images/retail_interactive_showcase.jpg",
     cta: "Explore Retail",
   },
   {
-    id: "museums",
-    icon: <Landmark className="w-5 h-5" />,
-    num: "04",
-    label: "MUSEUMS & EXHIBITIONS",
-    heading: "Bring Exhibits to Life",
-    title: "Museums & Exhibitions",
-    description: "Create interactive exhibits that help visitors explore stories, information and digital content in a more engaging way.",
-    href: "/industries/museums-culture",
-    img: "/images/museum_interactive_exhibit.jpg",
-    cta: "Explore Museums & Exhibitions",
-  },
-  {
-    id: "entertainment",
-    icon: <Gamepad2 className="w-5 h-5" />,
-    num: "05",
-    label: "ENTERTAINMENT SPACES",
-    heading: "Create Experiences People Want to Explore",
-    title: "Entertainment",
-    description: "Add interactive games, immersive environments and digital experiences to entertainment and visitor spaces.",
-    href: "/industries/entertainment",
-    img: "/images/entertainment_motion_arena.jpg",
-    cta: "Explore Entertainment",
-  },
-  {
     id: "hospitality",
-    icon: <Hotel className="w-5 h-5" />,
-    num: "06",
-    label: "HOSPITALITY SPACES",
-    heading: "Make Every Visit More Engaging",
-    title: "Hospitality",
-    description: "Add interactive experiences to hotels, restaurants, resorts and guest spaces to create memorable moments for visitors.",
+    num: "(02)",
+    title: "HOSPITALITY",
+    heading: "Guest areas, themed spaces and interactive experiences",
+    description: "Guest areas, themed spaces, and immersive visual environments that create unforgettable guest arrivals.",
     href: "/industries/hospitality",
     img: "/images/hospitality_ambient_atrium.jpg",
     cta: "Explore Hospitality",
   },
   {
-    id: "corporate",
-    icon: <Building2 className="w-5 h-5" />,
-    num: "07",
-    label: "CORPORATE SPACES",
-    heading: "Turn Business Spaces Into Experiences",
-    title: "Corporate",
-    description: "Create interactive environments for offices, experience centres, product showcases, events and corporate spaces.",
-    href: "/industries/corporate",
-    img: "/images/corporate_lobby_wall.jpg",
-    cta: "Explore Corporate",
+    id: "restaurants",
+    num: "(03)",
+    title: "RESTAURANTS",
+    heading: "Dining environments, visual menus and interactive experiences",
+    description: "Dining environments, visual projection menus, and interactive table experiences that elevate dining.",
+    href: "/industries/hospitality",
+    img: "/images/dining_projection_table.jpg",
+    cta: "Explore Restaurants",
   },
   {
-    id: "public-spaces",
-    icon: <Globe2 className="w-5 h-5" />,
-    num: "08",
-    label: "PUBLIC SPACES",
-    heading: "Make Shared Spaces More Interactive",
-    title: "Public Spaces",
-    description: "Bring interactive digital experiences to public environments such as airports, stations, cultural spaces and large venues.",
-    href: "/industries/public-spaces",
-    img: "/images/interactive_floor_motion.jpg",
-    cta: "Explore Public Spaces",
+    id: "education",
+    num: "(04)",
+    title: "EDUCATION",
+    heading: "Learning spaces where students can see and take part",
+    description: "Learning spaces where students can see, touch, and participate through active interactive floors and walls.",
+    href: "/industries/education",
+    img: "/images/education_interactive_floor.jpg",
+    cta: "Explore Education",
+  },
+  {
+    id: "museums",
+    num: "(05)",
+    title: "MUSEUMS & CULTURAL",
+    heading: "Exhibits that invite visitors to explore",
+    description: "Immersive experiences that preserve heritage, educate visitors, and bring historical stories vividly to life.",
+    href: "/industries/museums-culture",
+    img: "/images/museum_digital_art_kandinsky.jpg",
+    cta: "Explore Museums",
+  },
+  {
+    id: "entertainment",
+    num: "(06)",
+    title: "ENTERTAINMENT",
+    heading: "Games, play areas and immersive environments",
+    description: "Multiplayer motion games, active play arenas, and 360° visual environments built for maximum fun.",
+    href: "/industries/entertainment",
+    img: "/images/entertainment_motion_arena.jpg",
+    cta: "Explore Entertainment",
   },
 ];
 
-const AUTOPLAY_INTERVAL = 6000;
-
 export default function IndustriesServed() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const tabContainerRef = useRef<HTMLDivElement | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
+  const [isHovering, setIsHovering] = useState<boolean>(true);
+  const [mobileActiveIndex, setMobileActiveIndex] = useState<number | null>(0);
+  const [cardX, setCardX] = useState<number>(0);
+  const [cardY, setCardY] = useState<number>(0);
 
-  // Touch swipe refs
-  const touchStartX = useRef<number | null>(null);
-  const touchEndX = useRef<number | null>(null);
+  const listRef = useRef<HTMLOListElement>(null);
+  const rowRefs = useRef<(HTMLLIElement | null)[]>([]);
 
-  const activeIndustry = industries[activeIndex];
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % industries.length);
-  };
-
-  const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + industries.length) % industries.length);
-  };
-
-  // Auto-scroll active tab into view in horizontal list without scrolling browser window
+  // Smooth GPU position calculation using offset properties (avoids layout thrashing)
   useEffect(() => {
-    const activeTab = tabRefs.current[activeIndex];
-    const container = tabContainerRef.current;
-    if (activeTab && container && window.innerWidth < 1024) {
-      const containerWidth = container.offsetWidth;
-      const tabOffsetLeft = activeTab.offsetLeft;
-      const tabWidth = activeTab.offsetWidth;
-      const targetScrollLeft = tabOffsetLeft - (containerWidth / 2) + (tabWidth / 2);
-      container.scrollTo({
-        left: targetScrollLeft,
-        behavior: "smooth"
-      });
-    }
-  }, [activeIndex]);
+    const updatePosition = () => {
+      const idx = hoveredIndex;
+      const rowEl = rowRefs.current[idx];
+      const listEl = listRef.current;
+      if (rowEl && listEl) {
+        const gapEl = rowEl.querySelector(".ind-gap") as HTMLElement | null;
+        const listHeight = listEl.offsetHeight || 600;
+        const halfCard = 110;
+        
+        let targetX = listEl.offsetWidth * 0.52;
+        let rawY = rowEl.offsetTop + rowEl.offsetHeight / 2;
 
-  // Auto-play logic
-  useEffect(() => {
-    if (isHovered) {
-      if (timerRef.current) clearTimeout(timerRef.current);
-      return;
-    }
+        if (gapEl) {
+          targetX = gapEl.offsetLeft + gapEl.offsetWidth / 2;
+        }
 
-    timerRef.current = setTimeout(() => {
-      handleNext();
-    }, AUTOPLAY_INTERVAL);
-
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
+        const clampedY = Math.max(halfCard, Math.min(listHeight - halfCard, rawY));
+        setCardX(targetX);
+        setCardY(clampedY);
+      }
     };
-  }, [activeIndex, isHovered]);
 
-  // Touch handlers for mobile swipe
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return;
-    const distance = touchStartX.current - touchEndX.current;
-    const isLeftSwipe = distance > 40;
-    const isRightSwipe = distance < -40;
-
-    if (isLeftSwipe) {
-      handleNext();
-    } else if (isRightSwipe) {
-      handlePrev();
-    }
-
-    touchStartX.current = null;
-    touchEndX.current = null;
-  };
+    updatePosition();
+    window.addEventListener("resize", updatePosition, { passive: true });
+    return () => window.removeEventListener("resize", updatePosition);
+  }, [hoveredIndex]);
 
   return (
-    <section className="py-10 sm:py-12 lg:py-14 bg-white overflow-hidden text-black relative">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-gray-100 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 opacity-50 pointer-events-none" />
-
-      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section 
+      id="industries-served"
+      className="py-16 sm:py-24 lg:py-32 bg-white text-black relative overflow-hidden select-none"
+    >
+      <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5 sm:mb-6">
-          <div className="max-w-3xl space-y-2">
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-black/40" />
-              INDUSTRIES WE SERVE
-            </motion.div>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-black"
-            >
-              Interactive Experiences for Different Industries
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-sm sm:text-base text-black/70 font-normal leading-relaxed"
-            >
-              Create engaging digital experiences around your space, audience and goals.
-            </motion.p>
-          </div>
-
-          <div className="hidden md:flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-neutral-400">
-            Auto-explore <span className={`w-1.5 h-1.5 rounded-full ${isHovered ? 'bg-black/20' : 'bg-black/60 animate-pulse'}`} />
-          </div>
+        {/* Section Header - Pure Black & White Branding */}
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24 space-y-3">
+          <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500 block">
+            Transforming industries
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black leading-[1.1]">
+            See Where Our Solutions Fit Your Industry
+          </h2>
+          <p className="text-sm sm:text-base text-neutral-600 font-light max-w-2xl mx-auto leading-relaxed">
+            Transforming industries through interactive projection, motion sensing, and immersive technology.
+          </p>
         </div>
 
-        {/* Dynamic Showcase Layout */}
-        <div 
-          className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-start"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          
-          {/* Column 2: Active Image & Content Panel (Order 2 on Mobile) */}
-          <div 
-            className="order-2 lg:col-span-8 relative w-full min-h-[420px] sm:min-h-[460px] lg:h-[500px] rounded-[1.5rem] overflow-hidden bg-gray-900 shadow-xl border border-black/5 select-none"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
+        {/* Desktop ViitorX-style Interactive Rows with Floating Card */}
+        <div className="hidden lg:block relative">
+          <ol 
+            ref={listRef}
+            onMouseLeave={() => setIsHovering(false)}
+            className="w-full relative list-none m-0 p-0 border-t border-neutral-200"
           >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeIndustry.id}
-                initial={{ opacity: 0, scale: 1.04 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-0 w-full h-full"
-              >
-                <div className="w-full h-full transition-transform duration-700 ease-out">
+            {industries.map((ind, idx) => {
+              const isActive = hoveredIndex === idx && isHovering;
+              return (
+                <li
+                  key={ind.id}
+                  ref={(el) => { rowRefs.current[idx] = el; }}
+                  onMouseEnter={() => {
+                    setHoveredIndex(idx);
+                    setIsHovering(true);
+                  }}
+                  className="group relative cursor-pointer border-b border-neutral-200 transition-colors duration-300 py-8 xl:py-10"
+                >
+                  <Link href={ind.href} className="block w-full outline-none">
+                    <div className="grid grid-cols-[50px_minmax(0,1.15fr)_clamp(280px,24vw,360px)_minmax(240px,1fr)] items-center gap-6 xl:gap-10">
+                      
+                      {/* Column 1: Count */}
+                      <span
+                        className={`font-mono text-sm xl:text-base font-semibold transition-colors duration-300 ${
+                          isActive ? "text-black font-bold" : "text-neutral-400 group-hover:text-black"
+                        }`}
+                      >
+                        {ind.num}
+                      </span>
+
+                      {/* Column 2: Title */}
+                      <h3
+                        className={`text-lg sm:text-xl lg:text-2xl xl:text-[1.75rem] font-bold tracking-tight uppercase leading-snug transition-colors duration-300 ${
+                          isActive ? "text-black font-black" : "text-neutral-800 group-hover:text-black"
+                        }`}
+                      >
+                        {ind.title}
+                      </h3>
+
+                      {/* Column 3: Center Gap Reserved for Floating Card */}
+                      <div className="ind-gap w-full h-1" aria-hidden="true" />
+
+                      {/* Column 4: Description + CTA */}
+                      <div className="space-y-2">
+                        <p
+                          className={`text-sm xl:text-[15px] leading-relaxed transition-colors duration-300 ${
+                            isActive ? "text-black font-normal" : "text-neutral-500 group-hover:text-neutral-900"
+                          }`}
+                        >
+                          {ind.description}
+                        </p>
+                        <span
+                          className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
+                            isActive
+                              ? "text-black translate-x-1"
+                              : "text-neutral-400 group-hover:text-black group-hover:translate-x-1"
+                          }`}
+                        >
+                          <span>{ind.cta}</span>
+                          <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        </span>
+                      </div>
+
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ol>
+
+          {/* Floating Image Card that Glides and Tilts Between Rows (GPU Composited 16:10 Aspect Ratio) */}
+          <motion.div
+            className="pointer-events-none absolute z-30 will-change-transform"
+            style={{
+              left: 0,
+              top: 0,
+            }}
+            animate={{
+              x: cardX,
+              y: cardY,
+              rotate: hoveredIndex % 2 === 0 ? -3 : 3,
+              scale: isHovering ? 1 : 0.88,
+              opacity: isHovering ? 1 : 0,
+            }}
+            transition={{
+              x: { duration: 0.45, ease: [0.16, 1, 0.3, 1] },
+              y: { duration: 0.45, ease: [0.16, 1, 0.3, 1] },
+              rotate: { duration: 0.45, ease: [0.16, 1, 0.3, 1] },
+              scale: { duration: 0.3, ease: "easeOut" },
+              opacity: { duration: 0.25, ease: "easeOut" },
+            }}
+            aria-hidden="true"
+          >
+            <div className="w-[clamp(280px,24vw,360px)] aspect-[16/10] -translate-x-1/2 -translate-y-1/2 rounded-[22px] overflow-hidden bg-neutral-900 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.32)] border border-black/10 relative">
+              {industries.map((ind, idx) => (
+                <div
+                  key={ind.id}
+                  className={`absolute inset-0 w-full h-full transition-opacity duration-400 ease-out ${
+                    hoveredIndex === idx ? "opacity-100 scale-100" : "opacity-0 scale-105 pointer-events-none"
+                  }`}
+                >
                   <SafeImage
-                    src={activeIndustry.img}
-                    alt={activeIndustry.title}
+                    src={ind.img}
+                    alt={ind.title}
                     className="w-full h-full object-cover object-center"
                     containerClassName="w-full h-full"
+                    priority={idx === 0}
                   />
+                  {/* Atmospheric contrast shadow overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/10 pointer-events-none" />
                 </div>
-                
-                {/* Gradient overlay: smooth bottom fade for text readability while leaving image fully visible and clear */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 via-45% to-transparent pointer-events-none" />
-                
-                {/* Top Controls: Navigation Buttons */}
-                <div className="absolute top-4 right-4 flex items-center justify-end z-20 pointer-events-none">
-                  {/* Desktop / Mobile Prev & Next Arrows */}
-                  <div className="flex items-center gap-2 pointer-events-auto">
-                    <button
-                      onClick={handlePrev}
-                      aria-label="Previous Industry"
-                      className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all duration-200 active:scale-95"
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Mobile & Tablet Interactive Accordion Layout (< 1024px) - Clean Black & White */}
+        <div className="lg:hidden divide-y divide-neutral-200 border-t border-b border-neutral-200">
+          {industries.map((ind, idx) => {
+            const isExpanded = mobileActiveIndex === idx;
+            return (
+              <div key={ind.id} className="py-4 sm:py-5">
+                <button
+                  type="button"
+                  onClick={() => setMobileActiveIndex(isExpanded ? null : idx)}
+                  className="w-full flex items-center justify-between text-left group"
+                  aria-expanded={isExpanded}
+                >
+                  <div className="flex items-center gap-3 sm:gap-4 pr-3">
+                    <span 
+                      className={`font-mono text-xs sm:text-sm font-semibold transition-colors ${
+                        isExpanded ? "text-black" : "text-neutral-400"
+                      }`}
                     >
-                      <ChevronLeft className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={handleNext}
-                      aria-label="Next Industry"
-                      className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all duration-200 active:scale-95"
+                      {ind.num}
+                    </span>
+                    <span 
+                      className={`text-base sm:text-xl font-bold tracking-tight uppercase transition-colors ${
+                        isExpanded ? "text-black font-extrabold" : "text-neutral-800"
+                      }`}
                     >
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
+                      {ind.title}
+                    </span>
                   </div>
-                </div>
-
-                {/* Transparent Content Overlay (No blocking box, revealing full image behind text) */}
-                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 lg:bottom-8 lg:left-8 lg:w-3/4 max-w-xl z-20 pointer-events-none">
-                  <motion.div 
-                    initial={{ y: 16, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.15, duration: 0.4 }}
-                    className="p-0 sm:p-2 text-white pointer-events-auto"
-                  >
-                    <div className="flex items-center gap-2 mb-2 text-white/90 drop-shadow">
-                      {activeIndustry.icon}
-                      <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide">{activeIndustry.label}</span>
-                    </div>
-                    
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight mb-2 sm:mb-3 leading-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
-                      {activeIndustry.heading}
-                    </h3>
-                    
-                    <p className="text-white/90 text-sm leading-relaxed mb-4 sm:mb-6 max-w-md font-light drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)]">
-                      {activeIndustry.description}
-                    </p>
-                    
-                    <Link
-                      href={activeIndustry.href}
-                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black font-bold text-xs uppercase tracking-wide transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.4)] w-full sm:w-auto"
-                    >
-                      {activeIndustry.cta}
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Column 1: Industry Selector List (Order 1 on Mobile) */}
-          <div className="order-1 lg:col-span-4 relative w-full mb-2 lg:mb-0">
-            {/* Mobile edge fade gradients */}
-            <div className="lg:hidden pointer-events-none absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-white to-transparent z-10" />
-            <div className="lg:hidden pointer-events-none absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-white to-transparent z-10" />
-
-            <div 
-              ref={tabContainerRef}
-              className="flex flex-row lg:flex-col gap-2 lg:gap-0 lg:space-y-1.5 overflow-x-auto lg:overflow-visible scrollbar-hide snap-x snap-mandatory pb-2 lg:pb-0 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0"
-            >
-              {industries.map((ind, idx) => {
-                const isActive = activeIndex === idx;
-                return (
-                  <button
-                    key={ind.id}
-                    ref={(el) => { tabRefs.current[idx] = el; }}
-                    onClick={() => setActiveIndex(idx)}
-                    className={`snap-center shrink-0 lg:w-full text-left flex items-center justify-between px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl lg:rounded-[1rem] transition-all duration-300 overflow-hidden group border lg:border-none ${
-                      isActive 
-                        ? "bg-black text-white shadow-lg scale-[1.01] border-black" 
-                        : "bg-white lg:bg-transparent text-black/70 hover:bg-black/5 hover:text-black border-black/10"
+                  <div 
+                    className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+                      isExpanded ? "bg-black text-white rotate-180" : "bg-neutral-100 text-neutral-600"
                     }`}
                   >
-                    {/* Active background gradient hint */}
-                    {isActive && (
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-50 pointer-events-none" />
-                    )}
-                    
-                    {/* Auto-play progress bar */}
-                    {isActive && !isHovered && (
-                      <motion.div 
-                        initial={{ width: 0 }}
-                        animate={{ width: "100%" }}
-                        transition={{ duration: AUTOPLAY_INTERVAL / 1000, ease: "linear" }}
-                        className="absolute bottom-0 left-0 h-[3px] bg-white/30"
-                      />
-                    )}
+                    <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                  </div>
+                </button>
 
-                    <div className="flex items-center gap-2.5 lg:gap-3 relative z-10 pr-2 lg:pr-0">
-                      <div className={`p-1.5 rounded-lg transition-colors duration-300 ${isActive ? "bg-white/20 text-white shadow-inner" : "bg-black/5 text-black/60 group-hover:bg-black/10 group-hover:text-black"}`}>
-                        {ind.icon}
+                <AnimatePresence>
+                  {isExpanded && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pt-4 pb-2 space-y-3">
+                        <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-md bg-neutral-900">
+                          <SafeImage
+                            src={ind.img}
+                            alt={ind.title}
+                            className="w-full h-full object-cover object-center"
+                            containerClassName="w-full h-full"
+                          />
+                        </div>
+                        <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed font-light">
+                          {ind.description}
+                        </p>
+                        <div className="pt-1">
+                          <Link
+                            href={ind.href}
+                            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-600 transition-colors"
+                          >
+                            <span>{ind.cta}</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </Link>
+                        </div>
                       </div>
-                      <span className="font-bold text-xs lg:text-sm tracking-tight whitespace-nowrap">{ind.title}</span>
-                    </div>
-                    
-                    <div className={`hidden lg:flex relative z-10 w-6 h-6 rounded-full items-center justify-center transition-all duration-300 ${isActive ? "bg-white text-black" : "bg-transparent text-transparent group-hover:text-black/30"}`}>
-                      <ArrowRight className={`w-3 h-3 transition-transform duration-300 ${isActive ? "-rotate-45" : "rotate-0 group-hover:-rotate-45"}`} />
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
         </div>
+
       </div>
     </section>
   );
 }
-

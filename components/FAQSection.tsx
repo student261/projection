@@ -14,39 +14,39 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     id: "faq-1",
-    categoryLabel: "TECHNOLOGY",
-    q: "What is interactive projection and how does it work?",
-    a: "Interactive projection combines projected digital content with motion or interaction tracking. When people move within the projected area, the visuals can respond to their movement and create an interactive experience."
+    categoryLabel: "SPACES",
+    q: "What spaces work with interactive projection?",
+    a: "Suitable floors, walls and other surfaces can be considered based on the space, lighting and planned experience."
   },
   {
     id: "faq-2",
-    categoryLabel: "SPACE REQUIREMENTS",
-    q: "What kind of space do I need for interactive projection?",
-    a: "The requirements depend on the experience, projection area and installation setup. Floor or wall space, ceiling height, lighting and equipment placement are considered when planning the system."
+    categoryLabel: "CUSTOMISATION",
+    q: "Can the experience be customised?",
+    a: "Yes. The experience can be planned around your space, audience and intended use."
   },
   {
     id: "faq-3",
-    categoryLabel: "SURFACES",
-    q: "Can interactive projection work on different surfaces?",
-    a: "Yes. Interactive projection can be designed for floors, walls, tables and other suitable surfaces. The setup depends on the surface, lighting and type of interaction required."
+    categoryLabel: "EQUIPMENT",
+    q: "Do I need to provide the equipment?",
+    a: "Equipment requirements depend on the planned experience and project scope."
   },
   {
     id: "faq-4",
-    categoryLabel: "CUSTOMIZATION",
-    q: "Can the interactive experience be customized?",
-    a: "Yes. Content can be designed around your space, audience, brand and project goals, including custom visuals, games and interactive experiences."
+    categoryLabel: "COST",
+    q: "How much does it cost?",
+    a: "Cost depends on the space, content, technology and installation requirements."
   },
   {
     id: "faq-5",
-    categoryLabel: "SOLUTION SELECTION",
-    q: "How do you decide which interactive solution is right for my space?",
-    a: "The right solution depends on your space, audience, purpose, projection area, lighting and interaction requirements. These factors are reviewed before selecting the appropriate setup."
+    categoryLabel: "TIMELINE",
+    q: "How long does installation take?",
+    a: "The timeline depends on the experience, equipment and site requirements."
   },
   {
     id: "faq-6",
     categoryLabel: "CONSULTATION",
-    q: "Can you help me choose the right interactive solution?",
-    a: "Yes. We look at your space, audience, goals and the type of experience you want to create, then help you choose the most suitable solution for your project."
+    q: "Can you help me choose the right solution?",
+    a: "Yes. We can discuss your space and requirements and identify a suitable direction."
   }
 ];
 
@@ -68,17 +68,9 @@ export default function FAQSection() {
         
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-8 space-y-3">
-          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2">
-            <HelpCircle className="w-3.5 h-3.5 text-black/40" />
-            <span>KNOWLEDGE BASE</span>
-          </div>
-
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-[var(--foreground)]">
-            Frequently Asked Questions
+            Frequently asked questions
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-[var(--text-secondary)] font-light max-w-2xl mx-auto leading-relaxed">
-            Find answers to the most common questions about our interactive solutions, supported industries, customization options, installation process, and ongoing support.
-          </p>
         </div>
 
         {/* FAQ Accordion List (Retail-Showrooms / Industry Reference Pattern) */}

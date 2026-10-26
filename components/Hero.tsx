@@ -102,25 +102,46 @@ export default function Hero() {
     setScaleEnd(window.innerWidth < 1024 ? 1.0 : 0.86);
   }, []);
 
-  // Pause video when scrolled out of view to preserve GPU budget for other sections
+  // Pause heavy background video when hero is covered by scrolling to preserve GPU for the whole page
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
+    let ticking = false;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!videoRef.current) return;
-        if (entry.isIntersecting) {
-          videoRef.current.play().catch(() => {});
-        } else {
-          videoRef.current.pause();
+    const checkHeroVisibility = () => {
+      const video = videoRef.current;
+      if (!video) return;
+
+      const heroHeight = window.innerHeight || 800;
+      const isHeroVisible = window.scrollY < heroHeight;
+
+      if (isHeroVisible) {
+        if (video.paused) {
+          video.play().catch(() => {});
         }
-      },
-      { threshold: 0.05 }
-    );
+      } else {
+        if (!video.paused) {
+          video.pause();
+        }
+      }
+      ticking = false;
+    };
 
-    observer.observe(el);
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(checkHeroVisibility);
+      }
+    };
+
+    // Initial check
+    checkHeroVisibility();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
   const cardScaleScroll = useTransform(smoothScrollProgress, [0, 1], [1.0, scaleEnd]);
   const contentOpacity = useTransform(smoothScrollProgress, [0, 0.45], [1, 0]);
@@ -191,7 +212,7 @@ export default function Hero() {
               variants={fadeUpVariant}
               className="font-semibold text-white tracking-tight leading-[1.12] max-w-4xl mb-4 sm:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)] text-[clamp(1.75rem,5.2vw,4.5rem)]"
             >
-              Interactive Projection That Brings Spaces to Life
+              Turn Your Space Into Something People Can See, Touch and Play With
             </motion.h1>
 
             {/* Subheadline */}
@@ -199,7 +220,7 @@ export default function Hero() {
               variants={fadeUpVariant}
               className="text-sm sm:text-base lg:text-xl font-light text-white/90 leading-relaxed max-w-2xl mb-6 sm:mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
             >
-              Create interactive floors, walls and immersive experiences that respond to movement, engage people and turn everyday spaces into memorable experiences.
+              Interactive projection for floors, walls, storefronts and rooms, with visuals that respond to movement and give people something to explore.
             </motion.p>
 
             {/* Dual Action Buttons */}

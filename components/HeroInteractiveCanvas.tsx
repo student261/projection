@@ -279,26 +279,24 @@ export default function HeroInteractiveCanvas({ onTelemetryUpdate }: HeroInterac
 
     let isVisible = true;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        const intersecting = entry.isIntersecting;
-        if (intersecting && !isVisible) {
-          isVisible = true;
-          animationFrameId = requestAnimationFrame(render);
-        } else if (!intersecting && isVisible) {
-          isVisible = false;
-          cancelAnimationFrame(animationFrameId);
-        }
-      },
-      { threshold: 0.05 }
-    );
-    observer.observe(canvas);
+    // Immediately stop rendering loop when hero is covered by scrolling down
+    const handleScroll = () => {
+      const inHero = window.scrollY < (window.innerHeight || 800);
+      if (inHero && !isVisible) {
+        isVisible = true;
+        animationFrameId = requestAnimationFrame(render);
+      } else if (!inHero && isVisible) {
+        isVisible = false;
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     const handleVisibilityChange = () => {
       if (document.hidden) {
         isVisible = false;
         cancelAnimationFrame(animationFrameId);
-      } else {
+      } else if (window.scrollY < (window.innerHeight || 800)) {
         isVisible = true;
         animationFrameId = requestAnimationFrame(render);
       }
@@ -308,7 +306,7 @@ export default function HeroInteractiveCanvas({ onTelemetryUpdate }: HeroInterac
     render();
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", handleResize);

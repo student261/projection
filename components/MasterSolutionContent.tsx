@@ -66,6 +66,22 @@ export interface SolutionFullData {
   featuredExperience: { title: string; desc: string; img: string; category: string };
   experienceCards: { title: string; desc: string; img: string; category: string }[];
 
+  // Section 05: Secondary Formats (Unmerged Section)
+  formatSection2?: {
+    label: string;
+    heading: string;
+    intro: string;
+    cards: { title: string; desc: string; img: string; href?: string }[];
+  };
+
+  // Section 06: Tertiary Formats (Unmerged Section for 3-format solutions)
+  formatSection3?: {
+    label: string;
+    heading: string;
+    intro: string;
+    cards: { title: string; desc: string; img: string; href?: string }[];
+  };
+
   // Section 04: Key Features / Capabilities
   featuresHeading?: string;
   keyFeaturesIntro: string;
@@ -93,7 +109,7 @@ export interface SolutionFullData {
   projectsHeading?: string;
   projectsIntro: string;
   featuredProject: { industry: string; title: string; desc: string; img: string; location: string; tech: string[]; href: string };
-  projects: { industry: string; title: string; desc: string; href: string; img?: string }[];
+  projects: { industry: string; title: string; desc: string; href: string; img?: string; location?: string; tech?: string[] }[];
 
   // Section 10: FAQs
   faqsIntro: string;
@@ -239,9 +255,9 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
     ...data.projects.slice(0, 4).map((p) => ({
       title: p.title,
       industry: p.industry,
-      location: `${p.industry} Sector Installation`,
+      location: p.location || "",
       desc: p.desc,
-      tech: ["Motion Sensing", "Projection Mapping", "Interactive Engine"],
+      tech: p.tech || [],
       img: p.img || projectImages[p.industry] || data.featuredProject.img,
       href: p.href,
     }))
@@ -287,25 +303,25 @@ export default function MasterSolutionContent({ data }: { data: SolutionFullData
           transition={{ delay: 0.1 }}
           className="font-black text-white mb-3 sm:mb-5 max-w-4xl lg:max-w-5xl mx-auto drop-shadow-2xl tracking-tight leading-[1.08] text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl"
         >
-          {data.slug === "interactive-projection" || data.heroHeading.includes("Surfaces That Respond When") ? (
+          {data.slug === "interactive-projection" || data.heroHeading.includes("Turn an Ordinary Floor") ? (
             <>
-              <span className="block">Surfaces That Respond When</span>
-              <span className="block">People Touch or Move Across Them</span>
+              <span className="block">Turn an Ordinary Floor or Wall</span>
+              <span className="block">Into Something People Can Interact With</span>
             </>
-          ) : data.slug.includes("ai") || data.heroHeading.includes("AI Avatars") ? (
+          ) : data.slug.includes("ai") || data.heroHeading.includes("Give Visitors Something") || data.heroHeading.includes("AI Avatars") ? (
             <>
-              <span className="block sm:whitespace-nowrap">AI Avatars and AI Photo Experiences</span>
-              <span className="block sm:whitespace-nowrap">for Physical Spaces</span>
+              <span className="block sm:whitespace-nowrap">Give Visitors Something</span>
+              <span className="block sm:whitespace-nowrap">They Can Talk To and Play With</span>
             </>
-          ) : data.slug.includes("immersive") || data.heroHeading.includes("Surfaces That Surround People") ? (
+          ) : data.slug.includes("immersive") || data.heroHeading.includes("Turn a Room") ? (
             <>
-              <span className="block sm:whitespace-nowrap">Rooms and Surfaces That Surround</span>
-              <span className="block sm:whitespace-nowrap">People With Visual Content</span>
+              <span className="block sm:whitespace-nowrap">Turn a Room</span>
+              <span className="block sm:whitespace-nowrap">Into Something People Can Step Into</span>
             </>
-          ) : data.slug.includes("engagement") || data.heroHeading.includes("Moving and Playing") ? (
+          ) : data.slug.includes("engagement") || data.heroHeading.includes("Give People a Reason to Move") || data.heroHeading.includes("Moving and Playing") ? (
             <>
-              <span className="block sm:whitespace-nowrap">Games and Activities That Get</span>
-              <span className="block sm:whitespace-nowrap">People Moving and Playing</span>
+              <span className="block sm:whitespace-nowrap">Give People a Reason to Move,</span>
+              <span className="block sm:whitespace-nowrap">Play and Take Part</span>
             </>
           ) : (
             data.heroHeading
@@ -474,7 +490,7 @@ function StickySurfaceFormats({
               {data.experienceHeading || "Interactive Experiences Built Around Your Space"}
             </h2>
             {data.experienceIntro && (
-              <p className="text-xs sm:text-sm text-black/65 font-light leading-relaxed max-w-4xl xl:max-w-5xl mx-auto sm:whitespace-nowrap">
+              <p className="text-xs sm:text-sm text-black/65 font-light leading-relaxed max-w-4xl xl:max-w-5xl mx-auto">
                 {data.experienceIntro}
               </p>
             )}
@@ -607,6 +623,37 @@ function StickySurfaceFormats({
       </section>
     )
   );
+
+  // Section: Intermediate Formats (Section 05 for 3-format solutions like Projection Mapping or AI Photo Experiences)
+  const intermediateFormatsSection = data.formatSection2 && data.formatSection3 ? (
+    <section id="format-section-2" className="py-14 sm:py-16 lg:py-20 bg-neutral-900 text-white scroll-mt-20 relative">
+      <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl 2xl:max-w-6xl mx-auto text-center mb-8 sm:mb-12">
+          <div className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/80 mb-2 leading-normal py-0.5">
+            <Sparkles className="w-3.5 h-3.5 text-white" />
+            <span>{data.formatSection2.label}</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-[34px] xl:text-4xl font-black text-white tracking-tight leading-[1.15] mb-2.5 sm:mb-3">
+            {data.formatSection2.heading}
+          </h2>
+          <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed max-w-4xl xl:max-w-5xl mx-auto">
+            {data.formatSection2.intro}
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+          {data.formatSection2.cards.map((card, idx) => (
+            <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden p-3.5 sm:p-4 flex flex-col hover:border-white/20 transition-all group">
+              <div className="relative w-full h-[180px] sm:h-[200px] rounded-xl overflow-hidden mb-3.5 bg-neutral-800">
+                <SafeImage src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" containerClassName="w-full h-full" />
+              </div>
+              <h3 className="text-sm sm:text-base font-bold text-white mb-1.5 tracking-tight">{card.title}</h3>
+              <p className="text-xs text-white/70 leading-relaxed font-light">{card.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : null;
 
   // Section: Industries (WHERE IT FITS) - Full Background Cinematic Architecture (Matching Reference Image)
   const industriesSection = (
@@ -1349,7 +1396,7 @@ function StickySurfaceFormats({
           <div>
             <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/80 mb-2">
               <Sparkles className="w-3.5 h-3.5 text-white/60" />
-              <span>Featured Installations / Live Showcase</span>
+              <span>SEE WHAT IT CAN BECOME</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-[1.1]">
               {data.projectsHeading || "See the Solution in Action"}
@@ -1360,11 +1407,11 @@ function StickySurfaceFormats({
           </p>
         </div>
 
-        {/* Unified Layout: Left Selector Tabs, Right Blended Cinematic Visual */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+        {/* Unified Layout: Left Selector Tabs, Right Cinematic Visual */}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
           
           {/* Left Column: 5 Interactive Project Selector Tabs */}
-          <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-between gap-2.5">
+          <div className="w-full lg:w-[180px] shrink-0 order-2 lg:order-1 flex flex-col justify-between gap-2.5">
             {showcaseProjects.map((proj, idx) => {
               const isActive = activeProjectIdx === idx;
               const num = String(idx + 1).padStart(2, "0");
@@ -1374,7 +1421,7 @@ function StickySurfaceFormats({
                   type="button"
                   onMouseEnter={() => setActiveProjectIdx(idx)}
                   onClick={() => setActiveProjectIdx(idx)}
-                  className={`w-full text-left p-3 sm:p-3.5 rounded-xl transition-all duration-300 border flex items-center justify-between gap-3.5 cursor-pointer group ${
+                  className={`w-[180px] text-left p-3 sm:p-3.5 rounded-xl transition-all duration-300 border flex items-center gap-3 cursor-pointer group ${
                     isActive 
                       ? "bg-gradient-to-r from-white/15 via-white/10 to-white/5 border-white/40 shadow-[0_0_25px_rgba(255,255,255,0.08)] text-white" 
                       : "bg-white/[0.03] border-white/10 text-white/70 hover:bg-white/[0.07] hover:border-white/20 hover:text-white"
@@ -1389,16 +1436,20 @@ function StickySurfaceFormats({
                       {num}
                     </span>
                     <div className="min-w-0">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <span className={`text-xs uppercase tracking-wide font-semibold shrink-0 ${
-                          isActive ? "text-white" : "text-white/60"
-                        }`}>
-                          {proj.industry}
-                        </span>
-                        <span className="text-[10px] text-white/40 truncate">
-                          / {proj.location}
-                        </span>
-                      </div>
+                      {proj.industry && proj.industry.toLowerCase() !== "concept" && (
+                        <div className="flex items-center gap-2 mb-0.5">
+                          <span className={`text-xs uppercase tracking-wide font-semibold shrink-0 ${
+                            isActive ? "text-white" : "text-white/60"
+                          }`}>
+                            {proj.industry}
+                          </span>
+                          {proj.location && (
+                            <span className="text-[10px] text-white/40 truncate">
+                              / {proj.location}
+                            </span>
+                          )}
+                        </div>
+                      )}
                       <h4 className={`text-sm font-bold tracking-tight truncate transition-colors ${
                         isActive ? "text-white" : "text-white/85 group-hover:text-white"
                       }`}>
@@ -1406,25 +1457,15 @@ function StickySurfaceFormats({
                       </h4>
                     </div>
                   </div>
-
-                  <div className="shrink-0 flex items-center">
-                    <span className={`w-7 h-7 rounded-full border flex items-center justify-center transition-all ${
-                      isActive 
-                        ? "bg-white border-white text-black shadow-[0_0_12px_rgba(255,255,255,0.3)]" 
-                        : "bg-white/5 border-white/10 text-white/40 group-hover:border-white/30 group-hover:text-white group-hover:bg-white/10"
-                    }`}>
-                      <ArrowRight className={`w-3.5 h-3.5 transition-transform duration-300 ${isActive ? "translate-x-0.5" : "group-hover:translate-x-0.5"}`} />
-                    </span>
-                  </div>
                 </button>
               );
             })}
           </div>
 
-          {/* Right Column: Seamlessly Blended Visual Stage (Zero Card Borders, Zero Card Outline) */}
-          <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-between relative min-h-[440px] sm:min-h-[480px]">
+          {/* Right Column: Full Cinematic Visual Container */}
+          <div className="flex-1 min-w-0 order-1 lg:order-2 flex flex-col justify-between relative min-h-[440px] sm:min-h-[480px] rounded-3xl overflow-hidden bg-neutral-950 border border-white/10">
             
-            {/* Blended Image Container with Soft Vignette Dissolve into Pure Black */}
+            {/* Image Container with Clear Visibility */}
             <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -1444,15 +1485,13 @@ function StickySurfaceFormats({
                 </motion.div>
               </AnimatePresence>
 
-              {/* Edge Gradient Blends: Dissolves the image into the black background on all edges */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black/70 pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent h-20 pointer-events-none" />
-              <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent pointer-events-none" />
+              {/* Bottom Scrim Gradient for Crisp Text Legibility */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
             </div>
 
-            {/* Bottom Content: Clean Title, Description & CTA (Zero Unnecessary Overlays over the Image) */}
-            <div className="relative z-10 pb-3 px-2 sm:px-3 flex flex-col sm:flex-row sm:items-end justify-between gap-4 mt-auto">
+            {/* Bottom Content: Clean Title, Description & CTA */}
+            <div className="relative z-10 pb-5 px-5 sm:px-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4 mt-auto">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeProject.title + activeProjectIdx}
@@ -1475,7 +1514,7 @@ function StickySurfaceFormats({
                 href={activeProject.href || "/projects"} 
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold uppercase tracking-wide transition-all shadow-[0_0_25px_rgba(255,255,255,0.25)] hover:shadow-[0_0_35px_rgba(255,255,255,0.45)] hover:scale-[1.02] active:scale-95 shrink-0 self-start sm:self-auto cursor-pointer"
               >
-                <span>Explore Case Study</span>
+                <span>View Projects</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -1487,7 +1526,9 @@ function StickySurfaceFormats({
     </section>
   );
 
-    // Section: Related Solutions (Explore Other Interactive Experiences) - Matching Reference Image
+  // Section: Related Solutions / Bottom Formats (Explore Other Interactive Experiences)
+  const bottomFormatData = data.formatSection3 || (data.formatSection2 && !data.formatSection3 ? data.formatSection2 : null);
+
   const relatedSolutionsSection = (
     <section id="related-solutions" className="py-14 sm:py-16 lg:py-20 bg-white scroll-mt-20 relative overflow-hidden">
       {/* SVG ClipPath Definitions for the Angled Card Tops with Rounded Corners */}
@@ -1512,12 +1553,13 @@ function StickySurfaceFormats({
         {/* Section Header: Left aligned, lowered on desktop to utilize space above cards 1 & 2 */}
         <div className="max-w-xl lg:w-[48%] mb-6 lg:-mb-28 relative z-10">
           <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-2.5 sm:mb-3">
-            <span>09</span>
-            <span>{data.relatedSolutionsLabel || "RELATED SOLUTIONS"}</span>
+            <span>{bottomFormatData ? bottomFormatData.label : (data.relatedSolutionsLabel || "RELATED SOLUTIONS")}</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-black text-black tracking-tight leading-[1.12] mb-3">
-            {data.relatedSolutionsHeading === "Explore More Solutions" ? (
+            {bottomFormatData ? (
+              <span className="block">{bottomFormatData.heading}</span>
+            ) : data.relatedSolutionsHeading === "Explore More Solutions" ? (
               <>
                 <span className="block">Explore More</span>
                 <span className="block">Solutions</span>
@@ -1533,13 +1575,65 @@ function StickySurfaceFormats({
           </h2>
 
           <p className="text-xs sm:text-sm lg:text-base text-black/60 font-light leading-relaxed max-w-md">
-            Our interactive technologies can work together to create even more engaging and immersive environments.
+            {bottomFormatData ? bottomFormatData.intro : "Our interactive technologies can work together to create even more engaging and immersive environments."}
           </p>
         </div>
 
-        {/* 4 Solutions Cards: Ascending Heights with Slanted Tops, Title, Arrow & Description */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 items-end">
-          {allOtherSolutions
+        {/* Solutions Cards: Ascending Heights with Slanted Tops, Title, Arrow & Description */}
+        <div className={`grid ${bottomFormatData && bottomFormatData.cards.length === 3 ? "grid-cols-1 sm:grid-cols-3 gap-5 lg:gap-8" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6"} items-end`}>
+          {bottomFormatData ? (
+            bottomFormatData.cards.map((item, idx) => {
+              const isThreeCards = bottomFormatData.cards.length === 3;
+              const heightClasses = isThreeCards
+                ? [
+                    "h-[180px] sm:h-[200px] lg:h-[220px]",
+                    "h-[215px] sm:h-[240px] lg:h-[265px]",
+                    "h-[250px] sm:h-[280px] lg:h-[310px]",
+                  ][idx] || "h-[220px]"
+                : [
+                    "h-[160px] sm:h-[175px] lg:h-[180px]",
+                    "h-[190px] sm:h-[210px] lg:h-[225px]",
+                    "h-[225px] sm:h-[245px] lg:h-[270px]",
+                    "h-[260px] sm:h-[285px] lg:h-[315px]",
+                  ][idx] || "h-[220px]";
+
+              const clipPathStyle = {
+                clipPath: `url(#slanted-card-${idx})`,
+              };
+
+              return (
+                <div
+                  key={idx}
+                  className="group flex flex-col w-full transition-all duration-300 hover:-translate-y-1.5"
+                >
+                  {/* Slanted Image Container */}
+                  <div
+                    className={`relative w-full ${heightClasses} overflow-hidden rounded-2xl bg-neutral-900 shadow-md transition-all duration-500 group-hover:shadow-xl`}
+                    style={clipPathStyle}
+                  >
+                    <SafeImage
+                      src={item.img}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      containerClassName="w-full h-full"
+                    />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300" />
+                  </div>
+
+                  {/* Clean Footer Bar: Title & Description Below */}
+                  <div className="pt-3 pb-1 flex flex-col gap-1.5 px-0.5">
+                    <h3 className="text-xs sm:text-sm font-bold text-black tracking-tight leading-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-[11px] sm:text-xs text-black/60 font-light leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })
+          ) : (
+            allOtherSolutions
             .filter(
               (s) =>
                 s.slug !== data.slug &&
@@ -1597,7 +1691,8 @@ function StickySurfaceFormats({
                   </div>
                 </Link>
               );
-            })}
+            })
+          )}
         </div>
       </div>
     </section>
@@ -1609,7 +1704,7 @@ function StickySurfaceFormats({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label={data.faqsLabel || "COMMON QUESTIONS"}
-          heading="Frequently Asked Questions"
+          heading="Before You Start"
           subheading={data.faqsIntro}
           centered
         />
@@ -1699,6 +1794,7 @@ function StickySurfaceFormats({
       {heroSection}
       {applicationsSection}
       {surfaceFormatsSection}
+      {intermediateFormatsSection}
       {capabilitiesSection}
       {howItWorksSection}
       {industriesSection}

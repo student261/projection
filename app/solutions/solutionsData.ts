@@ -6,159 +6,171 @@ export const solutionDetails: Record<string, SolutionFullData> = {
  // -------------------------------------------------------------------------
  "interactive-projection": {
   slug: "interactive-projection",
-  solutionLabel: "INTERACTIVE PROJECTION",
-  heroHeading: "Surfaces That Respond When People Touch or Move Across Them",
-  heroSubtitle: "A floor, wall, ceiling, table, window or mirror can react to movement and touch. The surface becomes part of the experience, not just a backdrop.",
-  heroDescription: "Turn floors, walls, ceilings, tables, windows and mirrors into surfaces that respond to touch and movement. See the formats and how they work.",
+  solutionLabel: "INTERACTIVE FLOOR & WALL PROJECTION",
+  heroHeading: "Turn an Ordinary Floor or Wall Into Something People Can Interact With",
+  heroSubtitle: "Project pictures, games and activities onto floors and walls that respond when people move, step or interact.",
+  heroDescription: "Project pictures, games and activities onto floors and walls that respond when people move, step or interact.",
   heroImg: "/images/interactive_spaces_hero.jpg",
 
-  surfaceFormatsLabel: "THE FORMATS",
-  industriesLabel: "WHERE IT FITS",
-  applicationsLabel: "EXPERIENCE POSSIBILITIES",
+  surfaceFormatsLabel: "INTERACTIVE FLOORS",
+  industriesLabel: "WHERE IT WORKS",
+  applicationsLabel: "SEE IT IN ACTION",
   howItWorksLabel: "HOW IT WORKS",
-  capabilitiesLabel: "CAPABILITIES",
-  experienceLabel: "THE EXPERIENCE",
-  relatedSolutionsLabel: "EXPLORE MORE",
+  capabilitiesLabel: "WHAT PEOPLE CAN DO",
+  experienceLabel: "WHAT YOU RECEIVE",
   faqsLabel: "COMMON QUESTIONS",
 
-  whatIsHeading: "What an Interactive Projection Lets People Do",
-  whatIsDescription: "Turn static surfaces into responsive environments where movement and touch reveal dynamic digital content.",
+  whatIsHeading: "A Floor or Wall That Responds When People Move",
+  whatIsDescription: "Instead of people only looking at a screen, the floor or wall becomes part of what they are doing. A child steps onto the floor and a game starts. A visitor walks across the projection and the visuals move with them. Someone approaches a wall and new content appears.",
   whatIsVideoPlaceholder: "/interactive-floor-poster.jpg",
   videoUrl: "/interactive-floor-showreel.mp4",
   whatIsFeatures: [
-   { title: "Explore Content by Moving", desc: "Walk across a floor or reach toward a wall to bring up new content." },
-   { title: "Browse Without a Screen", desc: "Touch a table or window instead of pulling out a phone or scrolling a kiosk." },
-   { title: "Share the Experience", desc: "Multiple people can interact with the same floor, wall or table at once." },
-   { title: "Change the Content Over Time", desc: "Swap the visuals on the same surface for a new season, campaign or lesson." }
+   { title: "STEP IN", desc: "The projected visuals appear around you." },
+   { title: "MOVE", desc: "The visuals respond to movement." },
+   { title: "TAKE PART", desc: "People become part of what they see." }
   ],
 
-  experienceHeading: "Six Ways to Build an Interactive Projection",
-  experienceIntro: "A floor, wall, ceiling, table, window or mirror can react to movement and touch. The surface becomes part of the experience, not just a backdrop.",
+  experienceHeading: "What Could an Interactive Floor Do?",
+  experienceIntro: "An interactive floor can become a game, activity or display without changing the floor itself.",
   featuredExperience: {
    category: "Interactive Floors",
-   title: "Interactive Floors",
-   desc: "Step, walk or jump across the floor and the content reacts to where people are standing.",
+   title: "Interactive Floor Games",
+   desc: "Children and visitors can step, move and play directly within the projected activity.",
    img: "/images/cat_interactive_floor.jpg"
   },
   experienceCards: [
    {
-    category: "Interactive Walls",
-    title: "Interactive Walls",
-    desc: "Reach out and touch a wall to open, move or select something on the projected content.",
-    img: "/images/corporate_lobby_wall.jpg"
+    category: "Interactive Floors",
+    title: "Interactive Floor Display",
+    desc: "Use changing visuals to create something people notice and explore.",
+    img: "/images/hospitality_koi_pond.jpg"
    },
    {
-    category: "Interactive Ceilings",
-    title: "Interactive Ceilings",
-    desc: "Visuals project above people, adding a second layer of interaction to the room.",
-    img: "/images/var_ceiling_projection.webp"
+    category: "Interactive Floors",
+    title: "Learning Activities",
+    desc: "Turn the floor into an active part of a lesson or group activity.",
+    img: "/images/education_interactive_floor.jpg"
    },
    {
-    category: "Interactive Tables",
-    title: "Interactive Tables",
-    desc: "A tabletop surface people gather around and touch, built for shared, close up interaction.",
-    img: "/images/var_table_projection.webp"
-   },
-   {
-    category: "Interactive Windows",
-    title: "Interactive Windows",
-    desc: "Suitable glass surfaces display content that connects what is happening inside with the street or room outside.",
-    img: "/images/var_window_projection.webp"
-   },
-   {
-    category: "Interactive Mirrors",
-    title: "Interactive Mirrors",
-    desc: "A mirror surface that can show digital content alongside the reflection.",
-    img: "/images/var_mirror_projection.webp"
+    category: "Interactive Floors",
+    title: "Visitor Activities",
+    desc: "Give people something to do while they wait, walk through or explore a space.",
+    img: "/images/retail_floor_projection.jpg"
    }
   ],
 
-  featuresHeading: "What the Solution Can Deliver",
-  keyFeaturesIntro: "Engineered around human movement, flexible formats and real-time digital response. This is what the solution can deliver across spaces.",
+  // Section 05: INTERACTIVE WALLS (Unmerged Section)
+  formatSection2: {
+   label: "INTERACTIVE WALLS",
+   heading: "Your Wall Can Become Part of the Activity",
+   intro: "An interactive wall projector can turn a suitable wall into a place where people can explore pictures, information, games or stories.",
+   cards: [
+    {
+     title: "Touch",
+     desc: "Visitors can interact with projected content where touch interaction is part of the setup.",
+     img: "/images/interactive_strike_wall.jpg"
+    },
+    {
+     title: "Discover",
+     desc: "New content can appear as visitors approach or interact with the wall.",
+     img: "/images/v2_child_interactive_wall.jpg"
+    },
+    {
+     title: "Learn",
+     desc: "Turn information into something visitors can explore rather than simply read.",
+     img: "/images/museum_digital_art_kandinsky.jpg"
+    },
+    {
+     title: "Display",
+     desc: "Create an interactive display wall for a store, museum, school, hotel or public space.",
+     img: "/images/corporate_interactive_showcase.jpg"
+    }
+   ]
+  },
+
+  featuresHeading: "Give People a Reason to Move, Play and Explore",
+  keyFeaturesIntro: "Use the floor or wall for games, activities, displays and experiences built around what people are there to do.",
   keyFeatures: [
-   { title: "Movement Tracking", desc: "Detects where people are standing or moving across a floor or open area." },
-   { title: "Touch Detection", desc: "Detects a direct touch on a wall, table or window surface." },
-   { title: "Multi Surface Setup", desc: "Floor, wall, ceiling and table formats can be combined in the same space." },
-   { title: "Custom Interactive Content", desc: "Content is built around the surface, the activity and the audience." }
+   { title: "Games", desc: "Turn a floor into something people can play on." },
+   { title: "Displays", desc: "Use walls and floors to show information or products differently." },
+   { title: "Activities", desc: "Create activities that get people moving and taking part." },
+   { title: "Learning", desc: "Turn lessons into something students can see and do." }
   ],
 
-  howItWorksHeading: "From Surface to Interactive Projection",
-  howItWorksIntro: "A four-step engineering process that takes your physical surface and turns it into a responsive, calibrated interactive experience.",
+  howItWorksHeading: "From Your Space to Something People Can Use",
+  howItWorksIntro: "We start with your space and what you want people to do. Then we plan, create, install and test the setup around it.",
   howItWorksSteps: [
-   { title: "01. Review the Surface", desc: "We check the floor, wall, ceiling or other surface, along with lighting and room layout." },
-   { title: "02. Choose the Tracking Method", desc: "Movement or touch is detected using a camera, sensor or touch enabled surface, depending on the format." },
-   { title: "03. Build the Content", desc: "Visuals are created to fit the surface and respond to the chosen interaction." },
-   { title: "04. Install and Calibrate", desc: "The projector or display and tracking system are installed and aligned to the exact surface area." }
+   { title: "01. Look at Your Space", desc: "We look at the available floor or wall, lighting, size and how people move through the area." },
+   { title: "02. Plan the Activity", desc: "We decide what people will see and what should happen when they move or interact." },
+   { title: "03. Create the Content", desc: "We prepare the visual content, games or activities needed for the planned use." },
+   { title: "04. Install and Test", desc: "We set up the required equipment and test the floor or wall in your space." }
   ],
 
-  industriesHeading: "Interactive Projection Across Different Industries",
-  industriesIntro: "Interactive projection can be adapted to different environments based on the audience, space and purpose of the experience.",
+  industriesHeading: "Different Ways to Use It",
+  industriesIntro: "What you create depends on the people using the space and what you want them to do.",
   featuredIndustry: {
    title: "Retail",
-   desc: "Interactive windows and floors give shoppers a reason to stop and explore a storefront.",
+   desc: "Interactive floors, walls and displays that give shoppers something to notice and explore.",
    img: "/images/retail_interactive_showcase.jpg",
    href: "/industries/retail"
   },
   industryCards: [
-   { title: "Education", desc: "Interactive floors and walls turn classroom activities into something students do, not just watch.", img: "/images/museum_dino_sandbox.jpg", href: "/industries/education" },
-   { title: "Museums & Exhibitions", desc: "Interactive tables and walls let visitors explore exhibits at their own pace.", img: "/images/museum_interactive_exhibition.jpg", href: "/industries/museums-culture" },
-   { title: "Corporate & Events", desc: "Interactive floors and tables create a moment at a booth, launch or lobby.", img: "/images/corporate_interactive_showcase.jpg", href: "/industries/corporate" },
-   { title: "Entertainment", desc: "Interactive floors and walls support play based activities in arcades and attractions.", img: "/images/entertainment_interactive_arena.jpg", href: "/industries/entertainment" },
-   { title: "Healthcare", desc: "Interactive floors and walls support movement and sensory activities in therapy and care settings.", img: "/images/healthcare_sensory_room.jpg", href: "/industries/healthcare" }
+   { title: "Hospitality", desc: "Activities, displays and play areas for hotel guests and visitors.", img: "/images/hospitality_interactive_lounge.jpg", href: "/industries/hospitality" },
+   { title: "Restaurants", desc: "Interactive dining areas, visual displays and activities for guests.", img: "/images/dining_projection_table.jpg", href: "/industries" },
+   { title: "Education", desc: "Interactive floor activities that help students learn by moving and taking part.", img: "/images/education_classroom_floor_projection.jpg", href: "/industries/education" },
+   { title: "Museums", desc: "Walls and floors that invite visitors to explore exhibits and information.", img: "/images/museum_interactive_exhibition.jpg", href: "/industries/museums-culture" },
+   { title: "Entertainment", desc: "Interactive games and activities that get people moving and playing.", img: "/images/entertainment_interactive_arena.jpg", href: "/industries/entertainment" }
   ],
 
-  outcomesHeading: "Give People a Surface to Interact With, Not Just Look At",
-  benefitsIntro: "A surface that reacts gives people a reason to engage rather than walk past. Everyday surfaces get a new use and multiple people can join in.",
+  outcomesHeading: "Everything Needed for Your Setup",
+  benefitsIntro: "The final setup depends on your space and project, but the work can include the content, interaction, equipment and installation needed to bring the idea together.",
   featuredBenefit: {
-   title: "Give People a Surface to Interact With, Not Just Look At",
-   desc: "A surface that reacts gives people a reason to engage rather than walk past. Everyday surfaces get a new use and multiple people can join in.",
+   title: "Content",
+   desc: "Visuals, games or activities created for your project.",
    img: "/images/corporate_lobby_wall.jpg"
   },
   benefits: [
-   { title: "People Take Part Instead of Watching", desc: "A surface that reacts gives people a reason to engage rather than walk past." },
-   { title: "Everyday Surfaces Get a New Use", desc: "A floor, wall or table already in the space becomes part of the experience." },
-   { title: "Multiple People Can Join In", desc: "Group interaction is possible on a shared surface like a floor or table." }
+   { title: "Content", desc: "Visuals, games or activities created for your project." },
+   { title: "Interaction", desc: "The way people move, play or interact with the projection." },
+   { title: "Equipment", desc: "The projection equipment and other required parts of the setup." },
+   { title: "Installation", desc: "Setup, adjustment and testing in your space." }
   ],
   techStack: ["Movement Tracking", "Touch Detection", "Multi Surface Systems", "Real-Time Interactive Engine"],
 
-  projectsHeading: "Related Projects",
-  projectsIntro: "Discover our landmark interactive spaces across corporate headquarters, prestigious museums, and educational centers.",
+  projectsHeading: "From an Empty Floor to Something People Want to Try",
+  projectsIntro: "",
   featuredProject: {
-   industry: "Education",
-   title: "Kinetic Active Multimedia Arena",
-   desc: "A revolutionary active gaming arena where participants body movements turn dynamic floors and walls into responsive competitive sports fields without any headsets or controllers.",
-   location: "Urban Family Entertainment Center",
-   img: "/images/entertainment_motion_arena.jpg",
-   tech: ["Interactive Floor", "Optical Tracking", "Laser Projection", "Educational CMS"],
+   industry: "Concept",
+   title: "Hotel",
+   desc: "A child steps onto the floor. The game begins.",
+   location: "",
+   img: "/images/hospitality_ambient_atrium.jpg",
+   tech: [],
    href: "/projects"
   },
   projects: [
-   { industry: "Museum", title: "Living Wetland Ecosystem", desc: "Floor projection reacting to visitor footsteps with fish and lily pads.", img: "/images/hospitality_koi_pond.jpg", href: "/projects" },
-   { industry: "Retail", title: "Luxury Sneaker Portal", desc: "Interactive floor illuminating shoe specifications when walked upon.", img: "/images/sneaker_customization_table.jpg", href: "/projects" },
-   { industry: "Healthcare", title: "Pediatric Wellness Garden", desc: "Calming interactive light paths in main hospital atrium.", img: "/images/mri_distraction_suite.jpg", href: "/projects" },
-   { industry: "Corporate", title: "Dynamic Brand Welcome Matrix", desc: "Sensory floor welcoming VIPs with generative graphics.", img: "/images/ai_receptionist_concierge.jpg", href: "/projects" }
+   { industry: "Concept", title: "Restaurant", desc: "Guests discover projected visuals while they wait or dine.", img: "/images/interactive_cocktail_bar.jpg", href: "/projects" },
+   { industry: "Concept", title: "Retail", desc: "A shopper notices the floor, stops and interacts.", img: "/images/retail_popup_activation.jpg", href: "/projects" },
+   { industry: "Concept", title: "School", desc: "Students move through an activity instead of only watching it.", img: "/images/education_strike_wall_activity.jpg", href: "/projects" },
+   { industry: "Concept", title: "Museum", desc: "Visitors approach the wall and discover something new.", img: "/images/museum_history_hall.jpg", href: "/projects" }
   ],
 
-  faqsIntro: "Common questions about how interactive projection works, what surfaces are suitable, and how to get started.",
+  faqsIntro: "",
   faqs: [
-   { q: "What is an interactive Projection?", a: "An interactive Projection is a floor, wall, ceiling, table, window or mirror that responds when someone touches or moves across it." },
-   { q: "What surfaces can be made interactive?", a: "Floors, walls, ceilings, tables, windows and mirrors can be used, depending on the surface material, lighting and room layout." },
-   { q: "How does the surface detect movement or touch?", a: "A camera or sensor tracks movement, or the surface itself is touch enabled, depending on the format chosen." },
-   { q: "Can more than one person interact at the same time?", a: "Yes, floors and tables in particular are often used for group interaction." },
-   { q: "What affects the cost of an interactive space installation?", a: "Cost depends on the surface size, the number of projectors or displays, the tracking method and the content required." },
-   { q: "Can the content be changed later?", a: "Content can be updated for new campaigns, lessons or seasons, depending on the system installed." },
-   { q: "How do we get started?", a: "Share the surface you have in mind and what you want people to do with it, and we will recommend a suitable format." }
+   { q: "What is an interactive floor?", a: "An interactive floor uses projected visuals that can respond when people move across the surface." },
+   { q: "What is an interactive wall?", a: "An interactive wall uses projected content to let visitors interact with a suitable wall through movement, touch or other planned interactions." },
+   { q: "Can I use an interactive floor for games?", a: "Yes. Interactive projector games can be created for different audiences and spaces, depending on the project." },
+   { q: "Can an existing floor or wall be used?", a: "It depends on the surface, lighting, size and planned setup. We can review your space and discuss what may work." },
+   { q: "Can the content be made for my business?", a: "Yes. The content can be planned around your audience, space and intended use." },
+   { q: "Do I need to buy the projector myself?", a: "Not necessarily. Equipment requirements depend on the project and the setup required." },
+   { q: "How much does an interactive floor or wall cost?", a: "The cost depends on the space, content, equipment, interaction and installation requirements." }
   ],
 
-   // Section 08: Related Solutions
-   relatedSolutionsHeading: "Explore More Solutions",
 
-   // Section 10: Final CTA
-   ctaHeading: "Turn a Surface Into Part of the Experience",
-   ctaSubtitle: "Tell us about the space and the surface you have in mind.",
-   ctaButtonText: "Discuss Your Project"
+  ctaHeading: "What Could Your Floor or Wall Become?",
+  ctaSubtitle: "Tell us about your space and what you want people to see, do or explore. We can help you work out what could fit.",
+  ctaButtonText: "Discuss Your Project"
  },
- // Legacy alias to maintain full backwards compatibility:
  get "interactive-spaces"() {
   return this["interactive-projection"];
  },
@@ -690,156 +702,206 @@ export const solutionDetails: Record<string, SolutionFullData> = {
  // -------------------------------------------------------------------------
  "immersive-environment": {
   slug: "immersive-environment",
-  solutionLabel: "IMMERSIVE ENVIRONMENTS",
-  heroHeading: "Rooms and Surfaces That Surround People With Visual Content",
-  heroSubtitle: "An immersive environment surrounds a room, building or dome with projected or displayed visuals, so people experience the content around them rather than on one screen.",
-  heroDescription: "Build immersive rooms, projection mapped surfaces, 360 degree projection and dome environments that surround people with visual content.",
-  heroImg: "/images/cathedral_projection_mapping.jpg",
+  solutionLabel: "IMMERSIVE EXPERIENCES",
+  heroHeading: "Turn a Room Into Something People Can Step Into",
+  heroSubtitle: "Fill walls, floors and other surfaces with moving visuals that change the way people see and experience a space.",
+  heroDescription: "Turn rooms and spaces into immersive environments with projection, projection mapping and large visual displays people can step into.",
+  heroImg: "/images/cat_immersive_dome.jpg",
 
-  surfaceFormatsLabel: "THE FORMATS",
-  industriesLabel: "WHERE IT FITS",
-  applicationsLabel: "EXPERIENCE POSSIBILITIES",
+  surfaceFormatsLabel: "IMMERSIVE ROOMS",
+  industriesLabel: "WHERE IT WORKS",
+  applicationsLabel: "SEE IT IN ACTION",
   howItWorksLabel: "HOW IT WORKS",
-  capabilitiesLabel: "CAPABILITIES",
-  experienceLabel: "THE EXPERIENCE",
-  relatedSolutionsLabel: "EXPLORE MORE",
+  capabilitiesLabel: "WHAT PEOPLE CAN DO",
+  experienceLabel: "WHAT YOU RECEIVE",
   faqsLabel: "COMMON QUESTIONS",
 
-  whatIsHeading: "What an Immersive Environment Lets People Do",
-  whatIsDescription: "An immersive environment surrounds a room, building or dome with projected or displayed visuals, so people experience the content around them rather than on one screen.",
+  whatIsHeading: "Step Inside. Look Around. The Whole Space Changes.",
+  whatIsDescription: "Instead of watching one screen, people can look around and see the visuals across the space around them. A room can become a forest. A restaurant can become a different world. A museum can surround visitors with a story. An event space can change with the theme of the event.",
   whatIsVideoPlaceholder: "/immersive-room-poster.jpg",
   videoUrl: "/immersive-room-showreel.mp4",
   whatIsFeatures: [
-   { title: "Walk Into a Visual Story", desc: "Move through a room or dome and see the content from different angles as they go." },
-   { title: "See a Building Differently", desc: "Projection mapping changes how a familiar structure looks for a launch or event." },
-   { title: "Spend Longer in a Space", desc: "A surrounding environment gives people more reason to stay and look around than a flat screen." }
+   { title: "STEP INSIDE", desc: "The visuals surround you." },
+   { title: "LOOK AROUND", desc: "Walls, floors and other surfaces become part of the scene." },
+   { title: "FEEL THE DIFFERENCE", desc: "The same room can become something completely different." }
   ],
 
-  experienceHeading: "Different Ways to Build an Immersive Environment",
-  experienceIntro: "An enclosed room, curved dome or building facade can become an environment that surrounds people with visual content.",
+  // Section 04: IMMERSIVE ROOMS (Unmerged Section)
+  experienceHeading: "Turn the Whole Room Into the Experience",
+  experienceIntro: "An immersive projection room can cover walls, floors and other suitable surfaces with coordinated visuals, making the room feel completely different from when visitors entered.",
   featuredExperience: {
    category: "Immersive Rooms",
-   title: "Immersive Rooms",
-   desc: "An enclosed room where walls, floor and ceiling work together as one continuous visual.",
-   img: "/images/planetarium_projection_dome.jpg"
+   title: "Themed Environments",
+   desc: "Turn a restaurant, hotel area or event space into a themed setting.",
+   img: "/images/hospitality_ambient_atrium.jpg"
   },
   experienceCards: [
    {
-    category: "180 and 360 Degree Projection",
-    title: "180 and 360 Degree Projection",
-    desc: "Content is projected across multiple surfaces so people are surrounded rather than facing one direction.",
-    img: "/images/cathedral_projection_mapping.jpg"
+    category: "Immersive Rooms",
+    title: "Immersive Learning",
+    desc: "Surround students or visitors with places, events and subjects they are learning about.",
+    img: "/images/education_exp_immersive_room.jpg"
    },
    {
-    category: "Projection Mapping",
-    title: "Projection Mapping",
-    desc: "Visuals are shaped to fit a building, structure or object based on its exact form.",
-    img: "/images/horizon_glass_floor.jpg"
+    category: "Immersive Rooms",
+    title: "Digital Art",
+    desc: "Create changing visual environments where people can walk through and explore the artwork.",
+    img: "/images/museum_digital_art_kandinsky.jpg"
    },
    {
-    category: "Dome and Fulldome Projection",
-    title: "Dome and Fulldome Projection",
-    desc: "A curved dome surface is used to create an overhead or fully surrounding visual.",
+    category: "Immersive Rooms",
+    title: "Visitor Experiences",
+    desc: "Give guests something to discover as they move through the room.",
     img: "/images/biosphere_ocean_gallery.jpg"
-   },
-   {
-    category: "LED Tunnels",
-    title: "LED Tunnels",
-    desc: "A walk through passage built from LED panels, with visuals that move as people pass through.",
-    img: "/images/hospital_interactive_corridor.jpg"
-   },
-   {
-    category: "Large Format and 3D LED Displays",
-    title: "Large Format and 3D LED Displays",
-    desc: "High resolution LED and 3D display formats for exhibitions, launches and brand environments.",
-    img: "/images/hospitality_ambient_atrium.jpg"
    }
   ],
 
-  featuresHeading: "What the Solution Can Deliver",
-  keyFeaturesIntro: "Designed around architectural scale, optical precision and seamless multi-surface display integration.",
+  // Section 05: PROJECTION MAPPING (Unmerged Section)
+  formatSection2: {
+   label: "PROJECTION MAPPING",
+   heading: "Make Visuals Fit the Shape of Your Space",
+   intro: "Projection mapping uses projected visuals shaped to fit walls, objects, buildings or other surfaces instead of showing everything inside a simple rectangle.",
+   cards: [
+    {
+     title: "Buildings",
+     desc: "Change the look of a building or large exterior surface for an event or public display.",
+     img: "/images/cathedral_projection_mapping.jpg"
+    },
+    {
+     title: "Interiors",
+     desc: "Fit visuals around walls, structures and other features inside a space.",
+     img: "/images/v2_hero_curved_installation.jpg"
+    },
+    {
+     title: "Events",
+     desc: "Create changing scenes that match a performance, launch, celebration or brand activity.",
+     img: "/images/v2_brand_activation_hall.jpg"
+    },
+    {
+     title: "Storytelling",
+     desc: "Use the shape of the space as part of the story.",
+     img: "/images/v2_museum_immersion_cube.jpg"
+    }
+   ]
+  },
+
+  // Section 06: MORE WAYS TO CREATE THE LOOK (Unmerged Section)
+  formatSection3: {
+   label: "MORE WAYS TO CREATE THE LOOK",
+   heading: "Choose the Right Visual Setup for Your Space",
+   intro: "Not every space needs the same setup. The right approach depends on the room, audience, lighting, viewing distance and what you want people to see.",
+   cards: [
+    {
+     title: "Immersive Projection",
+     desc: "Use projection to cover suitable walls, floors and other surfaces.",
+     img: "/images/immersive_ocean_mural_room.jpg"
+    },
+    {
+     title: "Immersive Display",
+     desc: "Use large visual displays where a different type of screen setup makes more sense.",
+     img: "/images/corporate_interactive_showcase.jpg"
+    },
+    {
+     title: "Immersive LED Screen",
+     desc: "Create large visual surfaces using LED technology where the project calls for it.",
+     img: "/images/v2_retail_whale_atrium.jpg"
+    },
+    {
+     title: "Combined Setups",
+     desc: "Use more than one visual surface or technology when the space requires it.",
+     img: "/images/v2_cosmic_vortex_portal.jpg"
+    }
+   ]
+  },
+
+  featuresHeading: "Give People More Than Something to Look At",
+  keyFeaturesIntro: "Use the space to tell a story, create an atmosphere, help people learn or give them somewhere they want to explore.",
   keyFeatures: [
-   { title: "Multi Surface Projection", desc: "Content extends across walls, floors and ceilings as one connected visual." },
-   { title: "Projection Mapping", desc: "Visuals are shaped to fit buildings, objects and architectural surfaces exactly." },
-   { title: "Dome and Curved Surface Projection", desc: "Content is adapted for curved and overhead dome surfaces." },
-   { title: "Large Format Display Integration", desc: "LED and 3D display panels can be combined with projection in the same environment." }
+   { title: "EXPLORE", desc: "Let visitors move through a changing visual environment." },
+   { title: "DISCOVER", desc: "Reveal stories, information or visuals around the space." },
+   { title: "LEARN", desc: "Use large visuals to make subjects easier to see and understand." },
+   { title: "ESCAPE", desc: "Create themed environments that take people somewhere different." }
   ],
 
-  howItWorksHeading: "From Space to Immersive Environment",
-  howItWorksIntro: "A calibrated four-step engineering process that maps, produces and installs surrounding visual environments.",
+  howItWorksHeading: "From Your Room to a Completely Different Setting",
+  howItWorksIntro: "We start with the space and what you want people to see. Then we plan the visuals, prepare the content, install the setup and test it in the real environment.",
   howItWorksSteps: [
-   { title: "01. Review the Room or Structure", desc: "We look at the architecture, surfaces, dimensions and viewing angles." },
-   { title: "02. Plan the Visual Layout", desc: "Projection or display areas are mapped against the physical space." },
-   { title: "03. Build the Content", desc: "Visuals are created to match the exact shape and dimensions of the installation." },
-   { title: "04. Install and Calibrate", desc: "Projectors, displays, lighting and audio are installed and aligned to the space." }
+   { title: "01. Look at Your Space", desc: "We look at the room, surfaces, lighting, size and how people will move through it." },
+   { title: "02. Plan the Scene", desc: "We decide what people should see and how the visuals should fit the space." },
+   { title: "03. Create the Content", desc: "We prepare the visual content needed for the planned environment or story." },
+   { title: "04. Install and Test", desc: "We set up the required equipment, adjust the visuals and test everything in the space." }
   ],
 
-  industriesHeading: "Immersive Environments Across Different Industries",
-  industriesIntro: "Immersive environments can be adapted to different environments based on the audience, space and purpose of the experience.",
+  industriesHeading: "Different Spaces. Different Possibilities.",
+  industriesIntro: "An immersive setup can be planned around what people come to the space to do.",
   featuredIndustry: {
-   title: "Museums & Exhibitions",
-   desc: "Immersive rooms and projection mapping let visitors move through a visual story rather than read it off a wall.",
-   img: "/images/museum_interactive_exhibit.jpg",
-   href: "/industries/museums-culture"
+   title: "Hospitality",
+   desc: "Create themed hotel areas, guest experiences and restaurant environments.",
+   img: "/images/hospitality_interactive_lounge.jpg",
+   href: "/industries/hospitality"
   },
   industryCards: [
-   { title: "Entertainment", desc: "Dome projection and LED tunnels create attractions people walk into and explore.", img: "/images/planetarium_projection_dome.jpg", href: "/industries/entertainment" },
-   { title: "Retail", desc: "Projection mapping and LED displays turn a storefront or launch into a visual moment.", img: "/images/retail_interactive_showcase.jpg", href: "/industries/retail" },
-   { title: "Hospitality", desc: "Immersive visuals change the feel of a lobby, restaurant or guest space.", img: "/images/dining_projection_table.jpg", href: "/industries/hospitality" },
-   { title: "Corporate & Events", desc: "Immersive rooms and building projection mapping are used for launches, conferences and experience centres.", img: "/images/corporate_lobby_wall.jpg", href: "/industries/corporate" },
-   { title: "Education", desc: "Immersive rooms help students explore a subject or place through surrounding visuals.", img: "/images/education_interactive_floor.jpg", href: "/industries/education" }
+   { title: "Restaurants", desc: "Change the atmosphere of a dining space with projected scenes and visual storytelling.", img: "/images/dining_projection_table.jpg", href: "/industries" },
+   { title: "Museums", desc: "Surround visitors with places, events and stories they can explore.", img: "/images/museum_architectural_projection_gallery.jpg", href: "/industries/museums-culture" },
+   { title: "Education", desc: "Bring subjects, locations and stories into the room through large visual environments.", img: "/images/education_stem_discovery_lab.jpg", href: "/industries/education" },
+   { title: "Entertainment", desc: "Create spaces where people can enter, explore and become part of the setting.", img: "/images/entertainment_augmented_dodgeball.jpg", href: "/industries/entertainment" },
+   { title: "Events", desc: "Transform event spaces for launches, celebrations, shows and brand activities.", img: "/images/v2_aurora_stage_dome.jpg", href: "/industries/corporate" }
   ],
 
-  outcomesHeading: "Make the Room Part of the Experience",
-  benefitsIntro: "A surrounding environment gives people more reason to stay and look around than a flat screen.",
+  outcomesHeading: "Everything Needed for Your Setup",
+  benefitsIntro: "The final setup depends on your space and project, but the work can include the visual content, equipment, installation and testing needed for the experience.",
   featuredBenefit: {
-   title: "Make the Room Part of the Experience",
-   desc: "Visuals extend across the space instead of sitting on one screen in front of them, turning the physical room into an unfolding visual story.",
-   img: "/images/biosphere_ocean_gallery.jpg"
+   title: "Content",
+   desc: "Visuals created for your room, event or environment.",
+   img: "/images/corporate_lobby_wall.jpg"
   },
   benefits: [
-   { title: "Content Surrounds People", desc: "Visuals extend across the space instead of sitting on one screen in front of them." },
-   { title: "A Space Can Change Its Feel", desc: "The same room can look different for each exhibition, launch or event." },
-   { title: "Attention Moves Through the Space", desc: "Large scale visuals can guide where people look and walk next." }
+   { title: "Content", desc: "Visuals created for your room, event or environment." },
+   { title: "Visual Setup", desc: "Projection or display equipment planned for the space." },
+   { title: "Installation", desc: "Setup and adjustment of the visual system in your space." },
+   { title: "Testing", desc: "Testing to make sure the visuals work correctly in the intended environment." }
   ],
   techStack: ["Multi Surface Projection", "Architectural 3D Mapping", "Curved Dome Calibration", "Ultra HD LED Integration"],
 
-  projectsHeading: "Related Projects",
-  projectsIntro: "Discover our landmark immersive environments, dome projection theatres, and architectural mapping spectacles.",
+  projectsHeading: "Imagine Walking Into a Completely Different Place",
+  projectsIntro: "",
   featuredProject: {
-   industry: "Museum",
-   title: "Monumental Architectural Immersion",
-   desc: "Monumental architectural multimedia transformation turning historic neo-Renaissance arches into living, breathing dimensional dreamscapes with responsive spatial audio and lighting.",
-   location: "Historic Grand Hall",
-   img: "/images/biosphere_ocean_gallery.jpg",
-   tech: ["24x 4K Projectors", "Surround Spatial Audio", "Disguise Media Servers"],
+   industry: "Concept",
+   title: "Restaurant",
+   desc: "Walk in. The walls have changed the mood of the room.",
+   location: "",
+   tech: [],
+   img: "/images/interactive_cocktail_bar.jpg",
    href: "/projects"
   },
   projects: [
-   { industry: "Public Art", title: "Historic Cathedral Facade Mapping", desc: "Celebrated anniversary light show seen by 200,000 spectators across the city square.", img: "/images/cathedral_projection_mapping.jpg", href: "/projects" },
-   { industry: "Automotive", title: "Electric Hypercar Launch Reveal", desc: "Projection mapping dynamic aero simulation onto prototype vehicle.", img: "/images/retail_interactive_showcase.jpg", href: "/projects" },
-   { industry: "Entertainment", title: "Interactive LED Archway Tunnel", desc: "Pedestrian entrance tunnel with responsive visual fluid dynamics and ambient soundscapes.", img: "/images/hospital_interactive_corridor.jpg", href: "/projects" },
-   { industry: "Hospitality", title: "Immersive Culinary Dining Dome", desc: "Dining table and 360-degree wall mapping narrating each dish with sensory visuals.", img: "/images/dining_projection_table.jpg", href: "/projects" }
+   { industry: "Concept", title: "Museum", desc: "Step inside a story instead of only reading about it.", img: "/images/museum_history_hall.jpg", href: "/projects" },
+   { industry: "Concept", title: "Event", desc: "Enter a space that matches the theme of the event.", img: "/images/solutions_hero_hall.jpg", href: "/projects" },
+   { industry: "Concept", title: "Education", desc: "Bring a place or subject into the classroom.", img: "/images/education_vision_active_learning.jpg", href: "/projects" },
+   { industry: "Concept", title: "Entertainment", desc: "Walk into a world built around the experience.", img: "/images/entertainment_motion_arena.jpg", href: "/projects" }
   ],
 
-  faqsIntro: "Common questions about immersive environments, projection mapping, dome structures and installation requirements.",
+  faqsIntro: "",
   faqs: [
-   { q: "What is an immersive environment?", a: "An immersive environment surrounds a room, building or dome with projected or displayed visuals, so content appears around people rather than on one screen." },
-   { q: "What is projection mapping?", a: "Projection mapping shapes digital content to fit the exact form of a building, object or architectural surface." },
-   { q: "What is the difference between an immersive room and a dome?", a: "An immersive room usually uses flat walls, floor and ceiling together. A dome uses one curved surface for an overhead or fully surrounding visual." },
-   { q: "Can an immersive environment include interaction?", a: "Yes, movement tracking or interactive content can be added when participation is part of the brief. See Interactive Engagement for this." },
-   { q: "What affects the cost of an immersive environment?", a: "Cost depends on the size of the space, the number of projectors or displays, content complexity and installation conditions." },
-   { q: "What spaces suit this kind of setup?", a: "Exhibition halls, event venues, retail environments, museums, dome theatres and similar rooms or structures, depending on the format." },
-   { q: "How do we get started?", a: "Share the room, building or dome you are working with and what you want the environment to do, and we will recommend a format." }
+   { q: "What is an immersive experience?", a: "An immersive experience uses visuals and other elements to make people feel surrounded by the environment rather than watching one screen." },
+   { q: "What is an immersive projection room?", a: "It is a room where projected visuals can cover multiple surfaces, such as walls and floors, to create a surrounding visual environment." },
+   { q: "What is projection mapping?", a: "Projection mapping shapes projected visuals to fit a wall, building, object or other surface." },
+   { q: "Can projection mapping be used inside a building?", a: "Yes. It can be used on suitable interior surfaces when the space, lighting and planned content support the setup." },
+   { q: "Can you create a themed room?", a: "Yes. The visuals can be planned around a theme, story, event or intended use." },
+   { q: "Do I need a completely empty room?", a: "Not always. The right setup depends on the room, surfaces, lighting, objects and the type of visuals you want to create." },
+   { q: "Can an immersive experience be customised?", a: "Yes. The content and setup can be planned around your space, audience and intended use." },
+   { q: "How much does an immersive projection project cost?", a: "Cost depends on the space, number of surfaces, content, equipment, installation and project requirements." }
   ],
 
-  relatedSolutionsHeading: "Explore More Solutions",
-  ctaHeading: "Build a Room People Want to Walk Into",
-  ctaSubtitle: "Tell us about your space and the environment you want to create.",
+  ctaHeading: "What Could People See When They Step Inside?",
+  ctaSubtitle: "Tell us about your space and what you want people to see, feel or discover. We can help you explore what could work.",
   ctaButtonText: "Discuss Your Project"
  },
- // Alias for URL /solutions/immersive-environments:
+ // Alias for URL /solutions/immersive-environments and /solutions/immersive-experiences:
  get "immersive-environments"() {
+  return this["immersive-environment"];
+ },
+ get "immersive-experiences"() {
   return this["immersive-environment"];
  },
 
@@ -1269,242 +1331,194 @@ export const solutionDetails: Record<string, SolutionFullData> = {
  // -------------------------------------------------------------------------
  "ai-experience": {
   slug: "ai-experience",
-  // Section 01: Hero
   solutionLabel: "AI EXPERIENCES",
-  heroHeading: "AI Avatars and AI Photo Experiences for Physical Spaces",
-  heroSubtitle: "An AI avatar can greet, answer questions or host at a booth. An AI photo experience can turn a guest photo into something shareable in seconds.",
-  heroDescription: "Add an AI avatar or AI photo experience to an event, booth or brand space. See how AI driven interactions work in a physical setting.",
-  heroImg: "/images/ai_receptionist_concierge.jpg",
+  heroHeading: "Give Visitors Something They Can Talk To and Play With",
+  heroSubtitle: "Digital characters, AI photo experiences and interactive displays that give people new ways to talk, create and take part.",
+  heroDescription: "Create AI experiences with digital characters, AI photo booths and interactive displays that give visitors something new to talk to, create and explore.",
+  heroImg: "/images/cat_ai_avatar.jpg",
 
-  // Section 02: Applications / EXPERIENCE POSSIBILITIES
-  applicationsLabel: "EXPERIENCE POSSIBILITIES",
-  whatIsHeading: "What an AI Experience Lets People Do",
-  whatIsDescription: "Visitors speak to or type a question for an AI avatar instead of reading a brochure or waiting for staff. A photo experience returns something generated specifically from that guest's input, without waiting in line.",
-  whatIsVideoPlaceholder: "/images/ai_receptionist_concierge.jpg",
+  surfaceFormatsLabel: "AI AVATARS",
+  industriesLabel: "WHERE IT WORKS",
+  applicationsLabel: "SEE IT IN ACTION",
+  howItWorksLabel: "HOW IT WORKS",
+  capabilitiesLabel: "WHAT PEOPLE CAN DO",
+  experienceLabel: "WHAT YOU RECEIVE",
+  faqsLabel: "COMMON QUESTIONS",
+
+  whatIsHeading: "What Happens When a Digital Display Talks Back?",
+  whatIsDescription: "Instead of people only looking at a screen, they can talk, create and interact with what they see. A visitor can talk to a digital character. Someone can turn their photo into something new. A display can respond when someone interacts with it.",
+  whatIsVideoPlaceholder: "/ai-receptionist-poster.jpg",
+  videoUrl: "/ai-receptionist-showreel.mp4",
   whatIsFeatures: [
-   {
-    title: "Ask a Question and Get an Answer",
-    desc: "Visitors speak to or type a question for an AI avatar instead of reading a brochure or waiting for staff."
-   },
-   {
-    title: "Get a Personalized Result",
-    desc: "A photo experience returns something generated specifically from that guest's input."
-   },
-   {
-    title: "Interact Without Waiting in Line",
-    desc: "An AI avatar can handle several visitors in sequence without needing a staff member present for each one."
-   }
+   { title: "TALK", desc: "People can interact with a digital character." },
+   { title: "CREATE", desc: "Visitors can turn their photos into something new." },
+   { title: "DISCOVER", desc: "An interactive display can respond to visitors." }
   ],
 
-  // Section 03: The Formats / Surface Formats
-  surfaceFormatsLabel: "THE FORMATS",
-  experienceHeading: "Two Ways to Bring AI Into a Space",
-  experienceIntro: "An AI avatar can handle conversations and guidance, while an AI photo experience gives guests a personalized visual to take away.",
+  // Section 04: AI AVATARS (Unmerged Section)
+  experienceHeading: "Put a Digital Character in Your Space",
+  experienceIntro: "An AI avatar can talk with visitors, answer questions or guide people through an activity, depending on what your project needs.",
   featuredExperience: {
    category: "AI Avatars",
-   title: "AI Avatars",
-   desc: "A digital character, shown on a screen or hologram, that can greet visitors, answer questions and guide them through a space.",
+   title: "Greet",
+   desc: "Welcome visitors when they arrive.",
    img: "/images/ai_receptionist_concierge.jpg"
   },
   experienceCards: [
    {
-    category: "AI Photo Experiences",
-    title: "AI Photo Experiences",
-    desc: "Guests take a photo and the system generates a themed or branded version of it in return.",
-    img: "/images/cosmetics_smart_counter.jpg"
+    category: "AI Avatars",
+    title: "Guide",
+    desc: "Help people find information or understand what to do next.",
+    img: "/images/cat_smart_kiosk.jpg"
+   },
+   {
+    category: "AI Avatars",
+    title: "Talk",
+    desc: "Give visitors someone digital to talk with.",
+    img: "/images/retail_ai_avatar.jpg"
+   },
+   {
+    category: "AI Avatars",
+    title: "Brand",
+    desc: "Create a character around your brand, campaign or space.",
+    img: "/images/retail_window_interactive.jpg"
    }
   ],
 
-  // Section 04: Capabilities
-  capabilitiesLabel: "CAPABILITIES",
-  featuresHeading: "What the Solution Can Deliver",
-  keyFeaturesIntro: "Designed for live interactive deployments with conversational AI avatars, generative image styling and branded visual output.",
+  // Section 05: AI PHOTO EXPERIENCES (Unmerged Section)
+  formatSection2: {
+   label: "AI PHOTO EXPERIENCES",
+   heading: "Turn a Visitor's Photo Into Something They Want to Share",
+   intro: "Give visitors a simple way to take a photo and turn it into a new visual based on your theme, event or brand.",
+   cards: [
+    {
+     title: "Take a Photo",
+     desc: "The visitor starts with their own picture.",
+     img: "/images/retail_popup_activation.jpg"
+    },
+    {
+     title: "Choose a Look",
+     desc: "The experience applies the chosen theme or style.",
+     img: "/images/sneaker_customization_table.jpg"
+    },
+    {
+     title: "See the Result",
+     desc: "The visitor gets a new image to view or share.",
+     img: "/images/entertainment_magic_drawing.jpg"
+    },
+    {
+     title: "Use It Your Way",
+     desc: "Build the experience around an event, venue, campaign or activity.",
+     img: "/images/var_window_projection.jpg"
+    }
+   ]
+  },
+
+  // Section 06: SMART DISPLAYS (Unmerged Section)
+  formatSection3: {
+   label: "SMART DISPLAYS",
+   heading: "Make a Display More Than Something People Look At",
+   intro: "Use mirrors and digital displays to give visitors another way to interact with your space.",
+   cards: [
+    {
+     title: "Interactive Mirror",
+     desc: "Turn a mirror into part of a digital activity or display.",
+     img: "/images/retail_smart_mirror.jpg"
+    },
+    {
+     title: "Smart Mirror Display",
+     desc: "Show changing content and give visitors a way to interact with it.",
+     img: "/images/var_mirror_projection.jpg"
+    },
+    {
+     title: "Interactive AI Display",
+     desc: "Give visitors a way to interact with digital content instead of simply viewing it.",
+     img: "/images/retail_smart_table.jpg"
+    }
+   ]
+  },
+
+  featuresHeading: "Give People a Reason to Stop and Take Part",
+  keyFeaturesIntro: "Use AI to create activities, characters and displays that give visitors something to talk to, create or explore.",
   keyFeatures: [
-   {
-    title: "AI Avatar Interaction",
-    desc: "A digital character that can respond to visitor questions in real time."
-   },
-   {
-    title: "AI Generated Photo Content",
-    desc: "Guest photos are transformed into a themed or branded result."
-   },
-   {
-    title: "Branded Visual Styling",
-    desc: "Avatar appearance and photo styles can be built around a specific brand or campaign."
-   },
-   {
-    title: "Real-Time Response Engine",
-    desc: "Sub-second conversational response and instant image transformation for physical spaces."
-   }
+   { title: "TALK", desc: "Have a conversation with a digital character." },
+   { title: "CREATE", desc: "Turn a visitor's photo into a new visual." },
+   { title: "PLAY", desc: "Take part in an AI powered activity." },
+   { title: "DISCOVER", desc: "Explore information through an interactive display." }
   ],
 
-  // Section 05: How It Works
-  howItWorksLabel: "HOW IT WORKS",
-  howItWorksHeading: "From Brief to AI Experience",
-  howItWorksIntro: "A straightforward four-step process to plan, develop, install and test an interactive AI activation.",
+  howItWorksHeading: "From Your Idea to an AI Experience People Can Use",
+  howItWorksIntro: "We start with your space and what you want visitors to do. Then we plan, create, set up and test the experience around it.",
   howItWorksSteps: [
-   {
-    title: "01. Define the Role",
-    desc: "We confirm what the AI avatar or photo experience needs to do, such as greeting, answering questions or generating images."
-   },
-   {
-    title: "02. Set Up the Content and Responses",
-    desc: "The avatar's script, visuals or photo styles are built around the brand and the brief."
-   },
-   {
-    title: "03. Install the Display or Booth",
-    desc: "A screen, hologram unit or photo capture setup is installed in the space."
-   },
-   {
-    title: "04. Test the Interaction",
-    desc: "The experience is tested with real input before the event or launch goes live."
-   }
+   { title: "01. Understand", desc: "Your space, audience and what you want visitors to do." },
+   { title: "02. Plan", desc: "The character, activity, conversation or photo experience." },
+   { title: "03. Create", desc: "The visuals, content and AI interaction needed for the experience." },
+   { title: "04. Set Up and Test", desc: "Prepare the display, interaction and equipment, then test everything in the real space." }
   ],
 
-  // Section 06: Where It Fits / Industries
-  industriesLabel: "WHERE IT FITS",
-  industriesHeading: "AI Experiences Across Different Industries",
-  industriesIntro: "AI experiences can be adapted to different environments based on the audience, space and purpose of the activation.",
+  industriesHeading: "Different Ways to Use AI in Your Space",
+  industriesIntro: "The right AI experience depends on who visits, what they need and what you want them to do.",
   featuredIndustry: {
-   title: "Corporate & Events",
-   desc: "An AI avatar can greet visitors and answer product questions at a booth or launch.",
-   img: "/images/corporate_lobby_wall.jpg",
-   href: "/industries/corporate"
+   title: "Retail",
+   desc: "AI characters, smart mirrors and photo experiences that give shoppers something new to try.",
+   img: "/images/industry_retail_hero.jpg",
+   href: "/industries/retail"
   },
   industryCards: [
-   {
-    title: "Retail",
-    desc: "An AI avatar or photo experience gives shoppers a reason to stop at a storefront or counter.",
-    img: "/images/retail_interactive_showcase.jpg",
-    href: "/industries/retail"
-   },
-   {
-    title: "Museums & Exhibitions",
-    desc: "An AI avatar can introduce an exhibit or answer visitor questions.",
-    img: "/images/museum_interactive_exhibit.jpg",
-    href: "/industries/museums-culture"
-   },
-   {
-    title: "Entertainment",
-    desc: "AI photo experiences give visitors something to take home and share from a venue.",
-    img: "/images/entertainment_motion_arena.jpg",
-    href: "/industries/entertainment"
-   },
-   {
-    title: "Hospitality",
-    desc: "An AI avatar can greet guests in a lobby or answer common questions.",
-    img: "/images/hospitality_ambient_atrium.jpg",
-    href: "/industries/hospitality"
-   }
+   { title: "Hospitality", desc: "Digital hosts, guest information and interactive experiences for hotels and other guest spaces.", img: "/images/hospitality_interactive_lounge.jpg", href: "/industries/hospitality" },
+   { title: "Restaurants", desc: "Photo experiences and interactive displays that give guests something to explore.", img: "/images/dining_projection_table.jpg", href: "/industries" },
+   { title: "Events", desc: "AI characters and photo experiences built around an event, campaign or theme.", img: "/images/v2_brand_activation_hall.jpg", href: "/industries/corporate" },
+   { title: "Museums", desc: "Digital characters that help visitors discover stories and information.", img: "/images/museum_interactive_exhibition.jpg", href: "/industries/museums-culture" },
+   { title: "Entertainment", desc: "AI activities and characters that give visitors something new to interact with.", img: "/images/entertainment_interactive_arena.jpg", href: "/industries/entertainment" }
   ],
 
-  // Section 07: Why It Matters / The Experience
-  experienceLabel: "THE EXPERIENCE",
-  outcomesHeading: "Give Visitors Something to Talk To, Not Just Look At",
-  benefitsIntro: "An interactive conversation or personalized photo creates a lasting memory and gives visitors something tangible to take away.",
+  outcomesHeading: "Everything Needed for Your Setup",
+  benefitsIntro: "The final setup depends on your space and project, but the work can include the AI interaction, content, display, equipment and installation needed for the experience.",
   featuredBenefit: {
-   title: "Give Visitors Something to Talk To, Not Just Look At",
-   desc: "An AI avatar that responds to a question stands out more than a static display.",
-   img: "/images/cat_ai_avatar.jpg"
+   title: "AI Experience",
+   desc: "The planned AI interaction for your project.",
+   img: "/images/technician_calibrating_projection.jpg"
   },
   benefits: [
-   {
-    title: "People Remember a Conversation",
-    desc: "An AI avatar that responds to a question stands out more than a static display."
-   },
-   {
-    title: "Guests Leave With Something to Share",
-    desc: "A photo experience gives people a reason to post or forward what they received."
-   },
-   {
-    title: "One Setup Can Handle Many Visitors",
-    desc: "An AI avatar can repeat the same quality of interaction for each person who approaches it."
-   }
+   { title: "AI Experience", desc: "The planned AI interaction for your project." },
+   { title: "Content", desc: "Characters, visuals, images or other content needed for the experience." },
+   { title: "Interaction", desc: "The way visitors talk, create, touch or take part." },
+   { title: "Setup", desc: "The display and equipment required for the planned experience." },
+   { title: "Installation", desc: "Setup and testing in your space, where included in the project scope." }
   ],
-  techStack: ["Real-Time Conversational AI", "Generative Neural Style Engine", "Interactive Touch & Hologram Displays", "Low-Latency Edge Computing"],
+  techStack: ["Real-Time Neural Speech Engine", "Low-Latency Generative Diffusion", "PCAP Interactive Touch", "HD Camera & Computer Vision"],
 
-  // Section 08: Related Projects
-  projectsHeading: "Related Projects",
-  projectsIntro: "Discover our landmark AI avatars, conversational concierge installations, and generative photo experiences.",
+  projectsHeading: "Imagine What Visitors Could Do With It",
+  projectsIntro: "",
   featuredProject: {
-   industry: "Corporate",
-   title: "Autonomous AI Reception Concierge",
-   desc: "An intelligent digital avatar greeting executive visitors, providing company information and guiding guests through an interactive innovation center.",
-   location: "Corporate Innovation Center",
-   img: "/images/ai_receptionist_concierge.jpg",
-   tech: ["Conversational AI", "Speech Synthesis", "Holographic Display"],
+   industry: "Concept",
+   title: "Retail",
+   desc: "A shopper talks to a digital character.",
+   location: "",
+   tech: [],
+   img: "/images/retail_interactive_showcase.jpg",
    href: "/projects"
   },
   projects: [
-   {
-    industry: "Retail",
-    title: "Interactive AI Style Advisor",
-    desc: "Digital concierge recommending matching apparel and answering customer questions in real time.",
-    img: "/images/retail_interactive_showcase.jpg",
-    href: "/projects"
-   },
-   {
-    industry: "Museum",
-    title: "Conversational Exhibit Guide",
-    desc: "Visitors engage in spoken dialogue with historical character avatars exploring science archives.",
-    img: "/images/museum_interactive_exhibit.jpg",
-    href: "/projects"
-   },
-   {
-    industry: "Entertainment",
-    title: "Generative AI Photo Studio",
-    desc: "Instant guest restyling into branded digital art pieces for event attendees.",
-    img: "/images/entertainment_motion_arena.jpg",
-    href: "/projects"
-   },
-   {
-    industry: "Hospitality",
-    title: "Bilingual Hotel Lobby Host",
-    desc: "Digital concierge answering guest questions and providing local recommendations.",
-    img: "/images/hospitality_ambient_atrium.jpg",
-    href: "/projects"
-   }
+   { industry: "Concept", title: "Event", desc: "A visitor creates an AI photo to take home or share.", img: "/images/solutions_hero_hall.jpg", href: "/projects" },
+   { industry: "Concept", title: "Hotel", desc: "A digital host helps a guest find information.", img: "/images/hospitality_ambient_atrium.jpg", href: "/projects" },
+   { industry: "Concept", title: "Museum", desc: "A digital character introduces a story or exhibit.", img: "/images/museum_history_hall.jpg", href: "/projects" },
+   { industry: "Concept", title: "Entertainment", desc: "Visitors interact with an AI character as part of the activity.", img: "/images/entertainment_motion_arena.jpg", href: "/projects" }
   ],
 
-  // Section 10: FAQ
-  faqsLabel: "COMMON QUESTIONS",
-  faqsIntro: "Frequently asked questions regarding AI avatars, photo experiences, customization, and event requirements.",
+  faqsIntro: "",
   faqs: [
-   {
-    q: "What is an AI avatar experience?",
-    a: "An AI avatar is a digital character, shown on a screen or hologram, that can greet visitors, answer questions or guide them through a space."
-   },
-   {
-    q: "What is an AI photo experience?",
-    a: "Guests take or upload a photo, and the system generates a themed, stylized or branded version in return."
-   },
-   {
-    q: "Can the AI avatar be customized to our brand?",
-    a: "Appearance, script and tone can be built around your brand and the purpose of the activation."
-   },
-   {
-    q: "Does someone need to operate the AI avatar during the event?",
-    a: "This depends on the setup. Some AI avatars run unattended, others work alongside event staff."
-   },
-   {
-    q: "What affects the cost of an AI experience?",
-    a: "Cost depends on the display or hologram hardware, the complexity of the avatar's script or photo styles, and the length of the event."
-   },
-   {
-    q: "Can it work for a single day event?",
-    a: "Yes, AI avatar and photo experiences can be set up for both short events and longer installations."
-   },
-   {
-    q: "How do we get started?",
-    a: "Share your event, your brand and what you want the AI experience to do, and we will recommend a suitable format."
-   }
+   { q: "Can an AI avatar talk to visitors?", a: "Yes. An AI avatar can be designed to interact with visitors based on the purpose and requirements of the project." },
+   { q: "What is an AI photo booth?", a: "An AI photo booth lets visitors take a photo and create a new version based on the chosen theme, style or activity." },
+   { q: "Can the AI experience be customised for my business?", a: "Yes. The content, character and interaction can be planned around your audience, space and intended use." },
+   { q: "Can an AI experience work at an event?", a: "Yes. AI characters, photo experiences and interactive displays can be planned for events and temporary installations." },
+   { q: "Can I use an AI avatar in a hotel, museum or retail store?", a: "Yes. The right use depends on the space, audience and purpose of the experience." },
+   { q: "What equipment is needed for an AI experience?", a: "Equipment depends on the type of experience. It may include a display, camera, computer and other equipment required for the planned setup." },
+   { q: "How much does an AI experience cost?", a: "Cost depends on the type of experience, content, equipment, interaction and installation requirements." }
   ],
 
-  // Section 11: Call to Action & Related
-  relatedSolutionsLabel: "EXPLORE MORE",
-  relatedSolutionsHeading: "Explore More Solutions",
-  ctaHeading: "Give Your Event an AI Experience Worth Talking About",
-  ctaSubtitle: "Tell us about your event and what you want visitors to experience.",
+  ctaHeading: "What Could Visitors Do With AI in Your Space?",
+  ctaSubtitle: "Tell us what you want visitors to see, talk to, create or explore. We can help you work out what could fit your space.",
   ctaButtonText: "Discuss Your Project"
  },
  // Alias for URL /solutions/ai-experiences:
@@ -1623,252 +1637,293 @@ export const solutionDetails: Record<string, SolutionFullData> = {
   slug: "interactive-engagement",
   // Section 01: Hero
   solutionLabel: "INTERACTIVE ENGAGEMENT",
-  heroHeading: "Games and Activities That Get People Moving and Playing",
-  heroSubtitle: "A floor or wall can host more than visuals. It can host a game people play together, a challenge they compete in, or a brand activity they take part in.",
-  heroDescription: "Turn a floor, wall or booth into a motion game or group activity. See how interactive engagement gets people playing and taking part.",
-  heroImg: "/images/entertainment_motion_arena.jpg",
+  heroHeading: "Give People a Reason to Move, Play and Take Part",
+  heroSubtitle: "Turn suitable floors, walls and spaces into games and activities that get people moving, playing and interacting together.",
+  heroDescription: "Create interactive games and activities that get visitors moving, playing and taking part in your space.",
+  heroImg: "/images/entertainment_augmented_dodgeball.jpg",
 
   // Section 02: Applications / EXPERIENCE POSSIBILITIES
-  applicationsLabel: "EXPERIENCE POSSIBILITIES",
-  whatIsHeading: "What Interactive Engagement Lets People Do",
-  whatIsDescription: "A game invites action, where a static display only invites a glance. Group challenges can be built for friendly competition or shared teamwork, turning brand moments into active participation.",
+  applicationsLabel: "SEE IT IN ACTION",
+  whatIsHeading: "What Happens When a Space Becomes a Game?",
+  whatIsDescription: "Instead of people only watching, they can step in, move around and become part of the activity. Someone steps onto the floor and the game begins. People move to control what happens. Others can join in and play together.",
   whatIsVideoPlaceholder: "/images/interactive_strike_wall.jpg",
   whatIsFeatures: [
    {
-    title: "Play Instead of Watch",
-    desc: "A game invites action, where a static display only invites a glance."
+    title: "STEP IN",
+    desc: "The activity starts when people enter."
    },
    {
-    title: "Compete or Collaborate",
-    desc: "Group challenges can be built for friendly competition or shared teamwork."
+    title: "MOVE",
+    desc: "People move, react and play."
    },
    {
-    title: "Take Part in a Brand Moment",
-    desc: "Gamification turns a product or campaign into something visitors interact with directly."
+    title: "JOIN IN",
+    desc: "More people can take part."
    }
   ],
 
-  // Section 03: The Formats / Surface Formats
-  surfaceFormatsLabel: "THE FORMATS",
-  experienceHeading: "Ways to Build Interactive Engagement",
-  experienceIntro: "From motion games played without controllers to group challenges and branded activations.",
+  // Section 04: The Formats / Surface Formats - INTERACTIVE GAMES
+  surfaceFormatsLabel: "INTERACTIVE GAMES",
+  experienceHeading: "Turn Movement Into a Game",
+  experienceIntro: "Interactive games can use movement as part of the activity, giving people something to play rather than simply watch.",
   featuredExperience: {
-   category: "Motion Games",
-   title: "Motion Games",
-   desc: "Games played by moving across a floor or reaching toward a wall, no controller needed.",
-   img: "/images/entertainment_motion_arena.jpg"
+   category: "Interactive Games",
+   title: "Floor Games",
+   desc: "Step, jump and move through projected games.",
+   img: "/images/cat_interactive_floor.jpg"
   },
   experienceCards: [
    {
-    category: "Brand Gamification",
-    title: "Brand Gamification",
-    desc: "A game built around a brand, product or campaign that visitors play at a store or event.",
-    img: "/images/sneaker_customization_table.jpg"
+    category: "Interactive Games",
+    title: "Motion Games",
+    desc: "Use body movement to control what happens in the activity.",
+    img: "/images/education_strike_wall_activity.jpg"
    },
    {
-    category: "Group Challenges",
-    title: "Group Challenges",
-    desc: "Activities designed for two or more people to play together on the same surface.",
-    img: "/images/interactive_floor_motion.jpg"
+    category: "Interactive Games",
+    title: "Multiplayer Games",
+    desc: "Let several people play together.",
+    img: "/images/entertainment_interactive_arena.jpg"
    },
    {
-    category: "Movement Based Activities",
-    title: "Movement Based Activities",
-    desc: "Simple movement games used for classrooms, therapy settings or family activities.",
-    img: "/images/education_interactive_floor.jpg"
+    category: "Interactive Games",
+    title: "Children's Play",
+    desc: "Create active games that encourage children to move and take part.",
+    img: "/images/education_motion_zone.jpg"
    }
   ],
 
+  // Section 05: INTERACTIVE PLAY (Unmerged Section)
+  formatSection2: {
+   label: "INTERACTIVE PLAY",
+   heading: "Create a Place Where People Want to Play",
+   intro: "Interactive play can turn an unused or waiting area into something people can enjoy together.",
+   cards: [
+    {
+     title: "Play Areas",
+     desc: "Give children an active digital activity to explore.",
+     img: "/images/healthcare_pediatric_waiting.jpg"
+    },
+    {
+     title: "Family Activities",
+     desc: "Create something parents and children can enjoy together.",
+     img: "/images/entertainment_queue_games.jpg"
+    },
+    {
+     title: "Waiting Areas",
+     desc: "Give people something to do while they wait.",
+     img: "/images/hospital_interactive_corridor.jpg"
+    },
+    {
+     title: "Public Spaces",
+     desc: "Turn an otherwise unused area into an activity people notice and try.",
+     img: "/images/v2_interactive_floor_gallery.jpg"
+    }
+   ]
+  },
+
   // Section 04: Capabilities
-  capabilitiesLabel: "CAPABILITIES",
-  featuresHeading: "What the Solution Can Deliver",
-  keyFeaturesIntro: "Engineered for responsive motion tracking, multiplayer participation and bespoke game mechanics.",
+  capabilitiesLabel: "WHAT PEOPLE CAN DO",
+  featuresHeading: "Give People Something Fun to Do",
+  keyFeaturesIntro: "Use games and activities to give visitors a reason to move, play and take part.",
   keyFeatures: [
    {
-    title: "Motion Tracking for Gameplay",
-    desc: "Detects player movement in real time to drive the game."
+    title: "PLAY",
+    desc: "Turn a floor or area into a digital game."
    },
    {
-    title: "Multiplayer Setup",
-    desc: "Supports more than one player interacting with the same game at once."
+    title: "COMPETE",
+    desc: "Create activities where people can play against each other."
    },
    {
-    title: "Custom Game Content",
-    desc: "Games are built around a brand, subject or audience, not a fixed library."
+    title: "MOVE",
+    desc: "Use body movement as part of the activity."
    },
    {
-    title: "Real-Time Game Engine",
-    desc: "Low-latency physics, real-time feedback and dynamic scoring tailored to physical spaces."
+    title: "JOIN IN",
+    desc: "Create group activities where several people can take part."
    }
   ],
 
   // Section 05: How It Works
   howItWorksLabel: "HOW IT WORKS",
-  howItWorksHeading: "From Idea to Interactive Game",
-  howItWorksIntro: "A structured four-step process to define, design, install and test an interactive game.",
+  howItWorksHeading: "From Your Idea to a Game People Can Play",
+  howItWorksIntro: "We start with your space and the people who will use it. Then we plan the activity, create the content, install the setup and test it with you.",
   howItWorksSteps: [
    {
-    title: "01. Define the Activity",
-    desc: "We confirm the type of game, the number of players and the setting."
+    title: "01. Understand",
+    desc: "Look at your space, audience and how people will use it."
    },
    {
-    title: "02. Design the Game Content",
-    desc: "Visuals, rules and scoring are built around the brand, subject or audience."
+    title: "02. Plan",
+    desc: "Decide what people will do, how the game works and how many people can take part."
    },
    {
-    title: "03. Set Up Tracking",
-    desc: "Movement is detected using a camera or sensor on the chosen floor or wall."
+    title: "03. Create",
+    desc: "Prepare the visuals, games and activities for the planned use."
    },
    {
-    title: "04. Test the Gameplay",
-    desc: "The game is tested with real players before it goes live."
+    title: "04. Install and Test",
+    desc: "Set up the required equipment and test the activity in your space."
    }
   ],
 
   // Section 06: Where It Fits / Industries
-  industriesLabel: "WHERE IT FITS",
-  industriesHeading: "Interactive Engagement Across Different Industries",
-  industriesIntro: "Interactive engagement can be adapted to different environments based on the audience, space and purpose of the activity.",
+  industriesLabel: "WHERE IT WORKS",
+  industriesHeading: "Different Places. Different Ways to Play.",
+  industriesIntro: "The right activity depends on the people using the space and what you want them to do.",
   featuredIndustry: {
-   title: "Retail",
-   desc: "A motion game at the entrance gives shoppers a reason to stop before they walk in.",
-   img: "/images/retail_interactive_showcase.jpg",
-   href: "/industries/retail"
+   title: "Entertainment",
+   desc: "Interactive games and active play areas that keep visitors involved.",
+   img: "/images/industry_entertainment_hero.jpg",
+   href: "/industries/entertainment"
   },
   industryCards: [
    {
-    title: "Education",
-    desc: "Movement based games turn a lesson into something students do rather than watch.",
-    img: "/images/education_interactive_floor.jpg",
-    href: "/industries/education"
+    title: "Retail",
+    desc: "Games and activities that make shoppers stop and take part.",
+    img: "/images/retail_interactive_showcase.jpg",
+    href: "/industries/retail"
    },
    {
-    title: "Entertainment",
-    desc: "Motion games and group challenges are a core activity in arcades and family venues.",
-    img: "/images/entertainment_motion_arena.jpg",
-    href: "/industries/entertainment"
+    title: "Hospitality",
+    desc: "Play areas and activities for hotel guests and families.",
+    img: "/images/hospitality_interactive_lounge.jpg",
+    href: "/industries/hospitality"
    },
    {
-    title: "Corporate & Events",
-    desc: "Brand gamification gives booth visitors something to do and remember.",
-    img: "/images/corporate_lobby_wall.jpg",
+    title: "Events",
+    desc: "Interactive games that give visitors something to do together.",
+    img: "/images/v2_brand_activation_hall.jpg",
     href: "/industries/corporate"
    },
    {
-    title: "Healthcare",
-    desc: "Movement based games support activity and participation in therapy and care settings.",
+    title: "Education",
+    desc: "Movement based activities that help students learn by taking part.",
+    img: "/images/education_classroom_floor_projection.jpg",
+    href: "/industries/education"
+   },
+   {
+    title: "Family Spaces",
+    desc: "Games and activities designed around children and group play.",
     img: "/images/healthcare_sensory_room.jpg",
-    href: "/industries/healthcare"
+    href: "/industries"
    }
   ],
 
   // Section 07: Why It Matters / The Experience
-  experienceLabel: "THE EXPERIENCE",
-  outcomesHeading: "Turn a Surface Into Something People Play",
-  benefitsIntro: "Something people played holds attention longer than something they only watched.",
+  experienceLabel: "WHAT YOU RECEIVE",
+  outcomesHeading: "Everything Needed to Get People Playing",
+  benefitsIntro: "The final setup depends on your project, but the work can include the game content, interaction, equipment and installation needed to run the activity.",
   featuredBenefit: {
-   title: "Turn a Surface Into Something People Play",
-   desc: "Something people played holds attention longer than something they only watched.",
-   img: "/images/interactive_floor_motion.jpg"
+   title: "Game Content",
+   desc: "Games and activities created for your project.",
+   img: "/images/interactive_minigolf_course.jpg"
   },
   benefits: [
    {
-    title: "Participation Creates Memory",
-    desc: "Something people played holds attention longer than something they only watched."
+    title: "Game Content",
+    desc: "Games and activities created for your project."
    },
    {
-    title: "Games Bring Groups Together",
-    desc: "A shared challenge gives friends, families or colleagues a reason to interact with each other."
+    title: "Interaction",
+    desc: "The way people move, play and control the activity."
    },
    {
-    title: "A Brand Becomes an Activity",
-    desc: "Gamification turns a message into something people experience directly."
+    title: "Equipment",
+    desc: "The projection and other equipment required for the setup."
+   },
+   {
+    title: "Installation",
+    desc: "Setup, adjustment and testing in your space."
    }
   ],
   techStack: ["Real-Time Optical Motion Tracking", "Multiplayer Physics Engine", "Custom Game CMS", "Ultra-Low Latency Sensors"],
 
   // Section 08: Related Projects
-  projectsHeading: "Related Projects",
-  projectsIntro: "Discover our high-energy motion arenas, branded gamification kiosks, and active multiplayer spaces.",
+  projectsHeading: "See How People Could Use It",
+  projectsIntro: "",
   featuredProject: {
-   industry: "Entertainment",
-   title: "Kinetic Active Multimedia Arena",
-   desc: "An active gaming arena where participants turn floors and walls into competitive sports fields without any controllers.",
-   location: "Urban Family Entertainment Center",
-   img: "/images/entertainment_motion_arena.jpg",
-   tech: ["Interactive Floor", "Optical Motion Tracking", "Laser Projection"],
+   industry: "Concept",
+   title: "Family Play Area",
+   desc: "Children move across the floor as the game responds.",
+   location: "",
+   tech: [],
+   img: "/images/v2_child_interactive_wall.jpg",
    href: "/projects"
   },
   projects: [
    {
-    industry: "Retail",
-    title: "Interactive Sneaker Customization Arena",
-    desc: "Gamified shopping experience tracking customer movement to personalize products.",
+    industry: "Concept",
+    title: "Event",
+    desc: "Visitors compete in a quick interactive game.",
+    img: "/images/solutions_hero_hall.jpg",
+    href: "/projects"
+   },
+   {
+    industry: "Concept",
+    title: "Retail",
+    desc: "Shoppers stop to try a game inside the store.",
     img: "/images/sneaker_customization_table.jpg",
     href: "/projects"
    },
    {
-    industry: "Education",
-    title: "Interactive Active Learning Floor",
-    desc: "Students learn science, math and sports through dynamic collaborative jumping games.",
-    img: "/images/education_interactive_floor.jpg",
+    industry: "Concept",
+    title: "Hotel",
+    desc: "Children play while families spend time in a shared area.",
+    img: "/images/hospitality_koi_pond.jpg",
     href: "/projects"
    },
    {
-    industry: "Corporate",
-    title: "Trade Show Motion Racing Challenge",
-    desc: "Attendees steer branded vehicles using body movement to compete on live leaderboards.",
-    img: "/images/interactive_strike_wall.jpg",
-    href: "/projects"
-   },
-   {
-    industry: "Healthcare",
-    title: "Pediatric Active Recovery Suite",
-    desc: "Therapy-focused interactive movement games motivating rehabilitation through play.",
-    img: "/images/healthcare_sensory_room.jpg",
+    industry: "Concept",
+    title: "Entertainment",
+    desc: "Groups play together and become part of the activity.",
+    img: "/images/entertainment_motion_arena.jpg",
     href: "/projects"
    }
   ],
 
   // Section 10: FAQ
   faqsLabel: "COMMON QUESTIONS",
-  faqsIntro: "Frequently asked questions regarding interactive games, motion tracking, multiplayer setups, and custom gamification.",
+  faqsIntro: "",
   faqs: [
    {
-    q: "What is interactive engagement?",
-    a: "Interactive engagement covers games and activities that invite people to move, play or take part, usually on a floor, wall or similar surface."
+    q: "What are interactive projector games?",
+    a: "Interactive projector games use projected visuals that respond to people's movement, allowing them to take part in the game."
    },
    {
-    q: "What is the difference between interactive engagement and interactive spaces?",
-    a: "Interactive spaces describes the physical surface, such as a floor or wall. Interactive engagement describes the game or activity running on that surface."
+    q: "Can several people play at the same time?",
+    a: "Yes. Multiplayer activities can be planned for several people, depending on the game, space and project requirements."
    },
    {
-    q: "Can games be branded for a specific campaign?",
-    a: "Yes, game content, visuals and scoring can be built around a brand, product or theme."
+    q: "Can interactive games be made for children?",
+    a: "Yes. Games can be planned around children, their age group, the available space and the type of activity you want to create."
    },
    {
-    q: "How many people can play at once?",
-    a: "This depends on the surface size and the tracking setup, but several formats support group play."
+    q: "Can the games be customised for my business?",
+    a: "Yes. The content and activity can be planned around your audience, space and intended use."
    },
    {
-    q: "What affects the cost of an interactive game?",
-    a: "Cost depends on the surface size, the tracking method, the complexity of the game content and the length of the activation."
+    q: "Can interactive games work at events?",
+    a: "Yes. Interactive games can be created for events, activations and other temporary or permanent spaces."
    },
    {
-    q: "Can the same setup run different games over time?",
-    a: "Game content can be swapped for new campaigns or seasons, depending on the system installed."
+    q: "What spaces can be used for interactive play?",
+    a: "Suitable spaces depend on the available area, surface, lighting and planned activity. We can review your space and discuss what may work."
    },
    {
-    q: "How do we get started?",
-    a: "Share your space, your audience and the kind of activity you want people to play, and we will recommend a suitable format."
+    q: "What equipment is needed?",
+    a: "Equipment depends on the activity and setup. It may include projectors, tracking equipment, a computer and other required parts."
+   },
+   {
+    q: "How much does an interactive game setup cost?",
+    a: "Cost depends on the game, content, space, equipment, interaction and installation requirements."
    }
   ],
 
   // Section 11: Call to Action & Related
-  relatedSolutionsLabel: "EXPLORE MORE",
-  relatedSolutionsHeading: "Explore More Solutions",
-  ctaHeading: "Give People Something to Play, Not Just Watch",
-  ctaSubtitle: "Tell us about your space and the activity you want to create.",
+  ctaHeading: "What Could People Play in Your Space?",
+  ctaSubtitle: "Tell us about your space and the kind of activity you want people to enjoy. We can help you work out what could fit.",
   ctaButtonText: "Discuss Your Project"
  },
  // Aliases for URL compatibility:

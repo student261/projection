@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Eye } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const projects = [
   {
@@ -45,9 +45,26 @@ const projects = [
 export default function FeaturedProjects() {
   const [hoveredIdx, setHoveredIdx] = useState<number>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<boolean>(true);
+  const [isInView, setIsInView] = useState<boolean>(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (!isAutoPlaying || typeof window === "undefined" || window.innerWidth < 1024) return;
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isAutoPlaying || !isInView || typeof window === "undefined" || window.innerWidth < 1024) return;
     
     const interval = setInterval(() => {
       setHoveredIdx((prev) => (prev + 1) % projects.length);
@@ -57,7 +74,7 @@ export default function FeaturedProjects() {
   }, [isAutoPlaying]);
 
   return (
-    <section className="py-10 sm:py-12 lg:py-14 bg-white text-black relative flex flex-col justify-center">
+    <section ref={sectionRef} className="py-10 sm:py-12 lg:py-14 bg-white text-black relative flex flex-col justify-center">
       <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col h-full">
         
         {/* Section Header */}

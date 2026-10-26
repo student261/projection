@@ -2,51 +2,38 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sliders, Cpu, Award, Workflow, Layers3, Headphones } from "lucide-react";
+import Link from "next/link";
+import { Sliders, Cpu, Workflow, Layers3, ArrowRight } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
 
 const whyUsCards = [
   {
-    id: "custom-solutions",
+    id: "experience",
     icon: Sliders,
-    title: "Custom Solutions",
-    desc: "Every project is built around your space, audience, requirements, and goals.",
+    title: "Experience",
+    desc: "A concept planned around your space.",
     img: "/images/projection_cityscape_model.jpg",
   },
   {
-    id: "advanced-tech",
+    id: "content",
     icon: Cpu,
-    title: "Advanced Interactive Technology",
-    desc: "Use the latest AI, motion tracking, projection mapping, and interactive technologies in your space.",
+    title: "Content",
+    desc: "Visuals created for the experience.",
     img: "/images/ai_receptionist_concierge.jpg",
   },
   {
-    id: "industry-expertise",
-    icon: Award,
-    title: "Industry Expertise",
-    desc: "Our experience covers education, healthcare, retail, museums, hospitality, entertainment, and more.",
+    id: "interaction",
+    icon: Layers3,
+    title: "Interaction",
+    desc: "The interaction your visitors will use.",
     img: "/images/museum_interactive_exhibit.jpg",
   },
   {
-    id: "end-to-end",
+    id: "installation",
     icon: Workflow,
-    title: "End-to-End Delivery",
-    desc: "From the first conversation and design to installation, training, and ongoing support, we handle the complete process.",
+    title: "Installation",
+    desc: "Setup and testing in your space.",
     img: "/images/technician_calibrating_projection.jpg",
-  },
-  {
-    id: "scalable",
-    icon: Layers3,
-    title: "Scalable & Future-Ready",
-    desc: "Start with what you need today and add new features, content, and technologies as your requirements grow.",
-    img: "/images/sneaker_customization_table.jpg",
-  },
-  {
-    id: "dedicated-support",
-    icon: Headphones,
-    title: "Dedicated Support",
-    desc: "Get technical assistance, updates, maintenance, and ongoing support to keep your experience running smoothly.",
-    img: "/images/architectural_light_beam.jpg",
   },
 ];
 
@@ -66,17 +53,7 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="mb-5 sm:mb-6 max-w-4xl">
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2 sm:mb-3 block"
-          >
-            WHY CHOOSE US
-          </motion.p>
-
+        <div className="mb-5 sm:mb-6 max-w-4xl space-y-2">
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -84,9 +61,17 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1]"
           >
-            Why Industry Leaders <br className="hidden lg:block" />
-            Choose PROJECTION
+            From the First Idea to a Working Interactive Space
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-sm sm:text-base text-gray-600 font-normal leading-relaxed pt-1 max-w-2xl"
+          >
+            We bring together the visuals, interaction and setup needed to turn your space into the experience you planned.
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start relative">
@@ -178,6 +163,19 @@ export default function WhyChooseUs() {
               );
             })}
             <div className="border-t border-gray-200" />
+            
+            <div className="pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <p className="text-xs sm:text-sm text-neutral-500 font-light">
+                Project scope depends on your requirements.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-black text-white hover:bg-neutral-800 text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-md hover:scale-105 active:scale-95"
+              >
+                <span>Discuss Your Project</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
 
         </div>

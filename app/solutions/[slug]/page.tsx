@@ -21,24 +21,24 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
 
   const title =
     slug === "interactive-projection"
-      ? "Interactive Projection for Floors, Walls and Ceilings"
-      : slug === "immersive-environment" || slug === "immersive-environments"
-      ? "Immersive Environments: Rooms, Projection Mapping and Domes"
+      ? "Interactive Floor & Wall Projection Solutions"
+      : slug === "immersive-environment" || slug === "immersive-environments" || slug === "immersive-experiences"
+      ? "Immersive Experiences and Projection Solutions"
       : slug === "ai-experience" || slug === "ai-experiences"
-      ? "AI Experiences: AI Avatars and AI Photo Experiences"
+      ? "Interactive AI Experiences for Visitors and Spaces"
       : slug === "interactive-engagement" || slug === "solution-engagement"
-      ? "Interactive Engagement: Motion Games and Gamification"
+      ? "Interactive Games and Engagement Solutions"
       : `${data.heroHeading || data.solutionLabel} | Projection`;
 
   const description =
     slug === "interactive-projection"
-      ? "Explore interactive projection for floors, walls, ceilings and other surfaces, with responsive experiences designed for different spaces and audiences."
-      : slug === "immersive-environment" || slug === "immersive-environments"
-      ? "Build immersive rooms, projection mapped surfaces, 360 degree projection and dome environments that surround people with visual content."
+      ? "Turn floors and walls into interactive displays, games and activities that respond to movement and give visitors something to explore."
+      : slug === "immersive-environment" || slug === "immersive-environments" || slug === "immersive-experiences"
+      ? "Turn rooms and spaces into immersive environments with projection, projection mapping and large visual displays people can step into."
       : slug === "ai-experience" || slug === "ai-experiences"
-      ? "Add an AI avatar or AI photo experience to an event, booth or brand space. See how AI driven interactions work in a physical setting."
+      ? "Create AI experiences with digital characters, AI photo booths and interactive displays that give visitors something new to talk to, create and explore."
       : slug === "interactive-engagement" || slug === "solution-engagement"
-      ? "Turn a floor, wall or booth into a motion game or group activity. See how interactive engagement gets people playing and taking part."
+      ? "Create interactive games and activities that get visitors moving, playing and taking part in your space."
       : data.heroDescription || data.heroSubtitle;
 
   return {

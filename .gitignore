@@ -41,3 +41,12 @@ yarn-error.log*
 next-env.d.ts
 # scratch
 /scratch/
+scratch_*
+scripts/
+components/WhatWeBuild.tsx
+public/images/debug_*
+public/images/test_*
+public/images/our_content_*
+public/images/what_we_do_*
+public/images/what_we_build/
+public/images/education_interactive_floor_ref.png

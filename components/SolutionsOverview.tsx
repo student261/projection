@@ -1,287 +1,79 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { motion, useMotionValue, useSpring, useTransform, useScroll } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { Sparkles, Layers, Expand, Cpu, Gamepad2, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
-
-const categories = [
-  {
-    id: "interactive-projection",
-    title: "Interactive Projection",
-    desc: "Turn floors, walls and other surfaces into responsive digital experiences that react to movement and interaction.",
-    icon: <Layers className="w-6 h-6" />,
-    href: "/solutions/interactive-projection",
-    img: "/images/interactive_floor_motion.jpg",
-    video: "/interactive-space.mp4",
-    cta: "Explore Interactive Projection",
-  },
-  {
-    id: "immersive-experiences",
-    title: "Immersive Experiences",
-    desc: "Create immersive environments with projection, projection mapping and spatial visuals designed around your space.",
-    icon: <Expand className="w-6 h-6" />,
-    href: "/solutions/immersive-environment",
-    img: "/images/biosphere_ocean_gallery.jpg",
-    video: "/immersive-environment-1.mp4",
-    cta: "Explore Immersive Experiences",
-  },
-  {
-    id: "ai-experiences",
-    title: "AI Experiences",
-    desc: "Bring AI avatars, generative content and interactive AI experiences into physical spaces.",
-    icon: <Cpu className="w-6 h-6" />,
-    href: "/solutions/ai-experience",
-    img: "/images/corporate_lobby_wall.jpg",
-    cta: "Explore AI Experiences",
-  },
-  {
-    id: "interactive-engagement",
-    title: "Interactive Engagement",
-    desc: "Use interactive games, motion based experiences and digital installations to encourage participation.",
-    icon: <Gamepad2 className="w-6 h-6" />,
-    href: "/solutions/interactive-engagement",
-    img: "/images/entertainment_motion_arena.jpg",
-    video: "/smart-engagement.mp4",
-    cta: "Explore Interactive Engagement",
-  },
-];
+import WhatWeBuild from "@/components/WhatWeBuild";
 
 const solutions = [
   {
     id: "interactive-floors-walls",
     num: "01",
-    subtitle: "INTERACTIVE FLOORS & WALLS", 
-    title: "Interactive Floors & Walls",
+    subtitle: "SURFACES THAT REACT",
+    title: "Movement",
     description:
-      "Turn floors and walls into interactive spaces that respond to movement and create engaging experiences.",
+      "Step in. Visuals ripple and follow every footstep.",
     img: "/images/hospitality_koi_pond.jpg",
     href: "/solutions/interactive-projection",
-    cta: "Explore Interactive Projection",
+    cta: "Explore Movement",
     highlights: [
-      "Interactive floor and wall projection",
-      "Visuals that respond to movement",
-      "Custom experiences for different spaces",
+      "Visuals ripple and react with every step",
+      "Motion tracking detects presence instantly",
+      "Dynamic reactive surfaces underfoot",
+    ],
+  },
+  {
+    id: "interactive-play",
+    num: "02",
+    subtitle: "SPARKS SPONTANEOUS PLAY",
+    title: "Active Play",
+    description:
+      "Kick, jump, and compete. Multiplayer floor games that spark spontaneous fun.",
+    img: "/images/entertainment_motion_arena.jpg",
+    href: "/solutions/interactive-engagement",
+    cta: "Explore Active Play",
+    highlights: [
+      "Multiplayer floor games and challenges",
+      "Social, active physical participation",
+      "Touch-free and intuitive group play",
+    ],
+  },
+  {
+    id: "interactive-touch",
+    num: "03",
+    subtitle: "REVEALS HIDDEN STORIES",
+    title: "Tactile Touch",
+    description:
+      "Reach out. Blank walls respond to touch and reveal hidden stories.",
+    img: "/images/interactive_strike_wall.jpg",
+    href: "/solutions/interactive-projection",
+    cta: "Explore Touch Surfaces",
+    highlights: [
+      "Responsive interactive wall projection",
+      "Touch and gesture detection",
+      "Storytelling revealed through interaction",
     ],
   },
   {
     id: "immersive-environments",
-    num: "02",
-    subtitle: "IMMERSIVE ENVIRONMENTS",
-    title: "Immersive Environments",
+    num: "04",
+    subtitle: "SURROUNDS YOUR SENSES",
+    title: "360° Immersion",
     description:
-      "Create immersive spaces that surround visitors with visuals, sound and interactive content.",
+      "Step inside. 360° projection that surrounds visitors in living digital art.",
     img: "/images/cathedral_projection_mapping.jpg",
     href: "/solutions/immersive-environment",
-    cta: "Explore Immersive Experiences",
+    cta: "Explore Immersive Rooms",
     highlights: [
-      "Immersive rooms and environments",
-      "Projection mapping for physical spaces",
-      "180° and 360° visual experiences",
-    ],
-  },
-  {
-    id: "custom-interactive-experiences",
-    num: "03",
-    subtitle: "CUSTOM EXPERIENCES",
-    title: "Custom Interactive Experiences",
-    description:
-      "Build interactive content around your space, audience and the experience you want people to have.",
-    img: "/images/ai_receptionist_concierge.jpg",
-    href: "/solutions",
-    cta: "Explore Interactive Experiences",
-    highlights: [
-      "Interactive games and activities",
-      "Custom visuals and digital content",
-      "Experiences designed for your audience",
-    ],
-  },
-  {
-    id: "interactive-engagement",
-    num: "04",
-    subtitle: "INTERACTIVE ENGAGEMENT",
-    title: "Interactive Engagement",
-    description:
-      "Turn a floor, wall or booth into a motion game or group activity that gets people playing and taking part.",
-    img: "/images/interactive_strike_wall.jpg",
-    href: "/solutions/interactive-engagement",
-    cta: "Explore Interactive Engagement",
-    highlights: [
-      "Motion based games and interactions",
-      "Brand focused interactive experiences",
-      "Interactive kiosks and installations",
+      "Floor-to-ceiling 360° projection mapping",
+      "Panoramic spatial soundscapes",
+      "Complete sensory visual environments",
     ],
   },
 ];
 
-
-function TiltCard({ cat, isDesktop }: { cat: any; isDesktop: boolean }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  // Smooth springs for a fluid, floating feel
-  const mouseXSpring = useSpring(x, { stiffness: 300, damping: 40 });
-  const mouseYSpring = useSpring(y, { stiffness: 300, damping: 40 });
-
-  // Map mouse coordinates to rotation
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["12deg", "-12deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-12deg", "12deg"]);
-
-  // Map mouse coordinates to glare position
-  const glareX = useTransform(mouseXSpring, [-0.5, 0.5], ["100%", "0%"]);
-  const glareY = useTransform(mouseYSpring, [-0.5, 0.5], ["100%", "0%"]);
-
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  // On mobile touch devices, automatically play video when card is in view, pause when scrolled away
-  useEffect(() => {
-    if (isDesktop) return;
-    const cardEl = ref.current;
-    if (!cardEl) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          videoRef.current?.play().catch(() => {});
-        } else {
-          videoRef.current?.pause();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(cardEl);
-    return () => observer.disconnect();
-  }, [isDesktop]);
-
-  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (!ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    
-    x.set(mouseX / width - 0.5);
-    y.set(mouseY / height - 0.5);
-
-    if (isDesktop && videoRef.current) {
-      videoRef.current.play().catch(() => {});
-    }
-  };
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (!isDesktop || !ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    
-    x.set(mouseX / width - 0.5);
-    y.set(mouseY / height - 0.5);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-    if (isDesktop && videoRef.current) {
-      videoRef.current.pause();
-    }
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      onMouseEnter={handleMouseEnter}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{ perspective: 1200 }}
-      className="w-full h-[380px] lg:h-[410px] xl:h-[460px] cursor-pointer group"
-    >
-      <Link href={cat.href} className="block w-full h-full outline-none">
-        <motion.div
-          style={{
-            rotateX: isDesktop ? rotateX : 0,
-            rotateY: isDesktop ? rotateY : 0,
-            transformStyle: "preserve-3d",
-          }}
-          className="relative w-full h-full rounded-[2rem] bg-black border border-white/5 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.4)] transition-all duration-300"
-        >
-          {/* Base Layer: Image or Video */}
-          <div 
-            className="absolute inset-0 rounded-[2rem] overflow-hidden bg-black"
-            style={{ transform: "translateZ(0px)" }}
-          >
-            {cat.video ? (
-              <video
-                ref={videoRef}
-                src={cat.video}
-                poster={cat.img ? (cat.img.endsWith('.webp') ? cat.img : cat.img.replace(/\.(png|jpg|jpeg)$/, '.webp')) : undefined}
-                loop
-                muted
-                playsInline
-                preload="none"
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
-              />
-            ) : (
-              <SafeImage
-                src={cat.img}
-                alt={cat.title}
-                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
-                containerClassName="w-full h-full"
-              />
-            )}
-            {/* Ambient Dark Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none" />
-          </div>
-
-          {/* Glare Layer */}
-          <motion.div 
-            className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay pointer-events-none"
-            style={{
-              background: "radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, transparent 60%)",
-              backgroundSize: "250% 250%",
-              backgroundPositionX: glareX,
-              backgroundPositionY: glareY,
-              transform: "translateZ(1px)"
-            }}
-          />
-          
-          {/* Floating Content Layer (Pops out in 3D) */}
-          <div 
-            className="absolute inset-0 p-6 lg:p-5 xl:p-8 flex flex-col justify-between pointer-events-none"
-            style={{ transform: "translateZ(60px)" }} // The 3D pop out effect
-          >
-            <div className="flex justify-between items-start">
-              <div className="w-10 h-10 xl:w-12 xl:h-12 rounded-xl xl:rounded-2xl bg-white/10 backdrop-blur-md mb-4 flex items-center justify-center text-white border border-white/20 shadow-xl">
-                {cat.icon}
-              </div>
-              <div className="w-9 h-9 xl:w-10 xl:h-10 rounded-full bg-white text-black flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 shadow-xl">
-                <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
-              </div>
-            </div>
-
-            <div style={{ transform: "translateZ(40px)" }}>
-              <h3 className="text-xl sm:text-2xl lg:text-lg xl:text-2xl font-bold text-white leading-tight drop-shadow-2xl">
-                {cat.title}
-              </h3>
-              <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-48 group-hover:opacity-100 transition-all duration-500 ease-out">
-                <p className="text-white/70 text-xs xl:text-sm font-light drop-shadow-md pt-2">
-                  {cat.desc}
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </Link>
-    </motion.div>
-  );
-}
 
 function StackingCapabilities() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -290,98 +82,265 @@ function StackingCapabilities() {
     offset: ["start start", "end end"],
   });
 
-  // Card 1 (idx 1, Immersive Environments)
-  const card1Y = useTransform(scrollYProgress, [0.06, 0.28], ["100vh", "0vh"]);
-  const card0Scale = useTransform(scrollYProgress, [0.06, 0.28], [1, 0.97]);
+  // 4 Cards over scroll runway [0.0 to 1.0]:
+  // Full coverage from 0.0 to 1.0 so Web Animations API never reverts or un-mounts styles
 
-  // Card 2 (idx 2, Custom Interactive Experiences)
-  const card2Y = useTransform(scrollYProgress, [0.35, 0.57], ["100vh", "0vh"]);
-  const card1Scale = useTransform(scrollYProgress, [0.35, 0.57], [1, 0.97]);
+  // CARD 0 (Movement)
+  // Text content leaves: flies UP and OUT through the top of the card
+  const title0Y = useTransform(scrollYProgress, [0.0, 0.10, 0.28, 1.0], [0, 0, -550, -550]);
+  const subtitle0Y = useTransform(scrollYProgress, [0.0, 0.10, 0.28, 1.0], [0, 0, -500, -500]);
+  const btn0Y = useTransform(scrollYProgress, [0.0, 0.10, 0.28, 1.0], [0, 0, -480, -480]);
+  const desc0Y = useTransform(scrollYProgress, [0.0, 0.10, 0.28, 1.0], [0, 0, -450, -450]);
+  const opacity0 = useTransform(scrollYProgress, [0.0, 0.10, 0.25, 1.0], [1, 1, 0, 0]);
+  // Image leaves: rotates up to 55deg and flies UP and RIGHT out of the card
+  const img0Rotate = useTransform(scrollYProgress, [0.0, 0.10, 0.28, 1.0], [0, 0, 55, 55]);
+  const img0Y = useTransform(scrollYProgress, [0.0, 0.10, 0.28, 1.0], [0, 0, -700, -700]);
+  const img0X = useTransform(scrollYProgress, [0.0, 0.10, 0.28, 1.0], [0, 0, 180, 180]);
+  const img0Scale = useTransform(scrollYProgress, [0.0, 0.10, 0.28, 1.0], [1, 1, 0.85, 0.85]);
+  const img0Opacity = useTransform(scrollYProgress, [0.0, 0.10, 0.26, 1.0], [1, 1, 0, 0]);
 
-  // Card 3 (idx 3, Smart Engagement - last card)
-  const card3Y = useTransform(scrollYProgress, [0.64, 0.86], ["100vh", "0vh"]);
-  const card2Scale = useTransform(scrollYProgress, [0.64, 0.86], [1, 0.97]);
+  // CARD 1 (Active Play)
+  // Enters from +500px below, rests, then leaves to -500px above
+  const title1Y = useTransform(scrollYProgress, [0.0, 0.12, 0.30, 0.42, 0.60, 1.0], [550, 550, 0, 0, -550, -550]);
+  const subtitle1Y = useTransform(scrollYProgress, [0.0, 0.12, 0.30, 0.42, 0.60, 1.0], [500, 500, 0, 0, -500, -500]);
+  const btn1Y = useTransform(scrollYProgress, [0.0, 0.12, 0.30, 0.42, 0.60, 1.0], [480, 480, 0, 0, -480, -480]);
+  const desc1Y = useTransform(scrollYProgress, [0.0, 0.12, 0.30, 0.42, 0.60, 1.0], [450, 450, 0, 0, -450, -450]);
+  const opacity1 = useTransform(scrollYProgress, [0.0, 0.12, 0.26, 0.42, 0.56, 1.0], [0, 0, 1, 1, 0, 0]);
+  // Image enters tilted at 32deg from below, levels to 0, then rotates to 55deg and flies out
+  const img1Rotate = useTransform(scrollYProgress, [0.0, 0.12, 0.30, 0.42, 0.60, 1.0], [32, 32, 0, 0, 55, 55]);
+  const img1Y = useTransform(scrollYProgress, [0.0, 0.12, 0.30, 0.42, 0.60, 1.0], [700, 700, 0, 0, -700, -700]);
+  const img1X = useTransform(scrollYProgress, [0.0, 0.12, 0.30, 0.42, 0.60, 1.0], [-50, -50, 0, 0, 180, 180]);
+  const img1Scale = useTransform(scrollYProgress, [0.0, 0.12, 0.30, 0.42, 0.60, 1.0], [0.85, 0.85, 1, 1, 0.85, 0.85]);
+  const img1Opacity = useTransform(scrollYProgress, [0.0, 0.12, 0.26, 0.42, 0.56, 1.0], [0, 0, 1, 1, 0, 0]);
+
+  // CARD 2 (Tactile Touch)
+  const title2Y = useTransform(scrollYProgress, [0.0, 0.44, 0.62, 0.74, 0.92, 1.0], [550, 550, 0, 0, -550, -550]);
+  const subtitle2Y = useTransform(scrollYProgress, [0.0, 0.44, 0.62, 0.74, 0.92, 1.0], [500, 500, 0, 0, -500, -500]);
+  const btn2Y = useTransform(scrollYProgress, [0.0, 0.44, 0.62, 0.74, 0.92, 1.0], [480, 480, 0, 0, -480, -480]);
+  const desc2Y = useTransform(scrollYProgress, [0.0, 0.44, 0.62, 0.74, 0.92, 1.0], [450, 450, 0, 0, -450, -450]);
+  const opacity2 = useTransform(scrollYProgress, [0.0, 0.44, 0.58, 0.74, 0.88, 1.0], [0, 0, 1, 1, 0, 0]);
+  const img2Rotate = useTransform(scrollYProgress, [0.0, 0.44, 0.62, 0.74, 0.92, 1.0], [32, 32, 0, 0, 55, 55]);
+  const img2Y = useTransform(scrollYProgress, [0.0, 0.44, 0.62, 0.74, 0.92, 1.0], [700, 700, 0, 0, -700, -700]);
+  const img2X = useTransform(scrollYProgress, [0.0, 0.44, 0.62, 0.74, 0.92, 1.0], [-50, -50, 0, 0, 180, 180]);
+  const img2Scale = useTransform(scrollYProgress, [0.0, 0.44, 0.62, 0.74, 0.92, 1.0], [0.85, 0.85, 1, 1, 0.85, 0.85]);
+  const img2Opacity = useTransform(scrollYProgress, [0.0, 0.44, 0.58, 0.74, 0.88, 1.0], [0, 0, 1, 1, 0, 0]);
+
+  // CARD 3 (360° Immersion) - Final Card stays pinned and visible through 1.0
+  const title3Y = useTransform(scrollYProgress, [0.0, 0.76, 0.94, 1.0], [550, 550, 0, 0]);
+  const subtitle3Y = useTransform(scrollYProgress, [0.0, 0.76, 0.94, 1.0], [500, 500, 0, 0]);
+  const btn3Y = useTransform(scrollYProgress, [0.0, 0.76, 0.94, 1.0], [480, 480, 0, 0]);
+  const desc3Y = useTransform(scrollYProgress, [0.0, 0.76, 0.94, 1.0], [450, 450, 0, 0]);
+  const opacity3 = useTransform(scrollYProgress, [0.0, 0.76, 0.90, 1.0], [0, 0, 1, 1]);
+  const img3Rotate = useTransform(scrollYProgress, [0.0, 0.76, 0.94, 1.0], [32, 32, 0, 0]);
+  const img3Y = useTransform(scrollYProgress, [0.0, 0.76, 0.94, 1.0], [700, 700, 0, 0]);
+  const img3X = useTransform(scrollYProgress, [0.0, 0.76, 0.94, 1.0], [-50, -50, 0, 0]);
+  const img3Scale = useTransform(scrollYProgress, [0.0, 0.76, 0.94, 1.0], [0.85, 0.85, 1, 1]);
+  const img3Opacity = useTransform(scrollYProgress, [0.0, 0.76, 0.90, 1.0], [0, 0, 1, 1]);
+
+  // Pointer events: only the active card can intercept clicks/hovers
+  const pointerEvents0 = useTransform(scrollYProgress, (v) => (v < 0.25 ? "auto" : "none"));
+  const pointerEvents1 = useTransform(scrollYProgress, (v) => (v >= 0.12 && v < 0.58 ? "auto" : "none"));
+  const pointerEvents2 = useTransform(scrollYProgress, (v) => (v >= 0.44 && v < 0.90 ? "auto" : "none"));
+  const pointerEvents3 = useTransform(scrollYProgress, (v) => (v >= 0.76 ? "auto" : "none"));
 
   const cardsMotion = [
-    { y: 0, scale: card0Scale, zIndex: 10 },
-    { y: card1Y, scale: card1Scale, zIndex: 11 },
-    { y: card2Y, scale: card2Scale, zIndex: 12 },
-    { y: card3Y, scale: 1, zIndex: 13 },
+    {
+      titleY: title0Y,
+      subtitleY: subtitle0Y,
+      btnY: btn0Y,
+      descY: desc0Y,
+      opacity: opacity0,
+      pointerEvents: pointerEvents0,
+      imgRotate: img0Rotate,
+      imgScale: img0Scale,
+      imgY: img0Y,
+      imgX: img0X,
+      imgOpacity: img0Opacity,
+    },
+    {
+      titleY: title1Y,
+      subtitleY: subtitle1Y,
+      btnY: btn1Y,
+      descY: desc1Y,
+      opacity: opacity1,
+      pointerEvents: pointerEvents1,
+      imgRotate: img1Rotate,
+      imgScale: img1Scale,
+      imgY: img1Y,
+      imgX: img1X,
+      imgOpacity: img1Opacity,
+    },
+    {
+      titleY: title2Y,
+      subtitleY: subtitle2Y,
+      btnY: btn2Y,
+      descY: desc2Y,
+      opacity: opacity2,
+      pointerEvents: pointerEvents2,
+      imgRotate: img2Rotate,
+      imgScale: img2Scale,
+      imgY: img2Y,
+      imgX: img2X,
+      imgOpacity: img2Opacity,
+    },
+    {
+      titleY: title3Y,
+      subtitleY: subtitle3Y,
+      btnY: btn3Y,
+      descY: desc3Y,
+      opacity: opacity3,
+      pointerEvents: pointerEvents3,
+      imgRotate: img3Rotate,
+      imgScale: img3Scale,
+      imgY: img3Y,
+      imgX: img3X,
+      imgOpacity: img3Opacity,
+    },
   ];
 
   return (
-    <div ref={containerRef} className="relative h-[280vh] sm:h-[300vh] lg:h-[320vh]">
-      <div className="sticky top-20 sm:top-24 w-full">
-        <div className="relative w-full grid grid-cols-1 grid-rows-1">
-          {solutions.map((item, idx) => {
-            const motionStyle = cardsMotion[idx];
-            return (
-              <motion.div
-                key={item.id}
-                style={{
-                  gridArea: "1 / 1 / 2 / 2",
-                  y: motionStyle.y,
-                  scale: motionStyle.scale,
-                  zIndex: motionStyle.zIndex,
-                  transformOrigin: "top center",
-                }}
-                className="w-full"
-              >
-                <div className="relative w-full rounded-2xl sm:rounded-3xl border border-white/15 bg-[#0c0c0f] p-5 sm:p-7 lg:p-8 shadow-[0_-25px_60px_rgba(0,0,0,0.95),0_-1px_0_rgba(255,255,255,0.15)]">
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
+    <div ref={containerRef} className="relative h-[420vh] sm:h-[460vh] lg:h-[500vh]">
+      <div className="sticky top-14 sm:top-20 lg:top-24 w-full">
+        
+        {/* ONE STATIONARY LUXURY STAGE CARD (Pinned in place, content moves inside!) */}
+        <div className="relative w-full rounded-2xl sm:rounded-[36px] lg:rounded-[44px] border border-white/15 bg-gradient-to-br from-[#16161a] via-[#101013] to-[#09090b] p-4 sm:p-7 lg:p-10 xl:p-12 shadow-[0_30px_90px_rgba(0,0,0,0.95),0_0_0_1px_rgba(255,255,255,0.06)] overflow-hidden min-h-[500px] sm:min-h-[540px] lg:min-h-[580px] flex items-center">
+          
+          {/* Subtle ambient interior glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.03] rounded-full blur-3xl pointer-events-none" />
+
+          {/* All 4 slides sit on top of each other in the exact same grid area */}
+          <div className="relative w-full grid grid-cols-1 grid-rows-1">
+            {solutions.map((item, idx) => {
+              const motionStyle = cardsMotion[idx];
+              return (
+                <motion.div
+                  key={item.id}
+                  style={{
+                    gridArea: "1 / 1 / 2 / 2",
+                    pointerEvents: motionStyle.pointerEvents,
+                  }}
+                  className="w-full"
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-7 lg:gap-10 items-center relative z-10">
                     
-                    {/* Left: Content */}
-                    <div className="w-full lg:col-span-5 order-2 lg:order-1">
-                      <div className="space-y-2.5 sm:space-y-3">
-                        <span className="text-2xl sm:text-3xl lg:text-4xl font-mono font-bold text-white/20 block select-none tracking-tight">
-                          {item.num}
-                        </span>
-                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-tight leading-tight">
-                          {item.title}
-                        </h3>
-                        <p className="text-white/70 text-xs sm:text-sm lg:text-base leading-relaxed font-light">
+                    {/* Left: Content - Moves UP and OUT / In from BELOW */}
+                    <div className="w-full lg:col-span-6 order-2 lg:order-1 flex flex-col justify-between space-y-4 sm:space-y-6 lg:space-y-8">
+                      
+                      {/* Top: Counter & PixMob Dual Headline & Pill CTA */}
+                      <div className="space-y-3 sm:space-y-4">
+                        <motion.div
+                          style={{
+                            y: motionStyle.subtitleY,
+                            opacity: motionStyle.opacity,
+                            willChange: "transform, opacity",
+                          }}
+                          className="flex items-center gap-2.5 sm:gap-3"
+                        >
+                          <span className="font-mono text-[11px] sm:text-xs lg:text-sm tracking-[0.22em] text-white/40 uppercase font-medium">
+                            {item.num} / 04
+                          </span>
+                          <span className="h-px w-6 sm:w-8 bg-white/20" />
+                          <span className="text-[10px] sm:text-[11px] lg:text-xs font-mono uppercase tracking-[0.2em] text-white/50">
+                            CAPABILITY
+                          </span>
+                        </motion.div>
+
+                        <div className="space-y-1 sm:space-y-2">
+                          <motion.h3
+                            style={{
+                              y: motionStyle.titleY,
+                              opacity: motionStyle.opacity,
+                              willChange: "transform, opacity",
+                            }}
+                            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-black italic tracking-tight text-white leading-none"
+                          >
+                            {item.title}
+                          </motion.h3>
+                          <motion.p
+                            style={{
+                              y: motionStyle.subtitleY,
+                              opacity: motionStyle.opacity,
+                              willChange: "transform, opacity",
+                            }}
+                            className="text-[11px] sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-[0.2em] font-serif font-light text-white/85"
+                          >
+                            {item.subtitle}
+                          </motion.p>
+                        </div>
+
+                        {/* White Pill CTA Button matching PixMob Image 1 */}
+                        <motion.div
+                          style={{
+                            y: motionStyle.btnY,
+                            opacity: motionStyle.opacity,
+                            willChange: "transform, opacity",
+                          }}
+                          className="pt-0.5 sm:pt-2"
+                        >
+                          <Link
+                            href={item.href}
+                            className="inline-flex items-center gap-2 sm:gap-2.5 px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full bg-white text-black font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-[0_10px_30px_rgba(255,255,255,0.18)] hover:bg-neutral-200 hover:scale-105 active:scale-95 transition-all duration-300 group/btn"
+                          >
+                            <span>{item.cta}</span>
+                            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black group-hover/btn:translate-x-1 transition-transform duration-300" />
+                          </Link>
+                        </motion.div>
+                      </div>
+
+                      {/* Bottom: Description & Highlights */}
+                      <motion.div
+                        style={{
+                          y: motionStyle.descY,
+                          opacity: motionStyle.opacity,
+                          willChange: "transform, opacity",
+                        }}
+                        className="space-y-2.5 sm:space-y-3 lg:space-y-4 pt-3 sm:pt-4 border-t border-white/10"
+                      >
+                        <p className="text-white/80 text-xs sm:text-sm lg:text-base leading-relaxed font-light max-w-lg">
                           {item.description}
                         </p>
 
-                        {/* Highlights */}
-                        <ul className="space-y-1.5 pt-0.5 pb-2">
+                        <ul className="space-y-1 sm:space-y-1.5 lg:space-y-2 max-w-lg">
                           {item.highlights.map((point, i) => (
-                            <li key={i} className="flex items-center gap-2.5 text-xs sm:text-sm text-white/85">
-                              <span className="w-1.5 h-1.5 rounded-full bg-white shrink-0" />
+                            <li key={i} className="flex items-center gap-2 sm:gap-2.5 text-[11px] sm:text-xs lg:text-sm text-white/75">
+                              <span className="w-1.5 h-1.5 rounded-full bg-white/70 shrink-0" />
                               <span>{point}</span>
                             </li>
                           ))}
                         </ul>
+                      </motion.div>
 
-                        <div className="pt-1">
-                          <Link
-                            href={item.href}
-                            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider uppercase text-white hover:text-white/70 transition-colors group/link py-1"
-                          >
-                            <span>{item.cta}</span>
-                            <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1.5 transition-transform duration-300" />
-                          </Link>
-                        </div>
-                      </div>
                     </div>
 
-                    {/* Right: Visual Media */}
-                    <div className="w-full lg:col-span-7 order-1 lg:order-2">
-                      <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] max-h-[240px] sm:max-h-[270px] lg:max-h-[300px] w-full rounded-xl sm:rounded-2xl overflow-hidden border border-white/10 bg-black group shadow-xl">
+                    {/* Right: Visual Media Container with Signature PixMob Rotational Launch Physics */}
+                    <div className="w-full lg:col-span-6 order-1 lg:order-2 flex items-center justify-center">
+                      <motion.div
+                        style={{
+                          rotate: motionStyle.imgRotate,
+                          scale: motionStyle.imgScale,
+                          y: motionStyle.imgY,
+                          x: motionStyle.imgX,
+                          opacity: motionStyle.imgOpacity,
+                          transformOrigin: "center center",
+                          willChange: "transform, opacity",
+                        }}
+                        className="relative w-full aspect-[16/10] sm:aspect-[16/11] lg:aspect-[16/11] max-h-[190px] xs:max-h-[220px] sm:max-h-[320px] lg:max-h-[440px] rounded-xl sm:rounded-[28px] lg:rounded-[36px] overflow-hidden border border-white/20 bg-black shadow-[0_25px_60px_rgba(0,0,0,0.85)] group"
+                      >
                         <SafeImage
                           src={item.img}
                           alt={item.title}
                           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                           containerClassName="w-full h-full"
                         />
-                      </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                      </motion.div>
                     </div>
 
                   </div>
-                </div>
-              </motion.div>
-            );
-          })}
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
@@ -389,59 +348,30 @@ function StackingCapabilities() {
 }
 
 export default function SolutionsOverview() {
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const update = () => setIsDesktop(window.innerWidth >= 1024);
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
-
   return (
-    <section id="solutions-overview" className="flex flex-col">
-      {/* 5 Cards Solution Overview */}
-      <div className="bg-white text-black py-10 sm:py-12 lg:py-14">
-        <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6 sm:mb-8 max-w-3xl mx-auto space-y-2.5">
-            <span className="flex justify-center items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500">
-              <Sparkles className="w-3.5 h-3.5" />
-              EXPLORE OUR SOLUTIONS
-            </span>
-            <h2 className="font-bold tracking-tight text-[clamp(2rem,4.5vw,3rem)]">
-              Choose the Right Experience for Your Space
-            </h2>
-            <p className="text-black/60 text-sm sm:text-base font-normal max-w-2xl mx-auto">
-              Explore different ways to use projection, immersive visuals, AI and interactive technology to create experiences for your audience.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-            {categories.map((cat) => (
-              <TiltCard key={cat.id} cat={cat} isDesktop={isDesktop} />
-            ))}
-          </div>
+    <section id="solutions-overview" className="flex flex-col relative">
+      {/* What We Build - Pinned Cinematic Showcase Runway */}
+      <div className="relative w-full h-[220vh]">
+        <div className="sticky top-0 w-full h-screen overflow-hidden z-20">
+          <WhatWeBuild />
         </div>
       </div>
 
       {/* Core Capabilities Section (Stacking Cards on Scroll) */}
       <div 
         id="core-capabilities" 
-        className="bg-black text-white pt-16 sm:pt-20 lg:pt-24 pb-0 scroll-mt-20 relative"
+        className="bg-black text-white pt-16 sm:pt-20 lg:pt-24 pb-0 scroll-mt-20 relative z-30"
       >
         <div className="max-w-7xl 2xl:max-w-[1536px] 3xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Header */}
           <div className="max-w-4xl xl:max-w-5xl mb-8 sm:mb-12 lg:mb-14 space-y-2">
-            <div className="flex items-center gap-2 mb-2">
-              <Sparkles className="w-3.5 h-3.5 text-white/70" />
-              <span className="text-xs sm:text-sm font-semibold tracking-wide text-white/60 uppercase">
-                CORE CAPABILITIES
-              </span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-5xl font-black text-white tracking-tight leading-[1.1] lg:whitespace-nowrap">
-              What We Can Create for Your Space
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-5xl font-black text-white tracking-tight leading-[1.1]">
+              What Happens When Visitors Step Inside
             </h2>
+            <p className="text-white/70 text-sm sm:text-base font-light leading-relaxed max-w-2xl">
+              From a single footstep rippling across the floor to an entire room surrounding your senses, here is how people experience the space.
+            </p>
           </div>
 
           {/* Stacking Cards Runway */}

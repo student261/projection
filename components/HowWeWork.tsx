@@ -8,42 +8,34 @@ const steps = [
   {
     stepTag: "01",
     icon: Search,
-    title: "Discover",
-    subtitle: "Understand Your Space",
-    desc: "We learn about your space, audience, goals and requirements to find the right approach for your project.",
-    deliverable: "Spatial feasibility report, technical specification, and budget roadmap.",
+    title: "Understand",
+    subtitle: "01 UNDERSTAND",
+    desc: "Your space dimensions, lighting conditions, ceiling height, and visitor flow.",
+    deliverable: "Spatial feasibility report and visitor flow analysis.",
   },
   {
     stepTag: "02",
     icon: Compass,
     title: "Design",
-    subtitle: "Plan the Experience",
-    desc: "We shape the visuals, interaction and layout around your space and how people will use it.",
-    deliverable: "3D architectural mockups, UX storyboard, and spatial interaction blueprint.",
+    subtitle: "02 DESIGN",
+    desc: "The visual storyboard, motion-reactive rules, games, or brand stories.",
+    deliverable: "Visual storyboards and interaction blueprint.",
   },
   {
     stepTag: "03",
     icon: Code2,
-    title: "Develop",
-    subtitle: "Build the Experience",
-    desc: "We create the interactive content and technology needed to bring the experience to life.",
-    deliverable: "Custom real-time software build, interactive shaders, and CMS integration.",
+    title: "Build",
+    subtitle: "03 BUILD",
+    desc: "The interactive software, commercial laser projectors, and optical tracking sensors.",
+    deliverable: "Interactive software and sensor hardware setup.",
   },
   {
     stepTag: "04",
     icon: Wrench,
     title: "Install",
-    subtitle: "Set Up and Test",
-    desc: "We install the system, set everything up and test the experience in space before launch.",
-    deliverable: "Turnkey hardware installation, optical calibration, and commissioning guide.",
-  },
-  {
-    stepTag: "05",
-    icon: ShieldCheck,
-    title: "Support",
-    subtitle: "Support After Launch",
-    desc: "We provide technical support and help with maintenance, content updates and future changes.",
-    deliverable: "24/7 remote telemetry monitoring, SLA maintenance agreement, and scheduled content updates.",
+    subtitle: "04 INSTALL",
+    desc: "Complete on-site mounting, pixel calibration, sensor tuning, and staff walk-through.",
+    deliverable: "Turnkey on-site mounting and pixel calibration.",
   },
 ];
 
@@ -59,25 +51,14 @@ export default function HowWeWork() {
         
         {/* Section Header */}
         <div className="max-w-4xl xl:max-w-5xl mb-6 sm:mb-8 space-y-2 flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0">
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-black/60 mb-2"
-          >
-            <Zap className="w-3.5 h-3.5 text-black/40" />
-            HOW WE WORK
-          </motion.div>
-
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-black text-black tracking-tight leading-[1.1] text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] xl:text-[2.75rem] lg:whitespace-nowrap"
+            className="font-black text-black tracking-tight leading-[1.1] text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] xl:text-[2.75rem]"
           >
-            From Idea to Interactive Experience
+            From Your Space to an Interactive Experience
           </motion.h2>
 
           <motion.p
@@ -87,7 +68,7 @@ export default function HowWeWork() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-sm sm:text-base text-black/70 font-normal leading-relaxed pt-1 max-w-2xl"
           >
-            We take your project from the first idea to installation, creating an experience that fits your space, audience and goals.
+            We plan the experience around your space, build what people will interact with, then install and test it.
           </motion.p>
         </div>
 
@@ -128,8 +109,8 @@ export default function HowWeWork() {
           })}
         </div>
 
-        {/* Desktop 5-Column Process Grid (>= lg) */}
-        <div className="hidden lg:grid lg:grid-cols-5 gap-3.5 xl:gap-6 2xl:gap-8 items-start relative z-10">
+        {/* Desktop 4-Column Process Grid (>= lg) */}
+        <div className="hidden lg:grid lg:grid-cols-4 gap-4 xl:gap-6 2xl:gap-8 items-start relative z-10">
           {steps.map((step, index) => {
             const Icon = step.icon;
 
@@ -169,7 +150,19 @@ export default function HowWeWork() {
         </div>
       </div>
       
-      <HugeCTA className="py-8 sm:py-10 lg:py-12" />
+      <HugeCTA
+        badge=""
+        title="Let's Talk About Your Space"
+        subtitle="Tell us what space you have, what you want people to do there, and what you want them to see."
+        primaryBtnText="Discuss Your Project"
+        primaryBtnHref="/contact"
+        points={[
+          "Tell us about your space",
+          "Explore suitable options",
+          "Plan your next step",
+        ]}
+        className="py-8 sm:py-10 lg:py-12"
+      />
     </section>
   );
 }
