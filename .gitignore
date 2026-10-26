@@ -43,7 +43,6 @@ next-env.d.ts
 /scratch/
 scratch_*
 scripts/
-components/WhatWeBuild.tsx
 public/images/debug_*
 public/images/test_*
 public/images/our_content_*
